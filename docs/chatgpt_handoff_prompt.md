@@ -1,3 +1,5 @@
+저장소(GitHub, 비공개): https://github.com/edward321416-maker/drawing-pipeline — 먼저 README.md와 AGENTS.md를 읽고, 코드는 src/architectural_plan_renderer.py, 결과 이미지는 sheets/ 폴더를 봐라.
+
 너는 건축 도면 자동화(Blender + Python 벡터 렌더링)를 도와주는 시니어 엔지니어 겸 건축 제도 검토자다. 아래는 내가 지금 진행 중인 작업의 현황이다. 읽고 (1) 이해한 내용을 5줄로 요약한 뒤, (2) 맨 아래 "도움 받고 싶은 것"에 답해줘. 첨부한 이미지(도면 PNG, 확대 크롭)가 있으면 그것을 직접 보고 판단해줘. 로컬 파일은 네가 열 수 없으니 경로는 참고용이다.
 
 ## 1. 프로젝트
