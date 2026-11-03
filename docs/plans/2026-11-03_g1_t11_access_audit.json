@@ -1,0 +1,87 @@
+{
+  "schema": "G1_T11_ACCESS_SOURCE_AUDIT_V1",
+  "date": "2026-11-03",
+  "base_ref": "0c35263117d52c9c3713d800bf4707b1fe7805a7",
+  "status": "SOURCE_PROVENANCE_ANALYZED_RAW_SLICE_NOT_AVAILABLE_GATE_HOLD",
+  "floor": "1F",
+  "confirmed_sources": [
+    {
+      "path": "engine/model/m_1f_source.json",
+      "fact": "stairs A-D, WC B/C, 34 columns, T1-T4, cap_w boundary",
+      "verification": "github source read"
+    },
+    {
+      "path": "engine/master/build_master.py",
+      "fact": "builds core and restroom model doors from symbols; Tube CAP_W is a complete tube_wall ring without demonstrated physical opening",
+      "verification": "github code read"
+    },
+    {
+      "path": "engine/model/m_site_source.json",
+      "fact": "site entrances Main/Subway/Service are approach markers, not physical facade doors",
+      "verification": "github source read"
+    },
+    {
+      "path": "src/architectural_plan_renderer.py",
+      "fact": "solve_curtain_doors() synthesizes drawable curtainwall entrance locations; capsule doorway is projected from capsule boundary toward hall",
+      "verification": "github code read"
+    },
+    {
+      "path": "sheets/1F_1to500/plan_1F_A3_1to500_check.json",
+      "fact": "curtain_doors=5, door_gaps_punched=11; counts do not independently prove actual facade door openings",
+      "verification": "github stored QA JSON read"
+    }
+  ],
+  "source_evidence": {
+    "raw_1f_slice_file_in_repository": false,
+    "master_blend_binary_in_repository": false,
+    "curtain_doors_reported_by_renderer": 5,
+    "existing_interior_doors_reported_as_punched": 11,
+    "model_verified_public_market_door_count": null,
+    "model_verified_capsule_door_count": null
+  },
+  "anchors": [
+    {
+      "id": "PUBLIC_MARKET_DOOR",
+      "role": "market public entry",
+      "status": "UNVERIFIED_MODEL_OPENING",
+      "rendered_position_m": null,
+      "verified_model_position_m": null
+    },
+    {
+      "id": "CAPSULE_DOOR",
+      "role": "capsule entry",
+      "status": "UNVERIFIED_MODEL_OPENING",
+      "rendered_position_m": null,
+      "verified_model_position_m": null
+    },
+    {
+      "id": "ENTRY_MAIN",
+      "role": "site public approach",
+      "status": "SITE_APPROACH_MARKER_CONFIRMED_NOT_A_DOOR"
+    },
+    {
+      "id": "ENTRY_SUBWAY",
+      "role": "subway sunken approach",
+      "status": "SITE_APPROACH_MARKER_CONFIRMED_NOT_A_DOOR"
+    },
+    {
+      "id": "ENTRY_SERVICE",
+      "role": "vehicle/service approach",
+      "status": "SITE_APPROACH_MARKER_CONFIRMED_NOT_A_DOOR"
+    }
+  ],
+  "next_needed": [
+    "locate or regenerate raw_slices/floor_1F_slice.json from the tagged 1F .blend",
+    "run tools/audit_g1_access_anchors.py with --slice to inspect actual model door symbols and facade proximity",
+    "require architectural approval before modifying the 3D curtain wall/capsule with model openings",
+    "do not generate definitive M01/P01/C01 subzone polygons anchored to a guessed door",
+    "run independent connectivity/physical opening verification before declaring G1 ACCESS PASS"
+  ],
+  "tests": {
+    "fixture_unit_tests_local": "7/7 PASS (isolated mirror of repo src/pipeline_common polygonize helper)",
+    "github_committed_tests": "NOT_RUN",
+    "full_blender_pipeline": "NOT_RUN"
+  },
+  "gate_passed": false,
+  "user_final_freeze": false
+}
