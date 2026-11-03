@@ -14,8 +14,9 @@
 | 시장 커튼월 양개문 | `architectural_plan_renderer.py:389` `solve_curtain_doors()` | **렌더러에서 계산한 제도용 5개 문**. 실제 벽 개구 확인 안 됨 |
 | 서측 캡슐 이중문 | `architectural_plan_renderer.py:1115+` 캡슐 바깥선을 시장 방향으로 투영 | **제도 표현에서 생성**. `Tube CAP_W`에 물리 개구가 있다는 증거 없음 |
 | 1층 문 개구 11개 | `plan_1F_A3_1to500_check.json`의 `door_gaps_punched` | 렌더러 내부 문 개구 처리 수치. 물리 커튼월 개구와 별개 |
+| **3D 마스터 JSON의 문 객체 11개** | `engine/model/1F_master.model.json` | **코어 문 8개 + 화장실 문 3개.** 커튼월·캡슐 문 객체 없음 |
 
-GitHub 저장소에는 `.blend` 바이너리와 `raw_slices/floor_1F_slice.json`이 없다. 따라서 이 회차의 감사 결과는 **원천 코드/도면 검사에 따른 provenance 판정**이며 **실제 문 위치의 기하 검증 완료가 아니다**.
+GitHub 저장소에는 `.blend` 바이너리와 `raw_slices/floor_1F_slice.json`은 없지만, **`engine/model/1F_master.model.json` 3D 직렬화 모델이 있다.** 이 파일을 직접 확인한 결과 객체 189개 중 `door`는 11개(코어 8개·화장실 3개)이며, 시장 커튼월·서측 캡슐을 위한 `door` 객체는 0개다. 다만 해당 JSON과 사용자 PC의 `.blend`가 완전히 동일한 버전인지는 미확인이다. 저장된 3D 모델의 문 객체 인벤토리는 확인됐지만 실제 외피 개구/접근 연결성은 아직 검증되지 않았다.
 
 ## 2. 프로그램 앵커 판정
 
@@ -38,7 +39,7 @@ Set-Location -LiteralPath 'D:\Users\admin\Desktop\2학기 논문'
 $repo = 'D:\Users\admin\Desktop\2학기 논문'
 $out = Join-Path $repo 'output\g1_t11_access_candidate'
 
-# 1. 소스 코드·대지 접근점의 출처만 검사 (현재 GitHub 자료로도 가능)
+# 1. 소스 코드·대지 접근점·3D 마스터 JSON의 실제 문 객체 목록 감사
 python "$repo\tools\audit_g1_access_anchors.py" --out "$out\access_source_only.json"
 
 # 2. 로컬 마스터 .blend의 위치/블렌더 존재 여부 검증
@@ -69,8 +70,8 @@ G1 프로그램 계획의 M01(안내)·P01(필로티 통과)·C01(캡슐 전시 
 ## 5. 자동검사 범위와 다음 단계
 
 - 이번 변경: `tools/audit_g1_access_anchors.py`, `tests/test_g1_access_audit.py`, 소스 감사 JSON 및 이 문서.
-- 독립된 작은 기하 fixture에서는 정상/오인/잘못된 층/불확정 출입문 등 테스트 **7/7 PASS**. 이 실행은 **격리 시험용 도형**에 한정된다. GitHub 파일 자체 및 실제 1F Blender 파이프라인 실행은 이 세션에서 수행하지 않았다.
+- 독립된 작은 기하 fixture에서는 정상/오인/잘못된 층/불확정 출입문/3D 모델 객체 목록 등 테스트 **9/9 PASS**. 이 실행은 **격리 시험용 도형**에 한정된다. GitHub 파일 자체 및 실제 1F Blender 파이프라인 실행은 이 세션에서 수행하지 않았다.
 - 실제 `1F` 슬라이스를 읽으면 모델 `door` 객체와 `Zone_Market`, `Capsule_W`의 경계 근접성을 검사한다. **문 근접성은 개구·방화·피난·문 사용 가능성의 인증이 아니다.**
 - T1.2: 시장·필로티·서비스·캡슐의 실제 공간 폴리곤을 생성하되, 문 앵커가 검증되지 않으면 출입문 인접 프로그램과 연결 경로는 `PENDING`으로 유지. 실면적과 보호동선이 검증된 후에야 시각 후보를 비교한다.
 
-**결론:** `T1.1 SOURCE_AUDIT_RECORDED`, `PHYSICAL_DOOR_VERIFICATION_PENDING`, `G1_GEOMETRY_PENDING`, `1F_FINAL_FROZEN=false`.
+**결론:** `T1.1 SERIALIZED_3D_DOOR_INVENTORY_CONFIRMED (11=8 core+3 WC)`, `PUBLIC_AND_CAPSULE_PHYSICAL_DOORS_ABSENT_FROM_REPOSITORY_MODEL`, `LOCAL_BLEND_AND_CUT_RECONCILIATION_PENDING`, `G1_GEOMETRY_PENDING`, `1F_FINAL_FROZEN=false`.
