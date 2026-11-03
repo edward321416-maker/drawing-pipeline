@@ -19,6 +19,7 @@ if str(ROOT) not in sys.path:
 DEFAULT_SOURCE = ROOT / "engine" / "model" / "m_1f_source.json"
 DEFAULT_SITE = ROOT / "engine" / "model" / "m_site_source.json"
 DEFAULT_SPEC = ROOT / "docs" / "plans" / "2026-11-03_1f_program_spec.json"
+DEFAULT_MODEL_JSON = ROOT / "engine" / "model" / "1F_master.model.json"
 
 
 def load_json(path: Path) -> dict:
@@ -54,7 +55,8 @@ def _capsule_geom(sl: dict):
     return Polygon()
 
 
-def audit(source: dict, site: dict, spec: dict, slice_data: dict | None = None) -> dict:
+def audit(source: dict, site: dict, spec: dict, slice_data: dict | None = None,
+          model_data: dict | None = None) -> dict:
     """문 객체와 외피의 근접성을 조사하되 물리적 출입문을 단정하지 않는다."""
     errors: list[str] = []
     notes: list[str] = []
@@ -95,11 +97,36 @@ def audit(source: dict, site: dict, spec: dict, slice_data: dict | None = None) 
         "site_entry_markers": sorted(ref_entries),
         "site_markers_are_physical_doors": False,
         "raw_slice_read": slice_data is not None,
+        "model_json_read": model_data is not None,
+        "model_json_door_objects": [],
         "model_door_symbols": [],
         "anchors": anchors,
         "errors": errors,
         "notes": notes,
     }
+
+    if model_data is not None:
+        objects = model_data.get("objects", [])
+        model_cols = [o for o in objects if o.get("props", {}).get("kind") == "column"]
+        if len(model_cols) != len(source.get("columns", [])):
+            errors.append("3D 직렬화 모델과 설계 소스의 기둥 개수 불일치")
+        result["model_json_object_count"] = len(objects)
+        result["model_json_column_count"] = len(model_cols)
+        result["model_json_capsule_wall_count"] = sum(
+            o.get("name") == "Capsule_W" and o.get("props", {}).get("kind") == "tube_wall"
+            for o in objects
+        )
+        for item in objects:
+            props = item.get("props", {})
+            if props.get("kind") == "door":
+                interior = bool(props.get("core_id") or props.get("wc_id"))
+                result["model_json_door_objects"].append({
+                    "name": item.get("name"),
+                    "core_id": props.get("core_id"),
+                    "wc_id": props.get("wc_id"),
+                    "classification": "INTERIOR_DOOR" if interior else "OTHER_MODEL_DOOR",
+                })
+        notes.append("3D 직렬화 모델의 door는 물리적 객체 목록; 외피 개구 적합성은 별도 확인 필요")
 
     if slice_data is None:
         notes.append("원본 1층 floor_1F_slice.json 미제공: 실제 문 위치/외피 기하 미검증")
@@ -157,6 +184,8 @@ def main() -> int:
     parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE)
     parser.add_argument("--site", type=Path, default=DEFAULT_SITE)
     parser.add_argument("--spec", type=Path, default=DEFAULT_SPEC)
+    parser.add_argument("--model-json", type=Path, default=DEFAULT_MODEL_JSON,
+                        help="마스터 모델 객체 JSON(있으면 읽기 전용으로 문 객체 목록 감사)")
     parser.add_argument("--slice", type=Path, help="1F 실제 절단 JSON. 없으면 소스만 검사")
     parser.add_argument("--out", type=Path, help="선택: 보고서 JSON. 기존 모델/출력은 변경하지 않음")
     args = parser.parse_args()
@@ -165,6 +194,7 @@ def main() -> int:
         load_json(args.site),
         load_json(args.spec),
         load_json(args.slice) if args.slice else None,
+        load_json(args.model_json) if args.model_json.is_file() else None,
     )
     text = json.dumps(report, ensure_ascii=False, indent=2) + "\n"
     if args.out:
