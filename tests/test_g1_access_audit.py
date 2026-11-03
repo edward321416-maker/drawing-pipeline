@@ -93,5 +93,24 @@ class TestAccessAudit(unittest.TestCase):
         self.assertFalse(audit(self.source, self.site, spec)["ok_source_references"])
 
 
+    def test_model_json_distinguishes_core_wc_from_external_doors(self):
+        objects = ([{"name": "Col", "props": {"kind": "column"}} for _ in range(34)]
+                   + [{"name": "Core_A_door_hall", "props": {"kind": "door", "core_id": "A"}},
+                      {"name": "WC_C_door", "props": {"kind": "door", "wc_id": "C"}},
+                      {"name": "Capsule_W", "props": {"kind": "tube_wall"}}])
+        result = audit(self.source, self.site, self.spec, model_data={"objects": objects})
+        self.assertTrue(result["ok_source_references"])
+        self.assertTrue(result["model_json_read"])
+        self.assertEqual(result["model_json_capsule_wall_count"], 1)
+        self.assertEqual([i["classification"] for i in result["model_json_door_objects"]],
+                         ["INTERIOR_DOOR", "INTERIOR_DOOR"])
+        self.assertFalse(result["gate_passed"])
+
+    def test_model_json_column_inventory_mismatch_is_rejected(self):
+        objects = [{"name": "Col", "props": {"kind": "column"}} for _ in range(33)]
+        result = audit(self.source, self.site, self.spec, model_data={"objects": objects})
+        self.assertFalse(result["ok_source_references"])
+
+
 if __name__ == "__main__":
     unittest.main()
