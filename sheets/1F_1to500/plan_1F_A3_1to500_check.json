@@ -1,0 +1,80 @@
+{
+ "floor": "1F",
+ "sheet_mm": [
+  420.0,
+  297.0
+ ],
+ "scale": "1:500",
+ "world_per_sheet_m": [
+  210.0,
+  148.5
+ ],
+ "mm_per_m": 2.0,
+ "canvas_matches_A3": true,
+ "scale_bar_10m_mm": 20.0,
+ "legend_items": 9,
+ "legend": {
+  "1": "시장 홀",
+  "2": "필로티 광장",
+  "3": "하역·서비스",
+  "4": "선큰 마당",
+  "5": "서측 캡슐",
+  "6": "나선 램프 튜브",
+  "7": "빛 튜브",
+  "8": "화장실",
+  "9": "코어 / 피난계단·승강기"
+ },
+ "numbers": 15,
+ "numbers_on_elevators_or_shafts": 0,
+ "small_bubbles_core_restroom": 8,
+ "entrance_boxes_drawn": 0,
+ "door_gaps_punched": 11,
+ "furniture_items": 140,
+ "furniture_touching_column": 0,
+ "furniture_touching_tube": 0,
+ "numbers_colliding_with_furniture": 0,
+ "plan_text_all_numeric": true,
+ "symbol_texts": [
+  "UP",
+  "UP",
+  "UP",
+  "UP"
+ ],
+ "shaft_X_inside_circle": true,
+ "curtain_wall_segments": 17,
+ "curtain_doors": 5,
+ "site": {
+  "park_paths": 4,
+  "planting_islands": 6,
+  "park_trees": 14,
+  "benches": 8,
+  "south_plaza_m2": 689,
+  "street_trees": 5,
+  "service_drive_m": [
+   48.0,
+   54.0
+  ],
+  "model_trees_kept": 17
+ },
+ "columns_in_model": 34,
+ "columns_drawn": 23,
+ "columns_culled": 11,
+ "min_drawn_column_edge_to_core_or_tube_m": 1.88,
+ "min_drawn_column_center_to_core_or_tube_m": 2.33,
+ "door_swing_hits_wall": 0,
+ "door_swing_hits_other_door": 0,
+ "curtain_door_swing_hits_wall": 0,
+ "fixtures_dropped_in_swing": 0,
+ "fixtures_remaining_in_swing": 0,
+ "door_opening_residual_wall_area_m2": 0.0,
+ "door_jamb_clearance_violations": 0,
+ "doors_shifted_for_250mm_clearance": 0,
+ "lineweight_tiers": {
+  "T1_cut_walls_cols": "0.45 mm #000000",
+  "T2_door_leaf_partition": "0.18 mm #222222",
+  "T3_stair_ramp_elevator": "0.12 mm #444444",
+  "T4_glass_curtain_wall": "0.09 mm #4A4A4A (1:100: 0.12)",
+  "T5_furniture_fixture_swing_shaftX": "0.08 mm #666666",
+  "T6_grid_tile_stipple_foliage": "0.05 mm #CCCCCC"
+ }
+}

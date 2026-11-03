@@ -1,0 +1,79 @@
+# FILE: ledger/ledger.yaml
+# 결함 장부. 사용자가 새 오류를 지적하면 (1) 여기에 등록 (2) 전용 검사 추가 (3) AGENTS.md·GEMINI.md 갱신.
+# checks: 구현·등록된 검사 / planned_checks: 아직 구현되지 않은 검사(구현되면 checks로 옮긴다)
+defects:
+  - id: D-001
+    title: "T4 승강기 튜브에 수목·벤치가 침범"
+    checks: [G2]
+    planned_checks: []
+    regression_test: test_d001_tree_bench_encroaches_on_elevator_tube
+  - id: D-002
+    title: "보이드 에스컬레이터를 구조 기둥이 관통"
+    checks: [G1]
+    planned_checks: []
+    regression_test: test_d002_column_passes_through_void_escalator
+  - id: D-003
+    title: "시장 홀 가구가 기둥과 겹침"
+    checks: [G2]
+    planned_checks: []
+    regression_test: test_d003_furniture_overlaps_column
+  - id: D-004
+    title: "대형 표제 상자가 가구를 덮음"
+    checks: [T2]
+    planned_checks: []
+    regression_test: test_d004_title_box_covers_furniture
+  - id: D-005
+    title: "화장실 진입구 차폐, 글자 중첩"
+    checks: [T1, G3, R1, R2]   # G3·R1(코어 심볼)과 R2(화장실 인체치수·진입 통로)로 문 스윙·진입 차폐를 막는다
+    planned_checks: []
+    regression_test: test_d005_restroom_labels_overlap_each_other
+  - id: D-006
+    title: "범례 문구 잘림"
+    checks: [T3]
+    planned_checks: []
+    regression_test: test_d006_legend_text_is_clipped_by_canvas
+  - id: D-007
+    title: "하단 전체 치수가 다른 문구에 가림"
+    checks: [T1]
+    planned_checks: []
+    regression_test: test_d007_overall_dimension_hidden_by_caption
+  - id: D-008
+    title: "AI 인필에서 T2 샤프트 소실(구조 변조)"
+    checks: []
+    planned_checks: [P1, C1]
+    regression_test: null
+  - id: D-009
+    title: "승인본 단선도의 텍스트-선 충돌"
+    checks: [T2]
+    planned_checks: []
+    regression_test: test_d009_text_collides_with_line_in_approved_single_line_plan
+  - id: D-010
+    title: "층판 개구부(선큰 연결)가 코어 D 벽 안으로 침범 — 중간발표 설계 데이터에서 엔진이 발견"
+    checks: [G6]
+    planned_checks: []
+    regression_test: test_d010_void_overlaps_core_wall
+  - id: D-011
+    title: "피난계단 코어의 규격 미달(유효너비·디딤판·단수·부속실)과 문 스윙 간섭 — 심볼 단계에서 엔진이 방지"
+    checks: [R1, G3]
+    planned_checks: []
+    regression_test: test_d011_stair_core_rules_and_door_swing
+  - id: D-012
+    title: "화장실의 출입구 앞 통로 차폐·큐비클 치수 미달·문 스윙 간섭 — 심볼 단계에서 엔진이 방지"
+    checks: [R2, G3]
+    planned_checks: []
+    regression_test: test_d012_restroom_entry_cubicle_and_door_swing
+  - id: D-013
+    title: "이웃한 코어의 라벨이 화장실 문짝·문 호 위에 놓임 — 상세 심볼은 자기 방뿐 아니라 모든 라벨의 장애물이어야 함"
+    checks: [T2]
+    planned_checks: []
+    regression_test: test_d013_core_label_avoids_neighbouring_restroom_door
+  - id: D-014
+    title: "JSON으로 저장된 얇은 판(대지 맥락의 출입구 화살표)의 바닥 윤곽이 면적 0이 되어 도면에서 조용히 사라짐"
+    checks: [G7]
+    planned_checks: []
+    regression_test: test_d014_thin_plate_footprint_survives_json_rounding
+  - id: D-015
+    title: "튜브의 기둥 간섭(나선 램프·승강로·로비), 승강로 2개의 원통 이탈·겹침, 유리 벽 두께 불일치 — 심볼 단계에서 엔진이 방지"
+    checks: [R3]
+    planned_checks: []
+    regression_test: test_d015_tube_column_shaft_and_lobby_rules

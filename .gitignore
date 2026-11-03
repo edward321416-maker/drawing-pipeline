@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.blend
+*.blend1
+.omc/
+.playwright-mcp/
+output/
+_rejected/
+*.glb
+.env

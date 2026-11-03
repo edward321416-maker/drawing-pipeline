@@ -1,0 +1,58 @@
+{
+ "floor": "3F",
+ "sheet_mm": [
+  420.0,
+  297.0
+ ],
+ "scale": "1:100",
+ "world_per_sheet_m": [
+  42.0,
+  29.700000000000003
+ ],
+ "mm_per_m": 10.0,
+ "canvas_matches_A3": true,
+ "scale_bar_10m_mm": 100.0,
+ "legend_items": 4,
+ "legend": {
+  "1": "시장 홀",
+  "2": "서측 캡슐",
+  "3": "나선 램프 튜브",
+  "4": "빛 튜브"
+ },
+ "numbers": 4,
+ "numbers_on_elevators_or_shafts": 0,
+ "small_bubbles_core_restroom": 0,
+ "entrance_boxes_drawn": 0,
+ "door_gaps_punched": 0,
+ "furniture_items": 140,
+ "furniture_touching_column": 0,
+ "furniture_touching_tube": 0,
+ "numbers_colliding_with_furniture": 0,
+ "plan_text_all_numeric": true,
+ "symbol_texts": [],
+ "shaft_X_inside_circle": true,
+ "curtain_wall_segments": 0,
+ "curtain_doors": 0,
+ "site": {},
+ "columns_in_model": 34,
+ "columns_drawn": 24,
+ "columns_culled": 10,
+ "min_drawn_column_edge_to_core_or_tube_m": 1.88,
+ "min_drawn_column_center_to_core_or_tube_m": 2.33,
+ "door_swing_hits_wall": 0,
+ "door_swing_hits_other_door": 0,
+ "curtain_door_swing_hits_wall": 0,
+ "fixtures_dropped_in_swing": 0,
+ "fixtures_remaining_in_swing": 0,
+ "door_opening_residual_wall_area_m2": 0.0,
+ "door_jamb_clearance_violations": 0,
+ "doors_shifted_for_250mm_clearance": 0,
+ "lineweight_tiers": {
+  "T1_cut_walls_cols": "0.45 mm #000000",
+  "T2_door_leaf_partition": "0.18 mm #222222",
+  "T3_stair_ramp_elevator": "0.12 mm #444444",
+  "T4_glass_curtain_wall": "0.09 mm #4A4A4A (1:100: 0.12)",
+  "T5_furniture_fixture_swing_shaftX": "0.08 mm #666666",
+  "T6_grid_tile_stipple_foliage": "0.05 mm #CCCCCC"
+ }
+}

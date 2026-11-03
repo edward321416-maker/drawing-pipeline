@@ -1,0 +1,120 @@
+{
+ "failed": 0,
+ "total": 19,
+ "rows": [
+  {
+   "floor": "1F",
+   "check": "a) 절단 폴리곤 폐곡선",
+   "ok": true,
+   "detail": "요소 82개, 무효/빈 0개 [], 선분 폐곡선 포함 100.0%"
+  },
+  {
+   "floor": "1F",
+   "check": "b1) SVG 좌표 = 기대 정규화(u,v)",
+   "ok": true,
+   "detail": "SVG (0.13029,0.62737) 기대 (0.13029,0.62737)"
+  },
+  {
+   "floor": "1F",
+   "check": "b2) 기둥 위치 SVG↔마스크(px)",
+   "ok": true,
+   "detail": "측정 34/34, 중앙값 0.04 px, 최대 0.22 px (허용 3.0 / 7.5, 4096 px 이미지)"
+  },
+  {
+   "floor": "1F",
+   "check": "b3) 기준 기둥 중심 픽셀(SVG·마스크)",
+   "ok": true,
+   "detail": "SVG=26 마스크=0 at (507,2573)"
+  },
+  {
+   "floor": "1F",
+   "check": "b4) 기둥+튜브 IoU(참고, ≥0.75)",
+   "ok": true,
+   "detail": "IoU 0.936"
+  },
+  {
+   "floor": "1F",
+   "check": "c) DXF 열림·레이어 비어있지 않음",
+   "ok": true,
+   "detail": "A-WALL-CUT=54 A-ANNO-DIMS=59 A-ANNO-TEXT=28 A-COLS-CUT=68"
+  },
+  {
+   "floor": "1F",
+   "check": "d1) 글자 상자끼리 겹침 없음",
+   "ok": true,
+   "detail": "라벨 28개 []"
+  },
+  {
+   "floor": "1F",
+   "check": "d2) 글자가 절단 요소와 겹침 없음",
+   "ok": true,
+   "detail": "[] (흰 배경 상자 10개)"
+  },
+  {
+   "floor": "1F",
+   "check": "d3) 배치 실패 라벨 없음",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "floor": "1F",
+   "check": "d4) 합성 PNG: 기둥 위치에 벡터가 얹힘",
+   "ok": true,
+   "detail": "34/34 어두움, 시트 (4967, 3508) px"
+  },
+  {
+   "floor": "1F",
+   "check": "e1) A3_1to500 A3·축척",
+   "ok": true,
+   "detail": "1:500"
+  },
+  {
+   "floor": "1F",
+   "check": "e2) A3_1to500 가구 불투명 흰 채움",
+   "ok": true,
+   "detail": "채움 ['#FFFFFF', 'none']"
+  },
+  {
+   "floor": "1F",
+   "check": "e3) A3_1to500 가구 선 ≤0.12 mm",
+   "ok": true,
+   "detail": "최대 0.120 mm"
+  },
+  {
+   "floor": "1F",
+   "check": "e4) A3_1to500 커튼월 선 ≤0.18 mm",
+   "ok": true,
+   "detail": "최대 0.180 mm"
+  },
+  {
+   "floor": "1F",
+   "check": "e5) A3_1to500 충돌 지표 0",
+   "ok": true,
+   "detail": "모두 0"
+  },
+  {
+   "floor": "1F",
+   "check": "e6) A3_1to500 번호 전부 숫자",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "floor": "1F",
+   "check": "e7) 확대 점검 crop_core_restroom.png",
+   "ok": true,
+   "detail": "800×800"
+  },
+  {
+   "floor": "1F",
+   "check": "e7) 확대 점검 crop_curtainwall_furniture.png",
+   "ok": true,
+   "detail": "800×800"
+  },
+  {
+   "floor": "1F",
+   "check": "e7) 확대 점검 crop_tube_capsule.png",
+   "ok": true,
+   "detail": "800×800"
+  }
+ ]
+}
