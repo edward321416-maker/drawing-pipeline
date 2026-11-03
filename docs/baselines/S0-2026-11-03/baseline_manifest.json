@@ -1,7 +1,7 @@
 {
   "baseline_id": "S0-2026-11-03-MAIN-D553799A",
-  "status": "ARTIFACT_SNAPSHOT_LOCKED_MODEL_REPRODUCIBILITY_PENDING",
-  "source_kind": "GitHub main frozen snapshot, NOT final user approval",
+  "status": "COMPARISON_SNAPSHOT_NOT_FINAL_FREEZE_MODEL_REPRODUCIBILITY_PENDING",
+  "source_kind": "Immutable comparison reference only; 1F design, graphics and final approval NOT frozen",
   "repository": "edward321416-maker/drawing-pipeline",
   "main_commit": "d553799a6a45057b0db006375ae36239d849bdeb",
   "sheet": {
