@@ -1,12 +1,12 @@
 # S0 시각 비교 기준 및 결함 장부 (기준본, 미승인)
 
-- 대상: 1F A3 1:500, GitHub \`main\` @ \`d553799a6a45057b0db006375ae36239d849bdeb\`
+- 대상: 1F A3 1:500, GitHub `main` @ `d553799a6a45057b0db006375ae36239d849bdeb`
 - 시각 관찰 입력: 사용자가 대화에 제공한 2048×1448 PNG. GitHub 리포지토리 PNG와 **바이트가 다르다**. 두 파일이 픽셀 단위로 같은지 직접 비교하지 않았다.
 - 스타일 참고: 사용자가 제공한 1080×1080 이미지. 프로그램 배치·공간 형상 복제 근거로 삼지 않는다.
 - G0 상태: **SNAPSHOT LOCKED; MODEL SHA/RENDER REPRODUCIBILITY PENDING**.
 
 ## 고정 비교 크롭 5개
-크롭은 \`crop_config.json\`의 종이 mm 좌표를 사용한다. 동일한 도곽, 가로 420×297mm, 1:500 비율의 후보에 반복 적용한다. 해당 좌표는 건축 기하 좌표가 아니다.
+크롭은 `crop_config.json`의 종이 mm 좌표를 사용한다. 동일한 도곽, 가로 420×297mm, 1:500 비율의 후보에 반복 적용한다. 해당 좌표는 건축 기하 좌표가 아니다.
 
 | ID | 영역 | 현재 직접 관찰 | 다음 수정본에서 확인할 개선 |
 |---|---|---|---|
@@ -20,20 +20,20 @@
 
 | ID | 위험 | 직접 근거 | 다음 게이트 |
 |---|---|---|---|
-| S0-001 P0 | 기둥 34개 중 도면에서 11개 컬링 | \`sheets/1F_1to500/plan_1F_A3_1to500_check.json\` | G2: 제거 이유를 모델에서 판정; 실제 구조 변경 여부 미확정 |
-| S0-002 P0 | 4갈래 계단 모델/단순 U자 렌더 함수 불일치 | \`engine/symbols/stair_core.py\` vs \`src/architectural_plan_renderer.py\` | G2: 단일 원천. 법규 적합성 **확인 필요** |
-| S0-003 P0 | 상층 GLB에 벽·문 없음 | \`docs/pipeline_discovery.md\` | G2: 완성된 상층 3D 원천 먼저 생성 |
-| S0-004 P1 | DXF vs A3 SVG 표현 경로 분리 | \`02_topology_to_cad.py\` vs \`architectural_plan_renderer.py\` | G5 |
+| S0-001 P0 | 기둥 34개 중 도면에서 11개 컬링 | `sheets/1F_1to500/plan_1F_A3_1to500_check.json` | G2: 제거 이유를 모델에서 판정; 실제 구조 변경 여부 미확정 |
+| S0-002 P0 | 4갈래 계단 모델/단순 U자 렌더 함수 불일치 | `engine/symbols/stair_core.py` vs `src/architectural_plan_renderer.py` | G2: 단일 원천. 법규 적합성 **확인 필요** |
+| S0-003 P0 | 상층 GLB에 벽·문 없음 | `docs/pipeline_discovery.md` | G2: 완성된 상층 3D 원천 먼저 생성 |
+| S0-004 P1 | DXF vs A3 SVG 표현 경로 분리 | `02_topology_to_cad.py` vs `architectural_plan_renderer.py` | G5 |
 | S0-005 P1 | 3F 2×2 A3 타일 세로 여백 2mm 잔여 | 594 - (540 + 52) = 2mm | G5: 실제 출력 가능 영역 검증 |
-| S0-006 P1 | 가구의 흰 채움 검사는 6자리 유효 HEX를 일부 허용 | \`verify_pipeline.py\` e2 | G6: 독립 fill 검사/negative test |
-| S0-007 P1 | \`furniture_items=140\`은 실물 매대 개수가 아닌 body polygon 수 | \`architectural_plan_renderer.py\` | G3 |
+| S0-006 P1 | 가구의 흰 채움 검사는 6자리 유효 HEX를 일부 허용 | `verify_pipeline.py` e2 | G6: 독립 fill 검사/negative test |
+| S0-007 P1 | `furniture_items=140`은 실물 매대 개수가 아닌 body polygon 수 | `architectural_plan_renderer.py` | G3 |
 | S0-008 P1 | 현행과 참고 이미지의 프로그램·선 위계·해치·조경 판독 차이 | 두 첨부 이미지 관찰 | G1/G3/G4 |
 | S0-009 P1 | 원본 .blend 바이트 미접근, SHA256/재실행 불가 | GitHub에 .blend 부재 | G0 미완료 |
-| S0-010 P2 | 3F 34/34은 문서에 주장되나 개별 QA rows repo에 없음 | README, \`sheets/3F_1to100\` 트리 | G6 |
+| S0-010 P2 | 3F 34/34은 문서에 주장되나 개별 QA rows repo에 없음 | README, `sheets/3F_1to100` 트리 | G6 |
 
 ## 도면 채택 정책
 1. 한 후보는 설계/모델/가구/스타일/출력 중 한 변경 유형만 시험한다.
 2. 동일 5개 시트 영역에서 before/after를 함께 본다.
-3. 결함을 없앴더라도 다른 영역이 나빠졌으면 \`REWORK\` 또는 \`REJECT\`다.
+3. 결함을 없앴더라도 다른 영역이 나빠졌으면 `REWORK` 또는 `REJECT`다.
 4. 독립 구조·피난·시트 검증을 미완료한 후보를 합격 또는 최종본으로 표시하지 않는다.
 5. S0는 기존 도면을 위한 **비교 기준**이며 개선 수정이나 최종 승인이 아니다.
