@@ -1,0 +1,658 @@
+{
+  "schema": "G1_PROGRAM_V1",
+  "version": "2026-11-03",
+  "state": "PROPOSED_UNAPPROVED",
+  "floor": "1F",
+  "source": {
+    "baseline_head": "d553799a6a45057b0db006375ae36239d849bdeb",
+    "master": "engine/model/m_1f_source.json",
+    "site": "engine/model/m_site_source.json",
+    "approved_adjustments": "engine/model/design_adjustments.json",
+    "source_model_blend_sha256": null,
+    "cut_1f_sha256": null
+  },
+  "verified_model_inventory": {
+    "column_count": 34,
+    "cores": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "toilets": [
+      "B",
+      "C"
+    ],
+    "tubes": [
+      "T1",
+      "T2",
+      "T3",
+      "T4"
+    ],
+    "shafts": [
+      "EV1",
+      "EV2",
+      "M1",
+      "M2",
+      "FR",
+      "PL"
+    ],
+    "entrance_keys": [
+      "Main",
+      "Subway",
+      "Service"
+    ]
+  },
+  "safety_and_geometry": {
+    "absolute_drawing_coordinates_allowed": false,
+    "geometry_source": "TAGGED_3D_MODEL_AND_ACTUAL_CUT",
+    "area_source": "DERIVE_FROM_COMPUTED_SHAPELY_POLYGONS_ONLY",
+    "all_target_shares_are": "SOFT_PLANNING_WEIGHTS_NOT_MEASURED_AREAS",
+    "main_aisle_target_m": 2.4,
+    "secondary_aisle_target_m": 1.8,
+    "aisle_targets_are_legal_requirements": false,
+    "physical_doors_resolved": false,
+    "program_polygons_computed": false,
+    "egress_and_special_stair_code_compliance": "CHECK_REQUIRED",
+    "source_model_modification_authorized": false
+  },
+  "anchors": [
+    {
+      "id": "ENTRY_MAIN",
+      "kind": "SITE_ENTRANCE",
+      "model_ref": "Main",
+      "status": "SOURCE_CONFIRMED"
+    },
+    {
+      "id": "ENTRY_SUBWAY",
+      "kind": "SITE_ENTRANCE",
+      "model_ref": "Subway",
+      "status": "SOURCE_CONFIRMED"
+    },
+    {
+      "id": "ENTRY_SERVICE",
+      "kind": "SITE_ENTRANCE",
+      "model_ref": "Service",
+      "status": "SOURCE_CONFIRMED"
+    },
+    {
+      "id": "PUBLIC_MARKET_DOOR",
+      "kind": "DOOR_FROM_ACTUAL_SLICE",
+      "model_ref": null,
+      "status": "VERIFY_REQUIRED"
+    },
+    {
+      "id": "CAPSULE_DOOR",
+      "kind": "DOOR_FROM_ACTUAL_SLICE",
+      "model_ref": null,
+      "status": "VERIFY_REQUIRED"
+    },
+    {
+      "id": "T1_RAMP",
+      "kind": "TUBE",
+      "model_ref": "T1",
+      "status": "SOURCE_CONFIRMED"
+    },
+    {
+      "id": "T2_LIGHT",
+      "kind": "TUBE",
+      "model_ref": "T2",
+      "status": "SOURCE_CONFIRMED"
+    },
+    {
+      "id": "T3_PUBLIC_LIFT",
+      "kind": "TUBE",
+      "model_ref": "T3",
+      "status": "SOURCE_CONFIRMED"
+    },
+    {
+      "id": "T4_PUBLIC_LIFT",
+      "kind": "TUBE",
+      "model_ref": "T4",
+      "status": "SOURCE_CONFIRMED"
+    },
+    {
+      "id": "PL_PLAZA_LIFT",
+      "kind": "SHAFT",
+      "model_ref": "PL",
+      "status": "SOURCE_CONFIRMED"
+    },
+    {
+      "id": "FR_FREIGHT_LIFT",
+      "kind": "SHAFT",
+      "model_ref": "FR",
+      "status": "SOURCE_CONFIRMED"
+    }
+  ],
+  "programs": [
+    {
+      "id": "MARKET",
+      "source_zone": "Zone_Market",
+      "purpose": "시장 홀·상층으로의 이동 유도",
+      "subprograms": [
+        {
+          "id": "M01",
+          "name": "진입 안내·길찾기",
+          "soft_target_share": 0.08,
+          "activities": [
+            "시장 안내",
+            "프로그램 소개",
+            "상층 길찾기"
+          ],
+          "allowable_furniture": [
+            "compact_info_counter",
+            "wayfinding_plinth"
+          ],
+          "spatial_rule": "필로티에서 시장으로 실제 연결되는 출입문과 주동선의 가장자리; 출입구 앞 점유 금지",
+          "anchors": [
+            "PUBLIC_MARKET_DOOR"
+          ],
+          "priority": "P1",
+          "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED"
+        },
+        {
+          "id": "M02",
+          "name": "상설 판매·탐색",
+          "soft_target_share": 0.34,
+          "activities": [
+            "로컬 판매",
+            "매대 탐색",
+            "응대"
+          ],
+          "allowable_furniture": [
+            "single_sided_stall",
+            "back_to_back_stall",
+            "wall_display",
+            "cash_counter"
+          ],
+          "spatial_rule": "시장 홀 중앙~북측 후보, T3·T4 전망 승강기 대기구역과 주동선 제외 후 선택",
+          "anchors": [
+            "T3_PUBLIC_LIFT",
+            "T4_PUBLIC_LIFT"
+          ],
+          "priority": "P1",
+          "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED"
+        },
+        {
+          "id": "M03",
+          "name": "팝업·시연",
+          "soft_target_share": 0.1,
+          "activities": [
+            "시즌 팝업",
+            "로컬 메이커 시연"
+          ],
+          "allowable_furniture": [
+            "modular_popup_table",
+            "display_plinth"
+          ],
+          "spatial_rule": "진입 시 시야가 확보되는 시장 가장자리; 안내 존·캡슐과 시각 관계",
+          "anchors": [
+            "PUBLIC_MARKET_DOOR",
+            "CAPSULE_DOOR"
+          ],
+          "priority": "P1",
+          "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED"
+        },
+        {
+          "id": "M04",
+          "name": "푸드·시식",
+          "soft_target_share": 0.16,
+          "activities": [
+            "시식",
+            "구매",
+            "픽업"
+          ],
+          "allowable_furniture": [
+            "tasting_counter",
+            "food_kiosk",
+            "pickup_shelf"
+          ],
+          "spatial_rule": "빛 튜브 T2를 바라보는 실내 남동권 후보. 운영·하역 동선과 별도 계획",
+          "anchors": [
+            "T2_LIGHT"
+          ],
+          "priority": "P1",
+          "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED"
+        },
+        {
+          "id": "M05",
+          "name": "공용 식음·대화",
+          "soft_target_share": 0.09,
+          "activities": [
+            "착석",
+            "식사",
+            "휴식"
+          ],
+          "allowable_furniture": [
+            "four_top_table",
+            "communal_table",
+            "banquette"
+          ],
+          "spatial_rule": "M04와 인접한 열린 가장자리. 유리 외피와의 관계는 실제 커튼월 형상 검증 후",
+          "anchors": [
+            "T2_LIGHT"
+          ],
+          "priority": "P1",
+          "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED"
+        },
+        {
+          "id": "M06",
+          "name": "공공 순환·승강기 전이",
+          "soft_target_share": 0.23,
+          "activities": [
+            "주동선",
+            "전망 승강기 대기",
+            "상층 이동"
+          ],
+          "allowable_furniture": [
+            "none"
+          ],
+          "spatial_rule": "보행 네트워크를 먼저 예약. 실제 문→T3/T4/PL 로비의 연속성 확인 후 폴리곤 확정",
+          "anchors": [
+            "PUBLIC_MARKET_DOOR",
+            "T3_PUBLIC_LIFT",
+            "T4_PUBLIC_LIFT",
+            "PL_PLAZA_LIFT"
+          ],
+          "priority": "P0",
+          "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED"
+        }
+      ]
+    },
+    {
+      "id": "PILOTI",
+      "source_zone": "Zone_Piloti",
+      "purpose": "공공 진입·연결·잠깐 머묾",
+      "subprograms": [
+        {
+          "id": "P01",
+          "name": "사거리–시장 공공통과",
+          "soft_target_share": 0.5,
+          "activities": [
+            "보행",
+            "길찾기"
+          ],
+          "allowable_furniture": [
+            "none"
+          ],
+          "spatial_rule": "주출입 접근선에서 실제 시장 출입문까지 이어지는 비점유 통과 공간",
+          "anchors": [
+            "ENTRY_MAIN",
+            "PUBLIC_MARKET_DOOR"
+          ],
+          "priority": "P0",
+          "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED"
+        },
+        {
+          "id": "P02",
+          "name": "만남·대기",
+          "soft_target_share": 0.2,
+          "activities": [
+            "약속",
+            "대기"
+          ],
+          "allowable_furniture": [
+            "edge_bench",
+            "leaning_rail"
+          ],
+          "spatial_rule": "공공 동선 경계부, 출입구 직전 개방부 밖",
+          "anchors": [
+            "ENTRY_MAIN",
+            "T1_RAMP"
+          ],
+          "priority": "P1",
+          "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED"
+        },
+        {
+          "id": "P03",
+          "name": "숲과 연결된 쉼터",
+          "soft_target_share": 0.15,
+          "activities": [
+            "휴식",
+            "그늘 체류"
+          ],
+          "allowable_furniture": [
+            "linear_bench",
+            "planter_bench"
+          ],
+          "spatial_rule": "서측 숲마당과 시각·보행 연속성이 있는 경계부",
+          "anchors": [
+            "ENTRY_MAIN"
+          ],
+          "priority": "P1",
+          "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED"
+        },
+        {
+          "id": "P04",
+          "name": "비워두는 행사 영역",
+          "soft_target_share": 0.15,
+          "activities": [
+            "시즌 행사",
+            "임시 마켓"
+          ],
+          "allowable_furniture": [
+            "movable_chair_optional"
+          ],
+          "spatial_rule": "상시 가구 없이 광장의 가변성을 보존하고 행사 모드만 별도 검사",
+          "anchors": [
+            "PUBLIC_MARKET_DOOR"
+          ],
+          "priority": "P1",
+          "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED"
+        }
+      ]
+    },
+    {
+      "id": "SERVICE",
+      "source_zone": "Zone_Service",
+      "purpose": "운영·하역·물류의 비공개 흐름",
+      "subprograms": [
+        {
+          "id": "S01",
+          "name": "차량 하역",
+          "soft_target_share": 0.45,
+          "activities": [
+            "반입",
+            "하차",
+            "카트 적치"
+          ],
+          "allowable_furniture": [
+            "loading_bay",
+            "bollard",
+            "cart_parking"
+          ],
+          "spatial_rule": "차량·하역 진입과 직접 연결; 도로 보행 교차 분리",
+          "anchors": [
+            "ENTRY_SERVICE"
+          ],
+          "priority": "P0",
+          "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED"
+        },
+        {
+          "id": "S02",
+          "name": "검수·분류·임시 보관",
+          "soft_target_share": 0.25,
+          "activities": [
+            "검수",
+            "매장 재공급"
+          ],
+          "allowable_furniture": [
+            "sorting_table",
+            "rolling_rack"
+          ],
+          "spatial_rule": "하역과 화물 승강기의 연결 영역, 일반 방문객 통행과 분리",
+          "anchors": [
+            "FR_FREIGHT_LIFT"
+          ],
+          "priority": "P1",
+          "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED"
+        },
+        {
+          "id": "S03",
+          "name": "화물 승강기 전면",
+          "soft_target_share": 0.15,
+          "activities": [
+            "승강기 대기",
+            "화물 회전"
+          ],
+          "allowable_furniture": [
+            "none"
+          ],
+          "spatial_rule": "FR 승강기 전면 보호 영역. 로비 실제 폭 확인 필요",
+          "anchors": [
+            "FR_FREIGHT_LIFT"
+          ],
+          "priority": "P0",
+          "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED"
+        },
+        {
+          "id": "S04",
+          "name": "운영 통행",
+          "soft_target_share": 0.15,
+          "activities": [
+            "통제",
+            "현장 운영"
+          ],
+          "allowable_furniture": [
+            "staff_station_optional"
+          ],
+          "spatial_rule": "서비스 전용 진입·물류 경로 보호. 별도 관리실 신설을 가정하지 않음",
+          "anchors": [
+            "ENTRY_SERVICE"
+          ],
+          "priority": "P1",
+          "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED"
+        }
+      ]
+    },
+    {
+      "id": "CAPSULE",
+      "source_zone": "Capsule_W",
+      "purpose": "곡면 큐레이션·소규모 전시·대화",
+      "subprograms": [
+        {
+          "id": "C01",
+          "name": "전시 안내",
+          "soft_target_share": 0.15,
+          "activities": [
+            "관람 안내"
+          ],
+          "allowable_furniture": [
+            "compact_gallery_desk"
+          ],
+          "spatial_rule": "실제 캡슐 출입문과 접수 흐름을 먼저 확인",
+          "anchors": [
+            "CAPSULE_DOOR"
+          ],
+          "priority": "P1",
+          "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED"
+        },
+        {
+          "id": "C02",
+          "name": "주요 전시",
+          "soft_target_share": 0.5,
+          "activities": [
+            "관람",
+            "지역 브랜드 소개"
+          ],
+          "allowable_furniture": [
+            "wall_display",
+            "display_plinth"
+          ],
+          "spatial_rule": "길쭉한 캡슐의 벽면/시선 축을 활용. 3개 플린스 일렬 반복은 기본값에서 제외",
+          "anchors": [
+            "CAPSULE_DOOR"
+          ],
+          "priority": "P1",
+          "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED"
+        },
+        {
+          "id": "C03",
+          "name": "관람 후 체류",
+          "soft_target_share": 0.2,
+          "activities": [
+            "대화",
+            "휴식"
+          ],
+          "allowable_furniture": [
+            "curved_bench",
+            "small_seating"
+          ],
+          "spatial_rule": "곡면 외피 쪽에 배치하면서 관람 동선과 충분히 분리",
+          "anchors": [
+            "CAPSULE_DOOR"
+          ],
+          "priority": "P1",
+          "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED"
+        },
+        {
+          "id": "C04",
+          "name": "전시 순환",
+          "soft_target_share": 0.15,
+          "activities": [
+            "출입",
+            "회전",
+            "우회"
+          ],
+          "allowable_furniture": [
+            "none"
+          ],
+          "spatial_rule": "문 호와 전시대를 피하는 연속 순환영역을 먼저 확보",
+          "anchors": [
+            "CAPSULE_DOOR"
+          ],
+          "priority": "P0",
+          "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED"
+        }
+      ]
+    }
+  ],
+  "external_programs": [
+    {
+      "id": "EXT_GROVE",
+      "model_status": "GROVE_DESIGN_PROPOSED_NOT_APPROVED",
+      "intent": "서측 숲마당→필로티 접근 산책과 경계 체류"
+    },
+    {
+      "id": "EXT_SUNKEN",
+      "model_status": "SITE_CONNECTION_PRESENT_BUT_DETAIL_UNVERIFIED",
+      "intent": "지하철 접근→선큰 계단→공공광장 연결"
+    },
+    {
+      "id": "EXT_SOUTH_PLAZA",
+      "model_status": "EXISTING_RENDER_DERIVED_CONTEXT_NOT_REVALIDATED",
+      "intent": "보행 통과 및 소규모 외부 체류"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "ENTRY_MAIN",
+      "to": "P01",
+      "kind": "MUST_CONNECT",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "P01",
+      "to": "PUBLIC_MARKET_DOOR",
+      "kind": "MUST_CONNECT",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "PUBLIC_MARKET_DOOR",
+      "to": "M01",
+      "kind": "MUST_CONNECT",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "M01",
+      "to": "M06",
+      "kind": "MUST_CONNECT",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "M06",
+      "to": "T3_PUBLIC_LIFT",
+      "kind": "MUST_CONNECT",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "M06",
+      "to": "T4_PUBLIC_LIFT",
+      "kind": "MUST_CONNECT",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "P01",
+      "to": "T1_RAMP",
+      "kind": "SHOULD_CONNECT",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "M06",
+      "to": "PL_PLAZA_LIFT",
+      "kind": "SHOULD_CONNECT",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "M02",
+      "to": "M06",
+      "kind": "SHOULD_NEAR",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "M03",
+      "to": "M01",
+      "kind": "SHOULD_NEAR",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "M04",
+      "to": "M05",
+      "kind": "SHOULD_NEAR",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "M04",
+      "to": "T2_LIGHT",
+      "kind": "SHOULD_NEAR",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "C01",
+      "to": "M06",
+      "kind": "SHOULD_CONNECT",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "ENTRY_SERVICE",
+      "to": "S01",
+      "kind": "MUST_CONNECT",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "S01",
+      "to": "S02",
+      "kind": "MUST_CONNECT",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "S02",
+      "to": "S03",
+      "kind": "MUST_CONNECT",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "S03",
+      "to": "FR_FREIGHT_LIFT",
+      "kind": "MUST_CONNECT",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "S02",
+      "to": "M02",
+      "kind": "CONTROLLED_ONLY",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "S01",
+      "to": "P01",
+      "kind": "MUST_SEPARATE",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    },
+    {
+      "from": "S01",
+      "to": "M05",
+      "kind": "MUST_SEPARATE",
+      "evidence": "PENDING_REAL_GEOMETRY"
+    }
+  ],
+  "required_next_checks": [
+    "read actual 1F slice door openings and model-tagged 11 doors",
+    "derive real market threshold and capsule entrance from geometry, never guess",
+    "shapely compute net valid program polygons after all room/column/tube/door/egress exclusions",
+    "validate alternate layout candidates against visitor-to-vertical-node network",
+    "maintain service route separation with only controlled stock replenishment",
+    "resolve 34 columns in source vs 23 drawn and stair form before detailed furniture",
+    "print area values only from computed polygons and store source hashes"
+  ]
+}
