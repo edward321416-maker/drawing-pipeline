@@ -4,7 +4,7 @@
 - 상태: **실행 지시서 / 실제 로컬 Claude Code 미실행**
 - 프로젝트: `D:\Users\admin\Desktop\2학기 논문`
 - GitHub: https://github.com/edward321416-maker/drawing-pipeline
-- 고정 기준: PR #4 HEAD `85b8742f5a66c07162c941c86248d6c65a77e77c`
+- 지시서 브랜치: `chatgpt/claude-t11-execution-brief-20261103`; **코드 기준은 PR #4 HEAD `85b8742f5a66c07162c941c86248d6c65a77e77c`**이며, 실제 작업 HEAD는 시작 시 SHA로 기록한다.
 - 연결 이력: S0 비교 스냅샷 PR #2 → 프로그램 기획 PR #3 → 출입문 감사 PR #4
 - 이번 목표: **로컬 .blend를 검증하고 실제 1층 절단 JSON과 3D 마스터 JSON의 문 객체를 대조한 증거 확보**. 건축 형상·가구·제도 스타일을 수정하지 않는다.
 
@@ -34,14 +34,17 @@
 ```powershell
 $root = 'D:\Users\admin\Desktop\2학기 논문'
 $wt = 'D:\Users\admin\Desktop\2학기 논문_T11_검증'
-$expected = '85b8742f5a66c07162c941c86248d6c65a77e77c'
-$sourceBranch = 'chatgpt/g1-t11-entry-source-audit-20261103'
+$basePolicy = '85b8742f5a66c07162c941c86248d6c65a77e77c'
+$sourceBranch = 'chatgpt/claude-t11-execution-brief-20261103'
 $localBranch = 'claude/t11-local-validation-20261103'
 
 git -C $root rev-parse --show-toplevel
 git -C $root remote get-url origin
 git -C $root status --short
 git -C $root fetch origin $sourceBranch
+$expected = git -C $root rev-parse "origin/$sourceBranch"
+git -C $root merge-base --is-ancestor $basePolicy $expected
+if ($LASTEXITCODE -ne 0) { throw "감사 코드 기준 PR #4의 후속 브랜치가 아닙니다: $expected" }
 
 if (Test-Path -LiteralPath $wt) { throw "기존 작업 폴더가 있습니다: $wt" }
 git -C $root worktree add -b $localBranch $wt $expected
