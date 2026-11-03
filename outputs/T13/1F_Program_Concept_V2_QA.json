@@ -1,0 +1,430 @@
+{
+ "gate_rules": "PASS 요건: 구획 중첩·부모 밖 유출·구조 침범·가구 중복·ID 칩 겹침·출입구 승격 모두 0",
+ "variants": {
+  "A": {
+   "sheet_mm_svg": true,
+   "pdf_mm": [
+    420.0,
+    297.0
+   ],
+   "pdf_pages": 1,
+   "pdf_is_A3_420x297": true,
+   "scale": "1:500",
+   "canvas_matches_A3": true,
+   "layers_same_as_variant_A": true,
+   "png_px": [
+    4096,
+    2896
+   ],
+   "furniture_body_paths": 211,
+   "furniture_duplicate_body_paths_ghost": 0,
+   "curtain_door_arc_paths": 0,
+   "curtain_door_arc_paths_solid": 0,
+   "dashed_paths_in_doors_layer": 4,
+   "structure_cols_identical_to_V1": true,
+   "walls_paths_only_in_V2": 4,
+   "walls_paths_only_in_V1": 4,
+   "promoted_entries": [],
+   "hard_gates": {
+    "zone_overlap_m2_total": 0.0,
+    "zone_outside_parent_m2_max": 0.0,
+    "furniture_hits_structure": 0,
+    "furniture_outside_parent_zone": 0,
+    "furniture_instance_overlaps": 0,
+    "furniture_in_entry_clearance": 0,
+    "furniture_touching_column": 0,
+    "furniture_touching_tube": 0,
+    "chips_overlapping_furniture": 0,
+    "ghost_duplicates": 0,
+    "curtain_door_arcs_solid": 0,
+    "promoted_entries": 0,
+    "door_swing_hits_wall": 0,
+    "door_swing_hits_other_door": 0,
+    "unassigned_net_floor_m2": 0.0
+   },
+   "hard_gate_failures": {},
+   "output_sha256": {
+    ".png": "46fe1ba0f5622763638a2fe38fa4e29d5d36fe247b54b6c922374d2cab691aa2",
+    ".pdf": "04b230a60caef228acb4e1f753802de60461e8933b2831379a191c4e8e3ec519",
+    ".svg": "0d1b9b8eccff25e7da22fc27d63ac8a32c36b66523690c914c2c9d08f21d474e",
+    "_check.json": "682114dab35cad44ab48bb134a8eb0080b7a1d4d2ed0dfd848bc5aaae768c0ab"
+   }
+  },
+  "B": {
+   "sheet_mm_svg": true,
+   "pdf_mm": [
+    420.0,
+    297.0
+   ],
+   "pdf_pages": 1,
+   "pdf_is_A3_420x297": true,
+   "scale": "1:500",
+   "canvas_matches_A3": true,
+   "layers_same_as_variant_A": true,
+   "png_px": [
+    4096,
+    2896
+   ],
+   "furniture_body_paths": 192,
+   "furniture_duplicate_body_paths_ghost": 0,
+   "curtain_door_arc_paths": 0,
+   "curtain_door_arc_paths_solid": 0,
+   "dashed_paths_in_doors_layer": 4,
+   "structure_cols_identical_to_V1": true,
+   "walls_paths_only_in_V2": 4,
+   "walls_paths_only_in_V1": 4,
+   "promoted_entries": [],
+   "hard_gates": {
+    "zone_overlap_m2_total": 0.0,
+    "zone_outside_parent_m2_max": 0.0,
+    "furniture_hits_structure": 0,
+    "furniture_outside_parent_zone": 0,
+    "furniture_instance_overlaps": 0,
+    "furniture_in_entry_clearance": 0,
+    "furniture_touching_column": 0,
+    "furniture_touching_tube": 0,
+    "chips_overlapping_furniture": 0,
+    "ghost_duplicates": 0,
+    "curtain_door_arcs_solid": 0,
+    "promoted_entries": 0,
+    "door_swing_hits_wall": 0,
+    "door_swing_hits_other_door": 0,
+    "unassigned_net_floor_m2": 0.0
+   },
+   "hard_gate_failures": {},
+   "output_sha256": {
+    ".png": "949c0e594333dcf7dbad6a8cd2480a61c3d725ed31319a399199cd9810fe8af8",
+    ".pdf": "7740dd951af3571a9df60752bd5c7bbb868cc7140b8e3a1e57565403c3b41bea",
+    ".svg": "c1a7cdd104ba284dedbb80375fe23eb26da638d5cb53498506041e792940e9cd",
+    "_check.json": "bbe8942b3edf394daa0fb230654c1bc42f69758fe6e7b00117272b9577ad7409"
+   }
+  }
+ },
+ "column_reconciliation": {
+  "source_columns": 34,
+  "drawn": 23,
+  "not_drawn": 11,
+  "culled_min_center_distance_m": 0.0,
+  "drawn_min_center_distance_m": 2.33,
+  "rows": [
+   {
+    "id": "Col_0.6_9",
+    "x": 0.6,
+    "y": 9.0,
+    "drawn": true,
+    "nearest_core_or_tube": "코어 D",
+    "center_distance_m": 3.0,
+    "reason": null
+   },
+   {
+    "id": "Col_0.6_18",
+    "x": 0.6,
+    "y": 18.0,
+    "drawn": true,
+    "nearest_core_or_tube": "서측 캡슐",
+    "center_distance_m": 7.79,
+    "reason": null
+   },
+   {
+    "id": "Col_0.6_27",
+    "x": 0.6,
+    "y": 27.0,
+    "drawn": true,
+    "nearest_core_or_tube": "설비 샤프트 M1",
+    "center_distance_m": 2.8,
+    "reason": null
+   },
+   {
+    "id": "Col_0.6_36",
+    "x": 0.6,
+    "y": 36.0,
+    "drawn": true,
+    "nearest_core_or_tube": "서측 캡슐",
+    "center_distance_m": 7.58,
+    "reason": null
+   },
+   {
+    "id": "Col_0.6_45",
+    "x": 0.6,
+    "y": 45.0,
+    "drawn": false,
+    "nearest_core_or_tube": "코어 A",
+    "center_distance_m": 2.0,
+    "reason": "코어·튜브·캡슐 외곽에서 기둥 가장자리까지 1.8 m 이내(렌더러 규칙 core_exclusion). 아래 center_distance_m 은 기둥 중심 기준"
+   },
+   {
+    "id": "Col_9_0.6",
+    "x": 9.0,
+    "y": 0.6,
+    "drawn": true,
+    "nearest_core_or_tube": "코어 D",
+    "center_distance_m": 3.0,
+    "reason": null
+   },
+   {
+    "id": "Col_9_53.4",
+    "x": 9.0,
+    "y": 53.4,
+    "drawn": true,
+    "nearest_core_or_tube": "코어 A",
+    "center_distance_m": 3.0,
+    "reason": null
+   },
+   {
+    "id": "Col_18_0.6",
+    "x": 18.0,
+    "y": 0.6,
+    "drawn": true,
+    "nearest_core_or_tube": "비상용 승강기 EV1",
+    "center_distance_m": 7.46,
+    "reason": null
+   },
+   {
+    "id": "Col_18_9",
+    "x": 18.0,
+    "y": 9.0,
+    "drawn": false,
+    "nearest_core_or_tube": "T1 나선 램프",
+    "center_distance_m": 2.22,
+    "reason": "코어·튜브·캡슐 외곽에서 기둥 가장자리까지 1.8 m 이내(렌더러 규칙 core_exclusion). 아래 center_distance_m 은 기둥 중심 기준"
+   },
+   {
+    "id": "Col_18_18",
+    "x": 18.0,
+    "y": 18.0,
+    "drawn": true,
+    "nearest_core_or_tube": "서측 캡슐",
+    "center_distance_m": 2.71,
+    "reason": null
+   },
+   {
+    "id": "Col_18_27",
+    "x": 18.0,
+    "y": 27.0,
+    "drawn": false,
+    "nearest_core_or_tube": "서측 캡슐",
+    "center_distance_m": 2.0,
+    "reason": "코어·튜브·캡슐 외곽에서 기둥 가장자리까지 1.8 m 이내(렌더러 규칙 core_exclusion). 아래 center_distance_m 은 기둥 중심 기준"
+   },
+   {
+    "id": "Col_18_36",
+    "x": 18.0,
+    "y": 36.0,
+    "drawn": true,
+    "nearest_core_or_tube": "서측 캡슐",
+    "center_distance_m": 2.33,
+    "reason": null
+   },
+   {
+    "id": "Col_18_45",
+    "x": 18.0,
+    "y": 45.0,
+    "drawn": true,
+    "nearest_core_or_tube": "T3 전망 승강기",
+    "center_distance_m": 2.72,
+    "reason": null
+   },
+   {
+    "id": "Col_18_53.4",
+    "x": 18.0,
+    "y": 53.4,
+    "drawn": true,
+    "nearest_core_or_tube": "T3 전망 승강기",
+    "center_distance_m": 8.89,
+    "reason": null
+   },
+   {
+    "id": "Col_27_0.6",
+    "x": 27.0,
+    "y": 0.6,
+    "drawn": true,
+    "nearest_core_or_tube": "비상용 승강기 EV1",
+    "center_distance_m": 3.3,
+    "reason": null
+   },
+   {
+    "id": "Col_27_9",
+    "x": 27.0,
+    "y": 9.0,
+    "drawn": false,
+    "nearest_core_or_tube": "비상용 승강기 EV1",
+    "center_distance_m": 0.97,
+    "reason": "코어·튜브·캡슐 외곽에서 기둥 가장자리까지 1.8 m 이내(렌더러 규칙 core_exclusion). 아래 center_distance_m 은 기둥 중심 기준"
+   },
+   {
+    "id": "Col_27_27",
+    "x": 27.0,
+    "y": 27.0,
+    "drawn": true,
+    "nearest_core_or_tube": "광장 승강기 PL",
+    "center_distance_m": 7.85,
+    "reason": null
+   },
+   {
+    "id": "Col_27_36",
+    "x": 27.0,
+    "y": 36.0,
+    "drawn": true,
+    "nearest_core_or_tube": "비상용 승강기 EV2",
+    "center_distance_m": 5.86,
+    "reason": null
+   },
+   {
+    "id": "Col_27_53.4",
+    "x": 27.0,
+    "y": 53.4,
+    "drawn": true,
+    "nearest_core_or_tube": "비상용 승강기 EV2",
+    "center_distance_m": 7.25,
+    "reason": null
+   },
+   {
+    "id": "Col_36_0.6",
+    "x": 36.0,
+    "y": 0.6,
+    "drawn": true,
+    "nearest_core_or_tube": "T2 빛 튜브",
+    "center_distance_m": 7.59,
+    "reason": null
+   },
+   {
+    "id": "Col_36_45",
+    "x": 36.0,
+    "y": 45.0,
+    "drawn": false,
+    "nearest_core_or_tube": "T4 전망 승강기",
+    "center_distance_m": 1.0,
+    "reason": "코어·튜브·캡슐 외곽에서 기둥 가장자리까지 1.8 m 이내(렌더러 규칙 core_exclusion). 아래 center_distance_m 은 기둥 중심 기준"
+   },
+   {
+    "id": "Col_36_53.4",
+    "x": 36.0,
+    "y": 53.4,
+    "drawn": true,
+    "nearest_core_or_tube": "T4 전망 승강기",
+    "center_distance_m": 8.09,
+    "reason": null
+   },
+   {
+    "id": "Col_45_0.6",
+    "x": 45.0,
+    "y": 0.6,
+    "drawn": true,
+    "nearest_core_or_tube": "코어 C",
+    "center_distance_m": 3.0,
+    "reason": null
+   },
+   {
+    "id": "Col_45_9",
+    "x": 45.0,
+    "y": 9.0,
+    "drawn": false,
+    "nearest_core_or_tube": "T2 빛 튜브",
+    "center_distance_m": 1.33,
+    "reason": "코어·튜브·캡슐 외곽에서 기둥 가장자리까지 1.8 m 이내(렌더러 규칙 core_exclusion). 아래 center_distance_m 은 기둥 중심 기준"
+   },
+   {
+    "id": "Col_45_18",
+    "x": 45.0,
+    "y": 18.0,
+    "drawn": true,
+    "nearest_core_or_tube": "T2 빛 튜브",
+    "center_distance_m": 3.32,
+    "reason": null
+   },
+   {
+    "id": "Col_45_27",
+    "x": 45.0,
+    "y": 27.0,
+    "drawn": true,
+    "nearest_core_or_tube": "화물 승강기 FR",
+    "center_distance_m": 8.6,
+    "reason": null
+   },
+   {
+    "id": "Col_45_36",
+    "x": 45.0,
+    "y": 36.0,
+    "drawn": false,
+    "nearest_core_or_tube": "화물 승강기 FR",
+    "center_distance_m": 0.81,
+    "reason": "코어·튜브·캡슐 외곽에서 기둥 가장자리까지 1.8 m 이내(렌더러 규칙 core_exclusion). 아래 center_distance_m 은 기둥 중심 기준"
+   },
+   {
+    "id": "Col_45_45",
+    "x": 45.0,
+    "y": 45.0,
+    "drawn": false,
+    "nearest_core_or_tube": "T4 전망 승강기",
+    "center_distance_m": 1.83,
+    "reason": "코어·튜브·캡슐 외곽에서 기둥 가장자리까지 1.8 m 이내(렌더러 규칙 core_exclusion). 아래 center_distance_m 은 기둥 중심 기준"
+   },
+   {
+    "id": "Col_45_53.4",
+    "x": 45.0,
+    "y": 53.4,
+    "drawn": false,
+    "nearest_core_or_tube": "코어 B",
+    "center_distance_m": 2.0,
+    "reason": "코어·튜브·캡슐 외곽에서 기둥 가장자리까지 1.8 m 이내(렌더러 규칙 core_exclusion). 아래 center_distance_m 은 기둥 중심 기준"
+   },
+   {
+    "id": "Col_53.4_9",
+    "x": 53.4,
+    "y": 9.0,
+    "drawn": false,
+    "nearest_core_or_tube": "화장실 C 장애인 화장실",
+    "center_distance_m": 0.0,
+    "reason": "화장실/코어 평면 안에 매입: 점 기둥이 벽체·칸막이 덩어리와 겹쳐 따로 그리지 않는다"
+   },
+   {
+    "id": "Col_53.4_18",
+    "x": 53.4,
+    "y": 18.0,
+    "drawn": true,
+    "nearest_core_or_tube": "화장실 C 장애인 화장실",
+    "center_distance_m": 6.2,
+    "reason": null
+   },
+   {
+    "id": "Col_53.4_27",
+    "x": 53.4,
+    "y": 27.0,
+    "drawn": true,
+    "nearest_core_or_tube": "화물 승강기 FR",
+    "center_distance_m": 9.46,
+    "reason": null
+   },
+   {
+    "id": "Col_53.4_36",
+    "x": 53.4,
+    "y": 36.0,
+    "drawn": true,
+    "nearest_core_or_tube": "화물 승강기 FR",
+    "center_distance_m": 2.96,
+    "reason": null
+   },
+   {
+    "id": "Col_53.4_45",
+    "x": 53.4,
+    "y": 45.0,
+    "drawn": false,
+    "nearest_core_or_tube": "화장실 B 공용·장애인 겸용",
+    "center_distance_m": 0.0,
+    "reason": "화장실/코어 평면 안에 매입: 점 기둥이 벽체·칸막이 덩어리와 겹쳐 따로 그리지 않는다"
+   }
+  ]
+ },
+ "input_sha256": {
+  "source_blend_1F_master": "30da41d693a967f9628da843f5ec6b6be40f410eeaa209c643d1cb8fdb3f1f1e",
+  "slice_1F": "2795a1215a0a3f47c0d2146b06cb643b253c90842d87c5d3e023f8d2535bd006",
+  "master_model_json": "9d8ebb99579c32c41dbdd2c5e242e9950123f83c480f3404856fbfa6b20be29c",
+  "geom_dump": "69b0ec6c34bd5f45bc9902bc3bfedd1f1eca85f0bdfd44430dbb0a9763da17c9"
+ },
+ "git_head": "3f68090890fd9b87487f08e0d87c80a5d548f54e",
+ "tests": "unittest discover tests: 31 OK (신규 11 + 기존 20); verify_pipeline 1F 19/19",
+ "technical_gate": "PASS",
+ "gate": "HOLD",
+ "gate_reason": "기술 QA 통과. 사용자 시각 승인·출입구 위치·법규 검토 전이라 HOLD",
+ "1F_FINAL_FROZEN": false
+}

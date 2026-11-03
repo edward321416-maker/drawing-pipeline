@@ -1,0 +1,300 @@
+{
+ "floor": "1F",
+ "sheet_mm": [
+  420.0,
+  297.0
+ ],
+ "scale": "1:500",
+ "world_per_sheet_m": [
+  210.0,
+  148.5
+ ],
+ "mm_per_m": 2.0,
+ "canvas_matches_A3": true,
+ "scale_bar_10m_mm": 20.0,
+ "legend_items": 5,
+ "legend": {
+  "1": "선큰 마당",
+  "2": "나선 램프 튜브",
+  "3": "빛 튜브",
+  "4": "화장실",
+  "5": "코어 / 피난계단·승강기"
+ },
+ "numbers": 11,
+ "numbers_on_elevators_or_shafts": 0,
+ "small_bubbles_core_restroom": 8,
+ "entrance_boxes_drawn": 0,
+ "door_gaps_punched": 11,
+ "furniture_items": 196,
+ "furniture_touching_column": 0,
+ "furniture_touching_tube": 0,
+ "numbers_colliding_with_furniture": 0,
+ "plan_text_all_numeric": false,
+ "symbol_texts": [
+  "UP",
+  "UP",
+  "UP",
+  "UP"
+ ],
+ "shaft_X_inside_circle": true,
+ "curtain_wall_segments": 17,
+ "curtain_doors": 5,
+ "site": {
+  "park_paths": 4,
+  "planting_islands": 6,
+  "park_trees": 14,
+  "benches": 8,
+  "south_plaza_m2": 689,
+  "street_trees": 5,
+  "service_drive_m": [
+   48.0,
+   54.0
+  ],
+  "model_trees_kept": 17
+ },
+ "columns_in_model": 34,
+ "columns_drawn": 23,
+ "columns_culled": 11,
+ "min_drawn_column_edge_to_core_or_tube_m": 1.88,
+ "min_drawn_column_center_to_core_or_tube_m": 2.33,
+ "door_swing_hits_wall": 0,
+ "door_swing_hits_other_door": 0,
+ "curtain_door_swing_hits_wall": 0,
+ "fixtures_dropped_in_swing": 0,
+ "fixtures_remaining_in_swing": 0,
+ "door_opening_residual_wall_area_m2": 0.0,
+ "door_jamb_clearance_violations": 0,
+ "doors_shifted_for_250mm_clearance": 0,
+ "lineweight_tiers": {
+  "T1_cut_walls_cols": "0.45 mm #000000",
+  "T2_door_leaf_partition": "0.18 mm #222222",
+  "T3_stair_ramp_elevator": "0.12 mm #444444",
+  "T4_glass_curtain_wall": "0.09 mm #4A4A4A (1:100: 0.12)",
+  "T5_furniture_fixture_swing_shaftX": "0.08 mm #666666",
+  "T6_grid_tile_stipple_foliage": "0.05 mm #CCCCCC"
+ },
+ "program": {
+  "variant": "A",
+  "state": "PLAN_CANDIDATE_UNAPPROVED",
+  "1F_FINAL_FROZEN": false,
+  "zones": {
+   "M01": {
+    "name": "안내·길찾기",
+    "parent": "MARKET",
+    "area_m2": 165.25,
+    "actual_share_of_parent_zones": 0.121,
+    "soft_target_share": 0.08,
+    "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
+   },
+   "M02": {
+    "name": "상설 판매",
+    "parent": "MARKET",
+    "area_m2": 518.64,
+    "actual_share_of_parent_zones": 0.378,
+    "soft_target_share": 0.34,
+    "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
+   },
+   "M03": {
+    "name": "팝업·시연",
+    "parent": "MARKET",
+    "area_m2": 77.18,
+    "actual_share_of_parent_zones": 0.056,
+    "soft_target_share": 0.1,
+    "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
+   },
+   "M04": {
+    "name": "푸드·시식",
+    "parent": "MARKET",
+    "area_m2": 179.83,
+    "actual_share_of_parent_zones": 0.131,
+    "soft_target_share": 0.16,
+    "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
+   },
+   "M05": {
+    "name": "공용 식음·대화",
+    "parent": "MARKET",
+    "area_m2": 118.65,
+    "actual_share_of_parent_zones": 0.087,
+    "soft_target_share": 0.09,
+    "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
+   },
+   "M06": {
+    "name": "순환·수직이동 대기",
+    "parent": "MARKET",
+    "area_m2": 311.06,
+    "actual_share_of_parent_zones": 0.227,
+    "soft_target_share": 0.23,
+    "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
+   },
+   "P01": {
+    "name": "공공 통과",
+    "parent": "PILOTI",
+    "area_m2": 267.16,
+    "actual_share_of_parent_zones": 0.532,
+    "soft_target_share": 0.5,
+    "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
+   },
+   "P02": {
+    "name": "만남·대기",
+    "parent": "PILOTI",
+    "area_m2": 72.06,
+    "actual_share_of_parent_zones": 0.143,
+    "soft_target_share": 0.2,
+    "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
+   },
+   "P03": {
+    "name": "숲 연결 쉼터",
+    "parent": "PILOTI",
+    "area_m2": 106.7,
+    "actual_share_of_parent_zones": 0.212,
+    "soft_target_share": 0.15,
+    "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
+   },
+   "P04": {
+    "name": "가변 행사 여백",
+    "parent": "PILOTI",
+    "area_m2": 56.33,
+    "actual_share_of_parent_zones": 0.112,
+    "soft_target_share": 0.15,
+    "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
+   },
+   "S01": {
+    "name": "하역",
+    "parent": "SERVICE",
+    "area_m2": 20.44,
+    "actual_share_of_parent_zones": 0.129,
+    "soft_target_share": 0.45,
+    "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
+   },
+   "S02": {
+    "name": "검수·보관",
+    "parent": "SERVICE",
+    "area_m2": 57.06,
+    "actual_share_of_parent_zones": 0.361,
+    "soft_target_share": 0.25,
+    "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
+   },
+   "S03": {
+    "name": "화물 승강기 대기",
+    "parent": "SERVICE",
+    "area_m2": 67.82,
+    "actual_share_of_parent_zones": 0.43,
+    "soft_target_share": 0.15,
+    "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
+   },
+   "S04": {
+    "name": "운영 통행",
+    "parent": "SERVICE",
+    "area_m2": 12.55,
+    "actual_share_of_parent_zones": 0.079,
+    "soft_target_share": 0.15,
+    "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
+   },
+   "C01": {
+    "name": "전시 안내",
+    "parent": "CAPSULE",
+    "area_m2": 32.12,
+    "actual_share_of_parent_zones": 0.235,
+    "soft_target_share": 0.15,
+    "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
+   },
+   "C02": {
+    "name": "주 전시",
+    "parent": "CAPSULE",
+    "area_m2": 67.65,
+    "actual_share_of_parent_zones": 0.495,
+    "soft_target_share": 0.5,
+    "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
+   },
+   "C03": {
+    "name": "관람 후 체류",
+    "parent": "CAPSULE",
+    "area_m2": 22.35,
+    "actual_share_of_parent_zones": 0.164,
+    "soft_target_share": 0.2,
+    "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
+   },
+   "C04": {
+    "name": "출입·관람 순환",
+    "parent": "CAPSULE",
+    "area_m2": 14.56,
+    "actual_share_of_parent_zones": 0.107,
+    "soft_target_share": 0.15,
+    "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
+   }
+  },
+  "qa": {
+   "zone_outside_parent_m2_max": 0.0,
+   "zone_overlap_m2_total": 0.0,
+   "zone_overlap_pairs": [],
+   "unassigned_net_floor_m2": {
+    "hall": 0.0,
+    "piloti": 0.0,
+    "service": 0.0
+   },
+   "furniture_hits_structure": 0,
+   "furniture_outside_parent_zone": 0,
+   "furniture_crossing_own_subzone_boundary": 1,
+   "furniture_in_entry_clearance": 0,
+   "furniture_instance_overlaps": 0,
+   "min_gap_between_instances_m": 1.0,
+   "furniture_instances": 40,
+   "furniture_body_polygons": 173,
+   "service_bays_overlap_freight_wait_m2": 13.554
+  },
+  "furniture_instances_by_zone_type": {
+   "M01/info_counter": 1,
+   "M02/back_to_back_stall": 6,
+   "M02/island_stall": 6,
+   "M03/popup_module": 2,
+   "M04/food_kiosk": 4,
+   "M04/tasting_counter": 2,
+   "M05/banquette": 1,
+   "M05/communal_table": 4,
+   "M05/four_top_table": 4,
+   "P02/long_bench": 3,
+   "P03/planter_bench": 1,
+   "C01/reception_desk": 1,
+   "C02/plinth_island": 3,
+   "C03/gallery_bench": 2
+  },
+  "furniture_instances": 40,
+  "furniture_body_polygons_planned": 173,
+  "furniture_body_polygons_in_svg": 196,
+  "zone_chips": 21,
+  "zone_chips_with_white_box_fallback": 5,
+  "zone_chips_overlapping_furniture": [],
+  "proposed_entries": [
+   {
+    "id": "ENTRY_MARKET_PRIMARY",
+    "center": [
+     29.0,
+     14.01
+    ],
+    "status": "PROPOSED_ONLY / ACCESS_PENDING"
+   },
+   {
+    "id": "ENTRY_MARKET_SECONDARY",
+    "center": [
+     17.9,
+     28.0
+    ],
+    "status": "PROPOSED_ONLY / ACCESS_PENDING"
+   },
+   {
+    "id": "ENTRY_CAPSULE",
+    "center": [
+     16.0,
+     24.0
+    ],
+    "status": "PROPOSED_ONLY / ACCESS_PENDING"
+   }
+  ],
+  "flows": {
+   "public": 5,
+   "secondary": 1,
+   "service": 1
+  },
+  "columns_drawn": 23
+ }
+}

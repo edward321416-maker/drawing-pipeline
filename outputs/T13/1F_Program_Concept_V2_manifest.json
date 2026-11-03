@@ -1,0 +1,113 @@
+{
+ "git_head": "3f68090890fd9b87487f08e0d87c80a5d548f54e",
+ "state": "PLAN_CANDIDATE_UNAPPROVED",
+ "1F_FINAL_FROZEN": false,
+ "inputs": {
+  "source_blend_1F_master": "30da41d693a967f9628da843f5ec6b6be40f410eeaa209c643d1cb8fdb3f1f1e",
+  "slice_1F": "2795a1215a0a3f47c0d2146b06cb643b253c90842d87c5d3e023f8d2535bd006",
+  "master_model_json": "9d8ebb99579c32c41dbdd2c5e242e9950123f83c480f3404856fbfa6b20be29c",
+  "geom_dump": "69b0ec6c34bd5f45bc9902bc3bfedd1f1eca85f0bdfd44430dbb0a9763da17c9"
+ },
+ "files": {
+  "1F_Program_Concept_V2_A.pdf": {
+   "sha256": "04b230a60caef228acb4e1f753802de60461e8933b2831379a191c4e8e3ec519",
+   "bytes": 467378
+  },
+  "1F_Program_Concept_V2_A.png": {
+   "sha256": "46fe1ba0f5622763638a2fe38fa4e29d5d36fe247b54b6c922374d2cab691aa2",
+   "bytes": 1656307
+  },
+  "1F_Program_Concept_V2_A.svg": {
+   "sha256": "0d1b9b8eccff25e7da22fc27d63ac8a32c36b66523690c914c2c9d08f21d474e",
+   "bytes": 1525191
+  },
+  "1F_Program_Concept_V2_A_check.json": {
+   "sha256": "682114dab35cad44ab48bb134a8eb0080b7a1d4d2ed0dfd848bc5aaae768c0ab",
+   "bytes": 8512
+  },
+  "1F_Program_Concept_V2_B.pdf": {
+   "sha256": "7740dd951af3571a9df60752bd5c7bbb868cc7140b8e3a1e57565403c3b41bea",
+   "bytes": 462786
+  },
+  "1F_Program_Concept_V2_B.png": {
+   "sha256": "949c0e594333dcf7dbad6a8cd2480a61c3d725ed31319a399199cd9810fe8af8",
+   "bytes": 1647788
+  },
+  "1F_Program_Concept_V2_B.svg": {
+   "sha256": "c1a7cdd104ba284dedbb80375fe23eb26da638d5cb53498506041e792940e9cd",
+   "bytes": 1491258
+  },
+  "1F_Program_Concept_V2_B_check.json": {
+   "sha256": "bbe8942b3edf394daa0fb230654c1bc42f69758fe6e7b00117272b9577ad7409",
+   "bytes": 8511
+  },
+  "1F_Program_Concept_V2_QA.json": {
+   "sha256": "40ecd724b8dd75a8413564af871d9200b1a1be8474997be51416781771a6bccd",
+   "bytes": 12326
+  },
+  "1F_Program_Concept_V2_before_after.png": {
+   "sha256": "0cad92113f0e5e0cf68ff9cd4e8ff8b20e3a1eea980a63faba44573ac03c66f7",
+   "bytes": 871174
+  },
+  "crops/crop_01_market_center_V1_before.png": {
+   "sha256": "721b502bc7d6ad278caf136d6aaec5c10d618ab9680c1a30b8175c201b11136d",
+   "bytes": 211020
+  },
+  "crops/crop_01_market_center_V2_A.png": {
+   "sha256": "16268e0aa9742a61e839f702a16f1f2b10a0a8378463eed6c0c8f247845c978b",
+   "bytes": 276996
+  },
+  "crops/crop_01_market_center_V2_B.png": {
+   "sha256": "3e0e0ec970ef1f3b25ac931ce3a8c8d0be866ffaaceeb43b39f2998f71399527",
+   "bytes": 271595
+  },
+  "crops/crop_02_entry_curtainwall_V1_before.png": {
+   "sha256": "954b0ebe3b0c54ec9be1f0c13b353c7579fddbdd5fd5f79b99c970ceb21eac2d",
+   "bytes": 45099
+  },
+  "crops/crop_02_entry_curtainwall_V2_A.png": {
+   "sha256": "d46f521950b1092afcf718114040f299490262814a27d7074d1acc23ad56b112",
+   "bytes": 60611
+  },
+  "crops/crop_02_entry_curtainwall_V2_B.png": {
+   "sha256": "2cd3007492f78830713694411e972b5cf033e40d57af60171ca7dd16077c1664",
+   "bytes": 60136
+  },
+  "crops/crop_03_core_restroom_V1_before.png": {
+   "sha256": "68921685c0a6ae30d07b620a98c7ad956c7290e2f203d33274c9fa383a9b0f08",
+   "bytes": 38360
+  },
+  "crops/crop_03_core_restroom_V2_A.png": {
+   "sha256": "01e0d6a685a2347f2a56691b2ac438d80634199b1e228ec191a73e5ade2e3e3a",
+   "bytes": 49216
+  },
+  "crops/crop_03_core_restroom_V2_B.png": {
+   "sha256": "5e1d46385d0435d2eef046f71d347991ed2d63aabc9241449ce5b76368af570c",
+   "bytes": 48263
+  },
+  "crops/crop_04_west_capsule_V1_before.png": {
+   "sha256": "11a9d898a4701051f9f47b584f99394d6dc19e37d22a36c8898cf330fa01af5c",
+   "bytes": 70305
+  },
+  "crops/crop_04_west_capsule_V2_A.png": {
+   "sha256": "d57fe2332a4c16d92f779503dc0c7a3f51593d4e4cf4bb919335e06d826115a2",
+   "bytes": 86236
+  },
+  "crops/crop_04_west_capsule_V2_B.png": {
+   "sha256": "d712d410cb4c43a4ddb5c33a1c88db5c6fa9ce5bd6d8e0ad2a0e7f07e879a3e6",
+   "bytes": 84755
+  },
+  "crops/crop_05_park_piloti_V1_before.png": {
+   "sha256": "d898f28acb0ceae894ae25a77bea5a687017131182eb9f5cd2bbc77a8830bed6",
+   "bytes": 289234
+  },
+  "crops/crop_05_park_piloti_V2_A.png": {
+   "sha256": "0641143519c7c9b1137d24f9e97f842bfb2bbb4475b028c06f73772f83ddfdc5",
+   "bytes": 297028
+  },
+  "crops/crop_05_park_piloti_V2_B.png": {
+   "sha256": "5d864630f1f5b1233261dcec77dab429c3574ea718349a879680842b151958c8",
+   "bytes": 294985
+  }
+ }
+}

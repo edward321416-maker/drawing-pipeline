@@ -31,8 +31,17 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import pipeline_common as pc  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE_JSON = os.path.join(ROOT, "도면", "00_엔진", "model", "m_site_source.json")
-GROVE_JSON = os.path.join(ROOT, "도면", "00_엔진", "model", "grove_design.json")
+def _model_json(name):
+    """작업공간(도면/00_엔진/model)과 저장소 사본(engine/model) 어느 쪽에서 실행해도 같은 모델 데이터를 읽는다."""
+    for rel in (("도면", "00_엔진", "model"), ("engine", "model")):
+        p = os.path.join(ROOT, *rel, name)
+        if os.path.exists(p):
+            return p
+    return os.path.join(ROOT, "engine", "model", name)
+
+
+SITE_JSON = _model_json("m_site_source.json")
+GROVE_JSON = _model_json("grove_design.json")
 FONT = "Malgun Gothic, 'Segoe UI', Arial, sans-serif"
 SHEET_MM = (594.0, 420.0)                              # A2 가로 (1:200에서 건물이 시트에 크게 보이도록)
 
