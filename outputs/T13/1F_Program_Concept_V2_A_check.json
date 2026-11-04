@@ -161,8 +161,8 @@
    "S01": {
     "name": "하역",
     "parent": "SERVICE",
-    "area_m2": 20.44,
-    "actual_share_of_parent_zones": 0.129,
+    "area_m2": 33.99,
+    "actual_share_of_parent_zones": 0.215,
     "soft_target_share": 0.45,
     "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
    },
@@ -177,8 +177,8 @@
    "S03": {
     "name": "화물 승강기 대기",
     "parent": "SERVICE",
-    "area_m2": 67.82,
-    "actual_share_of_parent_zones": 0.43,
+    "area_m2": 54.27,
+    "actual_share_of_parent_zones": 0.344,
     "soft_target_share": 0.15,
     "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
    },

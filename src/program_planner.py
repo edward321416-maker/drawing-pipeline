@@ -447,8 +447,8 @@ def plan_program(variant, I, seed=7):
                  "M04": [(T2c.x + away[0] * 5.0, T2c.y + away[1] * 5.0)], "M05": [seed5]}
     else:
         d34 = unit(T4c.x - T3c.x, T4c.y - T3c.y)
-        seeds = {"M01": [ent_in(prim, 4.0)], "M02": [(T3c.x + d34[0] * 8.5, T3c.y + d34[1] * 8.5), (T4c.x - d34[0] * 8.5, T4c.y - d34[1] * 8.5)],
-                 "M03": [mid, ent_in(sec, 5.0)], "M04": [(T2c.x + away[0] * 5.0, T2c.y + away[1] * 5.0)], "M05": [seed5]}
+        seeds = {"M01": [ent_in(prim, 6.0), ent_in(prim, 11.0)], "M02": [(T3c.x + d34[0] * 8.5, T3c.y + d34[1] * 8.5), (T4c.x - d34[0] * 8.5, T4c.y - d34[1] * 8.5)],
+                 "M03": [ent_in(sec, 5.0), (mid[0] + 3.0, mid[1] - 9.0)], "M04": [(T2c.x + away[0] * 5.0, T2c.y + away[1] * 5.0)], "M05": [seed5]}
     soft = {k: PROGRAMS[k][2] for k in seeds}
     parts = partition(rest_open, seeds, soft)
     zones = absorb_slivers({**parts})
@@ -490,8 +490,8 @@ def plan_program(variant, I, seed=7):
         s04 = corridor(s04_path, SEC_AISLE, service_net).difference(s01).difference(s03)
     except Exception:  # noqa: BLE001
         s04 = Polygon()
-    bay_vs_fr = s01.intersection(s03).area                                         # 하역 베이(렌더러 기존 심볼)가 FR 대기 반경과 겹치는 면적: 충돌로 보고, S03 우선
-    s01 = s01.difference(s03)
+    bay_vs_fr = s01.intersection(s03).area                                         # 하역 베이(모델 기반 렌더러 심볼, 서비스 구역에 1개)가 FR 대기 반경과 겹치는 면적
+    s03 = s03.difference(s01)                                                      # 베이가 FR 바로 옆(0.9 m)이라 하역 접안 우선, FR 대기는 나머지 쪽에 둔다
     s02 = service_net.difference(U([s01, s03, s04]))
     zones.update({"S01": s01, "S02": s02, "S03": s03, "S04": s04})
 
@@ -617,7 +617,7 @@ def plan_program(variant, I, seed=7):
                {"id": "ENTRY_MARKET_SECONDARY", "center": sec["center"], "n": sec["n"], "t": sec["t"], "status": "PROPOSED_ONLY / ACCESS_PENDING"},
                {"id": "ENTRY_CAPSULE", "center": door_pt, "n": inward, "t": (-inward[1], inward[0]), "status": "PROPOSED_ONLY / ACCESS_PENDING"}]
     notes = {"service_bays_overlap_freight_wait_m2": round(bay_vs_fr, 3),
-             "note": "S01 하역 베이는 렌더러의 기존 심볼 위치. FR 대기(S03, 반경 3 m)와 겹친 면적은 S03 우선으로 S01에서 제외했다."}
+             "note": "하역 베이는 서비스 구역에서 1개만 들어가며 FR 셸에서 0.9 m. FR 대기 반경 3 m 와 겹친 면적은 S01 우선으로 S03에서 제외했다."}
     return {"variant": variant, "notes": notes, "zones": zones, "furniture": P.items, "flows": flows, "entries": entries, "door_pt": door_pt,
             "nets": {"hall": hall_net, "piloti": piloti_net, "service": service_net, "capsule": cap_inner}, "hold": hold, "cols_u": col_u,
             "corr_main": corr_main, "corr_sec": corr_sec, "p_corr": p_corr, "door_clear": U(door_clear)}

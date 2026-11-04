@@ -25,7 +25,7 @@
  "small_bubbles_core_restroom": 8,
  "entrance_boxes_drawn": 0,
  "door_gaps_punched": 11,
- "furniture_items": 177,
+ "furniture_items": 180,
  "furniture_touching_column": 0,
  "furniture_touching_tube": 0,
  "numbers_colliding_with_furniture": 0,
@@ -81,47 +81,47 @@
    "M01": {
     "name": "안내·길찾기",
     "parent": "MARKET",
-    "area_m2": 41.14,
-    "actual_share_of_parent_zones": 0.03,
+    "area_m2": 186.89,
+    "actual_share_of_parent_zones": 0.136,
     "soft_target_share": 0.08,
     "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
    },
    "M02": {
     "name": "상설 판매",
     "parent": "MARKET",
-    "area_m2": 556.46,
-    "actual_share_of_parent_zones": 0.406,
+    "area_m2": 364.82,
+    "actual_share_of_parent_zones": 0.266,
     "soft_target_share": 0.34,
     "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
    },
    "M03": {
     "name": "팝업·시연",
     "parent": "MARKET",
-    "area_m2": 40.36,
-    "actual_share_of_parent_zones": 0.029,
+    "area_m2": 121.23,
+    "actual_share_of_parent_zones": 0.088,
     "soft_target_share": 0.1,
     "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
    },
    "M04": {
     "name": "푸드·시식",
     "parent": "MARKET",
-    "area_m2": 270.14,
-    "actual_share_of_parent_zones": 0.197,
+    "area_m2": 165.78,
+    "actual_share_of_parent_zones": 0.121,
     "soft_target_share": 0.16,
     "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
    },
    "M05": {
     "name": "공용 식음·대화",
     "parent": "MARKET",
-    "area_m2": 98.2,
-    "actual_share_of_parent_zones": 0.072,
+    "area_m2": 167.69,
+    "actual_share_of_parent_zones": 0.122,
     "soft_target_share": 0.09,
     "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
    },
    "M06": {
     "name": "순환·수직이동 대기",
     "parent": "MARKET",
-    "area_m2": 363.98,
+    "area_m2": 363.96,
     "actual_share_of_parent_zones": 0.266,
     "soft_target_share": 0.23,
     "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
@@ -161,8 +161,8 @@
    "S01": {
     "name": "하역",
     "parent": "SERVICE",
-    "area_m2": 20.44,
-    "actual_share_of_parent_zones": 0.129,
+    "area_m2": 33.99,
+    "actual_share_of_parent_zones": 0.215,
     "soft_target_share": 0.45,
     "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
    },
@@ -177,8 +177,8 @@
    "S03": {
     "name": "화물 승강기 대기",
     "parent": "SERVICE",
-    "area_m2": 67.82,
-    "actual_share_of_parent_zones": 0.43,
+    "area_m2": 54.27,
+    "actual_share_of_parent_zones": 0.344,
     "soft_target_share": 0.15,
     "provenance": "PROPOSED_DESIGN_NOT_MODEL_VERIFIED / area=shapely polygon.area"
    },
@@ -237,20 +237,20 @@
    "furniture_crossing_own_subzone_boundary": 2,
    "furniture_in_entry_clearance": 0,
    "furniture_instance_overlaps": 0,
-   "min_gap_between_instances_m": 1.322,
-   "furniture_instances": 47,
-   "furniture_body_polygons": 154,
+   "min_gap_between_instances_m": 1.28,
+   "furniture_instances": 46,
+   "furniture_body_polygons": 157,
    "service_bays_overlap_freight_wait_m2": 13.554
   },
   "furniture_instances_by_zone_type": {
    "M01/info_counter": 1,
-   "M02/single_sided_stall": 22,
-   "M03/popup_module": 1,
+   "M02/single_sided_stall": 14,
+   "M03/popup_module": 6,
    "M04/food_kiosk": 4,
-   "M04/tasting_counter": 4,
+   "M04/tasting_counter": 3,
    "M05/banquette": 1,
-   "M05/communal_table": 3,
-   "M05/four_top_table": 1,
+   "M05/communal_table": 4,
+   "M05/four_top_table": 3,
    "P02/long_bench": 3,
    "P03/planter_bench": 1,
    "C01/reception_desk": 1,
@@ -258,10 +258,10 @@
    "C02/gallery_bench": 1,
    "C03/gallery_bench": 2
   },
-  "furniture_instances": 47,
-  "furniture_body_polygons_planned": 154,
-  "furniture_body_polygons_in_svg": 177,
-  "zone_chips": 21,
+  "furniture_instances": 46,
+  "furniture_body_polygons_planned": 157,
+  "furniture_body_polygons_in_svg": 180,
+  "zone_chips": 20,
   "zone_chips_with_white_box_fallback": 5,
   "zone_chips_overlapping_furniture": [],
   "proposed_entries": [

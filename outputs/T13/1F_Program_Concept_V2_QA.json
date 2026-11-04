@@ -44,10 +44,10 @@
    },
    "hard_gate_failures": {},
    "output_sha256": {
-    ".png": "46fe1ba0f5622763638a2fe38fa4e29d5d36fe247b54b6c922374d2cab691aa2",
-    ".pdf": "04b230a60caef228acb4e1f753802de60461e8933b2831379a191c4e8e3ec519",
-    ".svg": "0d1b9b8eccff25e7da22fc27d63ac8a32c36b66523690c914c2c9d08f21d474e",
-    "_check.json": "682114dab35cad44ab48bb134a8eb0080b7a1d4d2ed0dfd848bc5aaae768c0ab"
+    ".png": "96eb857974a55673d832cc181ab518709ff55e4a513b1aa3426127e81fdd606a",
+    ".pdf": "3350f4b042336cf01aaa277ae1f894eb171e53bfcfa576d2d0cb19faa79c6ffd",
+    ".svg": "27c5b6f7a27b4fd26a0a6ed2f42e3558717cf8ccf1ad27fad152d7e92f073db0",
+    "_check.json": "00037963a61d08715b7ff91837a5ffc8e89e1f823c599ff47a3a818ae267afd0"
    }
   },
   "B": {
@@ -65,7 +65,7 @@
     4096,
     2896
    ],
-   "furniture_body_paths": 192,
+   "furniture_body_paths": 195,
    "furniture_duplicate_body_paths_ghost": 0,
    "curtain_door_arc_paths": 0,
    "curtain_door_arc_paths_solid": 0,
@@ -93,10 +93,10 @@
    },
    "hard_gate_failures": {},
    "output_sha256": {
-    ".png": "949c0e594333dcf7dbad6a8cd2480a61c3d725ed31319a399199cd9810fe8af8",
-    ".pdf": "7740dd951af3571a9df60752bd5c7bbb868cc7140b8e3a1e57565403c3b41bea",
-    ".svg": "c1a7cdd104ba284dedbb80375fe23eb26da638d5cb53498506041e792940e9cd",
-    "_check.json": "bbe8942b3edf394daa0fb230654c1bc42f69758fe6e7b00117272b9577ad7409"
+    ".png": "e5dda31ae99528a0c1b2aeefe7f685bcc6aa30f4c51a168ab9ddfef905338b8d",
+    ".pdf": "8736696dcef5fa401799bc65028bdca3a5f760f052260f2b042b423716ee1dc6",
+    ".svg": "85a3aabfc99cadffbd5cb5db8a576d023224245a0071ea6eb021d30846391bdb",
+    "_check.json": "a8aabd1bbd89cead309bd60c44dd036ce7d843acf10645edf1a4af8dc31a2ad7"
    }
   }
  },
@@ -421,8 +421,8 @@
   "master_model_json": "9d8ebb99579c32c41dbdd2c5e242e9950123f83c480f3404856fbfa6b20be29c",
   "geom_dump": "69b0ec6c34bd5f45bc9902bc3bfedd1f1eca85f0bdfd44430dbb0a9763da17c9"
  },
- "git_head": "3f68090890fd9b87487f08e0d87c80a5d548f54e",
- "tests": "unittest discover tests: 31 OK (신규 11 + 기존 20); verify_pipeline 1F 19/19",
+ "git_head": "c1d6836c020857e08a224886ae862940d5071a3e",
+ "tests": "unittest discover tests: 31 OK; verify_pipeline 1F 19/19",
  "technical_gate": "PASS",
  "gate": "HOLD",
  "gate_reason": "기술 QA 통과. 사용자 시각 승인·출입구 위치·법규 검토 전이라 HOLD",
