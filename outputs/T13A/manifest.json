@@ -1,0 +1,89 @@
+{
+ "git_head": "891e5bdee447ebf6f5ad5658796ef2804242efb8",
+ "inputs": {
+  "source_blend": "30da41d693a967f9628da843f5ec6b6be40f410eeaa209c643d1cb8fdb3f1f1e",
+  "slice_1F": "2795a1215a0a3f47c0d2146b06cb643b253c90842d87c5d3e023f8d2535bd006"
+ },
+ "files": {
+  "1F_CleanLine_Before_After.png": {
+   "sha256": "04f62c99e504ecf6e1ae88f2cbb1a29d4c274615c8a9afc75cf6ab0ee3a7b7ec",
+   "bytes": 1934174
+  },
+  "1F_CleanLine_Raster_vs_Vector_Check.png": {
+   "sha256": "e0efc6f7d92aaca32d9a3970e10bceb963118912a8a8987095d6118c23ce7fc0",
+   "bytes": 64775
+  },
+  "1F_Program_CleanLine_V2A.pdf": {
+   "sha256": "831fcd636ee5222b08adc7d18141068eb3c4a0dfc722137874f14d8a113f3744",
+   "bytes": 236300
+  },
+  "1F_Program_CleanLine_V2A.png": {
+   "sha256": "bfb57a12a98234adfd53c40a92da153de64a56669cd891fc036ee48b3ab66057",
+   "bytes": 1543204
+  },
+  "1F_Program_CleanLine_V2A.svg": {
+   "sha256": "2414026b7ae2be38173d1d14d10c8e7b0eeb53848726a0957ebe7f726212b47f",
+   "bytes": 587003
+  },
+  "1F_Program_CleanLine_V2A_check.json": {
+   "sha256": "6aab90531f05666320df9b43877ffbb0dc2a32c92061f4c0cab0d32967869b11",
+   "bytes": 8798
+  },
+  "1F_Program_CleanLine_V2A_curvelog.json": {
+   "sha256": "f9386559d22c74914a36128be3024882996486f010ab4d65c4cc2133c49d26ef",
+   "bytes": 74260
+  },
+  "C-T13A_verdict.md": {
+   "sha256": "6f292832a7f2c01c87d9cf36e9ff2c60ca48139562c6d4574788843299da4739",
+   "bytes": 8815
+  },
+  "line_hygiene_report.json": {
+   "sha256": "ef13a9cc29a55feaac47a2fca2b6a2526ae345a0ac7b067b0783dbc30fc049cc",
+   "bytes": 19723
+  },
+  "qa_report.json": {
+   "sha256": "cdaee1853e01d2184b6520fd19b668a352b2f9f3e543d3da44dddf3a378376dd",
+   "bytes": 1505
+  },
+  "crops/crop_01_north_market_after.png": {
+   "sha256": "05efe4be3e1a0bc8cc0e6662271f5baa77b4da59900ed971d95e74da86b4b473",
+   "bytes": 231504
+  },
+  "crops/crop_01_north_market_before.png": {
+   "sha256": "2c487f408336680b31110a091e9a708ea4a85bcbe6f5de8fee7125cef04b3d46",
+   "bytes": 301677
+  },
+  "crops/crop_02_central_hall_after.png": {
+   "sha256": "cc5ee7cd1a79bb192b5406d205ddd8e4138d842cf402cff84d93e888e0db064e",
+   "bytes": 397632
+  },
+  "crops/crop_02_central_hall_before.png": {
+   "sha256": "7789b1e1b6480d2143e5ca7b85da93c1500578ff3d375d9b14addd1d8bab85cf",
+   "bytes": 527996
+  },
+  "crops/crop_03_west_capsule_after.png": {
+   "sha256": "b633d21c6a13b1674631a463c2651e54a3548c990f04fc3a34064a48596b525e",
+   "bytes": 496860
+  },
+  "crops/crop_03_west_capsule_before.png": {
+   "sha256": "cba13966a94d4c080ca4d3e1fcdb5e8456fd474e828bf6df82a61bb238608011",
+   "bytes": 636630
+  },
+  "crops/crop_04_piloti_landscape_after.png": {
+   "sha256": "ad0285686d3f0ca1d7fe745f9ac3266e2fb0355a62558446b33be72769e243de",
+   "bytes": 478550
+  },
+  "crops/crop_04_piloti_landscape_before.png": {
+   "sha256": "3013bdaf456362593fb842724478ba3ffcebb7e9a8564fe3a26058365b688176",
+   "bytes": 724028
+  },
+  "crops/crop_05_legend_text_after.png": {
+   "sha256": "a8630111c107bb8a48771a2916063cc2ed9458f1fa9d9d4dcf8fdeadc1acaf44",
+   "bytes": 223237
+  },
+  "crops/crop_05_legend_text_before.png": {
+   "sha256": "d79000aa6450f9809e3f19ffcd8a95f755d0b1ce68341a565d7af40e35c7fcd9",
+   "bytes": 275950
+  }
+ }
+}

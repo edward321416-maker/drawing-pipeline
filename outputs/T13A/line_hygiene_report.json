@@ -1,0 +1,804 @@
+{
+ "task": "C-T13A Clean Line Pass",
+ "base": "1F_Program_Concept_V2_B (claude/t13-1f-concept-v2 891e5bd)",
+ "diagnosis": [
+  {
+   "id": 1,
+   "kind": "기하(geometry)",
+   "found": true,
+   "where": "program_planner.partition (래스터 L∞ 분할) → renderer.draw_program_overlay",
+   "evidence": "구획 경계 선 조각 1081개 중 917개가 2 m 미만. 계단 모양 래스터 경계가 사선 대시 파편으로 보임",
+   "fix": "공유 경계 노드 병합(linemerge)+단순화 0.8 m, 7 m 미만 조각 제외, 바닥 채움 열림·닫힘 평활"
+  },
+  {
+   "id": 2,
+   "kind": "렌더링(raster)",
+   "found": false,
+   "where": "cairosvg svg2png / svg2pdf",
+   "evidence": "SVG 래스터·PDF 래스터·PNG(300 dpi) 같은 구역 평균 밝기 차이 PDF 4.03, PNG 5.51 (0~255). 계단 현상은 래스터화가 아니라 경로 자체의 문제",
+   "fix": "PNG 를 4096→4961 px(300 dpi)로 출력. SVG→PDF 직접 생성은 유지"
+  },
+  {
+   "id": 3,
+   "kind": "레이어 중복",
+   "found": true,
+   "where": "draw_program_overlay(구획별 경계를 각각 그려 공유 경계 2회), design 맥락 대지경계(buffer(0.0005) 폴리곤 양면 2회+후퇴선 겹침)",
+   "evidence": "점선 중복 비율 16.6% → 0.1%",
+   "fix": "경계 병합·평행 중복 제거(0.2 m)·구조 격자와 겹침 제외, 대지 경계 한 겹 선 + 후퇴선 근접 구간 제외. 가구 body 고스트는 before/after 모두 0"
+  },
+  {
+   "id": 4,
+   "kind": "표현(의도적 불규칙)",
+   "found": true,
+   "where": "monograph.wobble_ring / tree_shapes / branch_lines / plant_bed / stipple_points → renderer.draw_trees, design_site",
+   "evidence": "참 원이 아닌 식재 윤곽 288개(before) → 0개(after), 점묘 점 11137 → 3755",
+   "fix": "수관=참 원+줄기 점, 관목·화단=참 원, 가지·로제트·고사리선 제거, 점묘 1/3로 솎음(난수열 소비는 그대로라 수목·보행로 위치 불변)"
+  },
+  {
+   "id": 5,
+   "kind": "선 위계",
+   "found": true,
+   "where": "RESTYLE(context·landscape 가 가구 토큰 T5 와 같은 굵기·명도), draw_program_overlay 흐름·경계",
+   "evidence": "before: 조경 외곽선·이웃 건물 윤곽·구획 경계 모두 0.08~0.12 mm #666~#444 로 가구와 동급",
+   "fix": "restyle_clean: 조경 0.06 #A8A8A8, 이웃 윤곽 0.08 #8E8E8E, 프로그램 표시(흐름 0.08 #777·경계 0.055 #8A8A8A)로 가구(0.08 #666) 아래 순위. 구조 T1~T5 는 불변"
+  }
+ ],
+ "line_hierarchy_after": {
+  "1_cut_structure": "0.45 #000",
+  "2_envelope_doors": "0.09 #4A4A4A glass / 0.18 #222 door leaf",
+  "3_furniture": "0.08 #666 (white fill)",
+  "4_program_marks": "flows 0.08 #777, zone boundary 0.055 #8A8A8A dashed, chips outline 0.06 #8A8A8A",
+  "5_landscape_paving_hatch": "landscape 0.06 #A8A8A8, context 0.08 #8E8E8E, stipple #C0C0C0"
+ },
+ "metrics_before": {
+  "scale": 500,
+  "layers": {
+   "bgdots": {
+    "elements": 0,
+    "polylines": 0,
+    "paths": 0,
+    "vertices_or_cmds": 0,
+    "arcs_A": 0,
+    "cubics_C": 0,
+    "micro_segments": 0,
+    "zigzag_kinks": 0,
+    "dashed_elements": 0,
+    "dashed_len_m": 0.0,
+    "dashed_pieces_lt2m": 0,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {}
+   },
+   "context": {
+    "elements": 489,
+    "polylines": 454,
+    "paths": 35,
+    "vertices_or_cmds": 3440,
+    "arcs_A": 0,
+    "cubics_C": 0,
+    "micro_segments": 207,
+    "zigzag_kinks": 0,
+    "dashed_elements": 2,
+    "dashed_len_m": 1031.2,
+    "dashed_pieces_lt2m": 0,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.050 #CCCCCC": 457,
+     "0.120 #444444": 31,
+     "0.350 #222222": 1
+    }
+   },
+   "ground": {
+    "elements": 440,
+    "polylines": 131,
+    "paths": 309,
+    "vertices_or_cmds": 6813,
+    "arcs_A": 0,
+    "cubics_C": 0,
+    "micro_segments": 2702,
+    "zigzag_kinks": 0,
+    "dashed_elements": 1,
+    "dashed_len_m": 66.0,
+    "dashed_pieces_lt2m": 0,
+    "dots": 793,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.050 #CCCCCC": 132,
+     "0.180 #222222": 1,
+     "0.120 #444444": 1,
+     "0.192 #C0C0C0": 1
+    }
+   },
+   "landscape": {
+    "elements": 96,
+    "polylines": 50,
+    "paths": 46,
+    "vertices_or_cmds": 3661,
+    "arcs_A": 0,
+    "cubics_C": 0,
+    "micro_segments": 1801,
+    "zigzag_kinks": 0,
+    "dashed_elements": 0,
+    "dashed_len_m": 0.0,
+    "dashed_pieces_lt2m": 0,
+    "dots": 9886,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.050 #CCCCCC": 39,
+     "0.080 #666666": 31,
+     "0.120 #444444": 14,
+     "0.080 #C0C0C0": 6,
+     "0.096 #C0C0C0": 6
+    }
+   },
+   "plants": {
+    "elements": 2307,
+    "polylines": 2018,
+    "paths": 289,
+    "vertices_or_cmds": 13932,
+    "arcs_A": 0,
+    "cubics_C": 0,
+    "micro_segments": 0,
+    "zigzag_kinks": 1543,
+    "dashed_elements": 0,
+    "dashed_len_m": 0.0,
+    "dashed_pieces_lt2m": 0,
+    "dots": 457,
+    "non_circle_closed_plants": 288,
+    "width_color_tokens_mm": {
+     "0.050 #CCCCCC": 2018,
+     "0.060 #CCCCCC": 288,
+     "0.120 #CCCCCC": 1
+    }
+   },
+   "furn": {
+    "elements": 664,
+    "polylines": 466,
+    "paths": 198,
+    "vertices_or_cmds": 9769,
+    "arcs_A": 0,
+    "cubics_C": 0,
+    "micro_segments": 7154,
+    "zigzag_kinks": 129,
+    "dashed_elements": 134,
+    "dashed_len_m": 1385.0,
+    "dashed_pieces_lt2m": 36,
+    "dots": 1,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.080 #666666": 507,
+     "0.050 #CCCCCC": 149,
+     "0.120 #444444": 7,
+     "0.500 #333": 1
+    }
+   },
+   "envelope": {
+    "elements": 171,
+    "polylines": 154,
+    "paths": 17,
+    "vertices_or_cmds": 751,
+    "arcs_A": 0,
+    "cubics_C": 0,
+    "micro_segments": 192,
+    "zigzag_kinks": 0,
+    "dashed_elements": 20,
+    "dashed_len_m": 30.8,
+    "dashed_pieces_lt2m": 20,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.080 #555555": 96,
+     "0.090 #4A4A4A": 38,
+     "0.080 #666666": 10,
+     "0.180 #222222": 10
+    }
+   },
+   "walls": {
+    "elements": 64,
+    "polylines": 16,
+    "paths": 48,
+    "vertices_or_cmds": 5267,
+    "arcs_A": 0,
+    "cubics_C": 0,
+    "micro_segments": 619,
+    "zigzag_kinks": 0,
+    "dashed_elements": 12,
+    "dashed_len_m": 424.8,
+    "dashed_pieces_lt2m": 0,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.450 #000000": 23,
+     "0.120 #444444": 16,
+     "0.180 #222222": 13,
+     "0.050 #CCCCCC": 12
+    }
+   },
+   "cols": {
+    "elements": 23,
+    "polylines": 0,
+    "paths": 23,
+    "vertices_or_cmds": 2231,
+    "arcs_A": 0,
+    "cubics_C": 0,
+    "micro_segments": 2208,
+    "zigzag_kinks": 0,
+    "dashed_elements": 0,
+    "dashed_len_m": 0.0,
+    "dashed_pieces_lt2m": 0,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.450 #000000": 23
+    }
+   },
+   "grid": {
+    "elements": 45,
+    "polylines": 45,
+    "paths": 0,
+    "vertices_or_cmds": 90,
+    "arcs_A": 0,
+    "cubics_C": 0,
+    "micro_segments": 0,
+    "zigzag_kinks": 0,
+    "dashed_elements": 45,
+    "dashed_len_m": 607.0,
+    "dashed_pieces_lt2m": 12,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.050 #CCCCCC": 45
+    }
+   },
+   "symbols": {
+    "elements": 217,
+    "polylines": 217,
+    "paths": 0,
+    "vertices_or_cmds": 1851,
+    "arcs_A": 0,
+    "cubics_C": 0,
+    "micro_segments": 525,
+    "zigzag_kinks": 0,
+    "dashed_elements": 3,
+    "dashed_len_m": 12.4,
+    "dashed_pieces_lt2m": 2,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.120 #444444": 189,
+     "0.080 #666666": 20,
+     "0.180 #222222": 8
+    }
+   },
+   "doors": {
+    "elements": 26,
+    "polylines": 26,
+    "paths": 0,
+    "vertices_or_cmds": 279,
+    "arcs_A": 0,
+    "cubics_C": 0,
+    "micro_segments": 0,
+    "zigzag_kinks": 0,
+    "dashed_elements": 4,
+    "dashed_len_m": 4.6,
+    "dashed_pieces_lt2m": 4,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.080 #666666": 13,
+     "0.180 #222222": 13
+    }
+   },
+   "num": {
+    "elements": 0,
+    "polylines": 0,
+    "paths": 0,
+    "vertices_or_cmds": 0,
+    "arcs_A": 0,
+    "cubics_C": 0,
+    "micro_segments": 0,
+    "zigzag_kinks": 0,
+    "dashed_elements": 0,
+    "dashed_len_m": 0.0,
+    "dashed_pieces_lt2m": 0,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {}
+   },
+   "legend": {
+    "elements": 2,
+    "polylines": 0,
+    "paths": 2,
+    "vertices_or_cmds": 2,
+    "arcs_A": 0,
+    "cubics_C": 0,
+    "micro_segments": 0,
+    "zigzag_kinks": 0,
+    "dashed_elements": 1,
+    "dashed_len_m": 4.0,
+    "dashed_pieces_lt2m": 0,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.120 #444": 2
+    }
+   }
+  },
+  "dashed_overlap": {
+   "total_len_m": 3565.9,
+   "union_len_m_est": 2974.9,
+   "overlap_ratio": 0.166
+  },
+  "furniture_bodies": {
+   "count": 195,
+   "partial_overlaps": 0,
+   "worst_overlap_m2": 0.0,
+   "identical_paths": 0
+  },
+  "totals": {
+   "elements": 4544,
+   "vertices_or_cmds": 48086,
+   "arcs_A": 0,
+   "cubics_C": 0,
+   "micro_segments": 15408,
+   "zigzag_kinks": 1672,
+   "dots": 11137,
+   "svg_bytes": 1496464
+  }
+ },
+ "metrics_after": {
+  "scale": 500,
+  "layers": {
+   "bgdots": {
+    "elements": 0,
+    "polylines": 0,
+    "paths": 0,
+    "vertices_or_cmds": 0,
+    "arcs_A": 0,
+    "cubics_C": 0,
+    "micro_segments": 0,
+    "zigzag_kinks": 0,
+    "dashed_elements": 0,
+    "dashed_len_m": 0.0,
+    "dashed_pieces_lt2m": 0,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {}
+   },
+   "context": {
+    "elements": 489,
+    "polylines": 454,
+    "paths": 35,
+    "vertices_or_cmds": 2636,
+    "arcs_A": 30,
+    "cubics_C": 0,
+    "micro_segments": 199,
+    "zigzag_kinks": 0,
+    "dashed_elements": 2,
+    "dashed_len_m": 683.3,
+    "dashed_pieces_lt2m": 0,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.050 #CCCCCC": 457,
+     "0.080 #8E8E8E": 31,
+     "0.350 #222222": 1
+    }
+   },
+   "ground": {
+    "elements": 140,
+    "polylines": 131,
+    "paths": 9,
+    "vertices_or_cmds": 1110,
+    "arcs_A": 27,
+    "cubics_C": 0,
+    "micro_segments": 259,
+    "zigzag_kinks": 0,
+    "dashed_elements": 1,
+    "dashed_len_m": 66.0,
+    "dashed_pieces_lt2m": 0,
+    "dots": 265,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.050 #CCCCCC": 132,
+     "0.180 #222222": 1,
+     "0.120 #444444": 1,
+     "0.192 #C0C0C0": 1
+    }
+   },
+   "landscape": {
+    "elements": 96,
+    "polylines": 48,
+    "paths": 48,
+    "vertices_or_cmds": 2131,
+    "arcs_A": 57,
+    "cubics_C": 83,
+    "micro_segments": 1176,
+    "zigzag_kinks": 0,
+    "dashed_elements": 0,
+    "dashed_len_m": 0.0,
+    "dashed_pieces_lt2m": 0,
+    "dots": 3300,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.050 #CCCCCC": 39,
+     "0.060 #A8A8A8": 35,
+     "0.090 #777777": 10,
+     "0.080 #C0C0C0": 6,
+     "0.096 #C0C0C0": 6
+    }
+   },
+   "plants": {
+    "elements": 313,
+    "polylines": 0,
+    "paths": 313,
+    "vertices_or_cmds": 828,
+    "arcs_A": 552,
+    "cubics_C": 0,
+    "micro_segments": 68,
+    "zigzag_kinks": 0,
+    "dashed_elements": 0,
+    "dashed_len_m": 0.0,
+    "dashed_pieces_lt2m": 0,
+    "dots": 189,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.050 #CCCCCC": 240,
+     "0.060 #C4C4C4": 36,
+     "0.200 #CCCCCC": 36,
+     "0.120 #CCCCCC": 1
+    }
+   },
+   "furn": {
+    "elements": 522,
+    "polylines": 254,
+    "paths": 268,
+    "vertices_or_cmds": 5234,
+    "arcs_A": 290,
+    "cubics_C": 0,
+    "micro_segments": 4550,
+    "zigzag_kinks": 0,
+    "dashed_elements": 10,
+    "dashed_len_m": 90.4,
+    "dashed_pieces_lt2m": 0,
+    "dots": 1,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.080 #666666": 374,
+     "0.050 #CCCCCC": 131,
+     "0.055 #8A8A8A": 9,
+     "0.120 #444444": 7,
+     "0.500 #333": 1
+    }
+   },
+   "envelope": {
+    "elements": 171,
+    "polylines": 130,
+    "paths": 41,
+    "vertices_or_cmds": 441,
+    "arcs_A": 22,
+    "cubics_C": 0,
+    "micro_segments": 96,
+    "zigzag_kinks": 0,
+    "dashed_elements": 20,
+    "dashed_len_m": 30.8,
+    "dashed_pieces_lt2m": 20,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.080 #555555": 96,
+     "0.090 #4A4A4A": 38,
+     "0.080 #666666": 10,
+     "0.180 #222222": 10
+    }
+   },
+   "walls": {
+    "elements": 64,
+    "polylines": 0,
+    "paths": 64,
+    "vertices_or_cmds": 1486,
+    "arcs_A": 74,
+    "cubics_C": 0,
+    "micro_segments": 326,
+    "zigzag_kinks": 0,
+    "dashed_elements": 12,
+    "dashed_len_m": 424.3,
+    "dashed_pieces_lt2m": 0,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.450 #000000": 23,
+     "0.120 #444444": 16,
+     "0.180 #222222": 13,
+     "0.050 #CCCCCC": 12
+    }
+   },
+   "cols": {
+    "elements": 23,
+    "polylines": 0,
+    "paths": 23,
+    "vertices_or_cmds": 69,
+    "arcs_A": 46,
+    "cubics_C": 0,
+    "micro_segments": 7,
+    "zigzag_kinks": 0,
+    "dashed_elements": 0,
+    "dashed_len_m": 0.0,
+    "dashed_pieces_lt2m": 0,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.450 #000000": 23
+    }
+   },
+   "grid": {
+    "elements": 45,
+    "polylines": 45,
+    "paths": 0,
+    "vertices_or_cmds": 90,
+    "arcs_A": 0,
+    "cubics_C": 0,
+    "micro_segments": 0,
+    "zigzag_kinks": 0,
+    "dashed_elements": 45,
+    "dashed_len_m": 607.0,
+    "dashed_pieces_lt2m": 12,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.050 #CCCCCC": 45
+    }
+   },
+   "symbols": {
+    "elements": 217,
+    "polylines": 189,
+    "paths": 28,
+    "vertices_or_cmds": 759,
+    "arcs_A": 12,
+    "cubics_C": 0,
+    "micro_segments": 141,
+    "zigzag_kinks": 0,
+    "dashed_elements": 3,
+    "dashed_len_m": 12.4,
+    "dashed_pieces_lt2m": 2,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.120 #444444": 148,
+     "0.080 #777777": 41,
+     "0.080 #666666": 20,
+     "0.180 #222222": 8
+    }
+   },
+   "doors": {
+    "elements": 26,
+    "polylines": 13,
+    "paths": 13,
+    "vertices_or_cmds": 52,
+    "arcs_A": 13,
+    "cubics_C": 0,
+    "micro_segments": 0,
+    "zigzag_kinks": 0,
+    "dashed_elements": 4,
+    "dashed_len_m": 4.6,
+    "dashed_pieces_lt2m": 4,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.080 #666666": 13,
+     "0.180 #222222": 13
+    }
+   },
+   "num": {
+    "elements": 0,
+    "polylines": 0,
+    "paths": 0,
+    "vertices_or_cmds": 0,
+    "arcs_A": 0,
+    "cubics_C": 0,
+    "micro_segments": 0,
+    "zigzag_kinks": 0,
+    "dashed_elements": 0,
+    "dashed_len_m": 0.0,
+    "dashed_pieces_lt2m": 0,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {}
+   },
+   "legend": {
+    "elements": 2,
+    "polylines": 0,
+    "paths": 2,
+    "vertices_or_cmds": 2,
+    "arcs_A": 0,
+    "cubics_C": 0,
+    "micro_segments": 0,
+    "zigzag_kinks": 0,
+    "dashed_elements": 1,
+    "dashed_len_m": 4.0,
+    "dashed_pieces_lt2m": 0,
+    "dots": 0,
+    "non_circle_closed_plants": 0,
+    "width_color_tokens_mm": {
+     "0.120 #444": 2
+    }
+   }
+  },
+  "dashed_overlap": {
+   "total_len_m": 1922.8,
+   "union_len_m_est": 1920.4,
+   "overlap_ratio": 0.001
+  },
+  "furniture_bodies": {
+   "count": 195,
+   "partial_overlaps": 0,
+   "worst_overlap_m2": 0.0,
+   "identical_paths": 0
+  },
+  "totals": {
+   "elements": 2108,
+   "vertices_or_cmds": 14838,
+   "arcs_A": 1123,
+   "cubics_C": 83,
+   "micro_segments": 6822,
+   "zigzag_kinks": 0,
+   "dots": 3755,
+   "svg_bytes": 586987
+  }
+ },
+ "curve_conversions": {
+  "context/arc": {
+   "count": 29,
+   "vertices_before": 753,
+   "cmds_after": 29,
+   "max_dev_m": 0.00378
+  },
+  "landscape/arc": {
+   "count": 54,
+   "vertices_before": 1042,
+   "cmds_after": 54,
+   "max_dev_m": 0.00399
+  },
+  "plants/circle": {
+   "count": 276,
+   "vertices_before": 18816,
+   "cmds_after": 552,
+   "max_dev_m": 0.0
+  },
+  "landscape/smooth": {
+   "count": 14,
+   "vertices_before": 700,
+   "cmds_after": 87,
+   "max_dev_m": 0.0275
+  },
+  "furn/circle": {
+   "count": 39,
+   "vertices_before": 2256,
+   "cmds_after": 78,
+   "max_dev_m": 0.0
+  },
+  "furn/arc": {
+   "count": 212,
+   "vertices_before": 1986,
+   "cmds_after": 212,
+   "max_dev_m": 0.00393
+  },
+  "ground/circle": {
+   "count": 2,
+   "vertices_before": 284,
+   "cmds_after": 4,
+   "max_dev_m": 0.0029
+  },
+  "ground/arc": {
+   "count": 23,
+   "vertices_before": 445,
+   "cmds_after": 23,
+   "max_dev_m": 0.00303
+  },
+  "symbols/circle": {
+   "count": 6,
+   "vertices_before": 1104,
+   "cmds_after": 12,
+   "max_dev_m": 0.0
+  },
+  "walls/arc": {
+   "count": 4,
+   "vertices_before": 260,
+   "cmds_after": 4,
+   "max_dev_m": 0.00198
+  },
+  "doors/arc": {
+   "count": 13,
+   "vertices_before": 253,
+   "cmds_after": 13,
+   "max_dev_m": 0.0
+  },
+  "walls/circle": {
+   "count": 33,
+   "vertices_before": 3599,
+   "cmds_after": 66,
+   "max_dev_m": 0.004
+  },
+  "(none)/arc": {
+   "count": 6,
+   "vertices_before": 102,
+   "cmds_after": 6,
+   "max_dev_m": 0.0
+  },
+  "envelope/arc": {
+   "count": 16,
+   "vertices_before": 252,
+   "cmds_after": 16,
+   "max_dev_m": 0.0
+  },
+  "cols/circle": {
+   "count": 23,
+   "vertices_before": 2208,
+   "cmds_after": 46,
+   "max_dev_m": 0.00042
+  }
+ },
+ "curve_conversion_policy": {
+  "arc_tol_m": 0.004,
+  "edge_sagitta_tol_m": 0.007,
+  "smooth_tol_m": 0.05,
+  "smooth_layers": [
+   "landscape",
+   "plants"
+  ],
+  "note": "구조·가구·문·외피 층은 호 적합만(편차 ≤ 7 mm), 평활(베지어)은 조경 층만. 일괄 simplify() 없음"
+ },
+ "independent_geometry_check": {
+  "cols": {
+   "before_elements": 23,
+   "after_elements": 23,
+   "paired": 23,
+   "max_dev_m": 0.00135,
+   "over_tol": 0,
+   "worst": [],
+   "count_match": true
+  },
+  "walls": {
+   "before_elements": 64,
+   "after_elements": 64,
+   "paired": 64,
+   "max_dev_m": 0.00651,
+   "over_tol": 0,
+   "worst": [],
+   "count_match": true
+  },
+  "doors": {
+   "before_elements": 26,
+   "after_elements": 26,
+   "paired": 26,
+   "max_dev_m": 0.00306,
+   "over_tol": 0,
+   "worst": [],
+   "count_match": true
+  },
+  "envelope": {
+   "before_elements": 171,
+   "after_elements": 171,
+   "paired": 171,
+   "max_dev_m": 0.00227,
+   "over_tol": 0,
+   "worst": [],
+   "count_match": true
+  },
+  "furn_bodies": {
+   "before_elements": 195,
+   "after_elements": 195,
+   "paired": 195,
+   "max_dev_m": 0.00666,
+   "over_tol": 0,
+   "worst": [],
+   "count_match": true
+  }
+ },
+ "raster_vs_vector": {
+  "mae_svg_vs_pdf_0_255": 4.033,
+  "mae_svg_vs_png300_0_255": 5.514,
+  "image": "D:\\Users\\admin\\Desktop\\drawing-pipeline-T13A\\outputs\\T13A\\1F_CleanLine_Raster_vs_Vector_Check.png"
+ }
+}

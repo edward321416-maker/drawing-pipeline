@@ -430,6 +430,7 @@ def plan_program(variant, I, seed=7):
     corr_sec = U([corridor(l, w, hall_net) for k, l, w in routes if k == "secondary"])
     core_fronts = swings.buffer(1.2).intersection(hall_net)
     m06 = U([corr_main, corr_sec, ring3, ring4, ringE, U(door_clear).intersection(hall_net), core_fronts]).intersection(hall_net)
+    m06_vector = m06                                                                 # 래스터 잔여 띠를 섞기 전의 순수 벡터 복도·대기 영역(도면 바닥 채움용)
     rest = hall_net.difference(m06)
     rest_open = rest.buffer(-0.9).buffer(0.9).intersection(rest)
     m06 = U([m06, rest.difference(rest_open)]).intersection(hall_net)               # 폭 1.8 m 미만 잔여 띠는 순환으로 편입
@@ -618,7 +619,7 @@ def plan_program(variant, I, seed=7):
                {"id": "ENTRY_CAPSULE", "center": door_pt, "n": inward, "t": (-inward[1], inward[0]), "status": "PROPOSED_ONLY / ACCESS_PENDING"}]
     notes = {"service_bays_overlap_freight_wait_m2": round(bay_vs_fr, 3),
              "note": "하역 베이는 서비스 구역에서 1개만 들어가며 FR 셸에서 0.9 m. FR 대기 반경 3 m 와 겹친 면적은 S01 우선으로 S03에서 제외했다."}
-    return {"variant": variant, "notes": notes, "zones": zones, "furniture": P.items, "flows": flows, "entries": entries, "door_pt": door_pt,
+    return {"variant": variant, "notes": notes, "zones": zones, "m06_vector": m06_vector, "furniture": P.items, "flows": flows, "entries": entries, "door_pt": door_pt,
             "nets": {"hall": hall_net, "piloti": piloti_net, "service": service_net, "capsule": cap_inner}, "hold": hold, "cols_u": col_u,
             "corr_main": corr_main, "corr_sec": corr_sec, "p_corr": p_corr, "door_clear": U(door_clear)}
 
