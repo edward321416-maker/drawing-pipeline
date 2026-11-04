@@ -1,0 +1,1041 @@
+{
+ "count": 74,
+ "assets": [
+  {
+   "json_path": "[0]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/PxW2L_epy3TzYTwl_FHHHppeonppeon-38-web-.jpg?auto=format,compress",
+   "downloaded": true,
+   "file": "originals/asset_0098_649bfaa93d.jpg",
+   "sha256": "649bfaa93d860ee013283f3874c5fc21e00fd8c59b1d97e1f636f0d077ff5244",
+   "size_bytes": 561484,
+   "pixels": [
+    2500,
+    1500
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[1]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/afi318BOoF08xlfT_FHHH_JAM_348_s.jpg?auto=format,compress",
+   "downloaded": true,
+   "file": "originals/asset_0116_d20964f510.jpg",
+   "sha256": "d20964f510bc629eaaa94833d41eb73e75e761f5ce388e888356082912243e1e",
+   "size_bytes": 277538,
+   "pixels": [
+    1600,
+    2400
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[2]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/afQa1MBOoF08xhta_SNUfhhhkuroda-5223-web-.jpg?auto=format,compress",
+   "downloaded": true,
+   "file": "originals/asset_0115_bb783941b6.jpg",
+   "sha256": "bb783941b60d5eb955434f064d3b4bd5477167696a93ad5c2e941fcafec6fd27",
+   "size_bytes": 357957,
+   "pixels": [
+    1900,
+    1267
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[3]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/aYlBLN0YXLCxVmHf_DSC06849.png?auto=format%2Ccompress&rect=1135%2C670%2C3791%2C2527&w=5800&h=3866",
+   "downloaded": true,
+   "file": "originals/asset_0110_ebf26cc28f.png",
+   "sha256": "ebf26cc28f30567c618d90929fd6c9901efe23edbd4599aa50f6ede1958edaef",
+   "size_bytes": 19144093,
+   "pixels": [
+    5800,
+    3866
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[4]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/aYA1i90YXLCxVP3W_9143_KyungsubShin.jpg?auto=format,compress",
+   "downloaded": true,
+   "file": "originals/asset_0109_5397ae438a.jpg",
+   "sha256": "5397ae438adf9a1cde4c1b7fa376e3005cfb2bf489b2abb3bdcf98c0663711cb",
+   "size_bytes": 464910,
+   "pixels": [
+    1772,
+    2543
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[5]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/aX3iLd0YXLCxVOxQ_FHHHdongkyodong-02.jpg?auto=format,compress",
+   "downloaded": true,
+   "file": "originals/asset_0108_b810c88a25.jpg",
+   "sha256": "b810c88a25185aee4df3da478cd264896a80724cafd1b0aa1670b8a81690c66c",
+   "size_bytes": 4559436,
+   "pixels": [
+    5461,
+    8192
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[6]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/aGu4-0MqNJQqHmTy_Untitled-1.png?auto=format,compress",
+   "downloaded": true,
+   "file": "originals/asset_0107_9cab3bd53c.jpg",
+   "sha256": "9cab3bd53cf6ae61aaa87b88f5cc3a586c831d214f9a4dc019c0b73fbd64535c",
+   "size_bytes": 741086,
+   "pixels": [
+    3000,
+    3000
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[7]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/Z9EpPRsAHJWomaXP_Untitled-1.png?auto=format,compress",
+   "downloaded": true,
+   "file": "originals/asset_0099_f1a3492e35.jpg",
+   "sha256": "f1a3492e35a1f22d0144f759415aa60b272900e7a8c4f32f0c009e9e9e2affde",
+   "size_bytes": 122008,
+   "pixels": [
+    2117,
+    1146
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[8]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/Zwa9AYF3NbkBXGX7_0715_KyungsubShin.jpg?auto=format,compress",
+   "downloaded": true,
+   "file": "originals/asset_0102_b16b1670bb.jpg",
+   "sha256": "b16b1670bba815e9d23bd9e706522f0147d1776875baf05c547f7ff1f33a145e",
+   "size_bytes": 3657894,
+   "pixels": [
+    6803,
+    8192
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[9]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/Zmf0XZm069VX1nrc_FHHHoror-03-web-.jpg?auto=format,compress",
+   "downloaded": true,
+   "file": "originals/asset_0101_1c93281aba.jpg",
+   "sha256": "1c93281aba85505ef8d471a9be3afc695a6bbba093fdb204a1205b40beac486a",
+   "size_bytes": 212258,
+   "pixels": [
+    1900,
+    1026
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[10]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/65d7f76e3a605798c18c231e_0801_KyungsubShin.jpg?auto=format,compress",
+   "downloaded": true,
+   "file": "originals/asset_0065_61763818aa.jpg",
+   "sha256": "61763818aa3ccb18116b8cc0aaea37f56e83b7866b2bfc7bb76d784e12594f3d",
+   "size_bytes": 365930,
+   "pixels": [
+    1280,
+    1920
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[11]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/ZkMhb0FLKBtrW2DW_Untitled-1.jpg?auto=format,compress",
+   "downloaded": true,
+   "file": "originals/asset_0100_2cb3e0c121.jpg",
+   "sha256": "2cb3e0c1219884202596014c1fc538c653888df8a756595a0e328248418609ac",
+   "size_bytes": 23075,
+   "pixels": [
+    855,
+    740
+   ],
+   "auto_category": "DRAWING_CANDIDATE"
+  },
+  {
+   "json_path": "[12]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/7db2ecf0-619a-462c-a774-d8e62eecc629_%5B%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98%5D%EC%99%84%EB%A3%8C_HCK1741.JPG?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0083_7edfa349b8.jpg",
+   "sha256": "7edfa349b8398e37c62987f63e6f40d1f6703b500bc1b61ce9ebb93611c50403",
+   "size_bytes": 778726,
+   "pixels": [
+    3096,
+    4128
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[13]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/027df970-d409-4013-98dd-5b48824747ba_PIPE_945_s.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0004_742b46f2da.jpg",
+   "sha256": "742b46f2da087620a2f6192e32bb83023255b50491a24ef0f56c9b14627ef5a5",
+   "size_bytes": 360284,
+   "pixels": [
+    1440,
+    2160
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[14]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/0690806c-5ca7-4dff-9fde-de924a709f13_FHHH+yeonhuidong+house-60%28web%29.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0009_e24c8e8a6e.jpg",
+   "sha256": "e24c8e8a6ed3400ca373c8330bf63381900670689e7c1d01d0db3a75e184dff2",
+   "size_bytes": 244733,
+   "pixels": [
+    1600,
+    1200
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[15]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/466d8636-811c-4a57-b9e4-6a53709fc7f6_1116+%E1%84%8B%E1%85%B5%E1%84%86%E1%85%B5%E1%84%8C%E1%85%B5+copy.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0049_4c350b798e.jpg",
+   "sha256": "4c350b798e0c8704f095fc898935bc542a37859a6f0f5f0fc28163de9f754993",
+   "size_bytes": 916145,
+   "pixels": [
+    3352,
+    2049
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[16]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/8afda06b-642f-4f84-9852-1c657f9d99af_%5B%ED%81%AC%EA%B8%B0%EB%B3%80%ED%99%98%5DFHHH+mmca+library-14.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0088_5dd54213ef.jpg",
+   "sha256": "5dd54213ef8ed570c9d36b1a1dee2eb59a1c84dd4dadda41fb3ca98ee3c61981",
+   "size_bytes": 292533,
+   "pixels": [
+    2400,
+    1600
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[17]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/bc1c9627-630a-4380-b819-7cfa437b1ecc_2078_Kyungsub+Shin.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0126_61623cf96f.jpg",
+   "sha256": "61623cf96f323c6662178da8b6d8f785d3b40f86a4f95525e7c23750b60e7087",
+   "size_bytes": 449526,
+   "pixels": [
+    1332,
+    1998
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[18]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/1bbc0ba6-06f1-44d1-bceb-9546b4394e63_FHHH+nokbun+house-2885%28web%29.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0029_013b9cfcde.jpg",
+   "sha256": "013b9cfcdead6aa5f18010f326beaad3bc623117b31e3c5da23d0304a1c37943",
+   "size_bytes": 265708,
+   "pixels": [
+    1280,
+    1600
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[19]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/03e0ced6-0590-42e6-8dad-d09b78171036_FHHH_220702_3418_s.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0007_793a5147b5.jpg",
+   "sha256": "793a5147b539b171a15511c7e966ee108a1e7124252ba56b2274c8c1b2f6c38a",
+   "size_bytes": 404064,
+   "pixels": [
+    1600,
+    2400
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[20]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/2915b445-7689-4281-b06b-b23a49b24b79_DSCF0547.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0036_aa89de3f3a.jpg",
+   "sha256": "aa89de3f3a548fc7aafed598e77e7441764f482d57b16182d666bebddc56e36e",
+   "size_bytes": 181105,
+   "pixels": [
+    1610,
+    2160
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[21]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/7f9cf41e-0892-4a06-81ea-97c6816122d1_Binder1_Page_2.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0085_c7147e8a02.jpg",
+   "sha256": "c7147e8a02e7625c93ef504620d6a40bfd094319d628a0040eec79181c7cc37f",
+   "size_bytes": 1457886,
+   "pixels": [
+    6015,
+    4012
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[22]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/01da89c7-ae4e-4915-b1dc-95c251e98580_FHHH+kiosk-10%28web%29.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0003_79cc978f22.jpg",
+   "sha256": "79cc978f2221021c114b65713fa8ff01b6284be105f83489aab34f7e9037ba93",
+   "size_bytes": 200635,
+   "pixels": [
+    1600,
+    1067
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[24]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/cde1b1d3-897e-4ee5-9a09-2c2531d1a9ca_IMG_4690.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0142_6fa046861b.jpg",
+   "sha256": "6fa046861b3552914f6342bd27edc29e6903c12467b3e20794908883e9ac9d95",
+   "size_bytes": 369816,
+   "pixels": [
+    1437,
+    2155
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[25]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/d5129e0a-ef8a-4d69-8cf2-fcea0720886c_KakaoTalk_20210916_155448762_25.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0147_8429bb3923.jpg",
+   "sha256": "8429bb3923f8d2dd09a3883b1bcc3d49767dc0013140d077744c4c8d07f2fcfd",
+   "size_bytes": 2329390,
+   "pixels": [
+    3024,
+    4032
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[26]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/39b1c8fa-cc29-4b88-82d3-586fd09551ed_img-%280%29.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0044_88ea503af8.jpg",
+   "sha256": "88ea503af833bdecabdbf2cc91c246924e4244cc8b16ad9b7d89c2b176b09eb1",
+   "size_bytes": 221489,
+   "pixels": [
+    1366,
+    911
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[27]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/a4d9d757-86ba-495f-89bf-f2cc4090f7fe_FHHH+JTBC-01%28web%29.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0104_eec77019a5.jpg",
+   "sha256": "eec77019a5d809ef21328dabb104b44bbffe34dfd6d8e9507a13adddfd821f91",
+   "size_bytes": 318883,
+   "pixels": [
+    1600,
+    1067
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[28]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/94b371f2-b68e-43fe-aa43-42dae0972e2c_19A02-36.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0093_33c37c7b8e.jpg",
+   "sha256": "33c37c7b8ea12687f82092116b6ce3fba23f47c60168dc39e52e43ea3ec1e61d",
+   "size_bytes": 518126,
+   "pixels": [
+    1334,
+    2000
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[29]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/d39b31fd-ee79-45c5-b37e-6cfa3ce41b0d_%5B%ED%8F%AC%EB%A7%B7%EB%B3%80%ED%99%98%5D_KY_6521.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0144_d7d9ef1683.jpg",
+   "sha256": "d7d9ef1683657f40694b8d43a92f278eed8fce024facc58ca3a85c64f048e81a",
+   "size_bytes": 1397079,
+   "pixels": [
+    3217,
+    4576
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[30]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/bf3d96de-ca4f-49ad-9a15-19ad72f634aa_19I01-04.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0129_1f4492769e.jpg",
+   "sha256": "1f4492769e860aee24ff31c8dc6b062a81f2599dc8b056373b9e0e7a58e1e689",
+   "size_bytes": 233745,
+   "pixels": [
+    1600,
+    1067
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[31]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/dee712f4-4b3f-49a6-9430-10b1c07270e2_18A09-01.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0148_8dd1ec58df.jpg",
+   "sha256": "8dd1ec58df3d786c00e636b6f0ad6603011fd0600d57e4057e5a81f711cc47f3",
+   "size_bytes": 318509,
+   "pixels": [
+    1842,
+    1095
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[32]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/e0af953c-0c36-4795-bd9b-e793e0809147_FHHH+kokkirijaam-ex-18%28web%29.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0151_93d97d500d.jpg",
+   "sha256": "93d97d500dcaccdad057b9ae4ca4cdc3d57b18a8bf76c0d20a9a84d011b83c5d",
+   "size_bytes": 204350,
+   "pixels": [
+    1600,
+    1067
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[33]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/76c612e8-5df4-4a6a-a4cb-c782395db6bb_18A07-14.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0078_132ab3e2c8.jpg",
+   "sha256": "132ab3e2c82de8865a4edeb3c4e7ad535e542a6e7d96509f6a5d0f669faf53d9",
+   "size_bytes": 360412,
+   "pixels": [
+    2000,
+    1331
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[34]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/cc606933-ad36-46f9-9684-88715d9956f4_fhhhfriends_thisisneverthat_shinkyungsub+11.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0140_79e567f4be.jpg",
+   "sha256": "79e567f4be2b9d5466e21b30c5e2c64b464ff545c045015dd34934bf3c492581",
+   "size_bytes": 1031092,
+   "pixels": [
+    2606,
+    2272
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[35]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/cb2b816a-f7ec-4f5f-853c-da0a4707e664_18A02-41.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0137_8de47c636c.jpg",
+   "sha256": "8de47c636c1182450027cd2f8f289435d6a952e9fedccb2f2edb94ffb7f91f3d",
+   "size_bytes": 349011,
+   "pixels": [
+    1280,
+    1600
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[36]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/c03a5c39-2378-4ab1-a4c4-4fc579f40f92_18I01-08.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0131_72e6ee551a.jpg",
+   "sha256": "72e6ee551a2b3e368226ff6cb7c32be50466608a21a5df12b36cfdb08286fded",
+   "size_bytes": 9940,
+   "pixels": [
+    602,
+    425
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[37]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/aed2eb97-132b-4382-bbb3-8ea430f891ed_18V01-18.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0114_1d43e19826.jpg",
+   "sha256": "1d43e1982643f15328e87ee1feaf0cd716fdcb06884c725add6d20f4a942e3b7",
+   "size_bytes": 144545,
+   "pixels": [
+    1200,
+    800
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[38]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/c50eb12c-38a3-45c7-a2f4-a1d5d30dcccd_17V10-14.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0133_da55b274f1.jpg",
+   "sha256": "da55b274f166619fe91e6324639dcd7d1b7436da16fa9d6245647c2fc63be6f2",
+   "size_bytes": 163408,
+   "pixels": [
+    2000,
+    1333
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[39]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/906dee71-00bd-438d-b818-ed389909f17b_17I09-12.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0091_f096f0a4b3.jpg",
+   "sha256": "f096f0a4b3f7dd9ee6ef265c3d04c729515b47303cb9a7c14495134ce4399fec",
+   "size_bytes": 372279,
+   "pixels": [
+    2000,
+    1333
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[40]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/82cd8455-e9db-45b6-95a9-7fa59b641c44_17A08-final-05.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0086_4666c0bdb6.jpg",
+   "sha256": "4666c0bdb638210b381974c6fe5e2ad3418c163a97ffdb30f1ea309ab131158f",
+   "size_bytes": 443911,
+   "pixels": [
+    2000,
+    1333
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[41]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/f1258746-bb86-4f0e-a692-678cd85bbe98_17A07-big-01.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0158_c2c8b88cae.jpg",
+   "sha256": "c2c8b88cae35ddecc1903403d91b0693ad5154d3d27d534fd9d88f89e3bd16a3",
+   "size_bytes": 304989,
+   "pixels": [
+    1600,
+    1280
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[42]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/c5505a2f-858b-47de-8773-d53b89fc962f_17I07-01.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0134_37bf5a24ff.jpg",
+   "sha256": "37bf5a24ff5bce4eca1596fa050e26a600a7bc66f6beece6473c05e3fc2a0e68",
+   "size_bytes": 440587,
+   "pixels": [
+    2000,
+    1333
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[43]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/ec85e05b-b2bc-4ef2-84e6-da84a7c9ca4a_17I05-03.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0156_04e8ad6a08.jpg",
+   "sha256": "04e8ad6a089cb2808c14b2d1724f554d293de1393770bf35dc7c1ed59f50ddf2",
+   "size_bytes": 338443,
+   "pixels": [
+    1600,
+    1439
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[44]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/2685015d-f22e-425f-abda-46428d88ec4a_17A05-20.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0034_39eefe1a62.jpg",
+   "sha256": "39eefe1a62c14f5fe28fcc265eb59e35a86c0955ecc67d037ac236659be102b2",
+   "size_bytes": 193821,
+   "pixels": [
+    1920,
+    1119
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[45]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/388a8e6b-baa4-4841-a87a-26bba82921b7_17V03-65.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0042_05da6dfb01.jpg",
+   "sha256": "05da6dfb01f547d3e26c01c4884b18bf3eee4123555990ccb493909041f69e20",
+   "size_bytes": 366052,
+   "pixels": [
+    2000,
+    1334
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[46]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/64c9a4fd-f318-40dc-917f-c8ef66c01539_17I03-08.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0062_333be8bc8d.jpg",
+   "sha256": "333be8bc8d90931c4c040b643cfa7b98c9aee5c566840f6435eb4fc758aca92d",
+   "size_bytes": 41138,
+   "pixels": [
+    602,
+    452
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[47]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/9a75e389-2cde-47ff-a901-125cf7ac53cf_17A02-06.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0095_862783c408.jpg",
+   "sha256": "862783c40887385c0ffb8190383021258c1e2e698e014c4852051e3969913189",
+   "size_bytes": 484101,
+   "pixels": [
+    2000,
+    1242
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[48]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/ac298e9c-e7b7-4604-b755-1ba3dc6cb88f_17V02-46.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0113_707cfcc37c.jpg",
+   "sha256": "707cfcc37c3cbf26a50d506bcc12a8e712aa90ffca2bd943adbc7680bb464756",
+   "size_bytes": 89069,
+   "pixels": [
+    720,
+    960
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[49]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/2d1cc6f1-1a97-44e3-952a-d098e8bbb102_17I01-32.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0038_071dbb9f08.jpg",
+   "sha256": "071dbb9f08298927074efeffcd42f1fe037fd6e24a0c0f56f4fa106daf1374b2",
+   "size_bytes": 19158,
+   "pixels": [
+    450,
+    250
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[50]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/133fd47c-d817-4764-97db-93ba4e1b4d92_16I12-01.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0020_90975ecd34.jpg",
+   "sha256": "90975ecd3444c7ff01fd94655837f7fe448dbfd6c940ea8fd7bc72d13b61be6d",
+   "size_bytes": 347208,
+   "pixels": [
+    2000,
+    1500
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[51]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/16e6d1e6-d125-44e6-afd1-fe279a3b076c_16I08-14.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0024_aa96b3e3c4.jpg",
+   "sha256": "aa96b3e3c43378e66d6f5b19e834687760db356a498652396e3a5001115a7fab",
+   "size_bytes": 12135,
+   "pixels": [
+    602,
+    451
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[52]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/c745ad2d-a964-48ea-af28-fb3881ed2d40_16A06-04.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0136_0917b8b780.jpg",
+   "sha256": "0917b8b780b449c0957e6dfff7dd75873413fd4e001bb8b25e6a426a13fc66f2",
+   "size_bytes": 198351,
+   "pixels": [
+    800,
+    1200
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[53]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/cb72c0a9-317e-4f4b-a0fa-4f8b525e824d_16I07-15.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0139_e46633efbc.jpg",
+   "sha256": "e46633efbc3a86b6199006b0af0b6eea0a774a27e32c61cc56850472f4bf7e6d",
+   "size_bytes": 37573,
+   "pixels": [
+    451,
+    677
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[54]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/ccc5bae7-8971-4d3a-8d81-156c99a7d9b0_16i04-24.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0141_51439e714a.jpg",
+   "sha256": "51439e714a545f82c254521235191d987c128994c9765ef6b61cd768714c39f6",
+   "size_bytes": 52596,
+   "pixels": [
+    960,
+    540
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[55]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/aZUg3lWLo0XkEm_4_Milyanghouse-29-web-.jpg?auto=format,compress",
+   "downloaded": true,
+   "file": "originals/asset_0111_f041159eff.jpg",
+   "sha256": "f041159eff75cbe343340c2b7d328331979e5384cf20dd8a63de2a5fe6020a97",
+   "size_bytes": 223831,
+   "pixels": [
+    1600,
+    1200
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[56]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/221df78c-2f2d-47c2-8170-a75019be64ce_16I03-title-01.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0031_c593c53e17.jpg",
+   "sha256": "c593c53e17c724e6c45f6450f106b873a097cd996906dc926ac7756ac3f4a847",
+   "size_bytes": 196024,
+   "pixels": [
+    2000,
+    1335
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[57]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/ffef2b47-dc23-46fa-8358-3d0c3c47b902_16V02-01.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0166_034f736654.jpg",
+   "sha256": "034f73665435bd9b881fdf737b88c0dfd3260e774d3e1742798067e68e029ff9",
+   "size_bytes": 76273,
+   "pixels": [
+    2000,
+    1386
+   ],
+   "auto_category": "DRAWING_CANDIDATE"
+  },
+  {
+   "json_path": "[58]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/4b081f41-1463-48be-ac30-162a20764315_16I02-48.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0051_80f5a230ac.jpg",
+   "sha256": "80f5a230ac850924de0c99cf22917ae09357ce3338a682549a9f29ab56680f15",
+   "size_bytes": 31818,
+   "pixels": [
+    602,
+    401
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[59]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/968fe374-4771-448c-9c93-54d54559989b_16A02-title-01.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0094_19fb8d2756.jpg",
+   "sha256": "19fb8d2756b130e6c7c5efc6533d03d504b27e5ac6e9d672d7f6ecf0da902f41",
+   "size_bytes": 336488,
+   "pixels": [
+    1216,
+    2000
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[60]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/b0cb7649-650c-4b27-936d-ad866e45f76f_16V01-107.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0117_5e11fecf60.jpg",
+   "sha256": "5e11fecf605fbca55f9f914d5d80b04a24047182f67a32f29bfb7b65083a4de0",
+   "size_bytes": 330416,
+   "pixels": [
+    2000,
+    1333
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[61]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/6bd07dfa-6ca7-410c-8ddc-9202593fefcf_15I05-01.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0070_0204a5ce02.jpg",
+   "sha256": "0204a5ce0243e7f626a12020e0e19ca3ed368b451de07055a8726fe20c2313a2",
+   "size_bytes": 224101,
+   "pixels": [
+    2000,
+    1500
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[62]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/524089e8-f05b-4e4f-a346-eebb3b7a9939_15A05-title-08.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0054_9b9390ead3.jpg",
+   "sha256": "9b9390ead35d6b6fc33711943add153ea61167b904531480f37ce80392140822",
+   "size_bytes": 140519,
+   "pixels": [
+    1200,
+    800
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[63]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/f22b79fc-2218-4ee7-9cd9-5c2bb2177266_15A04-title-05.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0159_4ee3bd1e1e.jpg",
+   "sha256": "4ee3bd1e1e488dd5abd0e24a253d7582377a5fb0dbcb9a9d232a42491f52dd43",
+   "size_bytes": 428537,
+   "pixels": [
+    1333,
+    2000
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[64]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/d0d8f6b9-af85-4d20-8320-f7a2e68cb27f_15I04-25.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0143_a7aed9e613.jpg",
+   "sha256": "a7aed9e6136f43a0a551e4c4e0f691edb168362d836de2a8c6cce60da94a46f1",
+   "size_bytes": 551335,
+   "pixels": [
+    2000,
+    1499
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[65]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/2ffc4ef4-da9c-44c2-aa33-7222572609c6_15A02-big-50.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0039_27c48bae6c.jpg",
+   "sha256": "27c48bae6cb514197bda84480ade91a69567a70d50ab4158e5e96f9be59f1113",
+   "size_bytes": 529103,
+   "pixels": [
+    1500,
+    2000
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[66]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/b8e81377-5738-4b44-86b8-848719a5a578_15I02-24.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0123_30571c0abd.jpg",
+   "sha256": "30571c0abdcb65bd8f542728f9b3158ed3fe2b6dbe4c8e2fbddfec0727299a06",
+   "size_bytes": 187396,
+   "pixels": [
+    1703,
+    1134
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[67]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/1b28c6b8-aff5-406c-bb5c-0844e3e6609f_15P01-06.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0028_9fd80d152f.jpg",
+   "sha256": "9fd80d152fcf2f2d6ac145cc5c0cd42938dfa966364e70222616791901f332d3",
+   "size_bytes": 118739,
+   "pixels": [
+    894,
+    597
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[68]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/1bee5036-44a4-46b9-9ca2-668552f35e5c_15A01-78.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0030_cd9502503e.jpg",
+   "sha256": "cd9502503e3d42714a36acef5417460dcaa6b13e807c22e43631995552e95e86",
+   "size_bytes": 229566,
+   "pixels": [
+    1200,
+    1200
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[69]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/8b3f3f6e-369b-4c6b-9a1a-79c7c3e5019d_14I09-01.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0089_5f058e90aa.jpg",
+   "sha256": "5f058e90aacedbe2555285a90cf892ac087a49cd17c424c5213c29bbf2bdbac4",
+   "size_bytes": 127737,
+   "pixels": [
+    960,
+    646
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[70]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/5ff5bfe5-0ee5-4ac8-9377-fede4f5817b8_14I08-08.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0059_3eaaacba80.jpg",
+   "sha256": "3eaaacba808167bb8234b18bee754608ae54277a411256db2726eade0b1348d4",
+   "size_bytes": 34513,
+   "pixels": [
+    1192,
+    618
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[71]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/e7b00f10-0222-4b1f-a5a7-8c6d50a78de1_14A06-05.JPG?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0153_ca28f3db19.jpg",
+   "sha256": "ca28f3db19e3e80258f0827fe7d9d73680266a922ecd99af678b420591947f4f",
+   "size_bytes": 126453,
+   "pixels": [
+    2000,
+    1407
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[72]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/3ee74abb-76f9-43e7-884c-83bba01a0ea4_14I05-01.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0046_68e1695950.jpg",
+   "sha256": "68e16959506c465aad2c122d2af9823c35d2078cb7c09085040ae994c2c42625",
+   "size_bytes": 232007,
+   "pixels": [
+    2000,
+    1586
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[73]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/14683237-45e8-4371-bdc8-3c6796731159_13I04-03.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0023_d366098327.jpg",
+   "sha256": "d366098327c8e15b63248a7b3f98e11214c430310a0e443204ccd16c810fcccd",
+   "size_bytes": 94245,
+   "pixels": [
+    720,
+    960
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  },
+  {
+   "json_path": "[74]/thumbnailImg/url",
+   "role": "OTHER_WORK",
+   "url": "https://images.prismic.io/fhhh-friends/50589512-a78e-4b76-84bd-243ffc0d5e2c_13A01-43.jpg?auto=compress,format",
+   "downloaded": true,
+   "file": "originals/asset_0053_946afb7e63.jpg",
+   "sha256": "946afb7e630506ed769c149a1decae74b53fb8d24c4907d7801b39408bcd895a",
+   "size_bytes": 457031,
+   "pixels": [
+    2000,
+    1334
+   ],
+   "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE"
+  }
+ ]
+}

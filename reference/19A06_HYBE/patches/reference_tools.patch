@@ -1,0 +1,502 @@
+diff --git a/reference/19A06_HYBE/scripts/capture_reference.py b/reference/19A06_HYBE/scripts/capture_reference.py
+new file mode 100644
+--- /dev/null
++++ b/reference/19A06_HYBE/scripts/capture_reference.py
+@@ -0,0 +1,300 @@
++#!/usr/bin/env python3
++"""Capture public on-page imagery for private architectural reference study.
++
++Only the explicitly requested project page is navigated. No login, paywall or
++access control is bypassed. Raw images are preserved with source URL + hash.
++"""
++from __future__ import annotations
++
++import argparse
++import asyncio
++import hashlib
++import html
++import json
++import mimetypes
++import os
++import re
++import sys
++from datetime import datetime, timezone
++from pathlib import Path
++from urllib.parse import unquote, urljoin, urlsplit
++
++try:
++    from playwright.async_api import async_playwright, TimeoutError as BrowserTimeout
++except ImportError as exc:
++    raise SystemExit("Playwright missing. Use an existing trusted Python environment: python -m pip install playwright") from exc
++
++TARGET_URL = "https://fhhhfriends.com/19a06"
++MEDIA_EXT = {".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif", ".svg", ".tif", ".tiff"}
++EXT_MIME = {
++    "image/jpeg": ".jpg", "image/png": ".png", "image/webp": ".webp",
++    "image/gif": ".gif", "image/avif": ".avif", "image/svg+xml": ".svg",
++    "image/tiff": ".tif",
++}
++IMAGE_URL_PATTERN = re.compile(r"(?:https?:)?//[^\s\"'<>\\]+?\.(?:jpg|jpeg|png|webp|gif|avif|svg|tif|tiff)(?:\?[^\s\"'<>\\]*)?", re.I)
++
++
++def now_iso():
++    return datetime.now(timezone.utc).isoformat(timespec="seconds")
++
++
++def hash_bytes(data: bytes) -> str:
++    return hashlib.sha256(data).hexdigest()
++
++
++def normalize_url(value: str, base: str) -> str | None:
++    if not isinstance(value, str):
++        return None
++    value = html.unescape(value).strip().strip("\"'")
++    if not value or value.startswith(("data:", "blob:", "javascript:", "mailto:")):
++        return None
++    url = urljoin(base, value)
++    if urlsplit(url).scheme not in ("http", "https", "file"):
++        return None
++    return url.split("#", 1)[0]
++
++
++def extract_html_image_urls(content: str, base: str) -> set[str]:
++    content = html.unescape(content).replace("\\/", "/").replace("\\u002F", "/")
++    found = set()
++    for match in IMAGE_URL_PATTERN.findall(content):
++        value = normalize_url(match, base)
++        if value:
++            found.add(value)
++    return found
++
++
++def prefer_browser_executable(hint: str | None) -> str | None:
++    if hint:
++        p = Path(hint)
++        if not p.is_file():
++            raise FileNotFoundError(f"Browser executable not found: {hint}")
++        return str(p)
++    paths = [
++        r"C:\Program Files\Google\Chrome\Application\chrome.exe",
++        r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
++        r"C:\Program Files\Microsoft\Edge\Application\msedge.exe",
++        "/usr/bin/chromium", "/usr/bin/google-chrome",
++    ]
++    return next((p for p in paths if Path(p).is_file()), None)
++
++
++def image_ext(url: str, content_type: str) -> str:
++    mime = content_type.split(";", 1)[0].strip().lower()
++    if mime in EXT_MIME:
++        return EXT_MIME[mime]
++    suffix = Path(unquote(urlsplit(url).path)).suffix.lower()
++    return suffix if suffix in MEDIA_EXT else ".img"
++
++
++async def dom_images(page) -> set[str]:
++    collected = await page.evaluate("""() => {
++      const output = [];
++      const add = v => {if (v && typeof v === 'string') output.push(v)};
++      for (const el of document.querySelectorAll('img, picture source, video[poster]')) {
++        for (const name of ['src', 'currentSrc', 'data-src', 'data-lazy-src', 'data-original', 'poster'])
++          add(el[name] || el.getAttribute(name));
++        for (const name of ['srcset', 'data-srcset']) {
++          const srcset = el.getAttribute(name);
++          if (srcset) for (const item of srcset.split(',')) add(item.trim().split(/\\s+/)[0]);
++        }
++      }
++      for (const el of document.querySelectorAll('*')) {
++        const bg = getComputedStyle(el).backgroundImage;
++        if (bg && bg !== 'none') for (const m of bg.matchAll(/url\\(["']?([^"')]+)["']?\\)/g)) add(m[1]);
++      }
++      for (const el of document.querySelectorAll('a[href]')) {
++        const href = el.getAttribute('href');
++        if (/\\.(jpe?g|png|gif|webp|svg|avif|tiff?)(\\?|$)/i.test(href || '')) add(href);
++      }
++      return output;
++    }""")
++    base = page.url
++    return {u for raw in collected if (u := normalize_url(raw, base))}
++
++
++async def create_screenshots(page, dest: Path, observed: set[str], delay: float, max_scrolls: int):
++    dest.mkdir(parents=True, exist_ok=True)
++    h = await page.evaluate("document.documentElement.scrollHeight")
++    viewport = page.viewport_size or {"height": 900}
++    step = max(200, int(viewport["height"] * .80))
++    y = 0
++    screenshots = []
++    previous = set()
++    for iteration in range(max_scrolls):
++        await page.evaluate("y => window.scrollTo(0, y)", y)
++        await page.wait_for_timeout(delay * 1000)
++        observed.update(await dom_images(page))
++        png = await page.screenshot(full_page=False, animations="disabled")
++        sig = hash_bytes(png)
++        if sig not in previous:
++            path = dest / f"viewport_{len(screenshots)+1:04d}.png"
++            path.write_bytes(png)
++            screenshots.append({"path": str(path.name), "scroll_y": y, "sha256": sig})
++            previous.add(sig)
++        new_h = await page.evaluate("document.documentElement.scrollHeight")
++        if y + viewport["height"] >= new_h - 6 and h == new_h:
++            break
++        h = new_h
++        y += step
++    await page.evaluate("window.scrollTo(0, 0)")
++    return screenshots
++
++
++async def click_gallery(page, dest: Path, observed: set[str], delay: float, max_clicks: int):
++    """Best effort: click explicit on-page 'next image' controls, never a project nav link."""
++    selector = ("button[aria-label*='next' i], button[title*='next' i], "
++                "button[aria-label*='다음' i], .swiper-button-next, "
++                "[role='button'][aria-label*='next' i]")
++    seen = set()
++    items = []
++    for _ in range(max_clicks):
++        buttons = page.locator(selector)
++        button = None
++        for i in range(min(await buttons.count(), 15)):
++            candidate = buttons.nth(i)
++            if await candidate.is_visible() and await candidate.is_enabled():
++                button = candidate
++                break
++        if button is None:
++            break
++        signature = tuple(sorted(await dom_images(page)))
++        if signature in seen:
++            break
++        seen.add(signature)
++        before = urlsplit(page.url).path
++        try:
++            await button.click(timeout=4500)
++        except Exception:
++            break
++        await page.wait_for_timeout(delay * 1000)
++        if urlsplit(page.url).path != before:
++            break
++        observed.update(await dom_images(page))
++        pic = await page.screenshot(full_page=False, animations="disabled")
++        fname = f"gallery_{len(items)+1:04d}.png"
++        (dest / fname).write_bytes(pic)
++        items.append({"path": fname, "sha256": hash_bytes(pic)})
++    return items
++
++
++async def download_assets(context, urls: list[str], output: Path, max_size_mb: int, max_total_mb: int):
++    output.mkdir(parents=True, exist_ok=True)
++    rows = []
++    content_hashes = set()
++    total = 0
++    max_size = max_size_mb * 1024 * 1024
++    max_total = max_total_mb * 1024 * 1024
++    for idx, url in enumerate(urls, start=1):
++        row = {"id": idx, "url": url, "status": "PENDING"}
++        try:
++            if urlsplit(url).scheme == "file":
++                raw = Path(unquote(urlsplit(url).path)).read_bytes()
++                content_type = mimetypes.guess_type(url)[0] or "application/octet-stream"
++                status = 200
++            else:
++                response = await context.request.get(url, timeout=35000, max_redirects=8)
++                status = response.status
++                content_type = response.headers.get("content-type", "")
++                if not response.ok:
++                    raise ValueError(f"HTTP {status}")
++                if not (content_type.lower().startswith("image/") or Path(urlsplit(url).path).suffix.lower() in MEDIA_EXT):
++                    raise ValueError(f"not image media: {content_type}")
++                raw = await response.body()
++            if len(raw) > max_size:
++                raise ValueError(f"individual file exceeds {max_size_mb} MB")
++            if total + len(raw) > max_total:
++                raise ValueError(f"TOTAL_LIMIT_REACHED ({max_total_mb} MB); no more downloads")
++            digest = hash_bytes(raw)
++            row.update({"http_status": status, "mime": content_type, "size_bytes": len(raw), "sha256": digest})
++            if digest in content_hashes:
++                row["status"] = "DUPLICATE_SHA256"
++            else:
++                extension = image_ext(url, content_type)
++                name = f"asset_{idx:04d}_{digest[:10]}{extension}"
++                (output / name).write_bytes(raw)
++                row.update({"status": "DOWNLOADED", "file": f"originals/{name}"})
++                content_hashes.add(digest)
++                total += len(raw)
++        except Exception as ex:
++            row.update({"status": "FAILED", "error": str(ex)[:350]})
++        rows.append(row)
++    return rows
++
++
++async def capture(args):
++    root = args.output.resolve()
++    (root / "originals").mkdir(parents=True, exist_ok=True)
++    (root / "captures").mkdir(exist_ok=True)
++    (root / "manifests").mkdir(exist_ok=True)
++    observed: set[str] = set()
++    net: set[str] = set()
++    screenshots = []
++    gallery = []
++    errors = []
++    async with async_playwright() as pw:
++        launch = {"headless": True}
++        executable = prefer_browser_executable(args.browser)
++        if executable:
++            launch["executable_path"] = executable
++        browser = await pw.chromium.launch(**launch)
++        context = await browser.new_context(viewport={"width": 1440, "height": 900}, device_scale_factor=1)
++        page = await context.new_page()
++        def response_listener(response):
++            mime = response.headers.get("content-type", "")
++            if mime.lower().startswith("image/"):
++                net.add(response.url.split("#", 1)[0])
++        page.on("response", response_listener)
++        try:
++            await page.goto(args.url, wait_until="domcontentloaded", timeout=60000)
++            await page.wait_for_timeout(1900)
++            if urlsplit(page.url).path.rstrip("/") != urlsplit(args.url).path.rstrip("/"):
++                errors.append(f"redirected to unexpected path: {page.url}")
++            screenshots = await create_screenshots(page, root / "captures", observed, args.delay, args.max_scrolls)
++            gallery = await click_gallery(page, root / "captures", observed, args.delay, args.max_clicks)
++            observed.update(await dom_images(page))
++            raw_html = await page.content()
++            (root / "manifests" / "rendered_page.html").write_text(raw_html, encoding="utf-8")
++            observed.update(extract_html_image_urls(raw_html, args.url))
++        except Exception as ex:
++            errors.append(f"page collection failed: {type(ex).__name__}: {ex}")
++        found = sorted({u for u in observed | net if u and urlsplit(u).scheme in ("http", "https", "file")})
++        print(f"Found {len(found)} image URLs, captured {len(screenshots)} viewports and {len(gallery)} gallery slides", flush=True)
++        rows = await download_assets(context, found, root / "originals", args.max_file_mb, args.max_total_mb)
++        await browser.close()
++    report = {
++        "source_url": args.url, "captured_at_utc": now_iso(),
++        "capture_policy": "public on-page assets only; personal research; no auth bypass",
++        "page_screenshots": screenshots, "gallery_screenshots": gallery,
++        "network_image_urls": len(net), "dom_or_html_image_urls": len(observed),
++        "discovered_image_urls": len(found),
++        "downloaded_unique": sum(x["status"] == "DOWNLOADED" for x in rows),
++        "duplicate_by_sha256": sum(x["status"] == "DUPLICATE_SHA256" for x in rows),
++        "download_failed": sum(x["status"] == "FAILED" for x in rows),
++        "assets": rows,
++        "issues": errors,
++        "all_media_captured": bool(rows) and not errors and all(x["status"] != "FAILED" for x in rows),
++        "completeness_caveat": "Lazy slide content not referenced by page until interacted with may remain missing; compare visible gallery count to manifest and capture manually if needed.",
++    }
++    path = root / "manifests" / "capture_manifest.json"
++    path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
++    print(f"RESULT: {report['downloaded_unique']} unique images; {report['download_failed']} failures. Manifest: {path}")
++    return 0 if not errors and report["download_failed"] == 0 else 2
++
++
++def main():
++    parser = argparse.ArgumentParser(description="Capture user-specified FHHH HYBE project imagery for private research")
++    parser.add_argument("--url", default=TARGET_URL)
++    parser.add_argument("--output", type=Path, default=Path("reference/19A06_HYBE"))
++    parser.add_argument("--browser", help="Already installed Chrome/Edge/Chromium path")
++    parser.add_argument("--delay", type=float, default=0.35, help="Seconds after scroll/click")
++    parser.add_argument("--max-scrolls", type=int, default=400)
++    parser.add_argument("--max-clicks", type=int, default=150)
++    parser.add_argument("--max-file-mb", type=int, default=80)
++    parser.add_argument("--max-total-mb", type=int, default=4096)
++    args = parser.parse_args()
++    sys.exit(asyncio.run(capture(args)))
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/reference/19A06_HYBE/scripts/analyze_reference.py b/reference/19A06_HYBE/scripts/analyze_reference.py
+new file mode 100644
+--- /dev/null
++++ b/reference/19A06_HYBE/scripts/analyze_reference.py
+@@ -0,0 +1,119 @@
++#!/usr/bin/env python3
++"""Make an auditable image inventory/contact sheets without inventing visual facts."""
++from __future__ import annotations
++
++import argparse
++import hashlib
++import html
++import json
++import math
++from pathlib import Path
++from urllib.parse import urlsplit
++from PIL import Image, ImageDraw, ImageFont, ImageStat, ImageFilter, ImageOps
++
++
++def digest(path: Path):
++    h = hashlib.sha256()
++    with path.open('rb') as stream:
++        for block in iter(lambda: stream.read(1024 * 1024), b''):
++            h.update(block)
++    return h.hexdigest()
++
++
++def font(n):
++    for x in ('C:/Windows/Fonts/malgun.ttf', '/usr/share/fonts/truetype/nanum/NanumGothic.ttf', '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'):
++        if Path(x).is_file():
++            return ImageFont.truetype(x, n)
++    return ImageFont.load_default()
++
++
++def classify_image(im: Image.Image):
++    """Potential drawing/diagram/photo: image characteristics ONLY, no semantic guarantee."""
++    img = ImageOps.exif_transpose(im).convert('RGB')
++    img.thumbnail((500, 500))
++    raw = img.tobytes()
++    n = max(1, len(raw) // 3)
++    white = sum(1 for i in range(0, len(raw), 3) if min(raw[i:i+3]) >= 235) / n
++    grayscale = sum(1 for i in range(0, len(raw), 3) if max(raw[i:i+3]) - min(raw[i:i+3]) <= 20) / n
++    edges = img.convert('L').filter(ImageFilter.FIND_EDGES)
++    edge_fraction = sum(1 for x in edges.tobytes() if x > 45) / n
++    if white >= .58 and grayscale >= .85:
++        label = 'DRAWING_CANDIDATE'
++    elif grayscale >= .68 and white >= .40:
++        label = 'DIAGRAM_CANDIDATE'
++    else:
++        label = 'PHOTO_OR_COLOR_GRAPHIC_CANDIDATE'
++    return label, {'near_white_fraction': round(white, 4), 'near_gray_fraction': round(grayscale, 4),
++                   'edge_fraction': round(edge_fraction, 4)}
++
++
++def make_sheet(items, out: Path, number: int):
++    cell_w, cell_h, cols, rows = 370, 320, 3, 4
++    image = Image.new('RGB', (cols * cell_w + 30, rows * cell_h + 50), '#f7f7f7')
++    draw = ImageDraw.Draw(image)
++    draw.text((16, 11), f'FHHH 19A06 | Reference contact sheet {number:02d}', fill='#222', font=font(18))
++    for pos, row in enumerate(items):
++        x, y = 10 + (pos % cols) * cell_w, 45 + (pos // cols) * cell_h
++        with Image.open(row['path']) as original:
++            thumb = ImageOps.contain(ImageOps.exif_transpose(original).convert('RGB'), (cell_w - 18, 266))
++            image.paste(thumb, (x + (cell_w - thumb.width)//2, y + 4 + (270 - thumb.height)//2))
++        draw.text((x + 8, y + 278), row['name'][:45], fill='#333', font=font(14))
++        draw.text((x + 8, y + 298), row['auto_category'], fill='#555', font=font(12))
++    out.parent.mkdir(parents=True, exist_ok=True)
++    image.save(out)
++
++
++def run(root: Path):
++    manifest_path = root / 'manifests' / 'capture_manifest.json'
++    rows = json.loads(manifest_path.read_text('utf-8')).get('assets', []) if manifest_path.is_file() else []
++    metadata = []
++    asset_rows = []
++    for row in rows:
++        if row.get('status') != 'DOWNLOADED':
++            continue
++        p = root / row['file']
++        if not p.is_file():
++            metadata.append({'asset_id': row.get('id'), 'status':'MISSING_ON_DISK', 'path':row['file']})
++            continue
++        record = {'asset_id': row['id'], 'path':row['file'], 'sha256':digest(p), 'source_url':row['url'], 'domain':urlsplit(row['url']).netloc}
++        try:
++            with Image.open(p) as im:
++                record['pixels'] = [im.width, im.height]
++                record['mode'] = im.mode
++                record['auto_category'], record['metrics'] = classify_image(im)
++            asset_rows.append({'path':p, 'name':p.name, 'auto_category':record['auto_category']})
++            record['status'] = 'ANALYZED'
++        except Exception as ex:
++            record.update({'status': 'NO_RASTER_PREVIEW', 'reason':str(ex)[:150]})
++        metadata.append(record)
++    dest = root / 'contact_sheets'
++    for i in range(0, len(asset_rows), 12):
++        make_sheet(asset_rows[i:i+12], dest / f'contact_{i//12+1:02d}.png', i//12+1)
++    counts = {}
++    for o in metadata:
++        tag = o.get('auto_category', o['status'])
++        counts[tag] = counts.get(tag, 0) + 1
++    report = {'capture_manifest_present':manifest_path.is_file(), 'registered_items':len(rows),
++              'analyzed_items':sum(x['status']=='ANALYZED' for x in metadata),
++              'auto_classification_counts':counts, 'items':metadata,
++              'warning':'Drawing and diagram categories are heuristic only. Human review is mandatory before style mapping.'}
++    (root / 'manifests').mkdir(exist_ok=True)
++    (root / 'manifests' / 'analysis_manifest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n','utf-8')
++    html_items = []
++    for record in metadata:
++        thumb = f'<img loading="lazy" src="{html.escape("../"+record["path"])}" alt="{record["asset_id"]}">' if record['status']=='ANALYZED' else ''
++        url = html.escape(record['source_url'],quote=True)
++        html_items.append(f'<article>{thumb}<b>{html.escape(str(record["asset_id"]))} · {html.escape(record.get("auto_category",record["status"]))}</b><a href="{url}" target="_blank" rel="noopener">Original source</a></article>')
++    index = ('<!doctype html><meta charset="utf-8"><title>FHHH HYBE internal reference</title>'
++             '<style>body{font:14px Arial;margin:32px;background:#f7f7f7}main{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}'
++             'article{background:white;padding:12px}img{width:100%;height:260px;object-fit:contain}article>*{display:block;margin:8px 0}</style>'
++             '<h1>FHHH Friends — HYBE 19A06</h1><p>Private study, source-linked. Automatic tags need visual review.</p><main>'
++             +''.join(html_items)+'</main>')
++    (root / 'contact_sheets' / 'index.html').write_text(index,encoding='utf-8')
++    print(f'Analyzed {report["analyzed_items"]} assets. Contact sheets: {math.ceil(len(asset_rows)/12)}')
++
++
++if __name__=='__main__':
++    p=argparse.ArgumentParser()
++    p.add_argument('--root',type=Path,default=Path('reference/19A06_HYBE'))
++    run(p.parse_args().root)
+diff --git a/reference/19A06_HYBE/tests/test_reference_utils.py b/reference/19A06_HYBE/tests/test_reference_utils.py
+new file mode 100644
+--- /dev/null
++++ b/reference/19A06_HYBE/tests/test_reference_utils.py
+@@ -0,0 +1,68 @@
++"""Offline tests for discovery, provenance and contact-sheet heuristics."""
++from __future__ import annotations
++
++import importlib.util
++import json
++import sys
++import tempfile
++import unittest
++from pathlib import Path
++from PIL import Image, ImageDraw
++
++ROOT = Path(__file__).resolve().parents[1]
++
++def load(name):
++    file = ROOT / 'scripts' / (name + '.py')
++    spec = importlib.util.spec_from_file_location(name, file)
++    mod = importlib.util.module_from_spec(spec)
++    sys.modules[name] = mod
++    spec.loader.exec_module(mod)
++    return mod
++
++cap = load('capture_reference')
++ana = load('analyze_reference')
++
++class ReferenceUtilsTest(unittest.TestCase):
++    def test_normalize_abs_and_relative(self):
++        self.assertEqual(cap.normalize_url('/assets/a.png', 'https://example.org/19a06'), 'https://example.org/assets/a.png')
++        self.assertEqual(cap.normalize_url('https://images.prismic.io/z.png?width=300#x', 'https://example.org'),
++                         'https://images.prismic.io/z.png?width=300')
++
++    def test_rejects_data_and_javascript_urls(self):
++        self.assertIsNone(cap.normalize_url('data:image/png;base64,123', 'https://x.org'))
++        self.assertIsNone(cap.normalize_url('javascript:alert(1)', 'https://x.org'))
++
++    def test_html_image_url_lookup(self):
++        src='<img src="https://images.prismic.io/fhhh-friends/example.jpg?auto=format&amp;w=800">'
++        self.assertIn('https://images.prismic.io/fhhh-friends/example.jpg?auto=format&w=800',
++                      cap.extract_html_image_urls(src, 'https://fhhhfriends.com/19a06'))
++
++    def test_source_url_extension(self):
++        self.assertEqual(cap.image_ext('https://cdn.x/a.jpg?width=800', 'image/webp'), '.webp')
++        self.assertEqual(cap.image_ext('https://cdn.x/a.jpg?width=800', ''), '.jpg')
++
++    def test_drawing_candidate_not_fabricated_semantics(self):
++        im=Image.new('RGB',(400,300),'white')
++        draw=ImageDraw.Draw(im)
++        draw.rectangle((50,30,350,250),outline='black',width=4)
++        label,metrics=ana.classify_image(im)
++        self.assertEqual(label,'DRAWING_CANDIDATE')
++        self.assertGreater(metrics['near_white_fraction'],.55)
++
++    def test_capture_manifest_generates_contact_sheet(self):
++        with tempfile.TemporaryDirectory() as d:
++            root=Path(d)
++            (root/'originals').mkdir()
++            (root/'manifests').mkdir()
++            Image.new('RGB',(300,180),'white').save(root/'originals'/'drawing.png')
++            (root/'manifests'/'capture_manifest.json').write_text(json.dumps({
++                'assets':[{'id':1,'status':'DOWNLOADED',
++                           'file':'originals/drawing.png','url':'https://fhhhfriends.com/assets/drawing.png'}]}
++            ),encoding='utf-8')
++            ana.run(root)
++            assert (root/'contact_sheets'/'contact_01.png').is_file()
++            rep=json.loads((root/'manifests'/'analysis_manifest.json').read_text('utf-8'))
++            self.assertEqual(rep['analyzed_items'],1)
++
++if __name__=='__main__':
++    unittest.main()

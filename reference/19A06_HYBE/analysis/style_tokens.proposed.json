@@ -1,0 +1,55 @@
+{
+  "version": "FHHH_HYBE_TRANSLATION_V0_1",
+  "status": "PROVISIONAL_UNTIL_DIRECT_19A06_ASSET_REVIEW",
+  "origin_and_authorship": {
+    "reference_project": "FHHH friends + studio COM, HYBE (19A06), 2021",
+    "reference_url": "https://fhhhfriends.com/19a06",
+    "interpretation": "Original drawing style inspired implementation tokens, not extracted source style properties",
+    "copyright": "Do not embed/copy protected drawing geometry into the project output"
+  },
+  "target": {
+    "floor": "1F",
+    "paper_width_mm": 420,
+    "paper_height_mm": 297,
+    "scale_denominator": 500,
+    "print_preview_dpi": 300,
+    "png_min_width_px": 4961,
+    "source_geometry": "tagged_3D_model_and_verified_cut",
+    "model_immutable": true
+  },
+  "layer_tokens": {
+    "structure_cut": {"stroke_mm": 0.45, "color": "#101010", "fill": "#101010", "priority": 1},
+    "core_and_secondary_cut": {"stroke_mm": 0.25, "color": "#222222", "fill": "#292929", "priority": 2},
+    "wall_elevation_and_doors": {"stroke_mm": 0.18, "color": "#303030", "fill": "none", "priority": 3},
+    "curtain_wall_double_line": {"stroke_mm": 0.12, "color": "#545454", "fill": "none", "priority": 4},
+    "program_footprint": {"stroke_mm": 0.12, "color": "#555555", "fill": "none", "priority": 4},
+    "furniture_body": {"stroke_mm": 0.10, "color": "#565656", "fill": "#FFFFFF", "priority": 5},
+    "furniture_detail": {"stroke_mm": 0.07, "color": "#8C8C8C", "fill": "none", "priority": 6},
+    "site_primary_edge": {"stroke_mm": 0.14, "color": "#777777", "fill": "none", "priority": 5},
+    "landscape_primary": {"stroke_mm": 0.09, "color": "#A6A6A6", "fill": "none", "priority": 7},
+    "landscape_foliage": {"stroke_mm": 0.05, "color": "#C6C6C6", "fill": "none", "priority": 8},
+    "floor_grid": {"stroke_mm": 0.04, "color": "#DADADA", "fill": "none", "priority": 9},
+    "context_buildings": {"stroke_mm": 0.05, "color": "#C7C7C7", "fill": "#FAFAFA", "priority": 8}
+  },
+  "line_cleanliness": {
+    "source_geometry_simplification": "FORBIDDEN",
+    "decorative_curve_tolerance_on_paper_mm_max": 0.12,
+    "candidate_style_only_curve_smoothing": "ALLOWED_WITH_GEOMETRIC_DEVIATION_REPORT",
+    "raster_underlay_for_final_sheet": false,
+    "furniture_opaque_masks": true,
+    "overlapping_duplicate_features": 0,
+    "source_feature_id_reconciliation_required": true,
+    "texture_density_target": "LOW_AT_A3_1_500"
+  },
+  "modular_principle": {
+    "source_reference": "HYBE COM office: 500 x 500 mm furniture grid, reported by ArchDaily and studio COM",
+    "planning_grid_m_optional": 0.5,
+    "note": "Use as a furniture alignment aid only; not mandatory for market layouts or approved architectural geometry"
+  },
+  "approval": {
+    "program_intent": "APPROVED_18_PROGRAMS",
+    "market_and_capsule_model_doors": "UNVERIFIED_AND_UNAPPROVED",
+    "drawing_visual": "NOT_APPROVED",
+    "frozen_1f": false
+  }
+}

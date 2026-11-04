@@ -1,0 +1,103 @@
+{
+  "root": "reference/19A06_HYBE",
+  "source_url": "https://fhhhfriends.com/19a06",
+  "capture_status": "PENDING_LOCAL_BROWSER_CAPTURE",
+  "external_originals_downloaded": 0,
+  "external_screenshots_captured": 0,
+  "first_party_baseline_images": 1,
+  "tools_tested_offline": "6/6 PASSED",
+  "browser_test": "NOT_VERIFIED_THIS_RUNTIME_ERR_BLOCKED_BY_ADMINISTRATOR",
+  "style_implementation": "NOT_RUN",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 220,
+      "sha256": "0f8906255f1e6337892b6b9ef3e99d29af6d23efb6162564cac0fe9795a0f46a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5321,
+      "sha256": "028758986eed29bba406e55549ec21131c0f39a3100f0eccaec7146ef29a3253"
+    },
+    {
+      "path": "analysis/CAPTURE_CHECKLIST.md",
+      "bytes": 1092,
+      "sha256": "bf9338d609c93dade23c6d91b109b9cdab2daf21cdfec3e5ffe94cfeba0668c5"
+    },
+    {
+      "path": "analysis/CLAUDE_C_T13B_STYLE_APPLICATION.md",
+      "bytes": 7585,
+      "sha256": "5ee17b94754dc59be884ad6af3bbc5c064935b48cb8d76aec3dad56e1b19218f"
+    },
+    {
+      "path": "analysis/STYLE_AUDIT.md",
+      "bytes": 8860,
+      "sha256": "d11598689d031848d65422a0d38ddbe5b14dc52516cbe48d9805d4eac67a39c5"
+    },
+    {
+      "path": "analysis/style_tokens.proposed.json",
+      "bytes": 2889,
+      "sha256": "97ad114e544a89065d6ac2ab0ee555f8ea268e4d336838d3be56e07041be2bf2"
+    },
+    {
+      "path": "captures/.keep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "contact_sheets/index.html",
+      "bytes": 452,
+      "sha256": "a22eda741bf242c64bd5e73d3820544f4a67b0b232e1eae98efb472ba9bf255b"
+    },
+    {
+      "path": "manifests/analysis_manifest.json",
+      "bytes": 254,
+      "sha256": "10edf72787232a8d8725c8f2a78ef4cd336115d901177a57d64653a2f88dc99d"
+    },
+    {
+      "path": "manifests/capture_manifest.json",
+      "bytes": 615,
+      "sha256": "150ec35ba5825f2732c00934f3609bcdfbf3b71065fdfae6dae120b29c5d9e0c"
+    },
+    {
+      "path": "manifests/source_catalog.json",
+      "bytes": 1608,
+      "sha256": "5926c8bada7b8a606d0836aee2cc9d4466bad31cbfc5e4a97b17938f5307aab2"
+    },
+    {
+      "path": "originals/.keep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "our_baseline/1F_Program_Concept_V2_B.png",
+      "bytes": 861743,
+      "sha256": "66a7a3df43efbf91983dbc859b51338d6d4c40d0b56e9db82cb801c275719a07"
+    },
+    {
+      "path": "patches/reference_tools.patch",
+      "bytes": 23744,
+      "sha256": "38dfbae3517f5b2aae25b34bd4d77a3458441e9a4fc46a3c76163339966b476d"
+    },
+    {
+      "path": "requirements.reference.txt",
+      "bytes": 34,
+      "sha256": "2ad6e98a22ef57e5252d674e059a31f885881a45eee3e9d04cce077d1db3f538"
+    },
+    {
+      "path": "scripts/analyze_reference.py",
+      "bytes": 6104,
+      "sha256": "1e9225a9fcc95ac6a98154e8f1214e2b000e5e72dc5e7dcec0eb8a4b8f24fb13"
+    },
+    {
+      "path": "scripts/capture_reference.py",
+      "bytes": 13463,
+      "sha256": "765ac63cf524decf0f4931a43740772c2540bcfa1cadf13056d9febad8bea9fb"
+    },
+    {
+      "path": "tests/test_reference_utils.py",
+      "bytes": 3016,
+      "sha256": "25008225776980e4c4a1ae80a78e56fdd4c453f46343bb694a06d0aafcc31f3a"
+    }
+  ]
+}

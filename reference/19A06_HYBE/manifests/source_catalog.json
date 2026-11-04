@@ -1,0 +1,17 @@
+{
+  "project_id": "FHHH-19A06-HYBE",
+  "retrieval_status": "PAGE_METADATA_VERIFIED_DIRECT_IMAGE_DOWNLOAD_BLOCKED_IN_CURRENT_RUNTIME",
+  "original_page": "https://fhhhfriends.com/19a06",
+  "catalog_date": "2026-11-04",
+  "sources": [
+    {"name":"FHHH project original","url":"https://fhhhfriends.com/19a06","role":"primary project provenance and author credits","direct_original_images_downloaded":false},
+    {"name":"Studio COM office plan and images","url":"https://c-o-m.kr/hybe/office","role":"secondary architectural visual evidence; 8-16F floor plan","direct_original_images_downloaded":false},
+    {"name":"ArchDaily HYBE Headquarters Office","url":"https://www.archdaily.com/1016294/hybe-headquarters-office-com-plus-fhhh-friends","role":"documented 500mm modular system, 1F and other floor plans, project photos","direct_original_images_downloaded":false}
+  ],
+  "known_public_media_links_not_downloaded": [
+    {"url":"https://c-o-m.kr/media/pages/project-list/hybe/office/6c2549aad8-1723921355/02_hybe_8-16f.jpg","category":"floor_plan","source":"studio COM"},
+    {"url":"https://c-o-m.kr/media/pages/project-list/hybe/office/25ce675377-1723921356/6.jpg","category":"interior_photo","source":"studio COM"},
+    {"url":"https://c-o-m.kr/media/pages/project-list/hybe/lobby/17988c2794-1723921356/00_hybe_diagram_ceiling.jpg","category":"exploded_diagram","source":"studio COM"}
+  ],
+  "completeness_note":"No exact count of FHHH 19A06 project image assets is established. Run scripts/capture_reference.py in a network-enabled local browser and review its manifest before claiming completeness."
+}

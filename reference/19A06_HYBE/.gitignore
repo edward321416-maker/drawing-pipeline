@@ -1,0 +1,8 @@
+# Third-party project source imagery for private study: do not redistribute in Git
+originals/
+captures/
+contact_sheets/
+manifests/rendered_page.html
+manifests/capture_manifest.json
+manifests/analysis_manifest.json
+*.log
