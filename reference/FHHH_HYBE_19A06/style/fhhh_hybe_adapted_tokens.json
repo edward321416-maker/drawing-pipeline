@@ -1,0 +1,45 @@
+{
+  "id": "FHHH_HYBE_ADAPTED_V1",
+  "status": "ORIGINAL_STYLE_PROPOSAL_NOT_MEASURED_SOURCE_VALUES",
+  "profile": {
+    "paper_mm": [
+      420,
+      297
+    ],
+    "scale": "1:500",
+    "approved_programs": 18
+  },
+  "colors": {
+    "paper": "#FFFFFF",
+    "cut": "#111111",
+    "wall": "#2C2C2C",
+    "furniture": "#62676A",
+    "context": "#C9CED1",
+    "grids": "#E4E8E8",
+    "retail": "#F0F1F0",
+    "popup": "#EBEFF1",
+    "food": "#F2F0E9",
+    "seat": "#E9ECEC",
+    "landscape": "#E6EEE7",
+    "plant_stroke": "#A4B6A5",
+    "callout": "#436CA5"
+  },
+  "lineweight_mm": {
+    "cut": 0.45,
+    "wall": 0.3,
+    "door": 0.18,
+    "furniture": 0.1,
+    "glass": 0.09,
+    "secondary": 0.08,
+    "landscape": 0.07,
+    "hatch": 0.045
+  },
+  "rules": {
+    "preserve_model_geometry": true,
+    "preserve_34_columns": true,
+    "no_png_underlay": true,
+    "no_model_unverified_doors": true,
+    "no_full_floor_freeze": true
+  },
+  "evidence": "COM HYBE published plan previews; exact tokens are our adaptations"
+}
