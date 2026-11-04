@@ -1,0 +1,646 @@
+{
+  "source": "https://c-o-m.kr/hybe/office",
+  "captured_with": "reference/19A06_HYBE/scripts/capture_reference.py (2026-11-04)",
+  "project_images": 43,
+  "by_kind": {
+    "PHOTO_OR_OTHER": 37,
+    "AXONOMETRIC_CONCEPT_SKETCH": 4,
+    "FLOOR_PLAN_8_16F": 1,
+    "CEILING_EXPLODED_DIAGRAM": 1
+  },
+  "site_chrome_images": 6,
+  "floor_plans_present": [
+    "02_hybe_8-16f.jpg (8~16F 사무층 평면). 1F/로비 평면은 이 페이지에 없음"
+  ],
+  "note": "kind 는 파일명(출처 측 명명)과 연락판 육안 확인 기준. 자동 분류(auto_category)는 휴리스틱.",
+  "assets": [
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/05fe61aa23-1723921355/10.jpg",
+      "file": "originals/asset_0007_8d85f64be0.jpg",
+      "sha256": "8d85f64be0e8b032038b94178536c7645418e3e4498ada4781ab18fc03f8582b",
+      "size_bytes": 686891,
+      "pixels": [
+        2048,
+        1366
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "10.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/08258c2c91-1723921354/hybe_office_3_tmi_4.jpg",
+      "file": "originals/asset_0008_6c6d80d37a.jpg",
+      "sha256": "6c6d80d37abef7c365e10fc124640b7234005279fea544ad569fa9a417107379",
+      "size_bytes": 1050596,
+      "pixels": [
+        1365,
+        2048
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "hybe_office_3_tmi_4.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/10ef890c9f-1723921354/2107_hybe_00107.jpg",
+      "file": "originals/asset_0009_41fdf8ddc6.jpg",
+      "sha256": "41fdf8ddc69362f6e6f4a18816006d80beda711360426e25ca73e49534125ac7",
+      "size_bytes": 906223,
+      "pixels": [
+        2048,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "2107_hybe_00107.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/1702a61274-1723921355/4cut.jpg",
+      "file": "originals/asset_0010_96a3e38163.jpg",
+      "sha256": "96a3e38163dfa593b5cda4b745b70674252c925fb1ed674787d689f5c386da80",
+      "size_bytes": 869123,
+      "pixels": [
+        2048,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "4cut.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/1eaf9a251d-1723921355/26.jpg",
+      "file": "originals/asset_0011_a25bc30fbb.jpg",
+      "sha256": "a25bc30fbbdffc29b3f9537990b74ae96a6671f40cc756c2cd1f05c872df528b",
+      "size_bytes": 738303,
+      "pixels": [
+        2048,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "26.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/2e62cb65db-1723921356/19.jpg",
+      "file": "originals/asset_0012_da24382b42.jpg",
+      "sha256": "da24382b4238f260671622780880405e859d6d449bfb29749a11ff1f0731c9a8",
+      "size_bytes": 370773,
+      "pixels": [
+        1365,
+        2048
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "19.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/3510bad406-1723921355/04_hybe_office-diagram_02.jpg",
+      "file": "originals/asset_0013_e74d6eb290.jpg",
+      "sha256": "e74d6eb290b5fbeffac910c0387f25fda32fd8a9a01dbeb4673bc39e2efb70aa",
+      "size_bytes": 1752677,
+      "pixels": [
+        2880,
+        2160
+      ],
+      "auto_category": "DRAWING_CANDIDATE",
+      "name": "04_hybe_office-diagram_02.jpg",
+      "kind": "AXONOMETRIC_CONCEPT_SKETCH"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/390785fcfb-1723921356/6.jpg",
+      "file": "originals/asset_0014_b3b172a7a7.jpg",
+      "sha256": "b3b172a7a7102b334525e672256cf2af17a0497fb6c1fbffba6d92546f972c1f",
+      "size_bytes": 921978,
+      "pixels": [
+        2048,
+        1366
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "6.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/3ae8fe6ebe-1723921355/30.jpg",
+      "file": "originals/asset_0015_d72f582cd3.jpg",
+      "sha256": "d72f582cd3da1d26ee51b23cbb3b7237a530ff9272ae65102b53db161e2a172f",
+      "size_bytes": 787054,
+      "pixels": [
+        2048,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "30.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/42f0b0e3ca-1723921355/23.jpg",
+      "file": "originals/asset_0016_966c07680f.jpg",
+      "sha256": "966c07680f4f42d45a2ee382bb819442e04a2d9eea5bcb750d8b9decca6ed170",
+      "size_bytes": 1042657,
+      "pixels": [
+        910,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "23.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/43793dd0d0-1723921355/14.jpg",
+      "file": "originals/asset_0017_5701a248f7.jpg",
+      "sha256": "5701a248f7ab1009bbd2cf23d7f6169a1836b59c8a7d3edf9c50119dd7c551da",
+      "size_bytes": 682030,
+      "pixels": [
+        2048,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "14.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/487d21b538-1723921355/18.jpg",
+      "file": "originals/asset_0018_83d6a5a79d.jpg",
+      "sha256": "83d6a5a79db001572d923cf9e67968c788ab5b64c8e404b66b583d7134cade6b",
+      "size_bytes": 1035032,
+      "pixels": [
+        910,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "18.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/533a6107f9-1723921354/hybe_office_3_tmi_2.jpg",
+      "file": "originals/asset_0019_58a1be0c72.jpg",
+      "sha256": "58a1be0c729043df8378c5754c33b7ea056a442d3a8f3fd5f103649c5865704d",
+      "size_bytes": 1130206,
+      "pixels": [
+        1365,
+        2048
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "hybe_office_3_tmi_2.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/54034ee666-1723921355/20.jpg",
+      "file": "originals/asset_0020_70eb5353f0.jpg",
+      "sha256": "70eb5353f0bfc835194f157acd48da259baba21095c5528b48573809e53b0d1f",
+      "size_bytes": 724610,
+      "pixels": [
+        910,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "20.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/543b935d8e-1723921356/7.jpg",
+      "file": "originals/asset_0021_949b21fd09.jpg",
+      "sha256": "949b21fd0934eafffca40c62864db1c6478e2aae187aa7369fd7709f973ec4cf",
+      "size_bytes": 569552,
+      "pixels": [
+        2048,
+        1366
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "7.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/59b9fbd86c-1723921356/3.jpg",
+      "file": "originals/asset_0022_387475955f.jpg",
+      "sha256": "387475955f15229dd52081723e9a4ffae52599826fd2cb5c0f7cfda6ff59ef61",
+      "size_bytes": 774780,
+      "pixels": [
+        2048,
+        1366
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "3.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/6096d619af-1723921356/31.jpg",
+      "file": "originals/asset_0023_7ea56929f4.jpg",
+      "sha256": "7ea56929f4eed78ec92f1d4fb6a7030b06a5edea16e29751c12e76f4ccba5080",
+      "size_bytes": 964322,
+      "pixels": [
+        2048,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "31.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/63b9225bc2-1723921355/04_hybe_office-diagram_03.jpg",
+      "file": "originals/asset_0024_b27d44b4a2.jpg",
+      "sha256": "b27d44b4a264dad7e041d3284081522b484aa78600923f2cbf2824755a68d399",
+      "size_bytes": 1656877,
+      "pixels": [
+        2880,
+        2160
+      ],
+      "auto_category": "DRAWING_CANDIDATE",
+      "name": "04_hybe_office-diagram_03.jpg",
+      "kind": "AXONOMETRIC_CONCEPT_SKETCH"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/63cb1181ee-1723921355/04_hybe_office-diagram_01.jpg",
+      "file": "originals/asset_0025_4c5bb3b057.jpg",
+      "sha256": "4c5bb3b057f2d7e5ad99105ef339331d9245e77d4a646615ea5ef616d63246bd",
+      "size_bytes": 1755555,
+      "pixels": [
+        2880,
+        2160
+      ],
+      "auto_category": "DRAWING_CANDIDATE",
+      "name": "04_hybe_office-diagram_01.jpg",
+      "kind": "AXONOMETRIC_CONCEPT_SKETCH"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/67231560d5-1723921356/4.jpg",
+      "file": "originals/asset_0026_db3492a639.jpg",
+      "sha256": "db3492a63984faec62f9d775dbf03ae015d295a8bc15bef225933716f193800b",
+      "size_bytes": 689374,
+      "pixels": [
+        2048,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "4.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/6c971e8f94-1723921354/8.jpg",
+      "file": "originals/asset_0027_17b2e1c534.jpg",
+      "sha256": "17b2e1c5345052e4e7a48da3b54313e2cc779fa6798289609a37ea669711601d",
+      "size_bytes": 606392,
+      "pixels": [
+        2048,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "8.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/76d6816b89-1723921355/eh_hybe_2127.jpg",
+      "file": "originals/asset_0028_21ae0439ba.jpg",
+      "sha256": "21ae0439baef1c73a743ae4d42df3423a2a5e8077cfc861c679b24fd376d8653",
+      "size_bytes": 777869,
+      "pixels": [
+        910,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "eh_hybe_2127.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/79522d50cc-1723921355/11.jpg",
+      "file": "originals/asset_0029_0dae171d35.jpg",
+      "sha256": "0dae171d35ec0768cb1944ed5669cefafaf061b3807fa1f4a4550a96bba62f19",
+      "size_bytes": 796480,
+      "pixels": [
+        2048,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "11.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/82370b1cbd-1723921356/2.jpg",
+      "file": "originals/asset_0030_a81cb57827.jpg",
+      "sha256": "a81cb5782702baa0731175332b280f3fcb1a093d16962a812123866e40da05d9",
+      "size_bytes": 777556,
+      "pixels": [
+        2048,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "2.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/85d0190d12-1723921355/24.jpg",
+      "file": "originals/asset_0031_eb535f056b.jpg",
+      "sha256": "eb535f056b754abe1a44b7ba17b4c0546de83685885cec712731c8c64fc85b6c",
+      "size_bytes": 691982,
+      "pixels": [
+        2048,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "24.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/86fb29f027-1723921355/hybe-rohspace-8607.jpg",
+      "file": "originals/asset_0032_048eb74987.jpg",
+      "sha256": "048eb74987873801331c956210a1322fd259abd1817c200ede19e49bf477f2d6",
+      "size_bytes": 756868,
+      "pixels": [
+        2048,
+        1366
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "hybe-rohspace-8607.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/9352e42f1a-1723921356/5.jpg",
+      "file": "originals/asset_0033_143b01f952.jpg",
+      "sha256": "143b01f9529b8678359881bcc5a0fbca7d06d2ef70bd4deafba032775c5e16fb",
+      "size_bytes": 741838,
+      "pixels": [
+        2048,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "5.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/937227357b-1723921354/hybe_office_3_tmi_6.jpg",
+      "file": "originals/asset_0034_9fae46aff2.jpg",
+      "sha256": "9fae46aff29366c0d6a033e1cd9ef4fef0fa16fed36a68660705328e17888ddd",
+      "size_bytes": 933259,
+      "pixels": [
+        1365,
+        2048
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "hybe_office_3_tmi_6.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/9517525733-1723921355/21.jpg",
+      "file": "originals/asset_0035_2d07793fa4.jpg",
+      "sha256": "2d07793fa4877536737a90b1fe9070458967399656bc4dbfe8ad9bb45c54385f",
+      "size_bytes": 776378,
+      "pixels": [
+        910,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "21.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/abe036e910-1723921355/02_hybe_8-16f.jpg",
+      "file": "originals/asset_0036_467464a018.jpg",
+      "sha256": "467464a018d7090b465eccd268dcf2a17b6efa2a62debe65cbe96ae1695f27e6",
+      "size_bytes": 546848,
+      "pixels": [
+        2048,
+        1536
+      ],
+      "auto_category": "DRAWING_CANDIDATE",
+      "name": "02_hybe_8-16f.jpg",
+      "kind": "FLOOR_PLAN_8_16F"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/b64f345e44-1723921354/2107_hybe_00059.jpg",
+      "file": "originals/asset_0037_e9eaa79db2.jpg",
+      "sha256": "e9eaa79db215c68542b3555e62b07b7c6ce0179845197530047abd0480ca6d6a",
+      "size_bytes": 685364,
+      "pixels": [
+        2048,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "2107_hybe_00059.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/bd1ac35359-1723921356/1.jpg",
+      "file": "originals/asset_0038_d008818c06.jpg",
+      "sha256": "d008818c060d200ea7f7af55188aaba29bb3eb66d843d965cfe16a311f2dc152",
+      "size_bytes": 702281,
+      "pixels": [
+        2048,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "1.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/c30c617fe5-1723921355/12.jpg",
+      "file": "originals/asset_0039_f388cc9af7.jpg",
+      "sha256": "f388cc9af7e6708b782976dce0c570632ef1398b3946bbfe6191f6865e2613e9",
+      "size_bytes": 871534,
+      "pixels": [
+        2048,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "12.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/c4395f7def-1723921354/00_hybe_diagram_ceiling.jpg",
+      "file": "originals/asset_0040_6a84e8aeec.jpg",
+      "sha256": "6a84e8aeec794c1858c3da14e116381a42b2b9ad9fde7f9b9d9c707765030029",
+      "size_bytes": 576819,
+      "pixels": [
+        2048,
+        1366
+      ],
+      "auto_category": "DRAWING_CANDIDATE",
+      "name": "00_hybe_diagram_ceiling.jpg",
+      "kind": "CEILING_EXPLODED_DIAGRAM"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/d01f897a96-1723921354/hybe_office_3_tmi_1.jpg",
+      "file": "originals/asset_0041_df63453b98.jpg",
+      "sha256": "df63453b98f1b921aee97f76bfe5293bf71b06594bc4790746c1f07a0aa87937",
+      "size_bytes": 673194,
+      "pixels": [
+        1365,
+        2048
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "hybe_office_3_tmi_1.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/d45154ff0d-1723921355/9.jpg",
+      "file": "originals/asset_0042_be04837990.jpg",
+      "sha256": "be048379902ec035eabe234b1248c715568d70d37365568e0f37fb62ae1ecf2c",
+      "size_bytes": 714526,
+      "pixels": [
+        2048,
+        1366
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "9.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/d6d4888c35-1723921355/17.jpg",
+      "file": "originals/asset_0043_82ac7ce3c6.jpg",
+      "sha256": "82ac7ce3c6a242d9c0f40f00e61acbe7e05969dea0162a11fb1336f73a2b857d",
+      "size_bytes": 736949,
+      "pixels": [
+        2048,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "17.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/d925c1c530-1723921355/210716_hybe_fhhhcom-select_00010-2.jpg",
+      "file": "originals/asset_0044_5488b2903f.jpg",
+      "sha256": "5488b2903f1598d12d824131511c0fbcec64c7ca5b193bf29b44049b26813c32",
+      "size_bytes": 707364,
+      "pixels": [
+        2048,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "210716_hybe_fhhhcom-select_00010-2.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/ddd2ad28ec-1723921354/hybe_office_3_tmi_5.jpg",
+      "file": "originals/asset_0045_8fc0be3bb3.jpg",
+      "sha256": "8fc0be3bb396a5f73a473d4a3bf7c2b43e0a29ea1b3ebc595f71d0a7ffaab606",
+      "size_bytes": 955393,
+      "pixels": [
+        1365,
+        2048
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "hybe_office_3_tmi_5.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/e78b0f6eaf-1723921354/hybe_office_3_tmi_7.jpg",
+      "file": "originals/asset_0046_2b90d49ebb.jpg",
+      "sha256": "2b90d49ebbc25b31ab4d23d9cc98a7c94803d33d893d13ff6de72ffaff4dfa65",
+      "size_bytes": 980788,
+      "pixels": [
+        1365,
+        2048
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "hybe_office_3_tmi_7.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/ee0c7f5177-1723921355/04_hybe_office-diagram_04.jpg",
+      "file": "originals/asset_0047_e4d7179925.jpg",
+      "sha256": "e4d7179925164923ac88b3dfb6d46b881824e0bb573bedd4c066e970bb24aeea",
+      "size_bytes": 1654955,
+      "pixels": [
+        2880,
+        2160
+      ],
+      "auto_category": "DRAWING_CANDIDATE",
+      "name": "04_hybe_office-diagram_04.jpg",
+      "kind": "AXONOMETRIC_CONCEPT_SKETCH"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/f22ab1d81f-1723921355/hybe_office_3_tmi_3.jpg",
+      "file": "originals/asset_0048_39e960fae2.jpg",
+      "sha256": "39e960fae2159bec7eb6e4a9d05b7f8b0425b4703f6240c059292e96fbc77f24",
+      "size_bytes": 1323656,
+      "pixels": [
+        1365,
+        2048
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "hybe_office_3_tmi_3.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/project-list/hybe/office/f560bbf9ba-1723921355/22.jpg",
+      "file": "originals/asset_0049_2ab383dfce.jpg",
+      "sha256": "2ab383dfced45e3730e4424c74c28318bda391c8ffd29aeb6ace45d642251cc5",
+      "size_bytes": 614273,
+      "pixels": [
+        910,
+        1365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "22.jpg",
+      "kind": "PHOTO_OR_OTHER"
+    }
+  ],
+  "site_chrome": [
+    {
+      "url": "https://c-o-m.kr/assets/img/icon-search.svg",
+      "file": "originals/asset_0001_4f823d44a7.svg",
+      "sha256": "4f823d44a7d99ab452bae55ccd3f1f02416695a64c7dd32669c39e050cfb8024",
+      "size_bytes": 597,
+      "name": "icon-search.svg"
+    },
+    {
+      "url": "https://c-o-m.kr/assets/img/logo.png",
+      "file": "originals/asset_0002_6b962d649d.png",
+      "sha256": "6b962d649dbce3d1d1f5aeb42f1312f786f826c00a95d089bb134ce698122e28",
+      "size_bytes": 4020,
+      "pixels": [
+        744,
+        365
+      ],
+      "auto_category": "PHOTO_OR_COLOR_GRAPHIC_CANDIDATE",
+      "name": "logo.png"
+    },
+    {
+      "url": "https://c-o-m.kr/assets/img/next.png",
+      "file": "originals/asset_0003_db055fbcdc.png",
+      "sha256": "db055fbcdce8ddf6e60247160f907ddd38025b5cb2be4ed717b466900dbfb17a",
+      "size_bytes": 1318,
+      "pixels": [
+        18,
+        16
+      ],
+      "auto_category": "DIAGRAM_CANDIDATE",
+      "name": "next.png"
+    },
+    {
+      "url": "https://c-o-m.kr/assets/img/og.jpg",
+      "file": "originals/asset_0004_5277a0bcc6.jpg",
+      "sha256": "5277a0bcc6dee4aea8cb80138ab401c83bfcfca07adae39eeaa81bc7e2b9b8eb",
+      "size_bytes": 37055,
+      "pixels": [
+        1200,
+        627
+      ],
+      "auto_category": "DRAWING_CANDIDATE",
+      "name": "og.jpg"
+    },
+    {
+      "url": "https://c-o-m.kr/assets/img/prev.png",
+      "file": "originals/asset_0005_966c32ffc3.png",
+      "sha256": "966c32ffc35276c7ed323d217ff4190c8140cd454414ad5c5d622e379fd472f8",
+      "size_bytes": 1348,
+      "pixels": [
+        18,
+        16
+      ],
+      "auto_category": "DIAGRAM_CANDIDATE",
+      "name": "prev.png"
+    },
+    {
+      "url": "https://c-o-m.kr/media/pages/home/2e9678f418-1723922963/info.png",
+      "file": "originals/asset_0006_0b8d2f1ab7.png",
+      "sha256": "0b8d2f1ab7cf1d7e8736a688e26918fca4e69fd852dc6ed6a068b5a656f9a0e8",
+      "size_bytes": 113184,
+      "pixels": [
+        840,
+        563
+      ],
+      "auto_category": "DRAWING_CANDIDATE",
+      "name": "info.png"
+    }
+  ]
+}
