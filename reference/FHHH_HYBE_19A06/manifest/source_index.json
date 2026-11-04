@@ -1,0 +1,35 @@
+{
+  "primary": {
+    "url": "https://fhhhfriends.com/19a06",
+    "project": "HYBE 19A06",
+    "architects": "FHHH friends + studio COM",
+    "page_text_verified": true,
+    "images_downloaded": 0,
+    "original_images_count": "UNKNOWN"
+  },
+  "secondary": [
+    {
+      "url": "https://c-o-m.kr/hybe/lobby",
+      "kind": "1F lobby"
+    },
+    {
+      "url": "https://c-o-m.kr/hybe/office",
+      "kind": "8–16F plans"
+    },
+    {
+      "url": "https://c-o-m.kr/hybe/auditorium-cafe",
+      "kind": "19F plan and canteen diagram"
+    },
+    {
+      "url": "https://www.archdaily.com/1016294/hybe-headquarters-office-com-plus-fhhh-friends",
+      "kind": "Published project narrative and image gallery"
+    }
+  ],
+  "observed_image_urls": [
+    "https://c-o-m.kr/media/pages/project-list/hybe/office/6c2549aad8-1723921355/02_hybe_8-16f.jpg",
+    "https://c-o-m.kr/media/pages/project-list/hybe/auditorium-cafe/94e1af5a9d-1723921357/03_hybe_19f.jpg",
+    "https://c-o-m.kr/media/pages/project-list/hybe/office/1fd3cce7ca-1723921355/04_hybe_office-diagram_04.jpg",
+    "https://c-o-m.kr/media/pages/project-list/hybe/auditorium-cafe/6e494a38cf-1723921357/05_hybe_canteen-diagram.jpg"
+  ],
+  "status": "LINKS_VERIFIED_BYTES_NOT_DOWNLOADED"
+}
