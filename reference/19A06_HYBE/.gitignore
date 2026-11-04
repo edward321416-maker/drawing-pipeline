@@ -1,0 +1,8 @@
+# Third-party copyrighted architectural reference images: local private study only
+originals/
+captures/
+contact_sheets/
+manifests/rendered_page.html
+manifests/capture_manifest.json
+manifests/analysis_manifest.json
+*.log
