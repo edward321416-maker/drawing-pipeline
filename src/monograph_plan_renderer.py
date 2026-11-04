@@ -29,6 +29,7 @@ from shapely.ops import polylabel, unary_union
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import pipeline_common as pc  # noqa: E402
+import line_hygiene as LH  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 def _model_json(name):
@@ -350,11 +351,24 @@ class Canvas:
     def pts(self, coords):
         return " ".join("%.3f,%.3f" % (self.X(x), self.Y(y)) for x, y in coords)
 
-    def path_poly(self, geom):
+    clean = False                                   # C-T13A: 호·베지어 경로 모드 (기본 꺼짐: 기존 출력 그대로)
+    SMOOTH_LAYERS = ("landscape", "plants")         # 장식선 층만 평활. 구조·가구·문 층은 호 적합만(편차 ≤ 6 mm 월드)
+    curve_log = None
+
+    def _ring_d(self, coords, layer, closed=True):
+        if self.curve_log is None:
+            self.curve_log = []
+        pts = [(self.X(x), self.Y(y)) for x, y in coords]
+        return LH.build_path(pts, closed, smooth=(layer in self.SMOOTH_LAYERS), log=self.curve_log, layer=layer or "")
+
+    def path_poly(self, geom, layer=None):
         d = []
         for p in pc.iter_polygons(geom):
             for ring in [p.exterior] + list(p.interiors):
-                d.append("M" + " L".join("%.3f,%.3f" % (self.X(x), self.Y(y)) for x, y in ring.coords) + " Z")
+                if self.clean:
+                    d.append(self._ring_d(ring.coords, layer, True))
+                else:
+                    d.append("M" + " L".join("%.3f,%.3f" % (self.X(x), self.Y(y)) for x, y in ring.coords) + " Z")
         return " ".join(d)
 
     def add(self, layer, s):
@@ -364,9 +378,15 @@ class Canvas:
         if geom.is_empty:
             return
         self.add(layer, '<path d="%s" fill="%s" fill-rule="evenodd" stroke="%s" stroke-width="%.4f" stroke-linejoin="round" %s/>' %
-                 (self.path_poly(geom), fill, color, self.lw(mm), extra))
+                 (self.path_poly(geom, layer), fill, color, self.lw(mm), extra))
 
     def stroke_line(self, layer, coords, mm, color, extra=""):
+        if self.clean and len(coords) >= 3:
+            c0, c1 = coords[0], coords[-1]
+            d = self._ring_d(coords, layer, abs(c0[0] - c1[0]) < 1e-9 and abs(c0[1] - c1[1]) < 1e-9)       # 시작=끝이면 닫힌 고리
+            self.add(layer, '<path d="%s" fill="none" stroke="%s" stroke-width="%.4f" stroke-linecap="round" stroke-linejoin="round" %s/>' %
+                     (d, color, self.lw(mm), extra))
+            return
         self.add(layer, '<polyline points="%s" fill="none" stroke="%s" stroke-width="%.4f" stroke-linecap="round" stroke-linejoin="round" %s/>' %
                  (self.pts(coords), color, self.lw(mm), extra))
 

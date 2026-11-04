@@ -1,0 +1,45 @@
+{
+ "gates": {
+  "A3_pdf_420x297_1page": true,
+  "scale_1to500_scale_bar_10m_is_20mm": true,
+  "png_at_least_300dpi": true,
+  "svg_has_no_raster_image_underlay": true,
+  "pdf_is_vector_cairo_no_embedded_raster_images": true,
+  "programs_18_present_and_areas_identical_to_V2B": true,
+  "furniture_inventory_identical_to_V2B": true,
+  "columns_34_source_23_drawn_same_as_V2B": true,
+  "structure_geometry_unchanged_within_12mm": true,
+  "furniture_ghost_duplicates_zero": true,
+  "dashed_line_overlap_reduced": true,
+  "zigzag_kinks_zero": true,
+  "proposed_entries_not_promoted": true,
+  "door_swing_hits_zero": true,
+  "furniture_touching_structure_zero": true
+ },
+ "details": {
+  "pdf_mm": [
+   420.0,
+   297.0
+  ],
+  "pdf_producer": "cairo 1.18.4 (https://cairographics.org)",
+  "png_px": [
+   4961,
+   3508
+  ],
+  "png_dpi": 300.02,
+  "structure_geometry_over_tol": {},
+  "tests": "unittest discover tests: 40 OK (신규 9 포함); verify_pipeline 1F 19/19",
+  "not_verified_still_open": [
+   "시장·캡슐 출입문 위치·폭·형식 (점선 후보)",
+   "피난·장애인 접근 법규",
+   "화장실 B/C 슬라이딩 문 직렬화(C-T11B)",
+   "보행 최소 실폭"
+  ]
+ },
+ "inputs_sha256": {
+  "source_blend": "30da41d693a967f9628da843f5ec6b6be40f410eeaa209c643d1cb8fdb3f1f1e",
+  "slice_1F": "2795a1215a0a3f47c0d2146b06cb643b253c90842d87c5d3e023f8d2535bd006"
+ },
+ "git_head": "891e5bdee447ebf6f5ad5658796ef2804242efb8",
+ "technical_gate": "PASS"
+}
