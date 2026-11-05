@@ -215,7 +215,7 @@ def check_architectural(rep, floor, out):
         chk = pc.load_json(os.path.join(fs, base + "_check.json"))
         scale = int(re.search(r"1to(\d+)", base).group(1))
         k = scale / 1000.0
-        rep.add(floor, "e1) %s A3·축척" % base[-9:], 'width="420mm" height="297mm"' in svg and chk["canvas_matches_A3"] and scale == (500 if floor == "1F" else 100),
+        rep.add(floor, "e1) %s A3·축척" % base[-9:], 'width="420mm" height="297mm"' in svg and chk["canvas_matches_A3"] and (scale == 500 if floor == "1F" else scale in (100, 200)),      # 상층: 1:200 전체도 + 1:100 타일(사용자 지시, AGENTS §6-11)
                 "1:%d" % scale)
         furn = _group(svg, "furn")
         fills = set(re.findall(r'fill="(#[0-9a-fA-F]{3,6}|none)"', furn))

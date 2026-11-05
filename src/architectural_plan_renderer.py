@@ -26,13 +26,14 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import pipeline_common as pc  # noqa: E402
 import monograph_plan_renderer as mg  # noqa: E402
 import furniture_library as FL
+import upper_layouts as UL
 import program_planner as PP
 import line_hygiene as LH  # noqa: E402
 
 A3 = (420.0, 297.0)
 SCALE_BARS = {500: [0, 5, 10, 25, 50], 200: [0, 2, 5, 10, 20], 100: [0, 1, 2, 5, 10]}
 LAYERS = ("bgdots", "context", "ground", "landscape", "plants", "furn", "envelope", "walls", "cols", "grid", "symbols", "doors", "num", "legend")
-LEGEND = ["시장 홀", "필로티 광장", "하역·서비스", "선큰 마당", "서측 캡슐", "나선 램프 튜브", "빛 튜브", "화장실", "코어 / 피난계단·승강기"]
+LEGEND = ["시장 홀", "F&B 구역", "문화·엔터 구역", "정원·테라스", "필로티 광장", "하역·서비스", "선큰 마당", "서측 캡슐", "동측 캡슐", "나선 램프 튜브", "빛 튜브", "화장실", "코어 / 피난계단·승강기"]
 TXT = "#333333"
 
 # ── 6단계 선 위계 (A3 종이 mm, 색). 모든 선은 아래 표를 거쳐 굵기·색이 정해진다 ──
@@ -150,6 +151,12 @@ def legend_group(name, kind):
         return "화장실"
     if "시장" in n or "판매" in n or "상업" in n:
         return "시장 홀"
+    if "F&B" in n:
+        return "F&B 구역"
+    if "문화" in n or "엔터" in n:
+        return "문화·엔터 구역"
+    if "garden" in n.lower() or "정원" in n:
+        return "정원·테라스"
     if "필로티" in n:
         return "필로티 광장"
     if "하역" in n or "서비스" in n:
@@ -157,7 +164,7 @@ def legend_group(name, kind):
     if "선큰" in n or "개구부" in n:
         return "선큰 마당"
     if "캡슐" in n:
-        return "서측 캡슐"
+        return "동측 캡슐" if re.search(r"캡슐\s*동|동측", n) else "서측 캡슐"        # GLB 이름 '캡슐 동/서'. 1층 마스터는 '서측 캡슐'이라 1층 출력은 그대로
     if "램프" in n or re.search(r"\bT1\b|T1$", n):
         return "나선 램프 튜브"
     if "빛" in n or re.search(r"\bT2\b|T2$", n):
@@ -983,7 +990,7 @@ def program_check(plan, qa_, chips, furn_all, drawn_cols, program):
                                                 "note": "바닥 채움은 래스터 잔여 띠를 뺀 벡터 복도다. 구획 면적·범례 수치는 zone 폴리곤(V2-B와 동일)"}}
 
 
-def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, tag="", side="L", top=False, program=None, final_dir=None, name=None, clean=False):
+def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, tag="", side="L", top=False, program=None, final_dir=None, name=None, clean=False, notes=(), v2layout=False, bare=False):
     raw = os.path.join(out, "raw_slices")
     sl = pc.load_slice(raw, floor)
     lay = pc.load_json(os.path.join(out, "vector", "floor_%s_layout.json" % floor))
@@ -1008,12 +1015,14 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, 
     marks, subway = geom(ctx.get("road_marking", [])), geom(ctx.get("subway_exit", []))
     bldgs = [pc.polygons_from_segments(i["segments"]) for i in ctx.get("context_building", [])]
     ent_pts = [(e.centroid.x, e.centroid.y) for e in [pc.polygons_from_segments(i["segments"]) for i in ctx.get("entrance", [])] if not e.is_empty]   # 위치 정보로만 쓴다(상자는 그리지 않는다)
-    has_site = not site.is_empty
+    level_s = floor != "1F"                                                           # 상층: 구조·프로그램 볼륨만 모델에 있다(벽·문·가구 없음) → Level S 도면
+    has_site = floor == "1F" and not site.is_empty                                  # 대지·도로·이웃 건물은 1층 평면에만(AGENTS §6-10). 슬라이서가 모든 층 JSON에 대지 맥락을 싣는다
 
     footprint = U([pc.polygons_from_segments(p["segments"]) for p in sl["projection"]]) if sl["projection"] else box(bx0, by0, bx1, by1)
     cols = [g for _, g in cuts.get("column", [])]
     walls_all = [(it, g) for kd in ("partition_wall", "core_wall", "exterior_wall") for it, g in cuts.get(kd, [])]
     tubes = [(it, g) for it, g in cuts.get("tube_wall", [])] + [(it, g) for it, g in cuts.get("shaft", [])]
+    model_only_union = U([g for kd_ in ("stair", "facade") for _, g in cuts.get(kd_, []) if not g.is_empty]) if level_s else Polygon()   # 상층 전용: 모델에 있으나 전용 기호가 없는 요소(에스컬레이터·입면 부재). 승인된 1층 출력은 바꾸지 않는다
     zones = []
     for z in sl["zones"]:
         g = pc.polygons_from_segments(z["segments"])
@@ -1150,10 +1159,14 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, 
     door_zone = U([d["swing"].buffer(1.8) for d in doors] + [Point(e).buffer(2.4) for e in ent_pts] + [p.buffer(4.0) for p in elev]
                   + [curtain_swings.buffer(1.8)] + [Point(d_["center"]).buffer(2.4) for d_ in door_defs])
     obst = U([U([c.buffer(1.5) for c in drawn_cols]), shell_tubes.buffer(1.5), wall_union.buffer(1.0), rooms_union.buffer(1.5),
-              (sunken_zone.buffer(1.5) if sunken_zone is not None else Polygon()), door_zone])
+              (sunken_zone.buffer(1.5) if sunken_zone is not None else Polygon()), door_zone] + ([model_only_union.buffer(0.6)] if level_s else []))      # 1층은 합집합 입력을 바꾸지 않는다(난수 배치 보존)
 
     furn_items, sym_items = [], []                                                       # [(geometry, kind)] kind: body / line / foliage
     svc_bays, cap_plan, plan, plan_qa = [], [], None, None
+    core_union_v2 = U([g for z, g, kd in zones if kd in ("core", "restroom")] + [g for it, g in walls_all if it["kind"] == "core_wall"])
+    ctx_v2 = {"plaza": next((shell_of(g) for it, g in tubes if ("빛" in it["name_ko"] or re.search("T2", it["name_ko"]))), None),
+              "tubes": [{"c": shell_of(g).centroid, "r": rad_of(shell_of(g))} for it, g in tubes if "캡슐" not in it["name_ko"] and "샤프트" not in it["name_ko"] and ("T" in it["name_ko"] or "튜브" in it["name_ko"]) and rad_of(shell_of(g)) > 1.6]}
+    skipped_furn = []                                                                    # 상층에서 모델에 없는 배치를 지어내지 않아 가구를 만들지 않은 구역
     hall_net = None
     light_c = next((shell_of(g).centroid for it, g in tubes if "빛" in it["name_ko"] or re.search("T2", it["name_ko"])), None)
     for z, g, kd in zones:
@@ -1251,9 +1264,19 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, 
                 bx_, by_ = mg.at(c_, u_, v_, L_ * 0.27, bsgn * W_ * 0.22)
                 if g.buffer(-0.9).contains(Point(bx_, by_)):
                     furn_items += FL.bistro_cluster(bx_, by_, 3)
+        elif kd == "program" and v2layout and level_s:                                  # V2: 프로그램 성격에 맞는 가구 전략(층마다 다름)
+            hard_ob = U([c_.buffer(0.2) for c_ in cols] + [shell_tubes.buffer(0.5), core_union_v2.buffer(0.5), wall_union.buffer(0.3), model_only_union.buffer(0.4)])
+            soft_ob = U([c_.buffer(0.9) for c_ in cols] + [shell_tubes.buffer(1.2), core_union_v2.buffer(1.2), wall_union.buffer(0.6), model_only_union.buffer(0.8)])       # 가구용 동선 여유(1층용 obst보다 가볍다)
+            items_v2 = UL.layout(z["name_ko"], region, soft_ob, hard_ob, rng, floor, ctx_v2)
+            furn_items += items_v2
+            if not items_v2:
+                skipped_furn.append(z["name_ko"])
         elif kd == "program":
             for key, gen in KEYWORDS:
                 if key in z["name_ko"]:
+                    if level_s and key in ("문화", "엔터"):                              # gen_rows는 0.45 m 좌석을 구역 가득 깐다(13F 2081개). 모델에 없는 극장식 배치라 상층에서는 만들지 않는다
+                        skipped_furn.append(z["name_ko"])
+                        break
                     furn_items += gen(region, rng, obst)
                     break
 
@@ -1358,6 +1381,14 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, 
                        + [d["swing"].buffer(0.25) for d in doors if g.buffer(1.5).contains(Point(d["M"]))])
         core_numbers_extra[id(g)] = (None, avoid_core)
 
+    # ── 모델에 있으나 전용 기호가 없는 절단 요소(에스컬레이터·입면 부재): 해석 없이 모델 윤곽만 3단계 선으로 ──
+    model_only_drawn = {}
+    for kd_ in (("stair", "facade") if level_s else ()):
+        for it_, g_ in cuts.get(kd_, []):
+            if not g_.is_empty:
+                cv.stroke_poly("symbols", g_, 0.12, "#444")
+                model_only_drawn[kd_] = model_only_drawn.get(kd_, 0) + 1
+
     # ── 튜브·승강기·샤프트 기호 ──
     for it, g in tubes:
         sym = tube_symbol(it["name_ko"], g, hall_pt, rng)
@@ -1393,12 +1424,17 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, 
             cap_items = list(cap_plan)
         else:
             cap_items = FL.capsule_gallery(capsule, (ent.x, ent.y), rng)                      # 전시 플린스 3 + 양면 갤러리 벤치 + 곡면 접수 데스크 (흰색 마스크)
+            if not model_only_union.is_empty:                                                  # 가구는 모델 요소(에스컬레이터)를 피한다: 겹치는 가구와 그 몸체 안의 세부선을 뺀다
+                keepout = model_only_union.buffer(0.3)
+                gone = U([g_ for g_, k_ in cap_items if k_ == "body" and g_.intersects(keepout)])
+                drop = keepout if gone.is_empty else U([keepout, gone.buffer(0.05)])
+                cap_items = [(g_, k_) for g_, k_ in cap_items if not g_.intersects(drop)]
         draw_furniture(cv, cap_items)
         cap_bodies = [g_ for g_, k_ in cap_items if k_ == "body"]
         furn_all += cap_bodies
-        cap_numbers = (capsule, U([f_.buffer(0.35) for f_ in cap_bodies]))
+        cap_numbers = (capsule, U([f_.buffer(0.35) for f_ in cap_bodies] + ([model_only_union.buffer(0.45)] if level_s else [])))      # 번호가 모델 윤곽(에스컬레이터)에 닿지 않게(상층만)
         # 캡슐 벽 (입구 이중문 개구)
-        capsule_gap = ent.buffer(1.0)
+        capsule_gap = ent.buffer(0.0) if level_s else ent.buffer(1.0)              # 상층: 모델에 캡슐 문이 없으므로 개구·이중문을 만들지 않는다(벽은 닫힌 채)
         ring_geo = capsule.boundary.difference(capsule_gap)
         for ln in lines_of(ring_geo):
             cv.stroke_line("walls", list(ln.coords), 0.40, "#000")
@@ -1408,7 +1444,7 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, 
         t_ = (p2.x - ent.x, p2.y - ent.y)
         tl = math.hypot(*t_) or 1
         t_ = (t_[0] / tl, t_[1] / tl)
-        for sgn in (-1, 1):
+        for sgn in (() if level_s else (-1, 1)):
             hx, hy = ent.x + t_[0] * 0.9 * sgn, ent.y + t_[1] * 0.9 * sgn
             nrm = (-t_[1], t_[0])
             if capsule.contains(Point(hx + nrm[0] * 0.5, hy + nrm[1] * 0.5)) is False:
@@ -1486,6 +1522,11 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, 
     # ── 기둥·격자 ──
     for g in drawn_cols:
         cv.stroke_poly("cols", g, 0.1, "#000", fill="#000")
+    if level_s:                                                                                  # 모델에 있는 기둥을 도면에서 지우지 않는다(1층 승인 규칙의 삭제는 1층에만)
+        drawn_ids = {id(c_) for c_ in drawn_cols}
+        for g in cols:
+            if id(g) not in drawn_ids:
+                cv.stroke_poly("cols", g, 0.10, "#666", extra='stroke-dasharray="%.3f,%.3f"' % (1.0 * k, 0.8 * k))
     xs, ys = sorted({round(g.centroid.x, 2) for g in cols}), sorted({round(g.centroid.y, 2) for g in cols})      # 격자 위치는 모델의 전체 기둥에서
     dsh = 'stroke-dasharray="%.3f,%.3f"' % (2 * k, 2 * k)
     grid_clip = core_union.buffer(0.3)                                                                          # 격자선은 코어·튜브 벽에서 0.3 m 떨어져 끝난다
@@ -1503,17 +1544,17 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, 
             prog_geoms.setdefault(lg, []).append((kd, g, z["name_ko"]))
     for it, g in tubes:
         lg = legend_group(it["name_ko"], "tube")
-        if lg and lg in ("서측 캡슐", "나선 램프 튜브", "빛 튜브"):
+        if lg and lg in ("서측 캡슐", "동측 캡슐", "나선 램프 튜브", "빛 튜브"):
             prog_geoms.setdefault(lg, []).append(("tube", g, it["name_ko"]))
     for it, g in walls_all:
         if it["kind"] == "core_wall" and it.get("source") == "name":
             prog_geoms.setdefault("코어 / 피난계단·승강기", []).append(("core_box", g, it["name_ko"]))
-    PROG4 = {"시장 홀", "필로티 광장", "하역·서비스", "서측 캡슐"}
+    PROG4 = {"시장 홀", "필로티 광장", "하역·서비스", "서측 캡슐", "동측 캡슐"}
     legend = [n for n in LEGEND if n in prog_geoms and not (program and n in PROG4)]
     num_of = {n: i + 1 for i, n in enumerate(legend)}
     furn_union = U(furn_all)
     sym_union = U([h for it, g in tubes for key in ("light", "car", "x") for h in tube_symbol(it["name_ko"], g, hall_pt, rng)[key]])
-    avoid_base = U([wall_union.buffer(0.35), furn_union.buffer(0.3), sym_union.buffer(0.2), U(drawn_cols).buffer(0.3), shell_tubes.buffer(0.3), swing_union.buffer(0.2)])
+    avoid_base = U([wall_union.buffer(0.35), furn_union.buffer(0.3), sym_union.buffer(0.2), U(drawn_cols).buffer(0.3), shell_tubes.buffer(0.3), swing_union.buffer(0.2)] + ([model_only_union.buffer(0.45)] if level_s else []))
     nums = []
     for n in legend:
         for kd, g, nm in prog_geoms[n]:
@@ -1552,47 +1593,66 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, 
 
     # ── 범례 / 북쪽 / 그래픽 스케일 ──
     chips = []
-    if program is None:
-        row_h = 5.0
-        total = 11 + len(legend) * row_h + 8 + 22 + 16
-        lx, ly = (8.0 if side == "L" else A3[0] - 8.0 - 56.0), A3[1] - 6.0 - total          # 타일: 건물 바깥쪽 여백(좌/우)에 둔다
-        cv.add("legend", '<rect x="%.3f" y="%.3f" width="%.3f" height="%.3f" fill="#ffffff" fill-opacity="0.94" stroke="#bbb" stroke-width="%.4f"/>' % ((lx - 3) * k, (ly - 8) * k, 62 * k, (total + 10) * k, 0.1 * k))
-        title = ("%s평면도 · 배치 1:%d" % (floor.replace("F", "층 "), scale)) if floor == "1F" else ("%s 평면도 1:%d" % (floor.replace("F", "층"), scale))
-        if tag:
-            title += "  [%s/4]" % tag[-1]                                                           # A3 4장 타일 중 몇 번째
-        cv.text("legend", lx, ly, title, 8, "bold", "#111")
-        y = ly + 9
-        for n in legend:
-            cv.text("legend", lx, y, str(num_of[n]), 6.5, "normal", "#222")
-            cv.text("legend", lx + 7, y, n, 6.5, "normal", "#222")
-            y += row_h
-        ncx, ncy, nr = lx + 8, y + 10, 6.0
-        cv.add("legend", '<circle cx="%.3f" cy="%.3f" r="%.3f" fill="none" stroke="#555" stroke-width="%.4f"/>' % (ncx * k, ncy * k, nr * k, 0.2 * k))
-        na = math.radians(bnd["frame"].get("north_deg", bnd["frame"].get("theta_deg", 0.0)))
-        cv.add("legend", '<line x1="%.3f" y1="%.3f" x2="%.3f" y2="%.3f" stroke="#555" stroke-width="%.4f"/>' % (ncx * k, ncy * k, (ncx + math.sin(na) * (nr + 3)) * k, (ncy - math.cos(na) * (nr + 3)) * k, 0.25 * k))
-        cv.text("legend", lx, ncy + 13, "※ 가구·수목·조경은 설명용 표현이며 설계 데이터가 아니다", 4.2, "normal", "#999")
-    else:
-        chips = draw_zone_chips(cv, k, plan, U(furn_all + [g_ for g_, k_ in cap_plan if k_ == 'body']), U(drawn_cols), wall_union, shell_tubes)
-        program_legend(cv, plan, plan_qa, legend, num_of, floor, scale, program, bnd)
-    bar = SCALE_BARS.get(scale, [0, 2, 5, 10, 20])
-    per_m = 1000.0 / scale
-    sx0, sy0 = (76.0 if side == "L" else 40.0), (11.0 if top else A3[1] - 8.5)         # 윗 타일은 위쪽 여백, 아래 타일은 아래쪽 여백
-    cv.add("legend", '<rect x="%.3f" y="%.3f" width="%.3f" height="%.3f" fill="#ffffff" fill-opacity="%s" stroke="#bbb" stroke-width="%.4f"/>' % ((sx0 - 4) * k, (sy0 - 6) * k, (bar[-1] * per_m + 22) * k, 12.5 * k, "1.0" if cv.clean else "0.94", 0.1 * k))
-    for i in range(len(bar) - 1):
-        cv.add("legend", '<rect x="%.3f" y="%.3f" width="%.3f" height="%.3f" fill="%s" stroke="#111" stroke-width="%.4f"/>' % ((sx0 + bar[i] * per_m) * k, sy0 * k, (bar[i + 1] - bar[i]) * per_m * k, 1.6 * k, "#111" if i % 2 == 0 else "#fff", 0.15 * k))
-    for m in bar:
-        cv.text("legend", sx0 + m * per_m, sy0 - 1.2, str(m) + (" m" if m == bar[-1] else ""), 5.5, "normal", "#333", "middle")
-    cv.text("legend", sx0, sy0 + 5.2, "1:%d  A3 420×297 mm" % scale, 4.5, "normal", "#555")
+    if not bare:
+        if program is None:
+            row_h = 5.0
+            total = 11 + len(legend) * row_h + 8 + 22 + 16 + 4.0 * len(notes)
+            lx, ly = (8.0 if side == "L" else A3[0] - 8.0 - 56.0), A3[1] - 6.0 - total          # 타일: 건물 바깥쪽 여백(좌/우)에 둔다
+            cv.add("legend", '<rect x="%.3f" y="%.3f" width="%.3f" height="%.3f" fill="#ffffff" fill-opacity="0.94" stroke="#bbb" stroke-width="%.4f"/>' % ((lx - 3) * k, (ly - 8) * k, 62 * k, (total + 10) * k, 0.1 * k))
+            title = ("%s평면도 · 배치 1:%d" % (floor.replace("F", "층 "), scale)) if floor == "1F" else ("%s 평면도 1:%d" % (floor.replace("F", "층"), scale))
+            if tag:
+                title += "  [%s/4]" % tag[-1]                                                           # A3 4장 타일 중 몇 번째
+            cv.text("legend", lx, ly, title, 8, "bold", "#111")
+            y = ly + 9
+            for n in legend:
+                cv.text("legend", lx, y, str(num_of[n]), 6.5, "normal", "#222")
+                cv.text("legend", lx + 7, y, n, 6.5, "normal", "#222")
+                y += row_h
+            ncx, ncy, nr = lx + 8, y + 10, 6.0
+            cv.add("legend", '<circle cx="%.3f" cy="%.3f" r="%.3f" fill="none" stroke="#555" stroke-width="%.4f"/>' % (ncx * k, ncy * k, nr * k, 0.2 * k))
+            na = math.radians(bnd["frame"].get("north_deg", bnd["frame"].get("theta_deg", 0.0)))
+            cv.add("legend", '<line x1="%.3f" y1="%.3f" x2="%.3f" y2="%.3f" stroke="#555" stroke-width="%.4f"/>' % (ncx * k, ncy * k, (ncx + math.sin(na) * (nr + 3)) * k, (ncy - math.cos(na) * (nr + 3)) * k, 0.25 * k))
+            cv.text("legend", lx, ncy + 13, "※ 가구·수목·조경은 설명용 표현이며 설계 데이터가 아니다", 4.2, "normal", "#999")
+            if level_s:
+                cv.text("legend", lx, ncy + 18, "SCHEMATIC — 상층 구획벽·문 미검증(모델에 없음)", 4.2, "bold", "#555")
+                cv.text("legend", lx, ncy + 22, "외피 = 모델 입면 부재 윤곽 · 가구 = PROPOSED_ONLY", 4.2, "normal", "#777")
+                cv.text("legend", lx, ncy + 26, "점선 원 = 모델 기둥(코어 인접, 1층 규칙상 생략 대상)", 4.2, "normal", "#777")
+                if skipped_furn:
+                    cv.text("legend", lx, ncy + 30, "%s: 가구 배치 미정(좌석 배열을 만들지 않음)" % "·".join(dict.fromkeys(skipped_furn)), 4.2, "normal", "#777")
+            for i_, line_ in enumerate(notes):                                                      # 도면집 시트 표기(시트 번호·적용 층·다른 층과의 차이). 감사 증거에서 생성된 문구를 그대로 쓴다
+                cv.text("legend", lx, ncy + 34 + 4.0 * i_, line_, 4.2, "bold" if i_ == 0 else "normal", "#333")
+        else:
+            chips = draw_zone_chips(cv, k, plan, U(furn_all + [g_ for g_, k_ in cap_plan if k_ == 'body']), U(drawn_cols), wall_union, shell_tubes)
+            program_legend(cv, plan, plan_qa, legend, num_of, floor, scale, program, bnd)
+        bar = SCALE_BARS.get(scale, [0, 2, 5, 10, 20])
+        per_m = 1000.0 / scale
+        sx0, sy0 = (76.0 if side == "L" else 40.0), (11.0 if top else A3[1] - 8.5)         # 윗 타일은 위쪽 여백, 아래 타일은 아래쪽 여백
+        bar_pad = 22.0
+        if scale == 200 and not tag:                                                          # 1:200 단일 시트: 건물이 종이 높이의 91 %라 아래 여백의 막대가 코어·외피선을 가린다 → 좌상단 여백, 10 m 막대
+            bar, sx0, sy0, bar_pad = [0, 2, 5, 10], 10.0, 11.0, 8.0
+        cv.add("legend", '<rect x="%.3f" y="%.3f" width="%.3f" height="%.3f" fill="#ffffff" fill-opacity="%s" stroke="#bbb" stroke-width="%.4f"/>' % ((sx0 - 4) * k, (sy0 - 6) * k, (bar[-1] * per_m + bar_pad) * k, 12.5 * k, "1.0" if cv.clean else "0.94", 0.1 * k))
+        for i in range(len(bar) - 1):
+            cv.add("legend", '<rect x="%.3f" y="%.3f" width="%.3f" height="%.3f" fill="%s" stroke="#111" stroke-width="%.4f"/>' % ((sx0 + bar[i] * per_m) * k, sy0 * k, (bar[i + 1] - bar[i]) * per_m * k, 1.6 * k, "#111" if i % 2 == 0 else "#fff", 0.15 * k))
+        for m in bar:
+            cv.text("legend", sx0 + m * per_m, sy0 - 1.2, str(m) + (" m" if m == bar[-1] else ""), 5.5, "normal", "#333", "middle")
+        cv.text("legend", sx0, sy0 + 5.2, "1:%d  A3 420×297 mm" % scale, 4.5, "normal", "#555")
+
 
     # ── 저장 ──
     W_, H_ = cv.w, cv.h
     svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="%gmm" height="%gmm" viewBox="0 0 %.3f %.3f">' % (A3[0], A3[1], W_, H_), '<rect width="%.3f" height="%.3f" fill="#ffffff"/>' % (W_, H_)]
+    if level_s:
+        svg.insert(1, '<metadata>LEVEL_S SCHEMATIC floor=%s scale=1:%d walls_doors=UNVERIFIED furniture=PROPOSED_ONLY</metadata>' % (floor, scale))
     for layer in LAYERS:
-        svg.append('<g id="%s">%s</g>' % (layer, "".join(cv.parts[layer])))
+        svg.append('<g id="%s"%s>%s</g>' % (layer, ' data-status="PROPOSED_ONLY"' if (level_s and layer == "furn") else "", "".join(cv.parts[layer])))
     svg.append("</svg>")
     outd = os.path.join(out, "final_sheets")
     os.makedirs(outd, exist_ok=True)
     base = os.path.join(outd, "plan_%s_A3_1to%d%s" % (floor, scale, tag))
+    if final_dir and not name:                                                            # 타일 모드: 기존 시트를 덮어쓰지 않고 지정 폴더에 쓴다
+        outd = final_dir
+        os.makedirs(outd, exist_ok=True)
+        base = os.path.join(outd, "plan_%s_A3_1to%d%s_cleanline" % (floor, scale, tag))
     if name:
         outd = final_dir or outd
         os.makedirs(outd, exist_ok=True)
@@ -1642,6 +1702,11 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, 
              "furniture_items": len(furn_all), "furniture_touching_column": len(fcol), "furniture_touching_tube": len(ftub), "numbers_colliding_with_furniture": collide,
              "plan_text_all_numeric": all(t.strip().isdigit() for t in plan_texts), "symbol_texts": sym_texts,
              "shaft_X_inside_circle": all(sh_in) if sh_in else None, "curtain_wall_segments": cl_count, "curtain_doors": len(door_defs), "site": site_stats,
+             "window_world": [round(v, 4) for v in cv.b], "tag": tag, "model_only_outlines_drawn": model_only_drawn,
+             "capsule_entrance_generated": (not level_s) and capsule is not None, "furniture_not_generated_for": list(dict.fromkeys(skipped_furn)),
+             "furniture_overlapping_model_outlines": sum(1 for it_ in furn_all if (not model_only_union.is_empty) and it_.intersects(model_only_union.buffer(0.05))),
+             "level": "S_SCHEMATIC" if level_s else "1F_APPROVED_PROGRAM", "walls_doors_verified": False if level_s else None,
+             "furniture_status": "PROPOSED_ONLY" if level_s else None, "culled_columns_drawn_dashed": level_s,
              "columns_in_model": len(cols), "columns_drawn": len(drawn_cols), "columns_culled": culled_cols,
              "min_drawn_column_edge_to_core_or_tube_m": None if min_col_core is None else round(min_col_core, 2),
              "min_drawn_column_center_to_core_or_tube_m": None if min_col_core_center is None else round(min_col_core_center, 2),
@@ -1717,6 +1782,9 @@ def main():
     ap.add_argument("--program", choices=["A", "B"], default=None, help="C-T13 V2 프로그램 컨셉 후보 (1층 1:500)")
     ap.add_argument("--final-dir", default=None, help="V2 산출물 폴더")
     ap.add_argument("--name", default=None, help="V2 산출물 파일 이름(확장자 제외)")
+    ap.add_argument("--v2layout", action="store_true", help="상층 프로그램별 가구 전략(upper_layouts)")
+    ap.add_argument("--bare", action="store_true", help="범례·축척 막대·북쪽 표시를 생략(도면집 시트가 자체 패널을 둔다)")
+    ap.add_argument("--note", action="append", default=[], help="범례 아래에 쓸 줄(반복 지정). 도면집 시트 번호·적용 층·층간 차이")
     ap.add_argument("--cleanline", action="store_true", help="C-T13A 선 정리: 호·베지어 경로, 조경·구획 경계 정리, 시각 순위 조정")
     a = ap.parse_args()
     scale = a.scale or (500 if a.floor == "1F" else 100)                             # 1층 1:500, 상층 1:100
@@ -1736,11 +1804,11 @@ def main():
             for ci_, xc in enumerate(xs_):
                 n_ += 1
                 render(out_, a.floor, scale, a.png_width, a.seed, a.crops and n_ == 1, center=(xc, yc), tag="_t%d" % n_,
-                       side="L" if ci_ == 0 else "R", top=(ri_ == 0))
+                       side="L" if ci_ == 0 else "R", top=(ri_ == 0), final_dir=a.final_dir, clean=a.cleanline, notes=tuple(a.note), v2layout=a.v2layout, bare=a.bare)
     else:
         if scale == 100:
             print("1:100 단일 시트")
-        render(out_, a.floor, scale, a.png_width, a.seed, a.crops, program=a.program, final_dir=a.final_dir, name=a.name, clean=a.cleanline)
+        render(out_, a.floor, scale, a.png_width, a.seed, a.crops, program=a.program, final_dir=a.final_dir, name=a.name, clean=a.cleanline, notes=tuple(a.note), v2layout=a.v2layout, bare=a.bare)
 
 
 if __name__ == "__main__":
