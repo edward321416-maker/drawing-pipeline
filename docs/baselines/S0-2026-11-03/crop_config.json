@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "sheet_mm": [
+    420,
+    297
+  ],
+  "source_type": "A3_1F_1to500_full_sheet_screenshot",
+  "crop_coordinate_system": "sheet_mm_top_left_origin_not_model_world_coordinates",
+  "crop_output_px": [
+    800,
+    800
+  ],
+  "views": [
+    {
+      "id": "01_market_center",
+      "label": "시장 중심 및 테이블 구성",
+      "rect_mm": [
+        176,
+        95,
+        259,
+        185
+      ],
+      "inspection": [
+        "program_legibility",
+        "furniture_typology",
+        "circulation",
+        "floor_grid"
+      ]
+    },
+    {
+      "id": "02_entry_curtainwall",
+      "label": "주출입구 및 커튼월",
+      "rect_mm": [
+        236,
+        89,
+        274,
+        151
+      ],
+      "inspection": [
+        "door_swing",
+        "curtainwall_pair",
+        "entry_wayfinding",
+        "line_overlap"
+      ]
+    },
+    {
+      "id": "03_core_restroom",
+      "label": "동남측 코어 및 화장실",
+      "rect_mm": [
+        236,
+        163,
+        274,
+        213
+      ],
+      "inspection": [
+        "stairs",
+        "restroom",
+        "door_clearance",
+        "text_collision"
+      ]
+    },
+    {
+      "id": "04_west_capsule",
+      "label": "서측 캡슐 및 전시 가구",
+      "rect_mm": [
+        167,
+        121,
+        209,
+        178
+      ],
+      "inspection": [
+        "capsule_door",
+        "furniture_grouping",
+        "masking",
+        "line_overlap"
+      ]
+    },
+    {
+      "id": "05_park_piloti",
+      "label": "서측 공원과 필로티의 관계",
+      "rect_mm": [
+        49,
+        96,
+        164,
+        222
+      ],
+      "inspection": [
+        "landscape_language",
+        "site_circulation",
+        "public_space",
+        "graphic_hierarchy"
+      ]
+    }
+  ]
+}

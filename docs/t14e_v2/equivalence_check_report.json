@@ -1,0 +1,99 @@
+{
+ "strict_pairs": [],
+ "relations": {
+  "3F~4F": "DIFFERENT",
+  "3F~5F": "DIFFERENT",
+  "4F~5F": "DIFFERENT",
+  "8F~9F": "CIRCULATION_ONLY",
+  "8F~10F": "DIFFERENT",
+  "9F~10F": "DIFFERENT",
+  "13F~14F": "CIRCULATION_ONLY"
+ },
+ "plan_groups": [
+  {
+   "sheet": "P-101",
+   "floors": [
+    "3F"
+   ],
+   "verdict": "단독 평면(다른 층과 합치지 않음)"
+  },
+  {
+   "sheet": "P-102",
+   "floors": [
+    "8F",
+    "9F"
+   ],
+   "pair": "8F~9F",
+   "relation": "CIRCULATION_ONLY",
+   "program_equal": true,
+   "slab_residual_outside_vertical_m2": 0.0013,
+   "delta_beyond_tolerance": {
+    "stair": {
+     "sym_diff_m2": 14.9574,
+     "hausdorff_m": 7.7942
+    },
+    "slab": {
+     "sym_diff_m2": 3.623,
+     "hausdorff_m": 0.2024
+    }
+   },
+   "verdict": "공통 평면 + 개구 차이 표기",
+   "claim": "동등함을 주장하지 않음"
+  },
+  {
+   "sheet": "P-103",
+   "floors": [
+    "10F"
+   ],
+   "verdict": "단독 평면(다른 층과 합치지 않음)"
+  },
+  {
+   "sheet": "P-104",
+   "floors": [
+    "13F",
+    "14F"
+   ],
+   "pair": "13F~14F",
+   "relation": "CIRCULATION_ONLY",
+   "program_equal": true,
+   "slab_residual_outside_vertical_m2": 0.0011,
+   "delta_beyond_tolerance": {
+    "shaft": {
+     "sym_diff_m2": 4.4,
+     "hausdorff_m": 14.7723
+    },
+    "stair": {
+     "sym_diff_m2": 14.964,
+     "hausdorff_m": 7.7951
+    },
+    "slab": {
+     "sym_diff_m2": 3.4602,
+     "hausdorff_m": 0.2024
+    }
+   },
+   "verdict": "공통 평면 + 개구 차이 표기",
+   "claim": "동등함을 주장하지 않음"
+  },
+  {
+   "sheet": "P-105",
+   "floors": [
+    "15F"
+   ],
+   "verdict": "단독 평면(다른 층과 합치지 않음)"
+  }
+ ],
+ "tolerance": {
+  "sym_diff_m2": 0.05,
+  "hausdorff_m": 0.05,
+  "vertical_circulation_buffer_m": 5.0,
+  "note": "요소 종류별(기둥·코어·튜브·샤프트·에스컬레이터·램프·입면 부재·슬래브·프로그램 구역) 합집합 비교. 프로그램은 구역 이름별 면적까지 같아야 같다."
+ },
+ "note": "공통 평면 = 면적·프로그램 동일 + 차이는 수직동선 개구(5 m 이내)뿐인 경우만. STRICT(완전 동일) 쌍은 없다.",
+ "refuted_pairs": [
+  "3F~4F",
+  "3F~5F",
+  "4F~5F",
+  "8F~10F",
+  "9F~10F"
+ ]
+}

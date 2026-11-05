@@ -1,0 +1,280 @@
+{
+ "pdf": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14\\output\\C_T14E_DRAWING_SET_CANDIDATE_V2\\drawing_set_candidate_v2.pdf",
+ "pdf_sha256": "9104E66B6C74504604EF970AC567157A5320B9EED500E3C375F0C26E00AFABAB",
+ "pages": 30,
+ "sheets": [
+  {
+   "page": 1,
+   "sheet": "A-000",
+   "title": "표지",
+   "scale": "—",
+   "grade": "DOCUMENT",
+   "folder": "appendix",
+   "source_sha256": "d5322c431f20dca4bbbdc419625548eff5bbdee0c501f915a16ca414fac0503d"
+  },
+  {
+   "page": 2,
+   "sheet": "A-001",
+   "title": "도면 목록·시트 상태표",
+   "scale": "—",
+   "grade": "DOCUMENT",
+   "folder": "appendix",
+   "source_sha256": "630252af7638090e80592e41d740b9228e6e957bb235bdc53ae17708c433722b"
+  },
+  {
+   "page": 3,
+   "sheet": "A-002",
+   "title": "범례·기호·축척·사실성 등급·상태 표기",
+   "scale": "—",
+   "grade": "DOCUMENT",
+   "folder": "appendix",
+   "source_sha256": "9a81e12a2331f72ac3d7a2db92eaac1da9e08f33ac55e46fba9a51fea251d809"
+  },
+  {
+   "page": 4,
+   "sheet": "A-003",
+   "title": "배치도 / 1층 계획 (사용자 제공 1F_CleanLine_FIXED, 수정 없음)",
+   "scale": "1:400",
+   "grade": "USER_SUPPLIED · 1층 프로그램 후보(승인 전)",
+   "folder": "plans",
+   "source_sha256": "db66f8c26d525c5b24664543da50447404cb5d829e70da6ec6e673fb5bfa1a81"
+  },
+  {
+   "page": 5,
+   "sheet": "P-101",
+   "title": "3F 평면 (치수·축선·범례, 가구 PROPOSED_ONLY)",
+   "scale": "1:250",
+   "grade": "MODEL_GEOMETRY · LEVEL S · PROPOSED_ONLY · NOT FINAL",
+   "folder": "plans",
+   "source_sha256": "5bb73f7bfcd941d3a1252171e5da09483006e82563fe151c67f5e6467d24e1bd"
+  },
+  {
+   "page": 6,
+   "sheet": "P-102",
+   "title": "8F·9F 평면 (치수·축선·범례, 가구 PROPOSED_ONLY)",
+   "scale": "1:250",
+   "grade": "MODEL_GEOMETRY · LEVEL S · PROPOSED_ONLY · NOT FINAL",
+   "folder": "plans",
+   "source_sha256": "a8f9812dae8c1e220f931251a752e13daa091139042fad7a07d5a5af70974800"
+  },
+  {
+   "page": 7,
+   "sheet": "P-103",
+   "title": "10F 평면 (치수·축선·범례, 가구 PROPOSED_ONLY)",
+   "scale": "1:250",
+   "grade": "MODEL_GEOMETRY · LEVEL S · PROPOSED_ONLY · NOT FINAL",
+   "folder": "plans",
+   "source_sha256": "ccfeafd9ae5cc272954391d663fe68ae48f1cb438d117453eea9cc854427d9eb"
+  },
+  {
+   "page": 8,
+   "sheet": "P-104",
+   "title": "13F·14F 평면 (치수·축선·범례, 가구 PROPOSED_ONLY)",
+   "scale": "1:250",
+   "grade": "MODEL_GEOMETRY · LEVEL S · PROPOSED_ONLY · NOT FINAL",
+   "folder": "plans",
+   "source_sha256": "54b83b14b0804cbcdc739d393ae0dc976e512a142a268ff493144888a09cd915"
+  },
+  {
+   "page": 9,
+   "sheet": "P-105",
+   "title": "15F 평면 (치수·축선·범례, 가구 PROPOSED_ONLY)",
+   "scale": "1:250",
+   "grade": "MODEL_GEOMETRY · LEVEL S · PROPOSED_ONLY · NOT FINAL",
+   "folder": "plans",
+   "source_sha256": "533a7c32042a781c9305a199b7567979ac1ea24802c9b50a06df80816aae38c3"
+  },
+  {
+   "page": 10,
+   "sheet": "E-201",
+   "title": "북측 입면도",
+   "scale": "1:400",
+   "grade": "MODEL_GEOMETRY",
+   "folder": "elevations",
+   "source_sha256": "024b1f766036f176d3f20c1738e55a4a0370ce0947fa5291b88ffa4739c9008c"
+  },
+  {
+   "page": 11,
+   "sheet": "E-202",
+   "title": "동측 입면도",
+   "scale": "1:400",
+   "grade": "MODEL_GEOMETRY",
+   "folder": "elevations",
+   "source_sha256": "3f0b43d3ddb700a58b467f0b52969817754d6b113097f00563cddfc84db8e90e"
+  },
+  {
+   "page": 12,
+   "sheet": "E-203",
+   "title": "남측 입면도",
+   "scale": "1:400",
+   "grade": "MODEL_GEOMETRY",
+   "folder": "elevations",
+   "source_sha256": "af1c8cd4bce3eeed6aff19ed7960524fcf053fa8c399047b36c0aecf67e67940"
+  },
+  {
+   "page": 13,
+   "sheet": "E-204",
+   "title": "서측 입면도",
+   "scale": "1:400",
+   "grade": "MODEL_GEOMETRY",
+   "folder": "elevations",
+   "source_sha256": "5e5bae6c958db66b6bf5d7f4152addf238845be41026a7d9a704f52a94847ef8"
+  },
+  {
+   "page": 14,
+   "sheet": "S-301",
+   "title": "단면 키플랜",
+   "scale": "1:400",
+   "grade": "MODEL_GEOMETRY",
+   "folder": "sections",
+   "source_sha256": "56f2b1e047f7ea44b903d299362b5b8d258bd0e86bd4ffefd5fce974773978ba"
+  },
+  {
+   "page": 15,
+   "sheet": "S-302",
+   "title": "단면도 A–A",
+   "scale": "1:400",
+   "grade": "MODEL_GEOMETRY · 실제 메시 절단",
+   "folder": "sections",
+   "source_sha256": "8fc747368d91cdfebcbbbd8922b6d4533e2eafb4cf1a3e3887e89f339864bf95"
+  },
+  {
+   "page": 16,
+   "sheet": "S-303",
+   "title": "단면도 B–B",
+   "scale": "1:400",
+   "grade": "MODEL_GEOMETRY · 실제 메시 절단",
+   "folder": "sections",
+   "source_sha256": "fae08de3725e6cb42a319fd71e85684b0c8e84cf7f51887934f89cc2c38329de"
+  },
+  {
+   "page": 17,
+   "sheet": "S-304",
+   "title": "단면도 C–C",
+   "scale": "1:400",
+   "grade": "MODEL_GEOMETRY · 실제 메시 절단",
+   "folder": "sections",
+   "source_sha256": "ba1aa789d5135296e14a1284adc932007d5f219f1e7bfbf1da86d74eaad6fb95"
+  },
+  {
+   "page": 18,
+   "sheet": "S-305",
+   "title": "단면도 D–D",
+   "scale": "1:400",
+   "grade": "MODEL_GEOMETRY · 실제 메시 절단",
+   "folder": "sections",
+   "source_sha256": "8704b6cbfd9a008e62ce645b26b4b75293d58ff7128fe7aa41d7a0be6b5d1962"
+  },
+  {
+   "page": 19,
+   "sheet": "D-401",
+   "title": "T1 나선 램프 확대",
+   "scale": "1:50",
+   "grade": "MODEL DETAIL",
+   "folder": "details",
+   "source_sha256": "1686f468b2c6bb11b1799f794716f5d8347deedf8fe9a9d6f0b83ccd8cad4492"
+  },
+  {
+   "page": 20,
+   "sheet": "D-402",
+   "title": "T2 빛 튜브와 층판 관통 확대",
+   "scale": "1:50",
+   "grade": "MODEL DETAIL",
+   "folder": "details",
+   "source_sha256": "2299dd5610b465e6499cb8beba4fc03bac435b1537ad502c0b8728c65e4880d8"
+  },
+  {
+   "page": 21,
+   "sheet": "D-403",
+   "title": "T3 파노라마 승강기 튜브 확대 (T4 동형)",
+   "scale": "1:50",
+   "grade": "MODEL DETAIL",
+   "folder": "details",
+   "source_sha256": "0435d18d9bd6e49a920c3d7fec957fc7adefc79bfb44593c784d0758c06a0e9c"
+  },
+  {
+   "page": 22,
+   "sheet": "D-404",
+   "title": "코어 D 진입·부속실 확대 (1층 마스터)",
+   "scale": "1:50",
+   "grade": "MODEL DETAIL (1F 마스터) · 상층 UNRESOLVED DETAIL",
+   "folder": "details",
+   "source_sha256": "baf6d6d023ea4a76465203beb6d584b435c42c7e71da2b3386668596482a1f76"
+  },
+  {
+   "page": 23,
+   "sheet": "D-405",
+   "title": "캡슐과 층판 접속 확대",
+   "scale": "1:50",
+   "grade": "MODEL DETAIL · 출입문 미승인",
+   "folder": "details",
+   "source_sha256": "08639ee127e10fd128e1c027897b165802f2386c1d7dc597c0aa0757155bb5cb"
+  },
+  {
+   "page": 24,
+   "sheet": "D-406",
+   "title": "전형층 외피·층판 가장자리와 입면 부재 모듈 (6F)",
+   "scale": "1:50",
+   "grade": "MODEL DETAIL · 접합 UNRESOLVED",
+   "folder": "details",
+   "source_sha256": "0d45c53f7c4f115df70ca14c5bfd8d9b729a629b5b74070d458f4276c93019ec"
+  },
+  {
+   "page": 25,
+   "sheet": "D-407",
+   "title": "에스컬레이터 개구 확대 (8F–9F)",
+   "scale": "1:100",
+   "grade": "MODEL DETAIL · 난간·안전 규격 미검증",
+   "folder": "details",
+   "source_sha256": "8882d5435488d85a0dccb2d64b4657931fb1a1d4f423782b55a730a12aa57414"
+  },
+  {
+   "page": 26,
+   "sheet": "D-408",
+   "title": "선큰 계단·마당 연결 확대 (1층 마스터)",
+   "scale": "1:100",
+   "grade": "MODEL DETAIL (1F 마스터) · 지반 UNRESOLVED DETAIL",
+   "folder": "details",
+   "source_sha256": "982df8ec844d51e3b8f2deb0c6eef981ea626f0972d1b326f05053e0e7da18b6"
+  },
+  {
+   "page": 27,
+   "sheet": "D-409",
+   "title": "화물 승강기·하역 동선 확대",
+   "scale": "1:50",
+   "grade": "UNRESOLVED DETAIL · 형상만 MODEL",
+   "folder": "details",
+   "source_sha256": "438d9a1542462bec67b21d48768a3679077d527cb6a19181c6d5631ce6a4d11b"
+  },
+  {
+   "page": 28,
+   "sheet": "D-410",
+   "title": "지붕·상층 후퇴부 확대",
+   "scale": "1:100",
+   "grade": "MODEL DETAIL · 방수·마감 UNRESOLVED",
+   "folder": "details",
+   "source_sha256": "4f3a393fec1d35a48c73dd3f8c21ecf6dbfd347b5db3067036c36e3f4d95ba3f"
+  },
+  {
+   "page": 29,
+   "sheet": "A-900",
+   "title": "미확정 설계 결정·도면 한계",
+   "scale": "—",
+   "grade": "DOCUMENT",
+   "folder": "appendix",
+   "source_sha256": "80d9acc73bdf174a5256adb8c41a51efc9bda7090cc52e813921e30bc27217ab"
+  },
+  {
+   "page": 30,
+   "sheet": "A-901",
+   "title": "층별 동등성 판정·평면 발행표·치수 포함 현황",
+   "scale": "—",
+   "grade": "DOCUMENT + MODEL_DATA",
+   "folder": "appendix",
+   "source_sha256": "16533d3b7648f9627555715feb43181a485bd110fbd150bb93a505d9ddbdcf90"
+  }
+ ],
+ "model_sha256": "b1927ffd8335853fcdf55f6ec49cee3233465cfc1362295ffa717f214b45ab88",
+ "edition": "V2",
+ "status": "CANDIDATE — NOT FROZEN"
+}

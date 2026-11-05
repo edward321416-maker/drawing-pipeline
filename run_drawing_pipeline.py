@@ -40,6 +40,7 @@ def main():
     ap.add_argument("--ai-mode", choices=("export-drive", "import", "api"), default=None)
     ap.add_argument("--modal", action="store_true", help="렌더를 Modal 컨테이너에서 병렬로 (로컬 CPU·시간 절약)")
     ap.add_argument("--skip-render", action="store_true", help="이미 있는 raw_slices를 재사용")
+    ap.add_argument("--frame-ref", default="", help="1층 마스터의 camera_bounds.json. GLB 상층 도면의 방향을 1층과 맞춘다(없으면 90° 어긋날 수 있음)")
     a = ap.parse_args()
     model, out = os.path.abspath(a.blend), os.path.abspath(a.out)
     raw = os.path.join(out, "raw_slices")
@@ -47,13 +48,14 @@ def main():
     print("모델:", model)
     print("출력:", out)
 
+    fr = ["--frame-ref", os.path.abspath(a.frame_ref)] if a.frame_ref else []
     if not a.skip_render:
         if a.modal:
             if not os.path.exists(os.path.join(raw, "floors.json")):                          # 층 목록은 가벼운 로컬 절단으로 먼저 얻는다
                 run([BLENDER, "-b", "--factory-startup", "-P", os.path.join(SRC, "01_headless_slicer.py"), "--",
-                     "--input", model, "--out", out, "--cut", str(a.cut_z), "--phase", "slice"])
+                     "--input", model, "--out", out, "--cut", str(a.cut_z), "--phase", "slice"] + fr)
             cmd = [MODAL, "run", os.path.join(SRC, "modal_render.py"), "--glb", model, "--out", out, "--size", str(a.size),
-                   "--samples", str(a.samples), "--cut", str(a.cut_z)]
+                   "--samples", str(a.samples), "--cut", str(a.cut_z)] + fr
             if a.floors:
                 cmd += ["--floors", a.floors]
             run(cmd)
@@ -63,6 +65,7 @@ def main():
                     "--size", str(a.size), "--samples", str(a.samples)]
             if model.lower().endswith((".glb", ".gltf", ".blend")):
                 cmd += ["--input", model]
+            cmd += fr
             if a.floors:
                 cmd += ["--floors", a.floors]
             run(cmd)

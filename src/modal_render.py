@@ -30,7 +30,7 @@ image = (
 
 
 @app.function(image=image, cpu=8, memory=8192, timeout=3600)
-def render_floor(glb_bytes: bytes, script_text: str, floor: str, size: int, samples: int, cut: float, model_name: str = "model.glb") -> dict:
+def render_floor(glb_bytes: bytes, script_text: str, floor: str, size: int, samples: int, cut: float, model_name: str = "model.glb", frame_ref_text: str = "") -> dict:
     work = tempfile.mkdtemp()
     glb = os.path.join(work, "model" + os.path.splitext(model_name)[1].lower())
     script = os.path.join(work, "slicer.py")
@@ -41,6 +41,11 @@ def render_floor(glb_bytes: bytes, script_text: str, floor: str, size: int, samp
         fh.write(script_text)
     cmd = ["/opt/blender/blender", "-b", "--factory-startup", "-P", script, "--", "--input", glb, "--out", out,
            "--floors", floor, "--size", str(size), "--samples", str(samples), "--cut", str(cut), "--threads", "8"]
+    if frame_ref_text:                                                     # 1층 기준 도면 방향(진북각). 없으면 층마다 90° 어긋난 틀이 나올 수 있다
+        ref = os.path.join(work, "frame_ref.json")
+        with open(ref, "w", encoding="utf-8") as fh:
+            fh.write(frame_ref_text)
+        cmd += ["--frame-ref", ref]
     proc = subprocess.run(cmd, capture_output=True, text=True)
     raw = os.path.join(out, "raw_slices")
     files = {}
@@ -53,7 +58,7 @@ def render_floor(glb_bytes: bytes, script_text: str, floor: str, size: int, samp
 
 
 @app.local_entrypoint()
-def main(glb: str, out: str, size: int = 4096, samples: int = 24, cut: float = 1.5, floors: str = ""):
+def main(glb: str, out: str, size: int = 4096, samples: int = 24, cut: float = 1.5, floors: str = "", frame_ref: str = ""):
     raw = os.path.join(os.path.abspath(out), "raw_slices")
     if floors:
         names = [f.strip() for f in floors.split(",") if f.strip()]
@@ -68,7 +73,8 @@ def main(glb: str, out: str, size: int = 4096, samples: int = 24, cut: float = 1
     with open(os.path.join(HERE, "01_headless_slicer.py"), encoding="utf-8") as fh:
         script_text = fh.read()
     os.makedirs(raw, exist_ok=True)
-    args = [(glb_bytes, script_text, f, size, samples, cut, os.path.basename(glb)) for f in names]
+    ref_text = open(os.path.abspath(frame_ref), encoding="utf-8").read() if frame_ref else ""
+    args = [(glb_bytes, script_text, f, size, samples, cut, os.path.basename(glb), ref_text) for f in names]
     failed = []
     print("Modal 렌더 시작: %d개 층, %d px, %d 샘플" % (len(names), size, samples), flush=True)
     for res in render_floor.starmap(args, order_outputs=False):          # 끝나는 층부터 받아 쓴다

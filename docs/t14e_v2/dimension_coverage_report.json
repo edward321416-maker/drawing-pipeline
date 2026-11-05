@@ -1,0 +1,473 @@
+{
+ "note": "치수 개수는 생성 레지스트리 값이고, Q10·Q20·Q31이 시트 텍스트에서 독립 확인함",
+ "sheets": [
+  {
+   "sheet": "P-101",
+   "kind": "plan",
+   "overall_chains": 2,
+   "grid_chains": 2,
+   "setout_chains": 2,
+   "major_dims": 3,
+   "axis_bubbles": 14,
+   "section_tags": 8,
+   "elevation_tags": 4,
+   "detail_callouts": 4,
+   "level_dims": 0
+  },
+  {
+   "sheet": "P-102",
+   "kind": "plan",
+   "overall_chains": 2,
+   "grid_chains": 2,
+   "setout_chains": 2,
+   "major_dims": 3,
+   "axis_bubbles": 14,
+   "section_tags": 8,
+   "elevation_tags": 4,
+   "detail_callouts": 1,
+   "level_dims": 0
+  },
+  {
+   "sheet": "P-103",
+   "kind": "plan",
+   "overall_chains": 2,
+   "grid_chains": 2,
+   "setout_chains": 2,
+   "major_dims": 3,
+   "axis_bubbles": 14,
+   "section_tags": 8,
+   "elevation_tags": 4,
+   "detail_callouts": 0,
+   "level_dims": 0
+  },
+  {
+   "sheet": "P-104",
+   "kind": "plan",
+   "overall_chains": 2,
+   "grid_chains": 2,
+   "setout_chains": 2,
+   "major_dims": 3,
+   "axis_bubbles": 14,
+   "section_tags": 8,
+   "elevation_tags": 4,
+   "detail_callouts": 0,
+   "level_dims": 0
+  },
+  {
+   "sheet": "P-105",
+   "kind": "plan",
+   "overall_chains": 2,
+   "grid_chains": 2,
+   "setout_chains": 2,
+   "major_dims": 3,
+   "axis_bubbles": 10,
+   "section_tags": 8,
+   "elevation_tags": 4,
+   "detail_callouts": 1,
+   "level_dims": 0
+  },
+  {
+   "sheet": "E-201",
+   "kind": "elevation",
+   "overall_chains": 2,
+   "grid_chains": 1,
+   "level_dims": 1,
+   "major_dims": 1,
+   "axis_bubbles": 7,
+   "detail_callouts": 2,
+   "level_labels": 15
+  },
+  {
+   "sheet": "E-202",
+   "kind": "elevation",
+   "overall_chains": 2,
+   "grid_chains": 1,
+   "level_dims": 1,
+   "major_dims": 1,
+   "axis_bubbles": 7,
+   "detail_callouts": 2,
+   "level_labels": 15
+  },
+  {
+   "sheet": "E-203",
+   "kind": "elevation",
+   "overall_chains": 2,
+   "grid_chains": 1,
+   "level_dims": 1,
+   "major_dims": 1,
+   "axis_bubbles": 7,
+   "detail_callouts": 2,
+   "level_labels": 15
+  },
+  {
+   "sheet": "E-204",
+   "kind": "elevation",
+   "overall_chains": 2,
+   "grid_chains": 1,
+   "level_dims": 1,
+   "major_dims": 1,
+   "axis_bubbles": 7,
+   "detail_callouts": 2,
+   "level_labels": 15
+  },
+  {
+   "sheet": "S-302",
+   "kind": "section",
+   "overall_chains": 2,
+   "grid_chains": 1,
+   "level_dims": 1,
+   "major_dims": 1,
+   "axis_bubbles": 7,
+   "detail_callouts": 0,
+   "level_labels": 18
+  },
+  {
+   "sheet": "S-303",
+   "kind": "section",
+   "overall_chains": 2,
+   "grid_chains": 1,
+   "level_dims": 1,
+   "major_dims": 1,
+   "axis_bubbles": 7,
+   "detail_callouts": 0,
+   "level_labels": 18
+  },
+  {
+   "sheet": "S-304",
+   "kind": "section",
+   "overall_chains": 2,
+   "grid_chains": 1,
+   "level_dims": 1,
+   "major_dims": 1,
+   "axis_bubbles": 7,
+   "detail_callouts": 0,
+   "level_labels": 18
+  },
+  {
+   "sheet": "S-305",
+   "kind": "section",
+   "overall_chains": 2,
+   "grid_chains": 1,
+   "level_dims": 1,
+   "major_dims": 1,
+   "axis_bubbles": 7,
+   "detail_callouts": 0,
+   "level_labels": 18
+  },
+  {
+   "sheet": "D-401",
+   "kind": "detail",
+   "plan_dims": 5,
+   "section_dims": 2,
+   "level_tags": 1,
+   "callouts": 0,
+   "dimension_rows": 8,
+   "dimensions": [
+    {
+     "label": "튜브 바깥 지름",
+     "value_mm": "9000",
+     "source": "plan_cut A-CORE-TUBE_T1"
+    },
+    {
+     "label": "튜브 안쪽 지름",
+     "value_mm": "8760",
+     "source": "plan_cut"
+    },
+    {
+     "label": "튜브 벽 두께",
+     "value_mm": "120",
+     "source": "plan_cut (바깥−안쪽)/2"
+    },
+    {
+     "label": "램프 바깥 반경",
+     "value_mm": "3300",
+     "source": "top_outline A-VERT-SPRL_B1-6F_T1_spiral"
+    },
+    {
+     "label": "램프 안쪽 반경",
+     "value_mm": "1290",
+     "source": "top_outline"
+    },
+    {
+     "label": "램프 폭(반경 방향)",
+     "value_mm": "2010",
+     "source": "바깥−안쪽"
+    },
+    {
+     "label": "슬래브 두께",
+     "value_mm": "400",
+     "source": "단면 절단 층판 폭"
+    },
+    {
+     "label": "층고(이 층 → 위층)",
+     "value_mm": "5000",
+     "source": "A-FLOR 층판 윗면 차"
+    }
+   ]
+  },
+  {
+   "sheet": "D-402",
+   "kind": "detail",
+   "plan_dims": 3,
+   "section_dims": 2,
+   "level_tags": 1,
+   "callouts": 0,
+   "dimension_rows": 6,
+   "dimensions": [
+    {
+     "label": "튜브 바깥 지름",
+     "value_mm": "9000",
+     "source": "plan_cut A-CORE-TUBE_T2"
+    },
+    {
+     "label": "튜브 안쪽 지름",
+     "value_mm": "8760",
+     "source": "plan_cut"
+    },
+    {
+     "label": "튜브 벽 두께",
+     "value_mm": "120",
+     "source": "plan_cut (바깥−안쪽)/2"
+    },
+    {
+     "label": "층판 개구 폭",
+     "value_mm": "8970",
+     "source": "층판 구멍 bbox"
+    },
+    {
+     "label": "슬래브 두께",
+     "value_mm": "400",
+     "source": "단면 절단 층판 폭"
+    },
+    {
+     "label": "층고(이 층 → 위층)",
+     "value_mm": "5000",
+     "source": "A-FLOR 층판 윗면 차"
+    }
+   ]
+  },
+  {
+   "sheet": "D-403",
+   "kind": "detail",
+   "plan_dims": 2,
+   "section_dims": 2,
+   "level_tags": 1,
+   "callouts": 0,
+   "dimension_rows": 5,
+   "dimensions": [
+    {
+     "label": "튜브 바깥 지름",
+     "value_mm": "8000",
+     "source": "plan_cut A-CORE-TUBE_T3"
+    },
+    {
+     "label": "튜브 안쪽 지름",
+     "value_mm": "7760",
+     "source": "plan_cut"
+    },
+    {
+     "label": "튜브 벽 두께",
+     "value_mm": "120",
+     "source": "plan_cut (바깥−안쪽)/2"
+    },
+    {
+     "label": "슬래브 두께",
+     "value_mm": "400",
+     "source": "단면 절단 층판 폭"
+    },
+    {
+     "label": "층고(이 층 → 위층)",
+     "value_mm": "5000",
+     "source": "A-FLOR 층판 윗면 차"
+    }
+   ]
+  },
+  {
+   "sheet": "D-404",
+   "kind": "detail",
+   "plan_dims": 3,
+   "section_dims": 0,
+   "level_tags": 0,
+   "callouts": 0,
+   "dimension_rows": 2,
+   "dimensions": [
+    {
+     "label": "코어 벽 두께(서측 벽, 레이 측정)",
+     "value_mm": "250",
+     "source": "1F 마스터 core_wall, y=코어 중앙 레이"
+    },
+    {
+     "label": "코어 D 바깥 치수",
+     "value_mm": "6000 × 6000",
+     "source": "1F 마스터 core_wall"
+    }
+   ]
+  },
+  {
+   "sheet": "D-405",
+   "kind": "detail",
+   "plan_dims": 2,
+   "section_dims": 2,
+   "level_tags": 1,
+   "callouts": 0,
+   "dimension_rows": 4,
+   "dimensions": [
+    {
+     "label": "캡슐 바깥 폭",
+     "value_mm": "8000",
+     "source": "plan_cut A-CORE-TUBE_capW"
+    },
+    {
+     "label": "캡슐 벽 두께",
+     "value_mm": "350",
+     "source": "plan_cut (바깥폭−안쪽폭)/2"
+    },
+    {
+     "label": "슬래브 두께",
+     "value_mm": "400",
+     "source": "단면 절단 층판 폭"
+    },
+    {
+     "label": "층고(이 층 → 위층)",
+     "value_mm": "5000",
+     "source": "A-FLOR 층판 윗면 차"
+    }
+   ]
+  },
+  {
+   "sheet": "D-406",
+   "kind": "detail",
+   "plan_dims": 1,
+   "section_dims": 2,
+   "level_tags": 1,
+   "callouts": 0,
+   "dimension_rows": 3,
+   "dimensions": [
+    {
+     "label": "기둥 중심 간격",
+     "value_mm": "8400",
+     "source": "plan_cut 기둥 윤곽 중심"
+    },
+    {
+     "label": "슬래브 두께",
+     "value_mm": "400",
+     "source": "단면 절단 층판 폭"
+    },
+    {
+     "label": "층고(이 층 → 위층)",
+     "value_mm": "5000",
+     "source": "A-FLOR 층판 윗면 차"
+    }
+   ]
+  },
+  {
+   "sheet": "D-407",
+   "kind": "detail",
+   "plan_dims": 2,
+   "section_dims": 2,
+   "level_tags": 1,
+   "callouts": 0,
+   "dimension_rows": 4,
+   "dimensions": [
+    {
+     "label": "에스컬레이터 폭",
+     "value_mm": "3600",
+     "source": "A-VERT-ESCL bbox"
+    },
+    {
+     "label": "에스컬레이터 길이",
+     "value_mm": "12790",
+     "source": "A-VERT-ESCL bbox"
+    },
+    {
+     "label": "층고(이 층 → 위층)",
+     "value_mm": "4500",
+     "source": "A-FLOR 층판 윗면 차"
+    },
+    {
+     "label": "경사각(절단 띠 장축)",
+     "value_mm": "25.0°",
+     "source": "절단 폴리곤 최소 회전 사각형"
+    }
+   ]
+  },
+  {
+   "sheet": "D-408",
+   "kind": "detail",
+   "plan_dims": 2,
+   "section_dims": 0,
+   "level_tags": 0,
+   "callouts": 0,
+   "dimension_rows": 3,
+   "dimensions": [
+    {
+     "label": "선큰 계단 폭",
+     "value_mm": "14000",
+     "source": "마스터 sunken_stair"
+    },
+    {
+     "label": "선큰 계단 길이",
+     "value_mm": "16500",
+     "source": "마스터 sunken_stair"
+    },
+    {
+     "label": "단 수",
+     "value_mm": "12",
+     "source": "마스터 속성 treads"
+    }
+   ]
+  },
+  {
+   "sheet": "D-409",
+   "kind": "detail",
+   "plan_dims": 1,
+   "section_dims": 2,
+   "level_tags": 1,
+   "callouts": 0,
+   "dimension_rows": 3,
+   "dimensions": [
+    {
+     "label": "화물 승강로 폭",
+     "value_mm": "5600",
+     "source": "1F 마스터 shaft FR"
+    },
+    {
+     "label": "슬래브 두께",
+     "value_mm": "400",
+     "source": "단면 절단 층판 폭"
+    },
+    {
+     "label": "층고(이 층 → 위층)",
+     "value_mm": "6000",
+     "source": "A-FLOR 층판 윗면 차"
+    }
+   ]
+  },
+  {
+   "sheet": "D-410",
+   "kind": "detail",
+   "plan_dims": 1,
+   "section_dims": 2,
+   "level_tags": 1,
+   "callouts": 0,
+   "dimension_rows": 3,
+   "dimensions": [
+    {
+     "label": "구조 표식 패드 지름",
+     "value_mm": "10000",
+     "source": "A-ROOF_rescue_pad 윗면"
+    },
+    {
+     "label": "슬래브 두께",
+     "value_mm": "400",
+     "source": "단면 절단 층판 폭"
+    },
+    {
+     "label": "15F FFL → 지붕 슬래브 윗면",
+     "value_mm": "6000",
+     "source": "A-ROOF_slab 윗면 − 15F 층판"
+    }
+   ]
+  }
+ ]
+}

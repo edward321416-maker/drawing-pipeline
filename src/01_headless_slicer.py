@@ -60,7 +60,22 @@ def parse_args():
     ap.add_argument("--threads", type=int, default=8, help="AGENTS: 시뮬레이션 자원 제한 ≤ 8 코어")
     ap.add_argument("--phase", choices=("slice", "render", "both"), default="both")
     ap.add_argument("--margin", type=float, default=0.15)
+    ap.add_argument("--frame-ref", default=None, help="기준 층(1층 마스터)의 camera_bounds.json. 도면 방향을 그 진북각(north_deg)에 맞춘다")
     return ap.parse_args(argv)
+
+
+def align_theta_to_reference(theta, ref_path):
+    """detect_theta는 건물 축을 |θ| ≤ 45°로 정규화해 90° 단위 정보를 버린다. GLB에는 마스터 .blend의 north_angle_deg도 없어서,
+    그대로 쓰면 1층 마스터와 90° 어긋난 도면 방향이 나온다. 기준 층의 north_deg와 90°의 배수만큼만 달라지도록 θ를 옮긴다.
+    기준과 90° 배수로 맞지 않으면(같은 건물이 아니거나 축이 다름) 빌드를 거부한다."""
+    ref = json.load(open(ref_path, encoding="utf-8"))["frame"]["north_deg"]
+    th = math.degrees(theta)
+    k = round((ref - th) / 90.0)
+    th2 = th + 90.0 * k
+    if abs(ref - th2) > 1.0:
+        raise SystemExit("도면 방향 기준 불일치: 기준 north_deg=%.3f, 이 모델 건물축 θ=%.3f (90° 배수로 맞지 않음). 같은 건물인지 확인" % (ref, th))
+    print("FRAME_REF north_deg=%.3f  detect_theta=%.3f  → 90°×%d 보정 → theta=%.3f" % (ref, th, k, th2))
+    return round(math.radians(th2), 7)
 
 
 def load_scene(path):
@@ -495,6 +510,8 @@ def main():
     os.makedirs(out, exist_ok=True)
     recs = collect(deps)
     FRAME["theta"] = detect_theta(recs)
+    if a.frame_ref:
+        FRAME["theta"] = align_theta_to_reference(FRAME["theta"], a.frame_ref)
     print("FRAME theta_deg=%.3f" % math.degrees(FRAME["theta"]))
     floors = floors_from(recs)
     all_floors = dict(floors)                                          # floors.json에는 항상 전체 층을 쓴다 (--floors는 처리 대상만 거른다)

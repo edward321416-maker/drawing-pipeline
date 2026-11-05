@@ -303,3 +303,157 @@ def mg_hatch_lines(geom, spacing):
             if g.geom_type == "LineString" and g.length > 0.1:
                 out.append(g)
     return out
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════
+# C-T13 프로그램별 가구 유형 (M01~M05, P02~P03, S02, C01~C03). 반복 격자 최대화가 아니라 활동별 가구.
+# 각 함수는 (c,u,v)=기준틀, (a,b)=중심 좌표를 받아 [(geometry, kind)] 를 돌려준다. kind 'body' = 흰 채움 윤곽.
+# ══════════════════════════════════════════════════════════════════════════════════════════
+def info_counter(c, u, v, a, b, L=2.4, W=0.7):
+    """M01 소형 안내대 2.4×0.7 (둥근 모서리) + 상판 안쪽선 + 양 끝 길찾기 플린스 0.5 m."""
+    out = [(rrect(c, u, v, a, b, L, W, 0.2), "body"), (mg.line(c, u, v, a - L / 2 + 0.3, b, a + L / 2 - 0.3, b), "line")]
+    for sgn in (-1, 1):
+        out.append((rrect(c, u, v, a + sgn * (L / 2 + 0.55), b, 0.5, 0.5, 0.05), "body"))
+    return out
+
+
+def long_bench(c, u, v, a, b, L=2.4, W=0.5):
+    """P02 긴 벤치 + 좌판 이음선."""
+    out = [(rrect(c, u, v, a, b, L, W, 0.05), "body")]
+    for k in range(1, 4):
+        x = a - L / 2 + L * k / 4
+        out.append((mg.line(c, u, v, x, b - W / 2 + 0.05, x, b + W / 2 - 0.05), "line"))
+    return out
+
+
+def single_stall(c, u, v, a, b, L=3.0):
+    """M02 단면(한쪽) 매대: 앞 카운터 3.0×0.7 + 뒤 진열 선반 3.0×0.35 + 카운터 분할선 + 스툴 1."""
+    out = [(rrect(c, u, v, a, b, L, 0.7, 0.1), "body"), (rect_body(c, u, v, a, b - 0.7, L, 0.35), "body")]
+    for k in range(1, 4):
+        x = a - L / 2 + L * k / 4
+        out.append((mg.line(c, u, v, x, b - 0.3, x, b + 0.3), "line"))
+    x, y = mg.at(c, u, v, a, b + 0.75)
+    return out + stool(x, y, 0.17)
+
+
+def rect_body(c, u, v, a, b, w, h):
+    return mg.rect(c, u, v, a, b, w, h)
+
+
+def wall_display(c, u, v, a, b, L=2.4, W=0.45):
+    """M02 벽면 진열대 2.4×0.45 + 선반 이음선(사선 눈금)."""
+    out = [(rect_body(c, u, v, a, b, L, W), "body")]
+    for k in range(1, 4):
+        x = a - L / 2 + L * k / 4
+        out.append((mg.line(c, u, v, x, b - W / 2, x, b + W / 2), "line"))
+    return out
+
+
+def cash_counter(c, u, v, a, b):
+    """M02 결제대 1.2×0.6 + 단말기 원."""
+    x, y = mg.at(c, u, v, a, b)
+    return [(rrect(c, u, v, a, b, 1.2, 0.6, 0.12), "body"), (Point(x, y).buffer(0.12, 10), "line")]
+
+
+def popup_module(c, u, v, a, b):
+    """M03 팝업 모듈: 탁자 1.2×0.8 둘 + 전시 플린스 0.8 m 하나 (유동형이라 사이 간격 0.4 m)."""
+    out = []
+    for dx in (-0.8, 0.8):
+        out.append((rrect(c, u, v, a + dx, b, 1.2, 0.8, 0.06), "body"))
+    out.append((rrect(c, u, v, a, b + 1.15, 0.8, 0.8, 0.08), "body"))
+    out.append((mg.line(c, u, v, a - 0.3, b + 1.15, a + 0.3, b + 1.15), "line"))
+    return out
+
+
+def tasting_counter(c, u, v, a, b, L=4.2, stools=6):
+    """M04 시식 카운터 4.2×0.9 + 안쪽 작업선 + 손님 쪽(+v) 스툴 한 줄."""
+    out = [(rrect(c, u, v, a, b, L, 0.9, 0.2), "body"), (mg.line(c, u, v, a - L / 2 + 0.3, b - 0.15, a + L / 2 - 0.3, b - 0.15), "line")]
+    for k in range(stools):
+        x, y = mg.at(c, u, v, a + (k - (stools - 1) / 2) * (L - 0.8) / max(stools - 1, 1), b + 0.8)
+        out += stool(x, y, 0.18)
+    return out
+
+
+def food_kiosk(c, u, v, a, b):
+    """M04 푸드 키오스크 2.4×2.0: 외곽 + 안쪽 작업대 + 앞창 선(+v 쪽에 손님)."""
+    return [(rrect(c, u, v, a, b, 2.4, 2.0, 0.15), "body"), (rect_body(c, u, v, a, b - 0.3, 1.6, 0.5), "body"),
+            (mg.line(c, u, v, a - 1.0, b + 0.7, a + 1.0, b + 0.7), "line")]
+
+
+def pickup_shelf(c, u, v, a, b, L=2.4):
+    """M04 픽업 선반 2.4×0.4 + 칸 이음선."""
+    out = [(rect_body(c, u, v, a, b, L, 0.4), "body")]
+    for k in range(1, 6):
+        x = a - L / 2 + L * k / 6
+        out.append((mg.line(c, u, v, x, b - 0.2, x, b + 0.2), "line"))
+    return out
+
+
+def four_top(c, u, v, a, b):
+    """M05 4인 정사각 테이블 0.85 + 의자 4."""
+    out = [(rrect(c, u, v, a, b, 0.85, 0.85, 0.05), "body")]
+    px, py = mg.at(c, u, v, a, b)
+    for dx, dy in ((0.65, 0), (-0.65, 0), (0, 0.65), (0, -0.65)):
+        x, y = mg.at(c, u, v, a + dx, b + dy)
+        out += chair(x, y, px - x, py - y)
+    return out
+
+
+def communal_table(c, u, v, a, b):
+    """M05 8인 공용 긴 테이블 2.4×0.9 + 양쪽 의자 4씩."""
+    out = [(rrect(c, u, v, a, b, 2.4, 0.9, 0.05), "body")]
+    for k in range(4):
+        for sgn in (-1, 1):
+            x, y = mg.at(c, u, v, a - 0.9 + 0.6 * k, b + sgn * 0.7)
+            out += chair(x, y, -sgn * v[0], -sgn * v[1])
+    return out
+
+
+def banquette(c, u, v, a, b, L=3.0):
+    """M05 벽면 벤치 소파(좌판 0.55 + 등받이선) + 앞쪽 작은 탁자 둘 0.6 m."""
+    out = [(rrect(c, u, v, a, b, L, 0.55, 0.06), "body"), (mg.line(c, u, v, a - L / 2 + 0.1, b - 0.2, a + L / 2 - 0.1, b - 0.2), "line")]
+    for dx in (-0.75, 0.75):
+        out.append((rrect(c, u, v, a + dx, b + 0.85, 0.6, 0.6, 0.05), "body"))
+    return out
+
+
+def storage_rack(c, u, v, a, b, L=3.0):
+    """S02 보관 랙 3.0×0.6 + 칸 이음선."""
+    out = [(rect_body(c, u, v, a, b, L, 0.6), "body")]
+    for k in range(1, 5):
+        x = a - L / 2 + L * k / 5
+        out.append((mg.line(c, u, v, x, b - 0.3, x, b + 0.3), "line"))
+    return out
+
+
+def gallery_bench(c, u, v, a, b, L=1.8):
+    """C03 곡면 대신 직선형 갤러리 벤치 1.8×0.6 + 좌판 이음선."""
+    out = [(rrect(c, u, v, a, b, L, 0.6, 0.05), "body")]
+    for q in range(1, 3):
+        out.append((mg.line(c, u, v, a - L / 2 + L * q / 3, b - 0.3, a - L / 2 + L * q / 3, b + 0.3), "line"))
+    return out
+
+
+def plinth_island(c, u, v, a, b, rng, L=2.4, W=1.2):
+    """C02 전시 플린스 2.4×1.2 + 유물 윤곽 3."""
+    out = [(rrect(c, u, v, a, b, L, W, 0.2), "body")]
+    for q in range(3):
+        ring = mg.wobble_ring(*mg.at(c, u, v, a + (q - 1) * 0.65, b), 0.2 + 0.05 * (q % 2), rng, 0.15, 16)
+        out.append((LineString(ring), "line"))
+    return out
+
+
+def curved_desk(center, ang, r_out=1.7, r_in=1.1, span=120):
+    """C01 곡면 접수·오디오 가이드 데스크 (center 기준 ang 방향이 바라보는 쪽)."""
+    cx, cy = center
+    pts = [(cx + r_out * math.cos(ang + math.radians(t)), cy + r_out * math.sin(ang + math.radians(t))) for t in range(180 - span // 2, 181 + span // 2, 10)]
+    pts += [(cx + r_in * math.cos(ang + math.radians(t)), cy + r_in * math.sin(ang + math.radians(t))) for t in range(180 + span // 2, 179 - span // 2, -10)]
+    return [(Polygon(pts), "body")]
+
+
+def round_table_2(cx, cy, r=0.4):
+    """C03 작은 원형 탁자 + 스툴 둘."""
+    out = [(Point(cx, cy).buffer(r, 16), "body")]
+    for a_ in (0.5, 0.5 + math.pi):
+        out += stool(cx + (r + 0.3) * math.cos(a_), cy + (r + 0.3) * math.sin(a_), 0.17)
+    return out

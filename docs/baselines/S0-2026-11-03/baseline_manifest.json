@@ -1,0 +1,150 @@
+{
+  "baseline_id": "S0-2026-11-03-MAIN-D553799A",
+  "status": "COMPARISON_SNAPSHOT_NOT_FINAL_FREEZE_MODEL_REPRODUCIBILITY_PENDING",
+  "source_kind": "Immutable comparison reference only; 1F design, graphics and final approval NOT frozen",
+  "repository": "edward321416-maker/drawing-pipeline",
+  "main_commit": "d553799a6a45057b0db006375ae36239d849bdeb",
+  "sheet": {
+    "floor": "1F",
+    "paper_mm": [
+      420,
+      297
+    ],
+    "scale": "1:500",
+    "slice_above_floor_m": 1.5
+  },
+  "raw_local_model": {
+    "path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\00_엔진\\model\\1F_master.blend",
+    "sha256": null,
+    "present_in_repository": false,
+    "rerender_executed": false
+  },
+  "source_files": [
+    {
+      "path": "sheets/1F_1to500/plan_1F_A3_1to500.png",
+      "git_blob_sha": "afad78f4670d0d104a011965816d97102a835229",
+      "bytes": 1498531
+    },
+    {
+      "path": "sheets/1F_1to500/plan_1F_A3_1to500.svg",
+      "git_blob_sha": "6fac8774d64dce0b50c6de7c479a0b0909abe6cf",
+      "bytes": 1358459
+    },
+    {
+      "path": "sheets/1F_1to500/plan_1F_A3_1to500.pdf",
+      "git_blob_sha": "1aec92d897b676ae56fa062390a7a0c62613c7c6",
+      "bytes": 399870
+    },
+    {
+      "path": "sheets/1F_1to500/plan_1F_A3_1to500_check.json",
+      "git_blob_sha": "225fd08441e84d1388c9766c562b6262339bff98",
+      "bytes": 1912
+    },
+    {
+      "path": "sheets/1F_1to500/qa_report.json",
+      "git_blob_sha": "56adf2c743a2682190f84ea47e8ebd3ade1a58e5",
+      "bytes": 2642
+    },
+    {
+      "path": "sheets/1F_1to500/crop_core_restroom.png",
+      "git_blob_sha": "7f2e698011af199ef5a31d10127948defcb00cb5",
+      "bytes": 76143
+    },
+    {
+      "path": "sheets/1F_1to500/crop_curtainwall_furniture.png",
+      "git_blob_sha": "3e5cdeddd577c0937a47af71d97b15d34014e888",
+      "bytes": 160893
+    },
+    {
+      "path": "sheets/1F_1to500/crop_tube_capsule.png",
+      "git_blob_sha": "acfa302ea93156be832e50ba6374e5a432c0720d",
+      "bytes": 69871
+    },
+    {
+      "path": "sheets/1F_1to500/floor_1F_cad_1to200.dxf",
+      "git_blob_sha": "d6d69722e406e1634ef8b260e229792a54808a2f",
+      "bytes": 554711
+    },
+    {
+      "path": "src/architectural_plan_renderer.py",
+      "git_blob_sha": "95e03764b9653594dbba343debfee8be881036a0",
+      "bytes": 87739
+    },
+    {
+      "path": "src/furniture_library.py",
+      "git_blob_sha": "d73c1b8d679bb87c8d584bf83f752fac62f66b83",
+      "bytes": 14351
+    },
+    {
+      "path": "tests/verify_pipeline.py",
+      "git_blob_sha": "ceac3d58bbaaa4a0a45a3186f7368f637c58bd30",
+      "bytes": 14491
+    },
+    {
+      "path": "engine/model/m_1f_source.json",
+      "git_blob_sha": "1f44c80ce15e9f746ca65d1577ca5849bc9a56c8",
+      "bytes": 8150
+    }
+  ],
+  "blob_sha_kind": "Git blob SHA-1, not file SHA-256",
+  "user_uploaded_visual_source": {
+    "sha256": "ad21f1f042b7f6abba8ea006631173c9635a3fa1b15d0f3c0fed66eded9022a2",
+    "pixels": [
+      2048,
+      1448
+    ],
+    "bytes": 825204,
+    "repo_png_byte_identical": false,
+    "provenance": "conversation upload, image for fixed visual crops only"
+  },
+  "reference_image": {
+    "sha256": "b5ebd7a32dbc3cefacb5dc93564eefef62984de7499f97af17aee22e6502d396",
+    "pixels": [
+      1080,
+      1080
+    ],
+    "purpose": "graphics style reference only"
+  },
+  "qa_prior_saved_run": {
+    "floor": "1F",
+    "passed": 19,
+    "total": 19,
+    "failed": 0,
+    "reexecuted": false,
+    "source": "sheets/1F_1to500/qa_report.json",
+    "measures": {
+      "columns_model": 34,
+      "columns_drawn": 23,
+      "columns_culled": 11,
+      "curtainwall_segments": 17,
+      "curtainwall_doors": 5,
+      "furniture_body_polygons": 140,
+      "real_furniture_count": "UNVERIFIED",
+      "legend_items": 9,
+      "numbers": 15,
+      "cut_polygon_count": 82,
+      "tube_column_iou": 0.936
+    }
+  },
+  "upper_floor_3F": {
+    "tile_count": 4,
+    "scale": "1:100",
+    "per_tile_check_blob": "261a75e9aeb359d19f55b6c71eb43f6af1104da4",
+    "reported_34_of_34": "README claim only; individual QA rows unavailable",
+    "physical_walls_and_doors_present": false
+  },
+  "crop_spec": "docs/baselines/S0-2026-11-03/crop_config.json",
+  "capture_tests_local_only": {
+    "passed": 4,
+    "total": 4,
+    "actual_user_upload_used": true
+  },
+  "blocking_missing": [
+    "hash real local 1F .blend",
+    "rerun 1F model-to-image pipeline independently",
+    "verify identical output or document drift",
+    "resolve physical column omission separately; not fixed by snapshot",
+    "3F detailed QA report unavailable"
+  ],
+  "interpretation": "Comparison baseline is frozen; does not certify geometry, building code compliance, or aesthetic approval."
+}

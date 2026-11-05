@@ -1,0 +1,196 @@
+{
+  "reference_sha": "a1651daefd8dafec3e9b089abd3803ac6776164b",
+  "source_path": "engine/model/1F_master.model.json",
+  "source_type": "serialized 3D master model JSON (not user local .blend; matching hash not verified)",
+  "source_commit": "d553799a6a45057b0db006375ae36239d849bdeb",
+  "model_units": "m",
+  "object_count": 189,
+  "counts_by_kind": {
+    "slab": 1,
+    "zone": 3,
+    "column": 34,
+    "tube_wall": 5,
+    "shaft": 6,
+    "void": 1,
+    "core_wall": 4,
+    "partition_wall": 19,
+    "stair": 16,
+    "door": 11,
+    "room": 10,
+    "sanitary": 15,
+    "site": 1,
+    "setback": 1,
+    "road": 1,
+    "sidewalk": 1,
+    "road_marking": 1,
+    "context_building": 47,
+    "exterior_space": 6,
+    "tree": 1,
+    "sunken_stair": 1,
+    "entrance": 3,
+    "subway_exit": 1
+  },
+  "door_count": 11,
+  "core_door_count": 8,
+  "restroom_door_count": 3,
+  "unclassified_door_count": 0,
+  "cap_wall_object_present": true,
+  "door_objects": [
+    {
+      "name": "Core_A_door_hall",
+      "owner": "CORE",
+      "core_id": "A",
+      "wc_id": null,
+      "width_m": 1.2,
+      "bbox_center_world_m": [
+        3,
+        46.4
+      ],
+      "area_legal_validated": false
+    },
+    {
+      "name": "Core_A_door_stair",
+      "owner": "CORE",
+      "core_id": "A",
+      "wc_id": null,
+      "width_m": 1.2,
+      "bbox_center_world_m": [
+        0.85,
+        48.25
+      ],
+      "area_legal_validated": false
+    },
+    {
+      "name": "Core_B_door_hall",
+      "owner": "CORE",
+      "core_id": "B",
+      "wc_id": null,
+      "width_m": 1.2,
+      "bbox_center_world_m": [
+        48.2,
+        46.4
+      ],
+      "area_legal_validated": false
+    },
+    {
+      "name": "Core_B_door_stair",
+      "owner": "CORE",
+      "core_id": "B",
+      "wc_id": null,
+      "width_m": 1.2,
+      "bbox_center_world_m": [
+        47.85,
+        48.25
+      ],
+      "area_legal_validated": false
+    },
+    {
+      "name": "Core_C_door_hall",
+      "owner": "CORE",
+      "core_id": "C",
+      "wc_id": null,
+      "width_m": 1.2,
+      "bbox_center_world_m": [
+        47.4,
+        3
+      ],
+      "area_legal_validated": false
+    },
+    {
+      "name": "Core_C_door_stair",
+      "owner": "CORE",
+      "core_id": "C",
+      "wc_id": null,
+      "width_m": 1.2,
+      "bbox_center_world_m": [
+        49.25,
+        5.15
+      ],
+      "area_legal_validated": false
+    },
+    {
+      "name": "Core_D_door_hall",
+      "owner": "CORE",
+      "core_id": "D",
+      "wc_id": null,
+      "width_m": 1.2,
+      "bbox_center_world_m": [
+        6.6,
+        3
+      ],
+      "area_legal_validated": false
+    },
+    {
+      "name": "Core_D_door_stair",
+      "owner": "CORE",
+      "core_id": "D",
+      "wc_id": null,
+      "width_m": 1.2,
+      "bbox_center_world_m": [
+        4.75,
+        5.15
+      ],
+      "area_legal_validated": false
+    },
+    {
+      "name": "WC_B_door_공용문",
+      "owner": "RESTROOM",
+      "core_id": null,
+      "wc_id": "B",
+      "width_m": 1.2,
+      "bbox_center_world_m": [
+        50.6,
+        41.025
+      ],
+      "area_legal_validated": false
+    },
+    {
+      "name": "WC_C_door_남자문",
+      "owner": "RESTROOM",
+      "core_id": null,
+      "wc_id": "C",
+      "width_m": 1.2,
+      "bbox_center_world_m": [
+        47.9,
+        7.4
+      ],
+      "area_legal_validated": false
+    },
+    {
+      "name": "WC_C_door_여자문",
+      "owner": "RESTROOM",
+      "core_id": null,
+      "wc_id": "C",
+      "width_m": 1.2,
+      "bbox_center_world_m": [
+        50,
+        12.475
+      ],
+      "area_legal_validated": false
+    }
+  ],
+  "main_site_markers": [
+    {
+      "name": "Entrance_Main",
+      "kind": "entrance"
+    },
+    {
+      "name": "Entrance_Subway",
+      "kind": "entrance"
+    },
+    {
+      "name": "Entrance_Service",
+      "kind": "entrance"
+    }
+  ],
+  "findings": {
+    "public_market_door_model_object_count": 0,
+    "capsule_door_model_object_count": 0,
+    "physical_market_and_capsule_openings_validated": false,
+    "public_curtain_door_graphics_from_renderer_not_model": true,
+    "model_shape_snapshot_consistent_with_local_blend": "NOT_VERIFIED",
+    "perimeter_wall_geometry_validated": "NOT_VERIFIED"
+  },
+  "audit_gate": "HOLD_PENDING_MODEL_PHYSICAL_OPENINGS",
+  "model_geometry_modified": false
+}

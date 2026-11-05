@@ -1,0 +1,100 @@
+{
+  "schema": "G1_T11_ACCESS_SOURCE_AUDIT_V1",
+  "date": "2026-11-03",
+  "base_ref": "0c35263117d52c9c3713d800bf4707b1fe7805a7",
+  "status": "SERIALIZED_3D_MODEL_DOORS_CONFIRMED_PUBLIC_AND_CAPSULE_PHYSICAL_OPENINGS_MISSING",
+  "floor": "1F",
+  "confirmed_sources": [
+    {
+      "path": "engine/model/m_1f_source.json",
+      "fact": "stairs A-D, WC B/C, 34 columns, T1-T4, cap_w boundary",
+      "verification": "github source read"
+    },
+    {
+      "path": "engine/model/1F_master.model.json",
+      "fact": "serialized 3D model contains 189 objects, 34 columns, 11 door objects: 8 core doors and 3 restroom doors; no market curtainwall door or capsule door object",
+      "verification": "GitHub 3D model blob parsed directly",
+      "git_blob_sha": "a1651daefd8dafec3e9b089abd3803ac6776164b"
+    },
+    {
+      "path": "engine/master/build_master.py",
+      "fact": "builds core and restroom model doors from symbols; Tube CAP_W is a complete tube_wall ring without demonstrated physical opening",
+      "verification": "github code read"
+    },
+    {
+      "path": "engine/model/m_site_source.json",
+      "fact": "site entrances Main/Subway/Service are approach markers, not physical facade doors",
+      "verification": "github source read"
+    },
+    {
+      "path": "src/architectural_plan_renderer.py",
+      "fact": "solve_curtain_doors() synthesizes drawable curtainwall entrance locations; capsule doorway is projected from capsule boundary toward hall",
+      "verification": "github code read"
+    },
+    {
+      "path": "sheets/1F_1to500/plan_1F_A3_1to500_check.json",
+      "fact": "curtain_doors=5, door_gaps_punched=11; counts do not independently prove actual facade door openings",
+      "verification": "github stored QA JSON read"
+    }
+  ],
+  "source_evidence": {
+    "raw_1f_slice_file_in_repository": false,
+    "master_blend_binary_in_repository": false,
+    "curtain_doors_reported_by_renderer": 5,
+    "existing_interior_doors_reported_as_punched": 11,
+    "model_verified_public_market_door_count": null,
+    "model_verified_capsule_door_count": null,
+    "serialized_model_json_in_repository": true,
+    "serialized_model_json_object_count": 189,
+    "serialized_model_json_model_door_count": 11,
+    "serialized_model_json_core_door_count": 8,
+    "serialized_model_json_restroom_door_count": 3,
+    "serialized_model_json_unclassified_door_count": 0,
+    "model_json_not_proven_identical_to_user_local_blend": true
+  },
+  "anchors": [
+    {
+      "id": "PUBLIC_MARKET_DOOR",
+      "role": "market public entry",
+      "status": "UNVERIFIED_MODEL_OPENING",
+      "rendered_position_m": null,
+      "verified_model_position_m": null
+    },
+    {
+      "id": "CAPSULE_DOOR",
+      "role": "capsule entry",
+      "status": "UNVERIFIED_MODEL_OPENING",
+      "rendered_position_m": null,
+      "verified_model_position_m": null
+    },
+    {
+      "id": "ENTRY_MAIN",
+      "role": "site public approach",
+      "status": "SITE_APPROACH_MARKER_CONFIRMED_NOT_A_DOOR"
+    },
+    {
+      "id": "ENTRY_SUBWAY",
+      "role": "subway sunken approach",
+      "status": "SITE_APPROACH_MARKER_CONFIRMED_NOT_A_DOOR"
+    },
+    {
+      "id": "ENTRY_SERVICE",
+      "role": "vehicle/service approach",
+      "status": "SITE_APPROACH_MARKER_CONFIRMED_NOT_A_DOOR"
+    }
+  ],
+  "next_needed": [
+    "verify 1F_master.model.json version matches local .blend and original reviewed drawing; local master SHA pending",
+    "locate or regenerate raw_slices/floor_1F_slice.json from tagged 1F .blend to compare actual cuts",
+    "design and obtain approval for physical market curtainwall/capsule door openings and door objects in 3D master",
+    "do not anchor final M01/P01/C01 polygons to renderer-only doors",
+    "only after model openings and independent connectivity audit, proceed to final G1 program zoning"
+  ],
+  "tests": {
+    "fixture_unit_tests_local": "9/9 PASS (isolated mirror of repo polygonize helper)",
+    "github_committed_tests": "NOT_RUN",
+    "full_blender_pipeline": "NOT_RUN"
+  },
+  "gate_passed": false,
+  "user_final_freeze": false
+}
