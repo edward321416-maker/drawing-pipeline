@@ -215,6 +215,10 @@ def main():
 
     cx_mid, cy_mid = (bb["xmin"] + bb["xmax"]) / 2, (bb["ymin"] + bb["ymax"]) / 2
     z_lo = min(o["zmin"] for o in model.bld)
+    # EV 샤프트 피트(-16.5 m)까지 그리면 단면이 제목란(y=262 mm) 밑으로 내려간다(감사 p15-01/p16-01/p17-02). B2 FFL -1.5 m에서 절단하고 그 사실을 적는다.
+    z_clip = max(z_lo, model.floors["B2"] - 1.5)
+    SEC_TOP = 34.0
+    clipbox = box(-1e4, z_clip, 1e4, roof_z + 5.0)
     for s in regs["sections"]:
         ax, val, ls, nm, sid = s["plane"]["axis"], s["plane"]["value_drawing_frame"], s["plane"]["look_sign"], s["name"][0], s["sheet"]
         sec = bv.section(model, ax, val, ls)
@@ -223,16 +227,16 @@ def main():
         kk = 1000.0 / sc
         ucen = (x0 + x1) / 2
         X = lambda u: 190.0 + (u - ucen) * kk
-        Y = lambda z: 40.0 + (roof_z + 0.4 - z) * kk
+        Y = lambda z: SEC_TOP + (roof_z + 0.4 - z) * kk
         meta = {"overall_chains": 0, "grid_chains": 0, "level_dims": 0, "major_dims": 0, "axis_bubbles": 0, "detail_callouts": 0, "level_labels": 18}
         sh = Sheet(sid, "단면도 %s–%s (SECTION %s–%s)" % (nm, nm, nm, nm), sc, "MODEL_GEOMETRY · 실제 메시 절단",
                    subtitle="%s · 절단면 %s = %.3f (도면틀) · 바라보는 방향 %s · 치수 mm" % (s["description"], ax, val, ("+" if ls > 0 else "−") + ax),
                    extra_lines=["절단 포셰 = 모델 메시와 절단면의 교선(층 평면을 쌓은 가짜 단면 아님). 절단면 너머 객체는 가림 처리 윤곽선",
                                 "층 레벨·슬래브 두께는 A-FLOR 층판에서 읽음. 접합·재료 상세 미검증. 지반·옹벽은 모델에 없어 표시하지 않음(UNVERIFIED)"])
-        level_lines(sh, model, X(x0) - 6, X(x1) + 6, Y, z_lo, roof_z - 0.1, roof_z)
+        level_lines(sh, model, X(x0) - 6, X(x1) + 6, Y, z_clip, roof_z - 0.1, roof_z)
         drawn, drawq = [], []
         for o, vis, edge in sec["items"]:
-            lines = geom_lines(edge)
+            lines = geom_lines(edge.intersection(clipbox))
             if lines:
                 drawn.append(o)
                 drawq.append((0.12 if o["kind"] in ("column", "facade") else 0.18, lines))
@@ -240,6 +244,9 @@ def main():
             sh.path([[(X(u), Y(z)) for u, z in ln] for ln in lines], stroke="#444", w=w, closed=False)
         cut_objs = []
         for o, poly in sec["cuts"]:
+            poly = poly.intersection(clipbox)
+            if poly.is_empty:
+                continue
             sh.path([[(X(u), Y(z)) for u, z in r] for r in geom_rings(poly)], fill="#111", stroke="#000", w=0.35)
             cut_objs.append(o)
         sh.line(12, Y(ffl0), 300, Y(ffl0), 0.35, "#555", "5,2")
@@ -249,7 +256,9 @@ def main():
         corners = [(bb["xmin"], bb["ymin"]), (bb["xmax"], bb["ymax"]), (bb["xmin"], bb["ymax"]), (bb["xmax"], bb["ymin"])]
         lo_u, hi_u = min(p[0] * right[0] + p[1] * right[1] for p in corners), max(p[0] * right[0] + p[1] * right[1] for p in corners)
         top_axes(sh, X, Y(roof_z), right, xs, ys, lo_u, hi_u, meta)
-        height_dims(sh, model, Y, X(x0) - 32.0, X(x1) + 30.0, roof_z, z_lo, tops, meta)
+        height_dims(sh, model, Y, X(x0) - 32.0, X(x1) + 30.0, roof_z, z_clip, tops, meta)
+        if z_clip > z_lo + 0.01:
+            sh.text(X(x0) - 6, Y(z_clip) + 3.2, "▼ 절단 %+.3f 아래 생략 — EV 샤프트 피트는 %+.3f까지 연장 (제목란과 겹치지 않도록)" % (r5(z_clip - ffl0), r5(z_lo - ffl0)), 5.5, "normal", "#a33")
         mini_keyplan(sh, run, 308, 24, 60, cut=s, letter=nm, north=model.north_deg)
         sh.text(308, 101, "절단선 %s–%s: %s = %.2f, 바라봄 %s" % (nm, nm, ax, val, ("+" if ls > 0 else "−") + ax), 6.0, "normal", "#c00")
         sh.text(308, 105.6, "키플랜 S-301 참조", 6.0, "normal", "#555")

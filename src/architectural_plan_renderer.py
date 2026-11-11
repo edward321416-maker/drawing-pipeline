@@ -111,7 +111,7 @@ def draw_furniture(cv, items, dotted="", dashed="", dashdot=""):
     큰 몸체부터 그린 뒤 세부선, 마지막에 식재선(6단계)과 동선을 얹는다."""
     for g, k in items:
         if k == "zone":
-            cv.stroke_poly("furn", g, 0.05, "#CCCCCC", extra=dotted)
+            cv.stroke_poly("furn", g, 0.07, "#999999", extra=dotted)
     bodies = sorted([g for g, k in items if k == "body"], key=lambda g: -g.area)
     for g in bodies:
         cv.stroke_poly("furn", g, 0.08, "#666666", fill="#FFFFFF")

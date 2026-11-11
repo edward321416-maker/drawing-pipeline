@@ -22,6 +22,7 @@ import fitz  # noqa: E402
 import t14d_sheet as _ts  # noqa: E402
 from t14g import config as cfg, modelsrc, registry as sheetreg  # noqa: E402
 from t14f import fonts as cjk_fonts  # noqa: E402
+from t14g import make_coverage  # noqa: E402
 cfg.apply(_ts)
 from t14d_sheet import Sheet  # noqa: E402
 import t14e_dims as dm  # noqa: E402
@@ -102,6 +103,7 @@ def main():
          ("A-002", "범례·기호·축척·사실성 등급·상태 표기", "—", "DOCUMENT", P("appendix", "A-002_legend_notation.pdf"), "appendix"),
          ("A-003", "배치도 / 1층 계획 (사용자 제공 1F_CleanLine_FIXED, 수정 없음)", "1:400", "USER_SUPPLIED · 1층 프로그램 후보(승인 전)", site_pdf, "plans")]
     plan_of = {"1F": "A-003 (1:400 배치+1층)"}
+    cov_pdf, cov_json, _cov = make_coverage.build(run, P("appendix", "A-902_floor_overview"))        # 17개 층 전부의 구성·차이(B2~15F)
     for p in plans:
         t = "%s 평면 (치수·축선·범례, 가구 PROPOSED_ONLY)" % "·".join(p["applies_to"])
         L.append((p["sheet"], t, p["scale"], "MODEL_GEOMETRY · LEVEL S · PROPOSED_ONLY · NOT FINAL", p["files"]["pdf"]["path"], "plans"))
@@ -116,6 +118,7 @@ def main():
         L.append((d["sheet"], d["title"], d["scale"], d["grade"], d["files"]["pdf"]["path"], "details"))
     L.append(("A-900", "미확정 설계 결정·도면 한계", "—", "DOCUMENT", P("appendix", "A-900_unresolved.pdf"), "appendix"))
     L.append(("A-901", "층별 동등성 판정·평면 발행표·치수 포함 현황", "—", "DOCUMENT + MODEL_DATA", P("appendix", "A-901_floor_matrix_dimension_coverage.pdf"), "appendix"))
+    L.append(("A-902", "층별 구성 일람 (B2~15F 17개 층, 1:1000)", "1:1000", "DOCUMENT + MODEL_DATA", cov_pdf, "appendix"))
     N = len(L)
 
     # ── A-000 표지 ─────────────────────────────────────────────────────────────────────────────
@@ -210,7 +213,7 @@ def main():
     items = ["U-01  상층 외벽·구획벽·실내 문·창·화장실·피난 경로: 모델에 없음 → 평면은 LEVEL S(기둥·튜브·코어·층판 + 제안 가구)",
              "U-02  캡슐(서측·동측) 출입구·문: 모델에 없고 사용자 미승인 → 벽을 닫아 둠 (D-405)", "U-03  코어 A~D 상층 내부(계단·부속실·승강기): GLB는 외곽 벽만 → D-404는 1층 마스터만, 상층은 UNRESOLVED DETAIL",
              "U-04  외피(A-FACD) 성격과 접합(유리 커튼월·벽·난간): 모델 부재 형상만 표시, 재료·접합 UNRESOLVED (D-406)", "U-05  평면 축척 1:250: 요구 1:200은 A3에 치수·범례 포함 불가 → 1:100 타일 분할 또는 A1 대판은 사용자 결정 대기",
-             "U-06  8F~9F·13F~14F 공통 평면: 면적·프로그램 동일, 수직 개구만 다름(검증됨) → 한 장에 공통 + 차이 표기, '동등함'은 주장하지 않음", "U-07  4F·5F는 3F와 같지 않음(프로그램·층판 차이) → 3F에 합치지 않음. 이들 층 평면은 미발행(A-901)",
+             "U-06  8F~9F·13F~14F 공통 평면: 면적·프로그램 동일, 수직 개구만 다름(검증됨) → 한 장에 공통 + 차이 표기, '동등함'은 주장하지 않음", "U-07  B2·B1·2F·4F·5F·6F·7F·11F·12F는 3F 등과 같지 않아(프로그램·층판 차이) 합치지 않고 개별 평면을 발행하지 않음 → A-902 층별 구성 일람(17개 층)에서 확인",
              "U-08  가구·프로그램: 모두 PROPOSED_ONLY. 3F 판매 A형 / 8F·9F 판매 B형 / 10F·15F F&B 좌석 유형 구분 / 13F·14F 문화·엔터(판매 부스 반복 없음) / 정원층 식재·테라스",
              "U-09  치수: 모델 값을 10 mm 단위로 반올림(모델 노이즈 0.6 mm 수준). 구조 부재 두께·재료 규격은 모델에 없어 표기하지 않음", "U-10  선큰(D-408): 계단 폭·단높이는 마스터에 없고 단 수·방향·윤곽만. 지반·옹벽 미표시",
              "U-11  화물 승강기(D-409): 카·기계·승강장 문·하역 차량 동선 모델 없음 → 형상만 MODEL, 나머지 UNRESOLVED", "U-12  입면 대지 지형·지하 옹벽·인접 건물은 모델에 없어 그리지 않음 (GL = 1F FFL만)",
@@ -231,9 +234,10 @@ def main():
         h = ff.get(f)
         if f == "15F":
             h = round(roof_z - floors["15F"], 3)
+        r5_ = lambda v: round(v / 0.005) * 0.005                                      # 입면·단면과 같은 5 mm 반올림(7F +31.001 → +31.000)
         why = {"1F": "A-003 사용자 제공", "3F": "기준층(판매 A형)", "8F": "기준층(판매 B형, 9F 공통)", "9F": "8F와 공통 (개구 차이 표기)", "10F": "F&B 기준층", "13F": "문화·엔터 기준층, 14F 공통", "14F": "13F와 공통 (개구 차이 표기)", "15F": "F&B·정원 기준층"}.get(f, "사용자 지시(기준층만)에 따라 미발행")
-        rows.append([f, "%+.3f" % (floors[f] - ffl0), ("%.3f" % h) if h is not None else "-", g.get("id", "-") + " " + {"INDEPENDENT": "독립", "TYPICAL_WITH_CIRCULATION_VARIATION": "공통+개구 차이"}.get(g.get("kind", ""), g.get("kind", "")), matrix[f]["program"][:30], plan_of.get(f, "평면 미발행"), why])
-    y_end = table(s91, 10, 14, [12, 18, 15, 62, 62, 40, 70], ["층", "FFL (m)", "층고 (m)", "그룹 · 종류(증거)", "프로그램(구역 ㎡)", "평면 시트", "발행 이유"], rows, row_h=6.3, pt=5.6)
+        rows.append([f, "%+.3f" % r5_(floors[f] - ffl0), ("%.3f" % r5_(h)) if h is not None else "-", g.get("id", "-") + " " + {"INDEPENDENT": "독립", "TYPICAL_WITH_CIRCULATION_VARIATION": "공통+개구 차이"}.get(g.get("kind", ""), g.get("kind", "")), matrix[f]["program"], plan_of.get(f, "A-902 일람만"), why])
+    y_end = table(s91, 10, 14, [12, 18, 15, 50, 76, 40, 68], ["층", "FFL (m)", "층고 (m)", "그룹 · 종류(증거)", "프로그램(구역 ㎡)", "평면 시트", "발행 이유"], rows, row_h=6.3, pt=5.6)
     y0 = y_end + 6
     s91.text(10, y0, "시트별 치수·참조 기호 포함 현황 (레지스트리에서 읽음)", 8, "bold", "#111")
     crow = []

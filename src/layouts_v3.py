@@ -45,7 +45,7 @@ class Items(list):
 class Packer:
     def __init__(self, region, obst, hard):
         self.region, self.obst, self.hard = region, obst, hard
-        self.items, self.taken = [], Polygon()
+        self.items, self.taken, self.solid = [], Polygon(), Polygon()
 
     def ok(self, g, soft=True, clear=0.0, vs_taken=True):
         if g.is_empty or not self.region.contains(g):
@@ -58,15 +58,22 @@ class Packer:
             return False
         return True
 
-    def _take(self, g):
+    def _take(self, g, solid=False):
         self.taken = unary_union([self.taken, g]) if not self.taken.is_empty else g
+        if solid:
+            self.solid = unary_union([self.solid, g]) if not self.solid.is_empty else g
+
+    def zone(self, g, ftype):
+        """바닥 표시 구역: 다른 가구가 피하지만 걸어 다닐 수 있다(동선 계산에서 막지 않는다)."""
+        self.items.append(Item(g, "zone", ftype))
+        self._take(g)
 
     def put(self, g, kind, ftype, soft=True, clear=0.0):
         if not self.ok(g, soft, clear):
             return False
         self.items.append(Item(g, kind, ftype))
         if kind in ("body", "counter", "zone"):
-            self._take(g)
+            self._take(g, solid=kind != "zone")
         return True
 
     def put_all(self, parts, soft=True, clear=0.0):
@@ -77,7 +84,7 @@ class Packer:
         for g, k, t in parts:
             self.items.append(Item(g, k, t))
             if k in ("body", "counter"):
-                self._take(g)
+                self._take(g, solid=True)
         return True
 
     def line(self, g, ftype):
@@ -127,8 +134,8 @@ def _chaikin(pts, it=2):
     return pts
 
 
-def circulation(region, blocked, anchors, step=0.45):
-    """anchors를 잇는 최소 신장 경로(여유가 큰 칸을 선호). 반환: ([LineString], 경로 최소 여유 폭 m, 연결된 앵커 수)."""
+def circulation(region, blocked, anchors, step=0.45, hub=None, end_trim=3.0):
+    """hub가 있으면 hub에서 각 앵커로 가는 방사형 경로, 없으면 앵커를 잇는 최소 신장 경로(여유가 큰 칸을 선호). 앵커 끝 end_trim m는 폭 측정에서 뺀다. 반환: ([LineString], 경로 최소 여유 폭 m, 연결된 앵커 수)."""
     xs, ys, free, clear, st = _grid(region, blocked, step)
     ny, nx = free.shape
     idx = np.arange(nx * ny).reshape(ny, nx)
@@ -142,7 +149,7 @@ def circulation(region, blocked, anchors, step=0.45):
             ib = idx[dy:ny, 0:nx + dx]
         ok = free.ravel()[ia.ravel()] & free.ravel()[ib.ravel()]
         mid = np.minimum(clear.ravel()[ia.ravel()], clear.ravel()[ib.ravel()])
-        cost = math.hypot(dx, dy) * st / (0.25 + mid)
+        cost = math.hypot(dx, dy) * st * (1.0 + 5.0 / (1.0 + mid))
         rows += list(ia.ravel()[ok]); cols += list(ib.ravel()[ok]); w += list(cost[ok])
     G = coo_matrix((w, (rows, cols)), shape=(nx * ny, nx * ny)).tocsr()
     snap = []
@@ -156,26 +163,51 @@ def circulation(region, blocked, anchors, step=0.45):
     snap = list(dict.fromkeys(snap))
     if len(snap) < 2:
         return [], None, len(snap)
-    D, pred = dijkstra(G, directed=False, indices=snap, return_predecessors=True)
-    M = np.array([[D[a][snap[b]] for b in range(len(snap))] for a in range(len(snap))])
-    M[~np.isfinite(M)] = 0
-    mst = minimum_spanning_tree(coo_matrix(M)).tocoo()
+    if hub is not None:
+        hi, hj = int(np.clip((hub[1] - ys[0]) / st, 0, ny - 1)), int(np.clip((hub[0] - xs[0]) / st, 0, nx - 1))
+        if not free[hi, hj]:
+            fy, fx = np.nonzero(free)
+            kk = int(np.argmin((fy - hi) ** 2 + (fx - hj) ** 2))
+            hi, hj = int(fy[kk]), int(fx[kk])
+        hid = int(idx[hi, hj])
+        D, pred = dijkstra(G, directed=False, indices=[hid], return_predecessors=True)
+        pairs = [(0, snap[b_]) for b_ in range(len(snap)) if snap[b_] != hid and np.isfinite(D[0][snap[b_]])]
+        base = hid
+    else:
+        D, pred = dijkstra(G, directed=False, indices=snap, return_predecessors=True)
+        M = np.array([[D[a_][snap[b_]] for b_ in range(len(snap))] for a_ in range(len(snap))])
+        M[~np.isfinite(M)] = 0
+        mst = minimum_spanning_tree(coo_matrix(M)).tocoo()
+        pairs = [(int(a_), snap[int(b_)]) for a_, b_ in zip(mst.row, mst.col)]
+        base = None
     lines, mins = [], []
-    for a, b in zip(mst.row, mst.col):
-        path, cur = [], snap[b]
-        while cur != snap[a] and cur >= 0:
+    for a_, tgt in pairs:
+        start = base if base is not None else snap[a_]
+        path, cur = [], tgt
+        while cur != start and cur >= 0:
             path.append(cur)
-            cur = pred[a][cur]
-        path.append(snap[a])
+            cur = pred[a_][cur]
+        path.append(start)
         if len(path) < 4:
             continue
-        pts = [(xs[p % nx], ys[p // nx]) for p in path[::-1]]
-        cl = [clear.ravel()[p] for p in path[::-1]]
-        k0 = max(1, int(1.2 / st))                                  # 튜브·코어 바로 앞(앵커 근처)은 여유 측정에서 뺀다
+        pts = [(xs[q % nx], ys[q // nx]) for q in path[::-1]]
+        cl = [clear.ravel()[q] for q in path[::-1]]
+        k0 = max(1, int(end_trim / st))                             # 튜브·코어 바로 앞(앵커 근처)은 여유 측정에서 뺀다
         mins.append(min(cl[k0:-k0]) if len(cl) > 2 * k0 + 1 else min(cl))
-        s = LineString(pts).simplify(0.25)
-        lines.append(LineString(_chaikin(list(s.coords), 2)))
+        sl_ = LineString(pts).simplify(0.4)
+        lines.append(LineString(_chaikin(list(sl_.coords), 2)))
     return lines, (2.0 * min(mins) if mins else None), len(snap)
+
+
+def _dissolve(lines):
+    """방사형 경로는 줄기 구간을 함께 쓴다. 같은 구간을 여러 번 그리지 않도록 겹침을 합친다(Q60: 동일 선분 중복)."""
+    if not lines:
+        return []
+    from shapely.ops import linemerge
+    u = unary_union(lines)
+    if hasattr(u, "geoms"):
+        u = linemerge(u)
+    return [g for g in (u.geoms if hasattr(u, "geoms") else [u]) if g.geom_type == "LineString" and g.length > 0.2]
 
 
 def _anchors(P, ctx):
@@ -196,9 +228,11 @@ def _anchors(P, ctx):
     return out or [(c.x, c.y)]
 
 
-def _add_routes(P, ctx, ops_from=None):
-    blocked = unary_union([g for g in (P.hard, P.taken.buffer(0.3) if not P.taken.is_empty else None) if g is not None and not g.is_empty])
-    lines, width, n = circulation(P.region, blocked, _anchors(P, ctx))
+def _add_routes(P, ctx, ops_from=None, perimeter_ops=False):
+    blocked = unary_union([g for g in (P.hard, P.solid.buffer(0.3) if not P.solid.is_empty else None) if g is not None and not g.is_empty])
+    c0 = P.region.centroid
+    lines, width, n = circulation(P.region, blocked, _anchors(P, ctx), hub=(c0.x, c0.y))
+    lines = _dissolve(lines)
     for ln in lines:
         P.items.append(Item(ln, "route_v", "visitor_route"))
     ops = None
@@ -207,9 +241,16 @@ def _add_routes(P, ctx, ops_from=None):
         if cores is not None and not cores.is_empty:
             tgt = cores.centroid
             ol, _, _ = circulation(P.region, blocked, [ops_from, (tgt.x, tgt.y)])
+            ol = _dissolve(ol)
             for ln in ol:
                 P.items.append(Item(ln, "route_o", "operations_route"))
             ops = len(ol)
+    if perimeter_ops:                                                              # 운영 동선(제안): 외벽과 벽 진열 사이의 서비스 레인
+        lane = P.region.buffer(-0.75).boundary.difference(unary_union([blocked, P.solid.buffer(0.15)]))
+        parts = [g for g in (lane.geoms if hasattr(lane, "geoms") else [lane]) if g.geom_type == "LineString" and g.length > 4.0]
+        for g in parts:
+            P.items.append(Item(g, "route_o", "operations_route"))
+        ops = len(parts)
     return {"route_min_clear_width_m": width, "route_segments": len(lines), "anchors": n, "ops_route_segments": ops}
 
 
@@ -255,12 +296,12 @@ def _retail(P, rng, floor, ctx):
                 break
         if exp:
             x, y, z = exp
-            P.items.append(Item(z, "zone", "experience_zone")); P._take(z)
+            P.zone(z, "experience_zone")
             for sx, sy in ((-2.0, -1.5), (2.0, -1.5), (0.0, 1.8)):
                 P.items.append(Item(_circle(x + sx, y + sy, 0.55), "body", "demo_table"))
             P.items.append(Item(R(x, y + 3.2, 2.4, 0.6), "counter", "experience_counter"))
         SIZES = [((3.0, 1.2), 4), ((3.6, 1.2), 3), ((2.4, 1.2), 2), ((4.2, 1.4), 2)]
-        pys = (3.9, 4.4)
+        pys = (3.6, 3.9)
         row, y = 0, y0 + 3.4
         while y < y1 - 2.6:
             x = x0 + 3.4 + (2.6 if row % 2 else 0.0)
@@ -272,7 +313,7 @@ def _retail(P, rng, floor, ctx):
                 if (plaza is None or body.distance(plaza) > 2.4) and P.put_all([(body, "body", "brand_cell_%.1fx%.1f" % (w, h)), (cnt, "counter", "cashier_%.1fx%.1f" % cw),
                                                                                (LineString([(x + 0.15, y), (x + w - 0.15, y)]), "line", "display_line")], clear=0.55):
                     pass
-                x += w + cw[0] + rng.uniform(1.9, 2.6)
+                x += w + cw[0] + rng.uniform(1.1, 1.7)
             y += pys[row % 2]
             row += 1
     else:
@@ -296,7 +337,7 @@ def _retail(P, rng, floor, ctx):
         for (x, y) in _spots(P.region, 2.0, lambda p: math.hypot(p[0] - cx, p[1] - (cy + 8 if floor in ("8F", "6F") else cy - 8))):
             z = R(x, y, 10.0, 5.0)
             if P.ok(z, soft=True, clear=0.5):
-                P.items.append(Item(z, "zone", "event_popup_plaza")); P._take(z)
+                P.zone(z, "event_popup_plaza")
                 for i in range(3):
                     P.items.append(Item(R(x - 3 + i * 3.0, y, 1.0, 1.0), "body", "event_plinth"))
                 break
@@ -320,15 +361,17 @@ def _fnb(P, rng, floor, ctx):
         for i in range(n):
             t = (a0 + 0.65 + i * 1.3) if horizontal else (b0 + 0.65 + i * 1.3)
             cx_, cy_ = (t, b1 + 0.55) if (horizontal and (b0 + b1) / 2 < cy0) else (t, b0 - 0.55) if horizontal else ((a1 + 0.55, t) if (a0 + a1) / 2 < cx0 else (a0 - 0.55, t))
-            P.put(R(cx_, cy_, 0.7, 0.7), "body", "table_2top", soft=False)
+            dims_, nm_ = _pick(rng, [((0.7, 0.7), 3), ((0.9, 0.6), 2), ((0.6, 0.9), 2)]), None
+            nm_ = "table_2top_%dx%d" % (round(dims_[0] * 10), round(dims_[1] * 10))
+            P.put(R(cx_, cy_, dims_[0], dims_[1]), "body", nm_, soft=False)
     svc = None                                                                         # 서비스 카운터 + 줄서기 구역(튜브·코어 가까이)
     base = (ctx.get("tubes") or [None])[0]
     cands = _spots(P.region, 1.5, lambda p: math.hypot(p[0] - (base["c"].x if base else cx0), p[1] - (base["c"].y - (base["r"] + 4.0) if base else cy0)))
     for (x, y) in cands:
         cnt, q = R(x, y, 8.0, 0.8), R(x, y - 2.0, 7.0, 2.2)
         if P.ok(cnt, soft=True) and P.ok(q, soft=True):
-            P.items.append(Item(cnt, "counter", "service_counter")); P._take(cnt)
-            P.items.append(Item(q, "zone", "queue_zone"))
+            P.items.append(Item(cnt, "counter", "service_counter")); P._take(cnt, solid=True)
+            P.zone(q, "queue_zone")
             svc = (x, y + 1.2)
             break
     bars = 0
@@ -337,7 +380,7 @@ def _fnb(P, rng, floor, ctx):
             break
         cnt, zone = R(x, y, 9.0, 0.9), R(x, y, 10.5, 3.6)
         if P.ok(zone, soft=True):
-            P.items.append(Item(cnt, "counter", "bar_counter")); P._take(zone)
+            P.items.append(Item(cnt, "counter", "bar_counter")); P._take(zone); P._take(cnt, solid=True)
             for i in range(11):
                 P.items.append(Item(RING(x - 4.4 + i * 0.88, y + 0.9, 0.22, 10), "line", "stool"))
             bars += 1
@@ -353,7 +396,7 @@ def _fnb(P, rng, floor, ctx):
                 P.put_all(parts, clear=0.5)
                 x += 8.4
             else:
-                kind, seats, wt = _pick(rng, [((k, s), w) for k, s, w in TOPS])
+                kind, seats = _pick(rng, [((k, s), w) for k, s, w in TOPS])
                 tw, th = {4: (1.0, 0.8), 2: (0.7, 0.7), 6: (1.6, 0.9)}[seats]
                 offs = {4: [(-0.7, 0), (0.7, 0), (0, -0.6), (0, 0.6)], 2: [(-0.55, 0), (0.55, 0)], 6: [(-1.0, 0), (1.0, 0), (-0.4, -0.65), (0.4, -0.65), (-0.4, 0.65), (0.4, 0.65)]}[seats]
                 P.put_all([(R(x, y, tw, th), "body", kind)] + _chairs(P, x, y, offs), clear=0.5)
@@ -379,7 +422,7 @@ def _culture(P, rng, floor, ctx):
             break
     if stage:
         x, y, w, h, g, zone = stage
-        P.items.append(Item(g, "body", "stage")); P._take(zone)
+        P.items.append(Item(g, "body", "stage")); P._take(zone); P._take(g, solid=True)
         wide = w > h
         for i in range(1, 4):
             P.line(LineString([(x - w / 2, y - h / 2 - i * 0.3), (x + w / 2, y - h / 2 - i * 0.3)]) if wide else LineString([(x - w / 2 - i * 0.3, y - h / 2), (x - w / 2 - i * 0.3, y + h / 2)]), "stage_step")
@@ -407,7 +450,7 @@ def _culture(P, rng, floor, ctx):
             break
     if gal:
         x, y, z = gal
-        P.items.append(Item(z, "zone", "exhibition_zone")); P._take(z)
+        P.zone(z, "exhibition_zone")
         for i in range(3):
             for j in range(2):
                 P.items.append(Item(R(x - 5.0 + i * 5.0, y - 2.5 + j * 5.0, 3.0, 0.15) if (i + j) % 2 == 0 else R(x - 5.0 + i * 5.0, y - 2.5 + j * 5.0, 0.15, 3.0), "body", "gallery_panel"))
@@ -432,9 +475,19 @@ def _culture(P, rng, floor, ctx):
             break
         zone = R(x, y, 5.6, 4.2)
         if P.ok(zone, soft=True):
-            P.items.append(Item(R(x, y - 1.1, 2.4, 0.9), "body", "lounge_sofa"))
-            P.items.append(Item(R(x, y + 1.1, 2.4, 0.9, 180), "body", "lounge_sofa"))
-            P.items.append(Item(R(x, y, 1.2, 0.7), "body", "lounge_table"))
+            if pods % 3 == 0:                                                         # 포드 A: 마주 보는 소파 2 + 낮은 테이블
+                P.items.append(Item(R(x, y - 1.1, 2.4, 0.9), "body", "lounge_sofa"))
+                P.items.append(Item(R(x, y + 1.1, 2.4, 0.9, 180), "body", "lounge_sofa"))
+                P.items.append(Item(R(x, y, 1.2, 0.7), "body", "lounge_table"))
+            elif pods % 3 == 1:                                                       # 포드 B: 1인 의자 3 + 원형 테이블
+                P.items.append(Item(_circle(x, y, 0.45), "body", "lounge_round_table"))
+                for a_ in (90, 210, 330):
+                    P.items.append(Item(R(x + 1.2 * math.cos(math.radians(a_)), y + 1.2 * math.sin(math.radians(a_)), 0.9, 0.9, a_ - 90), "body", "lounge_armchair"))
+            else:                                                                      # 포드 C: 긴 벤치 + 낮은 테이블 2
+                P.items.append(Item(R(x, y - 1.3, 3.6, 0.6), "body", "lounge_bench"))
+                P.items.append(Item(R(x - 0.8, y + 0.3, 0.9, 0.7), "body", "lounge_table_small"))
+                P.items.append(Item(R(x + 0.8, y + 0.3, 0.9, 0.7), "body", "lounge_table_small"))
+            P._take(R(x, y, 2.4, 2.9), solid=True)
             P.line(RING(x + 2.2, y, 0.4, 12), "planter")
             P._take(zone)
             pods += 1
@@ -442,7 +495,7 @@ def _culture(P, rng, floor, ctx):
     for (x, y) in _spots(P.region, 1.5, lambda p: math.hypot(p[0] - cx0, p[1] - y0)):
         c = R(x, y, 3.0, 0.7)
         if P.ok(c.buffer(0.5), soft=True):
-            P.items.append(Item(c, "counter", "info_desk")); P._take(c)
+            P.items.append(Item(c, "counter", "info_desk")); P._take(c, solid=True)
             info = (x, y)
             break
     return info
@@ -497,7 +550,7 @@ def _garden(P, rng, floor, ctx):
     for (x, y) in _spots(P.region, 2.0, lambda p: math.hypot(p[0] - x1 + 12, p[1] - y0 - 10)):   # 테라스: 식탁 세트 구역
         z = R(x, y, 10.0, 7.0)
         if P.ok(z, soft=True, clear=0.8):
-            P.items.append(Item(z, "zone", "terrace_zone")); P._take(z)
+            P.zone(z, "terrace_zone")
             for i in range(2):
                 for j in range(2):
                     tx, ty = x - 2.6 + i * 5.2, y - 1.6 + j * 3.2
@@ -527,7 +580,7 @@ def layout(name, region, obst, hard, rng, floor, ctx):
         svc, kind = None, "retail_" + ("A" if floor in A_FLOORS else "B")
     else:
         return Items()
-    meta = _add_routes(P, ctx, ops_from=svc) if kind != "garden" else {"route_min_clear_width_m": None, "route_segments": 0, "anchors": 0, "ops_route_segments": None}
+    meta = _add_routes(P, ctx, ops_from=svc, perimeter_ops=kind.startswith("retail")) if kind != "garden" else {"route_min_clear_width_m": None, "route_segments": 0, "anchors": 0, "ops_route_segments": None}
     types = {}
     for it in P.items:
         if it[1] in ("body", "counter"):

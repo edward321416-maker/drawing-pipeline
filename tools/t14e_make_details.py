@@ -226,6 +226,7 @@ def draw_section(sh, model, spec, c):
         used.append(o["name"])
         cut_names.append((o, g))
     c.sec_cuts = cut_names
+    c.sec_cuts_raw = [(o, poly) for o, poly in sec["cuts"]]                  # 창(window)으로 자르기 전 절단 폴리곤: 두께 치수는 이것으로 잰다(감사 p19-01)
     for name, z in fl_in:
         sh.line(X(uc - half), Y(z), X(uc + half), Y(z), 0.1, "#999", "2.2,1.6")
         xx = X(uc - half) + 5
@@ -452,16 +453,17 @@ def main():
             ffl = F[spec["section"][2]]
             # 슬래브 두께: 절단된 층판 중 이 층 FFL에 걸린 것
             slab_t = None
+            full = {o["name"]: g for o, g in c.sec_cuts_raw}
             for o, g in c.sec_cuts:
                 if o["kind"] == "slab":
                     b = g.bounds
                     if abs(b[3] - ffl) < 0.06:
-                        slab_t = b[3] - b[1]
-                        xl_ = b[0] if b[0] > c.uc - c.half + 0.2 else b[2]
-                        dm.dim_v(sh, c.SY_(b[3]), c.SY_(b[1]), c.SX_(b[2]) + 6.0 if b[2] < c.uc + c.half - 1.0 else c.SX_(b[0]) - 6.0, "t=%s" % dm.fmt_mm(slab_t), pt=5.8, color="#06a", left=False)
+                        bf = full[o["name"]].bounds                           # 두께 = 자르지 않은 절단 폴리곤의 높이(창 아래로 잘린 400이 아니라 모델의 500)
+                        slab_t = bf[3] - bf[1]
+                        dm.dim_v(sh, c.SY_(b[3]), c.SY_(b[3] - slab_t), c.SX_(b[2]) + 6.0 if b[2] < c.uc + c.half - 1.0 else c.SX_(b[0]) - 6.0, "t=%s" % dm.fmt_mm(slab_t), pt=5.8, color="#06a", left=False)
                         break
             if slab_t is None:
-                for o, g in c.sec_cuts:
+                for o, g in c.sec_cuts_raw:
                     if o["kind"] == "slab":
                         b = g.bounds
                         slab_t = b[3] - b[1]
@@ -504,8 +506,8 @@ def main():
         slab_ = bv._union([pc.polygons_from_segments(p["segments"]) for p in sl3["projection"]])
         bx0, by0, bx1, by1 = slab_.bounds
         kk_ = 32.0 / max(bx1 - bx0, by1 - by0)
-        if spec["source"] == "glb" or spec["sid"] in ("D-409",):
-            wc = spec["center"] if spec["source"] == "glb" else ctr(fr)
+        if True:                                                                  # 모든 상세 시트에 확대 위치 고리(마스터 출처 D-404·D-408 포함, 감사 p22-03/p26-04)
+            wc = ctr(fr) if spec["sid"] == "D-409" else spec["center"]
             sh.path([[(14 + (wc[0] - bx0) * kk_ + 3.0 * math.cos(t / 20 * 2 * math.pi), 226 + (by1 - wc[1]) * kk_ + 3.0 * math.sin(t / 20 * 2 * math.pi)) for t in range(21)]], stroke="#a60", w=0.4, closed=True)
         sh.text(34, 222.0, "· 참조: %s" % spec["ref"], 6.0, "bold", "#a60")
         tx, ty = 56.0, 224.0
