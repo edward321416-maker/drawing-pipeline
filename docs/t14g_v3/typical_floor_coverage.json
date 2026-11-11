@@ -1,0 +1,364 @@
+{
+ "scale": "1:1000",
+ "sheet": "A-902",
+ "floors": [
+  {
+   "floor": "B2",
+   "ffl_m": -11.0,
+   "slab_area_m2": 2847.0,
+   "program_areas_m2": {
+    "판매": 2526.0
+   },
+   "openings": {
+    "count": 5,
+    "area_m2": 69.0
+   },
+   "tubes": 3,
+   "cores": 2,
+   "columns": 34,
+   "plan_sheet": null,
+   "publication_status": "OVERVIEW_ONLY",
+   "equivalence_group": "G01",
+   "equivalence_kind": "INDEPENDENT",
+   "also_in": "A-902"
+  },
+  {
+   "floor": "B1",
+   "ffl_m": -5.5,
+   "slab_area_m2": 2605.6,
+   "program_areas_m2": {
+    "F&B": 933.1,
+    "판매": 1417.7
+   },
+   "openings": {
+    "count": 10,
+    "area_m2": 310.5
+   },
+   "tubes": 8,
+   "cores": 4,
+   "columns": 34,
+   "plan_sheet": null,
+   "publication_status": "OVERVIEW_ONLY",
+   "equivalence_group": "G02",
+   "equivalence_kind": "INDEPENDENT",
+   "also_in": "A-902"
+  },
+  {
+   "floor": "1F",
+   "ffl_m": 0.0,
+   "slab_area_m2": 2560.2,
+   "program_areas_m2": {
+    "서비스": 231.9,
+    "판매": 1575.6
+   },
+   "openings": {
+    "count": 11,
+    "area_m2": 355.9
+   },
+   "tubes": 9,
+   "cores": 4,
+   "columns": 34,
+   "plan_sheet": "A-003",
+   "publication_status": "OWN_PLAN",
+   "equivalence_group": "G03",
+   "equivalence_kind": "INDEPENDENT",
+   "also_in": "A-902"
+  },
+  {
+   "floor": "2F",
+   "ffl_m": 6.0,
+   "slab_area_m2": 2002.5,
+   "program_areas_m2": {
+    "F&B": 1821.7
+   },
+   "openings": {
+    "count": 7,
+    "area_m2": 217.0
+   },
+   "tubes": 9,
+   "cores": 4,
+   "columns": 34,
+   "plan_sheet": null,
+   "publication_status": "OVERVIEW_ONLY",
+   "equivalence_group": "G04",
+   "equivalence_kind": "INDEPENDENT",
+   "also_in": "A-902"
+  },
+  {
+   "floor": "3F",
+   "ffl_m": 11.0,
+   "slab_area_m2": 2477.4,
+   "program_areas_m2": {
+    "판매": 2526.0
+   },
+   "openings": {
+    "count": 11,
+    "area_m2": 438.8
+   },
+   "tubes": 9,
+   "cores": 4,
+   "columns": 34,
+   "plan_sheet": "P-101",
+   "publication_status": "OWN_PLAN",
+   "equivalence_group": "G05",
+   "equivalence_kind": "INDEPENDENT",
+   "also_in": "A-902"
+  },
+  {
+   "floor": "4F",
+   "ffl_m": 16.0,
+   "slab_area_m2": 2449.6,
+   "program_areas_m2": {
+    "F&B": 216.2,
+    "판매": 2288.3
+   },
+   "openings": {
+    "count": 11,
+    "area_m2": 466.6
+   },
+   "tubes": 9,
+   "cores": 4,
+   "columns": 34,
+   "plan_sheet": null,
+   "publication_status": "OVERVIEW_ONLY",
+   "equivalence_group": "G06",
+   "equivalence_kind": "INDEPENDENT",
+   "also_in": "A-902"
+  },
+  {
+   "floor": "5F",
+   "ffl_m": 21.0,
+   "slab_area_m2": 2449.6,
+   "program_areas_m2": {
+    "판매": 2526.0
+   },
+   "openings": {
+    "count": 11,
+    "area_m2": 466.6
+   },
+   "tubes": 9,
+   "cores": 4,
+   "columns": 34,
+   "plan_sheet": null,
+   "publication_status": "OVERVIEW_ONLY",
+   "equivalence_group": "G07",
+   "equivalence_kind": "INDEPENDENT",
+   "also_in": "A-902"
+  },
+  {
+   "floor": "6F",
+   "ffl_m": 26.0,
+   "slab_area_m2": 2449.6,
+   "program_areas_m2": {
+    "F&B": 496.9,
+    "garden": 1198.7,
+    "판매": 742.6
+   },
+   "openings": {
+    "count": 11,
+    "area_m2": 466.6
+   },
+   "tubes": 10,
+   "cores": 4,
+   "columns": 34,
+   "plan_sheet": null,
+   "publication_status": "OVERVIEW_ONLY",
+   "equivalence_group": "G08",
+   "equivalence_kind": "INDEPENDENT",
+   "also_in": "A-902"
+  },
+  {
+   "floor": "7F",
+   "ffl_m": 31.001,
+   "slab_area_m2": 1415.6,
+   "program_areas_m2": {
+    "F&B": 289.9,
+    "판매": 946.8
+   },
+   "openings": {
+    "count": 5,
+    "area_m2": 147.6
+   },
+   "tubes": 9,
+   "cores": 4,
+   "columns": 34,
+   "plan_sheet": null,
+   "publication_status": "OVERVIEW_ONLY",
+   "equivalence_group": "G09",
+   "equivalence_kind": "INDEPENDENT",
+   "also_in": "A-902"
+  },
+  {
+   "floor": "8F",
+   "ffl_m": 36.0,
+   "slab_area_m2": 2339.3,
+   "program_areas_m2": {
+    "판매": 2526.0
+   },
+   "openings": {
+    "count": 12,
+    "area_m2": 576.8
+   },
+   "tubes": 9,
+   "cores": 4,
+   "columns": 34,
+   "plan_sheet": "P-102",
+   "publication_status": "OWN_PLAN",
+   "equivalence_group": "G10",
+   "equivalence_kind": "TYPICAL_WITH_CIRCULATION_VARIATION",
+   "also_in": "A-902"
+  },
+  {
+   "floor": "9F",
+   "ffl_m": 40.5,
+   "slab_area_m2": 2339.5,
+   "program_areas_m2": {
+    "판매": 2526.0
+   },
+   "openings": {
+    "count": 12,
+    "area_m2": 576.6
+   },
+   "tubes": 9,
+   "cores": 4,
+   "columns": 34,
+   "delta_vs_reference": {
+    "reference": "8F",
+    "slab_symdiff_m2": 3.6,
+    "pieces": 2
+   },
+   "plan_sheet": "P-102",
+   "publication_status": "SHARED_PLAN_WITH_DELTA",
+   "equivalence_group": "G10",
+   "equivalence_kind": "TYPICAL_WITH_CIRCULATION_VARIATION",
+   "also_in": "A-902"
+  },
+  {
+   "floor": "10F",
+   "ffl_m": 45.0,
+   "slab_area_m2": 2339.5,
+   "program_areas_m2": {
+    "F&B": 2526.0
+   },
+   "openings": {
+    "count": 12,
+    "area_m2": 576.6
+   },
+   "tubes": 9,
+   "cores": 4,
+   "columns": 34,
+   "plan_sheet": "P-103",
+   "publication_status": "OWN_PLAN",
+   "equivalence_group": "G11",
+   "equivalence_kind": "INDEPENDENT",
+   "also_in": "A-902"
+  },
+  {
+   "floor": "11F",
+   "ffl_m": 51.0,
+   "slab_area_m2": 2354.3,
+   "program_areas_m2": {
+    "문화·엔터": 2489.1
+   },
+   "openings": {
+    "count": 12,
+    "area_m2": 561.9
+   },
+   "tubes": 9,
+   "cores": 4,
+   "columns": 30,
+   "plan_sheet": null,
+   "publication_status": "OVERVIEW_ONLY",
+   "equivalence_group": "G12",
+   "equivalence_kind": "INDEPENDENT",
+   "also_in": "A-902"
+  },
+  {
+   "floor": "12F",
+   "ffl_m": 57.0,
+   "slab_area_m2": 2012.2,
+   "program_areas_m2": {
+    "문화·엔터": 2489.1
+   },
+   "openings": {
+    "count": 13,
+    "area_m2": 903.9
+   },
+   "tubes": 9,
+   "cores": 4,
+   "columns": 30,
+   "plan_sheet": null,
+   "publication_status": "OVERVIEW_ONLY",
+   "equivalence_group": "G13",
+   "equivalence_kind": "INDEPENDENT",
+   "also_in": "A-902"
+  },
+  {
+   "floor": "13F",
+   "ffl_m": 61.5,
+   "slab_area_m2": 2343.3,
+   "program_areas_m2": {
+    "문화·엔터": 2526.0
+   },
+   "openings": {
+    "count": 12,
+    "area_m2": 572.8
+   },
+   "tubes": 9,
+   "cores": 4,
+   "columns": 34,
+   "plan_sheet": "P-104",
+   "publication_status": "OWN_PLAN",
+   "equivalence_group": "G14",
+   "equivalence_kind": "TYPICAL_WITH_CIRCULATION_VARIATION",
+   "also_in": "A-902"
+  },
+  {
+   "floor": "14F",
+   "ffl_m": 66.0,
+   "slab_area_m2": 2343.3,
+   "program_areas_m2": {
+    "문화·엔터": 2526.0
+   },
+   "openings": {
+    "count": 12,
+    "area_m2": 572.8
+   },
+   "tubes": 9,
+   "cores": 4,
+   "columns": 34,
+   "delta_vs_reference": {
+    "reference": "13F",
+    "slab_symdiff_m2": 3.5,
+    "pieces": 2
+   },
+   "plan_sheet": "P-104",
+   "publication_status": "SHARED_PLAN_WITH_DELTA",
+   "equivalence_group": "G14",
+   "equivalence_kind": "TYPICAL_WITH_CIRCULATION_VARIATION",
+   "also_in": "A-902"
+  },
+  {
+   "floor": "15F",
+   "ffl_m": 70.5,
+   "slab_area_m2": 2343.3,
+   "program_areas_m2": {
+    "F&B": 1000.3,
+    "garden": 1456.9
+   },
+   "openings": {
+    "count": 12,
+    "area_m2": 572.8
+   },
+   "tubes": 9,
+   "cores": 4,
+   "columns": 15,
+   "plan_sheet": "P-105",
+   "publication_status": "OWN_PLAN",
+   "equivalence_group": "G15",
+   "equivalence_kind": "INDEPENDENT",
+   "also_in": "A-902"
+  }
+ ],
+ "note": "B2~15F 17개 층 모두 A-902에 그려진다. 별도 평면이 없는 층은 publication_status=OVERVIEW_ONLY. STRICT 동등 쌍 0건(증거: floor_equivalence_evidence.json)이라 층을 합치지 않았다."
+}

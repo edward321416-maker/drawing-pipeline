@@ -1,0 +1,182 @@
+{
+ "floors": [
+  {
+   "floor": "3F",
+   "programs": [
+    "retail_A"
+   ],
+   "units": 87,
+   "overlapping_pairs": 0,
+   "touching_structure": 0,
+   "within_0.2m_of_structure": 0,
+   "outside_slab": 0,
+   "max_identical_share": 0.149,
+   "most_repeated": [
+    "cashier_1.0x0.5",
+    1.0,
+    0.5
+   ],
+   "types": [
+    "brand",
+    "cashier",
+    "demo_table",
+    "experience_counter",
+    "popup_kiosk",
+    "waiting_bench",
+    "wall_display"
+   ],
+   "n_types": 7,
+   "aisle_anchors": 7,
+   "aisle_anchors_reachable_by_structure": 6,
+   "aisle_width_connecting_all_anchors_m": 1.8,
+   "passes": true
+  },
+  {
+   "floor": "8F",
+   "programs": [
+    "retail_B"
+   ],
+   "units": 47,
+   "overlapping_pairs": 0,
+   "touching_structure": 0,
+   "within_0.2m_of_structure": 0,
+   "outside_slab": 6,
+   "max_identical_share": 0.085,
+   "most_repeated": [
+    "street_island_3.0",
+    1.4,
+    3.0
+   ],
+   "types": [
+    "cashier",
+    "event_plinth",
+    "popup_cart",
+    "street",
+    "waiting_bench",
+    "wall_display"
+   ],
+   "n_types": 6,
+   "aisle_anchors": 7,
+   "aisle_anchors_reachable_by_structure": 6,
+   "aisle_width_connecting_all_anchors_m": 2.4,
+   "passes": true
+  },
+  {
+   "floor": "10F",
+   "programs": [
+    "fnb"
+   ],
+   "units": 116,
+   "overlapping_pairs": 0,
+   "touching_structure": 0,
+   "within_0.2m_of_structure": 0,
+   "outside_slab": 16,
+   "max_identical_share": 0.259,
+   "most_repeated": [
+    "table_2top_7x7",
+    0.7,
+    0.7
+   ],
+   "types": [
+    "banquette",
+    "bar_counter",
+    "communal_table",
+    "service_counter",
+    "table_2top_6x9",
+    "table_2top_7x7",
+    "table_2top_9x6",
+    "table_2top_free",
+    "table_4top",
+    "table_6top"
+   ],
+   "n_types": 10,
+   "aisle_anchors": 7,
+   "aisle_anchors_reachable_by_structure": 6,
+   "aisle_width_connecting_all_anchors_m": 2.4,
+   "passes": true
+  },
+  {
+   "floor": "13F",
+   "programs": [
+    "culture"
+   ],
+   "units": 50,
+   "overlapping_pairs": 0,
+   "touching_structure": 0,
+   "within_0.2m_of_structure": 0,
+   "outside_slab": 0,
+   "max_identical_share": 0.16,
+   "most_repeated": [
+    "lounge_sofa",
+    2.4,
+    0.9
+   ],
+   "types": [
+    "assembly_step",
+    "info_desk",
+    "lounge_armchair",
+    "lounge_bench",
+    "lounge_round_table",
+    "lounge_sofa",
+    "lounge_table",
+    "lounge_table_small",
+    "plinth"
+   ],
+   "n_types": 9,
+   "aisle_anchors": 7,
+   "aisle_anchors_reachable_by_structure": 6,
+   "aisle_width_connecting_all_anchors_m": 2.4,
+   "passes": true
+  },
+  {
+   "floor": "15F",
+   "programs": [
+    "fnb",
+    "garden"
+   ],
+   "units": 95,
+   "overlapping_pairs": 0,
+   "touching_structure": 0,
+   "within_0.2m_of_structure": 0,
+   "outside_slab": 30,
+   "max_identical_share": 0.2,
+   "most_repeated": [
+    "table_2top_7x7",
+    0.7,
+    0.7
+   ],
+   "types": [
+    "banquette",
+    "garden_bench",
+    "planting_bed",
+    "table_2top_6x9",
+    "table_2top_7x7",
+    "table_2top_9x6",
+    "table_2top_free",
+    "table_4top",
+    "table_6top",
+    "tree_canopy"
+   ],
+   "n_types": 10,
+   "aisle_anchors": 7,
+   "aisle_anchors_reachable_by_structure": 6,
+   "aisle_width_connecting_all_anchors_m": 2.0,
+   "passes": true
+  }
+ ],
+ "distinct": {
+  "jaccard": {
+   "10F~13F": 0.0,
+   "10F~3F": 0.0,
+   "10F~8F": 0.0,
+   "13F~15F": 0.0,
+   "13F~3F": 0.0,
+   "13F~8F": 0.0,
+   "15F~3F": 0.0,
+   "15F~8F": 0.0,
+   "3F~8F": 0.3
+  },
+  "max_jaccard": 0.3,
+  "passes": true
+ }
+}

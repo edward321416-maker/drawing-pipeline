@@ -1,0 +1,327 @@
+{
+ "pdf": "output/C_T14G_V3_run/book/drawing_set_candidate_v3.pdf",
+ "checked": 28,
+ "passed": 28,
+ "failed": [],
+ "rows": [
+  {
+   "sheet": "D-401",
+   "quantity": "tube outer diameter (circular: circularity 0.9986)",
+   "model_recomputed": "9000",
+   "source": "plan cut at 3F+1.5 m",
+   "registry_value": "9000",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-401",
+   "quantity": "tube inner diameter",
+   "model_recomputed": "8760",
+   "source": "plan cut at 3F+1.5 m",
+   "registry_value": "8760",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-401",
+   "quantity": "tube wall thickness",
+   "model_recomputed": "120",
+   "source": "(outer-inner)/2",
+   "registry_value": "120",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-402",
+   "quantity": "tube outer diameter (circular: circularity 0.9986)",
+   "model_recomputed": "9000",
+   "source": "plan cut at 3F+1.5 m",
+   "registry_value": "9000",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-402",
+   "quantity": "tube inner diameter",
+   "model_recomputed": "8760",
+   "source": "plan cut at 3F+1.5 m",
+   "registry_value": "8760",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-402",
+   "quantity": "tube wall thickness",
+   "model_recomputed": "120",
+   "source": "(outer-inner)/2",
+   "registry_value": "120",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-403",
+   "quantity": "tube outer diameter (circular: circularity 0.9986)",
+   "model_recomputed": "8000",
+   "source": "plan cut at 3F+1.5 m",
+   "registry_value": "8000",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-403",
+   "quantity": "tube inner diameter",
+   "model_recomputed": "7760",
+   "source": "plan cut at 3F+1.5 m",
+   "registry_value": "7760",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-403",
+   "quantity": "tube wall thickness",
+   "model_recomputed": "120",
+   "source": "(outer-inner)/2",
+   "registry_value": "120",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-401",
+   "quantity": "slab thickness at 3F",
+   "model_recomputed": "500",
+   "source": "A-FLOR object zmax-zmin",
+   "registry_value": "500",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-402",
+   "quantity": "slab thickness at 3F",
+   "model_recomputed": "500",
+   "source": "A-FLOR object zmax-zmin",
+   "registry_value": "500",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-403",
+   "quantity": "slab thickness at 3F",
+   "model_recomputed": "500",
+   "source": "A-FLOR object zmax-zmin",
+   "registry_value": "500",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-405",
+   "quantity": "slab thickness at 3F",
+   "model_recomputed": "500",
+   "source": "A-FLOR object zmax-zmin",
+   "registry_value": "500",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-406",
+   "quantity": "slab thickness at 6F",
+   "model_recomputed": "500",
+   "source": "A-FLOR object zmax-zmin",
+   "registry_value": "500",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-407",
+   "quantity": "slab thickness at 8F",
+   "model_recomputed": "500",
+   "source": "A-FLOR object zmax-zmin",
+   "registry_value": "500",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-409",
+   "quantity": "slab thickness at 1F",
+   "model_recomputed": "500",
+   "source": "A-FLOR object zmax-zmin",
+   "registry_value": "500",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-405",
+   "quantity": "capsule outer width",
+   "model_recomputed": "8000",
+   "source": "mesh bbox",
+   "registry_value": "8000",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-407",
+   "quantity": "escalator incline (deg)",
+   "model_recomputed": "30.0°",
+   "source": "inclined-face normals of the mesh",
+   "registry_value": "30.0°",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-407",
+   "quantity": "rise 8F->9F vs run*tan(angle): residual mm",
+   "model_recomputed": "0",
+   "source": "geometry cross-check (must be < 10)",
+   "registry_value": null,
+   "printed_in_pdf": null,
+   "registry_matches_model": null,
+   "passes": true
+  },
+  {
+   "sheet": "D-407",
+   "quantity": "floor-to-floor 8F->9F",
+   "model_recomputed": "4500",
+   "source": "model floors",
+   "registry_value": "4500",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-409",
+   "quantity": "freight shaft outer diameter (circular: circularity 0.9985)",
+   "model_recomputed": "5600",
+   "source": "plan cut A-CORE-TUBE_FR",
+   "registry_value": "5600",
+   "printed_in_pdf": true,
+   "registry_matches_model": true,
+   "passes": true
+  },
+  {
+   "sheet": "D-403",
+   "quantity": "T4 same form as T3 (Hausdorff mm)",
+   "model_recomputed": "7.3",
+   "source": "centered mesh comparison",
+   "registry_value": null,
+   "printed_in_pdf": null,
+   "passes": true
+  },
+  {
+   "sheet": "D-408",
+   "quantity": "riser (derived, no model attribute)",
+   "model_recomputed": "458",
+   "source": "DERIVED (no riser/tread attribute in the master)",
+   "registry_value": "458",
+   "printed_in_pdf": true,
+   "passes": true,
+   "note": "458 mm riser / 1167 mm tread are far from walking-stair proportions: decision U-10, not changed here"
+  },
+  {
+   "sheet": "P-101",
+   "quantity": "overall plan width and depth (printed 2 times needed)",
+   "model_recomputed": "54000x54000",
+   "source": "layout building bounds (3F)",
+   "registry_value": null,
+   "printed_in_pdf": true,
+   "occurrences": 2,
+   "grid_x_centers_m": [
+    -8.4,
+    -0.0,
+    9.0,
+    "...",
+    36.0,
+    44.4
+   ],
+   "passes": true
+  },
+  {
+   "sheet": "P-102",
+   "quantity": "overall plan width and depth (printed 2 times needed)",
+   "model_recomputed": "54000x54000",
+   "source": "layout building bounds (3F)",
+   "registry_value": null,
+   "printed_in_pdf": true,
+   "occurrences": 2,
+   "grid_x_centers_m": [
+    -8.4,
+    -0.0,
+    9.0,
+    "...",
+    36.0,
+    44.4
+   ],
+   "passes": true
+  },
+  {
+   "sheet": "P-103",
+   "quantity": "overall plan width and depth (printed 2 times needed)",
+   "model_recomputed": "54000x54000",
+   "source": "layout building bounds (3F)",
+   "registry_value": null,
+   "printed_in_pdf": true,
+   "occurrences": 2,
+   "grid_x_centers_m": [
+    -8.4,
+    -0.0,
+    9.0,
+    "...",
+    36.0,
+    44.4
+   ],
+   "passes": true
+  },
+  {
+   "sheet": "P-104",
+   "quantity": "overall plan width and depth (printed 2 times needed)",
+   "model_recomputed": "54000x54000",
+   "source": "layout building bounds (3F)",
+   "registry_value": null,
+   "printed_in_pdf": true,
+   "occurrences": 2,
+   "grid_x_centers_m": [
+    -8.4,
+    -0.0,
+    9.0,
+    "...",
+    36.0,
+    44.4
+   ],
+   "passes": true
+  },
+  {
+   "sheet": "P-105",
+   "quantity": "overall plan width and depth (printed 2 times needed)",
+   "model_recomputed": "54000x54000",
+   "source": "layout building bounds (3F)",
+   "registry_value": null,
+   "printed_in_pdf": true,
+   "occurrences": 2,
+   "grid_x_centers_m": [
+    -8.4,
+    -0.0,
+    9.0,
+    "...",
+    36.0,
+    44.4
+   ],
+   "passes": true
+  }
+ ]
+}

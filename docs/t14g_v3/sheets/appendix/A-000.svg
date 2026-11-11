@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
+<metadata>DOCUMENT</metadata>
+<rect width="420" height="297" fill="#fff"/>
+<text x="210.000" y="78.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="9.173" font-weight="bold" fill="#111" text-anchor="middle">다층 상업시설 건축 도면집</text>
+<text x="210.000" y="96.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="normal" fill="#444" text-anchor="middle">수직 보행 연구 — 3D 모델에서 파생한 도면 (후보 V3)</text>
+<path d="M80.00,106.00 L340.00,106.00" fill="none" stroke="#111" stroke-width="0.500" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="210.000" y="122.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.175" font-weight="normal" fill="#222" text-anchor="middle">54 × 54 m · 지하 2층(B2) ~ 지상 15층(15F) · 지붕 +76.5 m</text>
+<text x="210.000" y="131.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.175" font-weight="normal" fill="#222" text-anchor="middle">도면집 후보 V3 · 개정 R3 · 출력 2026-11-12</text>
+<text x="210.000" y="141.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.175" font-weight="normal" fill="#222" text-anchor="middle">상태: CANDIDATE — NOT FROZEN · 상층 LEVEL S · 가구 PROPOSED_ONLY · NOT FINAL</text>
+<text x="210.000" y="150.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.175" font-weight="normal" fill="#222" text-anchor="middle">3D 모델: GMC-ZZ-ZZ-M3-0701.glb (V2 기록 sha256 b1927ffd8335…, 원본 파일 없음) · 시트는 모델 캐시 992e2ec51ec1…에서 생성</text>
+<text x="210.000" y="160.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.175" font-weight="normal" fill="#222" text-anchor="middle">수록 31장: 배치도·평면 5·입면 4·단면 4(+키플랜)·상세 10·부록</text>
+<path d="M219.00,205.00 L218.56,207.78 L217.28,210.29 L215.29,212.28 L212.78,213.56 L210.00,214.00 L207.22,213.56 L204.71,212.28 L202.72,210.29 L201.44,207.78 L201.00,205.00 L201.44,202.22 L202.72,199.71 L204.71,197.72 L207.22,196.44 L210.00,196.00 L212.78,196.44 L215.29,197.72 L217.28,199.71 L218.56,202.22 L219.00,205.00 Z" fill="none" stroke="#555" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M210.00,205.00 L221.16,199.36" fill="none" stroke="#222" stroke-width="0.350" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="221.157" y="198.364" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#111" text-anchor="middle">N</text>
+<text x="210.000" y="232.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#777" text-anchor="middle">상층에는 벽·문·창·재료 정보가 모델에 없어 확정하지 않았다 · 배치도(A-003)는 사용자 제공 파일을 그대로 수록</text>
+<text x="14.000" y="286.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.528" font-weight="bold" fill="#111" text-anchor="start">A-000</text>
+<text x="34.000" y="286.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#555" text-anchor="start">표지 · 도면집 후보 V3 · CANDIDATE — NOT FROZEN</text>
+</svg>

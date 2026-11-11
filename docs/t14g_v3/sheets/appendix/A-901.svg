@@ -1,0 +1,412 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
+<metadata>DOCUMENT + MODEL_DATA</metadata>
+<rect width="420" height="297" fill="#fff"/>
+<path d="M10.00,14.00 L289.00,14.00 L289.00,20.30 L10.00,20.30 Z" fill="#eee" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="18.410" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="bold" fill="#111" text-anchor="start">층</text>
+<text x="23.500" y="18.410" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="bold" fill="#111" text-anchor="start">FFL (m)</text>
+<text x="41.500" y="18.410" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="bold" fill="#111" text-anchor="start">층고 (m)</text>
+<text x="56.500" y="18.410" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="bold" fill="#111" text-anchor="start">그룹 · 종류(증거)</text>
+<text x="106.500" y="18.410" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="bold" fill="#111" text-anchor="start">프로그램(구역 ㎡)</text>
+<text x="182.500" y="18.410" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="bold" fill="#111" text-anchor="start">평면 시트</text>
+<text x="222.500" y="18.410" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="bold" fill="#111" text-anchor="start">발행 이유</text>
+<path d="M10.00,26.60 L289.00,26.60" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="24.710" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">B2</text>
+<text x="23.500" y="24.710" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">-11.000</text>
+<text x="41.500" y="24.710" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">5.500</text>
+<text x="56.500" y="24.710" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">G01 독립</text>
+<text x="106.500" y="24.710" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">판매 2526.0</text>
+<text x="182.500" y="24.710" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">A-902 일람만</text>
+<text x="222.500" y="24.710" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">사용자 지시(기준층만)에 따라 미발행</text>
+<path d="M10.00,32.90 L289.00,32.90" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="31.010" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">B1</text>
+<text x="23.500" y="31.010" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">-5.500</text>
+<text x="41.500" y="31.010" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">5.500</text>
+<text x="56.500" y="31.010" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">G02 독립</text>
+<text x="106.500" y="31.010" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">F&amp;B 933.1; 판매 1417.7</text>
+<text x="182.500" y="31.010" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">A-902 일람만</text>
+<text x="222.500" y="31.010" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">사용자 지시(기준층만)에 따라 미발행</text>
+<path d="M10.00,39.20 L289.00,39.20" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="37.310" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">1F</text>
+<text x="23.500" y="37.310" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">+0.000</text>
+<text x="41.500" y="37.310" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">6.000</text>
+<text x="56.500" y="37.310" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">G03 독립</text>
+<text x="106.500" y="37.310" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">서비스 231.9; 판매 1575.6</text>
+<text x="182.500" y="37.310" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">A-003 (1:400 배치+1층)</text>
+<text x="222.500" y="37.310" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">A-003 사용자 제공</text>
+<path d="M10.00,45.50 L289.00,45.50" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="43.610" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">2F</text>
+<text x="23.500" y="43.610" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">+6.000</text>
+<text x="41.500" y="43.610" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">5.000</text>
+<text x="56.500" y="43.610" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">G04 독립</text>
+<text x="106.500" y="43.610" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">F&amp;B 1821.7</text>
+<text x="182.500" y="43.610" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">A-902 일람만</text>
+<text x="222.500" y="43.610" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">사용자 지시(기준층만)에 따라 미발행</text>
+<path d="M10.00,51.80 L289.00,51.80" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="49.910" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">3F</text>
+<text x="23.500" y="49.910" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">+11.000</text>
+<text x="41.500" y="49.910" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">5.000</text>
+<text x="56.500" y="49.910" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">G05 독립</text>
+<text x="106.500" y="49.910" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">판매 2526.0</text>
+<text x="182.500" y="49.910" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">P-101</text>
+<text x="222.500" y="49.910" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">기준층(판매 A형)</text>
+<path d="M10.00,58.10 L289.00,58.10" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="56.210" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">4F</text>
+<text x="23.500" y="56.210" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">+16.000</text>
+<text x="41.500" y="56.210" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">5.000</text>
+<text x="56.500" y="56.210" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">G06 독립</text>
+<text x="106.500" y="56.210" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">F&amp;B 216.2; 판매 2288.3</text>
+<text x="182.500" y="56.210" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">A-902 일람만</text>
+<text x="222.500" y="56.210" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">사용자 지시(기준층만)에 따라 미발행</text>
+<path d="M10.00,64.40 L289.00,64.40" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="62.510" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">5F</text>
+<text x="23.500" y="62.510" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">+21.000</text>
+<text x="41.500" y="62.510" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">5.000</text>
+<text x="56.500" y="62.510" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">G07 독립</text>
+<text x="106.500" y="62.510" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">판매 2526.0</text>
+<text x="182.500" y="62.510" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">A-902 일람만</text>
+<text x="222.500" y="62.510" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">사용자 지시(기준층만)에 따라 미발행</text>
+<path d="M10.00,70.70 L289.00,70.70" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="68.810" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">6F</text>
+<text x="23.500" y="68.810" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">+26.000</text>
+<text x="41.500" y="68.810" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">5.000</text>
+<text x="56.500" y="68.810" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">G08 독립</text>
+<text x="106.500" y="68.810" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">F&amp;B 496.9; garden 1198.7; 판매 742.6</text>
+<text x="182.500" y="68.810" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">A-902 일람만</text>
+<text x="222.500" y="68.810" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">사용자 지시(기준층만)에 따라 미발행</text>
+<path d="M10.00,77.00 L289.00,77.00" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="75.110" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">7F</text>
+<text x="23.500" y="75.110" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">+31.000</text>
+<text x="41.500" y="75.110" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">5.000</text>
+<text x="56.500" y="75.110" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">G09 독립</text>
+<text x="106.500" y="75.110" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">F&amp;B 289.9; 판매 946.8</text>
+<text x="182.500" y="75.110" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">A-902 일람만</text>
+<text x="222.500" y="75.110" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">사용자 지시(기준층만)에 따라 미발행</text>
+<path d="M10.00,83.30 L289.00,83.30" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="81.410" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">8F</text>
+<text x="23.500" y="81.410" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">+36.000</text>
+<text x="41.500" y="81.410" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">4.500</text>
+<text x="56.500" y="81.410" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">G10 공통+개구 차이</text>
+<text x="106.500" y="81.410" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">판매 2526.0</text>
+<text x="182.500" y="81.410" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">P-102</text>
+<text x="222.500" y="81.410" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">기준층(판매 B형, 9F 공통)</text>
+<path d="M10.00,89.60 L289.00,89.60" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="87.710" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">9F</text>
+<text x="23.500" y="87.710" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">+40.500</text>
+<text x="41.500" y="87.710" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">4.500</text>
+<text x="56.500" y="87.710" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">G10 공통+개구 차이</text>
+<text x="106.500" y="87.710" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">판매 2526.0</text>
+<text x="182.500" y="87.710" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">P-102 (공통, 차이 표기)</text>
+<text x="222.500" y="87.710" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">8F와 공통 (개구 차이 표기)</text>
+<path d="M10.00,95.90 L289.00,95.90" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="94.010" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">10F</text>
+<text x="23.500" y="94.010" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">+45.000</text>
+<text x="41.500" y="94.010" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">6.000</text>
+<text x="56.500" y="94.010" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">G11 독립</text>
+<text x="106.500" y="94.010" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">F&amp;B 2526.0</text>
+<text x="182.500" y="94.010" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">P-103</text>
+<text x="222.500" y="94.010" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">F&amp;B 기준층</text>
+<path d="M10.00,102.20 L289.00,102.20" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="100.310" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">11F</text>
+<text x="23.500" y="100.310" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">+51.000</text>
+<text x="41.500" y="100.310" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">6.000</text>
+<text x="56.500" y="100.310" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">G12 독립</text>
+<text x="106.500" y="100.310" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">문화·엔터 2489.1</text>
+<text x="182.500" y="100.310" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">A-902 일람만</text>
+<text x="222.500" y="100.310" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">사용자 지시(기준층만)에 따라 미발행</text>
+<path d="M10.00,108.50 L289.00,108.50" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="106.610" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">12F</text>
+<text x="23.500" y="106.610" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">+57.000</text>
+<text x="41.500" y="106.610" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">4.500</text>
+<text x="56.500" y="106.610" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">G13 독립</text>
+<text x="106.500" y="106.610" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">문화·엔터 2489.1</text>
+<text x="182.500" y="106.610" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">A-902 일람만</text>
+<text x="222.500" y="106.610" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">사용자 지시(기준층만)에 따라 미발행</text>
+<path d="M10.00,114.80 L289.00,114.80" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="112.910" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">13F</text>
+<text x="23.500" y="112.910" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">+61.500</text>
+<text x="41.500" y="112.910" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">4.500</text>
+<text x="56.500" y="112.910" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">G14 공통+개구 차이</text>
+<text x="106.500" y="112.910" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">문화·엔터 2526.0</text>
+<text x="182.500" y="112.910" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">P-104</text>
+<text x="222.500" y="112.910" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">문화·엔터 기준층, 14F 공통</text>
+<path d="M10.00,121.10 L289.00,121.10" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="119.210" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">14F</text>
+<text x="23.500" y="119.210" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">+66.000</text>
+<text x="41.500" y="119.210" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">4.500</text>
+<text x="56.500" y="119.210" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">G14 공통+개구 차이</text>
+<text x="106.500" y="119.210" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">문화·엔터 2526.0</text>
+<text x="182.500" y="119.210" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">P-104 (공통, 차이 표기)</text>
+<text x="222.500" y="119.210" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">13F와 공통 (개구 차이 표기)</text>
+<path d="M10.00,127.40 L289.00,127.40" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="125.510" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">15F</text>
+<text x="23.500" y="125.510" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">+70.500</text>
+<text x="41.500" y="125.510" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">6.000</text>
+<text x="56.500" y="125.510" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">G15 독립</text>
+<text x="106.500" y="125.510" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">F&amp;B 1000.3; garden 1456.9</text>
+<text x="182.500" y="125.510" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">P-105</text>
+<text x="222.500" y="125.510" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.976" font-weight="normal" fill="#222" text-anchor="start">F&amp;B·정원 기준층</text>
+<text x="10.000" y="133.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#111" text-anchor="start">시트별 치수·참조 기호 포함 현황 (레지스트리에서 읽음)</text>
+<path d="M10.00,135.40 L192.00,135.40 L192.00,140.30 L10.00,140.30 Z" fill="#eee" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="138.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.905" font-weight="bold" fill="#111" text-anchor="start">시트</text>
+<text x="31.500" y="138.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.905" font-weight="bold" fill="#111" text-anchor="start">종류</text>
+<text x="45.500" y="138.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.905" font-weight="bold" fill="#111" text-anchor="start">전체치수열</text>
+<text x="65.500" y="138.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.905" font-weight="bold" fill="#111" text-anchor="start">축선/배치열</text>
+<text x="87.500" y="138.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.905" font-weight="bold" fill="#111" text-anchor="start">주요치수</text>
+<text x="111.500" y="138.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.905" font-weight="bold" fill="#111" text-anchor="start">축선기호</text>
+<text x="131.500" y="138.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.905" font-weight="bold" fill="#111" text-anchor="start">단면표시</text>
+<text x="151.500" y="138.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.905" font-weight="bold" fill="#111" text-anchor="start">입면표시</text>
+<text x="171.500" y="138.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.905" font-weight="bold" fill="#111" text-anchor="start">상세호출</text>
+<path d="M10.00,145.20 L192.00,145.20" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="143.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">P-101</text>
+<text x="31.500" y="143.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">평면</text>
+<text x="45.500" y="143.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">2</text>
+<text x="65.500" y="143.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">4</text>
+<text x="87.500" y="143.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">3</text>
+<text x="111.500" y="143.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">14</text>
+<text x="131.500" y="143.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">8</text>
+<text x="151.500" y="143.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">4</text>
+<text x="171.500" y="143.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">4</text>
+<path d="M10.00,150.10 L192.00,150.10" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="148.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">P-102</text>
+<text x="31.500" y="148.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">평면</text>
+<text x="45.500" y="148.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">2</text>
+<text x="65.500" y="148.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">4</text>
+<text x="87.500" y="148.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">3</text>
+<text x="111.500" y="148.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">14</text>
+<text x="131.500" y="148.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">8</text>
+<text x="151.500" y="148.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">4</text>
+<text x="171.500" y="148.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">1</text>
+<path d="M10.00,155.00 L192.00,155.00" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="153.530" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">P-103</text>
+<text x="31.500" y="153.530" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">평면</text>
+<text x="45.500" y="153.530" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">2</text>
+<text x="65.500" y="153.530" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">4</text>
+<text x="87.500" y="153.530" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">3</text>
+<text x="111.500" y="153.530" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">14</text>
+<text x="131.500" y="153.530" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">8</text>
+<text x="151.500" y="153.530" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">4</text>
+<text x="171.500" y="153.530" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">0</text>
+<path d="M10.00,159.90 L192.00,159.90" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="158.430" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">P-104</text>
+<text x="31.500" y="158.430" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">평면</text>
+<text x="45.500" y="158.430" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">2</text>
+<text x="65.500" y="158.430" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">4</text>
+<text x="87.500" y="158.430" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">3</text>
+<text x="111.500" y="158.430" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">14</text>
+<text x="131.500" y="158.430" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">8</text>
+<text x="151.500" y="158.430" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">4</text>
+<text x="171.500" y="158.430" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">0</text>
+<path d="M10.00,164.80 L192.00,164.80" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="163.330" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">P-105</text>
+<text x="31.500" y="163.330" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">평면</text>
+<text x="45.500" y="163.330" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">2</text>
+<text x="65.500" y="163.330" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">4</text>
+<text x="87.500" y="163.330" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">3</text>
+<text x="111.500" y="163.330" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">10</text>
+<text x="131.500" y="163.330" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">8</text>
+<text x="151.500" y="163.330" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">4</text>
+<text x="171.500" y="163.330" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">1</text>
+<path d="M10.00,169.70 L192.00,169.70" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="168.230" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">E-201</text>
+<text x="31.500" y="168.230" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">입면</text>
+<text x="45.500" y="168.230" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">2</text>
+<text x="65.500" y="168.230" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">1</text>
+<text x="87.500" y="168.230" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">1</text>
+<text x="111.500" y="168.230" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">7</text>
+<text x="131.500" y="168.230" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="151.500" y="168.230" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="171.500" y="168.230" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">2</text>
+<path d="M10.00,174.60 L192.00,174.60" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="173.130" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">E-202</text>
+<text x="31.500" y="173.130" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">입면</text>
+<text x="45.500" y="173.130" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">2</text>
+<text x="65.500" y="173.130" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">1</text>
+<text x="87.500" y="173.130" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">1</text>
+<text x="111.500" y="173.130" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">7</text>
+<text x="131.500" y="173.130" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="151.500" y="173.130" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="171.500" y="173.130" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">2</text>
+<path d="M10.00,179.50 L192.00,179.50" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="178.030" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">E-203</text>
+<text x="31.500" y="178.030" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">입면</text>
+<text x="45.500" y="178.030" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">2</text>
+<text x="65.500" y="178.030" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">1</text>
+<text x="87.500" y="178.030" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">1</text>
+<text x="111.500" y="178.030" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">7</text>
+<text x="131.500" y="178.030" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="151.500" y="178.030" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="171.500" y="178.030" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">2</text>
+<path d="M10.00,184.40 L192.00,184.40" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="182.930" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">E-204</text>
+<text x="31.500" y="182.930" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">입면</text>
+<text x="45.500" y="182.930" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">2</text>
+<text x="65.500" y="182.930" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">1</text>
+<text x="87.500" y="182.930" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">1</text>
+<text x="111.500" y="182.930" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">7</text>
+<text x="131.500" y="182.930" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="151.500" y="182.930" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="171.500" y="182.930" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">2</text>
+<path d="M10.00,189.30 L192.00,189.30" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="187.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">S-302</text>
+<text x="31.500" y="187.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">단면</text>
+<text x="45.500" y="187.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">2</text>
+<text x="65.500" y="187.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">1</text>
+<text x="87.500" y="187.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">1</text>
+<text x="111.500" y="187.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">7</text>
+<text x="131.500" y="187.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="151.500" y="187.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="171.500" y="187.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">0</text>
+<path d="M10.00,194.20 L192.00,194.20" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="192.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">S-303</text>
+<text x="31.500" y="192.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">단면</text>
+<text x="45.500" y="192.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">2</text>
+<text x="65.500" y="192.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">1</text>
+<text x="87.500" y="192.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">1</text>
+<text x="111.500" y="192.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">7</text>
+<text x="131.500" y="192.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="151.500" y="192.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="171.500" y="192.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">0</text>
+<path d="M10.00,199.10 L192.00,199.10" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.500" y="197.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">S-304</text>
+<text x="31.500" y="197.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">단면</text>
+<text x="45.500" y="197.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">2</text>
+<text x="65.500" y="197.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">1</text>
+<text x="87.500" y="197.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">1</text>
+<text x="111.500" y="197.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">7</text>
+<text x="131.500" y="197.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="151.500" y="197.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="171.500" y="197.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">0</text>
+<path d="M212.00,135.40 L394.00,135.40 L394.00,140.30 L212.00,140.30 Z" fill="#eee" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="213.500" y="138.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.905" font-weight="bold" fill="#111" text-anchor="start">시트</text>
+<text x="233.500" y="138.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.905" font-weight="bold" fill="#111" text-anchor="start">종류</text>
+<text x="247.500" y="138.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.905" font-weight="bold" fill="#111" text-anchor="start">전체치수열</text>
+<text x="267.500" y="138.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.905" font-weight="bold" fill="#111" text-anchor="start">축선/배치열</text>
+<text x="289.500" y="138.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.905" font-weight="bold" fill="#111" text-anchor="start">주요치수</text>
+<text x="313.500" y="138.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.905" font-weight="bold" fill="#111" text-anchor="start">축선기호</text>
+<text x="333.500" y="138.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.905" font-weight="bold" fill="#111" text-anchor="start">단면표시</text>
+<text x="353.500" y="138.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.905" font-weight="bold" fill="#111" text-anchor="start">입면표시</text>
+<text x="373.500" y="138.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.905" font-weight="bold" fill="#111" text-anchor="start">상세호출</text>
+<path d="M212.00,145.20 L394.00,145.20" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="213.500" y="143.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">S-305</text>
+<text x="233.500" y="143.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">단면</text>
+<text x="247.500" y="143.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">2</text>
+<text x="267.500" y="143.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">1</text>
+<text x="289.500" y="143.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">1</text>
+<text x="313.500" y="143.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">7</text>
+<text x="333.500" y="143.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="353.500" y="143.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="373.500" y="143.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">0</text>
+<path d="M212.00,150.10 L394.00,150.10" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="213.500" y="148.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">D-401</text>
+<text x="233.500" y="148.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">상세</text>
+<text x="247.500" y="148.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="267.500" y="148.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="289.500" y="148.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">8</text>
+<text x="313.500" y="148.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="333.500" y="148.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="353.500" y="148.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="373.500" y="148.630" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">—</text>
+<path d="M212.00,155.00 L394.00,155.00" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="213.500" y="153.530" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">D-402</text>
+<text x="233.500" y="153.530" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">상세</text>
+<text x="247.500" y="153.530" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="267.500" y="153.530" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="289.500" y="153.530" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">6</text>
+<text x="313.500" y="153.530" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="333.500" y="153.530" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="353.500" y="153.530" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="373.500" y="153.530" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">—</text>
+<path d="M212.00,159.90 L394.00,159.90" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="213.500" y="158.430" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">D-403</text>
+<text x="233.500" y="158.430" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">상세</text>
+<text x="247.500" y="158.430" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="267.500" y="158.430" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="289.500" y="158.430" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">6</text>
+<text x="313.500" y="158.430" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="333.500" y="158.430" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="353.500" y="158.430" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="373.500" y="158.430" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">—</text>
+<path d="M212.00,164.80 L394.00,164.80" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="213.500" y="163.330" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">D-404</text>
+<text x="233.500" y="163.330" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">상세</text>
+<text x="247.500" y="163.330" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="267.500" y="163.330" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="289.500" y="163.330" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">2</text>
+<text x="313.500" y="163.330" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="333.500" y="163.330" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="353.500" y="163.330" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="373.500" y="163.330" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">—</text>
+<path d="M212.00,169.70 L394.00,169.70" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="213.500" y="168.230" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">D-405</text>
+<text x="233.500" y="168.230" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">상세</text>
+<text x="247.500" y="168.230" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="267.500" y="168.230" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="289.500" y="168.230" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">4</text>
+<text x="313.500" y="168.230" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="333.500" y="168.230" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="353.500" y="168.230" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="373.500" y="168.230" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">—</text>
+<path d="M212.00,174.60 L394.00,174.60" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="213.500" y="173.130" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">D-406</text>
+<text x="233.500" y="173.130" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">상세</text>
+<text x="247.500" y="173.130" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="267.500" y="173.130" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="289.500" y="173.130" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">3</text>
+<text x="313.500" y="173.130" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="333.500" y="173.130" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="353.500" y="173.130" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="373.500" y="173.130" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">—</text>
+<path d="M212.00,179.50 L394.00,179.50" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="213.500" y="178.030" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">D-407</text>
+<text x="233.500" y="178.030" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">상세</text>
+<text x="247.500" y="178.030" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="267.500" y="178.030" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="289.500" y="178.030" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">6</text>
+<text x="313.500" y="178.030" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="333.500" y="178.030" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="353.500" y="178.030" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="373.500" y="178.030" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">—</text>
+<path d="M212.00,184.40 L394.00,184.40" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="213.500" y="182.930" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">D-408</text>
+<text x="233.500" y="182.930" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">상세</text>
+<text x="247.500" y="182.930" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="267.500" y="182.930" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="289.500" y="182.930" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">6</text>
+<text x="313.500" y="182.930" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="333.500" y="182.930" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="353.500" y="182.930" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="373.500" y="182.930" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">—</text>
+<path d="M212.00,189.30 L394.00,189.30" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="213.500" y="187.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">D-409</text>
+<text x="233.500" y="187.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">상세</text>
+<text x="247.500" y="187.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="267.500" y="187.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="289.500" y="187.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">3</text>
+<text x="313.500" y="187.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="333.500" y="187.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="353.500" y="187.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="373.500" y="187.830" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">—</text>
+<path d="M212.00,194.20 L394.00,194.20" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="213.500" y="192.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">D-410</text>
+<text x="233.500" y="192.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">상세</text>
+<text x="247.500" y="192.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="267.500" y="192.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="289.500" y="192.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">3</text>
+<text x="313.500" y="192.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="333.500" y="192.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="353.500" y="192.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">-</text>
+<text x="373.500" y="192.730" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.835" font-weight="normal" fill="#222" text-anchor="start">—</text>
+<path d="M10.00,262.00 L410.00,262.00 L410.00,287.00 L10.00,287.00 Z" fill="#fff" stroke="#222" stroke-width="0.350" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M300.00,262.00 L300.00,287.00" fill="none" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M358.00,262.00 L358.00,287.00" fill="none" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="14.000" y="269.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="bold" fill="#111" text-anchor="start">A-901</text>
+<text x="40.000" y="269.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="bold" fill="#111" text-anchor="start">층별 동등성 판정·평면 발행표·치수 포함 현황</text>
+<text x="40.000" y="275.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#444" text-anchor="start">판정 허용오차: 면적 대칭차 ≤ 0.05 ㎡, Hausdorff ≤ 0.05 m (층판·코어·튜브·외피·램프·구역)</text>
+<text x="40.000" y="281.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">STRICT(완전 동일 쌍) 0건. 8F~9F·13F~14F는 수직동선 개구만 다름(CIRCULATION_ONLY). 3F~5F·8F~10F 동일 가설은 반증됨 — EQUIVALENCE VERIFIED 주장 없음</text>
+<text x="305.000" y="269.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">축척 — (표·문서, A3)</text>
+<text x="305.000" y="274.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.940" font-weight="bold" fill="#a33" text-anchor="start">DOCUMENT + MODEL_DATA</text>
+<text x="305.000" y="283.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.940" font-weight="normal" fill="#555" text-anchor="start">도면집 후보 V3 · FREEZE 아님</text>
+<text x="363.000" y="269.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">C-T14G</text>
+<text x="363.000" y="275.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">개정 R3 (V3)</text>
+<text x="363.000" y="280.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">출력 2026-11-12</text>
+</svg>

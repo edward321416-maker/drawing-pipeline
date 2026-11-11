@@ -1,0 +1,32 @@
+﻿page,sheet,title,scale,grade,folder
+1,A-000,표지,—,DOCUMENT,appendix
+2,A-001,도면 목록·시트 상태표,—,DOCUMENT,appendix
+3,A-002,범례·기호·축척·사실성 등급·상태 표기,—,DOCUMENT,appendix
+4,A-003,"배치도 / 1층 계획 (사용자 제공 1F_CleanLine_FIXED, 수정 없음)",1:400,USER_SUPPLIED · 1층 프로그램 후보(승인 전),plans
+5,P-101,"3F 평면 (치수·축선·범례, 가구 PROPOSED_ONLY)",1:250,MODEL_GEOMETRY · LEVEL S · PROPOSED_ONLY · NOT FINAL,plans
+6,P-102,"8F·9F 평면 (치수·축선·범례, 가구 PROPOSED_ONLY)",1:250,MODEL_GEOMETRY · LEVEL S · PROPOSED_ONLY · NOT FINAL,plans
+7,P-103,"10F 평면 (치수·축선·범례, 가구 PROPOSED_ONLY)",1:250,MODEL_GEOMETRY · LEVEL S · PROPOSED_ONLY · NOT FINAL,plans
+8,P-104,"13F·14F 평면 (치수·축선·범례, 가구 PROPOSED_ONLY)",1:250,MODEL_GEOMETRY · LEVEL S · PROPOSED_ONLY · NOT FINAL,plans
+9,P-105,"15F 평면 (치수·축선·범례, 가구 PROPOSED_ONLY)",1:250,MODEL_GEOMETRY · LEVEL S · PROPOSED_ONLY · NOT FINAL,plans
+10,E-201,북측 입면도,1:400,MODEL_GEOMETRY,elevations
+11,E-202,동측 입면도,1:400,MODEL_GEOMETRY,elevations
+12,E-203,남측 입면도,1:400,MODEL_GEOMETRY,elevations
+13,E-204,서측 입면도,1:400,MODEL_GEOMETRY,elevations
+14,S-301,단면 키플랜,1:400,MODEL_GEOMETRY,sections
+15,S-302,단면도 A–A,1:400,MODEL_GEOMETRY · 실제 메시 절단,sections
+16,S-303,단면도 B–B,1:400,MODEL_GEOMETRY · 실제 메시 절단,sections
+17,S-304,단면도 C–C,1:400,MODEL_GEOMETRY · 실제 메시 절단,sections
+18,S-305,단면도 D–D,1:400,MODEL_GEOMETRY · 실제 메시 절단,sections
+19,D-401,T1 나선 램프 확대,1:50,MODEL DETAIL,details
+20,D-402,T2 빛 튜브와 층판 관통 확대,1:50,MODEL DETAIL,details
+21,D-403,T3 파노라마 승강기 튜브 확대 (T4 동형),1:50,MODEL DETAIL,details
+22,D-404,코어 D 진입·부속실 확대 (1층 마스터),1:50,MODEL DETAIL (1F 마스터) · 상층 UNRESOLVED DETAIL,details
+23,D-405,캡슐과 층판 접속 확대,1:50,MODEL DETAIL · 출입문 미승인,details
+24,D-406,전형층 외피·층판 가장자리와 입면 부재 모듈 (6F),1:50,MODEL DETAIL · 접합 UNRESOLVED,details
+25,D-407,에스컬레이터 개구 확대 (8F–9F),1:100,MODEL DETAIL · 난간·안전 규격 미검증,details
+26,D-408,선큰 계단·마당 연결 확대 (1층 마스터),1:100,MODEL DETAIL (1F 마스터) · 지반 UNRESOLVED DETAIL,details
+27,D-409,화물 승강기·하역 동선 확대,1:50,UNRESOLVED DETAIL · 형상만 MODEL,details
+28,D-410,지붕·상층 후퇴부 확대,1:100,MODEL DETAIL · 방수·마감 UNRESOLVED,details
+29,A-900,미확정 설계 결정·도면 한계,—,DOCUMENT,appendix
+30,A-901,층별 동등성 판정·평면 발행표·치수 포함 현황,—,DOCUMENT + MODEL_DATA,appendix
+31,A-902,"층별 구성 일람 (B2~15F 17개 층, 1:1000)",1:1000,DOCUMENT + MODEL_DATA,appendix

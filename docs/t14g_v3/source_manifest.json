@@ -1,0 +1,63 @@
+{
+ "git_head": "b5d749228888c3caa0da5f63b8dce9641da54f29",
+ "git_branch": "claude/t14g-candidate-v3-full",
+ "base": "origin/claude/t14f-candidate-v3-audit",
+ "base_sha": "3e2f9977eafd8b40de3599180d2fefabd6a5ecb2",
+ "model": {
+  "glb_name": "GMC-ZZ-ZZ-M3-0701.glb",
+  "glb_present": false,
+  "glb_sha256_verified": null,
+  "glb_sha256_recorded_by_v2": "b1927ffd8335853fcdf55f6ec49cee3233465cfc1362295ffa717f214b45ab88",
+  "cache_sha256": {
+   "model_world.npz": "992e2ec51ec17dc494ed2f99ddb11298671449dd6661d92df3b3536a0049537b",
+   "model_objects.json": "722dd7359e2f13534ff4ae91088ba8649e8a8f96b27c60f000ddb09c01106488"
+  },
+  "status": "GLB_ORIGINAL_MISSING__CACHE_ONLY"
+ },
+ "inputs": {
+  "V2_pdf_sha256": "9104e66b6c74504604ef970ac567157a5320b9eed500e3c375f0c26e00afabab",
+  "V3_interim_pdf_sha256": "79dd85507fc6c3d6beb27743bf91ab47cb3fcf33f5b2b86dd83894cd1eaff5db"
+ },
+ "outputs": {
+  "Candidate_V3_drawing_set.pdf": {
+   "sha256": "3c82aa2a6e6187d757dae1f4ffb53e9f955874edecbb02875d4dd8f09b45ad54",
+   "bytes": 3160920,
+   "pages": 31
+  }
+ },
+ "tools": {
+  "python": "3.14.0",
+  "pymupdf": "1.27.2.3:",
+  "cairosvg": "2.9.1"
+ },
+ "fonts": {
+  "regular": "malgun.ttf",
+  "bold": "malgunbd.ttf"
+ },
+ "source_sha256": {
+  "tools/t14g/__init__.py": "3ce444176428fa8e779b33037412d1afaff8308cdee33a7b4b901bb80f3ef0b2",
+  "tools/t14g/config.py": "b46b2b69cb1c50179393404f75ba6866d5bc91d2c332d9184be0e7b273de9848",
+  "tools/t14g/furniture_qa.py": "5f31b575a24849be70d48edf63e6161187ac30552a2f62e4246dc6cd420b5a62",
+  "tools/t14g/make_coverage.py": "f23909135c00bdc8375b8c4f9a4fa8080b08fe0d4169e0b3446371645b57090e",
+  "tools/t14g/modelsrc.py": "ed6edbd9b3a499fef094f594e2a5d1a6a2e8093294a0aeb91793de9dbbcf485b",
+  "tools/t14g/mutations.py": "68ce2fb325084671b9cc170feece7885175a6ba4ca61b53d0ab51684ccf979b8",
+  "tools/t14g/package_v3.py": "b92106fb1d35838933c5c0e2948b317718b547fe56d3eb66f0c5335123f42310",
+  "tools/t14g/qa_pdf.py": "0d2cbc1f023d6037dd4d0be607df7eacc0174f234b2fad0fc1a3889a88dae1d5",
+  "tools/t14g/registry.py": "e927e93a16f5fd351eefd540e31364c0c4a8053fcae1351fbb75139759b40159",
+  "tools/t14g/truth.py": "de6557af9d5d680a1aee2e2cb3cfeaddac7d18b11bed29fb26acf505d1f92a58",
+  "tools/t14g/truth_report.py": "6de19413d26552e05adecff57faa3d7e044d59fb0980c48b49177340c3a6c6a5",
+  "tools/t14e_book_qa.py": "4bd78d35456fbfab7f83fb66c3a40a1388e08cafa6b1f14d3f0a75d00caf687a",
+  "tools/t14e_compare.py": "121595d6efbb01b1677572890910060ee4951bdeb4e7e3f1d3ebe7ff4feeb897",
+  "tools/t14e_dims.py": "c5dc7379b1f14d8ec75962534625afe3e953858a23889556a932563dcb6a4c81",
+  "tools/t14e_make_book.py": "36c1e5c9232859c6de4c9d8ea9050dc9a0139b316ccf5f7a750d50b2ddcefefa",
+  "tools/t14e_make_details.py": "1aaaf0386733f137ebc102bda55722550719defad0ad03ba6585e9c3b6aaa512",
+  "tools/t14e_make_views.py": "2e838a69293c2fb6a07c303fddb45edeab6ffb8adaa00144909984bafc8dd471",
+  "tools/t14e_plan_sheet.py": "94d43ffe9950dc73854673235f5451e1f1242016905f5f43c6856d9b668e7bdf",
+  "tools/t14d_sheet.py": "cfa0c4be9923c8727c40fa1b5235a87f9458afa06b1cbff4b5d534a58a452b09",
+  "src/layouts_v3.py": "e0ec725fea37c221003052d41e3130fc90f26e63a3d1450284fa0ae110ee00c9",
+  "src/architectural_plan_renderer.py": "26cc11dd3ab3ff473b8fd76e063c8d84203b34f51129740ccbff04f8c964478f",
+  "tests/test_t14g_qa.py": "0eff5f30aec0637463f9815f1c886a054bc0cd146277e0f120a162b5bc267514"
+ },
+ "cloud": "Modal/Claude cloud NOT used: no verified balance or spend limit; everything ran locally",
+ "svg_over_6MB_not_committed": []
+}

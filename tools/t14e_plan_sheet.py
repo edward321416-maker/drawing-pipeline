@@ -23,7 +23,8 @@ import book_views as bv  # noqa: E402
 from t14d_sheet import Sheet  # noqa: E402
 import t14e_dims as dm  # noqa: E402
 import t14d_sheet as _ts  # noqa: E402
-_ts.EDITION = "V2"
+from t14g import config as cfg  # noqa: E402
+cfg.apply(_ts)
 
 SCALE = 250
 K = 1000.0 / SCALE          # 모델 1 m → 시트 4 mm
@@ -31,11 +32,11 @@ CX, CY = 158.0, 135.0       # 건물 중심의 시트 좌표(mm)
 PANEL_X0, PANEL_X1 = 305.0, 411.0
 
 STRATEGY = {
-    "판매_A": "판매: 외벽 진열 띠 + 가로 섬 부스(엇갈림) + 튜브 둘레 휴게 벤치",
-    "판매_B": "판매: 외벽 진열 띠 + 세로 쌍 섬(팝업) — 3F와 다른 배치",
-    "F&B": "F&B: 외벽 뱅킷 · 4인 군집 · 공용 긴 테이블 · 바 카운터(스툴) · 서비스 카운터",
-    "문화": "문화·엔터: 중앙 이벤트 무대(앞 계단·미디어 월) · 라운지 포드 · 전시 플린스 · 집합 계단",
-    "garden": "정원·테라스: 식재 띠 · 수목 · 테라스 테이블 세트 · 벤치",
+    "판매_A": "판매 A(2F–5F·지하): 브랜드 셀 + 계산대 · 체험존 · 팝업 링 · 승강기 앞 대기 라운지 · 벽 진열 · 운영 레인",
+    "판매_B": "판매 B(6F 이상): 3F와 다른 배치 — 팝업 스트리트(쌍 섬) · 중앙 대로 팝업 카트 · 이벤트 광장",
+    "F&B": "F&B: 외벽 뱅킷 · 2/4/6인 식탁 · 공용 장탁자 · 바 카운터(스툴) · 서비스 카운터 + 줄서기 구역 · 운영 동선",
+    "문화": "문화·엔터: 이벤트 무대(서는 구역) · 전시 패널 구역 · 플린스 줄 · 집합 계단 · 라운지 포드 · 안내 데스크",
+    "garden": "정원·테라스: 산책로 · 곡선 화단 · 수목 · 벤치 · 테라스 식탁 구역",
 }
 
 
@@ -189,10 +190,11 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
         ref = next(e["sheet"] for e in regs["elev"]["elevations"] if e["name"] == nm)
         dm.elevation_tag(sh, X(px), Y(py), ref, d)
         meta["elevation_tags"] += 1
-    callouts = {"3F": [("D-401", "A-CORE-TUBE_T1", 50), ("D-402", "A-CORE-TUBE_T2", 50), ("D-403", "A-CORE-TUBE_T3", 50), ("D-405", "A-CORE-TUBE_capW", 50)],
-                "8F": [("D-407", None, 50)], "15F": [("D-410", "A-ROOF_rescue_pad", 50)]}
+    # 호출 대상 상세 번호와 위치 객체만 적는다. 축척은 detail_tag가 레지스트리(tools/t14g/registry.py)에서 읽는다.
+    callouts = {"3F": [("D-401", "A-CORE-TUBE_T1"), ("D-402", "A-CORE-TUBE_T2"), ("D-403", "A-CORE-TUBE_T3"), ("D-405", "A-CORE-TUBE_capW")],
+                "8F": [("D-407", None)], "15F": [("D-410", "A-ROOF_rescue_pad")]}
     used_callouts = []
-    for sid_d, oname, sc in callouts.get(floor, []):
+    for sid_d, oname in callouts.get(floor, []):
         if oname is None:
             es = [o for o in model.objects if o["name"].startswith("A-VERT-ESCL_8F-9F")]
             pts = []
@@ -203,7 +205,7 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
             er = max(max(p[0] for p in pts) - min(p[0] for p in pts), max(p[1] for p in pts) - min(p[1] for p in pts)) / 2
         else:
             ex, ey, er = obj_center_r(model, oname)
-        dm.detail_tag(sh, X(ex), Y(ey), sid_d, sc, dashed_r=max(er, 2.0) * K * 0.55)
+        dm.detail_tag(sh, X(ex), Y(ey), sid_d, dashed_r=max(er, 2.0) * K * 0.55)
         used_callouts.append(sid_d)
         meta["detail_callouts"] += 1
 
@@ -234,13 +236,25 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
     y += 6
     sh.text(x, y, "기호", 8, "bold", "#111")
     y += 6
-    sym = [("●", "구조 기둥(모델 기둥, 실선)", None), ("◌", "점선 원 = 코어 인접 모델 기둥(1층 규칙상 생략 대상)", None), ("▭", "회색 사각 = 가구(PROPOSED_ONLY, 설계 데이터 아님)", None),
-           ("⊙", "이중 원 = 튜브 / 이중 원 안 사각 = 승강로", None), ("A", "구조 축선(알파벳=가로, 숫자=세로), 치수 mm", None)]
+    sym = [("●", "구조 기둥(모델 기둥, 실선)", None), ("◌", "점선 원 = 코어 인접 모델 기둥(생략 대상)", None), ("▭", "흰 사각 = 가구(PROPOSED_ONLY)", None),
+           ("▬", "회색 채움 = 계산대·카운터(PROPOSED_ONLY)", None), ("⋯", "점선 사각 = 바닥 표시 구역", None),
+           ("┄", "긴 점선 = 방문자 동선(제안)", None), ("┅", "일점쇄선 = 운영 동선(제안)", None),
+           ("⊙", "이중 원 = 튜브 · 안의 사각 = 승강로", None), ("A", "구조 축선(알파벳 가로·숫자 세로) 치수 mm", None)]
     for g_, t, _ in sym:
-        sh.text(x, y, g_, 7, "bold", "#333")
+        if g_ in ("▬", "⋯", "┄", "┅"):                                       # 글꼴에 없는 글자는 실제 기호 도형으로 그린다
+            if g_ == "▬":
+                sh.path([[(x, y - 2.4), (x + 4.6, y - 2.4), (x + 4.6, y - 0.4), (x, y - 0.4)]], fill="#D9D9D9", stroke="#444", w=0.15)
+            elif g_ == "⋯":
+                sh.path([[(x, y - 2.6), (x + 4.6, y - 2.6), (x + 4.6, y - 0.2), (x, y - 0.2)]], stroke="#666", w=0.12, dash="0.7,0.6")
+            elif g_ == "┄":
+                sh.line(x, y - 1.3, x + 5.0, y - 1.3, 0.18, "#666", "2.4,0.9")
+            else:
+                sh.line(x, y - 1.3, x + 5.0, y - 1.3, 0.14, "#999", "1.8,0.6,0.4,0.6")
+        else:
+            sh.text(x, y, g_, 7, "bold", "#333")
         for i, ln in enumerate(wrap(t, 36)):
             sh.text(x + 6, y + i * 3.6, ln, 6.0, "normal", "#333")
-        y += 3.6 * len(wrap(t, 36)) + 1.8
+        y += 3.6 * len(wrap(t, 36)) + 0.9
     # 호출 기호 설명
     y += 1
     sh.text(x, y, "참조 기호", 8, "bold", "#111")
@@ -260,7 +274,7 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
     strat = []
     for pn in dict.fromkeys(progs):
         if "판매" in pn or "시장" in pn:
-            strat.append(STRATEGY["판매_A"] if floor in ("2F", "3F", "4F", "5F") else STRATEGY["판매_B"])
+            strat.append(STRATEGY["판매_A"] if floor in ("2F", "3F", "4F", "5F", "B1", "B2") else STRATEGY["판매_B"])
         elif "F&B" in pn:
             strat.append(STRATEGY["F&B"])
         elif "문화" in pn or "엔터" in pn:
@@ -277,7 +291,7 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
     sh.text(x, y, "관련 시트", 8, "bold", "#111")
     y += 5.2
     rel = [("단면", "S-301 키플랜 · S-302 A–A · S-303 B–B · S-304 C–C · S-305 D–D"), ("입면", "E-201 북 · E-202 동 · E-203 남 · E-204 서"),
-           ("상세", " · ".join(used_callouts) if used_callouts else "이 층에 호출된 상세 없음"), ("배치", "A-003 배치도·1층 / A-002 층고·범례")]
+           ("상세", " · ".join(used_callouts) if used_callouts else "이 층에 호출된 상세 없음"), ("배치", "A-003 배치도 · A-901 층별 표 · A-902 층별 일람")]
     for k_, t in rel:
         lines_ = wrap("%s  %s" % (k_, t), 42)
         for i, ln in enumerate(lines_):
@@ -289,11 +303,12 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
     y += 6
     sh.text(x, y, "상태·한계", 8, "bold", "#111")
     y += 6
-    notes = ["LEVEL S: 구조·프로그램 볼륨만 모델에 있음. 상층 구획벽·문·화장실·피난 경로는 모델에 없어 미확정.",
-             "가구·식재는 설명용 PROPOSED_ONLY. 설계 확정 아님.", "최종 FREEZE 아님(후보 V2)."]
+    notes = ["LEVEL S: 구조·프로그램 볼륨만 모델에 있음. 상층 벽·문·화장실·피난 경로는 미확정.",
+             "가구·식재·동선은 PROPOSED_ONLY(설계 확정 아님) · 최종 FREEZE 아님(후보 %s)." % cfg.EDITION]
     if len(applies) > 1:
         pr = next((p for h in evidence["hypothesis_groups"] for p in h["pairs"] if set(p["pair"].split("~")) == set(applies[:2])), None)
         notes.append("적용 층 %s: 수직동선 개구만 다름(검증됨), EQUIVALENCE VERIFIED 아님." % "·".join(applies))
+        deltas = []
         if pr:
             for kind, label in (("stair", "에스컬레이터"), ("shaft", "승강기 샤프트")):
                 for ff in applies[:2]:
@@ -302,15 +317,19 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
                     op = pr["vertical_elements"][kind][other]
                     only = [p for p in pts if all(abs(p[0] - q[0]) > 0.5 or abs(p[1] - q[1]) > 0.5 for q in op)]
                     if only:
-                        notes.append("%s %s 고유: %s (건물 모서리 기준 m)" % (ff, label, " ".join("(%.1f,%.1f)" % (p[0] - bx0, p[1] - by0) for p in only)))
+                        deltas.append("%s %s 고유 %d" % (ff, label, len(only)))
+        if deltas:
+            notes.append("개구 차이: " + " · ".join(deltas) + " (A-902 붉은 부분)")
     for t in notes:
         for i, ln in enumerate(wrap(t, 40)):
             sh.text(x + (0 if i == 0 else 2), y, ("· " if i == 0 else "") + ln, 6.0, "normal", "#444")
             y += 3.7
         y += 0.8
+    sh.claim("legend_text", px0, py0, PANEL_X1, y)                                    # 범례 글이 방위·축척 구역(y 224~258)을 넘으면 저장 때 빌드가 멈춘다
+    sh.claim("scale_block", px0, 231.0, PANEL_X1, 258.0)
     # 방위·축척 막대
-    sh.north_arrow(PANEL_X1 - 14, 226.0, model.north_deg, r=6.5)
-    sh.text(PANEL_X1 - 14, 240.0, "진북 %.1f°" % model.north_deg, 5.6, "normal", "#444", "middle")
+    sh.north_arrow(PANEL_X1 - 10, 243.5, model.north_deg, r=4.8)
+    sh.text(PANEL_X1 - 10, 255.0, "진북 %.1f°" % model.north_deg, 5.6, "normal", "#444", "middle")
     k = K
     bx, by = px0 + 6, 236.0
     for i, (a, b_) in enumerate(((0, 5), (5, 10), (10, 20))):
@@ -330,7 +349,7 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", required=True)
-    ap.add_argument("--glb", required=True)
+    ap.add_argument("--glb", default=None, help="원본 GLB(없어도 됨)")
     ap.add_argument("--plans", required=True, help="층:시트번호:적용층(+로 연결) 쉼표 구분")
     a = ap.parse_args()
     run = os.path.abspath(a.run)

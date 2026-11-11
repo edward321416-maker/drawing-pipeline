@@ -110,12 +110,19 @@ def elevation_tag(sh, x, y, sheet_ref, direction, r=3.4):
     sh.text(x, y + r + 3.2, sheet_ref, 4.6, "normal", "#06a", "middle", bg=True)
 
 
-def detail_tag(sh, x, y, sid, scale, r=3.4, dashed_r=None):
-    """상세 호출: (선택) 대상 둘레 점선 원 + 기호(상세 번호 / 축척)."""
+def detail_tag(sh, x, y, sid, scale=None, r=3.4, dashed_r=None):
+    """상세 호출: (선택) 대상 둘레 점선 원 + 기호(상세 번호 / 축척).
+
+    축척 문자는 시트 레지스트리(tools/t14g/registry.py)에서 읽는다. 호출한 쪽이 scale을 넘기면 레지스트리와 같아야 하고,
+    레지스트리에 없는 상세 번호를 호출하면 UnknownSheetError로 빌드가 멈춘다(감사 F-01).
+    """
+    from t14g import registry
+    label = registry.callout_label(sid, scale)
+    scale = registry.detail_scale(sid)
     if dashed_r:
         sh.path([[(x + dashed_r * math.cos(t / 28 * 2 * math.pi), y + dashed_r * math.sin(t / 28 * 2 * math.pi)) for t in range(29)]], stroke="#a60", w=0.25, dash="1.6,1.0", closed=True)
     bx, by = x + (dashed_r or 0) * 0.72 + r, y - (dashed_r or 0) * 0.72 - r
     if dashed_r:
         sh.line(x + dashed_r * 0.72, y - dashed_r * 0.72, bx, by, 0.2, "#a60")
     bubble(sh, bx, by, sid.split("-")[1], r=r, pt=6.0, color="#a60")
-    sh.text(bx, by + r + 3.0, "%s · 1:%d" % (sid, scale), 4.6, "normal", "#a60", "middle", bg=True)
+    sh.text(bx, by + r + 3.0, label, 4.6, "normal", "#a60", "middle", bg=True)

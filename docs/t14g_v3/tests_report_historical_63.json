@@ -1,0 +1,395 @@
+{
+ "edition": "V3",
+ "pdf": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14G\\output\\C_T14G_V3_run\\book\\drawing_set_candidate_v3.pdf",
+ "pdf_sha256": "3C82AA2A6E6187D757DAE1F4FFB53E9F955874EDECBB02875D4DD8F09B45AD54",
+ "pages": 31,
+ "checks": [
+  {
+   "id": "Q01",
+   "name": "시트 목록(CSV·JSON·A-001) = 실제 PDF 쪽수·순서",
+   "ok": true,
+   "detail": "pdf=31 index=31 csv=31 json=31 bad=[]"
+  },
+  {
+   "id": "Q02",
+   "name": "A-001 표에 모든 시트 번호 수록",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q03",
+   "name": "A-001의 쪽 번호가 레지스트리와 일치(실제 쪽)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "Q04",
+   "name": "전 쪽 A3 가로(420×297)",
+   "ok": true,
+   "detail": "{(420, 297)}"
+  },
+  {
+   "id": "Q05",
+   "name": "새로 만든 시트에 래스터 이미지 없음(A-003 사용자 파일 제외)",
+   "ok": true,
+   "detail": "images={}"
+  },
+  {
+   "id": "Q06",
+   "name": "글꼴이 PDF에 포함(참조만 하는 글꼴 없음)",
+   "ok": true,
+   "detail": "['ADLNAN+MalgunGothicBold', 'AKTZZU+MalgunGothic', 'AQDJAJ+MalgunGothic', 'AYLPKQ+MalgunGothic', 'BE"
+  },
+  {
+   "id": "Q07",
+   "name": "A-003 = 사용자 제공 PDF와 해시 동일(수정 없음)",
+   "ok": true,
+   "detail": "DB66F8C26D525C5B"
+  },
+  {
+   "id": "Q08",
+   "name": "도면집 A-003 쪽이 원본과 화소 동일(쪽 번호표 영역 제외)",
+   "ok": true,
+   "detail": "outside_diff=0 stamp_pixels=870"
+  },
+  {
+   "id": "Q10_P-101",
+   "name": "P-101 평면 필수 요소",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q12_P-101",
+   "name": "P-101 가구가 기둥·튜브·모델 윤곽과 겹치지 않음(원 검사 JSON)",
+   "ok": true,
+   "detail": "{}"
+  },
+  {
+   "id": "Q13_P-101",
+   "name": "P-101 범례·문자가 용지 밖/패널 밖으로 잘리지 않음",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q10_P-102",
+   "name": "P-102 평면 필수 요소",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q12_P-102",
+   "name": "P-102 가구가 기둥·튜브·모델 윤곽과 겹치지 않음(원 검사 JSON)",
+   "ok": true,
+   "detail": "{}"
+  },
+  {
+   "id": "Q13_P-102",
+   "name": "P-102 범례·문자가 용지 밖/패널 밖으로 잘리지 않음",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q10_P-103",
+   "name": "P-103 평면 필수 요소",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q12_P-103",
+   "name": "P-103 가구가 기둥·튜브·모델 윤곽과 겹치지 않음(원 검사 JSON)",
+   "ok": true,
+   "detail": "{}"
+  },
+  {
+   "id": "Q13_P-103",
+   "name": "P-103 범례·문자가 용지 밖/패널 밖으로 잘리지 않음",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q10_P-104",
+   "name": "P-104 평면 필수 요소",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q12_P-104",
+   "name": "P-104 가구가 기둥·튜브·모델 윤곽과 겹치지 않음(원 검사 JSON)",
+   "ok": true,
+   "detail": "{}"
+  },
+  {
+   "id": "Q13_P-104",
+   "name": "P-104 범례·문자가 용지 밖/패널 밖으로 잘리지 않음",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q10_P-105",
+   "name": "P-105 평면 필수 요소",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q12_P-105",
+   "name": "P-105 가구가 기둥·튜브·모델 윤곽과 겹치지 않음(원 검사 JSON)",
+   "ok": true,
+   "detail": "{}"
+  },
+  {
+   "id": "Q13_P-105",
+   "name": "P-105 범례·문자가 용지 밖/패널 밖으로 잘리지 않음",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q14",
+   "name": "프로그램별 가구·식재 전략이 시트 범례에 명시(3F/8F 판매는 서로 다름, 13F 문화·엔터, 10F·15F F&B·정원)",
+   "ok": true,
+   "detail": "{'P-101': True, 'P-102': True, 'P-103': True, 'P-104': True, 'P-105': True}"
+  },
+  {
+   "id": "Q15",
+   "name": "모든 평면에 제안 가구가 실제로 배치(각 ≥30)",
+   "ok": true,
+   "detail": "{'P-101': 92, 'P-102': 54, 'P-103': 187, 'P-104': 56, 'P-105': 137}"
+  },
+  {
+   "id": "Q16",
+   "name": "3F와 8F 평면 배치(가구 포함)가 서로 다름",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "Q20_E-201",
+   "name": "E-201 필수 요소(축척·GL·레벨·치수·축선·참조)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q21_E-201",
+   "name": "E-201 레벨 문자가 모델 층 FFL과 ±5 mm 이내 일치(30개)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q20_E-202",
+   "name": "E-202 필수 요소(축척·GL·레벨·치수·축선·참조)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q21_E-202",
+   "name": "E-202 레벨 문자가 모델 층 FFL과 ±5 mm 이내 일치(30개)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q20_E-203",
+   "name": "E-203 필수 요소(축척·GL·레벨·치수·축선·참조)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q21_E-203",
+   "name": "E-203 레벨 문자가 모델 층 FFL과 ±5 mm 이내 일치(30개)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q20_E-204",
+   "name": "E-204 필수 요소(축척·GL·레벨·치수·축선·참조)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q21_E-204",
+   "name": "E-204 레벨 문자가 모델 층 FFL과 ±5 mm 이내 일치(30개)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q20_S-302",
+   "name": "S-302 필수 요소(축척·GL·레벨·치수·축선·참조)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q21_S-302",
+   "name": "S-302 레벨 문자가 모델 층 FFL과 ±5 mm 이내 일치(36개)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q20_S-303",
+   "name": "S-303 필수 요소(축척·GL·레벨·치수·축선·참조)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q21_S-303",
+   "name": "S-303 레벨 문자가 모델 층 FFL과 ±5 mm 이내 일치(36개)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q20_S-304",
+   "name": "S-304 필수 요소(축척·GL·레벨·치수·축선·참조)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q21_S-304",
+   "name": "S-304 레벨 문자가 모델 층 FFL과 ±5 mm 이내 일치(36개)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q20_S-305",
+   "name": "S-305 필수 요소(축척·GL·레벨·치수·축선·참조)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q21_S-305",
+   "name": "S-305 레벨 문자가 모델 층 FFL과 ±5 mm 이내 일치(36개)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q22",
+   "name": "모든 시트 방위(진북)가 1층 마스터와 같은 63.2°(3F 슬라이스 north_deg = 1층 마스터 north_deg)",
+   "ok": true,
+   "detail": "north={63.2} slice_north=63.202 master_north=63.200 slice_theta=63.202"
+  },
+  {
+   "id": "Q30",
+   "name": "상세도 ≥ 8장(실제 10장)",
+   "ok": true,
+   "detail": "10"
+  },
+  {
+   "id": "Q31_D-401",
+   "name": "D-401 상세 필수 요소",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q31_D-402",
+   "name": "D-402 상세 필수 요소",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q31_D-403",
+   "name": "D-403 상세 필수 요소",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q31_D-404",
+   "name": "D-404 상세 필수 요소",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q31_D-405",
+   "name": "D-405 상세 필수 요소",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q31_D-406",
+   "name": "D-406 상세 필수 요소",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q31_D-407",
+   "name": "D-407 상세 필수 요소",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q31_D-408",
+   "name": "D-408 상세 필수 요소",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q31_D-409",
+   "name": "D-409 상세 필수 요소",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q31_D-410",
+   "name": "D-410 상세 필수 요소",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q40",
+   "name": "'EQUIVALENCE VERIFIED'는 부정문('아님/주장 없음')으로만 등장",
+   "ok": true,
+   "detail": "n=3"
+  },
+  {
+   "id": "Q41",
+   "name": "FREEZE는 항상 'FREEZE 아님' 형태로만 등장(동결 주장 없음)",
+   "ok": true,
+   "detail": "n=35 ['FREEZE가아니다']"
+  },
+  {
+   "id": "Q42",
+   "name": "'FINAL'은 NOT FINAL로만 사용",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q43",
+   "name": "상층 벽·문 없음·PROPOSED_ONLY·LEVEL S 고지가 A-900에 존재",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "Q50",
+   "name": "공통 평면(8F·9F, 13F·14F)은 증거상 CIRCULATION_ONLY & 프로그램 동일, STRICT 0건, 3F/4F/5F·8F/9F/10F 가설 반증 유지",
+   "ok": true,
+   "detail": "{'3F~4F': 'DIFFERENT', '3F~5F': 'DIFFERENT', '4F~5F': 'DIFFERENT', '8F~9F': 'CIRCULATION_ONLY', '8F~10F': 'DIFFERENT', '9F~10F': 'DIFFERENT', '13F~14F': 'CIRCULATION_ONLY'}"
+  },
+  {
+   "id": "Q51",
+   "name": "공통 평면 시트에 층별 고유 개구 차이가 표기",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "Q60",
+   "name": "동일 선분 중복 ≤ 1% (모든 SVG)",
+   "ok": true,
+   "detail": "worst=0.542%"
+  },
+  {
+   "id": "Q70",
+   "name": "필수 산출물 존재(보고서 md 포함)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "Q90",
+   "name": "음성 대조: 쪽 삭제·순서 바꿈·CSV 행 누락·'FINAL' 단독 문구를 검사가 실제로 잡는다",
+   "ok": true,
+   "detail": "drop=False swap=False csv=False final=True"
+  }
+ ],
+ "passed": 63,
+ "failed": 0,
+ "total": 63,
+ "method": "완성된 PDF·SVG를 다시 읽어 확인. 생성 코드의 자기 보고(레지스트리)는 PDF 텍스트·SVG 기하와 교차 확인. 음성 대조 포함.",
+ "limits": [
+  "PDF 텍스트는 cairosvg 글리프 출력 때문에 공백이 빠져 공백 없이 비교",
+  "시각적 겹침은 문자 상자 추정(문자 수×글자 크기×0.62)과 눈 검토로 확인 — 완전한 자동 증명이 아님",
+  "치수 값이 모델과 일치하는지는 생성 코드가 모델에서 읽은 값이며, 별도 CAD와 대조하지 않음"
+ ]
+}

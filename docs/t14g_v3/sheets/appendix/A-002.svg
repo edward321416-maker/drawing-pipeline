@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
+<metadata>DOCUMENT</metadata>
+<rect width="420" height="297" fill="#fff"/>
+<text x="14.000" y="14.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.175" font-weight="bold" fill="#111" text-anchor="start">1  선 위계 (A3 종이 mm)</text>
+<path d="M14.00,22.00 L44.00,22.00" fill="none" stroke="#000" stroke-width="0.450" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="48.000" y="23.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="normal" fill="#333" text-anchor="start">0.45 mm  절단 포셰·기둥·코어 벽·입면 전체 윤곽</text>
+<path d="M14.00,29.50 L44.00,29.50" fill="none" stroke="#222" stroke-width="0.250" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="48.000" y="30.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="normal" fill="#333" text-anchor="start">0.25 mm  슬래브·코어·튜브 보이는 윤곽</text>
+<path d="M14.00,37.00 L44.00,37.00" fill="none" stroke="#444" stroke-width="0.150" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="48.000" y="38.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="normal" fill="#333" text-anchor="start">0.15 mm  기둥·외피 부재·에스컬레이터</text>
+<path d="M14.00,44.50 L44.00,44.50" fill="none" stroke="#999" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd" stroke-dasharray="2.2,1.6"/>
+<text x="48.000" y="45.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="normal" fill="#333" text-anchor="start">0.10 mm  레벨선·치수선·보조선 (점선)</text>
+<path d="M14.00,52.00 L44.00,52.00" fill="none" stroke="#ccc" stroke-width="0.050" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="48.000" y="53.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="normal" fill="#333" text-anchor="start">0.05 mm  구조 격자·배경</text>
+<text x="14.000" y="66.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.175" font-weight="bold" fill="#111" text-anchor="start">2  기호</text>
+<path d="M23.60,76.00 L23.48,76.93 L23.12,77.80 L22.55,78.55 L21.80,79.12 L20.93,79.48 L20.00,79.60 L19.07,79.48 L18.20,79.12 L17.45,78.55 L16.88,77.80 L16.52,76.93 L16.40,76.00 L16.52,75.07 L16.88,74.20 L17.45,73.45 L18.20,72.88 L19.07,72.52 L20.00,72.40 L20.93,72.52 L21.80,72.88 L22.55,73.45 L23.12,74.20 L23.48,75.07 L23.60,76.00 Z" fill="#fff" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="20.000" y="76.803" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="bold" fill="#222" text-anchor="middle">A</text>
+<text x="27.000" y="77.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="normal" fill="#333" text-anchor="start">축선 기호 (가로 A…, 세로 1…, 건물축 기준)</text>
+<path d="M23.20,90.00 L23.09,90.83 L22.77,91.60 L22.26,92.26 L21.60,92.77 L20.83,93.09 L20.00,93.20 L19.17,93.09 L18.40,92.77 L17.74,92.26 L17.23,91.60 L16.91,90.83 L16.80,90.00 L16.91,89.17 L17.23,88.40 L17.74,87.74 L18.40,87.23 L19.17,86.91 L20.00,86.80 L20.83,86.91 L21.60,87.23 L22.26,87.74 L22.77,88.40 L23.09,89.17 L23.20,90.00 Z" fill="#fff" stroke="#c00" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="20.000" y="90.926" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="bold" fill="#c00" text-anchor="middle">A</text>
+<path d="M20.00,86.80 L20.00,82.80" fill="none" stroke="#c00" stroke-width="0.350" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M20.00,82.80 L21.00,84.40 L19.00,84.40 Z" fill="#c00" stroke="#c00" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<rect x="16.975" y="83.791" width="6.050" height="2.117" fill="#fff"/>
+<text x="20.000" y="85.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.693" font-weight="normal" fill="#c00" text-anchor="middle">S-302</text>
+<text x="32.000" y="91.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="normal" fill="#333" text-anchor="start">단면 표시 (문자 + 보는 방향 + 참조 시트)</text>
+<path d="M23.40,106.00 L23.28,106.88 L22.94,107.70 L22.40,108.40 L21.70,108.94 L20.88,109.28 L20.00,109.40 L19.12,109.28 L18.30,108.94 L17.60,108.40 L17.06,107.70 L16.72,106.88 L16.60,106.00 L16.72,105.12 L17.06,104.30 L17.60,103.60 L18.30,103.06 L19.12,102.72 L20.00,102.60 L20.88,102.72 L21.70,103.06 L22.40,103.60 L22.94,104.30 L23.28,105.12 L23.40,106.00 Z" fill="#fff" stroke="#06a" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="20.000" y="106.741" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="bold" fill="#06a" text-anchor="middle">201</text>
+<path d="M20.00,98.60 L21.60,101.60 L18.40,101.60 Z" fill="#06a" stroke="#06a" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<rect x="17.085" y="111.058" width="5.831" height="2.029" fill="#fff"/>
+<text x="20.000" y="112.600" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.623" font-weight="normal" fill="#06a" text-anchor="middle">E-201</text>
+<text x="32.000" y="107.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="normal" fill="#333" text-anchor="start">입면 표시 (번호 + 바라보는 방향)</text>
+<path d="M23.00,124.00 L22.87,125.11 L22.50,126.17 L21.91,127.12 L21.12,127.91 L20.17,128.50 L19.11,128.87 L18.00,129.00 L16.89,128.87 L15.83,128.50 L14.88,127.91 L14.09,127.12 L13.50,126.17 L13.13,125.11 L13.00,124.00 L13.13,122.89 L13.50,121.83 L14.09,120.88 L14.88,120.09 L15.83,119.50 L16.89,119.13 L18.00,119.00 L19.11,119.13 L20.17,119.50 L21.12,120.09 L21.91,120.88 L22.50,121.83 L22.87,122.89 L23.00,124.00 Z" fill="none" stroke="#a60" stroke-width="0.250" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd" stroke-dasharray="1.6,1.0"/>
+<path d="M21.60,120.40 L25.00,117.00" fill="none" stroke="#a60" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M28.40,117.00 L28.28,117.88 L27.94,118.70 L27.40,119.40 L26.70,119.94 L25.88,120.28 L25.00,120.40 L24.12,120.28 L23.30,119.94 L22.60,119.40 L22.06,118.70 L21.72,117.88 L21.60,117.00 L21.72,116.12 L22.06,115.30 L22.60,114.60 L23.30,114.06 L24.12,113.72 L25.00,113.60 L25.88,113.72 L26.70,114.06 L27.40,114.60 L27.94,115.30 L28.28,116.12 L28.40,117.00 Z" fill="#fff" stroke="#a60" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="25.000" y="117.741" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="bold" fill="#a60" text-anchor="middle">401</text>
+<rect x="18.563" y="121.858" width="12.874" height="2.029" fill="#fff"/>
+<text x="25.000" y="123.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.623" font-weight="normal" fill="#a60" text-anchor="middle">D-401 · 1:50</text>
+<text x="40.000" y="125.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="normal" fill="#333" text-anchor="start">상세 호출 (점선 원 = 확대 위치, 번호 + 축척)</text>
+<path d="M14.00,140.00 L54.00,140.00" fill="none" stroke="#222" stroke-width="0.150" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M13.00,141.00 L15.00,139.00" fill="none" stroke="#222" stroke-width="0.300" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M53.00,141.00 L55.00,139.00" fill="none" stroke="#222" stroke-width="0.300" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="34.000" y="139.100" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#222" text-anchor="middle">9000</text>
+<text x="58.000" y="141.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="normal" fill="#333" text-anchor="start">치수선 (mm 정수, 10 mm 반올림, 모델에서 읽음)</text>
+<path d="M20.00,150.00 L24.00,154.50 L16.00,154.50 Z" fill="#000" stroke="#000" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="27.000" y="153.800" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="normal" fill="#333" text-anchor="start">레벨 기호  +0.000 = 1F FFL</text>
+<path d="M25.00,166.00 L24.76,167.55 L24.05,168.94 L22.94,170.05 L21.55,170.76 L20.00,171.00 L18.45,170.76 L17.06,170.05 L15.95,168.94 L15.24,167.55 L15.00,166.00 L15.24,164.45 L15.95,163.06 L17.06,161.95 L18.45,161.24 L20.00,161.00 L21.55,161.24 L22.94,161.95 L24.05,163.06 L24.76,164.45 L25.00,166.00 Z" fill="none" stroke="#555" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M20.00,166.00 L27.59,162.17" fill="none" stroke="#222" stroke-width="0.350" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="27.587" y="161.168" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#111" text-anchor="middle">N</text>
+<text x="30.000" y="167.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="normal" fill="#333" text-anchor="start">방위 (진북 63.2° 시계 방향)</text>
+<path d="M14.00,182.00 L20.00,176.00" fill="none" stroke="#777" stroke-width="0.050" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M16.00,182.00 L22.00,176.00" fill="none" stroke="#777" stroke-width="0.050" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M18.00,182.00 L24.00,176.00" fill="none" stroke="#777" stroke-width="0.050" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M20.00,182.00 L26.00,176.00" fill="none" stroke="#777" stroke-width="0.050" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M22.00,182.00 L28.00,176.00" fill="none" stroke="#777" stroke-width="0.050" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M24.00,182.00 L30.00,176.00" fill="none" stroke="#777" stroke-width="0.050" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M26.00,182.00 L32.00,176.00" fill="none" stroke="#777" stroke-width="0.050" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M28.00,182.00 L34.00,176.00" fill="none" stroke="#777" stroke-width="0.050" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M30.00,182.00 L36.00,176.00" fill="none" stroke="#777" stroke-width="0.050" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M32.00,182.00 L38.00,176.00" fill="none" stroke="#777" stroke-width="0.050" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M34.00,182.00 L40.00,176.00" fill="none" stroke="#777" stroke-width="0.050" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M36.00,182.00 L42.00,176.00" fill="none" stroke="#777" stroke-width="0.050" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M38.00,182.00 L44.00,176.00" fill="none" stroke="#777" stroke-width="0.050" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M40.00,182.00 L46.00,176.00" fill="none" stroke="#777" stroke-width="0.050" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M14.00,176.00 L42.00,176.00 L42.00,182.00 L14.00,182.00 Z" fill="none" stroke="#000" stroke-width="0.300" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="46.000" y="180.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="normal" fill="#333" text-anchor="start">사선 해칭 = 모델에서 절단된 고체(재료 미확정, 일반 표기)</text>
+<text x="14.000" y="196.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.175" font-weight="bold" fill="#111" text-anchor="start">3  축척 정책</text>
+<text x="14.000" y="204.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">배치도·1층: 1:400 (사용자 제공 시트 그대로)</text>
+<text x="14.000" y="210.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">평면: 1:250 — A3(420×297)에 54 m 건물·치수 3열·축선·우측 범례·제목란을 함께 담을 수 있는 가장 큰 정수 축척. 1:200 불가(건물 270 mm + 치수·범례 &gt; 용지)</text>
+<text x="14.000" y="216.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">입면·단면: 1:400 · 상세 1:50(D-407·408·410은 1:100) · 평면·입면·단면·상세 모든 축척 시트에 그래픽 스케일바</text>
+<text x="212.000" y="14.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.175" font-weight="bold" fill="#111" text-anchor="start">4  사실성 등급</text>
+<text x="212.000" y="22.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="bold" fill="#a33" text-anchor="start">MODEL_GEOMETRY</text>
+<text x="252.000" y="22.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">3D 모델 메시에서 직접 파생 (입면·단면·평면의 기둥·튜브·층판·램프·에스컬레이터)</text>
+<text x="212.000" y="29.600" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="bold" fill="#a33" text-anchor="start">MODEL DETAIL</text>
+<text x="252.000" y="29.600" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">상세도: 모델에서 읽은 형상·치수만 사용</text>
+<text x="212.000" y="37.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="bold" fill="#a33" text-anchor="start">CONCEPT DETAIL</text>
+<text x="252.000" y="37.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">제안 단계 표현(근거 없는 시공 상세를 만들지 않음). 이번 도면집에는 없음</text>
+<text x="212.000" y="44.800" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="bold" fill="#a33" text-anchor="start">UNRESOLVED DETAIL</text>
+<text x="252.000" y="44.800" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">모델·결정 근거 부재 — 그리지 않고 사유를 적음</text>
+<text x="212.000" y="52.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="bold" fill="#a33" text-anchor="start">USER_SUPPLIED</text>
+<text x="252.000" y="52.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">사용자가 제공한 시트를 수정 없이 수록 (A-003)</text>
+<text x="212.000" y="60.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="bold" fill="#a33" text-anchor="start">PROPOSED_ONLY</text>
+<text x="252.000" y="60.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">가구·프로그램 배치는 제안일 뿐 설계 데이터가 아님</text>
+<text x="212.000" y="67.600" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="bold" fill="#a33" text-anchor="start">LEVEL S</text>
+<text x="252.000" y="67.600" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">상층 평면 = 기둥·튜브·코어·층판 + 제안 가구. 벽·문 없음</text>
+<text x="212.000" y="75.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="bold" fill="#a33" text-anchor="start">NOT FINAL / NOT FROZEN</text>
+<text x="252.000" y="75.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">최종 확정·동결 아님</text>
+<text x="212.000" y="88.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.175" font-weight="bold" fill="#111" text-anchor="start">5  가구·프로그램 표기 (평면 시트에서 사용)</text>
+<path d="M214.00,96.00 L226.00,96.00 L226.00,100.00 L214.00,100.00 Z" fill="#e9e9e9" stroke="#555" stroke-width="0.150" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="230.000" y="99.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">판매 섬 부스 A형 (2F–5F·B1·B2: 가로열 3.0×1.2 m, 외곽 선반)</text>
+<path d="M216.00,104.00 L219.00,104.00 L219.00,112.00 L216.00,112.00 Z M221.00,104.00 L224.00,104.00 L224.00,112.00 L221.00,112.00 Z" fill="#e9e9e9" stroke="#555" stroke-width="0.150" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="230.000" y="109.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">판매 섬 부스 B형 (6F–9F·11F 등: 세로 쌍 1.4×4.0 m) — 3F와 다른 배치</text>
+<path d="M223.00,119.00 L222.85,119.93 L222.43,120.76 L221.76,121.43 L220.93,121.85 L220.00,122.00 L219.07,121.85 L218.24,121.43 L217.57,120.76 L217.15,119.93 L217.00,119.00 L217.15,118.07 L217.57,117.24 L218.24,116.57 L219.07,116.15 L220.00,116.00 L220.93,116.15 L221.76,116.57 L222.43,117.24 L222.85,118.07 L223.00,119.00 Z" fill="#fff" stroke="#555" stroke-width="0.150" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="230.000" y="120.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">F&amp;B 좌석: 4인 클러스터·벤치 열·공용 장탁자·바 카운터와 스툴</text>
+<path d="M214.00,126.00 L226.00,126.00 L226.00,132.00 L214.00,132.00 Z" fill="#f4f4f4" stroke="#555" stroke-width="0.150" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="230.000" y="130.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">문화·엔터: 이벤트 무대·계단 객석·전시 좌대·라운지 포드 (판매 부스 반복 없음)</text>
+<path d="M223.00,139.00 L222.85,139.93 L222.43,140.76 L221.76,141.43 L220.93,141.85 L220.00,142.00 L219.07,141.85 L218.24,141.43 L217.57,140.76 L217.15,139.93 L217.00,139.00 L217.15,138.07 L217.57,137.24 L218.24,136.57 L219.07,136.15 L220.00,136.00 L220.93,136.15 L221.76,136.57 L222.43,137.24 L222.85,138.07 L223.00,139.00 Z" fill="#dcdcdc" stroke="#555" stroke-width="0.150" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="230.000" y="140.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">정원·테라스: 식재 띠·수목·테라스 테이블 세트</text>
+<text x="212.000" y="156.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.175" font-weight="bold" fill="#111" text-anchor="start">6  입면·단면·상세 표기</text>
+<text x="212.000" y="164.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">레벨: 각 층 FFL(GL = 1F = ±0.000) 5 mm 반올림, 지붕 상단 별도 표기</text>
+<text x="212.000" y="170.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">치수: 전체 폭 + 축선 간격 + 층고 체인 + 전체 높이 + 주요 요소 높이표</text>
+<text x="212.000" y="176.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">입면 방위: 건물 면에 수직 정투영, 면 법선 방위로 N/E/S/W 명명</text>
+<text x="212.000" y="182.600" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">단면: 모델 메시 실제 절단(포셰 = 절단 고체), 절단선 위치는 S-301 키플랜</text>
+<text x="212.000" y="188.800" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#333" text-anchor="start">숨은 선: 앞 객체로 가려진 부분은 제거(백색 덧칠 없음)</text>
+<path d="M10.00,262.00 L410.00,262.00 L410.00,287.00 L10.00,287.00 Z" fill="#fff" stroke="#222" stroke-width="0.350" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M300.00,262.00 L300.00,287.00" fill="none" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M358.00,262.00 L358.00,287.00" fill="none" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="14.000" y="269.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="bold" fill="#111" text-anchor="start">A-002</text>
+<text x="40.000" y="269.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="bold" fill="#111" text-anchor="start">범례·기호·축척·사실성 등급·상태 표기</text>
+<text x="40.000" y="275.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#444" text-anchor="start">모든 시트가 같은 기호와 선 위계를 쓴다 · 평면 시트의 상세 범례(구역 번호·가구 전략)는 각 평면 우측 패널</text>
+<text x="40.000" y="281.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">진북 도면 위쪽에서 시계 방향 63.2° · 좌표틀 = 1층 마스터와 동일 · 레벨 기준 GL = 1F FFL ±0.000</text>
+<text x="305.000" y="269.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">축척 — (표·문서, A3)</text>
+<text x="305.000" y="274.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.940" font-weight="bold" fill="#a33" text-anchor="start">DOCUMENT</text>
+<text x="305.000" y="283.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.940" font-weight="normal" fill="#555" text-anchor="start">도면집 후보 V3 · FREEZE 아님</text>
+<text x="363.000" y="269.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">C-T14G</text>
+<text x="363.000" y="275.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">개정 R3 (V3)</text>
+<text x="363.000" y="280.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">출력 2026-11-12</text>
+</svg>

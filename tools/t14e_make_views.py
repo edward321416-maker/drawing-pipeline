@@ -17,7 +17,8 @@ import pipeline_common as pc  # noqa: E402
 from shapely.geometry import box  # noqa: E402
 import book_views as bv  # noqa: E402
 import t14d_sheet as _ts  # noqa: E402
-_ts.EDITION = "V2"
+from t14g import config as cfg, modelsrc  # noqa: E402
+cfg.apply(_ts)
 from t14d_sheet import Sheet, geom_lines, geom_rings  # noqa: E402
 import t14d_make_views as V1  # noqa: E402
 import t14e_dims as dm  # noqa: E402
@@ -133,7 +134,7 @@ def height_table(sh, model, x, y, rows, title):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", required=True)
-    ap.add_argument("--glb", required=True)
+    ap.add_argument("--glb", default=None, help="원본 GLB(없어도 됨: 모델 캐시에서 생성하고 캐시 해시를 기록한다)")
     a = ap.parse_args()
     run = os.path.abspath(a.run)
     model = bv.Model(os.path.join(run, "model_cache"), os.path.join(run, "raw_slices", "camera_bounds.json"))
@@ -143,7 +144,9 @@ def main():
     xs, ys, sl3 = axes_of(run)
     regs = json.load(open(os.path.join(run, "qa", "ref_registries", "section_line_registry.json"), encoding="utf-8"))
     tops = sorted({o["zmax"] for o in model.objects if o["kind"] in ("tube_wall", "core_wall", "shaft", "ramp") and o["zmax"] > model.floors["15F"] + 0.5})
-    reg = {"book": "C_T14E", "model": {"path": os.path.abspath(a.glb), "sha256": V1.sha_file(a.glb)}, "frame": {"theta_deg": math.degrees(model.theta), "north_deg": model.north_deg},
+    ident = modelsrc.identity(run, a.glb)
+    reg = {"book": "C_T14G", "model": {"path": os.path.abspath(a.glb) if a.glb else ident["glb_name"] + " (not present)", "sha256": modelsrc.model_sha(run, a.glb),
+                                        "status": ident["status"], "cache_sha256": ident["cache_sha256"]}, "frame": {"theta_deg": math.degrees(model.theta), "north_deg": model.north_deg},
            "elevations": [], "sections": [], "dimension_meta": {}}
     scale, k, pad = 400, 2.5, 0.3
     fac6 = [o for o in model.objects if o["name"].startswith("A-FACD_valley_glass_6F")]
@@ -189,10 +192,10 @@ def main():
         # 상세 호출: 6F 외피(D-406), 지붕 구조(D-410)
         if fac6:
             fx, fy, fz = center_of(fac6[0])
-            dm.detail_tag(sh, X(fx * el["right"][0] + fy * el["right"][1]), Y(fz), "D-406", 50, dashed_r=6.0)
+            dm.detail_tag(sh, X(fx * el["right"][0] + fy * el["right"][1]), Y(fz), "D-406", dashed_r=6.0)           # 축척은 레지스트리에서
             meta["detail_callouts"] += 1
         px_, py_, pz_ = center_of(pad_o)
-        dm.detail_tag(sh, X(px_ * el["right"][0] + py_ * el["right"][1]), Y(pz_), "D-410", 50, dashed_r=5.0)
+        dm.detail_tag(sh, X(px_ * el["right"][0] + py_ * el["right"][1]), Y(pz_), "D-410", dashed_r=5.0)
         meta["detail_callouts"] += 1
         # 오른쪽: 주요 높이표 + 방위 안내
         rows = [("15F → 지붕 상단", model.floors["15F"], roof_z)] + [(o["name_ko"], o["zmin"], o["zmax"]) for o in model.objects if o["kind"] in ("tube_wall",) and o["zmax"] > model.floors["15F"] + 0.5][:6]
@@ -212,6 +215,10 @@ def main():
 
     cx_mid, cy_mid = (bb["xmin"] + bb["xmax"]) / 2, (bb["ymin"] + bb["ymax"]) / 2
     z_lo = min(o["zmin"] for o in model.bld)
+    # EV 샤프트 피트(-16.5 m)까지 그리면 단면이 제목란(y=262 mm) 밑으로 내려간다(감사 p15-01/p16-01/p17-02). B2 FFL -1.5 m에서 절단하고 그 사실을 적는다.
+    z_clip = max(z_lo, model.floors["B2"] - 1.5)
+    SEC_TOP = 34.0
+    clipbox = box(-1e4, z_clip, 1e4, roof_z + 5.0)
     for s in regs["sections"]:
         ax, val, ls, nm, sid = s["plane"]["axis"], s["plane"]["value_drawing_frame"], s["plane"]["look_sign"], s["name"][0], s["sheet"]
         sec = bv.section(model, ax, val, ls)
@@ -220,16 +227,16 @@ def main():
         kk = 1000.0 / sc
         ucen = (x0 + x1) / 2
         X = lambda u: 190.0 + (u - ucen) * kk
-        Y = lambda z: 40.0 + (roof_z + 0.4 - z) * kk
+        Y = lambda z: SEC_TOP + (roof_z + 0.4 - z) * kk
         meta = {"overall_chains": 0, "grid_chains": 0, "level_dims": 0, "major_dims": 0, "axis_bubbles": 0, "detail_callouts": 0, "level_labels": 18}
         sh = Sheet(sid, "단면도 %s–%s (SECTION %s–%s)" % (nm, nm, nm, nm), sc, "MODEL_GEOMETRY · 실제 메시 절단",
                    subtitle="%s · 절단면 %s = %.3f (도면틀) · 바라보는 방향 %s · 치수 mm" % (s["description"], ax, val, ("+" if ls > 0 else "−") + ax),
                    extra_lines=["절단 포셰 = 모델 메시와 절단면의 교선(층 평면을 쌓은 가짜 단면 아님). 절단면 너머 객체는 가림 처리 윤곽선",
                                 "층 레벨·슬래브 두께는 A-FLOR 층판에서 읽음. 접합·재료 상세 미검증. 지반·옹벽은 모델에 없어 표시하지 않음(UNVERIFIED)"])
-        level_lines(sh, model, X(x0) - 6, X(x1) + 6, Y, z_lo, roof_z - 0.1, roof_z)
+        level_lines(sh, model, X(x0) - 6, X(x1) + 6, Y, z_clip, roof_z - 0.1, roof_z)
         drawn, drawq = [], []
         for o, vis, edge in sec["items"]:
-            lines = geom_lines(edge)
+            lines = geom_lines(edge.intersection(clipbox))
             if lines:
                 drawn.append(o)
                 drawq.append((0.12 if o["kind"] in ("column", "facade") else 0.18, lines))
@@ -237,6 +244,9 @@ def main():
             sh.path([[(X(u), Y(z)) for u, z in ln] for ln in lines], stroke="#444", w=w, closed=False)
         cut_objs = []
         for o, poly in sec["cuts"]:
+            poly = poly.intersection(clipbox)
+            if poly.is_empty:
+                continue
             sh.path([[(X(u), Y(z)) for u, z in r] for r in geom_rings(poly)], fill="#111", stroke="#000", w=0.35)
             cut_objs.append(o)
         sh.line(12, Y(ffl0), 300, Y(ffl0), 0.35, "#555", "5,2")
@@ -246,7 +256,9 @@ def main():
         corners = [(bb["xmin"], bb["ymin"]), (bb["xmax"], bb["ymax"]), (bb["xmin"], bb["ymax"]), (bb["xmax"], bb["ymin"])]
         lo_u, hi_u = min(p[0] * right[0] + p[1] * right[1] for p in corners), max(p[0] * right[0] + p[1] * right[1] for p in corners)
         top_axes(sh, X, Y(roof_z), right, xs, ys, lo_u, hi_u, meta)
-        height_dims(sh, model, Y, X(x0) - 32.0, X(x1) + 30.0, roof_z, z_lo, tops, meta)
+        height_dims(sh, model, Y, X(x0) - 32.0, X(x1) + 30.0, roof_z, z_clip, tops, meta)
+        if z_clip > z_lo + 0.01:
+            sh.text(X(x0) - 6, Y(z_clip) + 3.2, "▼ 절단 %+.3f 아래 생략 — EV 샤프트 피트는 %+.3f까지 연장 (제목란과 겹치지 않도록)" % (r5(z_clip - ffl0), r5(z_lo - ffl0)), 5.5, "normal", "#a33")
         mini_keyplan(sh, run, 308, 24, 60, cut=s, letter=nm, north=model.north_deg)
         sh.text(308, 101, "절단선 %s–%s: %s = %.2f, 바라봄 %s" % (nm, nm, ax, val, ("+" if ls > 0 else "−") + ax), 6.0, "normal", "#c00")
         sh.text(308, 105.6, "키플랜 S-301 참조", 6.0, "normal", "#555")
@@ -310,7 +322,7 @@ def main():
     reg["section_locator"] = {"files": {e: {"path": base + "." + e, "sha256": V1.sha_file(base + "." + e)} for e in ("svg", "pdf", "png")}}
     json.dump(reg, open(os.path.join(run, "sections", "section_line_registry.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     json.dump({"elevations": reg["elevations"], "frame": reg["frame"], "model": reg["model"]}, open(os.path.join(run, "elevations", "elevation_registry.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print("VIEWS V2 DONE")
+    print("VIEWS %s DONE" % cfg.EDITION)
 
 
 if __name__ == "__main__":

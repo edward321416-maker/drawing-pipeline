@@ -20,9 +20,25 @@ sys.path.insert(0, os.path.join(ROOT, "src"))
 sys.path.insert(0, HERE)
 import fitz  # noqa: E402
 import t14d_sheet as _ts  # noqa: E402
-_ts.EDITION = "V2"
+from t14g import config as cfg, modelsrc, registry as sheetreg  # noqa: E402
+from t14f import fonts as cjk_fonts  # noqa: E402
+from t14g import make_coverage  # noqa: E402
+cfg.apply(_ts)
 from t14d_sheet import Sheet  # noqa: E402
 import t14e_dims as dm  # noqa: E402
+
+ED = cfg.EDITION
+
+
+def detail_scale_text():
+    """'상세 1:50 (D-407·408·410은 1:100)' built from the registry, not typed."""
+    by = {}
+    for sid, den in sheetreg.DETAIL_SCALE.items():
+        by.setdefault(den, []).append(sid)
+    base = max(by, key=lambda d: len(by[d]))
+    others = "·".join(s.replace("D-", "") if i else s for i, s in enumerate(sorted(sum((v for d, v in by.items() if d != base), []))))
+    odd = sorted({d for d in by if d != base})
+    return "상세 1:%d(%s은 1:%s)" % (base, others, "·".join(str(d) for d in odd)) if odd else "상세 1:%d" % base
 
 
 def sha(p):
@@ -57,7 +73,7 @@ def table(sh, x, y, widths, header, rows, row_h=6.2, pt=6.5, head_pt=6.8):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", required=True)
-    ap.add_argument("--glb", required=True)
+    ap.add_argument("--glb", default=None, help="원본 GLB(없어도 됨)")
     ap.add_argument("--head", required=True)
     a = ap.parse_args()
     run = os.path.abspath(a.run)
@@ -87,6 +103,7 @@ def main():
          ("A-002", "범례·기호·축척·사실성 등급·상태 표기", "—", "DOCUMENT", P("appendix", "A-002_legend_notation.pdf"), "appendix"),
          ("A-003", "배치도 / 1층 계획 (사용자 제공 1F_CleanLine_FIXED, 수정 없음)", "1:400", "USER_SUPPLIED · 1층 프로그램 후보(승인 전)", site_pdf, "plans")]
     plan_of = {"1F": "A-003 (1:400 배치+1층)"}
+    cov_pdf, cov_json, _cov = make_coverage.build(run, P("appendix", "A-902_floor_overview"))        # 17개 층 전부의 구성·차이(B2~15F)
     for p in plans:
         t = "%s 평면 (치수·축선·범례, 가구 PROPOSED_ONLY)" % "·".join(p["applies_to"])
         L.append((p["sheet"], t, p["scale"], "MODEL_GEOMETRY · LEVEL S · PROPOSED_ONLY · NOT FINAL", p["files"]["pdf"]["path"], "plans"))
@@ -101,28 +118,31 @@ def main():
         L.append((d["sheet"], d["title"], d["scale"], d["grade"], d["files"]["pdf"]["path"], "details"))
     L.append(("A-900", "미확정 설계 결정·도면 한계", "—", "DOCUMENT", P("appendix", "A-900_unresolved.pdf"), "appendix"))
     L.append(("A-901", "층별 동등성 판정·평면 발행표·치수 포함 현황", "—", "DOCUMENT + MODEL_DATA", P("appendix", "A-901_floor_matrix_dimension_coverage.pdf"), "appendix"))
+    L.append(("A-902", "층별 구성 일람 (B2~15F 17개 층, 1:1000)", "1:1000", "DOCUMENT + MODEL_DATA", cov_pdf, "appendix"))
     N = len(L)
 
     # ── A-000 표지 ─────────────────────────────────────────────────────────────────────────────
     s0 = Sheet("A-000", "표지", None, "DOCUMENT", subtitle="")
     s0.text(210, 78, "다층 상업시설 건축 도면집", 26, "bold", "#111", "middle")
-    s0.text(210, 96, "수직 보행 연구 — 3D 모델에서 파생한 도면 (후보 V2)", 12, "normal", "#444", "middle")
+    s0.text(210, 96, "수직 보행 연구 — 3D 모델에서 파생한 도면 (후보 %s)" % ED, 12, "normal", "#444", "middle")
     s0.line(80, 106, 340, 106, 0.5, "#111")
-    for i, t in enumerate(["54 × 54 m · 지하 2층(B2) ~ 지상 15층(15F) · 지붕 %+.1f m" % (roof_z - ffl0), "도면집 후보 V2 · %s" % now,
+    ident = modelsrc.identity(run, a.glb)
+    for i, t in enumerate(["54 × 54 m · 지하 2층(B2) ~ 지상 15층(15F) · 지붕 %+.1f m" % (roof_z - ffl0), "도면집 후보 %s · 개정 %s · 출력 %s" % (ED, cfg.REVISION, cfg.ISSUE_DATE),
                            "상태: CANDIDATE — NOT FROZEN · 상층 LEVEL S · 가구 PROPOSED_ONLY · NOT FINAL",
-                           "3D 모델: GMC-ZZ-ZZ-M3-0701.glb  sha256 %s…" % secr["model"]["sha256"][:20],
+                           "3D 모델: GMC-ZZ-ZZ-M3-0701.glb (V2 기록 sha256 %s…, 원본 파일 없음) · 시트는 모델 캐시 %s…에서 생성" % ((ident["glb_sha256_recorded_by_v2"] or "?")[:12], ident["cache_sha256"].get("model_world.npz", "?")[:12]) if not ident["glb_present"]
+                           else "3D 모델: GMC-ZZ-ZZ-M3-0701.glb  sha256 %s…" % ident["glb_sha256_verified"][:20],
                            "수록 %d장: 배치도·평면 %d·입면 %d·단면 %d(+키플랜)·상세 %d·부록" % (N, len(plans), len(elev["elevations"]), len(secr["sections"]), len(det))]):
         s0.text(210, 122 + i * 9.5, t, 9, "normal", "#222", "middle")
     s0.north_arrow(210, 205, fr["north_deg"], r=9)
     s0.text(210, 232, "상층에는 벽·문·창·재료 정보가 모델에 없어 확정하지 않았다 · 배치도(A-003)는 사용자 제공 파일을 그대로 수록", 7, "normal", "#777", "middle")
     s0.text(14, 286, "A-000", 10, "bold", "#111")
-    s0.text(34, 286, "표지 · 도면집 후보 V2 · CANDIDATE — NOT FROZEN", 7, "normal", "#555")
+    s0.text(34, 286, "표지 · 도면집 후보 %s · CANDIDATE — NOT FROZEN" % ED, 7, "normal", "#555")
     s0.save(P("appendix", "A-000_cover"))
 
     # ── A-001 목록 ─────────────────────────────────────────────────────────────────────────────
     s1 = Sheet("A-001", "도면 목록·시트 상태표", None, "DOCUMENT", subtitle="발행 시트 %d장 = PDF %d쪽 (쪽 번호는 조립된 PDF에서 확인)" % (N, N),
                extra_lines=["평면은 1F(A-003)·3F·8F(+9F)·10F·13F(+14F)·15F만 발행. 나머지 층은 A-901 표에서 이유와 함께 '미발행' 표기",
-                            "평면 1:250(A3에 치수·축선·범례·제목란을 함께 담는 최대 정수 축척) · 입면·단면 1:400 · 상세 1:50(D-407·408·410은 1:100)"])
+                            "평면 1:250(A3에 치수·축선·범례·제목란을 함께 담는 최대 정수 축척) · 입면·단면 1:400 · %s" % detail_scale_text()])
     rows = [[sid, t, sc, g, str(n + 1), folder] for n, (sid, t, sc, g, _, folder) in enumerate(L)]
     table(s1, 10, 8, [14, 112, 14, 160, 12, 40], ["번호", "제목", "축척", "사실성 등급 / 상태", "쪽", "폴더"], rows, row_h=6.7, pt=5.8)
     s1.title_block()
@@ -145,7 +165,7 @@ def main():
     sh.text(32, 91.2, "단면 표시 (문자 + 보는 방향 + 참조 시트)", 6.5, "normal", "#333")
     dm.elevation_tag(sh, 20, 106, "E-201", (0, -1))
     sh.text(32, 107.2, "입면 표시 (번호 + 바라보는 방향)", 6.5, "normal", "#333")
-    dm.detail_tag(sh, 18, 124, "D-401", 50, dashed_r=5.0)
+    dm.detail_tag(sh, 18, 124, "D-401", dashed_r=5.0)
     sh.text(40, 125.2, "상세 호출 (점선 원 = 확대 위치, 번호 + 축척)", 6.5, "normal", "#333")
     dm.dim_h(sh, 14, 54, 140, "9000", pt=6.0)
     sh.text(58, 141.2, "치수선 (mm 정수, 10 mm 반올림, 모델에서 읽음)", 6.5, "normal", "#333")
@@ -160,7 +180,7 @@ def main():
     sh.text(46, 180.4, "사선 해칭 = 모델에서 절단된 고체(재료 미확정, 일반 표기)", 6.5, "normal", "#333")
     sh.text(14, 196, "3  축척 정책", 9, "bold", "#111")
     for i, t in enumerate(["배치도·1층: 1:400 (사용자 제공 시트 그대로)", "평면: 1:250 — A3(420×297)에 54 m 건물·치수 3열·축선·우측 범례·제목란을 함께 담을 수 있는 가장 큰 정수 축척. 1:200 불가(건물 270 mm + 치수·범례 > 용지)",
-                           "입면·단면: 1:400 · 상세: 1:50 (에스컬레이터·선큰·지붕은 1:100) · 모든 시트에 그래픽 스케일 또는 축척 문구"]):
+                           "입면·단면: 1:400 · %s · 평면·입면·단면·상세 모든 축척 시트에 그래픽 스케일바" % detail_scale_text()]):
         sh.text(14, 204 + i * 6.2, t, 6, "normal", "#333")
     sh.text(212, 14, "4  사실성 등급", 9, "bold", "#111")
     for i, (g, t) in enumerate([("MODEL_GEOMETRY", "3D 모델 메시에서 직접 파생 (입면·단면·평면의 기둥·튜브·층판·램프·에스컬레이터)"), ("MODEL DETAIL", "상세도: 모델에서 읽은 형상·치수만 사용"),
@@ -189,11 +209,11 @@ def main():
     s2.save(P("appendix", "A-002_legend_notation"))
 
     # ── A-900 미확정 ──────────────────────────────────────────────────────────────────────────
-    s9 = Sheet("A-900", "미확정 설계 결정·도면 한계", None, "DOCUMENT", subtitle="이 도면집은 후보(V2)이며 FREEZE가 아니다 · 아래 항목은 근거 부재 또는 사용자 결정 전이라 확정하지 않았다")
+    s9 = Sheet("A-900", "미확정 설계 결정·도면 한계", None, "DOCUMENT", subtitle="이 도면집은 후보(%s)이며 FREEZE가 아니다 · 아래 항목은 근거 부재 또는 사용자 결정 전이라 확정하지 않았다" % ED)
     items = ["U-01  상층 외벽·구획벽·실내 문·창·화장실·피난 경로: 모델에 없음 → 평면은 LEVEL S(기둥·튜브·코어·층판 + 제안 가구)",
              "U-02  캡슐(서측·동측) 출입구·문: 모델에 없고 사용자 미승인 → 벽을 닫아 둠 (D-405)", "U-03  코어 A~D 상층 내부(계단·부속실·승강기): GLB는 외곽 벽만 → D-404는 1층 마스터만, 상층은 UNRESOLVED DETAIL",
              "U-04  외피(A-FACD) 성격과 접합(유리 커튼월·벽·난간): 모델 부재 형상만 표시, 재료·접합 UNRESOLVED (D-406)", "U-05  평면 축척 1:250: 요구 1:200은 A3에 치수·범례 포함 불가 → 1:100 타일 분할 또는 A1 대판은 사용자 결정 대기",
-             "U-06  8F~9F·13F~14F 공통 평면: 면적·프로그램 동일, 수직 개구만 다름(검증됨) → 한 장에 공통 + 차이 표기, '동등함'은 주장하지 않음", "U-07  4F·5F는 3F와 같지 않음(프로그램·층판 차이) → 3F에 합치지 않음. 이들 층 평면은 미발행(A-901)",
+             "U-06  8F~9F·13F~14F 공통 평면: 면적·프로그램 동일, 수직 개구만 다름(검증됨) → 한 장에 공통 + 차이 표기, '동등함'은 주장하지 않음", "U-07  B2·B1·2F·4F·5F·6F·7F·11F·12F는 3F 등과 같지 않아(프로그램·층판 차이) 합치지 않고 개별 평면을 발행하지 않음 → A-902 층별 구성 일람(17개 층)에서 확인",
              "U-08  가구·프로그램: 모두 PROPOSED_ONLY. 3F 판매 A형 / 8F·9F 판매 B형 / 10F·15F F&B 좌석 유형 구분 / 13F·14F 문화·엔터(판매 부스 반복 없음) / 정원층 식재·테라스",
              "U-09  치수: 모델 값을 10 mm 단위로 반올림(모델 노이즈 0.6 mm 수준). 구조 부재 두께·재료 규격은 모델에 없어 표기하지 않음", "U-10  선큰(D-408): 계단 폭·단높이는 마스터에 없고 단 수·방향·윤곽만. 지반·옹벽 미표시",
              "U-11  화물 승강기(D-409): 카·기계·승강장 문·하역 차량 동선 모델 없음 → 형상만 MODEL, 나머지 UNRESOLVED", "U-12  입면 대지 지형·지하 옹벽·인접 건물은 모델에 없어 그리지 않음 (GL = 1F FFL만)",
@@ -214,9 +234,10 @@ def main():
         h = ff.get(f)
         if f == "15F":
             h = round(roof_z - floors["15F"], 3)
+        r5_ = lambda v: round(v / 0.005) * 0.005                                      # 입면·단면과 같은 5 mm 반올림(7F +31.001 → +31.000)
         why = {"1F": "A-003 사용자 제공", "3F": "기준층(판매 A형)", "8F": "기준층(판매 B형, 9F 공통)", "9F": "8F와 공통 (개구 차이 표기)", "10F": "F&B 기준층", "13F": "문화·엔터 기준층, 14F 공통", "14F": "13F와 공통 (개구 차이 표기)", "15F": "F&B·정원 기준층"}.get(f, "사용자 지시(기준층만)에 따라 미발행")
-        rows.append([f, "%+.3f" % (floors[f] - ffl0), ("%.3f" % h) if h is not None else "-", g.get("id", "-") + " " + {"INDEPENDENT": "독립", "TYPICAL_WITH_CIRCULATION_VARIATION": "공통+개구 차이"}.get(g.get("kind", ""), g.get("kind", "")), matrix[f]["program"][:30], plan_of.get(f, "평면 미발행"), why])
-    y_end = table(s91, 10, 14, [12, 18, 15, 62, 62, 40, 70], ["층", "FFL (m)", "층고 (m)", "그룹 · 종류(증거)", "프로그램(구역 ㎡)", "평면 시트", "발행 이유"], rows, row_h=6.3, pt=5.6)
+        rows.append([f, "%+.3f" % r5_(floors[f] - ffl0), ("%.3f" % r5_(h)) if h is not None else "-", g.get("id", "-") + " " + {"INDEPENDENT": "독립", "TYPICAL_WITH_CIRCULATION_VARIATION": "공통+개구 차이"}.get(g.get("kind", ""), g.get("kind", "")), matrix[f]["program"], plan_of.get(f, "A-902 일람만"), why])
+    y_end = table(s91, 10, 14, [12, 18, 15, 50, 76, 40, 68], ["층", "FFL (m)", "층고 (m)", "그룹 · 종류(증거)", "프로그램(구역 ㎡)", "평면 시트", "발행 이유"], rows, row_h=6.3, pt=5.6)
     y0 = y_end + 6
     s91.text(10, y0, "시트별 치수·참조 기호 포함 현황 (레지스트리에서 읽음)", 8, "bold", "#111")
     crow = []
@@ -246,14 +267,16 @@ def main():
         n = len(book)
         if sid == "A-003":                                   # 도면집 쪽에만 쪽 번호표를 붙인다(plans\A-003 사본과 원본은 수정 없음). 우측 흰 범례 상자의 빈 하단
             pg_ = book[n - 1]
-            pg_.insert_text((922, 812), "A-003", fontname="malgun", fontfile=r"C:\Windows\Fonts\malgunbd.ttf", fontsize=8, color=(0.07, 0.07, 0.07))
-            pg_.insert_text((950, 812), "도면집 V2 · 사용자 제공 시트(쪽 번호표만 추가, 본문 수정 없음)", fontname="malgun2", fontfile=r"C:\Windows\Fonts\malgun.ttf", fontsize=6, color=(0.3, 0.3, 0.3))
+            pg_.insert_text((922, 812), "A-003", fontname="cjkb", fontfile=cjk_fonts.resolve("bold")[0], fontsize=8, color=(0.07, 0.07, 0.07))
+            pg_.insert_text((950, 812), "도면집 %s · 사용자 제공 시트(쪽 번호표만 추가, 본문 수정 없음)" % ED, fontname="cjkr", fontfile=cjk_fonts.resolve("regular")[0], fontsize=6, color=(0.3, 0.3, 0.3))
         toc.append([1, "%s  %s" % (sid, title), n])
         pages.append({"page": n, "sheet": sid, "title": title, "scale": sc, "grade": grade, "folder": folder, "source_pdf": path, "source_sha256": sha(path)})
     book.set_toc(toc)
-    book.set_metadata({"title": "다층 상업시설 건축 도면집 — 후보 V2", "author": "drawing-pipeline", "subject": "CANDIDATE — NOT FROZEN", "keywords": "model-derived drawing set; Level S upper floors", "creator": "t14e_make_book.py", "producer": "PyMuPDF"})
-    out = P("book", "drawing_set_candidate_v2.pdf")
+    book.set_metadata({"title": "다층 상업시설 건축 도면집 — 후보 %s" % ED, "author": "drawing-pipeline", "subject": "CANDIDATE — NOT FROZEN", "keywords": "model-derived drawing set; Level S upper floors", "creator": "t14e_make_book.py", "producer": "PyMuPDF"})
+    book_name = "drawing_set_candidate_%s" % ED.lower()
+    out = P("book", book_name + ".pdf")
     os.makedirs(os.path.dirname(out), exist_ok=True)
+    book.subset_fonts()                                      # 시트마다 들어 있는 전체 글꼴 사본(V2: 17 MB)을 쓰인 글리프만 남긴다
     book.save(out, garbage=4, deflate=True)
     book.close()
     # 쪽 번호가 들어간 A-001 다시 만들기 위해 목록 쪽 = 실제 쪽 확인
@@ -268,17 +291,17 @@ def main():
     cols = 6
     sheet = Image.new("RGB", (cols * (tw + 12) + 12, math.ceil(len(thumbs) / cols) * (th + 30) + 12), "#dddddd")
     dr = ImageDraw.Draw(sheet)
-    ft = ImageFont.truetype(r"C:\Windows\Fonts\malgun.ttf", 14)
+    ft = ImageFont.truetype(cjk_fonts.resolve("regular")[0], 14)
     for i, im in enumerate(thumbs):
         x, y = 12 + (i % cols) * (tw + 12), 12 + (i // cols) * (th + 30)
         sheet.paste(im, (x, y + 20))
         dr.text((x, y), pages[i]["sheet"] + "  " + pages[i]["title"][:20], font=ft, fill="#111")
-    prev = P("book", "drawing_set_candidate_v2_preview.png")
+    prev = P("book", book_name + "_preview.png")
     sheet.save(prev)
     meta = {"pdf": out, "pdf_sha256": sha(out), "pages": len(d), "preview": prev, "sheets": pages, "git_head": a.head, "model_sha256": secr["model"]["sha256"], "date": now,
             "published_floor_plans": sorted(plan_of), "unpublished_floors": [f for f in order if f not in plan_of], "status": "CANDIDATE — NOT FROZEN"}
     json.dump(meta, open(P("book", "book_registry.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    json.dump({"edition": "V2", "pages": len(d), "sheets": [{k: p[k] for k in ("page", "sheet", "title", "scale", "grade", "folder", "source_sha256")} for p in pages]},
+    json.dump({"edition": ED, "pages": len(d), "sheets": [{k: p[k] for k in ("page", "sheet", "title", "scale", "grade", "folder", "source_sha256")} for p in pages]},
               open(P("00_index", "sheet_index.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     with open(P("00_index", "sheet_index.csv"), "w", newline="", encoding="utf-8-sig") as fh:
         w = csv.writer(fh)

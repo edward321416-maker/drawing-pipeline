@@ -17,6 +17,8 @@ import sys
 import fitz
 
 sys.stdout.reconfigure(encoding="utf-8")
+PDFN = "drawing_set_candidate_%s.pdf" % os.environ.get("T14_EDITION", "V2").lower()     # 판 이름은 T14_EDITION(기본 V2: 과거 실행 재현)에서
+EDN = os.environ.get("T14_EDITION", "V2")
 
 
 def sha(p):
@@ -77,7 +79,7 @@ def main():
     a = ap.parse_args()
     run = os.path.abspath(a.run)
     P = lambda *x: os.path.join(run, *x)
-    pdf = P("book", "drawing_set_candidate_v2.pdf")
+    pdf = P("book", PDFN)
     reg = jl(P("book", "book_registry.json"))
     idx = jl(P("00_index", "sheet_index.json"))
     csv_rows = list(csv.DictReader(open(P("00_index", "sheet_index.csv"), encoding="utf-8-sig")))
@@ -270,7 +272,7 @@ def main():
         cov.append({"sheet": dd["sheet"], "kind": "detail", **dd["dimension_meta"], "dimension_rows": len(dd["dimensions"]), "dimensions": dd["dimensions"]})
     json.dump({"note": "치수 개수는 생성 레지스트리 값이고, Q10·Q20·Q31이 시트 텍스트에서 독립 확인함", "sheets": cov}, open(P("dimension_coverage_report.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     # ── 필수 산출물 존재 ───────────────────────────────────────────────────────────────────────
-    need_files = [P("book", "drawing_set_candidate_v2.pdf"), P("00_index", "sheet_index.csv"), P("00_index", "sheet_index.json"), P("visual_issues_resolved.md"), P("unresolved_design_decisions.md"), P("dimension_coverage_report.json"), P("equivalence_check_report.json")]
+    need_files = [P("book", PDFN), P("00_index", "sheet_index.csv"), P("00_index", "sheet_index.json"), P("visual_issues_resolved.md"), P("unresolved_design_decisions.md"), P("dimension_coverage_report.json"), P("equivalence_check_report.json")]
     miss = [f for f in need_files if not os.path.exists(f)]
     check("Q70", "필수 산출물 존재(보고서 md 포함)", not miss, str(miss))
     # ── 음성 대조 ──────────────────────────────────────────────────────────────────────────────
@@ -296,11 +298,11 @@ def main():
     man = []
     for r in rows:
         man.append({"page": r["page"], "sheet": r["sheet"], "title": r["title"], "scale": r["scale"], "grade": r["grade"], "folder": r["folder"], "source_sha256": r["source_sha256"]})
-    shutil.copy(pdf, P("drawing_set_candidate_v2.pdf"))
-    json.dump({"pdf": P("drawing_set_candidate_v2.pdf"), "pdf_sha256": sha(pdf), "pages": len(d), "sheets": man, "model_sha256": reg["model_sha256"], "edition": "V2", "status": "CANDIDATE — NOT FROZEN"},
+    shutil.copy(pdf, P(PDFN))
+    json.dump({"pdf": P(PDFN), "pdf_sha256": sha(pdf), "pages": len(d), "sheets": man, "model_sha256": reg["model_sha256"], "edition": EDN, "status": "CANDIDATE — NOT FROZEN"},
               open(P("sheet_manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     passed = sum(r["ok"] for r in R)
-    rep = {"edition": "V2", "pdf": pdf, "pdf_sha256": sha(pdf), "pages": len(d), "checks": R, "passed": passed, "failed": len(R) - passed, "total": len(R),
+    rep = {"edition": EDN, "pdf": pdf, "pdf_sha256": sha(pdf), "pages": len(d), "checks": R, "passed": passed, "failed": len(R) - passed, "total": len(R),
            "method": "완성된 PDF·SVG를 다시 읽어 확인. 생성 코드의 자기 보고(레지스트리)는 PDF 텍스트·SVG 기하와 교차 확인. 음성 대조 포함.",
            "limits": ["PDF 텍스트는 cairosvg 글리프 출력 때문에 공백이 빠져 공백 없이 비교", "시각적 겹침은 문자 상자 추정(문자 수×글자 크기×0.62)과 눈 검토로 확인 — 완전한 자동 증명이 아님", "치수 값이 모델과 일치하는지는 생성 코드가 모델에서 읽은 값이며, 별도 CAD와 대조하지 않음"]}
     json.dump(rep, open(P("tests_report.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)

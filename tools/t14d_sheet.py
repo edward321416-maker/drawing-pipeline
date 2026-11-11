@@ -5,11 +5,36 @@
   제목 11~13 pt, 이름 7.5~8.5 pt, 보조 6~6.5 pt, 미세 5~5.5 pt.
 """
 import os
+import sys
 
 A3 = (420.0, 297.0)
-FONT = "Malgun Gothic, Arial, sans-serif"
 PT = 0.3528                                         # 1 pt = 0.3528 mm
-EDITION = "V1"                                      # V2 스크립트가 "V2"로 바꾼다(제목란 표기)
+EDITION = "V1"                                      # 도면집 스크립트가 tools/t14g/config.py 값으로 바꾼다(제목란 표기)
+PROJECT_CODE = "C-T14D"                             # 같은 방식. 기본값은 V1 그대로
+REVISION = ""
+ISSUE_DATE = "2026-11-05"
+
+
+def _detect_font():
+    """cairosvg에 줄 CJK 글꼴 이름: tools/t14f/fonts.py가 찾은 글꼴 파일의 family (Windows 경로를 박지 않는다). 못 찾으면 V2와 같은 이름."""
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from t14f import fonts
+        from fontTools.ttLib import TTFont
+        path, _ = fonts.resolve("regular")
+        fam = TTFont(path, fontNumber=0, lazy=True)["name"].getDebugName(1)
+        if fam:
+            return "%s, Arial, sans-serif" % fam
+    except (ImportError, OSError, FileNotFoundError):
+        pass
+    return "Malgun Gothic, Arial, sans-serif"
+
+
+FONT = _detect_font()
+
+
+class LayoutConflict(Exception):
+    """Two claimed layout regions overlap, or a region leaves the sheet."""
 
 
 def esc(s):
@@ -17,9 +42,12 @@ def esc(s):
 
 
 class Sheet:
-    def __init__(self, sid, title, scale, status, subtitle="", extra_lines=()):
+    def __init__(self, sid, title, scale, status, subtitle="", extra_lines=(), paper=A3):
         self.sid, self.title, self.scale, self.status, self.subtitle = sid, title, scale, status, subtitle
+        self.paper = paper
         self.extra = list(extra_lines)
+        self.claims = []                                # (name, x0, y0, x1, y1): 겹치면 저장 시 LayoutConflict
+        self.bars = []                                  # 그린 스케일바의 기대 실측 길이(QA가 PDF에서 다시 잰다)
         self.parts = []
         self._seg = {}                                  # 열린 선분 중복 제거: 선분 키 → 가장 굵은 굵기
         self.dedup_removed = 0
@@ -87,21 +115,50 @@ class Sheet:
         self.parts.append("<text %s>%s</text>" % (a, esc(s)))
 
     # 공통 요소 ---------------------------------------------------------------------------------
-    def scale_bar(self, x, y, meters=(0, 5, 10, 20)):
+    def claim(self, name, x0, y0, x1, y1):
+        """Reserve a rectangle (sheet mm). Overlaps and out-of-sheet regions fail at save() (§3.3 zero collision)."""
+        self.claims.append((name, min(x0, x1), min(y0, y1), max(x0, x1), max(y0, y1)))
+
+    def check_claims(self, allow=()):
+        W, H = self.paper
+        errs = []
+        for n, x0, y0, x1, y1 in self.claims:
+            if x0 < 0 or y0 < 0 or x1 > W or y1 > H:
+                errs.append("%s leaves the sheet: (%.1f,%.1f,%.1f,%.1f)" % (n, x0, y0, x1, y1))
+        for i, a in enumerate(self.claims):
+            for b in self.claims[i + 1:]:
+                if (a[0], b[0]) in allow or (b[0], a[0]) in allow:
+                    continue
+                if a[1] < b[3] and b[1] < a[3] and a[2] < b[4] and b[2] < a[4]:
+                    errs.append("%s overlaps %s" % (a[0], b[0]))
+        if errs:
+            raise LayoutConflict("%s: %s" % (self.sid, "; ".join(errs)))
+
+    def scale_bar(self, x, y, meters=None):
+        """Graphic scale bar. Physical length = meters[-1] * 1000/scale paper mm (5 m at 1:50, 10 m at 1:100, 20 m at 1:250)."""
+        if meters is None:
+            from t14g import registry
+            meters = registry.bar_meters(self.scale)
         k = self.k
-        self.path([[(x - 3, y - 6.5), (x + meters[-1] * k + 14, y - 6.5), (x + meters[-1] * k + 14, y + 6), (x - 3, y + 6)]], fill="#fff", stroke="#bbb", w=0.1)
+        L = meters[-1] * k
+        self.path([[(x - 3, y - 6.5), (x + L + 14, y - 6.5), (x + L + 14, y + 6), (x - 3, y + 6)]], fill="#fff", stroke="#bbb", w=0.1)
         for i in range(len(meters) - 1):
             x0, x1 = x + meters[i] * k, x + meters[i + 1] * k
             self.path([[(x0, y), (x1, y), (x1, y + 1.6), (x0, y + 1.6)]], fill="#111" if i % 2 == 0 else "#fff", stroke="#111", w=0.15)
         for m in meters:
             self.text(x + m * k, y - 1.4, "%d%s" % (m, " m" if m == meters[-1] else ""), 5.5, "normal", "#333", "middle")
-        self.text(x, y + 5.2, "1:%d  A3 420×297 mm" % self.scale, 4.8, "normal", "#555")
+        self.text(x, y + 5.2, "1:%d  %s %g×%g mm 100%% 인쇄 기준" % (self.scale, "A3" if self.paper == A3 else "A1", self.paper[0], self.paper[1]), 5.0, "normal", "#555")
+        self.claim("scale_bar", x - 3, y - 6.5, x + L + 14, y + 6)
+        self.bars.append({"x_mm": round(x, 3), "y_mm": round(y, 3), "length_mm": round(L, 4), "scale": self.scale, "meters": list(meters)})
 
     def title_block(self):
-        x0, y0, x1, y1 = 10.0, 262.0, 410.0, 287.0
+        W, H = self.paper
+        x0, y0, x1, y1 = 10.0, H - 35.0, W - 10.0, H - 10.0     # A3: 10,262 → 410,287 (V2와 같은 좌표)
+        c1, c2 = W - 120.0, W - 62.0                              # A3: 300, 358
+        self.claim("title_block", x0, y0, x1, y1)
         self.path([[(x0, y0), (x1, y0), (x1, y1), (x0, y1)]], fill="#fff", stroke="#222", w=0.35)
-        self.line(300, y0, 300, y1, 0.2, "#222")
-        self.line(358, y0, 358, y1, 0.2, "#222")
+        self.line(c1, y0, c1, y1, 0.2, "#222")
+        self.line(c2, y0, c2, y1, 0.2, "#222")
         self.text(x0 + 4, y0 + 7.5, self.sid, 12, "bold", "#111")
         self.text(x0 + 30, y0 + 7.5, self.title, 12, "bold", "#111")
         if self.subtitle:
@@ -110,16 +167,19 @@ class Sheet:
         for ln in self.extra[:2]:
             self.text(x0 + 30, yy, ln, 6, "normal", "#555")
             yy += 4.2
-        self.text(305, y0 + 7, ("축척 1:%d (A3)" % self.scale) if self.scale else "축척 — (표·문서, A3)", 8, "bold", "#222")
+        pn = "A3" if self.paper == A3 else ("A1" if self.paper == (841.0, 594.0) else "%gx%g" % self.paper)
+        self.text(c1 + 5, y0 + 7, ("축척 1:%d (%s)" % (self.scale, pn)) if self.scale else "축척 — (표·문서, %s)" % pn, 8, "bold", "#222")
         parts = [t.strip() for t in self.status.split(" · ")]
         lines = [parts[0], " · ".join(parts[1:])] if len(parts) > 1 else [parts[0]]            # 상태 문구는 '·' 단위로 두 줄까지(제목란 옆 칸을 침범하지 않게)
         yy2 = y0 + 12.5
         for i, ln_ in enumerate(lines[:2]):
-            self.text(305, yy2, ln_, 5.5, "bold" if i == 0 else "normal", "#a33")
+            self.text(c1 + 5, yy2, ln_, 5.5, "bold" if i == 0 else "normal", "#a33")
             yy2 += 4.0
-        self.text(305, y0 + 21.5, "도면집 후보 %s · FREEZE 아님" % EDITION, 5.5, "normal", "#555")
-        self.text(363, y0 + 7, "C-T14D", 8, "bold", "#222")
-        self.text(363, y0 + 13, "2026-11-05", 6, "normal", "#555")
+        self.text(c1 + 5, y0 + 21.5, "도면집 후보 %s · FREEZE 아님" % EDITION, 5.5, "normal", "#555")
+        self.text(c2 + 5, y0 + 7, PROJECT_CODE, 8, "bold", "#222")
+        self.text(c2 + 5, y0 + 13, ("개정 %s (%s)" % (REVISION, EDITION)) if REVISION else ISSUE_DATE, 6, "normal", "#555")
+        if REVISION:
+            self.text(c2 + 5, y0 + 18.5, "출력 %s" % ISSUE_DATE, 6, "normal", "#555")
 
     def north_arrow(self, x, y, north_deg_from_up, r=7.0, label="N"):
         import math
@@ -130,10 +190,13 @@ class Sheet:
         self.text(tip[0], tip[1] - 1.0, label, 7, "bold", "#111", "middle")
 
     # 저장 --------------------------------------------------------------------------------------
-    def save(self, base, png_width=4961):
+    def save(self, base, png_width=None, allow=()):
         import cairosvg
-        svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="%gmm" height="%gmm" viewBox="0 0 %g %g">' % (A3[0], A3[1], A3[0], A3[1]),
-               '<metadata>%s</metadata>' % esc(self.status), '<rect width="%g" height="%g" fill="#fff"/>' % A3] + self.parts + ["</svg>"]
+        W, H = self.paper
+        self.check_claims(allow)
+        png_width = png_width or int(round(W / 25.4 * 300))                                   # 300 dpi (A3 = 4961 px)
+        svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="%gmm" height="%gmm" viewBox="0 0 %g %g">' % (W, H, W, H),
+               '<metadata>%s</metadata>' % esc(self.status), '<rect width="%g" height="%g" fill="#fff"/>' % (W, H)] + self.parts + ["</svg>"]
         os.makedirs(os.path.dirname(base), exist_ok=True)
         open(base + ".svg", "w", encoding="utf-8").write("\n".join(svg))
         cairosvg.svg2pdf(url=base + ".svg", write_to=base + ".pdf")
