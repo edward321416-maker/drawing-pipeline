@@ -23,7 +23,8 @@ import book_views as bv  # noqa: E402
 from t14d_sheet import Sheet  # noqa: E402
 import t14e_dims as dm  # noqa: E402
 import t14d_sheet as _ts  # noqa: E402
-_ts.EDITION = "V2"
+from t14g import config as cfg  # noqa: E402
+cfg.apply(_ts)
 
 SCALE = 250
 K = 1000.0 / SCALE          # 모델 1 m → 시트 4 mm
@@ -189,10 +190,11 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
         ref = next(e["sheet"] for e in regs["elev"]["elevations"] if e["name"] == nm)
         dm.elevation_tag(sh, X(px), Y(py), ref, d)
         meta["elevation_tags"] += 1
-    callouts = {"3F": [("D-401", "A-CORE-TUBE_T1", 50), ("D-402", "A-CORE-TUBE_T2", 50), ("D-403", "A-CORE-TUBE_T3", 50), ("D-405", "A-CORE-TUBE_capW", 50)],
-                "8F": [("D-407", None, 50)], "15F": [("D-410", "A-ROOF_rescue_pad", 50)]}
+    # 호출 대상 상세 번호와 위치 객체만 적는다. 축척은 detail_tag가 레지스트리(tools/t14g/registry.py)에서 읽는다.
+    callouts = {"3F": [("D-401", "A-CORE-TUBE_T1"), ("D-402", "A-CORE-TUBE_T2"), ("D-403", "A-CORE-TUBE_T3"), ("D-405", "A-CORE-TUBE_capW")],
+                "8F": [("D-407", None)], "15F": [("D-410", "A-ROOF_rescue_pad")]}
     used_callouts = []
-    for sid_d, oname, sc in callouts.get(floor, []):
+    for sid_d, oname in callouts.get(floor, []):
         if oname is None:
             es = [o for o in model.objects if o["name"].startswith("A-VERT-ESCL_8F-9F")]
             pts = []
@@ -203,7 +205,7 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
             er = max(max(p[0] for p in pts) - min(p[0] for p in pts), max(p[1] for p in pts) - min(p[1] for p in pts)) / 2
         else:
             ex, ey, er = obj_center_r(model, oname)
-        dm.detail_tag(sh, X(ex), Y(ey), sid_d, sc, dashed_r=max(er, 2.0) * K * 0.55)
+        dm.detail_tag(sh, X(ex), Y(ey), sid_d, dashed_r=max(er, 2.0) * K * 0.55)
         used_callouts.append(sid_d)
         meta["detail_callouts"] += 1
 
@@ -277,7 +279,7 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
     sh.text(x, y, "관련 시트", 8, "bold", "#111")
     y += 5.2
     rel = [("단면", "S-301 키플랜 · S-302 A–A · S-303 B–B · S-304 C–C · S-305 D–D"), ("입면", "E-201 북 · E-202 동 · E-203 남 · E-204 서"),
-           ("상세", " · ".join(used_callouts) if used_callouts else "이 층에 호출된 상세 없음"), ("배치", "A-003 배치도·1층 / A-002 층고·범례")]
+           ("상세", " · ".join(used_callouts) if used_callouts else "이 층에 호출된 상세 없음"), ("배치", "A-003 배치도·1층 / A-901 층별 층고·평면 발행표 / A-002 범례·기호")]
     for k_, t in rel:
         lines_ = wrap("%s  %s" % (k_, t), 42)
         for i, ln in enumerate(lines_):
@@ -290,7 +292,7 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
     sh.text(x, y, "상태·한계", 8, "bold", "#111")
     y += 6
     notes = ["LEVEL S: 구조·프로그램 볼륨만 모델에 있음. 상층 구획벽·문·화장실·피난 경로는 모델에 없어 미확정.",
-             "가구·식재는 설명용 PROPOSED_ONLY. 설계 확정 아님.", "최종 FREEZE 아님(후보 V2)."]
+             "가구·식재는 설명용 PROPOSED_ONLY. 설계 확정 아님.", "최종 FREEZE 아님(후보 %s)." % cfg.EDITION]
     if len(applies) > 1:
         pr = next((p for h in evidence["hypothesis_groups"] for p in h["pairs"] if set(p["pair"].split("~")) == set(applies[:2])), None)
         notes.append("적용 층 %s: 수직동선 개구만 다름(검증됨), EQUIVALENCE VERIFIED 아님." % "·".join(applies))
@@ -330,7 +332,7 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", required=True)
-    ap.add_argument("--glb", required=True)
+    ap.add_argument("--glb", default=None, help="원본 GLB(없어도 됨)")
     ap.add_argument("--plans", required=True, help="층:시트번호:적용층(+로 연결) 쉼표 구분")
     a = ap.parse_args()
     run = os.path.abspath(a.run)

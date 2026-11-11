@@ -23,7 +23,8 @@ from shapely.geometry import LineString, Point, Polygon, box  # noqa: E402
 from shapely.ops import unary_union  # noqa: E402
 import book_views as bv  # noqa: E402
 import t14d_sheet as _ts  # noqa: E402
-_ts.EDITION = "V2"
+from t14g import config as cfg, modelsrc, registry as sheetreg, truth  # noqa: E402
+cfg.apply(_ts)
 from t14d_sheet import Sheet, geom_lines, geom_rings  # noqa: E402
 import t14d_make_views as V1  # noqa: E402
 import t14e_dims as dm  # noqa: E402
@@ -241,13 +242,14 @@ def draw_section(sh, model, spec, c):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", required=True)
-    ap.add_argument("--glb", required=True)
+    ap.add_argument("--glb", default=None, help="원본 GLB(없어도 됨: 모델 캐시에서 생성하고 캐시 해시를 기록한다)")
     a = ap.parse_args()
     run = os.path.abspath(a.run)
     model = bv.Model(os.path.join(run, "model_cache"), os.path.join(run, "raw_slices", "camera_bounds.json"))
     master = pc.load_json(os.path.join(run, "reference_1F", "floor_1F_slice.json"))
     F = model.floors
-    reg = {"book": "C_T14E", "details": [], "model_sha256": V1.sha_file(a.glb)}
+    ident = modelsrc.identity(run, a.glb)
+    reg = {"book": "C_T14G", "details": [], "model_sha256": modelsrc.model_sha(run, a.glb), "model_status": ident["status"], "model_cache_sha256": ident["cache_sha256"]}
     t1, t2, t3 = obj_of(model, "A-CORE-TUBE_T1"), obj_of(model, "A-CORE-TUBE_T2"), obj_of(model, "A-CORE-TUBE_T3")
     capw, fr = obj_of(model, "A-CORE-TUBE_capW"), obj_of(model, "A-CORE-TUBE_FR")
     sprl = obj_of(model, "A-VERT-SPRL_B1-6F_T1_spiral")
@@ -271,30 +273,33 @@ def main():
 
     G = lambda fl, c, **kw: dict(source="glb", ffl=F[fl], floor=fl, center=c, **kw)
     DET = [
-        dict(sid="D-401", title="T1 나선 램프 확대", grade="MODEL DETAIL", scale=50, plan_label="3F 절단 +1.5 m · 램프 윗면", ref="P-101 (3F)", **G("3F", ctr(t1), top_objs=[sprl]),
+        dict(sid="D-401", title="T1 나선 램프 확대", grade="MODEL DETAIL", plan_label="3F 절단 +1.5 m · 램프 윗면", ref="P-101 (3F)", **G("3F", ctr(t1), top_objs=[sprl]),
              section=("x", ctr(t1)[0], "3F"), main=t1, ramp=sprl, notes=["A-VERT-SPRL_B1-6F_T1_spiral + A-CORE-TUBE_T1 모델 메시", "난간·마감·바닥재는 모델에 없어 그리지 않음"]),
-        dict(sid="D-402", title="T2 빛 튜브와 층판 관통 확대", grade="MODEL DETAIL", scale=50, plan_label="3F 절단 +1.5 m · 층판 개구", ref="P-101 (3F)", **G("3F", ctr(t2)),
+        dict(sid="D-402", title="T2 빛 튜브와 층판 관통 확대", grade="MODEL DETAIL", plan_label="3F 절단 +1.5 m · 층판 개구", ref="P-101 (3F)", **G("3F", ctr(t2)),
              section=("x", ctr(t2)[0], "3F"), main=t2, notes=["A-CORE-TUBE_T2 + A-FLOR_s7 층판 개구", "T2는 승객 이동로가 아님(빛 튜브). 유리·마감은 모델에 없음"]),
-        dict(sid="D-403", title="T3 파노라마 승강기 튜브 확대 (T4 동형)", grade="MODEL DETAIL", scale=50, plan_label="3F 절단 +1.5 m", ref="P-101 (3F)", **G("3F", ctr(t3)),
+        dict(sid="D-403", title="T3 파노라마 승강기 튜브 확대 (T4 동형)", grade="MODEL DETAIL", plan_label="3F 절단 +1.5 m", ref="P-101 (3F)", **G("3F", ctr(t3)),
              section=("x", ctr(t3)[0], "3F"), main=t3, notes=["A-CORE-TUBE_T3, A-VERT-ELEV 카·샤프트 모델 메시", "T4는 같은 형식(위치만 다름). 승강장 문·기계는 모델에 없음"]),
-        dict(sid="D-404", title="코어 D 진입·부속실 확대 (1층 마스터)", grade="MODEL DETAIL (1F 마스터) · 상층 UNRESOLVED DETAIL", scale=50, plan_label="1F 마스터 절단 +1.5 m", ref="A-003 (1층)", source="master", slice=master,
+        dict(sid="D-404", title="코어 D 진입·부속실 확대 (1층 마스터)", grade="MODEL DETAIL (1F 마스터) · 상층 UNRESOLVED DETAIL", plan_label="1F 마스터 절단 +1.5 m", ref="A-003 (1층)", source="master", slice=master,
              center=((coreD.bounds[0] + coreD.bounds[2]) / 2, (coreD.bounds[1] + coreD.bounds[3]) / 2), section=None, main_poly=coreD, label_kinds=("shaft",),
              notes=["1층 마스터의 코어 D(벽·부속실 칸막이·문·기호)", "상층 GLB는 코어 외곽 벽만 있어 상층 코어 내부는 그리지 않음(UNRESOLVED DETAIL)"]),
-        dict(sid="D-405", title="캡슐과 층판 접속 확대", grade="MODEL DETAIL · 출입문 미승인", scale=50, plan_label="3F 절단 +1.5 m · 캡슐 끝단", ref="P-101 (3F)", **G("3F", cap_c),
+        dict(sid="D-405", title="캡슐과 층판 접속 확대", grade="MODEL DETAIL · 출입문 미승인", plan_label="3F 절단 +1.5 m · 캡슐 끝단", ref="P-101 (3F)", **G("3F", cap_c),
              section=("y", cap_c[1], "3F"), main=capw, notes=["A-CORE-TUBE_capW + A-FLOR 층판", "캡슐 출입구는 모델에 없고 사용자 미승인이라 벽을 닫아 둠"]),
-        dict(sid="D-406", title="전형층 외피·층판 가장자리와 입면 부재 모듈 (6F)", grade="MODEL DETAIL · 접합 UNRESOLVED", scale=50, plan_label="6F 절단 +1.5 m", ref="E-201~204", **G("6F", fac_c),
+        dict(sid="D-406", title="전형층 외피·층판 가장자리와 입면 부재 모듈 (6F)", grade="MODEL DETAIL · 접합 UNRESOLVED", plan_label="6F 절단 +1.5 m", ref="E-201~204", **G("6F", fac_c),
              section=(fac_axis, fac_c[0] if fac_axis == "x" else fac_c[1], "6F"), main=fac6[0], notes=["A-FACD_valley_* 외피 부재 + A-FLOR_s7_6F", "실제 조인트·재료 자료가 없어 모델 형상만 표시(접합 UNRESOLVED DETAIL)"]),
-        dict(sid="D-407", title="에스컬레이터 개구 확대 (8F–9F)", grade="MODEL DETAIL · 난간·안전 규격 미검증", scale=100, plan_label="8F 절단 +1.5 m · 에스컬레이터 윗면", ref="P-102 (8F)", **G("8F", esc_c, top_objs=esc8),
+        dict(sid="D-407", title="에스컬레이터 개구 확대 (8F–9F)", grade="MODEL DETAIL · 난간·안전 규격 미검증", plan_label="8F 절단 +1.5 m · 에스컬레이터 윗면", ref="P-102 (8F)", **G("8F", esc_c, top_objs=esc8),
              section=("x", esc_c[0], "8F"), main=esc8[0], notes=["A-VERT-ESCL_8F-9F_* 모델 메시 + 층판 개구", "에스컬레이터 기계·난간은 모델에 없음"]),
-        dict(sid="D-408", title="선큰 계단·마당 연결 확대 (1층 마스터)", grade="MODEL DETAIL (1F 마스터) · 지반 UNRESOLVED DETAIL", scale=100, plan_label="1F 마스터 · 선큰", ref="A-003 (1층)", source="master", slice=master,
+        dict(sid="D-408", title="선큰 계단·마당 연결 확대 (1층 마스터)", grade="MODEL DETAIL (1F 마스터) · 지반 UNRESOLVED DETAIL", plan_label="1F 마스터 · 선큰", ref="A-003 (1층)", source="master", slice=master,
              center=((sg[0] + sg[2]) / 2, (sg[1] + sg[3]) / 2), section=None, space_uses=("sunken",), label_kinds=(),
              notes=["선큰 계단 %d단, 하향 %s, FL -5.5 m (마스터 속성)" % (int(sunk["props"].get("treads", 12)), sunk["props"].get("down")), "계단 폭·단높이는 속성에 없어 단 수·방향·윤곽만. 1:50은 창에 안 들어가 1:100"]),
-        dict(sid="D-409", title="화물 승강기·하역 동선 확대", grade="UNRESOLVED DETAIL · 형상만 MODEL", scale=50, plan_label="1F 마스터 · FR 샤프트", ref="A-003 (1층)", source="master", slice=master,
+        dict(sid="D-409", title="화물 승강기·하역 동선 확대", grade="UNRESOLVED DETAIL · 형상만 MODEL", plan_label="1F 마스터 · FR 샤프트", ref="A-003 (1층)", source="master", slice=master,
              center=((frm.bounds[0] + frm.bounds[2]) / 2, (frm.bounds[1] + frm.bounds[3]) / 2), section=("x", ctr(fr)[0], "1F", ctr(fr)), main_poly=frm, label_kinds=("shaft",),
              notes=["단면은 GLB A-CORE-TUBE_FR 벽과 층판만(승강 카·기계·승강장 문은 모델에 없음)", "화물 기계·하역 차량 동선은 UNRESOLVED DETAIL"]),
-        dict(sid="D-410", title="지붕·상층 후퇴부 확대", grade="MODEL DETAIL · 방수·마감 UNRESOLVED", scale=100, plan_label="15F 절단 +1.5 m · 지붕 구조 표식", ref="E-201~204", **G("15F", pad_c, top_objs=[pad_o]),
+        dict(sid="D-410", title="지붕·상층 후퇴부 확대", grade="MODEL DETAIL · 방수·마감 UNRESOLVED", plan_label="15F 절단 +1.5 m · 지붕 구조 표식", ref="E-201~204", **G("15F", pad_c, top_objs=[pad_o]),
              section=("x", pad_c[0], "15F"), main=pad_o, notes=["A-ROOF_slab, A-ROOF_rescue_pad·mark 모델 메시", "방수층·지붕 마감·배수는 모델에 없어 그리지 않음"]),
     ]
+    for spec in DET:
+        spec["scale"] = sheetreg.detail_scale(spec["sid"])                  # 축척의 유일한 출처: tools/t14g/registry.py (호출 기호도 같은 값을 읽는다)
+    assert {s["sid"] for s in DET} == set(sheetreg.DETAIL_SCALE), "상세 사양표와 레지스트리의 상세 번호가 다르다"
     for spec in DET:
         sid, scale = spec["sid"], spec["scale"]
         k = 1000.0 / scale
@@ -302,6 +307,7 @@ def main():
                    extra_lines=spec["notes"][:2])
         c = Ctx()
         c.cut, c.top, c.sunk, c.slab_poly = {}, {}, None, None
+        c.truth = {}
         used_plan = draw_plan(sh, model, spec, c)
         PXX, PYY = c.PX_, c.PY_
         dims = []
@@ -335,9 +341,9 @@ def main():
                     b = p.bounds
                     ymid = (b[1] + b[3]) / 2
                     if spec["sid"] in ("D-402", "D-403"):
-                        dm.dim_h(sh, PXX(b[0]), PXX(b[2]), PY + 12.0, "Ø%s (바깥)" % dm.fmt_mm(do), pt=6.0, color="#06a", above=False)
+                        dm.dim_h(sh, PXX(b[0]), PXX(b[2]), PY + 12.0, truth.diameter_label(p, dm.fmt_mm(do)) + " (바깥)", pt=6.0, color="#06a", above=False)
                     else:
-                        dm.dim_h(sh, PXX(b[0]), PXX(b[2]), PYY(b[1]) + 9.0, "Ø%s (바깥)" % dm.fmt_mm(do), from_y=PYY(b[1]), above=False, pt=6.0, color="#06a")
+                        dm.dim_h(sh, PXX(b[0]), PXX(b[2]), PYY(b[1]) + 9.0, truth.diameter_label(p, dm.fmt_mm(do)) + " (바깥)", from_y=PYY(b[1]), above=False, pt=6.0, color="#06a")
                     dims.append(("튜브 바깥 지름", dm.fmt_mm(do), "plan_cut " + o["name"]))
                     if di:
                         dims.append(("튜브 안쪽 지름", dm.fmt_mm(di), "plan_cut"))
@@ -415,16 +421,29 @@ def main():
             meta["plan_dims"] += 2
         if spec["sid"] == "D-409":
             b = frm.bounds
-            dm.dim_h(sh, PXX(b[0]), PXX(b[2]), PYY(b[1]) + 9.0, "Ø%s" % dm.fmt_mm(b[2] - b[0]), from_y=PYY(b[1]), pt=6.0, color="#06a", above=False)
+            dm.dim_h(sh, PXX(b[0]), PXX(b[2]), PYY(b[1]) + 9.0, truth.diameter_label(frm, dm.fmt_mm(b[2] - b[0])), from_y=PYY(b[1]), pt=6.0, color="#06a", above=False)
             dims.append(("화물 승강로 폭", dm.fmt_mm(b[2] - b[0]), "1F 마스터 shaft FR"))
             meta["plan_dims"] += 1
         if spec["sid"] == "D-410":
             tp = c.top.get(pad_o["name"])
             if tp is not None:
                 b = tp.bounds
-                dm.dim_h(sh, PXX(b[0]), PXX(b[2]), PYY(b[3]) - 9.0, "Ø%s" % dm.fmt_mm(b[2] - b[0]), from_y=PYY(b[3]), pt=6.0, color="#06a")
+                dm.dim_h(sh, PXX(b[0]), PXX(b[2]), PYY(b[3]) - 9.0, truth.diameter_label(tp, dm.fmt_mm(b[2] - b[0])), from_y=PYY(b[3]), pt=6.0, color="#06a")
                 dims.append(("구조 표식 패드 지름", dm.fmt_mm(b[2] - b[0]), "A-ROOF_rescue_pad 윗면"))
                 meta["plan_dims"] += 1
+        if spec["sid"] == "D-403":                                              # T4가 T3와 같은 형상이라는 문구의 근거
+            cg = truth.congruent(model, "A-CORE-TUBE_T3", "A-CORE-TUBE_T4")
+            c.truth["t3_t4"] = cg
+            dims.append(("T3·T4 형상 차이(최대, mm)", "%.0f" % (cg["hausdorff_centered_m"] * 1000.0), "벽 메시 중심 정렬 비교 · " + ("동형" if cg["congruent"] else "다름(문구 수정 필요)")))
+        if spec["sid"] == "D-408" and c.sunk:
+            b_, n_, props_ = c.sunk
+            drop_ = -F["B1"] + F["1F"] if abs((F["1F"] - F["B1"]) - 5.5) < 0.01 else None      # 마스터 라벨 FL -5.5 m = 모델 B1 층고 차
+            if drop_ is not None:
+                dd_ = truth.stair_derived(drop_, n_, b_[2] - b_[0])
+                c.truth["stair"] = dd_
+                dims.append(("선큰 바닥 레벨", "-5500", "마스터 FL −5.5 m = 모델 B1 FFL"))
+                dims.append(("단당 높이 (계산값)", "%.0f" % dd_["riser_mm"], "5500 ÷ %d단 · 마스터에 속성 없음" % n_))
+                dims.append(("단당 수평 길이 (계산값)", "%.0f" % dd_["tread_mm"], "%s ÷ %d단 · 하향 %s" % (dm.fmt_mm(b_[2] - b_[0]), n_, props_.get("down"))))
         # ── 단면 ──
         used_sec, sec = [], None
         if spec.get("section"):
@@ -458,28 +477,20 @@ def main():
             else:
                 dims.append(("층고(이 층 → 위층)", dm.fmt_mm(F[{"3F": "4F", "6F": "7F", "8F": "9F"}.get(spec["section"][2], "2F")] - ffl), "A-FLOR 층판 윗면 차"))
             meta["section_dims"] += 1
-            # 경사(램프·에스컬레이터)
-            slope = None
-            for o, g in c.sec_cuts:
-                if o["kind"] in ("stair", "ramp") and g.area > 0.05:
-                    mr = g.minimum_rotated_rectangle
-                    xs_, ys_ = mr.exterior.coords.xy
-                    best = None
-                    for i in range(4):
-                        dx, dy = xs_[i + 1] - xs_[i], ys_[i + 1] - ys_[i]
-                        L = math.hypot(dx, dy)
-                        if best is None or L > best[0]:
-                            best = (L, math.degrees(math.atan2(abs(dy), abs(dx))))
-                    if best and 5.0 < best[1] < 60.0:
-                        slope = best[1]
-                        c.slope_ref = (o["name_ko"], g)
-                        break
-            if slope is not None:
-                dims.append(("경사각(절단 띠 장축)", "%.1f°" % slope, "절단 폴리곤 최소 회전 사각형"))
-                g = c.slope_ref[1]
-                b = g.bounds
-                sh.text(c.SX_((b[0] + b[2]) / 2), c.SY_((b[1] + b[3]) / 2) - 6.0, "%.1f°" % slope, 6.5, "bold", "#06a", "middle", bg=True)
-                meta["section_dims"] += 1
+            # 경사: 절단 띠의 최소 회전 사각형(V2)은 착지판·판 두께가 섞인 겉보기 각도라 쓰지 않는다.
+            # 에스컬레이터의 물리적 경사각은 3D 메시의 경사면 법선에서 구하고, 이 시트가 다루는 8F–9F 구간의 절단 띠에 표기한다.
+            if spec["sid"] == "D-407":
+                inc = truth.sloped_incline(model, esc8)
+                ang = inc["angle_deg"]
+                names8 = {e["name"] for e in esc8}
+                tgt = next((g for o, g in c.sec_cuts if o["name"] in names8 and g.area > 0.05), None)
+                dims.append(("경사각(모델 경사면 법선)", "%.1f°" % ang, "A-VERT-ESCL_8F-9F 경사면, 면적 가중"))
+                dims.append(("경사 구간 수평 길이", dm.fmt_mm(inc["plan_run_m"]), "경사면 평면 투영 길이(모델)"))
+                c.truth["incline"] = inc
+                if tgt is not None:
+                    bb_ = tgt.bounds
+                    sh.text(c.SX_((bb_[0] + bb_[2]) / 2), c.SY_((bb_[1] + bb_[3]) / 2) - 6.0, "%.1f°" % ang, 6.5, "bold", "#06a", "middle", bg=True)
+                    meta["section_dims"] += 1
         else:
             sh.text(SX, STOP - 3.0, "단면 SECTION", 8, "bold", "#222", "middle")
             sh.text(SX, 120, "단면 없음", 12, "bold", "#999", "middle")
@@ -506,11 +517,16 @@ def main():
             sh.text(tx + 62, ty + 1.0, val, 6.2, "bold", "#222", "end")
             sh.text(tx + 66, ty + 1.0, src[:34], 5.2, "normal", "#777")
             ty += 3.7
-        sh.scale_bar(PX - half * k, 262 - 9.0 - 6.0, meters=(0, 1, 2, 5) if scale == 50 else (0, 2, 5, 10)) if False else None
-        sh.scale_bar(222, 258 - 14, meters=(0, 1, 2, 5) if scale == 50 else (0, 2, 5, 10)) if False else None
+        # 그래픽 스케일바: 평면 패널 아래 · 키플랜 위의 빈 띠(y 203~219)에 둔다. 영역을 선언해 두므로 다른 요소와 겹치면 save()에서 빌드가 멈춘다.
+        sh.claim("plan_panel", PX - half * k, PY - half * k - 3.5, PX + half * k, PY + half * k + 0.5)
+        sh.claim("keyplan_refs", 14, 220.0, 54, 258)
+        sh.claim("dim_table", tx, 222.0, tx + 134, ty + 0.5)
+        if spec.get("section"):
+            sh.claim("section_panel", SX - half * k, STOP - 4.0, SX + half * k, STOP + (11.6 if scale == 50 else 23.0) * k)
+        sh.scale_bar(17.0, 212.0)                                                # 5 m = 100 mm (1:50) / 10 m = 100 mm (1:100)
         sh.title_block()
         base = sh.save(os.path.join(run, "details", "%s_%s" % (sid, "detail")))
-        reg["details"].append({"sheet": sid, "title": spec["title"], "grade": spec["grade"], "scale": "1:%d" % scale, "ref_sheet": spec["ref"],
+        reg["details"].append({"sheet": sid, "title": spec["title"], "grade": spec["grade"], "scale": "1:%d" % scale, "scale_bars": sh.bars, "truth": c.truth, "ref_sheet": spec["ref"],
                                "plan": {"source": spec["source"], "center": [round(spec["center"][0], 3), round(spec["center"][1], 3)], "window_m": 2 * half, "source_objects": used_plan},
                                "section": None if not spec.get("section") else {"axis": spec["section"][0], "value_drawing_frame": round(spec["section"][1], 4)},
                                "section_cut_elements": [{"name": o["name"], "kind": o["kind"], "name_ko": o["name_ko"]} for o, g in getattr(c, "sec_cuts", [])], "section_visible_objects": used_sec,
@@ -518,7 +534,10 @@ def main():
                                "files": {e: {"path": base + "." + e, "sha256": V1.sha_file(base + "." + e)} for e in ("svg", "pdf", "png")}})
         print("DETAIL", sid, "1:%d" % scale, "dims", len(dims), meta)
     json.dump(reg, open(os.path.join(run, "details", "detail_registry.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print("DETAILS V2 DONE")
+    problems = sheetreg.verify_against_registry(os.path.join(run, "details", "detail_registry.json"))
+    if problems:
+        raise SystemExit("detail registry mismatch: " + "; ".join(problems))
+    print("DETAILS %s DONE" % cfg.EDITION)
 
 
 if __name__ == "__main__":

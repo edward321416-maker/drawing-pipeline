@@ -17,7 +17,8 @@ import pipeline_common as pc  # noqa: E402
 from shapely.geometry import box  # noqa: E402
 import book_views as bv  # noqa: E402
 import t14d_sheet as _ts  # noqa: E402
-_ts.EDITION = "V2"
+from t14g import config as cfg, modelsrc  # noqa: E402
+cfg.apply(_ts)
 from t14d_sheet import Sheet, geom_lines, geom_rings  # noqa: E402
 import t14d_make_views as V1  # noqa: E402
 import t14e_dims as dm  # noqa: E402
@@ -133,7 +134,7 @@ def height_table(sh, model, x, y, rows, title):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", required=True)
-    ap.add_argument("--glb", required=True)
+    ap.add_argument("--glb", default=None, help="원본 GLB(없어도 됨: 모델 캐시에서 생성하고 캐시 해시를 기록한다)")
     a = ap.parse_args()
     run = os.path.abspath(a.run)
     model = bv.Model(os.path.join(run, "model_cache"), os.path.join(run, "raw_slices", "camera_bounds.json"))
@@ -143,7 +144,9 @@ def main():
     xs, ys, sl3 = axes_of(run)
     regs = json.load(open(os.path.join(run, "qa", "ref_registries", "section_line_registry.json"), encoding="utf-8"))
     tops = sorted({o["zmax"] for o in model.objects if o["kind"] in ("tube_wall", "core_wall", "shaft", "ramp") and o["zmax"] > model.floors["15F"] + 0.5})
-    reg = {"book": "C_T14E", "model": {"path": os.path.abspath(a.glb), "sha256": V1.sha_file(a.glb)}, "frame": {"theta_deg": math.degrees(model.theta), "north_deg": model.north_deg},
+    ident = modelsrc.identity(run, a.glb)
+    reg = {"book": "C_T14G", "model": {"path": os.path.abspath(a.glb) if a.glb else ident["glb_name"] + " (not present)", "sha256": modelsrc.model_sha(run, a.glb),
+                                        "status": ident["status"], "cache_sha256": ident["cache_sha256"]}, "frame": {"theta_deg": math.degrees(model.theta), "north_deg": model.north_deg},
            "elevations": [], "sections": [], "dimension_meta": {}}
     scale, k, pad = 400, 2.5, 0.3
     fac6 = [o for o in model.objects if o["name"].startswith("A-FACD_valley_glass_6F")]
@@ -189,10 +192,10 @@ def main():
         # 상세 호출: 6F 외피(D-406), 지붕 구조(D-410)
         if fac6:
             fx, fy, fz = center_of(fac6[0])
-            dm.detail_tag(sh, X(fx * el["right"][0] + fy * el["right"][1]), Y(fz), "D-406", 50, dashed_r=6.0)
+            dm.detail_tag(sh, X(fx * el["right"][0] + fy * el["right"][1]), Y(fz), "D-406", dashed_r=6.0)           # 축척은 레지스트리에서
             meta["detail_callouts"] += 1
         px_, py_, pz_ = center_of(pad_o)
-        dm.detail_tag(sh, X(px_ * el["right"][0] + py_ * el["right"][1]), Y(pz_), "D-410", 50, dashed_r=5.0)
+        dm.detail_tag(sh, X(px_ * el["right"][0] + py_ * el["right"][1]), Y(pz_), "D-410", dashed_r=5.0)
         meta["detail_callouts"] += 1
         # 오른쪽: 주요 높이표 + 방위 안내
         rows = [("15F → 지붕 상단", model.floors["15F"], roof_z)] + [(o["name_ko"], o["zmin"], o["zmax"]) for o in model.objects if o["kind"] in ("tube_wall",) and o["zmax"] > model.floors["15F"] + 0.5][:6]
@@ -310,7 +313,7 @@ def main():
     reg["section_locator"] = {"files": {e: {"path": base + "." + e, "sha256": V1.sha_file(base + "." + e)} for e in ("svg", "pdf", "png")}}
     json.dump(reg, open(os.path.join(run, "sections", "section_line_registry.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     json.dump({"elevations": reg["elevations"], "frame": reg["frame"], "model": reg["model"]}, open(os.path.join(run, "elevations", "elevation_registry.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print("VIEWS V2 DONE")
+    print("VIEWS %s DONE" % cfg.EDITION)
 
 
 if __name__ == "__main__":
