@@ -1,0 +1,738 @@
+{
+ "nodes": [
+  {
+   "sheet": "A-000",
+   "page": 1,
+   "scale": "—"
+  },
+  {
+   "sheet": "A-001",
+   "page": 2,
+   "scale": "—"
+  },
+  {
+   "sheet": "A-002",
+   "page": 3,
+   "scale": "—"
+  },
+  {
+   "sheet": "A-003",
+   "page": 4,
+   "scale": "1:400"
+  },
+  {
+   "sheet": "P-101",
+   "page": 5,
+   "scale": "1:250"
+  },
+  {
+   "sheet": "P-102",
+   "page": 6,
+   "scale": "1:250"
+  },
+  {
+   "sheet": "P-103",
+   "page": 7,
+   "scale": "1:250"
+  },
+  {
+   "sheet": "P-104",
+   "page": 8,
+   "scale": "1:250"
+  },
+  {
+   "sheet": "P-105",
+   "page": 9,
+   "scale": "1:250"
+  },
+  {
+   "sheet": "E-201",
+   "page": 10,
+   "scale": "1:400"
+  },
+  {
+   "sheet": "E-202",
+   "page": 11,
+   "scale": "1:400"
+  },
+  {
+   "sheet": "E-203",
+   "page": 12,
+   "scale": "1:400"
+  },
+  {
+   "sheet": "E-204",
+   "page": 13,
+   "scale": "1:400"
+  },
+  {
+   "sheet": "S-301",
+   "page": 14,
+   "scale": "1:400"
+  },
+  {
+   "sheet": "S-302",
+   "page": 15,
+   "scale": "1:400"
+  },
+  {
+   "sheet": "S-303",
+   "page": 16,
+   "scale": "1:400"
+  },
+  {
+   "sheet": "S-304",
+   "page": 17,
+   "scale": "1:400"
+  },
+  {
+   "sheet": "S-305",
+   "page": 18,
+   "scale": "1:400"
+  },
+  {
+   "sheet": "D-401",
+   "page": 19,
+   "scale": "1:50"
+  },
+  {
+   "sheet": "D-402",
+   "page": 20,
+   "scale": "1:50"
+  },
+  {
+   "sheet": "D-403",
+   "page": 21,
+   "scale": "1:50"
+  },
+  {
+   "sheet": "D-404",
+   "page": 22,
+   "scale": "1:50"
+  },
+  {
+   "sheet": "D-405",
+   "page": 23,
+   "scale": "1:50"
+  },
+  {
+   "sheet": "D-406",
+   "page": 24,
+   "scale": "1:50"
+  },
+  {
+   "sheet": "D-407",
+   "page": 25,
+   "scale": "1:100"
+  },
+  {
+   "sheet": "D-408",
+   "page": 26,
+   "scale": "1:100"
+  },
+  {
+   "sheet": "D-409",
+   "page": 27,
+   "scale": "1:50"
+  },
+  {
+   "sheet": "D-410",
+   "page": 28,
+   "scale": "1:100"
+  },
+  {
+   "sheet": "A-900",
+   "page": 29,
+   "scale": "—"
+  },
+  {
+   "sheet": "A-901",
+   "page": 30,
+   "scale": "—"
+  },
+  {
+   "sheet": "A-902",
+   "page": 31,
+   "scale": "1:1000"
+  }
+ ],
+ "edges": [
+  {
+   "from": "A-001",
+   "to": "E-201",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-001",
+   "to": "E-202",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-001",
+   "to": "E-203",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-001",
+   "to": "E-204",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-001",
+   "to": "S-301",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-001",
+   "to": "S-302",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-001",
+   "to": "S-303",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-001",
+   "to": "S-304",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-001",
+   "to": "S-305",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-002",
+   "to": "S-302",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-002",
+   "to": "E-201",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-002",
+   "to": "D-401",
+   "kind": "detail_callout",
+   "printed_scale": "1:50",
+   "target_scale": "1:50",
+   "ok": true
+  },
+  {
+   "from": "A-002",
+   "to": "S-301",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-101",
+   "to": "S-302",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-101",
+   "to": "S-303",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-101",
+   "to": "S-304",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-101",
+   "to": "S-305",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-101",
+   "to": "E-201",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-101",
+   "to": "E-203",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-101",
+   "to": "E-202",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-101",
+   "to": "E-204",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-101",
+   "to": "D-401",
+   "kind": "detail_callout",
+   "printed_scale": "1:50",
+   "target_scale": "1:50",
+   "ok": true
+  },
+  {
+   "from": "P-101",
+   "to": "D-402",
+   "kind": "detail_callout",
+   "printed_scale": "1:50",
+   "target_scale": "1:50",
+   "ok": true
+  },
+  {
+   "from": "P-101",
+   "to": "D-403",
+   "kind": "detail_callout",
+   "printed_scale": "1:50",
+   "target_scale": "1:50",
+   "ok": true
+  },
+  {
+   "from": "P-101",
+   "to": "D-405",
+   "kind": "detail_callout",
+   "printed_scale": "1:50",
+   "target_scale": "1:50",
+   "ok": true
+  },
+  {
+   "from": "P-101",
+   "to": "S-301",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-102",
+   "to": "S-302",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-102",
+   "to": "S-303",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-102",
+   "to": "S-304",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-102",
+   "to": "S-305",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-102",
+   "to": "E-201",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-102",
+   "to": "E-203",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-102",
+   "to": "E-202",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-102",
+   "to": "E-204",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-102",
+   "to": "D-407",
+   "kind": "detail_callout",
+   "printed_scale": "1:100",
+   "target_scale": "1:100",
+   "ok": true
+  },
+  {
+   "from": "P-102",
+   "to": "S-301",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-103",
+   "to": "S-302",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-103",
+   "to": "S-303",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-103",
+   "to": "S-304",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-103",
+   "to": "S-305",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-103",
+   "to": "E-201",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-103",
+   "to": "E-203",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-103",
+   "to": "E-202",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-103",
+   "to": "E-204",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-103",
+   "to": "S-301",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-104",
+   "to": "S-302",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-104",
+   "to": "S-303",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-104",
+   "to": "S-304",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-104",
+   "to": "S-305",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-104",
+   "to": "E-201",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-104",
+   "to": "E-203",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-104",
+   "to": "E-202",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-104",
+   "to": "E-204",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-104",
+   "to": "S-301",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-105",
+   "to": "S-302",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-105",
+   "to": "S-303",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-105",
+   "to": "S-304",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-105",
+   "to": "S-305",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-105",
+   "to": "E-201",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-105",
+   "to": "E-203",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-105",
+   "to": "E-202",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-105",
+   "to": "E-204",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "P-105",
+   "to": "D-410",
+   "kind": "detail_callout",
+   "printed_scale": "1:100",
+   "target_scale": "1:100",
+   "ok": true
+  },
+  {
+   "from": "P-105",
+   "to": "S-301",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "E-201",
+   "to": "D-406",
+   "kind": "detail_callout",
+   "printed_scale": "1:50",
+   "target_scale": "1:50",
+   "ok": true
+  },
+  {
+   "from": "E-201",
+   "to": "D-410",
+   "kind": "detail_callout",
+   "printed_scale": "1:100",
+   "target_scale": "1:100",
+   "ok": true
+  },
+  {
+   "from": "E-202",
+   "to": "D-406",
+   "kind": "detail_callout",
+   "printed_scale": "1:50",
+   "target_scale": "1:50",
+   "ok": true
+  },
+  {
+   "from": "E-202",
+   "to": "D-410",
+   "kind": "detail_callout",
+   "printed_scale": "1:100",
+   "target_scale": "1:100",
+   "ok": true
+  },
+  {
+   "from": "E-203",
+   "to": "D-406",
+   "kind": "detail_callout",
+   "printed_scale": "1:50",
+   "target_scale": "1:50",
+   "ok": true
+  },
+  {
+   "from": "E-203",
+   "to": "D-410",
+   "kind": "detail_callout",
+   "printed_scale": "1:100",
+   "target_scale": "1:100",
+   "ok": true
+  },
+  {
+   "from": "E-204",
+   "to": "D-406",
+   "kind": "detail_callout",
+   "printed_scale": "1:50",
+   "target_scale": "1:50",
+   "ok": true
+  },
+  {
+   "from": "E-204",
+   "to": "D-410",
+   "kind": "detail_callout",
+   "printed_scale": "1:100",
+   "target_scale": "1:100",
+   "ok": true
+  },
+  {
+   "from": "S-301",
+   "to": "S-302",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "S-301",
+   "to": "S-303",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "S-301",
+   "to": "S-304",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "S-301",
+   "to": "S-305",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "S-302",
+   "to": "S-301",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "S-303",
+   "to": "S-301",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "S-304",
+   "to": "S-301",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "S-305",
+   "to": "S-301",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "D-406",
+   "to": "E-201",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "D-410",
+   "to": "E-201",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-901",
+   "to": "E-201",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-901",
+   "to": "E-202",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-901",
+   "to": "E-203",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-901",
+   "to": "E-204",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-901",
+   "to": "S-302",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-901",
+   "to": "S-303",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-901",
+   "to": "S-304",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  },
+  {
+   "from": "A-901",
+   "to": "S-305",
+   "kind": "section_or_elevation_mark",
+   "ok": true
+  }
+ ],
+ "all_edges_ok": true,
+ "detail_sheets_never_called_out": [
+  "D-404",
+  "D-408",
+  "D-409"
+ ],
+ "note": "orphan detail sheets are listed, not hidden"
+}

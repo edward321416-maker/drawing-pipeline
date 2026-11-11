@@ -1,0 +1,351 @@
+[
+ {
+  "sheet": "P-101",
+  "page": 5,
+  "scale": "1:250",
+  "measured_mm": 80.001,
+  "end_label_m": 20,
+  "expected_mm": 80.0,
+  "segments_mm": [
+   20.0,
+   19.999,
+   40.001
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "P-102",
+  "page": 6,
+  "scale": "1:250",
+  "measured_mm": 80.001,
+  "end_label_m": 20,
+  "expected_mm": 80.0,
+  "segments_mm": [
+   20.0,
+   19.999,
+   40.001
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "P-103",
+  "page": 7,
+  "scale": "1:250",
+  "measured_mm": 80.001,
+  "end_label_m": 20,
+  "expected_mm": 80.0,
+  "segments_mm": [
+   20.0,
+   19.999,
+   40.001
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "P-104",
+  "page": 8,
+  "scale": "1:250",
+  "measured_mm": 80.001,
+  "end_label_m": 20,
+  "expected_mm": 80.0,
+  "segments_mm": [
+   20.0,
+   19.999,
+   40.001
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "P-105",
+  "page": 9,
+  "scale": "1:250",
+  "measured_mm": 80.001,
+  "end_label_m": 20,
+  "expected_mm": 80.0,
+  "segments_mm": [
+   20.0,
+   19.999,
+   40.001
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "E-201",
+  "page": 10,
+  "scale": "1:400",
+  "measured_mm": 50.0,
+  "end_label_m": 20,
+  "expected_mm": 50.0,
+  "segments_mm": [
+   12.5,
+   12.501,
+   24.999
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "E-202",
+  "page": 11,
+  "scale": "1:400",
+  "measured_mm": 50.0,
+  "end_label_m": 20,
+  "expected_mm": 50.0,
+  "segments_mm": [
+   12.5,
+   12.501,
+   24.999
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "E-203",
+  "page": 12,
+  "scale": "1:400",
+  "measured_mm": 50.0,
+  "end_label_m": 20,
+  "expected_mm": 50.0,
+  "segments_mm": [
+   12.5,
+   12.501,
+   24.999
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "E-204",
+  "page": 13,
+  "scale": "1:400",
+  "measured_mm": 50.0,
+  "end_label_m": 20,
+  "expected_mm": 50.0,
+  "segments_mm": [
+   12.5,
+   12.501,
+   24.999
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "S-301",
+  "page": 14,
+  "scale": "1:400",
+  "measured_mm": 50.0,
+  "end_label_m": 20,
+  "expected_mm": 50.0,
+  "segments_mm": [
+   12.501,
+   12.501,
+   24.999
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "S-302",
+  "page": 15,
+  "scale": "1:400",
+  "measured_mm": 50.001,
+  "end_label_m": 20,
+  "expected_mm": 50.0,
+  "segments_mm": [
+   12.5,
+   12.5,
+   25.001
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "S-303",
+  "page": 16,
+  "scale": "1:400",
+  "measured_mm": 50.001,
+  "end_label_m": 20,
+  "expected_mm": 50.0,
+  "segments_mm": [
+   12.5,
+   12.5,
+   25.001
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "S-304",
+  "page": 17,
+  "scale": "1:400",
+  "measured_mm": 50.001,
+  "end_label_m": 20,
+  "expected_mm": 50.0,
+  "segments_mm": [
+   12.5,
+   12.5,
+   25.001
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "S-305",
+  "page": 18,
+  "scale": "1:400",
+  "measured_mm": 50.001,
+  "end_label_m": 20,
+  "expected_mm": 50.0,
+  "segments_mm": [
+   12.5,
+   12.5,
+   25.001
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "D-401",
+  "page": 19,
+  "scale": "1:50",
+  "measured_mm": 99.999,
+  "end_label_m": 5,
+  "expected_mm": 100.0,
+  "segments_mm": [
+   20.0,
+   20.0,
+   59.999
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "D-402",
+  "page": 20,
+  "scale": "1:50",
+  "measured_mm": 99.999,
+  "end_label_m": 5,
+  "expected_mm": 100.0,
+  "segments_mm": [
+   20.0,
+   20.0,
+   59.999
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "D-403",
+  "page": 21,
+  "scale": "1:50",
+  "measured_mm": 99.999,
+  "end_label_m": 5,
+  "expected_mm": 100.0,
+  "segments_mm": [
+   20.0,
+   20.0,
+   59.999
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "D-404",
+  "page": 22,
+  "scale": "1:50",
+  "measured_mm": 99.999,
+  "end_label_m": 5,
+  "expected_mm": 100.0,
+  "segments_mm": [
+   20.0,
+   20.0,
+   59.999
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "D-405",
+  "page": 23,
+  "scale": "1:50",
+  "measured_mm": 99.999,
+  "end_label_m": 5,
+  "expected_mm": 100.0,
+  "segments_mm": [
+   20.0,
+   20.0,
+   59.999
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "D-406",
+  "page": 24,
+  "scale": "1:50",
+  "measured_mm": 99.999,
+  "end_label_m": 5,
+  "expected_mm": 100.0,
+  "segments_mm": [
+   20.0,
+   20.0,
+   59.999
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "D-407",
+  "page": 25,
+  "scale": "1:100",
+  "measured_mm": 99.999,
+  "end_label_m": 10,
+  "expected_mm": 100.0,
+  "segments_mm": [
+   20.0,
+   30.0,
+   49.999
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "D-408",
+  "page": 26,
+  "scale": "1:100",
+  "measured_mm": 99.999,
+  "end_label_m": 10,
+  "expected_mm": 100.0,
+  "segments_mm": [
+   20.0,
+   30.0,
+   49.999
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "D-409",
+  "page": 27,
+  "scale": "1:50",
+  "measured_mm": 99.999,
+  "end_label_m": 5,
+  "expected_mm": 100.0,
+  "segments_mm": [
+   20.0,
+   20.0,
+   59.999
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "D-410",
+  "page": 28,
+  "scale": "1:100",
+  "measured_mm": 99.999,
+  "end_label_m": 10,
+  "expected_mm": 100.0,
+  "segments_mm": [
+   20.0,
+   30.0,
+   49.999
+  ],
+  "status": "OK"
+ },
+ {
+  "sheet": "A-902",
+  "page": 31,
+  "scale": "1:1000",
+  "measured_mm": 20.0,
+  "end_label_m": 20,
+  "expected_mm": 20.0,
+  "segments_mm": [
+   10.0,
+   10.0
+  ],
+  "status": "OK"
+ }
+]

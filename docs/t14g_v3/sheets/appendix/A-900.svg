@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
+<metadata>DOCUMENT</metadata>
+<rect width="420" height="297" fill="#fff"/>
+<text x="14.000" y="18.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="normal" fill="#222" text-anchor="start">U-01  상층 외벽·구획벽·실내 문·창·화장실·피난 경로: 모델에 없음 → 평면은 LEVEL S(기둥·튜브·코어·층판 + 제안 가구)</text>
+<text x="14.000" y="28.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="normal" fill="#222" text-anchor="start">U-02  캡슐(서측·동측) 출입구·문: 모델에 없고 사용자 미승인 → 벽을 닫아 둠 (D-405)</text>
+<text x="14.000" y="38.800" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="normal" fill="#222" text-anchor="start">U-03  코어 A~D 상층 내부(계단·부속실·승강기): GLB는 외곽 벽만 → D-404는 1층 마스터만, 상층은 UNRESOLVED DETAIL</text>
+<text x="14.000" y="49.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="normal" fill="#222" text-anchor="start">U-04  외피(A-FACD) 성격과 접합(유리 커튼월·벽·난간): 모델 부재 형상만 표시, 재료·접합 UNRESOLVED (D-406)</text>
+<text x="14.000" y="59.600" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="normal" fill="#222" text-anchor="start">U-05  평면 축척 1:250: 요구 1:200은 A3에 치수·범례 포함 불가 → 1:100 타일 분할 또는 A1 대판은 사용자 결정 대기</text>
+<text x="14.000" y="70.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="normal" fill="#222" text-anchor="start">U-06  8F~9F·13F~14F 공통 평면: 면적·프로그램 동일, 수직 개구만 다름(검증됨) → 한 장에 공통 + 차이 표기, '동등함'은 주장하지 않음</text>
+<text x="14.000" y="80.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="normal" fill="#222" text-anchor="start">U-07  B2·B1·2F·4F·5F·6F·7F·11F·12F는 3F 등과 같지 않아(프로그램·층판 차이) 합치지 않고 개별 평면을 발행하지 않음 → A-902 층별 구성 일람(17개 층)에서 확인</text>
+<text x="14.000" y="90.800" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="normal" fill="#222" text-anchor="start">U-08  가구·프로그램: 모두 PROPOSED_ONLY. 3F 판매 A형 / 8F·9F 판매 B형 / 10F·15F F&amp;B 좌석 유형 구분 / 13F·14F 문화·엔터(판매 부스 반복 없음) / 정원층 식재·테라스</text>
+<text x="14.000" y="101.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="normal" fill="#222" text-anchor="start">U-09  치수: 모델 값을 10 mm 단위로 반올림(모델 노이즈 0.6 mm 수준). 구조 부재 두께·재료 규격은 모델에 없어 표기하지 않음</text>
+<text x="14.000" y="111.600" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="normal" fill="#222" text-anchor="start">U-10  선큰(D-408): 계단 폭·단높이는 마스터에 없고 단 수·방향·윤곽만. 지반·옹벽 미표시</text>
+<text x="14.000" y="122.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="normal" fill="#222" text-anchor="start">U-11  화물 승강기(D-409): 카·기계·승강장 문·하역 차량 동선 모델 없음 → 형상만 MODEL, 나머지 UNRESOLVED</text>
+<text x="14.000" y="132.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="normal" fill="#222" text-anchor="start">U-12  입면 대지 지형·지하 옹벽·인접 건물은 모델에 없어 그리지 않음 (GL = 1F FFL만)</text>
+<text x="14.000" y="142.800" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="normal" fill="#222" text-anchor="start">U-13  배치도 A-003은 사용자 제공 1F_CleanLine_FIXED 그대로 수록(승인 전 후보 시트). 원본·plans 사본은 수정 없음, 도면집 4쪽에만 'A-003' 쪽 번호표를 붙임</text>
+<text x="14.000" y="153.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="normal" fill="#222" text-anchor="start">U-14  클라우드(Modal·Claude API) 미사용, 신규 결제 없음. 모든 시트는 로컬에서 생성</text>
+<text x="14.000" y="163.600" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.399" font-weight="normal" fill="#222" text-anchor="start">U-15  PDF 텍스트 추출 시 공백이 빠질 수 있음(cairosvg 글리프 출력). 화면·인쇄에는 영향 없음, 텍스트 검색 시 공백 없이 검색</text>
+<path d="M10.00,262.00 L410.00,262.00 L410.00,287.00 L10.00,287.00 Z" fill="#fff" stroke="#222" stroke-width="0.350" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M300.00,262.00 L300.00,287.00" fill="none" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M358.00,262.00 L358.00,287.00" fill="none" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="14.000" y="269.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="bold" fill="#111" text-anchor="start">A-900</text>
+<text x="40.000" y="269.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="bold" fill="#111" text-anchor="start">미확정 설계 결정·도면 한계</text>
+<text x="40.000" y="275.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#444" text-anchor="start">이 도면집은 후보(V3)이며 FREEZE가 아니다 · 아래 항목은 근거 부재 또는 사용자 결정 전이라 확정하지 않았다</text>
+<text x="305.000" y="269.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">축척 — (표·문서, A3)</text>
+<text x="305.000" y="274.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.940" font-weight="bold" fill="#a33" text-anchor="start">DOCUMENT</text>
+<text x="305.000" y="283.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="1.940" font-weight="normal" fill="#555" text-anchor="start">도면집 후보 V3 · FREEZE 아님</text>
+<text x="363.000" y="269.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">C-T14G</text>
+<text x="363.000" y="275.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">개정 R3 (V3)</text>
+<text x="363.000" y="280.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">출력 2026-11-12</text>
+</svg>

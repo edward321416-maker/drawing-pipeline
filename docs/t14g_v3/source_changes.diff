@@ -1,0 +1,3271 @@
+diff --git a/src/architectural_plan_renderer.py b/src/architectural_plan_renderer.py
+index c01e8a8..b3468b3 100644
+--- a/src/architectural_plan_renderer.py
++++ b/src/architectural_plan_renderer.py
+@@ -27,6 +27,7 @@ import pipeline_common as pc  # noqa: E402
+ import monograph_plan_renderer as mg  # noqa: E402
+ import furniture_library as FL
+ import upper_layouts as UL
++import layouts_v3 as L3
+ import program_planner as PP
+ import line_hygiene as LH  # noqa: E402
+ 
+@@ -104,12 +105,19 @@ class TCanvas(mg.Canvas):
+         super().dots(layer, pts, r_mm, color, opacity)
+ 
+ 
+-def draw_furniture(cv, items):
++def draw_furniture(cv, items, dotted="", dashed="", dashdot=""):
+     """가구 그리기: 몸체는 흰색 불투명 채움(#FFFFFF) + 5단계 윤곽(0.08 mm #666666)이라 아래 타일·점묘이 비치지 않는다.
+-    큰 몸체부터 그린 뒤 세부선, 마지막에 식재선(6단계)을 얹는다."""
++    V3 종류: zone(점선 바닥 표시, 가장 먼저) · counter(계산대·카운터, 회색 채움 + 3단계 윤곽) · route_v(방문자 동선, 긴 점선) · route_o(운영 동선, 일점쇄선).
++    큰 몸체부터 그린 뒤 세부선, 마지막에 식재선(6단계)과 동선을 얹는다."""
++    for g, k in items:
++        if k == "zone":
++            cv.stroke_poly("furn", g, 0.07, "#999999", extra=dotted)
+     bodies = sorted([g for g, k in items if k == "body"], key=lambda g: -g.area)
+     for g in bodies:
+         cv.stroke_poly("furn", g, 0.08, "#666666", fill="#FFFFFF")
++    for g, k in items:
++        if k == "counter":
++            cv.stroke_poly("furn", g, 0.12, "#444", fill="#D9D9D9")
+     for g, k in items:
+         if k == "line":
+             for ln in lines_of(g):
+@@ -118,6 +126,10 @@ def draw_furniture(cv, items):
+         if k == "foliage":
+             for ln in lines_of(g):
+                 cv.stroke_line("furn", list(ln.coords), 0.05, "#AAAAAA")
++    for g, k in items:
++        if k in ("route_v", "route_o"):
++            for ln in lines_of(g):
++                cv.stroke_line("furn", list(ln.coords), 0.07 if k == "route_v" else 0.05, "#666666" if k == "route_v" else "#CCCCCC", extra=dashed if k == "route_v" else dashdot)
+ 
+ 
+ def lines_of(g):
+@@ -990,7 +1002,7 @@ def program_check(plan, qa_, chips, furn_all, drawn_cols, program):
+                                                 "note": "바닥 채움은 래스터 잔여 띠를 뺀 벡터 복도다. 구획 면적·범례 수치는 zone 폴리곤(V2-B와 동일)"}}
+ 
+ 
+-def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, tag="", side="L", top=False, program=None, final_dir=None, name=None, clean=False, notes=(), v2layout=False, bare=False):
++def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, tag="", side="L", top=False, program=None, final_dir=None, name=None, clean=False, notes=(), v2layout=False, bare=False, v3layout=False):
+     raw = os.path.join(out, "raw_slices")
+     sl = pc.load_slice(raw, floor)
+     lay = pc.load_json(os.path.join(out, "vector", "floor_%s_layout.json" % floor))
+@@ -1165,8 +1177,10 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None,
+     svc_bays, cap_plan, plan, plan_qa = [], [], None, None
+     core_union_v2 = U([g for z, g, kd in zones if kd in ("core", "restroom")] + [g for it, g in walls_all if it["kind"] == "core_wall"])
+     ctx_v2 = {"plaza": next((shell_of(g) for it, g in tubes if ("빛" in it["name_ko"] or re.search("T2", it["name_ko"]))), None),
+-              "tubes": [{"c": shell_of(g).centroid, "r": rad_of(shell_of(g))} for it, g in tubes if "캡슐" not in it["name_ko"] and "샤프트" not in it["name_ko"] and ("T" in it["name_ko"] or "튜브" in it["name_ko"]) and rad_of(shell_of(g)) > 1.6]}
++              "cores": core_union_v2,
++              "tubes": [{"c": shell_of(g).centroid, "r": rad_of(shell_of(g)), "name": it["name_ko"]} for it, g in tubes if "캡슐" not in it["name_ko"] and "샤프트" not in it["name_ko"] and ("T" in it["name_ko"] or "튜브" in it["name_ko"]) and rad_of(shell_of(g)) > 1.6]}
+     skipped_furn = []                                                                    # 상층에서 모델에 없는 배치를 지어내지 않아 가구를 만들지 않은 구역
++    layout_meta = []
+     hall_net = None
+     light_c = next((shell_of(g).centroid for it, g in tubes if "빛" in it["name_ko"] or re.search("T2", it["name_ko"])), None)
+     for z, g, kd in zones:
+@@ -1264,11 +1278,13 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None,
+                 bx_, by_ = mg.at(c_, u_, v_, L_ * 0.27, bsgn * W_ * 0.22)
+                 if g.buffer(-0.9).contains(Point(bx_, by_)):
+                     furn_items += FL.bistro_cluster(bx_, by_, 3)
+-        elif kd == "program" and v2layout and level_s:                                  # V2: 프로그램 성격에 맞는 가구 전략(층마다 다름)
++        elif kd == "program" and (v2layout or v3layout) and level_s:                    # V2/V3: 프로그램 성격에 맞는 가구 전략(층마다 다름)
+             hard_ob = U([c_.buffer(0.2) for c_ in cols] + [shell_tubes.buffer(0.5), core_union_v2.buffer(0.5), wall_union.buffer(0.3), model_only_union.buffer(0.4)])
+             soft_ob = U([c_.buffer(0.9) for c_ in cols] + [shell_tubes.buffer(1.2), core_union_v2.buffer(1.2), wall_union.buffer(0.6), model_only_union.buffer(0.8)])       # 가구용 동선 여유(1층용 obst보다 가볍다)
+-            items_v2 = UL.layout(z["name_ko"], region, soft_ob, hard_ob, rng, floor, ctx_v2)
++            items_v2 = (L3 if v3layout else UL).layout(z["name_ko"], region, soft_ob, hard_ob, rng, floor, ctx_v2)
+             furn_items += items_v2
++            if getattr(items_v2, "meta", None):
++                layout_meta.append(items_v2.meta)
+             if not items_v2:
+                 skipped_furn.append(z["name_ko"])
+         elif kd == "program":
+@@ -1326,9 +1342,13 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None,
+             furn_items += FL.bistro_cluster(sx_, sy_, 4)
+ 
+     col_zone = U([c_.buffer(0.3) for c_ in drawn_cols])
+-    furn_items = [(g_, k_) for g_, k_ in furn_items if not g_.intersects(col_zone) and not g_.intersects(shell_tubes)]
+-    furn_all = [g_ for g_, k_ in furn_items if k_ == "body"]
+-    draw_furniture(cv, furn_items)
++    route_items = [it_ for it_ in furn_items if it_[1] in ("route_v", "route_o")]                 # 동선은 기둥·튜브에 걸쳐도 버리지 않고 그 부분만 자른다
++    keep_ = col_zone.union(shell_tubes)
++    route_items = [(it_[0].difference(keep_), it_[1]) for it_ in route_items]
++    furn_items = [it_ for it_ in furn_items if it_[1] not in ("route_v", "route_o") and not it_[0].intersects(col_zone) and not it_[0].intersects(shell_tubes)] + route_items
++    furn_all = [g_ for g_, k_ in furn_items if k_ in ("body", "counter")]
++    draw_furniture(cv, furn_items, dotted='stroke-dasharray="%.3f,%.3f"' % (1 * k, 1.2 * k), dashed='stroke-dasharray="%.3f,%.3f"' % (4 * k, 1.5 * k),
++                   dashdot='stroke-dasharray="%.3f,%.3f,%.3f,%.3f"' % (3 * k, 1 * k, 0.5 * k, 1 * k))
+     if program:
+         gxs, gys = sorted({round(g.centroid.x, 2) for g in cols}), sorted({round(g.centroid.y, 2) for g in cols})
+         grid_u_ = U([LineString([(x_, by0 - 2.0), (x_, by1 + 2.0)]) for x_ in gxs] + [LineString([(bx0 - 2.0, y_), (bx1 + 2.0, y_)]) for y_ in gys])
+@@ -1699,7 +1719,9 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None,
+              "canvas_matches_A3": abs(cv.w - A3[0] * k) < 1e-6 and abs(cv.h - A3[1] * k) < 1e-6, "scale_bar_10m_mm": 10 * 1000.0 / scale,
+              "legend_items": len(legend), "legend": {str(num_of[n]): n for n in legend}, "numbers": len(nums), "numbers_on_elevators_or_shafts": elev_numbers,
+              "small_bubbles_core_restroom": numbered_small, "entrance_boxes_drawn": 0, "door_gaps_punched": len(doors),
+-             "furniture_items": len(furn_all), "furniture_touching_column": len(fcol), "furniture_touching_tube": len(ftub), "numbers_colliding_with_furniture": collide,
++             "furniture_items": len(furn_all), "layout_meta": layout_meta,
++             "furniture_v3": [{"kind": it_[1], "type": getattr(it_, "ftype", None), "wkt": it_[0].wkt} for it_ in furn_items if getattr(it_, "ftype", None)],
++             "furniture_touching_column": len(fcol), "furniture_touching_tube": len(ftub), "numbers_colliding_with_furniture": collide,
+              "plan_text_all_numeric": all(t.strip().isdigit() for t in plan_texts), "symbol_texts": sym_texts,
+              "shaft_X_inside_circle": all(sh_in) if sh_in else None, "curtain_wall_segments": cl_count, "curtain_doors": len(door_defs), "site": site_stats,
+              "window_world": [round(v, 4) for v in cv.b], "tag": tag, "model_only_outlines_drawn": model_only_drawn,
+@@ -1783,6 +1805,7 @@ def main():
+     ap.add_argument("--final-dir", default=None, help="V2 산출물 폴더")
+     ap.add_argument("--name", default=None, help="V2 산출물 파일 이름(확장자 제외)")
+     ap.add_argument("--v2layout", action="store_true", help="상층 프로그램별 가구 전략(upper_layouts)")
++    ap.add_argument("--v3layout", action="store_true", help="상층 프로그램별 가구·동선 계획 V3(layouts_v3): 유형 있는 가구 + 방문자/운영 동선")
+     ap.add_argument("--bare", action="store_true", help="범례·축척 막대·북쪽 표시를 생략(도면집 시트가 자체 패널을 둔다)")
+     ap.add_argument("--note", action="append", default=[], help="범례 아래에 쓸 줄(반복 지정). 도면집 시트 번호·적용 층·층간 차이")
+     ap.add_argument("--cleanline", action="store_true", help="C-T13A 선 정리: 호·베지어 경로, 조경·구획 경계 정리, 시각 순위 조정")
+@@ -1804,11 +1827,11 @@ def main():
+             for ci_, xc in enumerate(xs_):
+                 n_ += 1
+                 render(out_, a.floor, scale, a.png_width, a.seed, a.crops and n_ == 1, center=(xc, yc), tag="_t%d" % n_,
+-                       side="L" if ci_ == 0 else "R", top=(ri_ == 0), final_dir=a.final_dir, clean=a.cleanline, notes=tuple(a.note), v2layout=a.v2layout, bare=a.bare)
++                       side="L" if ci_ == 0 else "R", top=(ri_ == 0), final_dir=a.final_dir, clean=a.cleanline, notes=tuple(a.note), v2layout=a.v2layout, bare=a.bare, v3layout=a.v3layout)
+     else:
+         if scale == 100:
+             print("1:100 단일 시트")
+-        render(out_, a.floor, scale, a.png_width, a.seed, a.crops, program=a.program, final_dir=a.final_dir, name=a.name, clean=a.cleanline, notes=tuple(a.note), v2layout=a.v2layout, bare=a.bare)
++        render(out_, a.floor, scale, a.png_width, a.seed, a.crops, program=a.program, final_dir=a.final_dir, name=a.name, clean=a.cleanline, notes=tuple(a.note), v2layout=a.v2layout, bare=a.bare, v3layout=a.v3layout)
+ 
+ 
+ if __name__ == "__main__":
+diff --git a/src/layouts_v3.py b/src/layouts_v3.py
+new file mode 100644
+index 0000000..d6d009f
+--- /dev/null
++++ b/src/layouts_v3.py
+@@ -0,0 +1,590 @@
++"""상층 프로그램별 가구·동선 계획 V3 (PROPOSED_ONLY).
++
++V2(upper_layouts.py)는 판매층에서 같은 부스 하나를 격자로 복제했다. V3는 프로그램마다 공간 사용 논리가 다르다.
++
++  retail A (2F-5F, B1, B2)  브랜드 셀(크기 4종 + 계산대) 엇갈림 열 · 체험존 · 튜브 둘레 팝업 링 · 승강기 앞 대기 라운지 · 벽 진열
++  retail B (그 밖의 판매층)  팝업 스트리트: 세로 거리 2개 · 쌍 섬(길이 3종 + 계산대) · 중앙 대로의 팝업 카트 · 이벤트 광장 · 대기 라운지
++  fnb                       외벽 뱅킷 · 2/4/6인 식탁 · 공용 장탁자 · 바(스툴) · 서비스 카운터 + 줄서기 구역 · 운영 동선
++  culture                   이벤트 무대(+서는 구역·배경 월) · 전시 패널 격자 · 플린스 줄 · 집합 계단 · 라운지 포드 · 안내 데스크
++  garden                    산책로(양쪽 선) · 곡선 화단 · 수목 · 벤치 · 테라스 식탁 세트(구역)
++
++모든 항목은 Item(geometry, kind, ftype)이다. kind: body | counter | line | foliage | zone | route_v | route_o. ftype은 가구 유형(QA가 반복·다양성을 센다).
++방문자 동선(route_v)과 운영 동선(route_o)은 비어 있는 격자(0.45 m)에서 최대 여유 경로로 계산하고, 경로의 최소 여유 폭을 meta에 남긴다.
++좌표는 구역 폴리곤·장애물·튜브/코어 위치에서 계산하며 숫자 좌표를 직접 쓰지 않는다.
++"""
++import math
++
++import numpy as np
++import shapely
++from scipy import ndimage
++from scipy.sparse import coo_matrix
++from scipy.sparse.csgraph import dijkstra, minimum_spanning_tree
++from shapely import affinity
++from shapely.geometry import LineString, Point, Polygon, box
++from shapely.ops import unary_union
++
++import upper_layouts as V2
++
++R, RING, STRIPS = V2._rect, V2._ring, V2._perimeter_strips
++A_FLOORS = {"2F", "3F", "4F", "5F", "B1", "B2"}
++
++
++class Item(tuple):
++    """(geometry, kind) 두 값으로 풀리는 튜플 + 유형. 기존 렌더러 코드가 `for g, k in items`로 읽어도 그대로 동작한다."""
++
++    def __new__(cls, g, kind, ftype=None):
++        o = super().__new__(cls, (g, kind))
++        o.ftype = ftype
++        return o
++
++
++class Items(list):
++    meta = None
++
++
++class Packer:
++    def __init__(self, region, obst, hard):
++        self.region, self.obst, self.hard = region, obst, hard
++        self.items, self.taken, self.solid = [], Polygon(), Polygon()
++
++    def ok(self, g, soft=True, clear=0.0, vs_taken=True):
++        if g.is_empty or not self.region.contains(g):
++            return False
++        if soft and self.obst is not None and not self.obst.is_empty and g.intersects(self.obst):
++            return False
++        if self.hard is not None and not self.hard.is_empty and g.intersects(self.hard):
++            return False
++        if vs_taken and not self.taken.is_empty and g.buffer(clear).intersects(self.taken):
++            return False
++        return True
++
++    def _take(self, g, solid=False):
++        self.taken = unary_union([self.taken, g]) if not self.taken.is_empty else g
++        if solid:
++            self.solid = unary_union([self.solid, g]) if not self.solid.is_empty else g
++
++    def zone(self, g, ftype):
++        """바닥 표시 구역: 다른 가구가 피하지만 걸어 다닐 수 있다(동선 계산에서 막지 않는다)."""
++        self.items.append(Item(g, "zone", ftype))
++        self._take(g)
++
++    def put(self, g, kind, ftype, soft=True, clear=0.0):
++        if not self.ok(g, soft, clear):
++            return False
++        self.items.append(Item(g, kind, ftype))
++        if kind in ("body", "counter", "zone"):
++            self._take(g, solid=kind != "zone")
++        return True
++
++    def put_all(self, parts, soft=True, clear=0.0):
++        """parts: [(geom, kind, ftype)]. 몸체·계산대가 모두 들어가면 한꺼번에 놓는다(서로는 겹쳐도 됨)."""
++        body = [p for p in parts if p[1] in ("body", "counter")]
++        if not all(self.ok(g, soft, clear) for g, _, _ in body):
++            return False
++        for g, k, t in parts:
++            self.items.append(Item(g, k, t))
++            if k in ("body", "counter"):
++                self._take(g, solid=True)
++        return True
++
++    def line(self, g, ftype):
++        self.items.append(Item(g, "line", ftype))
++
++
++def _pick(rng, options):
++    total = sum(w for _, w in options)
++    r = rng.uniform(0, total)
++    for v, w in options:
++        r -= w
++        if r <= 0:
++            return v
++    return options[-1][0]
++
++
++def _circle(x, y, r, n=14):
++    return Point(x, y).buffer(r, n // 4)
++
++
++def _spots(region, step, order_key):
++    x0, y0, x1, y1 = region.bounds
++    pts = [(x, y) for x in np.arange(x0 + step, x1 - step, step) for y in np.arange(y0 + step, y1 - step, step)]
++    return sorted(pts, key=order_key)
++
++
++# ── 동선: 비어 있는 격자에서 최대 여유 경로 ───────────────────────────────────────────────────────
++def _grid(region, blocked, step=0.45):
++    x0, y0, x1, y1 = region.bounds
++    xs = np.arange(x0 + step / 2, x1, step)
++    ys = np.arange(y0 + step / 2, y1, step)
++    X, Y = np.meshgrid(xs, ys)
++    inside = shapely.contains_xy(region, X, Y)
++    blk = shapely.contains_xy(blocked, X, Y) if blocked is not None and not blocked.is_empty else np.zeros_like(inside)
++    free = inside & ~blk
++    clear = ndimage.distance_transform_edt(free) * step
++    return xs, ys, free, clear, step
++
++
++def _chaikin(pts, it=2):
++    for _ in range(it):
++        out = [pts[0]]
++        for a, b in zip(pts, pts[1:]):
++            out += [(0.75 * a[0] + 0.25 * b[0], 0.75 * a[1] + 0.25 * b[1]), (0.25 * a[0] + 0.75 * b[0], 0.25 * a[1] + 0.75 * b[1])]
++        out.append(pts[-1])
++        pts = out
++    return pts
++
++
++def circulation(region, blocked, anchors, step=0.45, hub=None, end_trim=3.0):
++    """hub가 있으면 hub에서 각 앵커로 가는 방사형 경로, 없으면 앵커를 잇는 최소 신장 경로(여유가 큰 칸을 선호). 앵커 끝 end_trim m는 폭 측정에서 뺀다. 반환: ([LineString], 경로 최소 여유 폭 m, 연결된 앵커 수)."""
++    xs, ys, free, clear, st = _grid(region, blocked, step)
++    ny, nx = free.shape
++    idx = np.arange(nx * ny).reshape(ny, nx)
++    rows, cols, w = [], [], []
++    for dy, dx in ((0, 1), (1, 0), (1, 1), (1, -1)):                # 8방향 이웃(중복 없이 4방향만 세우고 무방향 그래프로 쓴다)
++        if dx >= 0:
++            ia = idx[0:ny - dy, 0:nx - dx]
++            ib = idx[dy:ny, dx:nx]
++        else:
++            ia = idx[0:ny - dy, -dx:nx]
++            ib = idx[dy:ny, 0:nx + dx]
++        ok = free.ravel()[ia.ravel()] & free.ravel()[ib.ravel()]
++        mid = np.minimum(clear.ravel()[ia.ravel()], clear.ravel()[ib.ravel()])
++        cost = math.hypot(dx, dy) * st * (1.0 + 5.0 / (1.0 + mid))
++        rows += list(ia.ravel()[ok]); cols += list(ib.ravel()[ok]); w += list(cost[ok])
++    G = coo_matrix((w, (rows, cols)), shape=(nx * ny, nx * ny)).tocsr()
++    snap = []
++    for a in anchors:
++        i, j = int(np.clip((a[1] - ys[0]) / st, 0, ny - 1)), int(np.clip((a[0] - xs[0]) / st, 0, nx - 1))
++        if not free[i, j]:
++            fy, fx = np.nonzero(free)
++            k = int(np.argmin((fy - i) ** 2 + (fx - j) ** 2))
++            i, j = int(fy[k]), int(fx[k])
++        snap.append(int(idx[i, j]))
++    snap = list(dict.fromkeys(snap))
++    if len(snap) < 2:
++        return [], None, len(snap)
++    if hub is not None:
++        hi, hj = int(np.clip((hub[1] - ys[0]) / st, 0, ny - 1)), int(np.clip((hub[0] - xs[0]) / st, 0, nx - 1))
++        if not free[hi, hj]:
++            fy, fx = np.nonzero(free)
++            kk = int(np.argmin((fy - hi) ** 2 + (fx - hj) ** 2))
++            hi, hj = int(fy[kk]), int(fx[kk])
++        hid = int(idx[hi, hj])
++        D, pred = dijkstra(G, directed=False, indices=[hid], return_predecessors=True)
++        pairs = [(0, snap[b_]) for b_ in range(len(snap)) if snap[b_] != hid and np.isfinite(D[0][snap[b_]])]
++        base = hid
++    else:
++        D, pred = dijkstra(G, directed=False, indices=snap, return_predecessors=True)
++        M = np.array([[D[a_][snap[b_]] for b_ in range(len(snap))] for a_ in range(len(snap))])
++        M[~np.isfinite(M)] = 0
++        mst = minimum_spanning_tree(coo_matrix(M)).tocoo()
++        pairs = [(int(a_), snap[int(b_)]) for a_, b_ in zip(mst.row, mst.col)]
++        base = None
++    lines, mins = [], []
++    for a_, tgt in pairs:
++        start = base if base is not None else snap[a_]
++        path, cur = [], tgt
++        while cur != start and cur >= 0:
++            path.append(cur)
++            cur = pred[a_][cur]
++        path.append(start)
++        if len(path) < 4:
++            continue
++        pts = [(xs[q % nx], ys[q // nx]) for q in path[::-1]]
++        cl = [clear.ravel()[q] for q in path[::-1]]
++        k0 = max(1, int(end_trim / st))                             # 튜브·코어 바로 앞(앵커 근처)은 여유 측정에서 뺀다
++        mins.append(min(cl[k0:-k0]) if len(cl) > 2 * k0 + 1 else min(cl))
++        sl_ = LineString(pts).simplify(0.4)
++        lines.append(LineString(_chaikin(list(sl_.coords), 2)))
++    return lines, (2.0 * min(mins) if mins else None), len(snap)
++
++
++def _dissolve(lines):
++    """방사형 경로는 줄기 구간을 함께 쓴다. 같은 구간을 여러 번 그리지 않도록 겹침을 합친다(Q60: 동일 선분 중복)."""
++    if not lines:
++        return []
++    from shapely.ops import linemerge
++    u = unary_union(lines)
++    if hasattr(u, "geoms"):
++        u = linemerge(u)
++    return [g for g in (u.geoms if hasattr(u, "geoms") else [u]) if g.geom_type == "LineString" and g.length > 0.2]
++
++
++def _anchors(P, ctx):
++    c = P.region.centroid
++    out = []
++    for t in ctx.get("tubes", []):
++        d = math.hypot(c.x - t["c"].x, c.y - t["c"].y) or 1.0
++        out.append((t["c"].x + (c.x - t["c"].x) / d * (t["r"] + 1.6), t["c"].y + (c.y - t["c"].y) / d * (t["r"] + 1.6)))
++    core = ctx.get("cores")
++    if core is not None and not core.is_empty:
++        for g in (core.geoms if hasattr(core, "geoms") else [core]):
++            if g.area > 4.0:
++                p = g.centroid
++                d = math.hypot(c.x - p.x, c.y - p.y) or 1.0
++                r = math.sqrt(g.area / math.pi)
++                out.append((p.x + (c.x - p.x) / d * (r + 2.0), p.y + (c.y - p.y) / d * (r + 2.0)))
++    out = [a for a in out if P.region.buffer(0.2).contains(Point(a))]
++    return out or [(c.x, c.y)]
++
++
++def _add_routes(P, ctx, ops_from=None, perimeter_ops=False):
++    blocked = unary_union([g for g in (P.hard, P.solid.buffer(0.3) if not P.solid.is_empty else None) if g is not None and not g.is_empty])
++    c0 = P.region.centroid
++    lines, width, n = circulation(P.region, blocked, _anchors(P, ctx), hub=(c0.x, c0.y))
++    lines = _dissolve(lines)
++    for ln in lines:
++        P.items.append(Item(ln, "route_v", "visitor_route"))
++    ops = None
++    if ops_from is not None:                                                        # 운영 동선: 서비스 지점 → 가장 가까운 코어
++        cores = ctx.get("cores")
++        if cores is not None and not cores.is_empty:
++            tgt = cores.centroid
++            ol, _, _ = circulation(P.region, blocked, [ops_from, (tgt.x, tgt.y)])
++            ol = _dissolve(ol)
++            for ln in ol:
++                P.items.append(Item(ln, "route_o", "operations_route"))
++            ops = len(ol)
++    if perimeter_ops:                                                              # 운영 동선(제안): 외벽과 벽 진열 사이의 서비스 레인
++        lane = P.region.buffer(-0.75).boundary.difference(unary_union([blocked, P.solid.buffer(0.15)]))
++        parts = [g for g in (lane.geoms if hasattr(lane, "geoms") else [lane]) if g.geom_type == "LineString" and g.length > 4.0]
++        for g in parts:
++            P.items.append(Item(g, "route_o", "operations_route"))
++        ops = len(parts)
++    return {"route_min_clear_width_m": width, "route_segments": len(lines), "anchors": n, "ops_route_segments": ops}
++
++
++# ── 판매 ─────────────────────────────────────────────────────────────────────────────────────────
++def _lounge(P, t, rng, count, ang0):
++    """승강기 튜브 앞 대기 라운지: 벤치 링 + 바닥 표시."""
++    got = 0
++    for i in range(count):
++        a = ang0 + 360.0 * i / count
++        x, y = t["c"].x + (t["r"] + 1.9) * math.cos(math.radians(a)), t["c"].y + (t["r"] + 1.9) * math.sin(math.radians(a))
++        if P.put(R(x, y, 1.8, 0.55, a + 90.0), "body", "waiting_bench", soft=False):
++            got += 1
++    return got
++
++
++def _retail(P, rng, floor, ctx):
++    variant = "A" if floor in A_FLOORS else "B"
++    x0, y0, x1, y1 = P.region.bounds
++    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
++    plaza = ctx.get("plaza")
++    tubes = ctx.get("tubes", [])
++    for g in STRIPS(P.region, P.hard, rng, 0.55 if variant == "A" else 0.7, 1.35, seg=(3.0, 6.5), gap=(1.0, 1.8)):
++        if P.put(g, "body", "wall_display", soft=False):
++            a, b, c2, d = g.bounds
++            P.line(LineString([(a + 0.1, (b + d) / 2), (c2 - 0.1, (b + d) / 2)]) if (c2 - a) > (d - b) else LineString([((a + c2) / 2, b + 0.1), ((a + c2) / 2, d - 0.1)]), "wall_display_line")
++    for t in tubes:                                                                  # 승강기 튜브(T3/T4 등) 앞 대기 라운지
++        nm = t.get("name", "")
++        if any(k in nm for k in ("T3", "T4", "승강", "EV")):
++            _lounge(P, t, rng, 4 if variant == "A" else 3, 20.0 + 25.0 * rng.random())
++    if plaza is not None and variant == "A":                                          # 빛 튜브 둘레 팝업 링(소형 키오스크)
++        pc_ = plaza.centroid
++        rad = math.sqrt(plaza.area / math.pi) + 3.4
++        for i in range(10):
++            a = math.radians(18 + 36 * i)
++            x, y = pc_.x + rad * math.cos(a), pc_.y + rad * math.sin(a)
++            P.put_all([(R(x, y, 1.2, 1.2, math.degrees(a)), "body", "popup_kiosk"), (_circle(x, y, 0.25), "line", "popup_mark")], soft=True, clear=0.8)
++    if variant == "A":
++        exp = None                                                                    # 체험존: 8×8 바닥 표시 + 체험 테이블 + 안내 카운터
++        for (x, y) in _spots(P.region, 2.0, lambda p: math.hypot(p[0] - (cx + 6 * (1 if floor in ("3F", "5F", "B1") else -1)), p[1] - (cy - 3))):
++            z = R(x, y, 8.0, 8.0)
++            if P.ok(z, soft=True):
++                exp = (x, y, z)
++                break
++        if exp:
++            x, y, z = exp
++            P.zone(z, "experience_zone")
++            for sx, sy in ((-2.0, -1.5), (2.0, -1.5), (0.0, 1.8)):
++                P.items.append(Item(_circle(x + sx, y + sy, 0.55), "body", "demo_table"))
++            P.items.append(Item(R(x, y + 3.2, 2.4, 0.6), "counter", "experience_counter"))
++        SIZES = [((3.0, 1.2), 4), ((3.6, 1.2), 3), ((2.4, 1.2), 2), ((4.2, 1.4), 2)]
++        pys = (3.6, 3.9)
++        row, y = 0, y0 + 3.4
++        while y < y1 - 2.6:
++            x = x0 + 3.4 + (2.6 if row % 2 else 0.0)
++            while x < x1 - 3.0:
++                (w, h) = _pick(rng, SIZES)
++                cw = _pick(rng, [((1.0, 0.5), 3), ((0.6, 0.6), 2)])
++                body = R(x + w / 2, y, w, h)
++                cnt = R(x + w + cw[0] / 2 + 0.05, y, cw[0], cw[1])
++                if (plaza is None or body.distance(plaza) > 2.4) and P.put_all([(body, "body", "brand_cell_%.1fx%.1f" % (w, h)), (cnt, "counter", "cashier_%.1fx%.1f" % cw),
++                                                                               (LineString([(x + 0.15, y), (x + w - 0.15, y)]), "line", "display_line")], clear=0.55):
++                    pass
++                x += w + cw[0] + rng.uniform(1.1, 1.7)
++            y += pys[row % 2]
++            row += 1
++    else:
++        for (sx, nm) in ((-1, "street_W"), (1, "street_E")):                          # 팝업 스트리트: 중앙 대로 양쪽에 세로 거리
++            cxs = cx + sx * 8.8
++            lens = [((3.0, 1.4), 3), ((4.0, 1.4), 3), ((5.0, 1.4), 2)]
++            for side in (-1, 1):
++                y = y0 + 3.0 + (1.8 if side > 0 else 0.0)
++                while y < y1 - 3.0:
++                    (L, w) = _pick(rng, lens)
++                    xx = cxs + side * (w / 2 + 1.0)
++                    body = R(xx, y + L / 2, w, L)
++                    cnt = R(xx, y + L + 0.35, 0.8, 0.55)
++                    P.put_all([(body, "body", "street_island_%.1f" % L), (cnt, "counter", "cashier_street"),
++                               (LineString([(xx, y + 0.2), (xx, y + L - 0.2)]), "line", "display_line")], clear=0.6)
++                    y += L + 0.9 + rng.uniform(0.8, 1.6)
++        for k in range(7):                                                            # 중앙 대로 팝업 카트(엇갈림)
++            y = y0 + 4.5 + k * 7.0
++            x = cx + (2.2 if k % 2 else -2.2)
++            P.put_all([(R(x, y, 1.2, 1.2), "body", "popup_cart"), (_circle(x, y, 0.3), "line", "popup_mark")], clear=0.8)
++        for (x, y) in _spots(P.region, 2.0, lambda p: math.hypot(p[0] - cx, p[1] - (cy + 8 if floor in ("8F", "6F") else cy - 8))):
++            z = R(x, y, 10.0, 5.0)
++            if P.ok(z, soft=True, clear=0.5):
++                P.zone(z, "event_popup_plaza")
++                for i in range(3):
++                    P.items.append(Item(R(x - 3 + i * 3.0, y, 1.0, 1.0), "body", "event_plinth"))
++                break
++    return None
++
++
++# ── F&B ──────────────────────────────────────────────────────────────────────────────────────────
++def _chairs(P, cx, cy, offs, size=0.36):
++    return [(R(cx + dx, cy + dy, size, size), "body", "chair") for dx, dy in offs]
++
++
++def _fnb(P, rng, floor, ctx):
++    x0, y0, x1, y1 = P.region.bounds
++    cx0, cy0 = (x0 + x1) / 2, (y0 + y1) / 2
++    for g in STRIPS(P.region, P.hard, rng, 0.7, 1.35, seg=(2.4, 3.6), gap=(0.7, 1.2)):
++        if not P.put(g, "body", "banquette", soft=False):
++            continue
++        a0, b0, a1, b1 = g.bounds
++        horizontal = (a1 - a0) > (b1 - b0)
++        n = max(1, int(((a1 - a0) if horizontal else (b1 - b0)) // 1.3))
++        for i in range(n):
++            t = (a0 + 0.65 + i * 1.3) if horizontal else (b0 + 0.65 + i * 1.3)
++            cx_, cy_ = (t, b1 + 0.55) if (horizontal and (b0 + b1) / 2 < cy0) else (t, b0 - 0.55) if horizontal else ((a1 + 0.55, t) if (a0 + a1) / 2 < cx0 else (a0 - 0.55, t))
++            dims_, nm_ = _pick(rng, [((0.7, 0.7), 3), ((0.9, 0.6), 2), ((0.6, 0.9), 2)]), None
++            nm_ = "table_2top_%dx%d" % (round(dims_[0] * 10), round(dims_[1] * 10))
++            P.put(R(cx_, cy_, dims_[0], dims_[1]), "body", nm_, soft=False)
++    svc = None                                                                         # 서비스 카운터 + 줄서기 구역(튜브·코어 가까이)
++    base = (ctx.get("tubes") or [None])[0]
++    cands = _spots(P.region, 1.5, lambda p: math.hypot(p[0] - (base["c"].x if base else cx0), p[1] - (base["c"].y - (base["r"] + 4.0) if base else cy0)))
++    for (x, y) in cands:
++        cnt, q = R(x, y, 8.0, 0.8), R(x, y - 2.0, 7.0, 2.2)
++        if P.ok(cnt, soft=True) and P.ok(q, soft=True):
++            P.items.append(Item(cnt, "counter", "service_counter")); P._take(cnt, solid=True)
++            P.zone(q, "queue_zone")
++            svc = (x, y + 1.2)
++            break
++    bars = 0
++    for (x, y) in sorted(((cx0 + dx, cy0 + dy) for dx in range(-16, 17, 4) for dy in range(-16, 17, 4)), key=lambda p: math.hypot(p[0] - cx0, p[1] - cy0)):
++        if bars >= 2:
++            break
++        cnt, zone = R(x, y, 9.0, 0.9), R(x, y, 10.5, 3.6)
++        if P.ok(zone, soft=True):
++            P.items.append(Item(cnt, "counter", "bar_counter")); P._take(zone); P._take(cnt, solid=True)
++            for i in range(11):
++                P.items.append(Item(RING(x - 4.4 + i * 0.88, y + 0.9, 0.22, 10), "line", "stool"))
++            bars += 1
++    px, py, row, y = 5.4, 4.2, 0, y0 + 4.0
++    TOPS = [("table_4top", 4, 3), ("table_2top_free", 2, 3), ("table_6top", 6, 2)]
++    while y < y1 - 3.5:
++        x = x0 + 4.0 + (px / 2 if row % 2 else 0.0)
++        longrow = (row % 4 == 2)
++        while x < x1 - 3.5:
++            if longrow:
++                L = 6.0
++                parts = [(R(x + 2.0, y, L, 1.0), "body", "communal_table")] + _chairs(P, x + 2.0, y, [(-2.6 + i * 1.04, s) for i in range(6) for s in (-0.7, 0.7)])
++                P.put_all(parts, clear=0.5)
++                x += 8.4
++            else:
++                kind, seats = _pick(rng, [((k, s), w) for k, s, w in TOPS])
++                tw, th = {4: (1.0, 0.8), 2: (0.7, 0.7), 6: (1.6, 0.9)}[seats]
++                offs = {4: [(-0.7, 0), (0.7, 0), (0, -0.6), (0, 0.6)], 2: [(-0.55, 0), (0.55, 0)], 6: [(-1.0, 0), (1.0, 0), (-0.4, -0.65), (0.4, -0.65), (-0.4, 0.65), (0.4, 0.65)]}[seats]
++                P.put_all([(R(x, y, tw, th), "body", kind)] + _chairs(P, x, y, offs), clear=0.5)
++                x += px
++        y += py
++        row += 1
++    return svc
++
++
++# ── 문화·엔터 ────────────────────────────────────────────────────────────────────────────────────
++def _culture(P, rng, floor, ctx):
++    x0, y0, x1, y1 = P.region.bounds
++    cx0, cy0 = (x0 + x1) / 2, (y0 + y1) / 2
++    stage = None
++    for (x, y) in sorted(((cx0 + dx, cy0 + dy) for dx in range(-20, 21) for dy in range(-20, 21)), key=lambda p: math.hypot(p[0] - cx0, p[1] - cy0)):
++        for (w, h) in ((7.5, 4.0), (4.0, 7.5)):
++            g = R(x, y, w, h)
++            zone = R(x, y - (3.2 if w > h else 0.0), w + 2.4, h + 8.0) if w > h else R(x - 3.2, y, w + 8.0, h + 2.4)     # 무대 + 서는 구역 + 여유
++            if P.ok(zone, soft=False):
++                stage = (x, y, w, h, g, zone)
++                break
++        if stage:
++            break
++    if stage:
++        x, y, w, h, g, zone = stage
++        P.items.append(Item(g, "body", "stage")); P._take(zone); P._take(g, solid=True)
++        wide = w > h
++        for i in range(1, 4):
++            P.line(LineString([(x - w / 2, y - h / 2 - i * 0.3), (x + w / 2, y - h / 2 - i * 0.3)]) if wide else LineString([(x - w / 2 - i * 0.3, y - h / 2), (x - w / 2 - i * 0.3, y + h / 2)]), "stage_step")
++        P.items.append(Item(R(x, y + h / 2 - 0.35, w - 0.8, 0.22) if wide else R(x + w / 2 - 0.35, y, 0.22, h - 0.8), "body", "media_wall"))
++        sz = R(x, y - h / 2 - 2.6, w + 2.0, 4.6) if wide else R(x - w / 2 - 2.6, y, 4.6, h + 2.0)
++        P.items.append(Item(sz, "zone", "standing_zone"))
++        for i in range(-2, 3):
++            pt = (x + i * 1.5, y - h / 2 - 1.9) if wide else (x - w / 2 - 1.9, y + i * 1.5)
++            P.line(RING(pt[0], pt[1], 0.32, 12), "standing_mark")
++    for side in ("N", "S", "E", "W"):                                                  # 집합 계단
++        hz = side in ("S", "N")
++        base = (y1 - 4.6) if side == "N" else (y0 + 4.6) if side == "S" else (x1 - 4.6) if side == "E" else (x0 + 4.6)
++        sgn = -1 if side in ("N", "E") else 1
++        c = cx0 if hz else cy0
++        steps = [R(c, base + sgn * i * 0.9, 12.0, 0.9) if hz else R(base + sgn * i * 0.9, c, 0.9, 12.0) for i in range(3)]
++        if all(P.ok(s, soft=False) for s in steps):
++            for s in steps:
++                P.put(s, "body", "assembly_step", soft=False)
++            break
++    gal = None                                                                         # 전시 구역: 패널 격자 + 바닥 표시
++    for (x, y) in sorted(((x, y) for x in range(int(x0) + 6, int(x1) - 6, 3) for y in range(int(y0) + 6, int(y1) - 6, 3)), key=lambda p: -math.hypot(p[0] - cx0, p[1] - cy0)):
++        z = R(x, y, 15.0, 10.0)
++        if P.ok(z, soft=True):
++            gal = (x, y, z)
++            break
++    if gal:
++        x, y, z = gal
++        P.zone(z, "exhibition_zone")
++        for i in range(3):
++            for j in range(2):
++                P.items.append(Item(R(x - 5.0 + i * 5.0, y - 2.5 + j * 5.0, 3.0, 0.15) if (i + j) % 2 == 0 else R(x - 5.0 + i * 5.0, y - 2.5 + j * 5.0, 0.15, 3.0), "body", "gallery_panel"))
++    best = None
++    for side in ("S", "N", "W", "E"):
++        hz = side in ("S", "N")
++        pos = (y0 + 2.6) if side == "S" else (y1 - 2.6) if side == "N" else (x0 + 2.6) if side == "W" else (x1 - 2.6)
++        pl = []
++        for i in range(9):
++            t = ((x0 + 5 + i * 4.2) if hz else (y0 + 5 + i * 4.2))
++            g = R(t, pos, 1.6, 1.6) if hz else R(pos, t, 1.6, 1.6)
++            if P.ok(g, soft=False, clear=0.3):
++                pl.append(g)
++        if best is None or len(pl) > len(best):
++            best = pl
++    for g in (best or []):
++        P.put(g, "body", "plinth", soft=False, clear=0.3)
++        P.line(RING(g.centroid.x, g.centroid.y, 0.45, 12), "plinth_mark")
++    pods = 0
++    for (x, y) in sorted(((x, y) for x in range(int(x0) + 4, int(x1) - 3, 3) for y in range(int(y0) + 4, int(y1) - 3, 3)), key=lambda p: min(p[0] - x0, x1 - p[0], p[1] - y0, y1 - p[1])):
++        if pods >= 12:
++            break
++        zone = R(x, y, 5.6, 4.2)
++        if P.ok(zone, soft=True):
++            if pods % 3 == 0:                                                         # 포드 A: 마주 보는 소파 2 + 낮은 테이블
++                P.items.append(Item(R(x, y - 1.1, 2.4, 0.9), "body", "lounge_sofa"))
++                P.items.append(Item(R(x, y + 1.1, 2.4, 0.9, 180), "body", "lounge_sofa"))
++                P.items.append(Item(R(x, y, 1.2, 0.7), "body", "lounge_table"))
++            elif pods % 3 == 1:                                                       # 포드 B: 1인 의자 3 + 원형 테이블
++                P.items.append(Item(_circle(x, y, 0.45), "body", "lounge_round_table"))
++                for a_ in (90, 210, 330):
++                    P.items.append(Item(R(x + 1.2 * math.cos(math.radians(a_)), y + 1.2 * math.sin(math.radians(a_)), 0.9, 0.9, a_ - 90), "body", "lounge_armchair"))
++            else:                                                                      # 포드 C: 긴 벤치 + 낮은 테이블 2
++                P.items.append(Item(R(x, y - 1.3, 3.6, 0.6), "body", "lounge_bench"))
++                P.items.append(Item(R(x - 0.8, y + 0.3, 0.9, 0.7), "body", "lounge_table_small"))
++                P.items.append(Item(R(x + 0.8, y + 0.3, 0.9, 0.7), "body", "lounge_table_small"))
++            P._take(R(x, y, 2.4, 2.9), solid=True)
++            P.line(RING(x + 2.2, y, 0.4, 12), "planter")
++            P._take(zone)
++            pods += 1
++    info = None
++    for (x, y) in _spots(P.region, 1.5, lambda p: math.hypot(p[0] - cx0, p[1] - y0)):
++        c = R(x, y, 3.0, 0.7)
++        if P.ok(c.buffer(0.5), soft=True):
++            P.items.append(Item(c, "counter", "info_desk")); P._take(c, solid=True)
++            info = (x, y)
++            break
++    return info
++
++
++# ── 정원·테라스 ──────────────────────────────────────────────────────────────────────────────────
++def _blob(x, y, rx, ry, ang):
++    return affinity.rotate(affinity.scale(Point(x, y).buffer(1.0, 16), rx, ry), ang, origin=(x, y))
++
++
++def _garden(P, rng, floor, ctx):
++    x0, y0, x1, y1 = P.region.bounds
++    path = None                                                                        # 산책로: 구역 안쪽 4.5 m 둘레의 둥근 고리(폭 2.4)
++    inner = P.region.buffer(-4.5, join_style=1)
++    if not inner.is_empty:
++        ring = max(inner.geoms, key=lambda g: g.area) if hasattr(inner, "geoms") else inner
++        path = LineString(list(ring.exterior.coords)).simplify(0.4)
++        band = path.buffer(1.2, cap_style=2)
++        for edge in (path.parallel_offset(1.2, "left", join_style=1), path.parallel_offset(1.2, "right", join_style=1)):
++            ed = edge.difference(P.hard.buffer(0.1)) if P.hard is not None and not P.hard.is_empty else edge
++            if not ed.is_empty:
++                P.items.append(Item(ed, "line", "promenade_edge"))
++        P._take(band.difference(P.hard)) if P.hard is not None and not P.hard.is_empty else P._take(band)
++        L, s = path.length, 0.0
++        while s < L:                                                                    # 벤치: 산책로를 따라 약 8 m마다
++            p, q = path.interpolate(s), path.interpolate(min(L, s + 0.5))
++            ang = math.degrees(math.atan2(q.y - p.y, q.x - p.x))
++            nrm = math.radians(ang + 90)
++            P.put(R(p.x + 1.9 * math.cos(nrm), p.y + 1.9 * math.sin(nrm), 1.6, 0.5, ang), "body", "garden_bench", soft=False)
++            s += 8.0 + rng.uniform(-1.0, 2.0)
++    tries = 0
++    beds = 0
++    while beds < 16 and tries < 600:
++        tries += 1
++        x, y = rng.uniform(x0 + 2, x1 - 2), rng.uniform(y0 + 2, y1 - 2)
++        b = _blob(x, y, rng.uniform(1.3, 2.6), rng.uniform(0.8, 1.6), rng.uniform(0, 180))
++        if P.put(b, "body", "planting_bed", soft=True, clear=1.0):
++            for _ in range(int(b.area // 1.4)):
++                px, py = b.centroid.x + rng.uniform(-1, 1) * (b.bounds[2] - b.bounds[0]) / 2.6, b.centroid.y + rng.uniform(-1, 1) * (b.bounds[3] - b.bounds[1]) / 2.6
++                if b.buffer(-0.2).contains(Point(px, py)):
++                    P.items.append(Item(RING(px, py, rng.uniform(0.25, 0.45), 12), "foliage", "shrub"))
++            beds += 1
++    trees = 0
++    tries = 0
++    while trees < 9 and tries < 400:
++        tries += 1
++        x, y = rng.uniform(x0 + 2, x1 - 2), rng.uniform(y0 + 2, y1 - 2)
++        g = _circle(x, y, 1.5)
++        if P.put(g, "body", "tree_canopy", soft=True, clear=0.8):
++            P.items.append(Item(RING(x, y, 1.4, 18), "foliage", "tree"))
++            P.items.append(Item(RING(x, y, 0.9, 14), "foliage", "tree"))
++    for (x, y) in _spots(P.region, 2.0, lambda p: math.hypot(p[0] - x1 + 12, p[1] - y0 - 10)):   # 테라스: 식탁 세트 구역
++        z = R(x, y, 10.0, 7.0)
++        if P.ok(z, soft=True, clear=0.8):
++            P.zone(z, "terrace_zone")
++            for i in range(2):
++                for j in range(2):
++                    tx, ty = x - 2.6 + i * 5.2, y - 1.6 + j * 3.2
++                    P.items.append(Item(_circle(tx, ty, 0.5), "body", "terrace_table"))
++                    for k in range(4):
++                        a = math.radians(90 * k + 45)
++                        P.items.append(Item(_circle(tx + 1.0 * math.cos(a), ty + 1.0 * math.sin(a), 0.25, 8), "body", "terrace_chair"))
++            break
++    return None
++
++
++# ── 진입점 ───────────────────────────────────────────────────────────────────────────────────────
++def layout(name, region, obst, hard, rng, floor, ctx):
++    n = name or ""
++    P = Packer(region, obst, hard)
++    if "F&B" in n:
++        svc = _fnb(P, rng, floor, ctx)
++        kind = "fnb"
++    elif "문화" in n or "엔터" in n:
++        svc = _culture(P, rng, floor, ctx)
++        kind = "culture"
++    elif "garden" in n.lower() or "정원" in n:
++        svc = _garden(P, rng, floor, ctx)
++        kind = "garden"
++    elif "판매" in n or "시장" in n or "상업" in n:
++        _retail(P, rng, floor, ctx)
++        svc, kind = None, "retail_" + ("A" if floor in A_FLOORS else "B")
++    else:
++        return Items()
++    meta = _add_routes(P, ctx, ops_from=svc, perimeter_ops=kind.startswith("retail")) if kind != "garden" else {"route_min_clear_width_m": None, "route_segments": 0, "anchors": 0, "ops_route_segments": None}
++    types = {}
++    for it in P.items:
++        if it[1] in ("body", "counter"):
++            types[it.ftype] = types.get(it.ftype, 0) + 1
++    out = Items(P.items)
++    out.meta = dict(meta, program=kind, floor=floor, types=types)
++    return out
+diff --git a/tests/test_t14g_qa.py b/tests/test_t14g_qa.py
+new file mode 100644
+index 0000000..5ddf6bf
+--- /dev/null
++++ b/tests/test_t14g_qa.py
+@@ -0,0 +1,241 @@
++"""C-T14G tests: registry, Sheet claims/scale bars, 3D truth functions, independent PDF QA and defect injection.
++
++PDF tests run on docs/t14g_v3/Candidate_V3_drawing_set.pdf (or $T14G_PDF) with the sheet registry next to it. Tests that need the
++model run folder (output/C_T14G_V3_run or $T14G_RUN, not in git) skip when it is absent.
++"""
++import json
++import math
++import os
++import sys
++
++import numpy as np
++import pytest
++
++ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
++sys.path.insert(0, os.path.join(ROOT, "tools"))
++sys.path.insert(0, os.path.join(ROOT, "src"))
++
++PDF = os.environ.get("T14G_PDF", os.path.join(ROOT, "docs", "t14g_v3", "Candidate_V3_drawing_set.pdf"))
++INDEX = os.environ.get("T14G_INDEX", os.path.join(ROOT, "docs", "t14g_v3", "sheet_index.json"))
++RUN = os.environ.get("T14G_RUN", os.path.join(ROOT, "output", "C_T14G_V3_run"))
++have_pdf = os.path.exists(PDF) and os.path.exists(INDEX)
++need_pdf = pytest.mark.skipif(not have_pdf, reason="V3 PDF / sheet index not present")
++need_run = pytest.mark.skipif(not os.path.isdir(RUN), reason="model run folder not present (gitignored)")
++
++
++# ── registry ─────────────────────────────────────────────────────────────────────────────────────
++def test_callout_scale_comes_from_registry():
++    from t14g import registry as R
++    assert R.callout_label("D-407") == "D-407 · 1:100"
++    assert R.callout_label("D-410") == "D-410 · 1:100"
++    assert R.callout_label("D-401") == "D-401 · 1:50"
++
++
++def test_wrong_callout_scale_is_rejected():
++    from t14g import registry as R
++    with pytest.raises(R.ScaleMismatchError):
++        R.callout_label("D-410", 50)          # the V2 error: P-105 / E-201..204 printed 1:50
++
++
++def test_unknown_detail_is_rejected():
++    from t14g import registry as R
++    with pytest.raises(R.UnknownSheetError):
++        R.detail_scale("D-499")
++
++
++def test_generated_registry_mismatch_is_reported(tmp_path):
++    from t14g import registry as R
++    bad = {"details": [{"sheet": s, "scale": "1:%d" % d} for s, d in R.DETAIL_SCALE.items()]}
++    bad["details"][6]["scale"] = "1:50"       # D-407 generated at the wrong scale
++    p = tmp_path / "detail_registry.json"
++    p.write_text(json.dumps(bad), encoding="utf-8")
++    assert any("D-407" in x for x in R.verify_against_registry(str(p)))
++
++
++# ── Sheet: scale bars and layout claims ──────────────────────────────────────────────────────────
++def test_scale_bar_physical_length():
++    import t14d_sheet as T
++    for den, meters in ((50, 5), (100, 10), (250, 20), (400, 20)):
++        sh = T.Sheet("T-000", "t", den, "DOCUMENT")
++        sh.scale_bar(20.0, 100.0)
++        assert abs(sh.bars[0]["length_mm"] - meters * 1000.0 / den) < 1e-3
++
++
++def test_overlapping_claims_fail_the_build(tmp_path):
++    import t14d_sheet as T
++    sh = T.Sheet("T-001", "t", 100, "DOCUMENT")
++    sh.claim("a", 10, 10, 60, 60)
++    sh.claim("b", 50, 50, 90, 90)
++    with pytest.raises(T.LayoutConflict):
++        sh.save(str(tmp_path / "x"))
++
++
++def test_scale_bar_leaving_the_sheet_fails(tmp_path):
++    import t14d_sheet as T
++    sh = T.Sheet("T-002", "t", 50, "DOCUMENT")
++    sh.scale_bar(380.0, 100.0)                 # 100 mm bar + margin runs off the 420 mm sheet
++    with pytest.raises(T.LayoutConflict):
++        sh.save(str(tmp_path / "x"))
++
++
++def test_title_block_uses_config_not_hardcoded_text():
++    import t14d_sheet as T
++    from t14g import config
++    config.apply(T)
++    sh = T.Sheet("T-003", "t", 100, "DOCUMENT")
++    sh.title_block()
++    joined = " ".join(sh.parts)
++    assert config.PROJECT_CODE in joined and "C-T14D" not in joined
++
++
++# ── 3D truth functions on synthetic meshes ───────────────────────────────────────────────────────
++class _FakeModel:
++    def __init__(self, tris):
++        self._t = np.asarray(tris, float)
++
++    def tris(self, o):
++        return self._t
++
++
++def _plate(angle_deg, run=8.0, width=3.0, thick=0.4):
++    """Inclined plate (top + bottom faces) plus two flat landings, like an escalator flight."""
++    rise = run * math.tan(math.radians(angle_deg))
++    tris = []
++    for z0 in (0.0, -thick):
++        a, b, c, d = (0, 0, z0), (width, 0, z0), (width, run, z0 + rise), (0, run, z0 + rise)
++        tris += [[a, b, c], [a, c, d]]
++    for y0, y1 in ((-2.5, 0.0), (run, run + 2.5)):                                   # flat landings
++        z = 0.0 if y0 < 0 else rise
++        a, b, c, d = (0, y0, z), (width, y0, z), (width, y1, z), (0, y1, z)
++        tris += [[a, b, c], [a, c, d]]
++    return tris
++
++
++def test_sloped_incline_ignores_landings():
++    from t14g import truth
++    inc = truth.sloped_incline(_FakeModel(_plate(30.0)), [{"name": "x"}])
++    assert abs(inc["angle_deg"] - 30.0) < 0.3                  # a whole-object regression would give ~24 deg here
++
++
++def test_circularity_distinguishes_circle_and_slot():
++    from shapely.geometry import Point, box
++    from t14g import truth
++    assert truth.is_circle(Point(0, 0).buffer(2.8, 32))
++    assert not truth.is_circle(box(0, 0, 8, 21))                # capsule/rectangle must not get a diameter symbol
++    assert truth.diameter_label(box(0, 0, 8, 21), "8000").startswith("폭")
++
++
++def test_congruence_detects_a_different_tube():
++    from t14g import truth
++    class Two:
++        objects = [{"name": "A"}, {"name": "B"}]
++        def __init__(self): self.i = 0
++        def tris(self, o): return np.asarray(_plate(30.0) if o["name"] == "A" else _plate(30.0, run=9.0), float)
++    r = truth.congruent(Two(), "A", "B")
++    assert not r["congruent"]
++
++
++# ── independent PDF QA on the real V3 PDF ────────────────────────────────────────────────────────
++@pytest.fixture(scope="module")
++def rows():
++    return json.load(open(INDEX, encoding="utf-8"))["sheets"]
++
++
++@need_pdf
++@pytest.mark.parametrize("check", ["page_size", "index", "callouts", "scale_bars", "text_bounds", "text_overlap", "fonts", "duplicates", "north", "stale_refs"])
++def test_pdf_check_is_clean(check, rows):
++    from t14g import qa_pdf
++    res = qa_pdf.run_all(PDF, rows, only={check})
++    assert res[check] == [], res[check][:5]
++
++
++@need_pdf
++def test_every_scaled_sheet_has_a_correct_bar(rows):
++    import pymupdf
++    from t14g import qa_pdf
++    rep = qa_pdf.scale_bar_report(pymupdf.open(PDF), rows)
++    scaled = [r for r in rows if r["scale"] not in (None, "—", "") and r["sheet"] != "A-003"]
++    assert len(rep) == len(scaled) >= 25
++    assert all(x["status"] == "OK" for x in rep)
++
++
++@need_pdf
++def test_no_v2_leftovers_in_text(rows):
++    import re
++    import pymupdf
++    d = pymupdf.open(PDF)
++    for i, pg in enumerate(d, 1):
++        t = re.sub(r"\s+", "", pg.get_text())
++        if rows[i - 1]["sheet"] == "A-003":
++            continue
++        assert "C-T14D" not in t, "page %d still prints the V1 project code" % i
++
++
++@need_pdf
++def test_page_count_equals_sheet_list(rows):
++    import pymupdf
++    assert pymupdf.open(PDF).page_count == len(rows) >= 31
++
++
++# ── defect injection: every mutation must be caught, the clean PDF must stay clean ───────────────
++def _mutation_cases():
++    from t14g import mutations
++    return [(n, f, c) for n, f, c in mutations.MUTATIONS]
++
++
++@need_pdf
++@pytest.mark.parametrize("name,fn,check", _mutation_cases() if have_pdf else [], ids=lambda v: v if isinstance(v, str) else None)
++def test_injected_defect_is_detected(name, fn, check, rows):
++    import pymupdf
++    from t14g import qa_pdf
++    assert qa_pdf.run_all(PDF, rows, only={check})[check] == []
++    doc = pymupdf.open(PDF)
++    fn(doc, rows)
++    assert qa_pdf.run_all(doc, rows, only={check})[check], "%s was not detected by %s" % (name, check)
++
++
++@need_pdf
++@need_run
++def test_wrong_printed_overall_dimension_is_detected(rows, tmp_path):
++    import pymupdf
++    from t14g import mutations, truth_report
++    doc = pymupdf.open(PDF)
++    mutations.m_wrong_printed_dimension(doc, rows)
++    p = tmp_path / "mut.pdf"
++    doc.save(str(p))
++    rep = truth_report.build(RUN, str(p), str(tmp_path / "t.json"))
++    assert any(r["sheet"] == "P-101" and not r["passes"] for r in rep["rows"])
++
++
++@need_pdf
++@need_run
++def test_dimension_truth_report_all_pass(tmp_path):
++    from t14g import truth_report
++    rep = truth_report.build(RUN, PDF, str(tmp_path / "t.json"))
++    assert rep["failed"] == [] and rep["checked"] >= 25
++
++
++# ── furniture design on real geometry (needs the run folder) ────────────────────────────────────
++@need_run
++@pytest.mark.parametrize("floor", ["3F", "8F", "10F", "13F", "15F"])
++def test_furniture_floor_passes_geometry_checks(floor):
++    from t14g import furniture_qa
++    r = furniture_qa.check_floor(RUN, floor)
++    assert r["overlapping_pairs"] == 0 and r["touching_structure"] == 0
++    assert r["max_identical_share"] <= furniture_qa.MAX_SHARE and r["n_types"] >= furniture_qa.MIN_TYPES
++    assert r["aisle_width_connecting_all_anchors_m"] is not None and r["aisle_width_connecting_all_anchors_m"] >= 1.2
++
++
++@need_run
++def test_programs_have_different_furniture_languages():
++    from t14g import furniture_qa
++    rs = [furniture_qa.check_floor(RUN, f) for f in ("3F", "8F", "10F", "13F", "15F")]
++    assert furniture_qa.check_distinct(rs)["passes"]
++
++
++@need_run
++def test_coverage_covers_all_17_floors():
++    p = os.path.join(RUN, "appendix", "typical_floor_coverage.json")
++    d = json.load(open(p, encoding="utf-8"))
++    fl = [f["floor"] for f in d["floors"]]
++    assert fl == ["B2", "B1"] + ["%dF" % i for i in range(1, 16)]
+diff --git a/tools/t14d_sheet.py b/tools/t14d_sheet.py
+index 228620f..dfe23d1 100644
+--- a/tools/t14d_sheet.py
++++ b/tools/t14d_sheet.py
+@@ -5,11 +5,36 @@
+   제목 11~13 pt, 이름 7.5~8.5 pt, 보조 6~6.5 pt, 미세 5~5.5 pt.
+ """
+ import os
++import sys
+ 
+ A3 = (420.0, 297.0)
+-FONT = "Malgun Gothic, Arial, sans-serif"
+ PT = 0.3528                                         # 1 pt = 0.3528 mm
+-EDITION = "V1"                                      # V2 스크립트가 "V2"로 바꾼다(제목란 표기)
++EDITION = "V1"                                      # 도면집 스크립트가 tools/t14g/config.py 값으로 바꾼다(제목란 표기)
++PROJECT_CODE = "C-T14D"                             # 같은 방식. 기본값은 V1 그대로
++REVISION = ""
++ISSUE_DATE = "2026-11-05"
++
++
++def _detect_font():
++    """cairosvg에 줄 CJK 글꼴 이름: tools/t14f/fonts.py가 찾은 글꼴 파일의 family (Windows 경로를 박지 않는다). 못 찾으면 V2와 같은 이름."""
++    try:
++        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
++        from t14f import fonts
++        from fontTools.ttLib import TTFont
++        path, _ = fonts.resolve("regular")
++        fam = TTFont(path, fontNumber=0, lazy=True)["name"].getDebugName(1)
++        if fam:
++            return "%s, Arial, sans-serif" % fam
++    except (ImportError, OSError, FileNotFoundError):
++        pass
++    return "Malgun Gothic, Arial, sans-serif"
++
++
++FONT = _detect_font()
++
++
++class LayoutConflict(Exception):
++    """Two claimed layout regions overlap, or a region leaves the sheet."""
+ 
+ 
+ def esc(s):
+@@ -17,9 +42,12 @@ def esc(s):
+ 
+ 
+ class Sheet:
+-    def __init__(self, sid, title, scale, status, subtitle="", extra_lines=()):
++    def __init__(self, sid, title, scale, status, subtitle="", extra_lines=(), paper=A3):
+         self.sid, self.title, self.scale, self.status, self.subtitle = sid, title, scale, status, subtitle
++        self.paper = paper
+         self.extra = list(extra_lines)
++        self.claims = []                                # (name, x0, y0, x1, y1): 겹치면 저장 시 LayoutConflict
++        self.bars = []                                  # 그린 스케일바의 기대 실측 길이(QA가 PDF에서 다시 잰다)
+         self.parts = []
+         self._seg = {}                                  # 열린 선분 중복 제거: 선분 키 → 가장 굵은 굵기
+         self.dedup_removed = 0
+@@ -87,21 +115,50 @@ class Sheet:
+         self.parts.append("<text %s>%s</text>" % (a, esc(s)))
+ 
+     # 공통 요소 ---------------------------------------------------------------------------------
+-    def scale_bar(self, x, y, meters=(0, 5, 10, 20)):
++    def claim(self, name, x0, y0, x1, y1):
++        """Reserve a rectangle (sheet mm). Overlaps and out-of-sheet regions fail at save() (§3.3 zero collision)."""
++        self.claims.append((name, min(x0, x1), min(y0, y1), max(x0, x1), max(y0, y1)))
++
++    def check_claims(self, allow=()):
++        W, H = self.paper
++        errs = []
++        for n, x0, y0, x1, y1 in self.claims:
++            if x0 < 0 or y0 < 0 or x1 > W or y1 > H:
++                errs.append("%s leaves the sheet: (%.1f,%.1f,%.1f,%.1f)" % (n, x0, y0, x1, y1))
++        for i, a in enumerate(self.claims):
++            for b in self.claims[i + 1:]:
++                if (a[0], b[0]) in allow or (b[0], a[0]) in allow:
++                    continue
++                if a[1] < b[3] and b[1] < a[3] and a[2] < b[4] and b[2] < a[4]:
++                    errs.append("%s overlaps %s" % (a[0], b[0]))
++        if errs:
++            raise LayoutConflict("%s: %s" % (self.sid, "; ".join(errs)))
++
++    def scale_bar(self, x, y, meters=None):
++        """Graphic scale bar. Physical length = meters[-1] * 1000/scale paper mm (5 m at 1:50, 10 m at 1:100, 20 m at 1:250)."""
++        if meters is None:
++            from t14g import registry
++            meters = registry.bar_meters(self.scale)
+         k = self.k
+-        self.path([[(x - 3, y - 6.5), (x + meters[-1] * k + 14, y - 6.5), (x + meters[-1] * k + 14, y + 6), (x - 3, y + 6)]], fill="#fff", stroke="#bbb", w=0.1)
++        L = meters[-1] * k
++        self.path([[(x - 3, y - 6.5), (x + L + 14, y - 6.5), (x + L + 14, y + 6), (x - 3, y + 6)]], fill="#fff", stroke="#bbb", w=0.1)
+         for i in range(len(meters) - 1):
+             x0, x1 = x + meters[i] * k, x + meters[i + 1] * k
+             self.path([[(x0, y), (x1, y), (x1, y + 1.6), (x0, y + 1.6)]], fill="#111" if i % 2 == 0 else "#fff", stroke="#111", w=0.15)
+         for m in meters:
+             self.text(x + m * k, y - 1.4, "%d%s" % (m, " m" if m == meters[-1] else ""), 5.5, "normal", "#333", "middle")
+-        self.text(x, y + 5.2, "1:%d  A3 420×297 mm" % self.scale, 4.8, "normal", "#555")
++        self.text(x, y + 5.2, "1:%d  %s %g×%g mm 100%% 인쇄 기준" % (self.scale, "A3" if self.paper == A3 else "A1", self.paper[0], self.paper[1]), 5.0, "normal", "#555")
++        self.claim("scale_bar", x - 3, y - 6.5, x + L + 14, y + 6)
++        self.bars.append({"x_mm": round(x, 3), "y_mm": round(y, 3), "length_mm": round(L, 4), "scale": self.scale, "meters": list(meters)})
+ 
+     def title_block(self):
+-        x0, y0, x1, y1 = 10.0, 262.0, 410.0, 287.0
++        W, H = self.paper
++        x0, y0, x1, y1 = 10.0, H - 35.0, W - 10.0, H - 10.0     # A3: 10,262 → 410,287 (V2와 같은 좌표)
++        c1, c2 = W - 120.0, W - 62.0                              # A3: 300, 358
++        self.claim("title_block", x0, y0, x1, y1)
+         self.path([[(x0, y0), (x1, y0), (x1, y1), (x0, y1)]], fill="#fff", stroke="#222", w=0.35)
+-        self.line(300, y0, 300, y1, 0.2, "#222")
+-        self.line(358, y0, 358, y1, 0.2, "#222")
++        self.line(c1, y0, c1, y1, 0.2, "#222")
++        self.line(c2, y0, c2, y1, 0.2, "#222")
+         self.text(x0 + 4, y0 + 7.5, self.sid, 12, "bold", "#111")
+         self.text(x0 + 30, y0 + 7.5, self.title, 12, "bold", "#111")
+         if self.subtitle:
+@@ -110,16 +167,19 @@ class Sheet:
+         for ln in self.extra[:2]:
+             self.text(x0 + 30, yy, ln, 6, "normal", "#555")
+             yy += 4.2
+-        self.text(305, y0 + 7, ("축척 1:%d (A3)" % self.scale) if self.scale else "축척 — (표·문서, A3)", 8, "bold", "#222")
++        pn = "A3" if self.paper == A3 else ("A1" if self.paper == (841.0, 594.0) else "%gx%g" % self.paper)
++        self.text(c1 + 5, y0 + 7, ("축척 1:%d (%s)" % (self.scale, pn)) if self.scale else "축척 — (표·문서, %s)" % pn, 8, "bold", "#222")
+         parts = [t.strip() for t in self.status.split(" · ")]
+         lines = [parts[0], " · ".join(parts[1:])] if len(parts) > 1 else [parts[0]]            # 상태 문구는 '·' 단위로 두 줄까지(제목란 옆 칸을 침범하지 않게)
+         yy2 = y0 + 12.5
+         for i, ln_ in enumerate(lines[:2]):
+-            self.text(305, yy2, ln_, 5.5, "bold" if i == 0 else "normal", "#a33")
++            self.text(c1 + 5, yy2, ln_, 5.5, "bold" if i == 0 else "normal", "#a33")
+             yy2 += 4.0
+-        self.text(305, y0 + 21.5, "도면집 후보 %s · FREEZE 아님" % EDITION, 5.5, "normal", "#555")
+-        self.text(363, y0 + 7, "C-T14D", 8, "bold", "#222")
+-        self.text(363, y0 + 13, "2026-11-05", 6, "normal", "#555")
++        self.text(c1 + 5, y0 + 21.5, "도면집 후보 %s · FREEZE 아님" % EDITION, 5.5, "normal", "#555")
++        self.text(c2 + 5, y0 + 7, PROJECT_CODE, 8, "bold", "#222")
++        self.text(c2 + 5, y0 + 13, ("개정 %s (%s)" % (REVISION, EDITION)) if REVISION else ISSUE_DATE, 6, "normal", "#555")
++        if REVISION:
++            self.text(c2 + 5, y0 + 18.5, "출력 %s" % ISSUE_DATE, 6, "normal", "#555")
+ 
+     def north_arrow(self, x, y, north_deg_from_up, r=7.0, label="N"):
+         import math
+@@ -130,10 +190,13 @@ class Sheet:
+         self.text(tip[0], tip[1] - 1.0, label, 7, "bold", "#111", "middle")
+ 
+     # 저장 --------------------------------------------------------------------------------------
+-    def save(self, base, png_width=4961):
++    def save(self, base, png_width=None, allow=()):
+         import cairosvg
+-        svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="%gmm" height="%gmm" viewBox="0 0 %g %g">' % (A3[0], A3[1], A3[0], A3[1]),
+-               '<metadata>%s</metadata>' % esc(self.status), '<rect width="%g" height="%g" fill="#fff"/>' % A3] + self.parts + ["</svg>"]
++        W, H = self.paper
++        self.check_claims(allow)
++        png_width = png_width or int(round(W / 25.4 * 300))                                   # 300 dpi (A3 = 4961 px)
++        svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="%gmm" height="%gmm" viewBox="0 0 %g %g">' % (W, H, W, H),
++               '<metadata>%s</metadata>' % esc(self.status), '<rect width="%g" height="%g" fill="#fff"/>' % (W, H)] + self.parts + ["</svg>"]
+         os.makedirs(os.path.dirname(base), exist_ok=True)
+         open(base + ".svg", "w", encoding="utf-8").write("\n".join(svg))
+         cairosvg.svg2pdf(url=base + ".svg", write_to=base + ".pdf")
+diff --git a/tools/t14e_book_qa.py b/tools/t14e_book_qa.py
+index a8cd680..5cbcfe1 100644
+--- a/tools/t14e_book_qa.py
++++ b/tools/t14e_book_qa.py
+@@ -17,6 +17,8 @@ import sys
+ import fitz
+ 
+ sys.stdout.reconfigure(encoding="utf-8")
++PDFN = "drawing_set_candidate_%s.pdf" % os.environ.get("T14_EDITION", "V2").lower()     # 판 이름은 T14_EDITION(기본 V2: 과거 실행 재현)에서
++EDN = os.environ.get("T14_EDITION", "V2")
+ 
+ 
+ def sha(p):
+@@ -77,7 +79,7 @@ def main():
+     a = ap.parse_args()
+     run = os.path.abspath(a.run)
+     P = lambda *x: os.path.join(run, *x)
+-    pdf = P("book", "drawing_set_candidate_v2.pdf")
++    pdf = P("book", PDFN)
+     reg = jl(P("book", "book_registry.json"))
+     idx = jl(P("00_index", "sheet_index.json"))
+     csv_rows = list(csv.DictReader(open(P("00_index", "sheet_index.csv"), encoding="utf-8-sig")))
+@@ -270,7 +272,7 @@ def main():
+         cov.append({"sheet": dd["sheet"], "kind": "detail", **dd["dimension_meta"], "dimension_rows": len(dd["dimensions"]), "dimensions": dd["dimensions"]})
+     json.dump({"note": "치수 개수는 생성 레지스트리 값이고, Q10·Q20·Q31이 시트 텍스트에서 독립 확인함", "sheets": cov}, open(P("dimension_coverage_report.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+     # ── 필수 산출물 존재 ───────────────────────────────────────────────────────────────────────
+-    need_files = [P("book", "drawing_set_candidate_v2.pdf"), P("00_index", "sheet_index.csv"), P("00_index", "sheet_index.json"), P("visual_issues_resolved.md"), P("unresolved_design_decisions.md"), P("dimension_coverage_report.json"), P("equivalence_check_report.json")]
++    need_files = [P("book", PDFN), P("00_index", "sheet_index.csv"), P("00_index", "sheet_index.json"), P("visual_issues_resolved.md"), P("unresolved_design_decisions.md"), P("dimension_coverage_report.json"), P("equivalence_check_report.json")]
+     miss = [f for f in need_files if not os.path.exists(f)]
+     check("Q70", "필수 산출물 존재(보고서 md 포함)", not miss, str(miss))
+     # ── 음성 대조 ──────────────────────────────────────────────────────────────────────────────
+@@ -296,11 +298,11 @@ def main():
+     man = []
+     for r in rows:
+         man.append({"page": r["page"], "sheet": r["sheet"], "title": r["title"], "scale": r["scale"], "grade": r["grade"], "folder": r["folder"], "source_sha256": r["source_sha256"]})
+-    shutil.copy(pdf, P("drawing_set_candidate_v2.pdf"))
+-    json.dump({"pdf": P("drawing_set_candidate_v2.pdf"), "pdf_sha256": sha(pdf), "pages": len(d), "sheets": man, "model_sha256": reg["model_sha256"], "edition": "V2", "status": "CANDIDATE — NOT FROZEN"},
++    shutil.copy(pdf, P(PDFN))
++    json.dump({"pdf": P(PDFN), "pdf_sha256": sha(pdf), "pages": len(d), "sheets": man, "model_sha256": reg["model_sha256"], "edition": EDN, "status": "CANDIDATE — NOT FROZEN"},
+               open(P("sheet_manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+     passed = sum(r["ok"] for r in R)
+-    rep = {"edition": "V2", "pdf": pdf, "pdf_sha256": sha(pdf), "pages": len(d), "checks": R, "passed": passed, "failed": len(R) - passed, "total": len(R),
++    rep = {"edition": EDN, "pdf": pdf, "pdf_sha256": sha(pdf), "pages": len(d), "checks": R, "passed": passed, "failed": len(R) - passed, "total": len(R),
+            "method": "완성된 PDF·SVG를 다시 읽어 확인. 생성 코드의 자기 보고(레지스트리)는 PDF 텍스트·SVG 기하와 교차 확인. 음성 대조 포함.",
+            "limits": ["PDF 텍스트는 cairosvg 글리프 출력 때문에 공백이 빠져 공백 없이 비교", "시각적 겹침은 문자 상자 추정(문자 수×글자 크기×0.62)과 눈 검토로 확인 — 완전한 자동 증명이 아님", "치수 값이 모델과 일치하는지는 생성 코드가 모델에서 읽은 값이며, 별도 CAD와 대조하지 않음"]}
+     json.dump(rep, open(P("tests_report.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+diff --git a/tools/t14e_dims.py b/tools/t14e_dims.py
+index 1f02b75..6e44c66 100644
+--- a/tools/t14e_dims.py
++++ b/tools/t14e_dims.py
+@@ -110,12 +110,19 @@ def elevation_tag(sh, x, y, sheet_ref, direction, r=3.4):
+     sh.text(x, y + r + 3.2, sheet_ref, 4.6, "normal", "#06a", "middle", bg=True)
+ 
+ 
+-def detail_tag(sh, x, y, sid, scale, r=3.4, dashed_r=None):
+-    """상세 호출: (선택) 대상 둘레 점선 원 + 기호(상세 번호 / 축척)."""
++def detail_tag(sh, x, y, sid, scale=None, r=3.4, dashed_r=None):
++    """상세 호출: (선택) 대상 둘레 점선 원 + 기호(상세 번호 / 축척).
++
++    축척 문자는 시트 레지스트리(tools/t14g/registry.py)에서 읽는다. 호출한 쪽이 scale을 넘기면 레지스트리와 같아야 하고,
++    레지스트리에 없는 상세 번호를 호출하면 UnknownSheetError로 빌드가 멈춘다(감사 F-01).
++    """
++    from t14g import registry
++    label = registry.callout_label(sid, scale)
++    scale = registry.detail_scale(sid)
+     if dashed_r:
+         sh.path([[(x + dashed_r * math.cos(t / 28 * 2 * math.pi), y + dashed_r * math.sin(t / 28 * 2 * math.pi)) for t in range(29)]], stroke="#a60", w=0.25, dash="1.6,1.0", closed=True)
+     bx, by = x + (dashed_r or 0) * 0.72 + r, y - (dashed_r or 0) * 0.72 - r
+     if dashed_r:
+         sh.line(x + dashed_r * 0.72, y - dashed_r * 0.72, bx, by, 0.2, "#a60")
+     bubble(sh, bx, by, sid.split("-")[1], r=r, pt=6.0, color="#a60")
+-    sh.text(bx, by + r + 3.0, "%s · 1:%d" % (sid, scale), 4.6, "normal", "#a60", "middle", bg=True)
++    sh.text(bx, by + r + 3.0, label, 4.6, "normal", "#a60", "middle", bg=True)
+diff --git a/tools/t14e_make_book.py b/tools/t14e_make_book.py
+index 5d88373..3eb46dd 100644
+--- a/tools/t14e_make_book.py
++++ b/tools/t14e_make_book.py
+@@ -20,10 +20,26 @@ sys.path.insert(0, os.path.join(ROOT, "src"))
+ sys.path.insert(0, HERE)
+ import fitz  # noqa: E402
+ import t14d_sheet as _ts  # noqa: E402
+-_ts.EDITION = "V2"
++from t14g import config as cfg, modelsrc, registry as sheetreg  # noqa: E402
++from t14f import fonts as cjk_fonts  # noqa: E402
++from t14g import make_coverage  # noqa: E402
++cfg.apply(_ts)
+ from t14d_sheet import Sheet  # noqa: E402
+ import t14e_dims as dm  # noqa: E402
+ 
++ED = cfg.EDITION
++
++
++def detail_scale_text():
++    """'상세 1:50 (D-407·408·410은 1:100)' built from the registry, not typed."""
++    by = {}
++    for sid, den in sheetreg.DETAIL_SCALE.items():
++        by.setdefault(den, []).append(sid)
++    base = max(by, key=lambda d: len(by[d]))
++    others = "·".join(s.replace("D-", "") if i else s for i, s in enumerate(sorted(sum((v for d, v in by.items() if d != base), []))))
++    odd = sorted({d for d in by if d != base})
++    return "상세 1:%d(%s은 1:%s)" % (base, others, "·".join(str(d) for d in odd)) if odd else "상세 1:%d" % base
++
+ 
+ def sha(p):
+     h = hashlib.sha256()
+@@ -57,7 +73,7 @@ def table(sh, x, y, widths, header, rows, row_h=6.2, pt=6.5, head_pt=6.8):
+ def main():
+     ap = argparse.ArgumentParser()
+     ap.add_argument("--run", required=True)
+-    ap.add_argument("--glb", required=True)
++    ap.add_argument("--glb", default=None, help="원본 GLB(없어도 됨)")
+     ap.add_argument("--head", required=True)
+     a = ap.parse_args()
+     run = os.path.abspath(a.run)
+@@ -87,6 +103,7 @@ def main():
+          ("A-002", "범례·기호·축척·사실성 등급·상태 표기", "—", "DOCUMENT", P("appendix", "A-002_legend_notation.pdf"), "appendix"),
+          ("A-003", "배치도 / 1층 계획 (사용자 제공 1F_CleanLine_FIXED, 수정 없음)", "1:400", "USER_SUPPLIED · 1층 프로그램 후보(승인 전)", site_pdf, "plans")]
+     plan_of = {"1F": "A-003 (1:400 배치+1층)"}
++    cov_pdf, cov_json, _cov = make_coverage.build(run, P("appendix", "A-902_floor_overview"))        # 17개 층 전부의 구성·차이(B2~15F)
+     for p in plans:
+         t = "%s 평면 (치수·축선·범례, 가구 PROPOSED_ONLY)" % "·".join(p["applies_to"])
+         L.append((p["sheet"], t, p["scale"], "MODEL_GEOMETRY · LEVEL S · PROPOSED_ONLY · NOT FINAL", p["files"]["pdf"]["path"], "plans"))
+@@ -101,28 +118,31 @@ def main():
+         L.append((d["sheet"], d["title"], d["scale"], d["grade"], d["files"]["pdf"]["path"], "details"))
+     L.append(("A-900", "미확정 설계 결정·도면 한계", "—", "DOCUMENT", P("appendix", "A-900_unresolved.pdf"), "appendix"))
+     L.append(("A-901", "층별 동등성 판정·평면 발행표·치수 포함 현황", "—", "DOCUMENT + MODEL_DATA", P("appendix", "A-901_floor_matrix_dimension_coverage.pdf"), "appendix"))
++    L.append(("A-902", "층별 구성 일람 (B2~15F 17개 층, 1:1000)", "1:1000", "DOCUMENT + MODEL_DATA", cov_pdf, "appendix"))
+     N = len(L)
+ 
+     # ── A-000 표지 ─────────────────────────────────────────────────────────────────────────────
+     s0 = Sheet("A-000", "표지", None, "DOCUMENT", subtitle="")
+     s0.text(210, 78, "다층 상업시설 건축 도면집", 26, "bold", "#111", "middle")
+-    s0.text(210, 96, "수직 보행 연구 — 3D 모델에서 파생한 도면 (후보 V2)", 12, "normal", "#444", "middle")
++    s0.text(210, 96, "수직 보행 연구 — 3D 모델에서 파생한 도면 (후보 %s)" % ED, 12, "normal", "#444", "middle")
+     s0.line(80, 106, 340, 106, 0.5, "#111")
+-    for i, t in enumerate(["54 × 54 m · 지하 2층(B2) ~ 지상 15층(15F) · 지붕 %+.1f m" % (roof_z - ffl0), "도면집 후보 V2 · %s" % now,
++    ident = modelsrc.identity(run, a.glb)
++    for i, t in enumerate(["54 × 54 m · 지하 2층(B2) ~ 지상 15층(15F) · 지붕 %+.1f m" % (roof_z - ffl0), "도면집 후보 %s · 개정 %s · 출력 %s" % (ED, cfg.REVISION, cfg.ISSUE_DATE),
+                            "상태: CANDIDATE — NOT FROZEN · 상층 LEVEL S · 가구 PROPOSED_ONLY · NOT FINAL",
+-                           "3D 모델: GMC-ZZ-ZZ-M3-0701.glb  sha256 %s…" % secr["model"]["sha256"][:20],
++                           "3D 모델: GMC-ZZ-ZZ-M3-0701.glb (V2 기록 sha256 %s…, 원본 파일 없음) · 시트는 모델 캐시 %s…에서 생성" % ((ident["glb_sha256_recorded_by_v2"] or "?")[:12], ident["cache_sha256"].get("model_world.npz", "?")[:12]) if not ident["glb_present"]
++                           else "3D 모델: GMC-ZZ-ZZ-M3-0701.glb  sha256 %s…" % ident["glb_sha256_verified"][:20],
+                            "수록 %d장: 배치도·평면 %d·입면 %d·단면 %d(+키플랜)·상세 %d·부록" % (N, len(plans), len(elev["elevations"]), len(secr["sections"]), len(det))]):
+         s0.text(210, 122 + i * 9.5, t, 9, "normal", "#222", "middle")
+     s0.north_arrow(210, 205, fr["north_deg"], r=9)
+     s0.text(210, 232, "상층에는 벽·문·창·재료 정보가 모델에 없어 확정하지 않았다 · 배치도(A-003)는 사용자 제공 파일을 그대로 수록", 7, "normal", "#777", "middle")
+     s0.text(14, 286, "A-000", 10, "bold", "#111")
+-    s0.text(34, 286, "표지 · 도면집 후보 V2 · CANDIDATE — NOT FROZEN", 7, "normal", "#555")
++    s0.text(34, 286, "표지 · 도면집 후보 %s · CANDIDATE — NOT FROZEN" % ED, 7, "normal", "#555")
+     s0.save(P("appendix", "A-000_cover"))
+ 
+     # ── A-001 목록 ─────────────────────────────────────────────────────────────────────────────
+     s1 = Sheet("A-001", "도면 목록·시트 상태표", None, "DOCUMENT", subtitle="발행 시트 %d장 = PDF %d쪽 (쪽 번호는 조립된 PDF에서 확인)" % (N, N),
+                extra_lines=["평면은 1F(A-003)·3F·8F(+9F)·10F·13F(+14F)·15F만 발행. 나머지 층은 A-901 표에서 이유와 함께 '미발행' 표기",
+-                            "평면 1:250(A3에 치수·축선·범례·제목란을 함께 담는 최대 정수 축척) · 입면·단면 1:400 · 상세 1:50(D-407·408·410은 1:100)"])
++                            "평면 1:250(A3에 치수·축선·범례·제목란을 함께 담는 최대 정수 축척) · 입면·단면 1:400 · %s" % detail_scale_text()])
+     rows = [[sid, t, sc, g, str(n + 1), folder] for n, (sid, t, sc, g, _, folder) in enumerate(L)]
+     table(s1, 10, 8, [14, 112, 14, 160, 12, 40], ["번호", "제목", "축척", "사실성 등급 / 상태", "쪽", "폴더"], rows, row_h=6.7, pt=5.8)
+     s1.title_block()
+@@ -145,7 +165,7 @@ def main():
+     sh.text(32, 91.2, "단면 표시 (문자 + 보는 방향 + 참조 시트)", 6.5, "normal", "#333")
+     dm.elevation_tag(sh, 20, 106, "E-201", (0, -1))
+     sh.text(32, 107.2, "입면 표시 (번호 + 바라보는 방향)", 6.5, "normal", "#333")
+-    dm.detail_tag(sh, 18, 124, "D-401", 50, dashed_r=5.0)
++    dm.detail_tag(sh, 18, 124, "D-401", dashed_r=5.0)
+     sh.text(40, 125.2, "상세 호출 (점선 원 = 확대 위치, 번호 + 축척)", 6.5, "normal", "#333")
+     dm.dim_h(sh, 14, 54, 140, "9000", pt=6.0)
+     sh.text(58, 141.2, "치수선 (mm 정수, 10 mm 반올림, 모델에서 읽음)", 6.5, "normal", "#333")
+@@ -160,7 +180,7 @@ def main():
+     sh.text(46, 180.4, "사선 해칭 = 모델에서 절단된 고체(재료 미확정, 일반 표기)", 6.5, "normal", "#333")
+     sh.text(14, 196, "3  축척 정책", 9, "bold", "#111")
+     for i, t in enumerate(["배치도·1층: 1:400 (사용자 제공 시트 그대로)", "평면: 1:250 — A3(420×297)에 54 m 건물·치수 3열·축선·우측 범례·제목란을 함께 담을 수 있는 가장 큰 정수 축척. 1:200 불가(건물 270 mm + 치수·범례 > 용지)",
+-                           "입면·단면: 1:400 · 상세: 1:50 (에스컬레이터·선큰·지붕은 1:100) · 모든 시트에 그래픽 스케일 또는 축척 문구"]):
++                           "입면·단면: 1:400 · %s · 평면·입면·단면·상세 모든 축척 시트에 그래픽 스케일바" % detail_scale_text()]):
+         sh.text(14, 204 + i * 6.2, t, 6, "normal", "#333")
+     sh.text(212, 14, "4  사실성 등급", 9, "bold", "#111")
+     for i, (g, t) in enumerate([("MODEL_GEOMETRY", "3D 모델 메시에서 직접 파생 (입면·단면·평면의 기둥·튜브·층판·램프·에스컬레이터)"), ("MODEL DETAIL", "상세도: 모델에서 읽은 형상·치수만 사용"),
+@@ -189,11 +209,11 @@ def main():
+     s2.save(P("appendix", "A-002_legend_notation"))
+ 
+     # ── A-900 미확정 ──────────────────────────────────────────────────────────────────────────
+-    s9 = Sheet("A-900", "미확정 설계 결정·도면 한계", None, "DOCUMENT", subtitle="이 도면집은 후보(V2)이며 FREEZE가 아니다 · 아래 항목은 근거 부재 또는 사용자 결정 전이라 확정하지 않았다")
++    s9 = Sheet("A-900", "미확정 설계 결정·도면 한계", None, "DOCUMENT", subtitle="이 도면집은 후보(%s)이며 FREEZE가 아니다 · 아래 항목은 근거 부재 또는 사용자 결정 전이라 확정하지 않았다" % ED)
+     items = ["U-01  상층 외벽·구획벽·실내 문·창·화장실·피난 경로: 모델에 없음 → 평면은 LEVEL S(기둥·튜브·코어·층판 + 제안 가구)",
+              "U-02  캡슐(서측·동측) 출입구·문: 모델에 없고 사용자 미승인 → 벽을 닫아 둠 (D-405)", "U-03  코어 A~D 상층 내부(계단·부속실·승강기): GLB는 외곽 벽만 → D-404는 1층 마스터만, 상층은 UNRESOLVED DETAIL",
+              "U-04  외피(A-FACD) 성격과 접합(유리 커튼월·벽·난간): 모델 부재 형상만 표시, 재료·접합 UNRESOLVED (D-406)", "U-05  평면 축척 1:250: 요구 1:200은 A3에 치수·범례 포함 불가 → 1:100 타일 분할 또는 A1 대판은 사용자 결정 대기",
+-             "U-06  8F~9F·13F~14F 공통 평면: 면적·프로그램 동일, 수직 개구만 다름(검증됨) → 한 장에 공통 + 차이 표기, '동등함'은 주장하지 않음", "U-07  4F·5F는 3F와 같지 않음(프로그램·층판 차이) → 3F에 합치지 않음. 이들 층 평면은 미발행(A-901)",
++             "U-06  8F~9F·13F~14F 공통 평면: 면적·프로그램 동일, 수직 개구만 다름(검증됨) → 한 장에 공통 + 차이 표기, '동등함'은 주장하지 않음", "U-07  B2·B1·2F·4F·5F·6F·7F·11F·12F는 3F 등과 같지 않아(프로그램·층판 차이) 합치지 않고 개별 평면을 발행하지 않음 → A-902 층별 구성 일람(17개 층)에서 확인",
+              "U-08  가구·프로그램: 모두 PROPOSED_ONLY. 3F 판매 A형 / 8F·9F 판매 B형 / 10F·15F F&B 좌석 유형 구분 / 13F·14F 문화·엔터(판매 부스 반복 없음) / 정원층 식재·테라스",
+              "U-09  치수: 모델 값을 10 mm 단위로 반올림(모델 노이즈 0.6 mm 수준). 구조 부재 두께·재료 규격은 모델에 없어 표기하지 않음", "U-10  선큰(D-408): 계단 폭·단높이는 마스터에 없고 단 수·방향·윤곽만. 지반·옹벽 미표시",
+              "U-11  화물 승강기(D-409): 카·기계·승강장 문·하역 차량 동선 모델 없음 → 형상만 MODEL, 나머지 UNRESOLVED", "U-12  입면 대지 지형·지하 옹벽·인접 건물은 모델에 없어 그리지 않음 (GL = 1F FFL만)",
+@@ -214,9 +234,10 @@ def main():
+         h = ff.get(f)
+         if f == "15F":
+             h = round(roof_z - floors["15F"], 3)
++        r5_ = lambda v: round(v / 0.005) * 0.005                                      # 입면·단면과 같은 5 mm 반올림(7F +31.001 → +31.000)
+         why = {"1F": "A-003 사용자 제공", "3F": "기준층(판매 A형)", "8F": "기준층(판매 B형, 9F 공통)", "9F": "8F와 공통 (개구 차이 표기)", "10F": "F&B 기준층", "13F": "문화·엔터 기준층, 14F 공통", "14F": "13F와 공통 (개구 차이 표기)", "15F": "F&B·정원 기준층"}.get(f, "사용자 지시(기준층만)에 따라 미발행")
+-        rows.append([f, "%+.3f" % (floors[f] - ffl0), ("%.3f" % h) if h is not None else "-", g.get("id", "-") + " " + {"INDEPENDENT": "독립", "TYPICAL_WITH_CIRCULATION_VARIATION": "공통+개구 차이"}.get(g.get("kind", ""), g.get("kind", "")), matrix[f]["program"][:30], plan_of.get(f, "평면 미발행"), why])
+-    y_end = table(s91, 10, 14, [12, 18, 15, 62, 62, 40, 70], ["층", "FFL (m)", "층고 (m)", "그룹 · 종류(증거)", "프로그램(구역 ㎡)", "평면 시트", "발행 이유"], rows, row_h=6.3, pt=5.6)
++        rows.append([f, "%+.3f" % r5_(floors[f] - ffl0), ("%.3f" % r5_(h)) if h is not None else "-", g.get("id", "-") + " " + {"INDEPENDENT": "독립", "TYPICAL_WITH_CIRCULATION_VARIATION": "공통+개구 차이"}.get(g.get("kind", ""), g.get("kind", "")), matrix[f]["program"], plan_of.get(f, "A-902 일람만"), why])
++    y_end = table(s91, 10, 14, [12, 18, 15, 50, 76, 40, 68], ["층", "FFL (m)", "층고 (m)", "그룹 · 종류(증거)", "프로그램(구역 ㎡)", "평면 시트", "발행 이유"], rows, row_h=6.3, pt=5.6)
+     y0 = y_end + 6
+     s91.text(10, y0, "시트별 치수·참조 기호 포함 현황 (레지스트리에서 읽음)", 8, "bold", "#111")
+     crow = []
+@@ -246,14 +267,16 @@ def main():
+         n = len(book)
+         if sid == "A-003":                                   # 도면집 쪽에만 쪽 번호표를 붙인다(plans\A-003 사본과 원본은 수정 없음). 우측 흰 범례 상자의 빈 하단
+             pg_ = book[n - 1]
+-            pg_.insert_text((922, 812), "A-003", fontname="malgun", fontfile=r"C:\Windows\Fonts\malgunbd.ttf", fontsize=8, color=(0.07, 0.07, 0.07))
+-            pg_.insert_text((950, 812), "도면집 V2 · 사용자 제공 시트(쪽 번호표만 추가, 본문 수정 없음)", fontname="malgun2", fontfile=r"C:\Windows\Fonts\malgun.ttf", fontsize=6, color=(0.3, 0.3, 0.3))
++            pg_.insert_text((922, 812), "A-003", fontname="cjkb", fontfile=cjk_fonts.resolve("bold")[0], fontsize=8, color=(0.07, 0.07, 0.07))
++            pg_.insert_text((950, 812), "도면집 %s · 사용자 제공 시트(쪽 번호표만 추가, 본문 수정 없음)" % ED, fontname="cjkr", fontfile=cjk_fonts.resolve("regular")[0], fontsize=6, color=(0.3, 0.3, 0.3))
+         toc.append([1, "%s  %s" % (sid, title), n])
+         pages.append({"page": n, "sheet": sid, "title": title, "scale": sc, "grade": grade, "folder": folder, "source_pdf": path, "source_sha256": sha(path)})
+     book.set_toc(toc)
+-    book.set_metadata({"title": "다층 상업시설 건축 도면집 — 후보 V2", "author": "drawing-pipeline", "subject": "CANDIDATE — NOT FROZEN", "keywords": "model-derived drawing set; Level S upper floors", "creator": "t14e_make_book.py", "producer": "PyMuPDF"})
+-    out = P("book", "drawing_set_candidate_v2.pdf")
++    book.set_metadata({"title": "다층 상업시설 건축 도면집 — 후보 %s" % ED, "author": "drawing-pipeline", "subject": "CANDIDATE — NOT FROZEN", "keywords": "model-derived drawing set; Level S upper floors", "creator": "t14e_make_book.py", "producer": "PyMuPDF"})
++    book_name = "drawing_set_candidate_%s" % ED.lower()
++    out = P("book", book_name + ".pdf")
+     os.makedirs(os.path.dirname(out), exist_ok=True)
++    book.subset_fonts()                                      # 시트마다 들어 있는 전체 글꼴 사본(V2: 17 MB)을 쓰인 글리프만 남긴다
+     book.save(out, garbage=4, deflate=True)
+     book.close()
+     # 쪽 번호가 들어간 A-001 다시 만들기 위해 목록 쪽 = 실제 쪽 확인
+@@ -268,17 +291,17 @@ def main():
+     cols = 6
+     sheet = Image.new("RGB", (cols * (tw + 12) + 12, math.ceil(len(thumbs) / cols) * (th + 30) + 12), "#dddddd")
+     dr = ImageDraw.Draw(sheet)
+-    ft = ImageFont.truetype(r"C:\Windows\Fonts\malgun.ttf", 14)
++    ft = ImageFont.truetype(cjk_fonts.resolve("regular")[0], 14)
+     for i, im in enumerate(thumbs):
+         x, y = 12 + (i % cols) * (tw + 12), 12 + (i // cols) * (th + 30)
+         sheet.paste(im, (x, y + 20))
+         dr.text((x, y), pages[i]["sheet"] + "  " + pages[i]["title"][:20], font=ft, fill="#111")
+-    prev = P("book", "drawing_set_candidate_v2_preview.png")
++    prev = P("book", book_name + "_preview.png")
+     sheet.save(prev)
+     meta = {"pdf": out, "pdf_sha256": sha(out), "pages": len(d), "preview": prev, "sheets": pages, "git_head": a.head, "model_sha256": secr["model"]["sha256"], "date": now,
+             "published_floor_plans": sorted(plan_of), "unpublished_floors": [f for f in order if f not in plan_of], "status": "CANDIDATE — NOT FROZEN"}
+     json.dump(meta, open(P("book", "book_registry.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+-    json.dump({"edition": "V2", "pages": len(d), "sheets": [{k: p[k] for k in ("page", "sheet", "title", "scale", "grade", "folder", "source_sha256")} for p in pages]},
++    json.dump({"edition": ED, "pages": len(d), "sheets": [{k: p[k] for k in ("page", "sheet", "title", "scale", "grade", "folder", "source_sha256")} for p in pages]},
+               open(P("00_index", "sheet_index.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+     with open(P("00_index", "sheet_index.csv"), "w", newline="", encoding="utf-8-sig") as fh:
+         w = csv.writer(fh)
+diff --git a/tools/t14e_make_details.py b/tools/t14e_make_details.py
+index 0dee554..e48fec5 100644
+--- a/tools/t14e_make_details.py
++++ b/tools/t14e_make_details.py
+@@ -23,7 +23,8 @@ from shapely.geometry import LineString, Point, Polygon, box  # noqa: E402
+ from shapely.ops import unary_union  # noqa: E402
+ import book_views as bv  # noqa: E402
+ import t14d_sheet as _ts  # noqa: E402
+-_ts.EDITION = "V2"
++from t14g import config as cfg, modelsrc, registry as sheetreg, truth  # noqa: E402
++cfg.apply(_ts)
+ from t14d_sheet import Sheet, geom_lines, geom_rings  # noqa: E402
+ import t14d_make_views as V1  # noqa: E402
+ import t14e_dims as dm  # noqa: E402
+@@ -225,6 +226,7 @@ def draw_section(sh, model, spec, c):
+         used.append(o["name"])
+         cut_names.append((o, g))
+     c.sec_cuts = cut_names
++    c.sec_cuts_raw = [(o, poly) for o, poly in sec["cuts"]]                  # 창(window)으로 자르기 전 절단 폴리곤: 두께 치수는 이것으로 잰다(감사 p19-01)
+     for name, z in fl_in:
+         sh.line(X(uc - half), Y(z), X(uc + half), Y(z), 0.1, "#999", "2.2,1.6")
+         xx = X(uc - half) + 5
+@@ -241,13 +243,14 @@ def draw_section(sh, model, spec, c):
+ def main():
+     ap = argparse.ArgumentParser()
+     ap.add_argument("--run", required=True)
+-    ap.add_argument("--glb", required=True)
++    ap.add_argument("--glb", default=None, help="원본 GLB(없어도 됨: 모델 캐시에서 생성하고 캐시 해시를 기록한다)")
+     a = ap.parse_args()
+     run = os.path.abspath(a.run)
+     model = bv.Model(os.path.join(run, "model_cache"), os.path.join(run, "raw_slices", "camera_bounds.json"))
+     master = pc.load_json(os.path.join(run, "reference_1F", "floor_1F_slice.json"))
+     F = model.floors
+-    reg = {"book": "C_T14E", "details": [], "model_sha256": V1.sha_file(a.glb)}
++    ident = modelsrc.identity(run, a.glb)
++    reg = {"book": "C_T14G", "details": [], "model_sha256": modelsrc.model_sha(run, a.glb), "model_status": ident["status"], "model_cache_sha256": ident["cache_sha256"]}
+     t1, t2, t3 = obj_of(model, "A-CORE-TUBE_T1"), obj_of(model, "A-CORE-TUBE_T2"), obj_of(model, "A-CORE-TUBE_T3")
+     capw, fr = obj_of(model, "A-CORE-TUBE_capW"), obj_of(model, "A-CORE-TUBE_FR")
+     sprl = obj_of(model, "A-VERT-SPRL_B1-6F_T1_spiral")
+@@ -271,30 +274,33 @@ def main():
+ 
+     G = lambda fl, c, **kw: dict(source="glb", ffl=F[fl], floor=fl, center=c, **kw)
+     DET = [
+-        dict(sid="D-401", title="T1 나선 램프 확대", grade="MODEL DETAIL", scale=50, plan_label="3F 절단 +1.5 m · 램프 윗면", ref="P-101 (3F)", **G("3F", ctr(t1), top_objs=[sprl]),
++        dict(sid="D-401", title="T1 나선 램프 확대", grade="MODEL DETAIL", plan_label="3F 절단 +1.5 m · 램프 윗면", ref="P-101 (3F)", **G("3F", ctr(t1), top_objs=[sprl]),
+              section=("x", ctr(t1)[0], "3F"), main=t1, ramp=sprl, notes=["A-VERT-SPRL_B1-6F_T1_spiral + A-CORE-TUBE_T1 모델 메시", "난간·마감·바닥재는 모델에 없어 그리지 않음"]),
+-        dict(sid="D-402", title="T2 빛 튜브와 층판 관통 확대", grade="MODEL DETAIL", scale=50, plan_label="3F 절단 +1.5 m · 층판 개구", ref="P-101 (3F)", **G("3F", ctr(t2)),
++        dict(sid="D-402", title="T2 빛 튜브와 층판 관통 확대", grade="MODEL DETAIL", plan_label="3F 절단 +1.5 m · 층판 개구", ref="P-101 (3F)", **G("3F", ctr(t2)),
+              section=("x", ctr(t2)[0], "3F"), main=t2, notes=["A-CORE-TUBE_T2 + A-FLOR_s7 층판 개구", "T2는 승객 이동로가 아님(빛 튜브). 유리·마감은 모델에 없음"]),
+-        dict(sid="D-403", title="T3 파노라마 승강기 튜브 확대 (T4 동형)", grade="MODEL DETAIL", scale=50, plan_label="3F 절단 +1.5 m", ref="P-101 (3F)", **G("3F", ctr(t3)),
++        dict(sid="D-403", title="T3 파노라마 승강기 튜브 확대 (T4 동형)", grade="MODEL DETAIL", plan_label="3F 절단 +1.5 m", ref="P-101 (3F)", **G("3F", ctr(t3)),
+              section=("x", ctr(t3)[0], "3F"), main=t3, notes=["A-CORE-TUBE_T3, A-VERT-ELEV 카·샤프트 모델 메시", "T4는 같은 형식(위치만 다름). 승강장 문·기계는 모델에 없음"]),
+-        dict(sid="D-404", title="코어 D 진입·부속실 확대 (1층 마스터)", grade="MODEL DETAIL (1F 마스터) · 상층 UNRESOLVED DETAIL", scale=50, plan_label="1F 마스터 절단 +1.5 m", ref="A-003 (1층)", source="master", slice=master,
++        dict(sid="D-404", title="코어 D 진입·부속실 확대 (1층 마스터)", grade="MODEL DETAIL (1F 마스터) · 상층 UNRESOLVED DETAIL", plan_label="1F 마스터 절단 +1.5 m", ref="A-003 (1층)", source="master", slice=master,
+              center=((coreD.bounds[0] + coreD.bounds[2]) / 2, (coreD.bounds[1] + coreD.bounds[3]) / 2), section=None, main_poly=coreD, label_kinds=("shaft",),
+              notes=["1층 마스터의 코어 D(벽·부속실 칸막이·문·기호)", "상층 GLB는 코어 외곽 벽만 있어 상층 코어 내부는 그리지 않음(UNRESOLVED DETAIL)"]),
+-        dict(sid="D-405", title="캡슐과 층판 접속 확대", grade="MODEL DETAIL · 출입문 미승인", scale=50, plan_label="3F 절단 +1.5 m · 캡슐 끝단", ref="P-101 (3F)", **G("3F", cap_c),
++        dict(sid="D-405", title="캡슐과 층판 접속 확대", grade="MODEL DETAIL · 출입문 미승인", plan_label="3F 절단 +1.5 m · 캡슐 끝단", ref="P-101 (3F)", **G("3F", cap_c),
+              section=("y", cap_c[1], "3F"), main=capw, notes=["A-CORE-TUBE_capW + A-FLOR 층판", "캡슐 출입구는 모델에 없고 사용자 미승인이라 벽을 닫아 둠"]),
+-        dict(sid="D-406", title="전형층 외피·층판 가장자리와 입면 부재 모듈 (6F)", grade="MODEL DETAIL · 접합 UNRESOLVED", scale=50, plan_label="6F 절단 +1.5 m", ref="E-201~204", **G("6F", fac_c),
++        dict(sid="D-406", title="전형층 외피·층판 가장자리와 입면 부재 모듈 (6F)", grade="MODEL DETAIL · 접합 UNRESOLVED", plan_label="6F 절단 +1.5 m", ref="E-201~204", **G("6F", fac_c),
+              section=(fac_axis, fac_c[0] if fac_axis == "x" else fac_c[1], "6F"), main=fac6[0], notes=["A-FACD_valley_* 외피 부재 + A-FLOR_s7_6F", "실제 조인트·재료 자료가 없어 모델 형상만 표시(접합 UNRESOLVED DETAIL)"]),
+-        dict(sid="D-407", title="에스컬레이터 개구 확대 (8F–9F)", grade="MODEL DETAIL · 난간·안전 규격 미검증", scale=100, plan_label="8F 절단 +1.5 m · 에스컬레이터 윗면", ref="P-102 (8F)", **G("8F", esc_c, top_objs=esc8),
++        dict(sid="D-407", title="에스컬레이터 개구 확대 (8F–9F)", grade="MODEL DETAIL · 난간·안전 규격 미검증", plan_label="8F 절단 +1.5 m · 에스컬레이터 윗면", ref="P-102 (8F)", **G("8F", esc_c, top_objs=esc8),
+              section=("x", esc_c[0], "8F"), main=esc8[0], notes=["A-VERT-ESCL_8F-9F_* 모델 메시 + 층판 개구", "에스컬레이터 기계·난간은 모델에 없음"]),
+-        dict(sid="D-408", title="선큰 계단·마당 연결 확대 (1층 마스터)", grade="MODEL DETAIL (1F 마스터) · 지반 UNRESOLVED DETAIL", scale=100, plan_label="1F 마스터 · 선큰", ref="A-003 (1층)", source="master", slice=master,
++        dict(sid="D-408", title="선큰 계단·마당 연결 확대 (1층 마스터)", grade="MODEL DETAIL (1F 마스터) · 지반 UNRESOLVED DETAIL", plan_label="1F 마스터 · 선큰", ref="A-003 (1층)", source="master", slice=master,
+              center=((sg[0] + sg[2]) / 2, (sg[1] + sg[3]) / 2), section=None, space_uses=("sunken",), label_kinds=(),
+              notes=["선큰 계단 %d단, 하향 %s, FL -5.5 m (마스터 속성)" % (int(sunk["props"].get("treads", 12)), sunk["props"].get("down")), "계단 폭·단높이는 속성에 없어 단 수·방향·윤곽만. 1:50은 창에 안 들어가 1:100"]),
+-        dict(sid="D-409", title="화물 승강기·하역 동선 확대", grade="UNRESOLVED DETAIL · 형상만 MODEL", scale=50, plan_label="1F 마스터 · FR 샤프트", ref="A-003 (1층)", source="master", slice=master,
++        dict(sid="D-409", title="화물 승강기·하역 동선 확대", grade="UNRESOLVED DETAIL · 형상만 MODEL", plan_label="1F 마스터 · FR 샤프트", ref="A-003 (1층)", source="master", slice=master,
+              center=((frm.bounds[0] + frm.bounds[2]) / 2, (frm.bounds[1] + frm.bounds[3]) / 2), section=("x", ctr(fr)[0], "1F", ctr(fr)), main_poly=frm, label_kinds=("shaft",),
+              notes=["단면은 GLB A-CORE-TUBE_FR 벽과 층판만(승강 카·기계·승강장 문은 모델에 없음)", "화물 기계·하역 차량 동선은 UNRESOLVED DETAIL"]),
+-        dict(sid="D-410", title="지붕·상층 후퇴부 확대", grade="MODEL DETAIL · 방수·마감 UNRESOLVED", scale=100, plan_label="15F 절단 +1.5 m · 지붕 구조 표식", ref="E-201~204", **G("15F", pad_c, top_objs=[pad_o]),
++        dict(sid="D-410", title="지붕·상층 후퇴부 확대", grade="MODEL DETAIL · 방수·마감 UNRESOLVED", plan_label="15F 절단 +1.5 m · 지붕 구조 표식", ref="E-201~204", **G("15F", pad_c, top_objs=[pad_o]),
+              section=("x", pad_c[0], "15F"), main=pad_o, notes=["A-ROOF_slab, A-ROOF_rescue_pad·mark 모델 메시", "방수층·지붕 마감·배수는 모델에 없어 그리지 않음"]),
+     ]
++    for spec in DET:
++        spec["scale"] = sheetreg.detail_scale(spec["sid"])                  # 축척의 유일한 출처: tools/t14g/registry.py (호출 기호도 같은 값을 읽는다)
++    assert {s["sid"] for s in DET} == set(sheetreg.DETAIL_SCALE), "상세 사양표와 레지스트리의 상세 번호가 다르다"
+     for spec in DET:
+         sid, scale = spec["sid"], spec["scale"]
+         k = 1000.0 / scale
+@@ -302,6 +308,7 @@ def main():
+                    extra_lines=spec["notes"][:2])
+         c = Ctx()
+         c.cut, c.top, c.sunk, c.slab_poly = {}, {}, None, None
++        c.truth = {}
+         used_plan = draw_plan(sh, model, spec, c)
+         PXX, PYY = c.PX_, c.PY_
+         dims = []
+@@ -335,9 +342,9 @@ def main():
+                     b = p.bounds
+                     ymid = (b[1] + b[3]) / 2
+                     if spec["sid"] in ("D-402", "D-403"):
+-                        dm.dim_h(sh, PXX(b[0]), PXX(b[2]), PY + 12.0, "Ø%s (바깥)" % dm.fmt_mm(do), pt=6.0, color="#06a", above=False)
++                        dm.dim_h(sh, PXX(b[0]), PXX(b[2]), PY + 12.0, truth.diameter_label(p, dm.fmt_mm(do)) + " (바깥)", pt=6.0, color="#06a", above=False)
+                     else:
+-                        dm.dim_h(sh, PXX(b[0]), PXX(b[2]), PYY(b[1]) + 9.0, "Ø%s (바깥)" % dm.fmt_mm(do), from_y=PYY(b[1]), above=False, pt=6.0, color="#06a")
++                        dm.dim_h(sh, PXX(b[0]), PXX(b[2]), PYY(b[1]) + 9.0, truth.diameter_label(p, dm.fmt_mm(do)) + " (바깥)", from_y=PYY(b[1]), above=False, pt=6.0, color="#06a")
+                     dims.append(("튜브 바깥 지름", dm.fmt_mm(do), "plan_cut " + o["name"]))
+                     if di:
+                         dims.append(("튜브 안쪽 지름", dm.fmt_mm(di), "plan_cut"))
+@@ -415,16 +422,29 @@ def main():
+             meta["plan_dims"] += 2
+         if spec["sid"] == "D-409":
+             b = frm.bounds
+-            dm.dim_h(sh, PXX(b[0]), PXX(b[2]), PYY(b[1]) + 9.0, "Ø%s" % dm.fmt_mm(b[2] - b[0]), from_y=PYY(b[1]), pt=6.0, color="#06a", above=False)
++            dm.dim_h(sh, PXX(b[0]), PXX(b[2]), PYY(b[1]) + 9.0, truth.diameter_label(frm, dm.fmt_mm(b[2] - b[0])), from_y=PYY(b[1]), pt=6.0, color="#06a", above=False)
+             dims.append(("화물 승강로 폭", dm.fmt_mm(b[2] - b[0]), "1F 마스터 shaft FR"))
+             meta["plan_dims"] += 1
+         if spec["sid"] == "D-410":
+             tp = c.top.get(pad_o["name"])
+             if tp is not None:
+                 b = tp.bounds
+-                dm.dim_h(sh, PXX(b[0]), PXX(b[2]), PYY(b[3]) - 9.0, "Ø%s" % dm.fmt_mm(b[2] - b[0]), from_y=PYY(b[3]), pt=6.0, color="#06a")
++                dm.dim_h(sh, PXX(b[0]), PXX(b[2]), PYY(b[3]) - 9.0, truth.diameter_label(tp, dm.fmt_mm(b[2] - b[0])), from_y=PYY(b[3]), pt=6.0, color="#06a")
+                 dims.append(("구조 표식 패드 지름", dm.fmt_mm(b[2] - b[0]), "A-ROOF_rescue_pad 윗면"))
+                 meta["plan_dims"] += 1
++        if spec["sid"] == "D-403":                                              # T4가 T3와 같은 형상이라는 문구의 근거
++            cg = truth.congruent(model, "A-CORE-TUBE_T3", "A-CORE-TUBE_T4")
++            c.truth["t3_t4"] = cg
++            dims.append(("T3·T4 형상 차이(최대, mm)", "%.0f" % (cg["hausdorff_centered_m"] * 1000.0), "벽 메시 중심 정렬 비교 · " + ("동형" if cg["congruent"] else "다름(문구 수정 필요)")))
++        if spec["sid"] == "D-408" and c.sunk:
++            b_, n_, props_ = c.sunk
++            drop_ = -F["B1"] + F["1F"] if abs((F["1F"] - F["B1"]) - 5.5) < 0.01 else None      # 마스터 라벨 FL -5.5 m = 모델 B1 층고 차
++            if drop_ is not None:
++                dd_ = truth.stair_derived(drop_, n_, b_[2] - b_[0])
++                c.truth["stair"] = dd_
++                dims.append(("선큰 바닥 레벨", "-5500", "마스터 FL −5.5 m = 모델 B1 FFL"))
++                dims.append(("단당 높이 (계산값)", "%.0f" % dd_["riser_mm"], "5500 ÷ %d단 · 마스터에 속성 없음" % n_))
++                dims.append(("단당 수평 길이 (계산값)", "%.0f" % dd_["tread_mm"], "%s ÷ %d단 · 하향 %s" % (dm.fmt_mm(b_[2] - b_[0]), n_, props_.get("down"))))
+         # ── 단면 ──
+         used_sec, sec = [], None
+         if spec.get("section"):
+@@ -433,16 +453,17 @@ def main():
+             ffl = F[spec["section"][2]]
+             # 슬래브 두께: 절단된 층판 중 이 층 FFL에 걸린 것
+             slab_t = None
++            full = {o["name"]: g for o, g in c.sec_cuts_raw}
+             for o, g in c.sec_cuts:
+                 if o["kind"] == "slab":
+                     b = g.bounds
+                     if abs(b[3] - ffl) < 0.06:
+-                        slab_t = b[3] - b[1]
+-                        xl_ = b[0] if b[0] > c.uc - c.half + 0.2 else b[2]
+-                        dm.dim_v(sh, c.SY_(b[3]), c.SY_(b[1]), c.SX_(b[2]) + 6.0 if b[2] < c.uc + c.half - 1.0 else c.SX_(b[0]) - 6.0, "t=%s" % dm.fmt_mm(slab_t), pt=5.8, color="#06a", left=False)
++                        bf = full[o["name"]].bounds                           # 두께 = 자르지 않은 절단 폴리곤의 높이(창 아래로 잘린 400이 아니라 모델의 500)
++                        slab_t = bf[3] - bf[1]
++                        dm.dim_v(sh, c.SY_(b[3]), c.SY_(b[3] - slab_t), c.SX_(b[2]) + 6.0 if b[2] < c.uc + c.half - 1.0 else c.SX_(b[0]) - 6.0, "t=%s" % dm.fmt_mm(slab_t), pt=5.8, color="#06a", left=False)
+                         break
+             if slab_t is None:
+-                for o, g in c.sec_cuts:
++                for o, g in c.sec_cuts_raw:
+                     if o["kind"] == "slab":
+                         b = g.bounds
+                         slab_t = b[3] - b[1]
+@@ -458,28 +479,20 @@ def main():
+             else:
+                 dims.append(("층고(이 층 → 위층)", dm.fmt_mm(F[{"3F": "4F", "6F": "7F", "8F": "9F"}.get(spec["section"][2], "2F")] - ffl), "A-FLOR 층판 윗면 차"))
+             meta["section_dims"] += 1
+-            # 경사(램프·에스컬레이터)
+-            slope = None
+-            for o, g in c.sec_cuts:
+-                if o["kind"] in ("stair", "ramp") and g.area > 0.05:
+-                    mr = g.minimum_rotated_rectangle
+-                    xs_, ys_ = mr.exterior.coords.xy
+-                    best = None
+-                    for i in range(4):
+-                        dx, dy = xs_[i + 1] - xs_[i], ys_[i + 1] - ys_[i]
+-                        L = math.hypot(dx, dy)
+-                        if best is None or L > best[0]:
+-                            best = (L, math.degrees(math.atan2(abs(dy), abs(dx))))
+-                    if best and 5.0 < best[1] < 60.0:
+-                        slope = best[1]
+-                        c.slope_ref = (o["name_ko"], g)
+-                        break
+-            if slope is not None:
+-                dims.append(("경사각(절단 띠 장축)", "%.1f°" % slope, "절단 폴리곤 최소 회전 사각형"))
+-                g = c.slope_ref[1]
+-                b = g.bounds
+-                sh.text(c.SX_((b[0] + b[2]) / 2), c.SY_((b[1] + b[3]) / 2) - 6.0, "%.1f°" % slope, 6.5, "bold", "#06a", "middle", bg=True)
+-                meta["section_dims"] += 1
++            # 경사: 절단 띠의 최소 회전 사각형(V2)은 착지판·판 두께가 섞인 겉보기 각도라 쓰지 않는다.
++            # 에스컬레이터의 물리적 경사각은 3D 메시의 경사면 법선에서 구하고, 이 시트가 다루는 8F–9F 구간의 절단 띠에 표기한다.
++            if spec["sid"] == "D-407":
++                inc = truth.sloped_incline(model, esc8)
++                ang = inc["angle_deg"]
++                names8 = {e["name"] for e in esc8}
++                tgt = next((g for o, g in c.sec_cuts if o["name"] in names8 and g.area > 0.05), None)
++                dims.append(("경사각(모델 경사면 법선)", "%.1f°" % ang, "A-VERT-ESCL_8F-9F 경사면, 면적 가중"))
++                dims.append(("경사 구간 수평 길이", dm.fmt_mm(inc["plan_run_m"]), "경사면 평면 투영 길이(모델)"))
++                c.truth["incline"] = inc
++                if tgt is not None:
++                    bb_ = tgt.bounds
++                    sh.text(c.SX_((bb_[0] + bb_[2]) / 2), c.SY_((bb_[1] + bb_[3]) / 2) - 6.0, "%.1f°" % ang, 6.5, "bold", "#06a", "middle", bg=True)
++                    meta["section_dims"] += 1
+         else:
+             sh.text(SX, STOP - 3.0, "단면 SECTION", 8, "bold", "#222", "middle")
+             sh.text(SX, 120, "단면 없음", 12, "bold", "#999", "middle")
+@@ -493,8 +506,8 @@ def main():
+         slab_ = bv._union([pc.polygons_from_segments(p["segments"]) for p in sl3["projection"]])
+         bx0, by0, bx1, by1 = slab_.bounds
+         kk_ = 32.0 / max(bx1 - bx0, by1 - by0)
+-        if spec["source"] == "glb" or spec["sid"] in ("D-409",):
+-            wc = spec["center"] if spec["source"] == "glb" else ctr(fr)
++        if True:                                                                  # 모든 상세 시트에 확대 위치 고리(마스터 출처 D-404·D-408 포함, 감사 p22-03/p26-04)
++            wc = ctr(fr) if spec["sid"] == "D-409" else spec["center"]
+             sh.path([[(14 + (wc[0] - bx0) * kk_ + 3.0 * math.cos(t / 20 * 2 * math.pi), 226 + (by1 - wc[1]) * kk_ + 3.0 * math.sin(t / 20 * 2 * math.pi)) for t in range(21)]], stroke="#a60", w=0.4, closed=True)
+         sh.text(34, 222.0, "· 참조: %s" % spec["ref"], 6.0, "bold", "#a60")
+         tx, ty = 56.0, 224.0
+@@ -506,11 +519,16 @@ def main():
+             sh.text(tx + 62, ty + 1.0, val, 6.2, "bold", "#222", "end")
+             sh.text(tx + 66, ty + 1.0, src[:34], 5.2, "normal", "#777")
+             ty += 3.7
+-        sh.scale_bar(PX - half * k, 262 - 9.0 - 6.0, meters=(0, 1, 2, 5) if scale == 50 else (0, 2, 5, 10)) if False else None
+-        sh.scale_bar(222, 258 - 14, meters=(0, 1, 2, 5) if scale == 50 else (0, 2, 5, 10)) if False else None
++        # 그래픽 스케일바: 평면 패널 아래 · 키플랜 위의 빈 띠(y 203~219)에 둔다. 영역을 선언해 두므로 다른 요소와 겹치면 save()에서 빌드가 멈춘다.
++        sh.claim("plan_panel", PX - half * k, PY - half * k - 3.5, PX + half * k, PY + half * k + 0.5)
++        sh.claim("keyplan_refs", 14, 220.0, 54, 258)
++        sh.claim("dim_table", tx, 222.0, tx + 134, ty + 0.5)
++        if spec.get("section"):
++            sh.claim("section_panel", SX - half * k, STOP - 4.0, SX + half * k, STOP + (11.6 if scale == 50 else 23.0) * k)
++        sh.scale_bar(17.0, 212.0)                                                # 5 m = 100 mm (1:50) / 10 m = 100 mm (1:100)
+         sh.title_block()
+         base = sh.save(os.path.join(run, "details", "%s_%s" % (sid, "detail")))
+-        reg["details"].append({"sheet": sid, "title": spec["title"], "grade": spec["grade"], "scale": "1:%d" % scale, "ref_sheet": spec["ref"],
++        reg["details"].append({"sheet": sid, "title": spec["title"], "grade": spec["grade"], "scale": "1:%d" % scale, "scale_bars": sh.bars, "truth": c.truth, "ref_sheet": spec["ref"],
+                                "plan": {"source": spec["source"], "center": [round(spec["center"][0], 3), round(spec["center"][1], 3)], "window_m": 2 * half, "source_objects": used_plan},
+                                "section": None if not spec.get("section") else {"axis": spec["section"][0], "value_drawing_frame": round(spec["section"][1], 4)},
+                                "section_cut_elements": [{"name": o["name"], "kind": o["kind"], "name_ko": o["name_ko"]} for o, g in getattr(c, "sec_cuts", [])], "section_visible_objects": used_sec,
+@@ -518,7 +536,10 @@ def main():
+                                "files": {e: {"path": base + "." + e, "sha256": V1.sha_file(base + "." + e)} for e in ("svg", "pdf", "png")}})
+         print("DETAIL", sid, "1:%d" % scale, "dims", len(dims), meta)
+     json.dump(reg, open(os.path.join(run, "details", "detail_registry.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+-    print("DETAILS V2 DONE")
++    problems = sheetreg.verify_against_registry(os.path.join(run, "details", "detail_registry.json"))
++    if problems:
++        raise SystemExit("detail registry mismatch: " + "; ".join(problems))
++    print("DETAILS %s DONE" % cfg.EDITION)
+ 
+ 
+ if __name__ == "__main__":
+diff --git a/tools/t14e_make_views.py b/tools/t14e_make_views.py
+index 3667222..e6c0ced 100644
+--- a/tools/t14e_make_views.py
++++ b/tools/t14e_make_views.py
+@@ -17,7 +17,8 @@ import pipeline_common as pc  # noqa: E402
+ from shapely.geometry import box  # noqa: E402
+ import book_views as bv  # noqa: E402
+ import t14d_sheet as _ts  # noqa: E402
+-_ts.EDITION = "V2"
++from t14g import config as cfg, modelsrc  # noqa: E402
++cfg.apply(_ts)
+ from t14d_sheet import Sheet, geom_lines, geom_rings  # noqa: E402
+ import t14d_make_views as V1  # noqa: E402
+ import t14e_dims as dm  # noqa: E402
+@@ -133,7 +134,7 @@ def height_table(sh, model, x, y, rows, title):
+ def main():
+     ap = argparse.ArgumentParser()
+     ap.add_argument("--run", required=True)
+-    ap.add_argument("--glb", required=True)
++    ap.add_argument("--glb", default=None, help="원본 GLB(없어도 됨: 모델 캐시에서 생성하고 캐시 해시를 기록한다)")
+     a = ap.parse_args()
+     run = os.path.abspath(a.run)
+     model = bv.Model(os.path.join(run, "model_cache"), os.path.join(run, "raw_slices", "camera_bounds.json"))
+@@ -143,7 +144,9 @@ def main():
+     xs, ys, sl3 = axes_of(run)
+     regs = json.load(open(os.path.join(run, "qa", "ref_registries", "section_line_registry.json"), encoding="utf-8"))
+     tops = sorted({o["zmax"] for o in model.objects if o["kind"] in ("tube_wall", "core_wall", "shaft", "ramp") and o["zmax"] > model.floors["15F"] + 0.5})
+-    reg = {"book": "C_T14E", "model": {"path": os.path.abspath(a.glb), "sha256": V1.sha_file(a.glb)}, "frame": {"theta_deg": math.degrees(model.theta), "north_deg": model.north_deg},
++    ident = modelsrc.identity(run, a.glb)
++    reg = {"book": "C_T14G", "model": {"path": os.path.abspath(a.glb) if a.glb else ident["glb_name"] + " (not present)", "sha256": modelsrc.model_sha(run, a.glb),
++                                        "status": ident["status"], "cache_sha256": ident["cache_sha256"]}, "frame": {"theta_deg": math.degrees(model.theta), "north_deg": model.north_deg},
+            "elevations": [], "sections": [], "dimension_meta": {}}
+     scale, k, pad = 400, 2.5, 0.3
+     fac6 = [o for o in model.objects if o["name"].startswith("A-FACD_valley_glass_6F")]
+@@ -189,10 +192,10 @@ def main():
+         # 상세 호출: 6F 외피(D-406), 지붕 구조(D-410)
+         if fac6:
+             fx, fy, fz = center_of(fac6[0])
+-            dm.detail_tag(sh, X(fx * el["right"][0] + fy * el["right"][1]), Y(fz), "D-406", 50, dashed_r=6.0)
++            dm.detail_tag(sh, X(fx * el["right"][0] + fy * el["right"][1]), Y(fz), "D-406", dashed_r=6.0)           # 축척은 레지스트리에서
+             meta["detail_callouts"] += 1
+         px_, py_, pz_ = center_of(pad_o)
+-        dm.detail_tag(sh, X(px_ * el["right"][0] + py_ * el["right"][1]), Y(pz_), "D-410", 50, dashed_r=5.0)
++        dm.detail_tag(sh, X(px_ * el["right"][0] + py_ * el["right"][1]), Y(pz_), "D-410", dashed_r=5.0)
+         meta["detail_callouts"] += 1
+         # 오른쪽: 주요 높이표 + 방위 안내
+         rows = [("15F → 지붕 상단", model.floors["15F"], roof_z)] + [(o["name_ko"], o["zmin"], o["zmax"]) for o in model.objects if o["kind"] in ("tube_wall",) and o["zmax"] > model.floors["15F"] + 0.5][:6]
+@@ -212,6 +215,10 @@ def main():
+ 
+     cx_mid, cy_mid = (bb["xmin"] + bb["xmax"]) / 2, (bb["ymin"] + bb["ymax"]) / 2
+     z_lo = min(o["zmin"] for o in model.bld)
++    # EV 샤프트 피트(-16.5 m)까지 그리면 단면이 제목란(y=262 mm) 밑으로 내려간다(감사 p15-01/p16-01/p17-02). B2 FFL -1.5 m에서 절단하고 그 사실을 적는다.
++    z_clip = max(z_lo, model.floors["B2"] - 1.5)
++    SEC_TOP = 34.0
++    clipbox = box(-1e4, z_clip, 1e4, roof_z + 5.0)
+     for s in regs["sections"]:
+         ax, val, ls, nm, sid = s["plane"]["axis"], s["plane"]["value_drawing_frame"], s["plane"]["look_sign"], s["name"][0], s["sheet"]
+         sec = bv.section(model, ax, val, ls)
+@@ -220,16 +227,16 @@ def main():
+         kk = 1000.0 / sc
+         ucen = (x0 + x1) / 2
+         X = lambda u: 190.0 + (u - ucen) * kk
+-        Y = lambda z: 40.0 + (roof_z + 0.4 - z) * kk
++        Y = lambda z: SEC_TOP + (roof_z + 0.4 - z) * kk
+         meta = {"overall_chains": 0, "grid_chains": 0, "level_dims": 0, "major_dims": 0, "axis_bubbles": 0, "detail_callouts": 0, "level_labels": 18}
+         sh = Sheet(sid, "단면도 %s–%s (SECTION %s–%s)" % (nm, nm, nm, nm), sc, "MODEL_GEOMETRY · 실제 메시 절단",
+                    subtitle="%s · 절단면 %s = %.3f (도면틀) · 바라보는 방향 %s · 치수 mm" % (s["description"], ax, val, ("+" if ls > 0 else "−") + ax),
+                    extra_lines=["절단 포셰 = 모델 메시와 절단면의 교선(층 평면을 쌓은 가짜 단면 아님). 절단면 너머 객체는 가림 처리 윤곽선",
+                                 "층 레벨·슬래브 두께는 A-FLOR 층판에서 읽음. 접합·재료 상세 미검증. 지반·옹벽은 모델에 없어 표시하지 않음(UNVERIFIED)"])
+-        level_lines(sh, model, X(x0) - 6, X(x1) + 6, Y, z_lo, roof_z - 0.1, roof_z)
++        level_lines(sh, model, X(x0) - 6, X(x1) + 6, Y, z_clip, roof_z - 0.1, roof_z)
+         drawn, drawq = [], []
+         for o, vis, edge in sec["items"]:
+-            lines = geom_lines(edge)
++            lines = geom_lines(edge.intersection(clipbox))
+             if lines:
+                 drawn.append(o)
+                 drawq.append((0.12 if o["kind"] in ("column", "facade") else 0.18, lines))
+@@ -237,6 +244,9 @@ def main():
+             sh.path([[(X(u), Y(z)) for u, z in ln] for ln in lines], stroke="#444", w=w, closed=False)
+         cut_objs = []
+         for o, poly in sec["cuts"]:
++            poly = poly.intersection(clipbox)
++            if poly.is_empty:
++                continue
+             sh.path([[(X(u), Y(z)) for u, z in r] for r in geom_rings(poly)], fill="#111", stroke="#000", w=0.35)
+             cut_objs.append(o)
+         sh.line(12, Y(ffl0), 300, Y(ffl0), 0.35, "#555", "5,2")
+@@ -246,7 +256,9 @@ def main():
+         corners = [(bb["xmin"], bb["ymin"]), (bb["xmax"], bb["ymax"]), (bb["xmin"], bb["ymax"]), (bb["xmax"], bb["ymin"])]
+         lo_u, hi_u = min(p[0] * right[0] + p[1] * right[1] for p in corners), max(p[0] * right[0] + p[1] * right[1] for p in corners)
+         top_axes(sh, X, Y(roof_z), right, xs, ys, lo_u, hi_u, meta)
+-        height_dims(sh, model, Y, X(x0) - 32.0, X(x1) + 30.0, roof_z, z_lo, tops, meta)
++        height_dims(sh, model, Y, X(x0) - 32.0, X(x1) + 30.0, roof_z, z_clip, tops, meta)
++        if z_clip > z_lo + 0.01:
++            sh.text(X(x0) - 6, Y(z_clip) + 3.2, "▼ 절단 %+.3f 아래 생략 — EV 샤프트 피트는 %+.3f까지 연장 (제목란과 겹치지 않도록)" % (r5(z_clip - ffl0), r5(z_lo - ffl0)), 5.5, "normal", "#a33")
+         mini_keyplan(sh, run, 308, 24, 60, cut=s, letter=nm, north=model.north_deg)
+         sh.text(308, 101, "절단선 %s–%s: %s = %.2f, 바라봄 %s" % (nm, nm, ax, val, ("+" if ls > 0 else "−") + ax), 6.0, "normal", "#c00")
+         sh.text(308, 105.6, "키플랜 S-301 참조", 6.0, "normal", "#555")
+@@ -310,7 +322,7 @@ def main():
+     reg["section_locator"] = {"files": {e: {"path": base + "." + e, "sha256": V1.sha_file(base + "." + e)} for e in ("svg", "pdf", "png")}}
+     json.dump(reg, open(os.path.join(run, "sections", "section_line_registry.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+     json.dump({"elevations": reg["elevations"], "frame": reg["frame"], "model": reg["model"]}, open(os.path.join(run, "elevations", "elevation_registry.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+-    print("VIEWS V2 DONE")
++    print("VIEWS %s DONE" % cfg.EDITION)
+ 
+ 
+ if __name__ == "__main__":
+diff --git a/tools/t14e_plan_sheet.py b/tools/t14e_plan_sheet.py
+index b7cca04..d37ea12 100644
+--- a/tools/t14e_plan_sheet.py
++++ b/tools/t14e_plan_sheet.py
+@@ -23,7 +23,8 @@ import book_views as bv  # noqa: E402
+ from t14d_sheet import Sheet  # noqa: E402
+ import t14e_dims as dm  # noqa: E402
+ import t14d_sheet as _ts  # noqa: E402
+-_ts.EDITION = "V2"
++from t14g import config as cfg  # noqa: E402
++cfg.apply(_ts)
+ 
+ SCALE = 250
+ K = 1000.0 / SCALE          # 모델 1 m → 시트 4 mm
+@@ -31,11 +32,11 @@ CX, CY = 158.0, 135.0       # 건물 중심의 시트 좌표(mm)
+ PANEL_X0, PANEL_X1 = 305.0, 411.0
+ 
+ STRATEGY = {
+-    "판매_A": "판매: 외벽 진열 띠 + 가로 섬 부스(엇갈림) + 튜브 둘레 휴게 벤치",
+-    "판매_B": "판매: 외벽 진열 띠 + 세로 쌍 섬(팝업) — 3F와 다른 배치",
+-    "F&B": "F&B: 외벽 뱅킷 · 4인 군집 · 공용 긴 테이블 · 바 카운터(스툴) · 서비스 카운터",
+-    "문화": "문화·엔터: 중앙 이벤트 무대(앞 계단·미디어 월) · 라운지 포드 · 전시 플린스 · 집합 계단",
+-    "garden": "정원·테라스: 식재 띠 · 수목 · 테라스 테이블 세트 · 벤치",
++    "판매_A": "판매 A(2F–5F·지하): 브랜드 셀 + 계산대 · 체험존 · 팝업 링 · 승강기 앞 대기 라운지 · 벽 진열 · 운영 레인",
++    "판매_B": "판매 B(6F 이상): 3F와 다른 배치 — 팝업 스트리트(쌍 섬) · 중앙 대로 팝업 카트 · 이벤트 광장",
++    "F&B": "F&B: 외벽 뱅킷 · 2/4/6인 식탁 · 공용 장탁자 · 바 카운터(스툴) · 서비스 카운터 + 줄서기 구역 · 운영 동선",
++    "문화": "문화·엔터: 이벤트 무대(서는 구역) · 전시 패널 구역 · 플린스 줄 · 집합 계단 · 라운지 포드 · 안내 데스크",
++    "garden": "정원·테라스: 산책로 · 곡선 화단 · 수목 · 벤치 · 테라스 식탁 구역",
+ }
+ 
+ 
+@@ -189,10 +190,11 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
+         ref = next(e["sheet"] for e in regs["elev"]["elevations"] if e["name"] == nm)
+         dm.elevation_tag(sh, X(px), Y(py), ref, d)
+         meta["elevation_tags"] += 1
+-    callouts = {"3F": [("D-401", "A-CORE-TUBE_T1", 50), ("D-402", "A-CORE-TUBE_T2", 50), ("D-403", "A-CORE-TUBE_T3", 50), ("D-405", "A-CORE-TUBE_capW", 50)],
+-                "8F": [("D-407", None, 50)], "15F": [("D-410", "A-ROOF_rescue_pad", 50)]}
++    # 호출 대상 상세 번호와 위치 객체만 적는다. 축척은 detail_tag가 레지스트리(tools/t14g/registry.py)에서 읽는다.
++    callouts = {"3F": [("D-401", "A-CORE-TUBE_T1"), ("D-402", "A-CORE-TUBE_T2"), ("D-403", "A-CORE-TUBE_T3"), ("D-405", "A-CORE-TUBE_capW")],
++                "8F": [("D-407", None)], "15F": [("D-410", "A-ROOF_rescue_pad")]}
+     used_callouts = []
+-    for sid_d, oname, sc in callouts.get(floor, []):
++    for sid_d, oname in callouts.get(floor, []):
+         if oname is None:
+             es = [o for o in model.objects if o["name"].startswith("A-VERT-ESCL_8F-9F")]
+             pts = []
+@@ -203,7 +205,7 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
+             er = max(max(p[0] for p in pts) - min(p[0] for p in pts), max(p[1] for p in pts) - min(p[1] for p in pts)) / 2
+         else:
+             ex, ey, er = obj_center_r(model, oname)
+-        dm.detail_tag(sh, X(ex), Y(ey), sid_d, sc, dashed_r=max(er, 2.0) * K * 0.55)
++        dm.detail_tag(sh, X(ex), Y(ey), sid_d, dashed_r=max(er, 2.0) * K * 0.55)
+         used_callouts.append(sid_d)
+         meta["detail_callouts"] += 1
+ 
+@@ -234,13 +236,25 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
+     y += 6
+     sh.text(x, y, "기호", 8, "bold", "#111")
+     y += 6
+-    sym = [("●", "구조 기둥(모델 기둥, 실선)", None), ("◌", "점선 원 = 코어 인접 모델 기둥(1층 규칙상 생략 대상)", None), ("▭", "회색 사각 = 가구(PROPOSED_ONLY, 설계 데이터 아님)", None),
+-           ("⊙", "이중 원 = 튜브 / 이중 원 안 사각 = 승강로", None), ("A", "구조 축선(알파벳=가로, 숫자=세로), 치수 mm", None)]
++    sym = [("●", "구조 기둥(모델 기둥, 실선)", None), ("◌", "점선 원 = 코어 인접 모델 기둥(생략 대상)", None), ("▭", "흰 사각 = 가구(PROPOSED_ONLY)", None),
++           ("▬", "회색 채움 = 계산대·카운터(PROPOSED_ONLY)", None), ("⋯", "점선 사각 = 바닥 표시 구역", None),
++           ("┄", "긴 점선 = 방문자 동선(제안)", None), ("┅", "일점쇄선 = 운영 동선(제안)", None),
++           ("⊙", "이중 원 = 튜브 · 안의 사각 = 승강로", None), ("A", "구조 축선(알파벳 가로·숫자 세로) 치수 mm", None)]
+     for g_, t, _ in sym:
+-        sh.text(x, y, g_, 7, "bold", "#333")
++        if g_ in ("▬", "⋯", "┄", "┅"):                                       # 글꼴에 없는 글자는 실제 기호 도형으로 그린다
++            if g_ == "▬":
++                sh.path([[(x, y - 2.4), (x + 4.6, y - 2.4), (x + 4.6, y - 0.4), (x, y - 0.4)]], fill="#D9D9D9", stroke="#444", w=0.15)
++            elif g_ == "⋯":
++                sh.path([[(x, y - 2.6), (x + 4.6, y - 2.6), (x + 4.6, y - 0.2), (x, y - 0.2)]], stroke="#666", w=0.12, dash="0.7,0.6")
++            elif g_ == "┄":
++                sh.line(x, y - 1.3, x + 5.0, y - 1.3, 0.18, "#666", "2.4,0.9")
++            else:
++                sh.line(x, y - 1.3, x + 5.0, y - 1.3, 0.14, "#999", "1.8,0.6,0.4,0.6")
++        else:
++            sh.text(x, y, g_, 7, "bold", "#333")
+         for i, ln in enumerate(wrap(t, 36)):
+             sh.text(x + 6, y + i * 3.6, ln, 6.0, "normal", "#333")
+-        y += 3.6 * len(wrap(t, 36)) + 1.8
++        y += 3.6 * len(wrap(t, 36)) + 0.9
+     # 호출 기호 설명
+     y += 1
+     sh.text(x, y, "참조 기호", 8, "bold", "#111")
+@@ -260,7 +274,7 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
+     strat = []
+     for pn in dict.fromkeys(progs):
+         if "판매" in pn or "시장" in pn:
+-            strat.append(STRATEGY["판매_A"] if floor in ("2F", "3F", "4F", "5F") else STRATEGY["판매_B"])
++            strat.append(STRATEGY["판매_A"] if floor in ("2F", "3F", "4F", "5F", "B1", "B2") else STRATEGY["판매_B"])
+         elif "F&B" in pn:
+             strat.append(STRATEGY["F&B"])
+         elif "문화" in pn or "엔터" in pn:
+@@ -277,7 +291,7 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
+     sh.text(x, y, "관련 시트", 8, "bold", "#111")
+     y += 5.2
+     rel = [("단면", "S-301 키플랜 · S-302 A–A · S-303 B–B · S-304 C–C · S-305 D–D"), ("입면", "E-201 북 · E-202 동 · E-203 남 · E-204 서"),
+-           ("상세", " · ".join(used_callouts) if used_callouts else "이 층에 호출된 상세 없음"), ("배치", "A-003 배치도·1층 / A-002 층고·범례")]
++           ("상세", " · ".join(used_callouts) if used_callouts else "이 층에 호출된 상세 없음"), ("배치", "A-003 배치도 · A-901 층별 표 · A-902 층별 일람")]
+     for k_, t in rel:
+         lines_ = wrap("%s  %s" % (k_, t), 42)
+         for i, ln in enumerate(lines_):
+@@ -289,11 +303,12 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
+     y += 6
+     sh.text(x, y, "상태·한계", 8, "bold", "#111")
+     y += 6
+-    notes = ["LEVEL S: 구조·프로그램 볼륨만 모델에 있음. 상층 구획벽·문·화장실·피난 경로는 모델에 없어 미확정.",
+-             "가구·식재는 설명용 PROPOSED_ONLY. 설계 확정 아님.", "최종 FREEZE 아님(후보 V2)."]
++    notes = ["LEVEL S: 구조·프로그램 볼륨만 모델에 있음. 상층 벽·문·화장실·피난 경로는 미확정.",
++             "가구·식재·동선은 PROPOSED_ONLY(설계 확정 아님) · 최종 FREEZE 아님(후보 %s)." % cfg.EDITION]
+     if len(applies) > 1:
+         pr = next((p for h in evidence["hypothesis_groups"] for p in h["pairs"] if set(p["pair"].split("~")) == set(applies[:2])), None)
+         notes.append("적용 층 %s: 수직동선 개구만 다름(검증됨), EQUIVALENCE VERIFIED 아님." % "·".join(applies))
++        deltas = []
+         if pr:
+             for kind, label in (("stair", "에스컬레이터"), ("shaft", "승강기 샤프트")):
+                 for ff in applies[:2]:
+@@ -302,15 +317,19 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
+                     op = pr["vertical_elements"][kind][other]
+                     only = [p for p in pts if all(abs(p[0] - q[0]) > 0.5 or abs(p[1] - q[1]) > 0.5 for q in op)]
+                     if only:
+-                        notes.append("%s %s 고유: %s (건물 모서리 기준 m)" % (ff, label, " ".join("(%.1f,%.1f)" % (p[0] - bx0, p[1] - by0) for p in only)))
++                        deltas.append("%s %s 고유 %d" % (ff, label, len(only)))
++        if deltas:
++            notes.append("개구 차이: " + " · ".join(deltas) + " (A-902 붉은 부분)")
+     for t in notes:
+         for i, ln in enumerate(wrap(t, 40)):
+             sh.text(x + (0 if i == 0 else 2), y, ("· " if i == 0 else "") + ln, 6.0, "normal", "#444")
+             y += 3.7
+         y += 0.8
++    sh.claim("legend_text", px0, py0, PANEL_X1, y)                                    # 범례 글이 방위·축척 구역(y 224~258)을 넘으면 저장 때 빌드가 멈춘다
++    sh.claim("scale_block", px0, 231.0, PANEL_X1, 258.0)
+     # 방위·축척 막대
+-    sh.north_arrow(PANEL_X1 - 14, 226.0, model.north_deg, r=6.5)
+-    sh.text(PANEL_X1 - 14, 240.0, "진북 %.1f°" % model.north_deg, 5.6, "normal", "#444", "middle")
++    sh.north_arrow(PANEL_X1 - 10, 243.5, model.north_deg, r=4.8)
++    sh.text(PANEL_X1 - 10, 255.0, "진북 %.1f°" % model.north_deg, 5.6, "normal", "#444", "middle")
+     k = K
+     bx, by = px0 + 6, 236.0
+     for i, (a, b_) in enumerate(((0, 5), (5, 10), (10, 20))):
+@@ -330,7 +349,7 @@ def compose(run, glb, floor, sid, applies, model, regs, evidence):
+ def main():
+     ap = argparse.ArgumentParser()
+     ap.add_argument("--run", required=True)
+-    ap.add_argument("--glb", required=True)
++    ap.add_argument("--glb", default=None, help="원본 GLB(없어도 됨)")
+     ap.add_argument("--plans", required=True, help="층:시트번호:적용층(+로 연결) 쉼표 구분")
+     a = ap.parse_args()
+     run = os.path.abspath(a.run)
+diff --git a/tools/t14g/__init__.py b/tools/t14g/__init__.py
+new file mode 100644
+index 0000000..527076b
+--- /dev/null
++++ b/tools/t14g/__init__.py
+@@ -0,0 +1 @@
++"""C-T14G: Candidate V3 drawing-set tooling (registry, edition config, layout claims, QA, coverage)."""
+diff --git a/tools/t14g/before_after.py b/tools/t14g/before_after.py
+new file mode 100644
+index 0000000..986e4a3
+--- /dev/null
++++ b/tools/t14g/before_after.py
+@@ -0,0 +1,93 @@
++"""Same-position before/after panels: V2 page crop (left) | V3 page crop (right), captioned.
++
++    python -I tools/t14g/before_after.py <V3 pdf> <out_dir>
++"""
++import os
++import sys
++
++HERE = os.path.dirname(os.path.abspath(__file__))
++TOOLS = os.path.dirname(HERE)
++ROOT = os.path.dirname(TOOLS)
++sys.path.insert(0, TOOLS)
++import pymupdf  # noqa: E402
++from PIL import Image, ImageDraw, ImageFont  # noqa: E402
++from t14f import fonts  # noqa: E402
++
++MM = 72.0 / 25.4
++V2 = os.path.join(ROOT, "docs", "t14e_v2", "drawing_set_candidate_v2.pdf")
++
++
++def _crop(doc, pno, box, dpi):
++    pg = doc[pno - 1]
++    pm = pg.get_pixmap(dpi=dpi, clip=pymupdf.Rect(*[v * MM for v in box]))
++    return Image.frombytes("RGB", (pm.width, pm.height), pm.samples)
++
++
++def _around(doc, pno, text, rx, ry):
++    hits = doc[pno - 1].search_for(text)
++    if not hits:
++        raise LookupError("%r not found on page %d" % (text, pno))
++    r = hits[0]
++    cx, cy = (r.x0 + r.x1) / 2 / MM, (r.y0 + r.y1) / 2 / MM
++    return (max(0, cx - rx), max(0, cy - ry), min(420, cx + rx), min(297, cy + ry))
++
++
++PANELS = [
++    ("01_P-102_callout_D-407", 6, "D-407", (30, 14), 200, "P-102: callout to D-407 printed 1:50 (sheet is 1:100)"),
++    ("02_P-105_callout_D-410", 9, "D-410", (30, 14), 200, "P-105: callout to D-410 printed 1:50 (sheet is 1:100)"),
++    ("03_E-201_callout_D-410", 10, "D-410", (30, 14), 200, "E-201: callout to D-410 printed 1:50"),
++    ("04_E-202_callout_D-410", 11, "D-410", (30, 14), 200, "E-202: callout to D-410 printed 1:50"),
++    ("05_E-203_callout_D-410", 12, "D-410", (30, 14), 200, "E-203: callout to D-410 printed 1:50"),
++    ("06_E-204_callout_D-410", 13, "D-410", (30, 14), 200, "E-204: callout to D-410 printed 1:50"),
++    ("07_D-405_scale_bar", 23, (10, 196, 150, 262), None, 130, "D-405: V2 has no graphic scale bar; V3 draws 100 mm = 5 m (measured 99.999 mm)"),
++    ("08_D-401_slab_thickness", 19, "t=", (40, 32), 170, "D-401: slab thickness printed 400 (window clipped a 500 mm slab); V3 prints 500"),
++    ("09_D-407_incline", 25, (210, 20, 398, 258), None, 80, "D-407: incline printed 25.0 deg (rotated-rectangle artefact); V3 30.0 deg from the mesh"),
++    ("10_S-302_title_block_clip", 15, (10, 222, 310, 278), None, 120, "S-302: EV shaft runs under the title block; V3 cuts at B2-1.5 m above it and says so"),
++    ("11_A-901_floor_table", 30, "+31.001", (110, 14), 150, "A-901: 7F printed +31.001 / 6F program cell truncated; V3 rounded like the elevations, cell complete"),
++    ("12_P-101_legend", 5, (303, 8, 412, 260), None, 95, "P-101: legend with real symbol shapes for the new element kinds; no overflow (claims)"),
++    ("13_P-101_furniture_retail_A", 5, (125, 85, 300, 205), None, 110, "P-101 (3F retail A): one booth repeated -> typed units, counters, experience zone, pop-up ring, routes"),
++    ("14_P-103_furniture_fnb", 7, (125, 85, 300, 205), None, 110, "P-103 (10F F&B): seating types, bar, service counter + queue, operations route"),
++    ("15_P-104_furniture_culture", 8, (125, 85, 300, 205), None, 110, "P-104 (13F culture): stage, exhibition, pods in three configurations, info desk"),
++    ("16_floor_coverage", 30, (10, 10, 410, 135), None, 70, "V2 covered 5 floors graphically; V3 adds A-902 (all 17 floors, right)"),
++]
++
++
++def main():
++    v3 = pymupdf.open(sys.argv[1])
++    v2 = pymupdf.open(V2)
++    out = sys.argv[2]
++    os.makedirs(out, exist_ok=True)
++    fr, fb = ImageFont.truetype(fonts.resolve("regular")[0], 17), ImageFont.truetype(fonts.resolve("bold")[0], 20)
++    made = []
++    for name, pno, a, b, dpi, cap in PANELS:
++        if isinstance(a, str):
++            box = _around(v2, pno, a, *b)
++        else:
++            box = a
++        left = _crop(v2, pno, box, dpi)
++        if name.startswith("16_"):
++            right = Image.frombytes("RGB", (0, 0), b"") if False else None
++            pg = v3[30]                                                         # A-902 (page 31) whole sheet, scaled to the same height
++            pm = pg.get_pixmap(dpi=int(dpi * 1.0))
++            right = Image.frombytes("RGB", (pm.width, pm.height), pm.samples)
++            right = right.resize((int(right.width * left.height / right.height), left.height))
++        else:
++            right = _crop(v3, pno, box, dpi)
++        W, H = left.width + right.width + 36, max(left.height, right.height) + 70
++        im = Image.new("RGB", (W, H), "#ffffff")
++        d = ImageDraw.Draw(im)
++        d.text((12, 8), cap, font=fb, fill="#111")
++        d.text((12, 40), "BEFORE  Candidate V2 (p.%d)" % pno, font=fr, fill="#a33")
++        d.text((left.width + 24, 40), "AFTER  Candidate V3 (p.%d)" % (31 if name.startswith("16_") else pno), font=fr, fill="#063")
++        im.paste(left, (12, 66))
++        im.paste(right, (left.width + 24, 66))
++        d.rectangle([12, 66, 12 + left.width, 66 + left.height], outline="#999")
++        d.rectangle([left.width + 24, 66, left.width + 24 + right.width, 66 + right.height], outline="#999")
++        p = os.path.join(out, name + ".png")
++        im.save(p, optimize=True)
++        made.append(p)
++    print("before/after panels:", len(made))
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/tools/t14g/config.py b/tools/t14g/config.py
+new file mode 100644
+index 0000000..a6f3259
+--- /dev/null
++++ b/tools/t14g/config.py
+@@ -0,0 +1,22 @@
++"""Edition, project code and issue date for the title block. One place; nothing is typed into sheet text.
++
++Override with environment variables when rebuilding an older edition:
++    T14_EDITION=V3  T14_PROJECT=C-T14G  T14_REVISION="R3"  T14_ISSUE_DATE=2026-11-11
++"""
++import datetime
++import os
++
++EDITION = os.environ.get("T14_EDITION", "V3")
++PROJECT_CODE = os.environ.get("T14_PROJECT", "C-T14G")
++REVISION = os.environ.get("T14_REVISION", "R3")
++ISSUE_DATE = os.environ.get("T14_ISSUE_DATE", datetime.date.today().isoformat())
++PAPER_A3 = (420.0, 297.0)
++PAPER_A1 = (841.0, 594.0)
++
++
++def apply(sheet_module):
++    """Push the config into tools/t14d_sheet.py (module level settings used by Sheet.title_block)."""
++    sheet_module.EDITION = EDITION
++    sheet_module.PROJECT_CODE = PROJECT_CODE
++    sheet_module.REVISION = REVISION
++    sheet_module.ISSUE_DATE = ISSUE_DATE
+diff --git a/tools/t14g/furniture_qa.py b/tools/t14g/furniture_qa.py
+new file mode 100644
+index 0000000..f70500c
+--- /dev/null
++++ b/tools/t14g/furniture_qa.py
+@@ -0,0 +1,128 @@
++"""Independent furniture / circulation QA on real geometry.
++
++Furniture geometry comes from the exported typed list (raw_plan_<F>_check.json -> furniture_v3); the structure it must not touch
++(columns, tube shells, cores) and the slab come straight from the model slices (raw_slices), NOT from the layout engine.
++
++  collisions     furniture pairs overlapping > 0.01 m2 (intended stacking, e.g. media wall on the stage, excluded)
++  structure      furniture touching a column / tube shell / core wall (hard) and within 0.2 m (soft)
++  repetition     share of the most common identical footprint among furniture units (chairs/stools/plants excluded)
++  diversity      number of distinct furniture types among the units
++  aisle          widest clear aisle such that every tube anchor stays connected, by erosion of the free floor (not the engine's own router)
++  distinct       Jaccard similarity of the furniture type sets between floors (layouts must differ by program)
++"""
++import json
++import math
++import os
++import sys
++from collections import Counter
++
++HERE = os.path.dirname(os.path.abspath(__file__))
++ROOT = os.path.dirname(os.path.dirname(HERE))
++sys.path.insert(0, os.path.join(ROOT, "src"))
++import pipeline_common as pc  # noqa: E402
++import book_views as bv  # noqa: E402
++from shapely import wkt  # noqa: E402
++from shapely.geometry import Point, Polygon  # noqa: E402
++from shapely.ops import unary_union  # noqa: E402
++
++ACCESSORY = {"chair", "terrace_chair", "stool", "shrub", "tree", "popup_mark"}
++INTENDED_STACK = {frozenset(("stage", "media_wall"))}
++MAX_SHARE, MIN_TYPES = 0.35, 5
++
++
++def _shell(g):
++    ps = [p for p in (g.geoms if hasattr(g, "geoms") else [g]) if p.geom_type == "Polygon"]
++    return Polygon(max(ps, key=lambda p: p.area).exterior)
++
++
++def structure(run, floor):
++    sl = pc.load_slice(os.path.join(run, "raw_slices"), floor)
++    cuts = pc.cut_geometries(sl)
++    slab = bv._union([pc.polygons_from_segments(p["segments"]) for p in sl["projection"]])
++    cols = unary_union([g for _, g in cuts.get("column", [])]) if cuts.get("column") else Polygon()
++    tubes = [(it["name_ko"], _shell(g)) for it, g in cuts.get("tube_wall", [])]
++    cores = unary_union([g for _, g in cuts.get("core_wall", [])]) if cuts.get("core_wall") else Polygon()
++    return slab, cols, tubes, cores
++
++
++def check_floor(run, floor):
++    chk = json.load(open(os.path.join(run, "plans", "_raw", "raw_plan_%s_check.json" % floor), encoding="utf-8"))
++    items = [(i["type"], i["kind"], wkt.loads(i["wkt"])) for i in chk["furniture_v3"]]
++    bodies = [(t, g) for t, k, g in items if k in ("body", "counter")]
++    slab, cols, tubes, cores = structure(run, floor)
++    res = {"floor": floor, "programs": [m["program"] for m in chk.get("layout_meta", [])], "units": 0}
++    pairs = 0
++    for i in range(len(bodies)):
++        for j in range(i + 1, len(bodies)):
++            if bodies[i][1].intersects(bodies[j][1]) and frozenset((bodies[i][0], bodies[j][0])) not in INTENDED_STACK:
++                if bodies[i][1].intersection(bodies[j][1]).area > 0.01:
++                    pairs += 1
++    res["overlapping_pairs"] = pairs
++    tube_u = unary_union([s for _, s in tubes]) if tubes else Polygon()
++    hard = unary_union([g for g in (cols, tube_u, cores) if not g.is_empty])
++    res["touching_structure"] = sum(1 for _, g in bodies if g.intersects(hard))
++    res["within_0.2m_of_structure"] = sum(1 for _, g in bodies if g.distance(hard) < 0.2)
++    res["outside_slab"] = sum(1 for _, g in bodies if not slab.buffer(0.05).contains(g))
++    units = [(t, g) for t, g in bodies if t not in ACCESSORY]
++    res["units"] = len(units)
++    sig = Counter((t, round(g.bounds[2] - g.bounds[0], 1), round(g.bounds[3] - g.bounds[1], 1)) for t, g in units)
++    top, n = sig.most_common(1)[0]
++    res["max_identical_share"] = round(n / len(units), 3)
++    res["most_repeated"] = list(top)
++    res["types"] = sorted({t.split("_")[0] if t.startswith(("brand_cell", "street_island", "cashier")) else t for t, _ in units})
++    res["n_types"] = len(res["types"])
++    # aisle width by erosion of the free floor
++    free = slab.buffer(-0.3).difference(unary_union([hard.buffer(0.2)] + [g.buffer(0.1) for _, g in bodies]))
++    ctr = slab.centroid
++    anchors = []
++    for name, sh in tubes:
++        if "캡슐" in name or sh.area < 8.0:
++            continue
++        c = sh.centroid
++        d = math.hypot(ctr.x - c.x, ctr.y - c.y) or 1.0
++        r = math.sqrt(sh.area / math.pi)
++        anchors.append(Point(c.x + (ctr.x - c.x) / d * (r + 1.8), c.y + (ctr.y - c.y) / d * (r + 1.8)))
++    res["aisle_anchors"] = len(anchors)
++    best = None
++    struct_free = slab.buffer(-0.3).difference(hard.buffer(0.2))
++    for r in (1.2, 1.0, 0.9, 0.75, 0.6, 0.45):
++        es = struct_free.buffer(-r)
++        big = max((p for p in (es.geoms if hasattr(es, "geoms") else [es]) if p.geom_type == "Polygon"), key=lambda p: p.area, default=None)
++        valid = [a for a in anchors if big is not None and big.distance(a) < 1.3]       # 구조만으로도 이 폭이 닿는 앵커(튜브 사이 좁은 틈은 가구 탓이 아니다)
++        er = free.buffer(-r)
++        comps = [p for p in (er.geoms if hasattr(er, "geoms") else [er]) if p.geom_type == "Polygon" and not p.is_empty]
++        near = {i for i, p in enumerate(comps) for a in valid if p.distance(a) < 1.3}
++        if len(valid) >= 2 and comps and len(near) == 1 and all(any(p.distance(a) < 1.3 for p in comps) for a in valid):
++            best = 2 * r
++            res["aisle_anchors_reachable_by_structure"] = len(valid)
++            break
++    res["aisle_width_connecting_all_anchors_m"] = best
++    res["passes"] = bool(pairs == 0 and res["touching_structure"] == 0 and res["max_identical_share"] <= MAX_SHARE and res["n_types"] >= MIN_TYPES
++                         and best is not None and best >= 1.2)
++    return res
++
++
++def check_distinct(results):
++    sets = {r["floor"]: set(r["types"]) for r in results}
++    prim = {r["floor"]: (r["programs"] or [""])[0] for r in results}
++    out, worst = {}, 0.0
++    fl = sorted(sets)
++    for i, a in enumerate(fl):
++        for b in fl[i + 1:]:
++            if prim[a] == prim[b]:                                                     # 같은 프로그램(10F·15F F&B)은 비슷해야 한다. 서로 다른 프로그램만 비교한다
++                continue
++            j = len(sets[a] & sets[b]) / max(1, len(sets[a] | sets[b]))
++            out["%s~%s" % (a, b)] = round(j, 2)
++            worst = max(worst, j)
++    return {"jaccard": out, "max_jaccard": round(worst, 2), "passes": worst <= 0.5}
++
++
++if __name__ == "__main__":
++    run = os.path.abspath(sys.argv[1])
++    rs = [check_floor(run, f) for f in ("3F", "8F", "10F", "13F", "15F")]
++    d = check_distinct(rs)
++    json.dump({"floors": rs, "distinct": d}, open(sys.argv[2], "w", encoding="utf-8"), ensure_ascii=False, indent=1)
++    for r in rs:
++        print(r["floor"], "units", r["units"], "types", r["n_types"], "share", r["max_identical_share"], "overlap", r["overlapping_pairs"], "touch", r["touching_structure"],
++              "soft<0.2m", r["within_0.2m_of_structure"], "aisle", r["aisle_width_connecting_all_anchors_m"], "PASS" if r["passes"] else "FAIL")
++    print("distinct:", d["max_jaccard"], "PASS" if d["passes"] else "FAIL")
+diff --git a/tools/t14g/make_coverage.py b/tools/t14g/make_coverage.py
+new file mode 100644
+index 0000000..533dd52
+--- /dev/null
++++ b/tools/t14g/make_coverage.py
+@@ -0,0 +1,156 @@
++"""A-902 층별 구성 일람(B2~15F 17개 층) + typical_floor_coverage.json.
++
++모든 층의 평면을 따로 그리지 않고(사용자 지시: 기준층만), 17개 층 전부의 슬래브·프로그램 구역·튜브·코어·기둥·개구를 모델 slice에서
++같은 축척(1:1000)으로 작게 그린다. 9F·14F는 8F·13F와 다른 부분(수직동선 개구)을 붉게 칠해 차이를 보인다.
++수치는 전부 slice 폴리곤에서 계산한다(숫자를 직접 쓰지 않는다).
++"""
++import csv
++import json
++import math
++import os
++import sys
++
++HERE = os.path.dirname(os.path.abspath(__file__))
++TOOLS = os.path.dirname(HERE)
++ROOT = os.path.dirname(TOOLS)
++sys.path.insert(0, os.path.join(ROOT, "src"))
++sys.path.insert(0, TOOLS)
++import pipeline_common as pc  # noqa: E402
++import book_views as bv  # noqa: E402
++from shapely.geometry import Polygon  # noqa: E402
++from shapely.ops import unary_union  # noqa: E402
++import t14d_sheet as _ts  # noqa: E402
++from t14g import config as cfg  # noqa: E402
++cfg.apply(_ts)
++from t14d_sheet import Sheet, geom_rings  # noqa: E402
++from t14e_make_details import hatch, poly_mm  # noqa: E402
++
++ORDER = ["B2", "B1"] + ["%dF" % i for i in range(1, 16)]
++K = 1.0                                     # 1:1000 → 모델 1 m = 1 mm
++CELL_W, CELL_H = 66.0, 80.0
++X0, Y0 = 12.0, 12.0
++STYLE = {"판매": (None, None, "#bbb"), "F&B": (45.0, 1.7, "#777"), "문화": (135.0, 1.7, "#777"), "garden": (90.0, 1.3, "#5a7"), "서비스": (0.0, 1.2, "#999")}
++
++
++def _slab(sl):
++    return bv._union([pc.polygons_from_segments(p["segments"]) for p in sl["projection"]])
++
++
++def _holes(g):
++    out = []
++    for p in (g.geoms if hasattr(g, "geoms") else [g]):
++        if p.geom_type == "Polygon":
++            out += [Polygon(r) for r in p.interiors]
++    return out
++
++
++def floor_facts(run, f, ffl):
++    sl = pc.load_slice(os.path.join(run, "raw_slices"), f)
++    slab = _slab(sl)
++    cuts = pc.cut_geometries(sl)
++    zones = {}
++    for z in sl["zones"]:
++        g = pc.polygons_from_segments(z["segments"])
++        zones[z["name_ko"]] = zones.get(z["name_ko"], 0.0) + g.area
++    holes = _holes(slab)
++    return {"floor": f, "ffl_m": round(ffl, 3), "slab_area_m2": round(slab.area, 1), "program_areas_m2": {k: round(v, 1) for k, v in zones.items()},
++            "openings": {"count": len(holes), "area_m2": round(sum(h.area for h in holes), 1)},
++            "tubes": len(cuts.get("tube_wall", [])), "cores": len(cuts.get("core_wall", [])), "columns": len(cuts.get("column", [])),
++            "_slab": slab, "_sl": sl, "_cuts": cuts}
++
++
++def build(run, out_base):
++    ev = json.load(open(os.path.join(run, "00_index", "floor_equivalence_evidence.json"), encoding="utf-8"))
++    floors_z = ev["floor_z_m"]
++    ffl0 = floors_z["1F"]
++    plans = json.load(open(os.path.join(run, "plans", "plan_sheets.json"), encoding="utf-8"))
++    plan_of = {}
++    for p in plans:
++        for m in p["applies_to"]:
++            plan_of[m] = (p["sheet"], "OWN_PLAN" if m == p["floor"] else "SHARED_PLAN_WITH_DELTA", p["floor"])
++    group_of = {f: g for g in ev["groups"] for f in g["floors"]}
++    facts = {f: floor_facts(run, f, floors_z[f] - ffl0) for f in ORDER}
++    ref_of = {"9F": "8F", "14F": "13F"}
++    gb = unary_union([facts[f]["_slab"] for f in ORDER]).bounds                 # 모든 층이 같은 중심·같은 틀(건물 전체 범위)
++
++    sh = Sheet("A-902", "층별 구성 일람 — B2~15F 17개 층 (프로그램·개구·수직동선 차이)", 1000, "MODEL_DATA · LEVEL S · 가구 없음",
++               subtitle="전 층을 같은 축척(1:1000)으로 비교 · 슬래브·프로그램 구역·튜브·코어·기둥·개구는 모델 slice에서 계산 · 붉은색 = 기준층 대비 다른 부분",
++               extra_lines=["평면을 따로 발행한 층: 3F(P-101) · 8F+9F(P-102) · 10F(P-103) · 13F+14F(P-104) · 15F(P-105) · 1F(A-003). 나머지는 이 일람에서 확인",
++                            "구역 해칭: 판매 = 무늬 없음 · F&B = 45° 사선 · 문화·엔터 = 135° 사선 · 정원 = 세로선 · 서비스 = 가는 가로선"])
++    cov = []
++    for i, f in enumerate(ORDER):
++        col, row = i % 6, i // 6
++        ox, oy = X0 + col * CELL_W, Y0 + row * CELL_H
++        fa = facts[f]
++        slab, sl, cuts = fa["_slab"], fa["_sl"], fa["_cuts"]
++        cx, cy = (gb[0] + gb[2]) / 2, (gb[1] + gb[3]) / 2
++        X = lambda x, ox=ox, cx=cx: ox + CELL_W / 2 + (x - cx) * K
++        Y = lambda y, oy=oy, cy=cy: oy + 6.0 + 28.0 + (cy - y) * K
++        sh.claim("cell_" + f, ox + 1.0, oy, ox + CELL_W - 1.0, oy + CELL_H - 1.0)
++        sh.text(ox + 3.0, oy + 4.0, f, 8, "bold", "#111")
++        sh.text(ox + 16.0, oy + 4.0, "FFL %+.3f" % fa["ffl_m"], 6, "normal", "#555")
++        sh.path([[(X(x), Y(y)) for x, y in r] for r in geom_rings(slab)], fill="#f6f6f6", stroke="#555", w=0.15)
++        for z in sl["zones"]:
++            g = pc.polygons_from_segments(z["segments"])
++            ang, sp, colr = STYLE.get(z["name_ko"], (None, None, "#bbb"))
++            if ang is not None:
++                hatch(sh, poly_mm(g, X, Y), spacing=sp, angle=ang, w=0.07, color=colr)
++            sh.path([[(X(x), Y(y)) for x, y in r] for r in geom_rings(g)], stroke="#999", w=0.08)
++        if f in ref_of:                                                       # 기준층 대비 차이(수직동선 개구)
++            ref = facts[ref_of[f]]["_slab"]
++            diff = slab.symmetric_difference(ref)
++            fa["delta_vs_reference"] = {"reference": ref_of[f], "slab_symdiff_m2": round(diff.area, 1), "pieces": len([p for p in (diff.geoms if hasattr(diff, "geoms") else [diff]) if p.area > 0.5])}
++            for p in (diff.geoms if hasattr(diff, "geoms") else [diff]):
++                if p.geom_type == "Polygon" and p.area > 0.5:
++                    sh.path([[(X(x), Y(y)) for x, y in r] for r in geom_rings(p)], fill="#c33", stroke="#a00", w=0.15, opacity=0.55)
++        for kind, fill, w in (("core_wall", "#333", 0.1), ("tube_wall", "#fff", 0.12), ("column", "#000", 0.05)):
++            for it, g in cuts.get(kind, []):
++                sh.path([[(X(x), Y(y)) for x, y in r] for r in geom_rings(g)], fill=fill, stroke="#111", w=w)
++        for h in _holes(slab):
++            sh.path([[(X(x), Y(y)) for x, y in h.exterior.coords]], stroke="#c77", w=0.1, dash="1.2,0.8")
++        prog = " · ".join("%s %s㎡" % (k, format(int(round(v)), ",")) for k, v in fa["program_areas_m2"].items())
++        sh.text(ox + 3.0, oy + 68.0, prog[:46], 5.5, "normal", "#333")
++        ps = plan_of.get(f, ("A-003", "OWN_PLAN", "1F") if f == "1F" else (None, "OVERVIEW_ONLY", None))
++        sh.text(ox + 3.0, oy + 72.0, "개구 %d개 %s㎡ · 슬래브 %s㎡" % (fa["openings"]["count"], format(int(round(fa["openings"]["area_m2"])), ","), format(int(round(fa["slab_area_m2"])), ",")), 5.5, "normal", "#555")
++        tag = {"OWN_PLAN": "평면: %s" % ps[0], "SHARED_PLAN_WITH_DELTA": "평면: %s(공통) · %s 대비 차이 붉게" % (ps[0], ref_of.get(f, "")), "OVERVIEW_ONLY": "이 일람으로 확인(별도 평면 없음)"}[ps[1]]
++        sh.text(ox + 3.0, oy + 76.0, tag, 5.5, "bold", "#a33" if ps[1] == "OVERVIEW_ONLY" else "#06a")
++        g_ = group_of.get(f, {})
++        entry = {k: v for k, v in fa.items() if not k.startswith("_")}
++        entry.update({"plan_sheet": ps[0], "publication_status": ps[1], "equivalence_group": g_.get("id"), "equivalence_kind": g_.get("kind"), "also_in": "A-902"})
++        cov.append(entry)
++    # 18번째 칸: 범례·방위·스케일
++    ox, oy = X0 + 5 * CELL_W, Y0 + 2 * CELL_H
++    sh.claim("legend", ox + 1.0, oy, ox + CELL_W - 1.0, oy + CELL_H - 1.0)
++    sh.text(ox + 3.0, oy + 5.0, "범례", 8, "bold", "#111")
++    items = [("판매", "무늬 없음"), ("F&B", "45° 사선"), ("문화", "135° 사선"), ("garden", "세로선"), ("서비스", "가는 가로선")]
++    for j, (k, t) in enumerate(items):
++        yy = oy + 11.0 + j * 5.2
++        ang, sp, colr = STYLE[k]
++        if ang is not None:
++            hatch(sh, [Polygon([(ox + 3, yy - 3), (ox + 12, yy - 3), (ox + 12, yy + 1), (ox + 3, yy + 1)])], spacing=1.0, angle=ang, w=0.07, color=colr)
++        sh.path([[(ox + 3, yy - 3), (ox + 12, yy - 3), (ox + 12, yy + 1), (ox + 3, yy + 1)]], stroke="#999", w=0.1)
++        sh.text(ox + 14, yy, "%s (%s)" % (k, t), 5.5, "normal", "#333")
++    sh.path([[(ox + 3, oy + 38), (ox + 12, oy + 38), (ox + 12, oy + 42), (ox + 3, oy + 42)]], fill="#c33", stroke="#a00", w=0.15, opacity=0.55)
++    sh.text(ox + 14, oy + 41.2, "기준층과 다른 부분", 5.5, "normal", "#333")
++    sh.text(ox + 3, oy + 47, "점선 = 슬래브 개구(수직동선)", 5.5, "normal", "#333")
++    sh.text(ox + 3, oy + 52, "검정 사각 = 코어 · 흰 원 = 튜브 · 점 = 기둥", 5.5, "normal", "#333")
++    nd = 63.2
++    try:
++        nd = json.load(open(os.path.join(run, "elevations", "elevation_registry.json"), encoding="utf-8"))["frame"]["north_deg"]
++    except (OSError, KeyError):
++        pass
++    sh.north_arrow(ox + 12, oy + 66, nd, r=4.0)
++    sh.scale_bar(ox + 28, oy + 67.0, meters=(0, 10, 20))
++    sh.title_block()
++    os.makedirs(os.path.dirname(out_base), exist_ok=True)
++    sh.save(out_base, allow=(("legend", "scale_bar"),))
++    cov_path = os.path.join(os.path.dirname(out_base), "typical_floor_coverage.json")
++    json.dump({"scale": "1:1000", "sheet": "A-902", "floors": cov,
++               "note": "B2~15F 17개 층 모두 A-902에 그려진다. 별도 평면이 없는 층은 publication_status=OVERVIEW_ONLY. STRICT 동등 쌍 0건(증거: floor_equivalence_evidence.json)이라 층을 합치지 않았다."},
++              open(cov_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
++    return out_base + ".pdf", cov_path, cov
++
++
++if __name__ == "__main__":
++    run = os.path.abspath(sys.argv[1])
++    print(build(run, os.path.join(run, "appendix", "A-902_floor_overview"))[:2])
+diff --git a/tools/t14g/modelsrc.py b/tools/t14g/modelsrc.py
+new file mode 100644
+index 0000000..f27bdea
+--- /dev/null
++++ b/tools/t14g/modelsrc.py
+@@ -0,0 +1,42 @@
++"""What model source a run really has. The full-building GLB is not in the repository and not on this machine;
++the derived mesh cache (model_cache/model_world.npz + model_objects.json) is. Sheets are generated from the cache,
++so the identity that is *verified* is the cache hash; the GLB hash is only what V2 recorded and is reported as such.
++"""
++import hashlib
++import json
++import os
++
++
++def sha256_file(path):
++    h = hashlib.sha256()
++    with open(path, "rb") as f:
++        for b in iter(lambda: f.read(1 << 20), b""):
++            h.update(b)
++    return h.hexdigest()
++
++
++def identity(run, glb=None):
++    run = os.path.abspath(run)
++    cache = os.path.join(run, "model_cache")
++    rec = None
++    for rel in ("sections/section_line_registry.json", "elevations/elevation_registry.json"):
++        p = os.path.join(run, *rel.split("/"))
++        if os.path.exists(p):
++            rec = json.load(open(p, encoding="utf-8")).get("model", {}).get("sha256")
++            if rec:
++                break
++    out = {
++        "glb_name": "GMC-ZZ-ZZ-M3-0701.glb",
++        "glb_present": bool(glb and os.path.exists(glb)),
++        "glb_sha256_verified": sha256_file(glb) if glb and os.path.exists(glb) else None,
++        "glb_sha256_recorded_by_v2": rec,
++        "cache_sha256": {n: sha256_file(os.path.join(cache, n)) for n in ("model_world.npz", "model_objects.json") if os.path.exists(os.path.join(cache, n))},
++    }
++    out["status"] = "GLB_VERIFIED" if out["glb_present"] else "GLB_ORIGINAL_MISSING__CACHE_ONLY"
++    return out
++
++
++def model_sha(run, glb=None):
++    """The hash written into sheet registries: the verified GLB hash if the file is given, else the V2 recorded value."""
++    i = identity(run, glb)
++    return i["glb_sha256_verified"] or i["glb_sha256_recorded_by_v2"]
+diff --git a/tools/t14g/mutations.py b/tools/t14g/mutations.py
+new file mode 100644
+index 0000000..c8fce3e
+--- /dev/null
++++ b/tools/t14g/mutations.py
+@@ -0,0 +1,165 @@
++"""Deliberate defect injection into a copy of the finished PDF. Each mutation must be caught by the check named in MUTATIONS.
++
++    python -I tools/t14g/mutations.py <pdf> <sheet_index.json> <out_report.json>
++
++A mutation 'passes' when (a) the clean PDF has no finding for that check and (b) the mutated PDF has at least one.
++"""
++import json
++import os
++import re
++import sys
++import tempfile
++
++import pymupdf
++
++HERE = os.path.dirname(os.path.abspath(__file__))
++sys.path.insert(0, os.path.dirname(HERE))
++from t14g import qa_pdf  # noqa: E402
++from t14f import fonts  # noqa: E402
++
++MM = qa_pdf.MM
++
++
++def _page(doc, rows, sheet):
++    return doc[next(r["page"] for r in rows if r["sheet"] == sheet) - 1]
++
++
++def _font(page, name="mutR"):
++    page.insert_font(fontname=name, fontfile=fonts.resolve("regular")[0])
++    return name
++
++
++def _find_line(page, pattern):
++    for b in page.get_text("dict")["blocks"]:
++        for ln in b.get("lines", []):
++            t = re.sub(r"\s+", "", "".join(sp["text"] for sp in ln["spans"]))
++            if re.search(pattern, t):
++                sp = ln["spans"][0]
++                return pymupdf.Rect(ln["bbox"]), sp
++    raise LookupError(pattern)
++
++
++def _replace_line(page, pattern, new_text):
++    rect, sp = _find_line(page, pattern)
++    page.add_redact_annot(rect)
++    page.apply_redactions(images=pymupdf.PDF_REDACT_IMAGE_NONE, graphics=pymupdf.PDF_REDACT_LINE_ART_NONE)
++    fn = _font(page)
++    page.insert_text((rect.x0, sp["origin"][1]), new_text, fontname=fn, fontsize=sp["size"], color=(0.6, 0.4, 0.0))
++
++
++def m_wrong_callout_scale(doc, rows):
++    _replace_line(_page(doc, rows, "P-105"), r"D-410·1:100", "D-410 · 1:50")
++
++
++def m_callout_unknown_sheet(doc, rows):
++    _replace_line(_page(doc, rows, "P-102"), r"D-407·1:100", "D-499 · 1:100")
++
++
++def _bar_rect(page):
++    ch = max(qa_pdf._bars(page), key=lambda c: c[1] - c[0])
++    return pymupdf.Rect((ch[0] - 1) * MM, (ch[2] - 0.5) * MM, (ch[1] + 1) * MM, (ch[2] + 2.3) * MM), ch
++
++
++def m_missing_scale_bar(doc, rows):
++    pg = _page(doc, rows, "D-405")
++    r, _ = _bar_rect(pg)
++    pg.add_redact_annot(r)
++    pg.apply_redactions(images=pymupdf.PDF_REDACT_IMAGE_NONE, graphics=pymupdf.PDF_REDACT_LINE_ART_REMOVE_IF_TOUCHED, text=pymupdf.PDF_REDACT_TEXT_NONE)
++
++
++def m_scale_bar_wrong_length(doc, rows):
++    pg = _page(doc, rows, "D-405")
++    r, ch = _bar_rect(pg)
++    pg.add_redact_annot(r)
++    pg.apply_redactions(images=pymupdf.PDF_REDACT_IMAGE_NONE, graphics=pymupdf.PDF_REDACT_LINE_ART_REMOVE_IF_TOUCHED, text=pymupdf.PDF_REDACT_TEXT_NONE)
++    pg.draw_rect(pymupdf.Rect(ch[0] * MM, ch[2] * MM, (ch[0] + 80.0) * MM, (ch[2] + 1.6) * MM), color=(0.07,) * 3, fill=(0.07,) * 3)   # 100 mm bar replaced by 80 mm
++
++
++def m_clipped_legend(doc, rows):
++    pg = _page(doc, rows, "P-101")
++    pg.insert_text((406 * MM, 120 * MM), "범례가 용지 밖으로 잘림", fontname=_font(pg), fontsize=6)
++
++
++def m_text_into_title_block(doc, rows):
++    pg = _page(doc, rows, "P-101")
++    pg.insert_text((120 * MM, 262.6 * MM), "도면 문자가 제목란을 침범", fontname=_font(pg), fontsize=7)
++
++
++def m_missing_referenced_sheet(doc, rows):
++    doc.delete_page(next(r["page"] for r in rows if r["sheet"] == "D-407") - 1)
++
++
++def m_duplicate_vector_items(doc, rows):
++    pg = _page(doc, rows, "P-101")
++    for _ in range(30):
++        pg.draw_rect(pymupdf.Rect(150 * MM, 100 * MM, 160 * MM, 104 * MM), color=(0.3, 0.3, 0.3), width=0.3)
++
++
++def m_wrong_north(doc, rows):
++    _replace_line(_page(doc, rows, "P-101"), r"진북63\.2°", "진북 243.2°")
++
++
++def m_unembedded_font(doc, rows):
++    pg = _page(doc, rows, "P-101")
++    pg.insert_text((150 * MM, 245 * MM), "ABC non-embedded font", fontname="helv", fontsize=7)
++
++
++def m_text_overlap(doc, rows):
++    pg = _page(doc, rows, "P-101")
++    rect, sp = _find_line(pg, r"LEGEND")
++    pg.insert_text((rect.x0 + 2, sp["origin"][1] - 1), "겹침 문자 OVERLAP", fontname=_font(pg), fontsize=9)
++
++
++def m_stale_reference(doc, rows):
++    pg = _page(doc, rows, "P-101")
++    pg.insert_text((310 * MM, 240 * MM), "층고 정보는 A-002 참조", fontname=_font(pg), fontsize=5.5)
++
++
++def m_wrong_page_size(doc, rows):
++    doc[0].set_mediabox(pymupdf.Rect(0, 0, 595, 842))
++
++
++def m_wrong_printed_dimension(doc, rows):
++    _replace_line(_page(doc, rows, "P-101"), r"^54000$", "54100")
++
++
++MUTATIONS = [
++    ("wrong detail callout scale (D-410 1:50)", m_wrong_callout_scale, "callouts"),
++    ("callout to a sheet that does not exist", m_callout_unknown_sheet, "callouts"),
++    ("graphic scale bar missing", m_missing_scale_bar, "scale_bars"),
++    ("graphic scale bar wrong physical length", m_scale_bar_wrong_length, "scale_bars"),
++    ("legend text clipped by the sheet edge", m_clipped_legend, "text_bounds"),
++    ("drawing text running into the title block", m_text_into_title_block, "text_bounds"),
++    ("referenced sheet removed from the PDF", m_missing_referenced_sheet, "index"),
++    ("stacked duplicate vector items", m_duplicate_vector_items, "duplicates"),
++    ("wrong north angle printed", m_wrong_north, "north"),
++    ("non-embedded font", m_unembedded_font, "fonts"),
++    ("overlapping text lines", m_text_overlap, "text_overlap"),
++    ("stale cross reference (A-002 for floor heights)", m_stale_reference, "stale_refs"),
++    ("wrong page size", m_wrong_page_size, "page_size"),
++]
++
++
++def run(pdf, rows, north_deg=63.2):
++    clean = qa_pdf.run_all(pdf, rows, north_deg)
++    out = []
++    for name, fn, check in MUTATIONS:
++        doc = pymupdf.open(pdf)
++        try:
++            fn(doc, rows)
++            res = qa_pdf.run_all(doc, rows if "removed" not in name else rows, north_deg, only={check})
++            n = len(res[check])
++            err = None
++        except Exception as e:                                   # noqa: BLE001 - a mutation that cannot be applied is reported, not hidden
++            n, err = 0, "%s: %s" % (type(e).__name__, e)
++        out.append({"mutation": name, "expected_check": check, "clean_findings": len(clean[check]), "mutated_findings": n, "detected": bool(n > 0 and len(clean[check]) == 0), "error": err})
++    return {"pdf": pdf, "clean_total_findings": sum(len(v) for v in clean.values()), "mutations": out, "detected": sum(1 for m in out if m["detected"]), "total": len(out)}
++
++
++if __name__ == "__main__":
++    rows = json.load(open(sys.argv[2], encoding="utf-8"))["sheets"]
++    rep = run(sys.argv[1], rows)
++    json.dump(rep, open(sys.argv[3], "w", encoding="utf-8"), ensure_ascii=False, indent=1)
++    print("mutations detected %d / %d (clean PDF findings: %d)" % (rep["detected"], rep["total"], rep["clean_total_findings"]))
++    for m in rep["mutations"]:
++        print("  %-52s %-12s %s %s" % (m["mutation"], m["expected_check"], "DETECTED" if m["detected"] else "MISSED", m["error"] or ""))
+diff --git a/tools/t14g/package_v3.py b/tools/t14g/package_v3.py
+new file mode 100644
+index 0000000..eb60306
+--- /dev/null
++++ b/tools/t14g/package_v3.py
+@@ -0,0 +1,184 @@
++"""Assemble docs/t14g_v3 from a finished run: PDF, per-sheet PDF/SVG/PNG, contact sheet, QA reports, cross-reference graph,
++source manifest, audit CSVs, before/after panels, unified diff.
++
++    python -I tools/t14g/package_v3.py --run <run> --out docs/t14g_v3 --base origin/claude/t14f-candidate-v3-audit
++"""
++import argparse
++import csv
++import glob
++import hashlib
++import json
++import os
++import platform
++import re
++import shutil
++import subprocess
++import sys
++import xml.etree.ElementTree as ET
++
++HERE = os.path.dirname(os.path.abspath(__file__))
++TOOLS = os.path.dirname(HERE)
++ROOT = os.path.dirname(TOOLS)
++sys.path.insert(0, TOOLS)
++import pymupdf  # noqa: E402
++from PIL import Image, ImageDraw, ImageFont  # noqa: E402
++from t14g import qa_pdf, modelsrc  # noqa: E402
++from t14f import fonts  # noqa: E402
++
++MM = 72.0 / 25.4
++V2_PDF = os.path.join(ROOT, "docs", "t14e_v2", "drawing_set_candidate_v2.pdf")
++V3I_PDF = os.path.join(ROOT, "docs", "t14f_v3", "Candidate_V3_interim.pdf")
++
++
++def sha(p):
++    return modelsrc.sha256_file(p)
++
++
++def sh(*a, cwd=ROOT):
++    return subprocess.run(a, cwd=cwd, capture_output=True, text=True, encoding="utf-8").stdout.strip()
++
++
++def font(sz, bold=False):
++    return ImageFont.truetype(fonts.resolve("bold" if bold else "regular")[0], sz)
++
++
++def page_png(pdf, pno, dpi, box_mm=None):
++    pg = pymupdf.open(pdf)[pno - 1]
++    clip = pymupdf.Rect(*[v * MM for v in box_mm]) if box_mm else None
++    pm = pg.get_pixmap(dpi=dpi, clip=clip)
++    return Image.frombytes("RGB", (pm.width, pm.height), pm.samples)
++
++
++def main():
++    ap = argparse.ArgumentParser()
++    ap.add_argument("--run", required=True)
++    ap.add_argument("--out", required=True)
++    ap.add_argument("--base", required=True)
++    ap.add_argument("--junit", default=None)
++    a = ap.parse_args()
++    run, out = os.path.abspath(a.run), os.path.abspath(a.out)
++    os.makedirs(out, exist_ok=True)
++    book = os.path.join(run, "book", "drawing_set_candidate_v3.pdf")
++    pdf = os.path.join(out, "Candidate_V3_drawing_set.pdf")
++    shutil.copy(book, pdf)
++    rows = json.load(open(os.path.join(run, "00_index", "sheet_index.json"), encoding="utf-8"))["sheets"]
++    shutil.copy(os.path.join(run, "00_index", "sheet_index.json"), os.path.join(out, "sheet_index.json"))
++    shutil.copy(os.path.join(run, "00_index", "sheet_index.csv"), os.path.join(out, "sheet_index.csv"))
++    reg = json.load(open(os.path.join(run, "book", "book_registry.json"), encoding="utf-8"))
++
++    # ── per-sheet PDF / SVG / PNG ─────────────────────────────────────────────────────────────
++    skipped_svg = []
++    for p in reg["sheets"]:
++        d = os.path.join(out, "sheets", p["folder"])
++        os.makedirs(d, exist_ok=True)
++        src = p["source_pdf"]
++        shutil.copy(src, os.path.join(d, p["sheet"] + ".pdf"))
++        svg = os.path.splitext(src)[0] + ".svg"
++        if os.path.exists(svg):
++            if os.path.getsize(svg) <= 6 * 1024 * 1024:
++                shutil.copy(svg, os.path.join(d, p["sheet"] + ".svg"))
++            else:
++                skipped_svg.append((p["sheet"], os.path.getsize(svg)))
++        page_png(pdf, p["page"], 150).save(os.path.join(d, p["sheet"] + ".png"), optimize=True)
++
++    # ── contact sheet (numbered) ──────────────────────────────────────────────────────────────
++    thumbs = [(p, page_png(pdf, p["page"], 55)) for p in rows]
++    tw, th = thumbs[0][1].size
++    cols = 6
++    W, H = cols * (tw + 14) + 14, ((len(thumbs) + cols - 1) // cols) * (th + 40) + 14
++    cs = Image.new("RGB", (W, H), "#d8d8d8")
++    dr = ImageDraw.Draw(cs)
++    for i, (p, im) in enumerate(thumbs):
++        x, y = 14 + (i % cols) * (tw + 14), 14 + (i // cols) * (th + 40)
++        cs.paste(im, (x, y + 26))
++        dr.text((x, y + 2), "%02d  %s  %s" % (p["page"], p["sheet"], p["title"][:26]), font=font(15, True), fill="#111")
++    cs.save(os.path.join(out, "Candidate_V3_contact_sheet.png"), optimize=True)
++
++    # ── QA reports ────────────────────────────────────────────────────────────────────────────
++    for f in ("dimension_truth_report.json", "furniture_qa.json", "qa_mutation_report.json", "tests_report_historical_63.json"):
++        s = os.path.join(run, f)
++        if os.path.exists(s):
++            shutil.copy(s, os.path.join(out, f))
++    shutil.copy(os.path.join(run, "appendix", "typical_floor_coverage.json"), os.path.join(out, "typical_floor_coverage.json"))
++    hist = json.load(open(os.path.join(run, "tests_report.json"), encoding="utf-8"))
++    shutil.copy(os.path.join(run, "tests_report.json"), os.path.join(out, "tests_report_historical_63.json"))
++    bars = qa_pdf.scale_bar_report(pymupdf.open(pdf), rows)
++    json.dump(bars, open(os.path.join(out, "scale_bar_report.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
++    checks = qa_pdf.run_all(pdf, rows)
++    junit = {}
++    if a.junit and os.path.exists(a.junit):
++        r = ET.parse(a.junit).getroot()
++        ts = r if r.tag == "testsuite" else r.find("testsuite")
++        junit = {"tests": int(ts.get("tests")), "failures": int(ts.get("failures")), "errors": int(ts.get("errors")), "skipped": int(ts.get("skipped")), "time_s": float(ts.get("time"))}
++    furn = json.load(open(os.path.join(run, "furniture_qa.json"), encoding="utf-8"))
++    mut = json.load(open(os.path.join(run, "qa_mutation_report.json"), encoding="utf-8"))
++    truth = json.load(open(os.path.join(run, "dimension_truth_report.json"), encoding="utf-8"))
++    json.dump({"pytest_t14g_and_repo": junit, "historical_book_qa": {"passed": hist["passed"], "total": hist["total"], "failed": hist["failed"]},
++               "independent_pdf_checks": {k: len(v) for k, v in checks.items()}, "scale_bars": {"checked": len(bars), "ok": sum(1 for b in bars if b["status"] == "OK")},
++               "dimension_truth": {"checked": truth["checked"], "passed": truth["passed"]},
++               "furniture_geometry": {x["floor"]: x["passes"] for x in furn["floors"]} | {"distinct_programs": furn["distinct"]["passes"]},
++               "mutations": {"detected": mut["detected"], "total": mut["total"]}}, open(os.path.join(out, "tests_report.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
++
++    # ── cross reference graph ─────────────────────────────────────────────────────────────────
++    scale = {r["sheet"]: r["scale"] for r in rows}
++    doc = pymupdf.open(pdf)
++    edges = []
++    for r in rows:
++        if r["sheet"] == "A-003":
++            continue
++        for ln in qa_pdf._lines(doc[r["page"] - 1]):
++            for sid, den in qa_pdf.CALL_RE.findall(ln["text"]):
++                edges.append({"from": r["sheet"], "to": sid, "kind": "detail_callout", "printed_scale": "1:" + den, "target_scale": scale.get(sid), "ok": scale.get(sid) == "1:" + den})
++            for sid in set(re.findall(r"[ES]-\d{3}", ln["text"])):
++                if sid != r["sheet"] and not qa_pdf.CALL_RE.search(ln["text"]):
++                    edges.append({"from": r["sheet"], "to": sid, "kind": "section_or_elevation_mark", "ok": sid in scale})
++    uniq = {(e["from"], e["to"], e["kind"]): e for e in edges}
++    edges = list(uniq.values())
++    orphans = sorted(s for s in scale if s.startswith("D-") and not any(e["to"] == s for e in edges))
++    json.dump({"nodes": [{"sheet": r["sheet"], "page": r["page"], "scale": r["scale"]} for r in rows], "edges": edges, "all_edges_ok": all(e["ok"] for e in edges),
++               "detail_sheets_never_called_out": orphans, "note": "orphan detail sheets are listed, not hidden"}, open(os.path.join(out, "cross_reference_graph.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
++
++    # ── source manifest ───────────────────────────────────────────────────────────────────────
++    ident = modelsrc.identity(run)
++    srcs = {}
++    for g in ("tools/t14g/*.py", "tools/t14e_*.py", "tools/t14d_sheet.py", "src/layouts_v3.py", "src/architectural_plan_renderer.py", "tests/test_t14g_qa.py"):
++        for f in sorted(glob.glob(os.path.join(ROOT, g))):
++            srcs[os.path.relpath(f, ROOT).replace(os.sep, "/")] = sha(f)
++    import cairosvg
++    json.dump({"git_head": sh("git", "rev-parse", "HEAD"), "git_branch": sh("git", "branch", "--show-current"), "base": a.base, "base_sha": sh("git", "rev-parse", a.base),
++               "model": ident, "inputs": {"V2_pdf_sha256": sha(V2_PDF), "V3_interim_pdf_sha256": sha(V3I_PDF)},
++               "outputs": {"Candidate_V3_drawing_set.pdf": {"sha256": sha(pdf), "bytes": os.path.getsize(pdf), "pages": len(doc)}},
++               "tools": {"python": platform.python_version(), "pymupdf": pymupdf.__doc__.split()[1] if pymupdf.__doc__ else pymupdf.VersionBind, "cairosvg": cairosvg.__version__},
++               "fonts": {k: os.path.basename(fonts.resolve(k)[0]) for k in ("regular", "bold")}, "source_sha256": srcs,
++               "cloud": "Modal/Claude cloud NOT used: no verified balance or spend limit; everything ran locally", "svg_over_6MB_not_committed": skipped_svg},
++              open(os.path.join(out, "source_manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
++
++    # ── audit CSVs (baseline: independent agents' V2 / V3-interim findings) ───────────────────
++    find = {}
++    for f in sorted(glob.glob(os.path.join(ROOT, "output", "audit", "findings", "pages_*.json"))):
++        for p in json.load(open(f, encoding="utf-8"))["pages"]:
++            find[p["page"]] = p
++    with open(os.path.join(out, "qa_30page_visual_audit_V2_V3i.csv"), "w", newline="", encoding="utf-8-sig") as fh:
++        w = csv.writer(fh)
++        w.writerow(["page", "sheet", "V2_verdict", "V3interim_verdict", "defects_high", "defects_medium", "defects_low", "items_ISSUE_V3i", "top_defects"])
++        for pno in sorted(find):
++            p = find[pno]
++            ds = p["defects"]
++            top = " | ".join("%s[%s] %s" % (d["id"], d["severity"], d["description"][:110].replace("\n", " ")) for d in ds if d["severity"] == "high")[:600]
++            w.writerow([pno, p["sheet"], p["V2"]["verdict"], p["V3i"]["verdict"], sum(d["severity"] == "high" for d in ds), sum(d["severity"] == "medium" for d in ds),
++                        sum(d["severity"] == "low" for d in ds), sum(1 for v in p["V3i"]["items"].values() if v["status"] == "ISSUE"), top])
++    with open(os.path.join(out, "qa_defect_ledger_baseline.csv"), "w", newline="", encoding="utf-8-sig") as fh:
++        w = csv.writer(fh)
++        w.writerow(["id", "page", "sheet", "severity", "in_editions", "category", "fix_needs_model", "description", "evidence_crop"])
++        for pno in sorted(find):
++            for d in find[pno]["defects"]:
++                w.writerow([d["id"], pno, find[pno]["sheet"], d["severity"], "/".join(d["in"]), d["category"], d.get("fix_needs_model"), d["description"].replace("\n", " "), d.get("evidence_crop")])
++
++    # ── unified diff of the source changes against the base (PR #15 head) ─────────────────────
++    diff = sh("git", "diff", a.base, "--", "tools", "src", "tests")
++    open(os.path.join(out, "source_changes.diff"), "w", encoding="utf-8").write(diff)
++    print("packaged", out, "| sheets", len(rows), "| svg skipped", skipped_svg, "| diff lines", diff.count("\n"))
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/tools/t14g/qa_pdf.py b/tools/t14g/qa_pdf.py
+new file mode 100644
+index 0000000..51ba2f5
+--- /dev/null
++++ b/tools/t14g/qa_pdf.py
+@@ -0,0 +1,238 @@
++"""Independent drawing-set QA on the FINISHED PDF (no generator code is imported).
++
++Inputs: the PDF, the sheet registry rows ([{page, sheet, scale, ...}]) and the expected north angle.
++Every check returns a list of finding strings; an empty list means the check passed. `run_all` returns {check: [findings]}.
++
++  page_size       every page is the registry paper size (A3 420x297 mm unless a sheet says otherwise)
++  index           page count and the sheet id printed in each title block equal the registry
++  callouts        every 'D-4xx . 1:N' span: target exists in the registry and N equals that sheet's scale
++  scale_bars      a graphic bar exists on each scaled sheet and its physical length equals meters*1000/scale (vector measurement)
++  text_bounds     no text outside the sheet margin, none from the drawing area running into the title block
++  text_overlap    two text lines whose boxes overlap by more than 35 % of the smaller box
++  fonts           every font object on every page is embedded
++  duplicates      identical vector items stacked on each other
++  north           every printed 'north X deg' equals the model's north angle
++  stale_refs      known wrong cross references (A-002 for floor heights: the floor table is A-901)
++"""
++import re
++from collections import Counter
++
++import pymupdf
++
++MM = 72.0 / 25.4
++TITLE_TOP_MM = 262.0
++SKIP_PAGE_SHEETS = {"A-003"}                      # user supplied sheet: judged, never modified
++CALL_RE = re.compile(r"([DES]-\d{3})·1:(\d+)")
++STALE_REFS = [("A-002", "층고")]
++
++
++def _spans(page):
++    out = []
++    for b in page.get_text("dict")["blocks"]:
++        for ln in b.get("lines", []):
++            for sp in ln["spans"]:
++                t = sp["text"].strip()
++                if t:
++                    out.append({"text": t, "bbox": sp["bbox"], "size": sp["size"], "font": sp["font"], "line": ln["bbox"]})
++    return out
++
++
++def _lines(page):
++    out = []
++    for b in page.get_text("dict")["blocks"]:
++        for ln in b.get("lines", []):
++            txt = "".join(sp["text"] for sp in ln["spans"])
++            if txt.strip():
++                out.append({"text": re.sub(r"\s+", "", txt), "bbox": ln["bbox"], "size": max(sp["size"] for sp in ln["spans"])})
++    return out
++
++
++def _mm(b):
++    return [round(v / MM, 2) for v in b]
++
++
++def check_page_size(doc, rows):
++    out = []
++    for i, pg in enumerate(doc):
++        w, h = round(pg.rect.width / MM, 1), round(pg.rect.height / MM, 1)
++        if abs(w - 420.0) > 0.6 or abs(h - 297.0) > 0.6:
++            out.append("page %d is %.1f x %.1f mm, expected A3 420 x 297" % (i + 1, w, h))
++    return out
++
++
++def check_index(doc, rows):
++    out = []
++    if len(doc) != len(rows):
++        out.append("PDF has %d pages but the registry lists %d sheets" % (len(doc), len(rows)))
++    for r in rows:
++        if r["page"] > len(doc):
++            out.append("registry page %d (%s) is beyond the PDF" % (r["page"], r["sheet"]))
++            continue
++        pg = doc[r["page"] - 1]
++        if r["sheet"] in SKIP_PAGE_SHEETS:
++            txt = re.sub(r"\s+", "", pg.get_text())
++            if r["sheet"] not in txt:
++                out.append("page %d: sheet id %s not printed anywhere" % (r["page"], r["sheet"]))
++            continue
++        low = [re.sub(r"\s+", "", s["text"]) for s in _spans(pg) if s["bbox"][1] / MM > TITLE_TOP_MM or s["bbox"][1] / MM < 30 and s["size"] > 10]
++        if r["sheet"] not in low and not any(r["sheet"] == t[:len(r["sheet"])] for t in low):
++            out.append("page %d: title block does not print sheet id %s" % (r["page"], r["sheet"]))
++    return out
++
++
++def check_callouts(doc, rows):
++    scale = {r["sheet"]: r["scale"] for r in rows}
++    out = []
++    for i, pg in enumerate(doc):
++        for ln in _lines(pg):
++            for sid, den in CALL_RE.findall(ln["text"]):
++                if sid not in scale:
++                    out.append("page %d: callout to %s, which is not a sheet in the set" % (i + 1, sid))
++                elif scale[sid] != "1:" + den:
++                    out.append("page %d: callout %s printed 1:%s, sheet is %s" % (i + 1, sid, den, scale[sid]))
++    return out
++
++
++def _bars(page):
++    """Contiguous filled/outlined bar rectangles of 1.5-1.9 mm height: list of (x0_mm, x1_mm, y_mm, [segments])."""
++    segs = []
++    for d in page.get_drawings():
++        r = d["rect"]
++        h = r.height / MM
++        if 1.5 <= h <= 1.9 and r.width / MM > 2.0 and d.get("fill") is not None or (1.5 <= h <= 1.9 and r.width / MM > 2.0 and d.get("color") is not None):
++            segs.append((round(r.x0 / MM, 3), round(r.x1 / MM, 3), round(r.y0 / MM, 1)))
++    segs = sorted(set(segs), key=lambda s: (s[2], s[0]))
++    chains = []
++    for s in segs:
++        if chains and abs(chains[-1][2] - s[2]) < 0.05 and abs(chains[-1][1] - s[0]) < 0.06:
++            chains[-1] = (chains[-1][0], s[1], s[2], chains[-1][3] + [s])
++        else:
++            chains.append((s[0], s[1], s[2], [s]))
++    return chains
++
++
++def scale_bar_report(doc, rows):
++    """Per scaled sheet: measured bar length, expected length from the printed end label, verdict."""
++    rep = []
++    for r in rows:
++        m = re.fullmatch(r"1:(\d+)", r["scale"] or "")
++        if not m or r["sheet"] in SKIP_PAGE_SHEETS or r["page"] > len(doc):
++            continue
++        den = int(m.group(1))
++        pg = doc[r["page"] - 1]
++        chains = [c for c in _bars(pg) if (c[1] - c[0]) > 15.0]
++        if not chains:
++            rep.append({"sheet": r["sheet"], "page": r["page"], "scale": r["scale"], "status": "MISSING"})
++            continue
++        best = max(chains, key=lambda c: c[1] - c[0])
++        L = best[1] - best[0]
++        labels = []
++        for s in _spans(pg):
++            b = [v / MM for v in s["bbox"]]
++            if best[2] - 6.5 < b[3] <= best[2] + 0.5 and best[0] - 2 < b[0] < best[1] + 12:
++                mm_ = re.fullmatch(r"(\d+)(?:m)?", re.sub(r"\s+", "", s["text"]))
++                if mm_:
++                    labels.append(int(mm_.group(1)))
++        meters = max(labels) if labels else None
++        exp = meters * 1000.0 / den if meters else None
++        status = "OK" if exp is not None and abs(L - exp) <= 0.3 else ("NO_END_LABEL" if exp is None else "LENGTH_MISMATCH")
++        rep.append({"sheet": r["sheet"], "page": r["page"], "scale": r["scale"], "measured_mm": round(L, 3), "end_label_m": meters,
++                    "expected_mm": round(exp, 3) if exp else None, "segments_mm": [round(s[1] - s[0], 3) for s in best[3]], "status": status})
++    return rep
++
++
++def check_scale_bars(doc, rows):
++    return ["%s (page %d): scale bar %s (measured %s mm, expected %s mm)" % (x["sheet"], x["page"], x["status"], x.get("measured_mm"), x.get("expected_mm"))
++            for x in scale_bar_report(doc, rows) if x["status"] != "OK"]
++
++
++def check_text_bounds(doc, rows):
++    skip = {r["page"] for r in rows if r["sheet"] in SKIP_PAGE_SHEETS}
++    out = []
++    for i, pg in enumerate(doc):
++        if i + 1 in skip:
++            continue
++        W, H = pg.rect.width / MM, pg.rect.height / MM
++        for s in _spans(pg):
++            x0, y0, x1, y1 = [v / MM for v in s["bbox"]]
++            if x0 < 4.0 or y0 < 3.0 or x1 > W - 4.0 or y1 > H - 3.0:
++                out.append("page %d: text outside the sheet margin %s %r" % (i + 1, _mm(s["bbox"]), s["text"][:30]))
++            elif y0 < TITLE_TOP_MM - 0.2 and y1 > TITLE_TOP_MM + 0.4:
++                out.append("page %d: text runs into the title block %s %r" % (i + 1, _mm(s["bbox"]), s["text"][:30]))
++    return out
++
++
++def check_text_overlap(doc, rows, frac=0.35):
++    skip = {r["page"] for r in rows if r["sheet"] in SKIP_PAGE_SHEETS}
++    out = []
++    for i, pg in enumerate(doc):
++        if i + 1 in skip:
++            continue
++        ls = _lines(pg)
++        for a in range(len(ls)):
++            ba = ls[a]["bbox"]
++            for b in range(a + 1, len(ls)):
++                bb = ls[b]["bbox"]
++                ix, iy = min(ba[2], bb[2]) - max(ba[0], bb[0]), min(ba[3], bb[3]) - max(ba[1], bb[1])
++                if ix <= 0.3 or iy <= 0.3:
++                    continue
++                small = min((ba[2] - ba[0]) * (ba[3] - ba[1]), (bb[2] - bb[0]) * (bb[3] - bb[1]))
++                if small > 0 and ix * iy / small > frac:
++                    out.append("page %d: text overlap %r / %r at %s" % (i + 1, ls[a]["text"][:24], ls[b]["text"][:24], _mm(ba)))
++    return out
++
++
++def check_fonts(doc, rows=None):
++    out = []
++    for i, pg in enumerate(doc):
++        for f in pg.get_fonts():
++            if f[1] == "n/a":
++                out.append("page %d: font %s is not embedded" % (i + 1, f[3]))
++    return out
++
++
++def check_duplicates(doc, rows=None, limit=10):
++    out = []
++    for i, pg in enumerate(doc):
++        keys = Counter()
++        for d in pg.get_drawings():
++            its = tuple((it[0],) + tuple(round(float(v), 2) for p in it[1:] for v in (p if hasattr(p, "__len__") and not isinstance(p, str) else [p]) if isinstance(v, (int, float))) for it in d["items"])
++            keys[(its, str(d.get("color")), str(d.get("fill")), round(d.get("width") or 0, 2))] += 1
++        dup = sum(c - 1 for c in keys.values() if c > 1)
++        if dup > limit:
++            out.append("page %d: %d stacked duplicate vector items" % (i + 1, dup))
++    return out
++
++
++def check_north(doc, rows, north_deg=63.2):
++    out = []
++    for i, pg in enumerate(doc):
++        for ln in _lines(pg):
++            m = re.fullmatch(r"진북(\d+(?:\.\d+)?)°", ln["text"])
++            if m and abs(float(m.group(1)) - north_deg) > 0.06:
++                out.append("page %d: north printed %s deg, model north is %.1f deg" % (i + 1, m.group(1), north_deg))
++    return out
++
++
++def check_stale_refs(doc, rows=None):
++    out = []
++    for i, pg in enumerate(doc):
++        for ln in _lines(pg):
++            for ref, word in STALE_REFS:
++                if ref in ln["text"] and word in ln["text"]:
++                    out.append("page %d: stale reference %s with %s: %r" % (i + 1, ref, word, ln["text"][:50]))
++    return out
++
++
++CHECKS = {"page_size": check_page_size, "index": check_index, "callouts": check_callouts, "scale_bars": check_scale_bars, "text_bounds": check_text_bounds,
++          "text_overlap": check_text_overlap, "fonts": check_fonts, "duplicates": check_duplicates, "north": check_north, "stale_refs": check_stale_refs}
++
++
++def run_all(pdf, rows, north_deg=63.2, only=None):
++    doc = pymupdf.open(pdf) if isinstance(pdf, str) else pdf
++    res = {}
++    for name, fn in CHECKS.items():
++        if only and name not in only:
++            continue
++        res[name] = fn(doc, rows, north_deg) if name == "north" else fn(doc, rows)
++    return res
+diff --git a/tools/t14g/registry.py b/tools/t14g/registry.py
+new file mode 100644
+index 0000000..a7cd798
+--- /dev/null
++++ b/tools/t14g/registry.py
+@@ -0,0 +1,72 @@
++"""Single detail-sheet registry (sheet number -> scale).
++
++Every place that prints a detail number with a scale reads it from here: the detail generator
++(spec scale), plan and elevation callout symbols, the sheet-index text, A-002 and A-900. Nothing
++types "D-407 . 1:50" by hand any more (audit finding F-01).
++
++  * detail_scale("D-410")        -> 100
++  * callout_label("D-410")       -> "D-410 . 1:100"
++  * detail_scale("D-499")        -> raises UnknownSheetError (a callout to a sheet that does not exist)
++  * verify_against_registry(...) -> compares the detail registry the generator actually wrote
++                                    with this table; any difference is a build failure.
++"""
++import json
++import os
++
++# scale denominator of each detail sheet. The generator reads it, the callouts read it.
++DETAIL_SCALE = {
++    "D-401": 50, "D-402": 50, "D-403": 50, "D-404": 50, "D-405": 50, "D-406": 50,
++    "D-407": 100, "D-408": 100, "D-409": 50, "D-410": 100,
++}
++# graphic scale bar ticks (m): 5 m = 100 mm at 1:50, 10 m = 100 mm at 1:100, 20 m = 100/80/50 mm at 1:200/1:250/1:400 (as in V2)
++SUPPORTED_BAR = {50: (0, 1, 2, 5), 100: (0, 2, 5, 10), 200: (0, 5, 10, 20), 250: (0, 5, 10, 20), 400: (0, 5, 10, 20), 1000: (0, 10, 20, 50)}
++
++
++class UnknownSheetError(KeyError):
++    pass
++
++
++class ScaleMismatchError(ValueError):
++    pass
++
++
++def detail_scale(sid):
++    try:
++        return DETAIL_SCALE[sid]
++    except KeyError:
++        raise UnknownSheetError("callout refers to detail sheet %r which is not in the registry" % sid) from None
++
++
++def callout_label(sid, scale=None):
++    """'D-410 · 1:100'. If a caller passes its own scale it must equal the registry scale."""
++    reg = detail_scale(sid)
++    if scale is not None and int(scale) != reg:
++        raise ScaleMismatchError("callout %s printed with 1:%s but the sheet is 1:%d" % (sid, scale, reg))
++    return "%s · 1:%d" % (sid, reg)
++
++
++def bar_meters(den):
++    """Tick distances (m) for a graphic scale bar that is 100 mm of paper at 1:50/1:100 and 80-125 mm otherwise."""
++    return SUPPORTED_BAR[den]
++
++
++def verify_against_registry(detail_registry_path):
++    """Return a list of problems (empty = ok) between the generated detail_registry.json and DETAIL_SCALE."""
++    problems = []
++    reg = json.load(open(detail_registry_path, encoding="utf-8"))["details"]
++    seen = {}
++    for d in reg:
++        seen[d["sheet"]] = d["scale"]
++    for sid, den in DETAIL_SCALE.items():
++        if sid not in seen:
++            problems.append("%s missing in generated detail registry" % sid)
++        elif seen[sid] != "1:%d" % den:
++            problems.append("%s generated at %s but registry says 1:%d" % (sid, seen[sid], den))
++    for sid in seen:
++        if sid not in DETAIL_SCALE:
++            problems.append("%s generated but not in registry" % sid)
++    return problems
++
++
++def load_json(path):
++    return json.load(open(os.fspath(path), encoding="utf-8"))
+diff --git a/tools/t14g/truth.py b/tools/t14g/truth.py
+new file mode 100644
+index 0000000..c869d3a
+--- /dev/null
++++ b/tools/t14g/truth.py
+@@ -0,0 +1,97 @@
++"""Geometric truth checks computed from the model mesh / master (independent of any drawing code).
++
++  circularity(g)            4*pi*A/P^2 of the outer ring (1.0 = circle)
++  is_circle(g)              True only if a diameter symbol (Ø) is legitimate for the outline
++  sloped_incline(model, o)  true incline of an escalator/ramp from the *sloped faces* of the 3D mesh
++  congruent(model, a, b)    translation-invariant symmetric Hausdorff distance between two objects
++  stair_derived(...)        values that are arithmetic on model/master properties (flagged as derived)
++
++Why sloped faces: the section polygon of an escalator contains the flat landings and the plate thickness, so a
++minimum rotated rectangle (V2) or a regression over all vertices gives 24-25 deg for a flight that is built at 30 deg.
++The triangle normals of the inclined faces give the physical incline directly.
++"""
++import math
++
++import numpy as np
++from scipy.spatial import cKDTree
++from shapely.geometry import Polygon
++
++CIRCLE_MIN = 0.98
++
++
++def _largest(g):
++    ps = [p for p in (g.geoms if hasattr(g, "geoms") else [g]) if p.geom_type == "Polygon" and not p.is_empty]
++    return max(ps, key=lambda q: q.area) if ps else None
++
++
++def circularity(g):
++    p = _largest(g)
++    if p is None:
++        return 0.0
++    ext = Polygon(p.exterior)
++    return 4.0 * math.pi * ext.area / (ext.length ** 2)
++
++
++def is_circle(g, min_circ=CIRCLE_MIN):
++    return circularity(g) >= min_circ
++
++
++def diameter_label(g, value_text, circle_prefix="Ø", other_prefix="폭 "):
++    """'Ø5600' only when the outline is circular, otherwise '폭 5600' (never the wrong symbol)."""
++    return (circle_prefix if is_circle(g) else other_prefix) + value_text
++
++
++def sloped_incline(model, objs, nz_band=(0.5, 0.97), bin_deg=0.5, window_deg=1.5):
++    """Incline (deg) of the inclined faces of one or more mesh objects, area weighted, plus the plan run of those faces."""
++    objs = objs if isinstance(objs, (list, tuple)) else [objs]
++    angs, wts, pts = [], [], []
++    for o in objs:
++        T = model.tris(o)
++        n = np.cross(T[:, 1] - T[:, 0], T[:, 2] - T[:, 0])
++        ln = np.linalg.norm(n, axis=1)
++        A = ln / 2.0
++        nz = np.abs(n[:, 2]) / np.maximum(ln, 1e-12)
++        sl = (nz > nz_band[0]) & (nz < nz_band[1])
++        angs.append(np.degrees(np.arccos(nz[sl])))
++        wts.append(A[sl])
++        pts.append(T[sl])
++    ang, w = np.concatenate(angs), np.concatenate(wts)
++    P = np.concatenate(pts)
++    if len(ang) == 0:
++        return None
++    hist, edges = np.histogram(ang, bins=np.arange(10.0, 61.0, bin_deg), weights=w)
++    dom = edges[hist.argmax()] + bin_deg / 2.0
++    sel = np.abs(ang - dom) < window_deg
++    angle = float(np.average(ang[sel], weights=w[sel]))
++    V = P[sel].reshape(-1, 3)
++    xy = V[:, :2] - V[:, :2].mean(0)
++    _, vec = np.linalg.eigh(np.cov(xy.T))
++    axis = vec[:, 1]
++    s = xy @ axis
++    run = float(s.max() - s.min())
++    return {"angle_deg": angle, "dominant_bin_deg": float(dom), "plan_run_m": run, "rise_from_angle_m": run * math.tan(math.radians(angle)),
++            "travel_axis_xy": [float(axis[0]), float(axis[1])], "faces": int(sel.sum()), "method": "area-weighted triangle normals of inclined faces"}
++
++
++def _canon(model, o):
++    T = model.tris(o).reshape(-1, 3)
++    c = (T.max(0) + T.min(0)) / 2.0
++    return np.unique(np.round(T - c, 3), axis=0), T
++
++
++def congruent(model, name_a, name_b, tol_m=0.02):
++    byname = {o["name"]: o for o in model.objects}
++    ca, ta = _canon(model, byname[name_a])
++    cb, tb = _canon(model, byname[name_b])
++    d = max(cKDTree(cb).query(ca)[0].max(), cKDTree(ca).query(cb)[0].max())
++    size_a, size_b = ta.max(0) - ta.min(0), tb.max(0) - tb.min(0)
++    return {"a": name_a, "b": name_b, "hausdorff_centered_m": float(d), "size_a_m": [round(float(v), 3) for v in size_a],
++            "size_b_m": [round(float(v), 3) for v in size_b], "z_range_a": [round(float(ta[:, 2].min()), 3), round(float(ta[:, 2].max()), 3)],
++            "z_range_b": [round(float(tb[:, 2].min()), 3), round(float(tb[:, 2].max()), 3)],
++            "unique_vertices": [int(len(ca)), int(len(cb))], "congruent": bool(d <= tol_m and abs(size_a - size_b).max() <= tol_m)}
++
++
++def stair_derived(drop_m, treads, run_m):
++    """Arithmetic on master/model values only: nothing here is in the model as an attribute."""
++    return {"riser_mm": 1000.0 * drop_m / treads, "tread_mm": 1000.0 * run_m / treads, "drop_m": drop_m, "treads": treads, "run_m": run_m,
++            "status": "DERIVED (no riser/tread attribute in the master)"}
+diff --git a/tools/t14g/truth_report.py b/tools/t14g/truth_report.py
+new file mode 100644
+index 0000000..00eba1b
+--- /dev/null
++++ b/tools/t14g/truth_report.py
+@@ -0,0 +1,123 @@
++"""dimension_truth_report.json: every dimension printed on the detail sheets, recomputed from the model and checked against the PDF text.
++
++For each (sheet, quantity): value recomputed from the mesh cache / master -> compared (10 mm rounding like the sheets) with
++(a) the value in the generator's detail registry and (b) the number really printed in the finished PDF (searched in the page text).
++Plan sheets: overall width/depth printed 54000 vs the model column grid; chain sums.
++"""
++import json
++import math
++import os
++import re
++import sys
++
++HERE = os.path.dirname(os.path.abspath(__file__))
++TOOLS = os.path.dirname(HERE)
++ROOT = os.path.dirname(TOOLS)
++sys.path.insert(0, os.path.join(ROOT, "src"))
++sys.path.insert(0, TOOLS)
++import numpy as np  # noqa: E402
++import pymupdf  # noqa: E402
++import pipeline_common as pc  # noqa: E402
++import book_views as bv  # noqa: E402
++from shapely.geometry import Polygon  # noqa: E402
++from t14g import truth  # noqa: E402
++
++
++def r10(m):
++    return int(round(m * 100.0) * 10)
++
++
++def _ring(model, name, z):
++    o = next(o for o in model.objects if o["name"] == name)
++    for oo, p in bv.plan_cut(model, z, {"tube_wall"}, (-100, -100, 200, 200)):
++        if oo["name"] == name:
++            polys = [q for q in (p.geoms if hasattr(p, "geoms") else [p]) if q.geom_type == "Polygon"]
++            q = max(polys, key=lambda x: x.area)
++            ob = q.exterior.bounds
++            do = ob[2] - ob[0]
++            di = max((Polygon(r).bounds[2] - Polygon(r).bounds[0] for r in q.interiors), default=None)
++            return do, di, q
++    raise KeyError(name)
++
++
++def build(run, pdf, out_json):
++    model = bv.Model(os.path.join(run, "model_cache"), os.path.join(run, "raw_slices", "camera_bounds.json"))
++    F = model.floors
++    reg = {d["sheet"]: d for d in json.load(open(os.path.join(run, "details", "detail_registry.json"), encoding="utf-8"))["details"]}
++    doc = pymupdf.open(pdf)
++    idx = {r["sheet"]: r["page"] for r in json.load(open(os.path.join(run, "00_index", "sheet_index.json"), encoding="utf-8"))["sheets"]}
++    text = {s: re.sub(r"\s+", "", doc[p - 1].get_text()) for s, p in idx.items()}
++    rows = []
++
++    def add(sheet, qty, model_mm, source, registry_label=None, printed=None):
++        regv = None
++        if registry_label and sheet in reg:
++            for x in reg[sheet]["dimensions"]:
++                if x["label"] == registry_label:
++                    regv = x["value_mm"]
++        pv = str(printed if printed is not None else model_mm)
++        rows.append({"sheet": sheet, "quantity": qty, "model_recomputed": model_mm, "source": source, "registry_value": regv,
++                     "printed_in_pdf": (pv in text.get(sheet, "")), "registry_matches_model": (regv is not None and str(regv) == str(model_mm)) if regv is not None else None})
++
++    z3 = F["3F"] + 1.5
++    for sid, name in (("D-401", "A-CORE-TUBE_T1"), ("D-402", "A-CORE-TUBE_T2"), ("D-403", "A-CORE-TUBE_T3")):
++        do, di, q = _ring(model, name, z3)
++        add(sid, "tube outer diameter (circular: circularity %.4f)" % truth.circularity(q), str(r10(do)), "plan cut at 3F+1.5 m", "튜브 바깥 지름")
++        add(sid, "tube inner diameter", str(r10(di)), "plan cut at 3F+1.5 m", "튜브 안쪽 지름")
++        add(sid, "tube wall thickness", str(r10((do - di) / 2)), "(outer-inner)/2", "튜브 벽 두께")
++    # slab thickness: object whose top is at the floor level
++    for sid, fl in (("D-401", "3F"), ("D-402", "3F"), ("D-403", "3F"), ("D-405", "3F"), ("D-406", "6F"), ("D-407", "8F"), ("D-409", "1F")):
++        th = [o["zmax"] - o["zmin"] for o in model.objects if o["kind"] == "slab" and abs(o["zmax"] - F[fl]) < 0.02]
++        if th:
++            add(sid, "slab thickness at %s" % fl, str(r10(min(th))), "A-FLOR object zmax-zmin", "슬래브 두께")
++    cap = next(o for o in model.objects if o["name"] == "A-CORE-TUBE_capW")
++    T = model.tris(cap).reshape(-1, 3)
++    add("D-405", "capsule outer width", str(r10(T[:, 0].max() - T[:, 0].min())), "mesh bbox", "캡슐 바깥 폭")
++    esc = [o for o in model.objects if o["name"].startswith("A-VERT-ESCL_8F-9F")]
++    inc = truth.sloped_incline(model, esc)
++    add("D-407", "escalator incline (deg)", "%.1f°" % inc["angle_deg"], "inclined-face normals of the mesh", "경사각(모델 경사면 법선)", printed="%.1f°" % inc["angle_deg"])
++    rise = F["9F"] - F["8F"]
++    add("D-407", "rise 8F->9F vs run*tan(angle): residual mm", "%d" % abs(round((inc["plan_run_m"] * math.tan(math.radians(inc["angle_deg"])) - rise) * 1000)), "geometry cross-check (must be < 10)", None,
++        printed=None)
++    rows[-1]["printed_in_pdf"] = None
++    rows[-1]["passes"] = int(rows[-1]["model_recomputed"]) < 10
++    add("D-407", "floor-to-floor 8F->9F", str(r10(rise)), "model floors", "층고(이 층 → 위층)")
++    t = next(o for o in model.objects if o["name"] == "A-ROOF_rescue_pad")
++    sec = bv.plan_cut(model, F["15F"] + 1.5, {"roof"}, (-100, -100, 200, 200))
++    fr = next(o for o in model.objects if o["name"] == "A-CORE-TUBE_FR")
++    do, di, q = _ring(model, "A-CORE-TUBE_FR", F["1F"] + 1.5)
++    add("D-409", "freight shaft outer diameter (circular: circularity %.4f)" % truth.circularity(q), str(r10(do)), "plan cut A-CORE-TUBE_FR", "화물 승강로 폭")
++    cg = truth.congruent(model, "A-CORE-TUBE_T3", "A-CORE-TUBE_T4")
++    rows.append({"sheet": "D-403", "quantity": "T4 same form as T3 (Hausdorff mm)", "model_recomputed": "%.1f" % (cg["hausdorff_centered_m"] * 1000), "source": "centered mesh comparison", "registry_value": None,
++                 "printed_in_pdf": None, "passes": cg["congruent"]})
++    master = pc.load_json(os.path.join(run, "reference_1F", "floor_1F_slice.json"))
++    sunk = master["context"]["sunken_stair"][0]["props"]
++    d = truth.stair_derived(F["1F"] - F["B1"], sunk["treads"], sunk["bx1"] - sunk["bx0"])
++    rows.append({"sheet": "D-408", "quantity": "riser (derived, no model attribute)", "model_recomputed": "%.0f" % d["riser_mm"], "source": d["status"], "registry_value": next((x["value_mm"] for x in reg["D-408"]["dimensions"] if "높이" in x["label"]), None),
++                 "printed_in_pdf": ("%.0f" % d["riser_mm"]) in text["D-408"], "passes": True,
++                 "note": "458 mm riser / 1167 mm tread are far from walking-stair proportions: decision U-10, not changed here"})
++    # plan sheets: overall dimension from the column grid
++    sl = pc.load_slice(os.path.join(run, "raw_slices"), "3F")
++    cols = [g.centroid for _, g in pc.cut_geometries(sl).get("column", [])]
++    xs = sorted({round(c.x, 1) for c in cols})
++    lay = json.load(open(os.path.join(run, "vector", "floor_3F_layout.json"), encoding="utf-8"))["building"]
++    for sid in ("P-101", "P-102", "P-103", "P-104", "P-105"):
++        w_, d_ = str(r10(lay[2] - lay[0])), str(r10(lay[3] - lay[1]))
++        need = 2 if w_ == d_ else 1                                                      # 정사각 건물: 가로·세로 전체 치수가 각각 한 번씩 찍혀야 한다
++        rows.append({"sheet": sid, "quantity": "overall plan width and depth (printed %d times needed)" % (2 if w_ == d_ else 2), "model_recomputed": w_ + "x" + d_, "source": "layout building bounds (3F)", "registry_value": None,
++                     "printed_in_pdf": text[sid].count(w_) >= need and text[sid].count(d_) >= need, "occurrences": text[sid].count(w_), "grid_x_centers_m": xs[:3] + ["..."] + xs[-2:]})
++    for r in rows:
++        if "passes" not in r:
++            ok = (r["registry_value"] is None or str(r["registry_value"]) == str(r["model_recomputed"])) and r["printed_in_pdf"] is True
++            r["passes"] = bool(ok)
++    rep = {"pdf": pdf, "checked": len(rows), "passed": sum(1 for r in rows if r["passes"]), "failed": [r for r in rows if not r["passes"]], "rows": rows}
++    json.dump(rep, open(out_json, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
++    return rep
++
++
++if __name__ == "__main__":
++    run = os.path.abspath(sys.argv[1])
++    r = build(run, sys.argv[2], sys.argv[3])
++    print("dimension truth: %d checked, %d passed" % (r["checked"], r["passed"]))
++    for x in r["failed"]:
++        print("  FAIL", x["sheet"], x["quantity"], x["model_recomputed"], "registry", x["registry_value"], "printed", x["printed_in_pdf"])

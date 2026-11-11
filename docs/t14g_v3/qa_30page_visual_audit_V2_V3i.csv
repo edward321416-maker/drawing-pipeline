@@ -1,0 +1,31 @@
+﻿page,sheet,V2_verdict,V3interim_verdict,defects_high,defects_medium,defects_low,items_ISSUE_V3i,top_defects
+1,A-000,PASS,PASS,0,0,4,2,
+2,A-001,PASS,PASS,0,0,3,1,
+3,A-002,FAIL,FAIL,0,2,4,5,
+4,A-003,HOLD,HOLD,0,2,9,8,
+5,P-101,FAIL,FAIL,0,5,9,6,
+6,P-102,FAIL,FAIL,1,6,5,6,p06-01[high] Detail callout 407 is labelled 'D-407 · 1:50' but D-407 (escalator opening enlargement) is a 1:100 sheet in th
+7,P-103,FAIL,FAIL,0,2,8,4,
+8,P-104,FAIL,FAIL,0,3,3,7,
+9,P-105,FAIL,HOLD,1,3,4,7,p09-01[high] Orange callout reads 'D-410 . 1:50' but registry/title block of D-410 is 1:100 (fixed in V3i: 'D-410 . 1:100')
+10,E-201,FAIL,HOLD,1,2,6,5,p10-01[high] E-201: orange callout 'D-410 . 1:50' but registry D-410 = 1:100 (wrong scale text). V3i reads 'D-410 . 1:100' 
+11,E-202,FAIL,HOLD,1,2,6,5,p11-01[high] E-202: orange callout 'D-410 . 1:50' but registry D-410 = 1:100 (wrong scale text). V3i reads 'D-410 . 1:100' 
+12,E-203,FAIL,HOLD,1,2,6,5,p12-01[high] E-203: orange callout 'D-410 . 1:50' but registry D-410 = 1:100 (wrong scale text). V3i reads 'D-410 . 1:100' 
+13,E-204,FAIL,HOLD,1,1,9,6,p13-01[high] Callout text reads 'D-410 · 1:50' but sheet D-410 (page 28) is registered at 1:100. V3i rewrites it to 'D-410 
+14,S-301,FAIL,FAIL,0,3,5,6,
+15,S-302,FAIL,FAIL,1,2,2,6,p15-01[high] Section is clipped by the title block: EV shaft walls and outlines run down to -16.50 m (y=273.5 mm) but the t
+16,S-303,FAIL,FAIL,1,3,2,6,p16-01[high] Clipped by the title block: the EV shaft outline seen beyond the cut (x 182-193 mm) continues to y=273.5 mm (-
+17,S-304,FAIL,FAIL,1,3,1,7,p17-02[high] Clipped by the title block: two shaft outlines (x 142-153 and 237-248 mm) run to y=273.5 mm (-16.50 m) under t
+18,S-305,HOLD,HOLD,0,2,1,6,
+19,D-401,FAIL,FAIL,1,1,9,5,p19-01[high] Wrong slab thickness: 't=400' and table value 400 while slabs are drawn 500 mm. Printed 't=400' dimension and 
+20,D-402,FAIL,FAIL,1,2,4,4,p20-01[high] Wrong slab thickness 't=400' / table 400 (slabs at 4F/5F are drawn 10.01 mm = 500 mm; lowest slab clipped at t
+21,D-403,FAIL,FAIL,1,3,6,7,p21-01[high] Wrong slab thickness 't=400' / table 400 (4F/5F slab stubs at x 214-224 are 10.01 mm = 500 mm; 3F slab clipped
+22,D-404,HOLD,HOLD,0,3,4,3,
+23,D-405,FAIL,FAIL,1,1,6,5,p23-01[high] Wrong slab thickness 't=400' / table 400 (4F/5F stubs 10.01 mm = 500 mm; 3F stub clipped to 8.00 mm at y=254).
+24,D-406,FAIL,FAIL,1,1,7,6,"p24-01[high] Wrong slab thickness 't=400' / table 400: 7F and 8F slabs are drawn 10.02 / 10.01 mm = 500 mm, the 6F slab is "
+25,D-407,FAIL,FAIL,2,2,5,7,"p25-01[high] Printed escalator incline 25.0 deg (section label and '경사각 25.0°' table row at 112.5-117.8 x 237.7-240.6) does | p25-04[high] Incoming callout on P-102 (page 6, 225.7-237.3 x 128.7-130.8) prints 'D-407 · 1:50' but D-407 is a 1:100 sheet"
+26,D-408,FAIL,FAIL,2,3,2,8,"p26-01[high] The drawn stair rectangle with 12 treads extends beyond the master's sunken boundary: the dashed boundary cuts | p26-02[high] Height difference and step count are not dimensioned: only the text '12단 · 하향 +u · FL -5.5 m' exists, no dimen"
+27,D-409,FAIL,FAIL,1,3,3,7,p27-01[high] 't=400' slab thickness (and table row '슬래브 두께 400 · 단면 절단 층판 폭') is wrong: the 1F slab is cut off by the secti
+28,D-410,FAIL,FAIL,2,2,2,6,p28-01[high] 't=400' / table '슬래브 두께 400' is a clipping artefact: the 15F slab polygon ends exactly on the section frame bo | p28-04[high] Callouts to D-410 on P-105 (p9) and E-201..E-204 (p10-13) print '1:50' but D-410 is 1:100. Fixed in V3i.
+29,A-900,PASS,PASS,0,0,2,1,
+30,A-901,FAIL,FAIL,1,2,1,3,p30-01[high] 6F program cell is truncated: 'F&B 496.9; garden 1198.7; 판매 7' (word '판매7' at 142.9-148.6 x 66.7-69.3). Source

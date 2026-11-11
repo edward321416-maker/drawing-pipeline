@@ -1,0 +1,46 @@
+{
+ "pytest_t14g_and_repo": {
+  "tests": 86,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "time_s": 75.887
+ },
+ "historical_book_qa": {
+  "passed": 63,
+  "total": 63,
+  "failed": 0
+ },
+ "independent_pdf_checks": {
+  "page_size": 0,
+  "index": 0,
+  "callouts": 0,
+  "scale_bars": 0,
+  "text_bounds": 0,
+  "text_overlap": 0,
+  "fonts": 0,
+  "duplicates": 0,
+  "north": 0,
+  "stale_refs": 0
+ },
+ "scale_bars": {
+  "checked": 25,
+  "ok": 25
+ },
+ "dimension_truth": {
+  "checked": 28,
+  "passed": 28
+ },
+ "furniture_geometry": {
+  "3F": true,
+  "8F": true,
+  "10F": true,
+  "13F": true,
+  "15F": true,
+  "distinct_programs": true
+ },
+ "mutations": {
+  "detected": 13,
+  "total": 13
+ }
+}

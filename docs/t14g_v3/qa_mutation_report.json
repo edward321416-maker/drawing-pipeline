@@ -1,0 +1,112 @@
+{
+ "pdf": "output/C_T14G_V3_run/book/drawing_set_candidate_v3.pdf",
+ "clean_total_findings": 0,
+ "mutations": [
+  {
+   "mutation": "wrong detail callout scale (D-410 1:50)",
+   "expected_check": "callouts",
+   "clean_findings": 0,
+   "mutated_findings": 1,
+   "detected": true,
+   "error": null
+  },
+  {
+   "mutation": "callout to a sheet that does not exist",
+   "expected_check": "callouts",
+   "clean_findings": 0,
+   "mutated_findings": 1,
+   "detected": true,
+   "error": null
+  },
+  {
+   "mutation": "graphic scale bar missing",
+   "expected_check": "scale_bars",
+   "clean_findings": 0,
+   "mutated_findings": 1,
+   "detected": true,
+   "error": null
+  },
+  {
+   "mutation": "graphic scale bar wrong physical length",
+   "expected_check": "scale_bars",
+   "clean_findings": 0,
+   "mutated_findings": 1,
+   "detected": true,
+   "error": null
+  },
+  {
+   "mutation": "legend text clipped by the sheet edge",
+   "expected_check": "text_bounds",
+   "clean_findings": 0,
+   "mutated_findings": 1,
+   "detected": true,
+   "error": null
+  },
+  {
+   "mutation": "drawing text running into the title block",
+   "expected_check": "text_bounds",
+   "clean_findings": 0,
+   "mutated_findings": 1,
+   "detected": true,
+   "error": null
+  },
+  {
+   "mutation": "referenced sheet removed from the PDF",
+   "expected_check": "index",
+   "clean_findings": 0,
+   "mutated_findings": 8,
+   "detected": true,
+   "error": null
+  },
+  {
+   "mutation": "stacked duplicate vector items",
+   "expected_check": "duplicates",
+   "clean_findings": 0,
+   "mutated_findings": 1,
+   "detected": true,
+   "error": null
+  },
+  {
+   "mutation": "wrong north angle printed",
+   "expected_check": "north",
+   "clean_findings": 0,
+   "mutated_findings": 1,
+   "detected": true,
+   "error": null
+  },
+  {
+   "mutation": "non-embedded font",
+   "expected_check": "fonts",
+   "clean_findings": 0,
+   "mutated_findings": 1,
+   "detected": true,
+   "error": null
+  },
+  {
+   "mutation": "overlapping text lines",
+   "expected_check": "text_overlap",
+   "clean_findings": 0,
+   "mutated_findings": 1,
+   "detected": true,
+   "error": null
+  },
+  {
+   "mutation": "stale cross reference (A-002 for floor heights)",
+   "expected_check": "stale_refs",
+   "clean_findings": 0,
+   "mutated_findings": 1,
+   "detected": true,
+   "error": null
+  },
+  {
+   "mutation": "wrong page size",
+   "expected_check": "page_size",
+   "clean_findings": 0,
+   "mutated_findings": 1,
+   "detected": true,
+   "error": null
+  }
+ ],
+ "detected": 13,
+ "total": 13
+}
