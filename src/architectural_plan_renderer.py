@@ -27,6 +27,7 @@ import pipeline_common as pc  # noqa: E402
 import monograph_plan_renderer as mg  # noqa: E402
 import furniture_library as FL
 import upper_layouts as UL
+import layouts_v3 as L3
 import program_planner as PP
 import line_hygiene as LH  # noqa: E402
 
@@ -104,12 +105,19 @@ class TCanvas(mg.Canvas):
         super().dots(layer, pts, r_mm, color, opacity)
 
 
-def draw_furniture(cv, items):
+def draw_furniture(cv, items, dotted="", dashed="", dashdot=""):
     """가구 그리기: 몸체는 흰색 불투명 채움(#FFFFFF) + 5단계 윤곽(0.08 mm #666666)이라 아래 타일·점묘이 비치지 않는다.
-    큰 몸체부터 그린 뒤 세부선, 마지막에 식재선(6단계)을 얹는다."""
+    V3 종류: zone(점선 바닥 표시, 가장 먼저) · counter(계산대·카운터, 회색 채움 + 3단계 윤곽) · route_v(방문자 동선, 긴 점선) · route_o(운영 동선, 일점쇄선).
+    큰 몸체부터 그린 뒤 세부선, 마지막에 식재선(6단계)과 동선을 얹는다."""
+    for g, k in items:
+        if k == "zone":
+            cv.stroke_poly("furn", g, 0.05, "#CCCCCC", extra=dotted)
     bodies = sorted([g for g, k in items if k == "body"], key=lambda g: -g.area)
     for g in bodies:
         cv.stroke_poly("furn", g, 0.08, "#666666", fill="#FFFFFF")
+    for g, k in items:
+        if k == "counter":
+            cv.stroke_poly("furn", g, 0.12, "#444", fill="#D9D9D9")
     for g, k in items:
         if k == "line":
             for ln in lines_of(g):
@@ -118,6 +126,10 @@ def draw_furniture(cv, items):
         if k == "foliage":
             for ln in lines_of(g):
                 cv.stroke_line("furn", list(ln.coords), 0.05, "#AAAAAA")
+    for g, k in items:
+        if k in ("route_v", "route_o"):
+            for ln in lines_of(g):
+                cv.stroke_line("furn", list(ln.coords), 0.07 if k == "route_v" else 0.05, "#666666" if k == "route_v" else "#CCCCCC", extra=dashed if k == "route_v" else dashdot)
 
 
 def lines_of(g):
@@ -990,7 +1002,7 @@ def program_check(plan, qa_, chips, furn_all, drawn_cols, program):
                                                 "note": "바닥 채움은 래스터 잔여 띠를 뺀 벡터 복도다. 구획 면적·범례 수치는 zone 폴리곤(V2-B와 동일)"}}
 
 
-def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, tag="", side="L", top=False, program=None, final_dir=None, name=None, clean=False, notes=(), v2layout=False, bare=False):
+def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, tag="", side="L", top=False, program=None, final_dir=None, name=None, clean=False, notes=(), v2layout=False, bare=False, v3layout=False):
     raw = os.path.join(out, "raw_slices")
     sl = pc.load_slice(raw, floor)
     lay = pc.load_json(os.path.join(out, "vector", "floor_%s_layout.json" % floor))
@@ -1165,8 +1177,10 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, 
     svc_bays, cap_plan, plan, plan_qa = [], [], None, None
     core_union_v2 = U([g for z, g, kd in zones if kd in ("core", "restroom")] + [g for it, g in walls_all if it["kind"] == "core_wall"])
     ctx_v2 = {"plaza": next((shell_of(g) for it, g in tubes if ("빛" in it["name_ko"] or re.search("T2", it["name_ko"]))), None),
-              "tubes": [{"c": shell_of(g).centroid, "r": rad_of(shell_of(g))} for it, g in tubes if "캡슐" not in it["name_ko"] and "샤프트" not in it["name_ko"] and ("T" in it["name_ko"] or "튜브" in it["name_ko"]) and rad_of(shell_of(g)) > 1.6]}
+              "cores": core_union_v2,
+              "tubes": [{"c": shell_of(g).centroid, "r": rad_of(shell_of(g)), "name": it["name_ko"]} for it, g in tubes if "캡슐" not in it["name_ko"] and "샤프트" not in it["name_ko"] and ("T" in it["name_ko"] or "튜브" in it["name_ko"]) and rad_of(shell_of(g)) > 1.6]}
     skipped_furn = []                                                                    # 상층에서 모델에 없는 배치를 지어내지 않아 가구를 만들지 않은 구역
+    layout_meta = []
     hall_net = None
     light_c = next((shell_of(g).centroid for it, g in tubes if "빛" in it["name_ko"] or re.search("T2", it["name_ko"])), None)
     for z, g, kd in zones:
@@ -1264,11 +1278,13 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, 
                 bx_, by_ = mg.at(c_, u_, v_, L_ * 0.27, bsgn * W_ * 0.22)
                 if g.buffer(-0.9).contains(Point(bx_, by_)):
                     furn_items += FL.bistro_cluster(bx_, by_, 3)
-        elif kd == "program" and v2layout and level_s:                                  # V2: 프로그램 성격에 맞는 가구 전략(층마다 다름)
+        elif kd == "program" and (v2layout or v3layout) and level_s:                    # V2/V3: 프로그램 성격에 맞는 가구 전략(층마다 다름)
             hard_ob = U([c_.buffer(0.2) for c_ in cols] + [shell_tubes.buffer(0.5), core_union_v2.buffer(0.5), wall_union.buffer(0.3), model_only_union.buffer(0.4)])
             soft_ob = U([c_.buffer(0.9) for c_ in cols] + [shell_tubes.buffer(1.2), core_union_v2.buffer(1.2), wall_union.buffer(0.6), model_only_union.buffer(0.8)])       # 가구용 동선 여유(1층용 obst보다 가볍다)
-            items_v2 = UL.layout(z["name_ko"], region, soft_ob, hard_ob, rng, floor, ctx_v2)
+            items_v2 = (L3 if v3layout else UL).layout(z["name_ko"], region, soft_ob, hard_ob, rng, floor, ctx_v2)
             furn_items += items_v2
+            if getattr(items_v2, "meta", None):
+                layout_meta.append(items_v2.meta)
             if not items_v2:
                 skipped_furn.append(z["name_ko"])
         elif kd == "program":
@@ -1326,9 +1342,13 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, 
             furn_items += FL.bistro_cluster(sx_, sy_, 4)
 
     col_zone = U([c_.buffer(0.3) for c_ in drawn_cols])
-    furn_items = [(g_, k_) for g_, k_ in furn_items if not g_.intersects(col_zone) and not g_.intersects(shell_tubes)]
-    furn_all = [g_ for g_, k_ in furn_items if k_ == "body"]
-    draw_furniture(cv, furn_items)
+    route_items = [it_ for it_ in furn_items if it_[1] in ("route_v", "route_o")]                 # 동선은 기둥·튜브에 걸쳐도 버리지 않고 그 부분만 자른다
+    keep_ = col_zone.union(shell_tubes)
+    route_items = [(it_[0].difference(keep_), it_[1]) for it_ in route_items]
+    furn_items = [it_ for it_ in furn_items if it_[1] not in ("route_v", "route_o") and not it_[0].intersects(col_zone) and not it_[0].intersects(shell_tubes)] + route_items
+    furn_all = [g_ for g_, k_ in furn_items if k_ in ("body", "counter")]
+    draw_furniture(cv, furn_items, dotted='stroke-dasharray="%.3f,%.3f"' % (1 * k, 1.2 * k), dashed='stroke-dasharray="%.3f,%.3f"' % (4 * k, 1.5 * k),
+                   dashdot='stroke-dasharray="%.3f,%.3f,%.3f,%.3f"' % (3 * k, 1 * k, 0.5 * k, 1 * k))
     if program:
         gxs, gys = sorted({round(g.centroid.x, 2) for g in cols}), sorted({round(g.centroid.y, 2) for g in cols})
         grid_u_ = U([LineString([(x_, by0 - 2.0), (x_, by1 + 2.0)]) for x_ in gxs] + [LineString([(bx0 - 2.0, y_), (bx1 + 2.0, y_)]) for y_ in gys])
@@ -1699,7 +1719,9 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, 
              "canvas_matches_A3": abs(cv.w - A3[0] * k) < 1e-6 and abs(cv.h - A3[1] * k) < 1e-6, "scale_bar_10m_mm": 10 * 1000.0 / scale,
              "legend_items": len(legend), "legend": {str(num_of[n]): n for n in legend}, "numbers": len(nums), "numbers_on_elevators_or_shafts": elev_numbers,
              "small_bubbles_core_restroom": numbered_small, "entrance_boxes_drawn": 0, "door_gaps_punched": len(doors),
-             "furniture_items": len(furn_all), "furniture_touching_column": len(fcol), "furniture_touching_tube": len(ftub), "numbers_colliding_with_furniture": collide,
+             "furniture_items": len(furn_all), "layout_meta": layout_meta,
+             "furniture_v3": [{"kind": it_[1], "type": getattr(it_, "ftype", None), "wkt": it_[0].wkt} for it_ in furn_items if getattr(it_, "ftype", None)],
+             "furniture_touching_column": len(fcol), "furniture_touching_tube": len(ftub), "numbers_colliding_with_furniture": collide,
              "plan_text_all_numeric": all(t.strip().isdigit() for t in plan_texts), "symbol_texts": sym_texts,
              "shaft_X_inside_circle": all(sh_in) if sh_in else None, "curtain_wall_segments": cl_count, "curtain_doors": len(door_defs), "site": site_stats,
              "window_world": [round(v, 4) for v in cv.b], "tag": tag, "model_only_outlines_drawn": model_only_drawn,
@@ -1783,6 +1805,7 @@ def main():
     ap.add_argument("--final-dir", default=None, help="V2 산출물 폴더")
     ap.add_argument("--name", default=None, help="V2 산출물 파일 이름(확장자 제외)")
     ap.add_argument("--v2layout", action="store_true", help="상층 프로그램별 가구 전략(upper_layouts)")
+    ap.add_argument("--v3layout", action="store_true", help="상층 프로그램별 가구·동선 계획 V3(layouts_v3): 유형 있는 가구 + 방문자/운영 동선")
     ap.add_argument("--bare", action="store_true", help="범례·축척 막대·북쪽 표시를 생략(도면집 시트가 자체 패널을 둔다)")
     ap.add_argument("--note", action="append", default=[], help="범례 아래에 쓸 줄(반복 지정). 도면집 시트 번호·적용 층·층간 차이")
     ap.add_argument("--cleanline", action="store_true", help="C-T13A 선 정리: 호·베지어 경로, 조경·구획 경계 정리, 시각 순위 조정")
@@ -1804,11 +1827,11 @@ def main():
             for ci_, xc in enumerate(xs_):
                 n_ += 1
                 render(out_, a.floor, scale, a.png_width, a.seed, a.crops and n_ == 1, center=(xc, yc), tag="_t%d" % n_,
-                       side="L" if ci_ == 0 else "R", top=(ri_ == 0), final_dir=a.final_dir, clean=a.cleanline, notes=tuple(a.note), v2layout=a.v2layout, bare=a.bare)
+                       side="L" if ci_ == 0 else "R", top=(ri_ == 0), final_dir=a.final_dir, clean=a.cleanline, notes=tuple(a.note), v2layout=a.v2layout, bare=a.bare, v3layout=a.v3layout)
     else:
         if scale == 100:
             print("1:100 단일 시트")
-        render(out_, a.floor, scale, a.png_width, a.seed, a.crops, program=a.program, final_dir=a.final_dir, name=a.name, clean=a.cleanline, notes=tuple(a.note), v2layout=a.v2layout, bare=a.bare)
+        render(out_, a.floor, scale, a.png_width, a.seed, a.crops, program=a.program, final_dir=a.final_dir, name=a.name, clean=a.cleanline, notes=tuple(a.note), v2layout=a.v2layout, bare=a.bare, v3layout=a.v3layout)
 
 
 if __name__ == "__main__":
