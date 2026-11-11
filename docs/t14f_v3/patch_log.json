@@ -1,0 +1,1446 @@
+{
+ "src": "docs/t14e_v2/drawing_set_candidate_v2.pdf",
+ "src_sha256": "9104e66b6c74504604ef970ac567157a5320b9eed500e3c375f0c26e00afabab",
+ "out": "output/C_T14F_CANDIDATE_V3/interim/Candidate_V3_interim.pdf",
+ "out_sha256": "79dd85507fc6c3d6beb27743bf91ab47cb3fcf33f5b2b86dd83894cd1eaff5db",
+ "font_regular": "NanumBarunGothic.ttf",
+ "font_bold": "NanumBarunGothicBold.ttf",
+ "callouts": [
+  {
+   "page": 3,
+   "target": "D-401",
+   "shown": "1:50",
+   "registry": "1:50",
+   "ok": true
+  },
+  {
+   "page": 5,
+   "target": "D-401",
+   "shown": "1:50",
+   "registry": "1:50",
+   "ok": true
+  },
+  {
+   "page": 5,
+   "target": "D-402",
+   "shown": "1:50",
+   "registry": "1:50",
+   "ok": true
+  },
+  {
+   "page": 5,
+   "target": "D-403",
+   "shown": "1:50",
+   "registry": "1:50",
+   "ok": true
+  },
+  {
+   "page": 5,
+   "target": "D-405",
+   "shown": "1:50",
+   "registry": "1:50",
+   "ok": true
+  },
+  {
+   "page": 6,
+   "target": "D-407",
+   "shown": "1:50",
+   "registry": "1:100",
+   "ok": false,
+   "fixed": true
+  },
+  {
+   "page": 9,
+   "target": "D-410",
+   "shown": "1:50",
+   "registry": "1:100",
+   "ok": false,
+   "fixed": true
+  },
+  {
+   "page": 10,
+   "target": "D-406",
+   "shown": "1:50",
+   "registry": "1:50",
+   "ok": true
+  },
+  {
+   "page": 10,
+   "target": "D-410",
+   "shown": "1:50",
+   "registry": "1:100",
+   "ok": false,
+   "fixed": true
+  },
+  {
+   "page": 11,
+   "target": "D-406",
+   "shown": "1:50",
+   "registry": "1:50",
+   "ok": true
+  },
+  {
+   "page": 11,
+   "target": "D-410",
+   "shown": "1:50",
+   "registry": "1:100",
+   "ok": false,
+   "fixed": true
+  },
+  {
+   "page": 12,
+   "target": "D-406",
+   "shown": "1:50",
+   "registry": "1:50",
+   "ok": true
+  },
+  {
+   "page": 12,
+   "target": "D-410",
+   "shown": "1:50",
+   "registry": "1:100",
+   "ok": false,
+   "fixed": true
+  },
+  {
+   "page": 13,
+   "target": "D-406",
+   "shown": "1:50",
+   "registry": "1:50",
+   "ok": true
+  },
+  {
+   "page": 13,
+   "target": "D-410",
+   "shown": "1:50",
+   "registry": "1:100",
+   "ok": false,
+   "fixed": true
+  }
+ ],
+ "scale_bars": [
+  {
+   "box_mm": [
+    218.69,
+    228.6,
+    335.69,
+    241.1
+   ],
+   "segments_mm": [
+    20.0,
+    20.0,
+    60.0
+   ],
+   "length_mm": 100.0,
+   "sheet": "D-401",
+   "page": 19,
+   "status": "DRAWN",
+   "den": 50,
+   "meters": [
+    0,
+    1,
+    2,
+    5
+   ]
+  },
+  {
+   "box_mm": [
+    13.97,
+    205.23,
+    130.97,
+    217.73
+   ],
+   "segments_mm": [
+    20.0,
+    20.0,
+    60.0
+   ],
+   "length_mm": 100.0,
+   "sheet": "D-402",
+   "page": 20,
+   "status": "DRAWN",
+   "den": 50,
+   "meters": [
+    0,
+    1,
+    2,
+    5
+   ]
+  },
+  {
+   "box_mm": [
+    13.97,
+    205.23,
+    130.97,
+    217.73
+   ],
+   "segments_mm": [
+    20.0,
+    20.0,
+    60.0
+   ],
+   "length_mm": 100.0,
+   "sheet": "D-403",
+   "page": 21,
+   "status": "DRAWN",
+   "den": 50,
+   "meters": [
+    0,
+    1,
+    2,
+    5
+   ]
+  },
+  {
+   "box_mm": [
+    48.26,
+    245.11,
+    165.26,
+    257.61
+   ],
+   "segments_mm": [
+    20.0,
+    20.0,
+    60.0
+   ],
+   "length_mm": 100.0,
+   "sheet": "D-404",
+   "page": 22,
+   "status": "DRAWN",
+   "den": 50,
+   "meters": [
+    0,
+    1,
+    2,
+    5
+   ]
+  },
+  {
+   "box_mm": [
+    48.26,
+    245.11,
+    165.26,
+    257.61
+   ],
+   "segments_mm": [
+    20.0,
+    20.0,
+    60.0
+   ],
+   "length_mm": 100.0,
+   "sheet": "D-405",
+   "page": 23,
+   "status": "DRAWN",
+   "den": 50,
+   "meters": [
+    0,
+    1,
+    2,
+    5
+   ]
+  },
+  {
+   "box_mm": [
+    48.26,
+    245.11,
+    165.26,
+    257.61
+   ],
+   "segments_mm": [
+    20.0,
+    20.0,
+    60.0
+   ],
+   "length_mm": 100.0,
+   "sheet": "D-406",
+   "page": 24,
+   "status": "DRAWN",
+   "den": 50,
+   "meters": [
+    0,
+    1,
+    2,
+    5
+   ]
+  },
+  {
+   "box_mm": [
+    48.26,
+    245.11,
+    165.26,
+    257.61
+   ],
+   "segments_mm": [
+    20.0,
+    30.0,
+    50.0
+   ],
+   "length_mm": 100.0,
+   "sheet": "D-407",
+   "page": 25,
+   "status": "DRAWN",
+   "den": 100,
+   "meters": [
+    0,
+    2,
+    5,
+    10
+   ]
+  },
+  {
+   "box_mm": [
+    48.26,
+    245.11,
+    165.26,
+    257.61
+   ],
+   "segments_mm": [
+    20.0,
+    30.0,
+    50.0
+   ],
+   "length_mm": 100.0,
+   "sheet": "D-408",
+   "page": 26,
+   "status": "DRAWN",
+   "den": 100,
+   "meters": [
+    0,
+    2,
+    5,
+    10
+   ]
+  },
+  {
+   "box_mm": [
+    48.26,
+    245.11,
+    165.26,
+    257.61
+   ],
+   "segments_mm": [
+    20.0,
+    20.0,
+    60.0
+   ],
+   "length_mm": 100.0,
+   "sheet": "D-409",
+   "page": 27,
+   "status": "DRAWN",
+   "den": 50,
+   "meters": [
+    0,
+    1,
+    2,
+    5
+   ]
+  },
+  {
+   "box_mm": [
+    48.26,
+    245.11,
+    165.26,
+    257.61
+   ],
+   "segments_mm": [
+    20.0,
+    30.0,
+    50.0
+   ],
+   "length_mm": 100.0,
+   "sheet": "D-410",
+   "page": 28,
+   "status": "DRAWN",
+   "den": 100,
+   "meters": [
+    0,
+    2,
+    5,
+    10
+   ]
+  }
+ ],
+ "changes": [
+  {
+   "page": 6,
+   "kind": "callout_scale",
+   "finding": "F-01",
+   "why": "callout scale rebuilt from sheet registry",
+   "before": "D-407 · 1:50",
+   "after": "D-407 · 1:100",
+   "bbox_mm": [
+    225.75,
+    128.74,
+    237.23,
+    130.76
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "callout_scale",
+   "finding": "F-01",
+   "why": "callout scale rebuilt from sheet registry",
+   "before": "D-410 · 1:50",
+   "after": "D-410 · 1:100",
+   "bbox_mm": [
+    159.54,
+    136.54,
+    171.01,
+    138.56
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "callout_scale",
+   "finding": "F-01",
+   "why": "callout scale rebuilt from sheet registry",
+   "before": "D-410 · 1:50",
+   "after": "D-410 · 1:100",
+   "bbox_mm": [
+    186.22,
+    52.33,
+    197.69,
+    54.36
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "callout_scale",
+   "finding": "F-01",
+   "why": "callout scale rebuilt from sheet registry",
+   "before": "D-410 · 1:50",
+   "after": "D-410 · 1:100",
+   "bbox_mm": [
+    188.72,
+    52.33,
+    200.19,
+    54.36
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "callout_scale",
+   "finding": "F-01",
+   "why": "callout scale rebuilt from sheet registry",
+   "before": "D-410 · 1:50",
+   "after": "D-410 · 1:100",
+   "bbox_mm": [
+    196.22,
+    52.33,
+    207.7,
+    54.36
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "callout_scale",
+   "finding": "F-01",
+   "why": "callout scale rebuilt from sheet registry",
+   "before": "D-410 · 1:50",
+   "after": "D-410 · 1:100",
+   "bbox_mm": [
+    193.72,
+    52.33,
+    205.2,
+    54.36
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "text",
+   "why": "cover",
+   "before": "수직보행연구— 3D 모델에서파생한도면(후보V2)",
+   "after": "수직 보행 연구 — 3D 모델에서 파생한 도면 (후보 V3 중간본)",
+   "bbox_mm": [
+    158.38,
+    91.39,
+    261.63,
+    97.02
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "text",
+   "why": "cover",
+   "before": "도면집후보V2 · 2026-11-05",
+   "after": "도면집 후보 V3(중간본) · 2026-11-05",
+   "bbox_mm": [
+    183.95,
+    128.05,
+    236.08,
+    132.27
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "text",
+   "why": "cover footer",
+   "before": "표지· 도면집후보V2 · CANDIDATE — NOT FROZEN",
+   "after": "표지 · 도면집 후보 V3(중간본) · CANDIDATE — NOT FROZEN",
+   "bbox_mm": [
+    34.0,
+    283.31,
+    98.89,
+    286.59
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "text",
+   "why": "edition note",
+   "before": "· 최종FREEZE 아님(후보V2).",
+   "after": "· 최종 FREEZE 아님(후보 V3 중간본).",
+   "bbox_mm": [
+    309.0,
+    188.1,
+    341.91,
+    190.91
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "text",
+   "why": "edition note",
+   "before": "· 최종FREEZE 아님(후보V2).",
+   "after": "· 최종 FREEZE 아님(후보 V3 중간본).",
+   "bbox_mm": [
+    309.0,
+    188.1,
+    341.91,
+    190.91
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "text",
+   "why": "edition note",
+   "before": "· 최종FREEZE 아님(후보V2).",
+   "after": "· 최종 FREEZE 아님(후보 V3 중간본).",
+   "bbox_mm": [
+    309.0,
+    191.8,
+    341.91,
+    194.61
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "text",
+   "why": "edition note",
+   "before": "· 최종FREEZE 아님(후보V2).",
+   "after": "· 최종 FREEZE 아님(후보 V3 중간본).",
+   "bbox_mm": [
+    309.0,
+    191.8,
+    341.91,
+    194.61
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "text",
+   "why": "edition note",
+   "before": "· 최종FREEZE 아님(후보V2).",
+   "after": "· 최종 FREEZE 아님(후보 V3 중간본).",
+   "bbox_mm": [
+    309.0,
+    202.1,
+    341.91,
+    204.91
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "text",
+   "why": "A-900 subtitle",
+   "before": "이도면집은후보(V2)이며FREEZE가아니다· 아래항목은근거부재또는사용자결정전이라확정하지않았다",
+   "after": "이 도면집은 후보(V3 중간본)이며 FREEZE가 아니다 · 아래 항목은 근거 부재 또는 사용자 결정 전이라 확정하지 않았다",
+   "bbox_mm": [
+    40.0,
+    272.81,
+    162.34,
+    276.1
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "text",
+   "why": "edition label (F-10)",
+   "before": "도면집후보V2 · FREEZE 아님",
+   "after": "도면집 후보 V3(중간본) · FREEZE 아님",
+   "bbox_mm": [
+    305.0,
+    281.39,
+    336.32,
+    283.97
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "text",
+   "why": "project code C-T14D -> C-T14F (F-10)",
+   "before": "C-T14D",
+   "after": "C-T14F",
+   "bbox_mm": [
+    363.0,
+    265.93,
+    373.05,
+    269.68
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "cover_notice",
+   "before": "",
+   "after": "V3 중간본(INTERIM) · V2 PDF에 보정 적용(변경 기록: docs/t14f_v3/patch_log.json) · 모델 원본 없음 → 모델 재생성은 BLOCKED_MISSING_SOURCE",
+   "bbox_mm": [
+    120.47,
+    170.0,
+    299.53,
+    178.0
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "scale_bar",
+   "finding": "F-02",
+   "why": "graphic scale bar",
+   "before": "(none: only the title-block text)",
+   "after": "5 m bar = 100.0 mm at 1:50",
+   "bbox_mm": [
+    218.69,
+    228.6,
+    335.69,
+    241.1
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "scale_bar",
+   "finding": "F-02",
+   "why": "graphic scale bar",
+   "before": "(none: only the title-block text)",
+   "after": "5 m bar = 100.0 mm at 1:50",
+   "bbox_mm": [
+    13.97,
+    205.23,
+    130.97,
+    217.73
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "scale_bar",
+   "finding": "F-02",
+   "why": "graphic scale bar",
+   "before": "(none: only the title-block text)",
+   "after": "5 m bar = 100.0 mm at 1:50",
+   "bbox_mm": [
+    13.97,
+    205.23,
+    130.97,
+    217.73
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "scale_bar",
+   "finding": "F-02",
+   "why": "graphic scale bar",
+   "before": "(none: only the title-block text)",
+   "after": "5 m bar = 100.0 mm at 1:50",
+   "bbox_mm": [
+    48.26,
+    245.11,
+    165.26,
+    257.61
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "scale_bar",
+   "finding": "F-02",
+   "why": "graphic scale bar",
+   "before": "(none: only the title-block text)",
+   "after": "5 m bar = 100.0 mm at 1:50",
+   "bbox_mm": [
+    48.26,
+    245.11,
+    165.26,
+    257.61
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "scale_bar",
+   "finding": "F-02",
+   "why": "graphic scale bar",
+   "before": "(none: only the title-block text)",
+   "after": "5 m bar = 100.0 mm at 1:50",
+   "bbox_mm": [
+    48.26,
+    245.11,
+    165.26,
+    257.61
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "scale_bar",
+   "finding": "F-02",
+   "why": "graphic scale bar",
+   "before": "(none: only the title-block text)",
+   "after": "10 m bar = 100.0 mm at 1:100",
+   "bbox_mm": [
+    48.26,
+    245.11,
+    165.26,
+    257.61
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "scale_bar",
+   "finding": "F-02",
+   "why": "graphic scale bar",
+   "before": "(none: only the title-block text)",
+   "after": "10 m bar = 100.0 mm at 1:100",
+   "bbox_mm": [
+    48.26,
+    245.11,
+    165.26,
+    257.61
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "scale_bar",
+   "finding": "F-02",
+   "why": "graphic scale bar",
+   "before": "(none: only the title-block text)",
+   "after": "5 m bar = 100.0 mm at 1:50",
+   "bbox_mm": [
+    48.26,
+    245.11,
+    165.26,
+    257.61
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "scale_bar",
+   "finding": "F-02",
+   "why": "graphic scale bar",
+   "before": "(none: only the title-block text)",
+   "after": "10 m bar = 100.0 mm at 1:100",
+   "bbox_mm": [
+    48.26,
+    245.11,
+    165.26,
+    257.61
+   ]
+  }
+ ]
+}
