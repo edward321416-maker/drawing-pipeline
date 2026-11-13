@@ -13,6 +13,7 @@ EDITION = "V1"                                      # 도면집 스크립트가 
 PROJECT_CODE = "C-T14D"                             # 같은 방식. 기본값은 V1 그대로
 REVISION = ""
 ISSUE_DATE = "2026-11-05"
+MIN_PT = 0.0                                        # >0이면 이보다 작은 글자는 이 크기로 올린다(tools/t14i가 6.0으로 설정: A3 인쇄 6 pt = 자체 품질 목표, 법정 값 아님)
 
 
 def _detect_font():
@@ -104,6 +105,7 @@ class Sheet:
         self.path([[(x1, y1), (x2, y2)]], stroke=color, w=w, dash=dash, closed=False)
 
     def text(self, x, y, s, pt=6.5, weight="normal", color="#333", anchor="start", rotate=None, bg=False):
+        pt = max(pt, MIN_PT)
         size = pt * PT
         a = 'x="%.3f" y="%.3f" font-family="%s" font-size="%.3f" font-weight="%s" fill="%s" text-anchor="%s"' % (x, y, FONT, size, weight, color, anchor)
         if rotate is not None:

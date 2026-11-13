@@ -55,8 +55,16 @@ def check_page_size(doc, rows):
     out = []
     for i, pg in enumerate(doc):
         w, h = round(pg.rect.width / MM, 1), round(pg.rect.height / MM, 1)
-        if abs(w - 420.0) > 0.6 or abs(h - 297.0) > 0.6:
-            out.append("page %d is %.1f x %.1f mm, expected A3 420 x 297" % (i + 1, w, h))
+        paper = rows[i].get("paper") if i < len(rows) else "A3"
+        if isinstance(paper, (list, tuple)) and len(paper) == 2:
+            ew, eh = map(float, paper)
+            label = "%gx%g" % (ew, eh)
+        elif paper == "A1":
+            ew, eh, label = 841.0, 594.0, "A1"
+        else:
+            ew, eh, label = 420.0, 297.0, "A3"
+        if abs(w - ew) > 0.6 or abs(h - eh) > 0.6:
+            out.append("page %d is %.1f x %.1f mm, expected %s %.1f x %.1f" % (i + 1, w, h, label, ew, eh))
     return out
 
 
@@ -124,18 +132,25 @@ def scale_bar_report(doc, rows):
         if not chains:
             rep.append({"sheet": r["sheet"], "page": r["page"], "scale": r["scale"], "status": "MISSING"})
             continue
-        best = max(chains, key=lambda c: c[1] - c[0])
+        candidates = []
+        for c in chains:
+            Lc = c[1] - c[0]
+            labels = []
+            for s in _spans(pg):
+                b = [v / MM for v in s["bbox"]]
+                if c[2] - 7.5 < b[3] <= c[2] + 0.8 and c[0] - 4 < b[0] < c[1] + 14:
+                    mm_ = re.fullmatch(r"(\d+)(?:m)?", re.sub(r"\s+", "", s["text"]))
+                    if mm_:
+                        value = int(mm_.group(1))
+                        if 0 <= value <= 100:             # dimensions such as 84000 are not scale-bar metre labels
+                            labels.append(value)
+            meters_ = max(labels) if labels else None
+            exp_ = meters_ * 1000.0 / den if meters_ else None
+            err_ = abs(Lc - exp_) if exp_ else 1e9
+            candidates.append((err_, c, meters_, exp_))
+        err, best, meters, exp = min(candidates, key=lambda x: x[0])
         L = best[1] - best[0]
-        labels = []
-        for s in _spans(pg):
-            b = [v / MM for v in s["bbox"]]
-            if best[2] - 6.5 < b[3] <= best[2] + 0.5 and best[0] - 2 < b[0] < best[1] + 12:
-                mm_ = re.fullmatch(r"(\d+)(?:m)?", re.sub(r"\s+", "", s["text"]))
-                if mm_:
-                    labels.append(int(mm_.group(1)))
-        meters = max(labels) if labels else None
-        exp = meters * 1000.0 / den if meters else None
-        status = "OK" if exp is not None and abs(L - exp) <= 0.3 else ("NO_END_LABEL" if exp is None else "LENGTH_MISMATCH")
+        status = "OK" if exp is not None and err <= 0.3 else ("NO_END_LABEL" if exp is None else "LENGTH_MISMATCH")
         rep.append({"sheet": r["sheet"], "page": r["page"], "scale": r["scale"], "measured_mm": round(L, 3), "end_label_m": meters,
                     "expected_mm": round(exp, 3) if exp else None, "segments_mm": [round(s[1] - s[0], 3) for s in best[3]], "status": status})
     return rep
@@ -157,7 +172,8 @@ def check_text_bounds(doc, rows):
             x0, y0, x1, y1 = [v / MM for v in s["bbox"]]
             if x0 < 4.0 or y0 < 3.0 or x1 > W - 4.0 or y1 > H - 3.0:
                 out.append("page %d: text outside the sheet margin %s %r" % (i + 1, _mm(s["bbox"]), s["text"][:30]))
-            elif y0 < TITLE_TOP_MM - 0.2 and y1 > TITLE_TOP_MM + 0.4:
+            title_top = H - 35.0
+            if y0 < title_top - 0.2 and y1 > title_top + 0.4:
                 out.append("page %d: text runs into the title block %s %r" % (i + 1, _mm(s["bbox"]), s["text"][:30]))
     return out
 

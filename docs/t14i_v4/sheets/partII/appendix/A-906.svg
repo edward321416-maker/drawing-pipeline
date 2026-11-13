@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
+<metadata>QA RECORD · PRE-ASSEMBLY</metadata>
+<rect width="420" height="297" fill="#fff"/>
+<path d="M14.00,18.00 L404.00,18.00 L404.00,33.60 L14.00,33.60 Z" fill="#eee" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="15.200" y="30.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="bold" fill="#111" text-anchor="start">검사</text>
+<text x="115.200" y="30.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="bold" fill="#111" text-anchor="start">결과</text>
+<text x="150.200" y="30.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="bold" fill="#111" text-anchor="start">근거</text>
+<text x="15.200" y="45.300" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">MODEL CACHE SHA256</text>
+<text x="115.200" y="45.300" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">PASS</text>
+<text x="150.200" y="45.300" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">992e2ec51ec17dc494ed2f99ddb11298671449dd6661d92df3b3536a0049537b</text>
+<path d="M14.00,48.60 L404.00,48.60" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M14.00,48.60 L404.00,48.60 L404.00,63.60 L14.00,63.60 Z" fill="#f7f7f7" stroke="none" stroke-width="0.000" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="15.200" y="60.300" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">1:200 시트</text>
+<text x="115.200" y="60.300" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">PASS</text>
+<text x="150.200" y="60.300" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">P-201/202 + P-211~214</text>
+<path d="M14.00,63.60 L404.00,63.60" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="15.200" y="75.300" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">상세도</text>
+<text x="115.200" y="75.300" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">PASS</text>
+<text x="150.200" y="75.300" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">10/10</text>
+<path d="M14.00,78.60 L404.00,78.60" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M14.00,78.60 L404.00,78.60 L404.00,93.60 L14.00,93.60 Z" fill="#f7f7f7" stroke="none" stroke-width="0.000" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="15.200" y="90.300" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">Part I 본문</text>
+<text x="115.200" y="90.300" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">PASS</text>
+<text x="150.200" y="90.300" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">14장 + 목차 조립 예정</text>
+<path d="M14.00,93.60 L404.00,93.60" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="15.200" y="105.300" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">그래픽 스케일바 산식</text>
+<text x="115.200" y="105.300" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">PASS</text>
+<text x="150.200" y="105.300" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">registry vector length</text>
+<path d="M14.00,108.60 L404.00,108.60" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M14.00,108.60 L404.00,108.60 L404.00,123.60 L14.00,123.60 Z" fill="#f7f7f7" stroke="none" stroke-width="0.000" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="15.200" y="120.300" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">PDF 텍스트 ≥6pt</text>
+<text x="115.200" y="120.300" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">PASS</text>
+<text x="150.200" y="120.300" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">V4 details + Part I</text>
+<path d="M14.00,123.60 L404.00,123.60" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="14.000" y="127.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.175" font-weight="bold" fill="#111" text-anchor="start">출력 축척 규칙</text>
+<text x="20.000" y="139.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="normal" fill="#333" text-anchor="start">· P-201/P-202: A1 841×594 mm, 1:200 전체 평면</text>
+<text x="20.000" y="149.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="normal" fill="#333" text-anchor="start">· P-211~P-214: A3 420×297 mm, 1:200 좌표 분할</text>
+<text x="20.000" y="159.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="normal" fill="#333" text-anchor="start">· P-101~P-112: A3 1:250 OVERVIEW — 단순 확대·축척명 변경 금지</text>
+<text x="20.000" y="169.200" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="normal" fill="#333" text-anchor="start">· A-905: 54,000 mm가 1:200에서 종이 270 mm인지 독립 비교</text>
+<text x="14.000" y="228.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.175" font-weight="bold" fill="#111" text-anchor="start">조립 후 검사 예정</text>
+<text x="20.000" y="241.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="normal" fill="#333" text-anchor="start">페이지 수=목록 · 모든 페이지 렌더 · 고아 상세/참조 · contact sheet · SHA256 · 전체 pytest</text>
+<path d="M10.00,262.00 L410.00,262.00 L410.00,287.00 L10.00,287.00 Z" fill="#fff" stroke="#222" stroke-width="0.350" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M300.00,262.00 L300.00,287.00" fill="none" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M358.00,262.00 L358.00,287.00" fill="none" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="14.000" y="269.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="bold" fill="#111" text-anchor="start">A-906</text>
+<text x="40.000" y="269.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="bold" fill="#111" text-anchor="start">사전 QA·축척 검증 상태</text>
+<text x="40.000" y="275.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#444" text-anchor="start">최종 조립 후 page count/contact sheet/cross-reference를 다시 검사</text>
+<text x="305.000" y="269.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">축척 — (표·문서, A3)</text>
+<text x="305.000" y="274.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="bold" fill="#a33" text-anchor="start">QA RECORD</text>
+<text x="305.000" y="278.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#a33" text-anchor="start">PRE-ASSEMBLY</text>
+<text x="305.000" y="283.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">도면집 후보 V4 · FREEZE 아님</text>
+<text x="363.000" y="269.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">C-T14I</text>
+<text x="363.000" y="275.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">개정 R4 (V4)</text>
+<text x="363.000" y="280.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">출력 2026-11-13</text>
+</svg>

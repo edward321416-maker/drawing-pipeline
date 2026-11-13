@@ -11,8 +11,15 @@ V2(upper_layouts.py)는 판매층에서 같은 부스 하나를 격자로 복제
 모든 항목은 Item(geometry, kind, ftype)이다. kind: body | counter | line | foliage | zone | route_v | route_o. ftype은 가구 유형(QA가 반복·다양성을 센다).
 방문자 동선(route_v)과 운영 동선(route_o)은 비어 있는 격자(0.45 m)에서 최대 여유 경로로 계산하고, 경로의 최소 여유 폭을 meta에 남긴다.
 좌표는 구역 폴리곤·장애물·튜브/코어 위치에서 계산하며 숫자 좌표를 직접 쓰지 않는다.
+
+C-T14I 확장(슬래브 인식 모드, SLAB_AWARE_FLOORS): V3가 도면집에 실은 다섯 층(3F·8F·10F·13F·15F)은 구역 폴리곤만 보고 배치했다. 층판이 직사각형이 아닌 층(2F L자판, 7F 후퇴)과
+층판에 큰 개구가 있는 층(11F·12F 중앙 개구, 에스컬레이터 개구)은 구역 폴리곤이 개구·판 밖까지 덮으므로 가구가 허공에 놓인다. 슬래브 인식 모드는 모델 slice의 층판 투영(개구 포함)을 읽어
+(1) 구역을 층판 안쪽 0.5 m로 자르고 (2) 층판이 이어지고 구조물이 없는 구역 구멍(층에 없는 튜브 자리)을 메우고 (3) 윤곽을 따라 띠를 놓고 (4) 가구가 들어갈 자리가 없으면 비운다.
+이 모드는 SLAB_AWARE_FLOORS에 든 층에서, configure()로 slice 폴더를 알려 주었거나 환경 변수 T14I_RAW_SLICES가 있을 때만 켜진다. 그 밖의 층(V3 다섯 층 포함)의 출력은 이전과 같다.
 """
+import json
 import math
+import os
 
 import numpy as np
 import shapely
@@ -21,12 +28,43 @@ from scipy.sparse import coo_matrix
 from scipy.sparse.csgraph import dijkstra, minimum_spanning_tree
 from shapely import affinity
 from shapely.geometry import LineString, Point, Polygon, box
-from shapely.ops import unary_union
+from shapely.ops import nearest_points, unary_union
 
+import pipeline_common as pc
 import upper_layouts as V2
 
 R, RING, STRIPS = V2._rect, V2._ring, V2._perimeter_strips
 A_FLOORS = {"2F", "3F", "4F", "5F", "B1", "B2"}
+
+# ── 슬래브 인식 모드 설정 ─────────────────────────────────────────────────────────────────────────
+SLAB_AWARE_FLOORS = frozenset({"B2", "B1", "2F", "4F", "5F", "6F", "7F", "11F", "12F"})
+SLAB_EDGE_MARGIN = 0.5        # 층판 가장자리·개구 둘레에서 가구가 물러나는 거리(m)
+MIN_FREE_M2 = 30.0            # 구조물을 뺀 가구 가능 면적이 이보다 작으면 그 구역은 비운다
+_SLICE_DIR = os.environ.get("T14I_RAW_SLICES") or None
+_SLAB_CACHE = {}
+
+
+def configure(raw_slices_dir=None):
+    """슬래브 인식 모드에 쓸 raw_slices 폴더를 정한다(None이면 모드를 끈다)."""
+    global _SLICE_DIR
+    _SLICE_DIR = raw_slices_dir
+    _SLAB_CACHE.clear()
+
+
+def slab_of(floor):
+    """층판 투영(개구 포함 도형). 슬래브 인식 층이 아니거나 slice 폴더가 없으면 None."""
+    if floor not in SLAB_AWARE_FLOORS or not _SLICE_DIR:
+        return None
+    key = (floor, _SLICE_DIR)
+    if key not in _SLAB_CACHE:
+        sl = pc.load_slice(_SLICE_DIR, floor)
+        parts = [pc.polygons_from_segments(p["segments"]) for p in sl["projection"]]
+        _SLAB_CACHE[key] = unary_union([g for g in parts if not g.is_empty]) if parts else None
+    return _SLAB_CACHE[key]
+
+
+def _polys(g):
+    return [] if g is None or g.is_empty else list(pc.iter_polygons(g))
 
 
 class Item(tuple):
@@ -46,6 +84,8 @@ class Packer:
     def __init__(self, region, obst, hard):
         self.region, self.obst, self.hard = region, obst, hard
         self.items, self.taken, self.solid = [], Polygon(), Polygon()
+        self.aware = False                                                           # 슬래브 인식 모드(layout()이 켠다)
+        self.atrium = False                                                          # 층판 중앙에 큰 개구(아트리움)가 있다
 
     def ok(self, g, soft=True, clear=0.0, vs_taken=True):
         if g.is_empty or not self.region.contains(g):
@@ -137,6 +177,8 @@ def _chaikin(pts, it=2):
 def circulation(region, blocked, anchors, step=0.45, hub=None, end_trim=3.0):
     """hub가 있으면 hub에서 각 앵커로 가는 방사형 경로, 없으면 앵커를 잇는 최소 신장 경로(여유가 큰 칸을 선호). 앵커 끝 end_trim m는 폭 측정에서 뺀다. 반환: ([LineString], 경로 최소 여유 폭 m, 연결된 앵커 수)."""
     xs, ys, free, clear, st = _grid(region, blocked, step)
+    if not free.any():                                                              # 구조물에 막혀 빈 칸이 없는 구역(예: 코어 안에 걸친 작은 구역): 경로 없음
+        return [], None, 0
     ny, nx = free.shape
     idx = np.arange(nx * ny).reshape(ny, nx)
     rows, cols, w = [], [], []
@@ -224,6 +266,9 @@ def _anchors(P, ctx):
                 d = math.hypot(c.x - p.x, c.y - p.y) or 1.0
                 r = math.sqrt(g.area / math.pi)
                 out.append((p.x + (c.x - p.x) / d * (r + 2.0), p.y + (c.y - p.y) / d * (r + 2.0)))
+    if P.aware:                                                                      # 구역이 고리·여러 조각일 수 있다: 구역에서 3 m 안에 있는 튜브·코어 앵커만 쓴다(빈 칸 스냅은 circulation이 한다)
+        out = [a for a in out if P.region.distance(Point(a)) <= 3.0]
+        return out or [tuple(P.region.representative_point().coords[0])]
     out = [a for a in out if P.region.buffer(0.2).contains(Point(a))]
     return out or [(c.x, c.y)]
 
@@ -231,7 +276,10 @@ def _anchors(P, ctx):
 def _add_routes(P, ctx, ops_from=None, perimeter_ops=False):
     blocked = unary_union([g for g in (P.hard, P.solid.buffer(0.3) if not P.solid.is_empty else None) if g is not None and not g.is_empty])
     c0 = P.region.centroid
-    lines, width, n = circulation(P.region, blocked, _anchors(P, ctx), hub=(c0.x, c0.y))
+    if P.aware and not P.region.contains(c0):                                         # 고리 모양 구역(12F): 중심이 개구에 있으면 허브 없이 앵커끼리 최소 신장 경로
+        lines, width, n = circulation(P.region, blocked, _anchors(P, ctx), hub=None)
+    else:
+        lines, width, n = circulation(P.region, blocked, _anchors(P, ctx), hub=(c0.x, c0.y))
     lines = _dissolve(lines)
     for ln in lines:
         P.items.append(Item(ln, "route_v", "visitor_route"))
@@ -246,7 +294,10 @@ def _add_routes(P, ctx, ops_from=None, perimeter_ops=False):
                 P.items.append(Item(ln, "route_o", "operations_route"))
             ops = len(ol)
     if perimeter_ops:                                                              # 운영 동선(제안): 외벽과 벽 진열 사이의 서비스 레인
-        lane = P.region.buffer(-0.75).boundary.difference(unary_union([blocked, P.solid.buffer(0.15)]))
+        if P.aware:                                                                # 슬래브 인식: 바깥 윤곽만 따른다(층에 없는 튜브·개구 둘레로 돌지 않는다)
+            lane = unary_union([LineString(list(p.exterior.coords)) for p in _polys(P.region.buffer(-0.75))]).difference(unary_union([blocked, P.solid.buffer(0.15)]))
+        else:
+            lane = P.region.buffer(-0.75).boundary.difference(unary_union([blocked, P.solid.buffer(0.15)]))
         parts = [g for g in (lane.geoms if hasattr(lane, "geoms") else [lane]) if g.geom_type == "LineString" and g.length > 4.0]
         for g in parts:
             P.items.append(Item(g, "route_o", "operations_route"))
@@ -255,6 +306,72 @@ def _add_routes(P, ctx, ops_from=None, perimeter_ops=False):
 
 
 # ── 판매 ─────────────────────────────────────────────────────────────────────────────────────────
+def _edge_strips(region, hard, rng, depth, offset, seg=(3.0, 6.0), gap=(0.9, 1.6), min_edge=2.5):
+    """슬래브 인식 모드의 외벽 띠: 구역 바깥 윤곽의 곧은 변을 따라 끊어진 띠(외벽 진열·뱅킷)를 놓는다. 2F L자판·7F 후퇴의 꺾인 변도 따라간다.
+    변의 안쪽 법선 방향으로 offset + depth/2 만큼 들인다(V2 _perimeter_strips는 경계 상자의 네 변만 쓴다). 반환: [(띠 도형, 안쪽 단위 법선)]."""
+    out = []
+    for poly in _polys(region):
+        if poly.area < 20.0:
+            continue
+        ring = poly.exterior
+        if not ring.is_ccw:
+            ring = LineString(list(ring.coords)[::-1])
+        pts = list(ring.simplify(0.25).coords)
+        for a, b in zip(pts, pts[1:]):
+            L = math.hypot(b[0] - a[0], b[1] - a[1])
+            if L < min_edge:
+                continue
+            ux, uy = (b[0] - a[0]) / L, (b[1] - a[1]) / L
+            nx, ny = -uy, ux                                                        # 반시계 방향 윤곽에서 왼쪽 = 안쪽
+            ang = math.degrees(math.atan2(uy, ux))
+            t = 1.0
+            while t < L - 1.0:
+                sl = rng.uniform(*seg)
+                if t + sl > L - 1.0:
+                    sl = L - 1.0 - t
+                if sl < 1.2:
+                    break
+                c = t + sl / 2
+                d = offset + depth / 2
+                g = R(a[0] + ux * c + nx * d, a[1] + uy * c + ny * d, sl, depth, ang)
+                if V2._free(region, None, g, hard):
+                    out.append((g, (nx, ny)))
+                t += sl + rng.uniform(*gap)
+    return out
+
+
+def _retail_band(P, rng, floor, ctx):
+    """슬래브 인식 모드의 판매 B: 구역이 가로로 긴 띠(6F·7F 북쪽 판매 구역)이면 거리와 섬을 가로로 눕힌다. 가운데 대로(팝업 카트) 양쪽에 거리 둘, 한쪽 끝에 이벤트 광장."""
+    x0, y0, x1, y1 = P.region.bounds
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    hd = (y1 - y0) / 2
+    soff = max(3.8, 0.5 * hd)                                                        # 대로 중심선에서 거리까지(띠 반폭의 절반)
+    lens = [((3.0, 1.4), 3), ((4.0, 1.4), 3), ((5.0, 1.4), 2)]
+    for sy in (-1, 1):
+        cys = cy + sy * soff
+        for side in (-1, 1):
+            x = x0 + 3.0 + (1.8 if side > 0 else 0.0)
+            while x < x1 - 3.0:
+                (L, w) = _pick(rng, lens)
+                yy = cys + side * (w / 2 + 1.0)
+                body = R(x + L / 2, yy, L, w)
+                cnt = R(x + L + 0.35, yy, 0.55, 0.8)
+                P.put_all([(body, "body", "street_island_%.1f" % L), (cnt, "counter", "cashier_street"),
+                           (LineString([(x + 0.2, yy), (x + L - 0.2, yy)]), "line", "display_line")], clear=0.6)
+                x += L + 0.9 + rng.uniform(0.8, 1.6)
+    for k in range(9):                                                               # 가운데 대로 팝업 카트(엇갈림)
+        x = x0 + 4.5 + k * 6.0
+        y = cy + (1.4 if k % 2 else -1.4)
+        P.put_all([(R(x, y, 1.2, 1.2), "body", "popup_cart"), (_circle(x, y, 0.3), "line", "popup_mark")], clear=0.8)
+    for (x, y) in _spots(P.region, 2.0, lambda p: math.hypot(p[0] - (x1 - 10.0), p[1] - cy)):   # 이벤트 광장: 동쪽 끝 쪽에서 10 × 5 m가 비는 곳
+        z = R(x, y, 10.0, 5.0)
+        if P.ok(z, soft=True, clear=0.5):
+            P.zone(z, "event_popup_plaza")
+            for i in range(3):
+                P.items.append(Item(R(x - 3 + i * 3.0, y, 1.0, 1.0), "body", "event_plinth"))
+            break
+
+
 def _lounge(P, t, rng, count, ang0):
     """승강기 튜브 앞 대기 라운지: 벤치 링 + 바닥 표시."""
     got = 0
@@ -272,10 +389,22 @@ def _retail(P, rng, floor, ctx):
     cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
     plaza = ctx.get("plaza")
     tubes = ctx.get("tubes", [])
-    for g in STRIPS(P.region, P.hard, rng, 0.55 if variant == "A" else 0.7, 1.35, seg=(3.0, 6.5), gap=(1.0, 1.8)):
+    for g in ([q[0] for q in _edge_strips(P.region, P.hard, rng, 0.55 if variant == "A" else 0.7, 1.35, seg=(3.0, 6.5), gap=(1.0, 1.8))] if P.aware
+              else STRIPS(P.region, P.hard, rng, 0.55 if variant == "A" else 0.7, 1.35, seg=(3.0, 6.5), gap=(1.0, 1.8))):
         if P.put(g, "body", "wall_display", soft=False):
             a, b, c2, d = g.bounds
-            P.line(LineString([(a + 0.1, (b + d) / 2), (c2 - 0.1, (b + d) / 2)]) if (c2 - a) > (d - b) else LineString([((a + c2) / 2, b + 0.1), ((a + c2) / 2, d - 0.1)]), "wall_display_line")
+            if P.aware:                                                              # 기울어진 띠: 진열선을 띠의 긴 축 가운데에 그린다
+                mr = list(g.minimum_rotated_rectangle.exterior.coords)[:4]
+                mid = lambda p, q: ((p[0] + q[0]) / 2, (p[1] + q[1]) / 2)
+                if math.hypot(mr[1][0] - mr[0][0], mr[1][1] - mr[0][1]) >= math.hypot(mr[2][0] - mr[1][0], mr[2][1] - mr[1][1]):
+                    m0, m1 = mid(mr[3], mr[0]), mid(mr[1], mr[2])                      # 긴 변 e0–e1: 짧은 변 e3–e0, e1–e2의 가운데끼리
+                else:
+                    m0, m1 = mid(mr[0], mr[1]), mid(mr[2], mr[3])
+                u = (m1[0] - m0[0], m1[1] - m0[1])
+                uL = math.hypot(*u) or 1.0
+                P.line(LineString([(m0[0] + u[0] / uL * 0.1, m0[1] + u[1] / uL * 0.1), (m1[0] - u[0] / uL * 0.1, m1[1] - u[1] / uL * 0.1)]), "wall_display_line")
+            else:
+                P.line(LineString([(a + 0.1, (b + d) / 2), (c2 - 0.1, (b + d) / 2)]) if (c2 - a) > (d - b) else LineString([((a + c2) / 2, b + 0.1), ((a + c2) / 2, d - 0.1)]), "wall_display_line")
     for t in tubes:                                                                  # 승강기 튜브(T3/T4 등) 앞 대기 라운지
         nm = t.get("name", "")
         if any(k in nm for k in ("T3", "T4", "승강", "EV")):
@@ -316,6 +445,8 @@ def _retail(P, rng, floor, ctx):
                 x += w + cw[0] + rng.uniform(1.1, 1.7)
             y += pys[row % 2]
             row += 1
+    elif P.aware and (x1 - x0) > 1.4 * (y1 - y0):                                     # 가로로 긴 띠 구역(6F·7F 북쪽): 거리와 섬을 가로로 눕힌다
+        _retail_band(P, rng, floor, ctx)
     else:
         for (sx, nm) in ((-1, "street_W"), (1, "street_E")):                          # 팝업 스트리트: 중앙 대로 양쪽에 세로 거리
             cxs = cx + sx * 8.8
@@ -352,8 +483,26 @@ def _chairs(P, cx, cy, offs, size=0.36):
 def _fnb(P, rng, floor, ctx):
     x0, y0, x1, y1 = P.region.bounds
     cx0, cy0 = (x0 + x1) / 2, (y0 + y1) / 2
-    for g in STRIPS(P.region, P.hard, rng, 0.7, 1.35, seg=(2.4, 3.6), gap=(0.7, 1.2)):
+    strip_list = _edge_strips(P.region, P.hard, rng, 0.7, 1.35, seg=(2.4, 3.6), gap=(0.7, 1.2)) if P.aware         else [(g_, None) for g_ in STRIPS(P.region, P.hard, rng, 0.7, 1.35, seg=(2.4, 3.6), gap=(0.7, 1.2))]
+    for g, nrm in strip_list:
         if not P.put(g, "body", "banquette", soft=False):
+            continue
+        if nrm is not None:                                                          # 슬래브 인식: 윤곽을 따라 기울어진 띠의 안쪽 법선 방향으로 2인 식탁을 놓는다
+            mr = list(g.minimum_rotated_rectangle.exterior.coords)[:4]
+            e0, e1, e2 = mr[0], mr[1], mr[2]
+            (pa, pb) = (e0, e1) if math.hypot(e1[0] - e0[0], e1[1] - e0[1]) >= math.hypot(e2[0] - e1[0], e2[1] - e1[1]) else (e1, e2)
+            Ls = math.hypot(pb[0] - pa[0], pb[1] - pa[1]) or 1.0
+            ux, uy = (pb[0] - pa[0]) / Ls, (pb[1] - pa[1]) / Ls
+            if ux * -nrm[1] + uy * nrm[0] < 0:                                       # 띠 축 방향을 법선의 왼쪽(반시계)으로 맞춘다(식탁 순서만 영향)
+                ux, uy = -ux, -uy
+            gc = g.centroid
+            ang = math.degrees(math.atan2(uy, ux))
+            for i in range(max(1, int(Ls // 1.3))):
+                t = 0.65 + i * 1.3 - Ls / 2
+                dims_ = _pick(rng, [((0.7, 0.7), 3), ((0.9, 0.6), 2), ((0.6, 0.9), 2)])
+                nm_ = "table_2top_%dx%d" % (round(dims_[0] * 10), round(dims_[1] * 10))
+                dpt = 0.35 + 0.55
+                P.put(R(gc.x + ux * t + nrm[0] * dpt, gc.y + uy * t + nrm[1] * dpt, dims_[0], dims_[1], ang), "body", nm_, soft=False)
             continue
         a0, b0, a1, b1 = g.bounds
         horizontal = (a1 - a0) > (b1 - b0)
@@ -411,7 +560,7 @@ def _culture(P, rng, floor, ctx):
     x0, y0, x1, y1 = P.region.bounds
     cx0, cy0 = (x0 + x1) / 2, (y0 + y1) / 2
     stage = None
-    for (x, y) in sorted(((cx0 + dx, cy0 + dy) for dx in range(-20, 21) for dy in range(-20, 21)), key=lambda p: math.hypot(p[0] - cx0, p[1] - cy0)):
+    for (x, y) in ([] if P.atrium else sorted(((cx0 + dx, cy0 + dy) for dx in range(-20, 21) for dy in range(-20, 21)), key=lambda p: math.hypot(p[0] - cx0, p[1] - cy0))):   # 아트리움을 두른 층(12F)은 무대를 개구 아래층에 둔다
         for (w, h) in ((7.5, 4.0), (4.0, 7.5)):
             g = R(x, y, w, h)
             zone = R(x, y - (3.2 if w > h else 0.0), w + 2.4, h + 8.0) if w > h else R(x - 3.2, y, w + 8.0, h + 2.4)     # 무대 + 서는 구역 + 여유
@@ -563,28 +712,80 @@ def _garden(P, rng, floor, ctx):
 
 
 # ── 진입점 ───────────────────────────────────────────────────────────────────────────────────────
+def _program_of(n, floor):
+    """구역 이름 → 배치 전략(이름 판정 순서는 V3와 같다). 모르는 이름은 None."""
+    if "F&B" in n:
+        return "fnb"
+    if "문화" in n or "엔터" in n:
+        return "culture"
+    if "garden" in n.lower() or "정원" in n:
+        return "garden"
+    if "판매" in n or "시장" in n or "상업" in n:
+        return "retail_" + ("A" if floor in A_FLOORS else "B")
+    return None
+
+
+def _slab_region(region, slab, hard):
+    """슬래브 인식 모드: 구역 → 가구가 놓일 수 있는 영역. 반환 (영역 또는 None, 정보 dict).
+    1) 구역 구멍 중 층판이 이어지고(구멍의 95 % 이상이 층판 위) 구조물이 거의 없는(15 % 미만) 것은 메운다 — 층에 없는 튜브 자리(B2의 T1~T4·PL)
+    2) 층판(개구 포함) 안쪽 SLAB_EDGE_MARGIN으로 자른다 — 판 밖(2F L자 파임·7F 후퇴)·개구(에스컬레이터·아트리움) 위에는 놓지 않는다
+    3) 구조물을 뺀 면적이 MIN_FREE_M2보다 작으면 None(그 구역은 비운다)."""
+    info = {"slab_aware": True, "zone_region_m2": round(region.area, 1), "phantom_holes_filled": 0}
+    parts = []
+    for p in _polys(region):
+        keep = []
+        for h in p.interiors:
+            H = Polygon(h)
+            on_slab = H.difference(slab).area <= 0.05 * H.area
+            bare = hard is None or hard.is_empty or hard.intersection(H).area <= 0.15 * H.area
+            if on_slab and bare:
+                info["phantom_holes_filled"] += 1
+            else:
+                keep.append(h)
+        parts.append(Polygon(p.exterior, keep))
+    reg = unary_union(parts) if parts else Polygon()
+    out = reg.intersection(slab.buffer(-SLAB_EDGE_MARGIN))
+    pieces = [q for q in _polys(out) if q.area > 4.0]
+    out = unary_union(pieces) if pieces else Polygon()
+    free = out.difference(hard) if (hard is not None and not hard.is_empty) else out
+    info.update({"region_after_clip_m2": round(out.area, 1), "removed_by_slab_clip_m2": round(reg.area - out.area, 1), "free_m2": round(free.area, 1)})
+    info["atrium_void"] = any(Polygon(h).area >= 200.0 and (hard is None or hard.is_empty or hard.intersection(Polygon(h)).area <= 0.15 * Polygon(h).area)
+                              for q in _polys(slab) for h in q.interiors)
+    if out.is_empty or free.area < MIN_FREE_M2:
+        info["skip_reason"] = "구역이 층판 개구 위이거나 구조물에 막혀 가구 가능 면적 %.1f ㎡(< %.0f ㎡)" % (free.area, MIN_FREE_M2)
+        return None, info
+    return out, info
+
+
 def layout(name, region, obst, hard, rng, floor, ctx):
     n = name or ""
-    P = Packer(region, obst, hard)
-    if "F&B" in n:
-        svc = _fnb(P, rng, floor, ctx)
-        kind = "fnb"
-    elif "문화" in n or "엔터" in n:
-        svc = _culture(P, rng, floor, ctx)
-        kind = "culture"
-    elif "garden" in n.lower() or "정원" in n:
-        svc = _garden(P, rng, floor, ctx)
-        kind = "garden"
-    elif "판매" in n or "시장" in n or "상업" in n:
-        _retail(P, rng, floor, ctx)
-        svc, kind = None, "retail_" + ("A" if floor in A_FLOORS else "B")
-    else:
+    kind = _program_of(n, floor)
+    if kind is None:
         return Items()
+    info, slab = None, slab_of(floor)
+    if slab is not None:
+        region, info = _slab_region(region, slab, hard)
+        if region is None:
+            out = Items()
+            out.meta = dict(info, program=kind, floor=floor, types={}, route_min_clear_width_m=None, route_segments=0, anchors=0, ops_route_segments=None)
+            return out
+    P = Packer(region, obst, hard)
+    if info is not None:
+        P.aware, P.atrium = True, info["atrium_void"]
+    svc = None
+    if kind == "fnb":
+        svc = _fnb(P, rng, floor, ctx)
+    elif kind == "culture":
+        svc = _culture(P, rng, floor, ctx)
+    elif kind == "garden":
+        svc = _garden(P, rng, floor, ctx)
+    else:
+        _retail(P, rng, floor, ctx)
     meta = _add_routes(P, ctx, ops_from=svc, perimeter_ops=kind.startswith("retail")) if kind != "garden" else {"route_min_clear_width_m": None, "route_segments": 0, "anchors": 0, "ops_route_segments": None}
     types = {}
     for it in P.items:
         if it[1] in ("body", "counter"):
             types[it.ftype] = types.get(it.ftype, 0) + 1
     out = Items(P.items)
-    out.meta = dict(meta, program=kind, floor=floor, types=types)
+    out.meta = dict(meta, program=kind, floor=floor, types=types, **(info or {}))
     return out

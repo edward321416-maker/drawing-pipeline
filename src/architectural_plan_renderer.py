@@ -1002,15 +1002,33 @@ def program_check(plan, qa_, chips, furn_all, drawn_cols, program):
                                                 "note": "바닥 채움은 래스터 잔여 띠를 뺀 벡터 복도다. 구획 면적·범례 수치는 zone 폴리곤(V2-B와 동일)"}}
 
 
-def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, tag="", side="L", top=False, program=None, final_dir=None, name=None, clean=False, notes=(), v2layout=False, bare=False, v3layout=False):
+def load_building(out, floor, bnd=None):
+    """건물 외곽(도면 좌표). vector/floor_<층>_layout.json이 있으면 그 값(기존 동작), 없는 층(지하·추가 층)은 모델 카메라 경계의 building 값."""
+    p = os.path.join(out, "vector", "floor_%s_layout.json" % floor)
+    if os.path.exists(p):
+        return pc.load_json(p)["building"]
+    b = (bnd or pc.load_bounds(os.path.join(out, "raw_slices")))["building"]
+    return [b["xmin"], b["ymin"], b["xmax"], b["ymax"]]
+
+
+NUM_STYLE_DEFAULT = {"pt": 6.5, "r": 1.8, "r_small": 1.2, "small_factor": 0.85, "stroke": "#bbb", "stroke_mm": 0.08, "up_pt": 5.0, "clear": None}
+
+
+def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, tag="", side="L", top=False, program=None, final_dir=None, name=None, clean=False, notes=(), v2layout=False, bare=False, v3layout=False,
+           num_style=None, occupancy=False):
+    """num_style: 구역 번호 기호 크기(종이 기준). None이면 지금까지의 값(6.5 pt, 반지름 1.8/1.2 mm, 작은 기호 0.85배)이고 출력은 그대로다.
+    {"pt","r","r_small","small_factor","stroke","stroke_mm","up_pt","clear"}; clear = 번호가 가구·기둥·벽에서 떨어질 최소 거리(m, 기본 None=기존 0.3/0.35).
+    occupancy: True면 점검 JSON에 가구·벽·기둥·튜브·기호의 점유 폴리곤(WKT)과 번호 위치를 싣는다(조립기가 호출 기호 자리를 가구 밖에서 찾는 데 쓴다)."""
+    ns = dict(NUM_STYLE_DEFAULT)
+    if num_style:
+        ns.update(num_style)
     raw = os.path.join(out, "raw_slices")
     sl = pc.load_slice(raw, floor)
-    lay = pc.load_json(os.path.join(out, "vector", "floor_%s_layout.json" % floor))
     bnd = pc.load_bounds(raw)
     rng = random.Random(seed)
     k = scale / 1000.0
     cuts = pc.cut_geometries(sl)
-    bx0, by0, bx1, by1 = lay["building"]
+    bx0, by0, bx1, by1 = load_building(out, floor, bnd)
     cx, cy = (bx0 + bx1) / 2, (by0 + by1) / 2
     ccx, ccy = center if center else (cx, cy)                                         # 시트 중심 (타일 모드에서는 건물 중심이 아니다)
     cv = TCanvas((ccx - A3[0] * k / 2, ccy - A3[1] * k / 2, ccx + A3[0] * k / 2, ccy + A3[1] * k / 2), scale)
@@ -1396,7 +1414,7 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, 
         for da in (2.6, -2.6):
             cv.stroke_line("symbols", [b, (b[0] - 0.7 * math.cos(ang + da / 3), b[1] - 0.7 * math.sin(ang + da / 3))], 0.14, "#222")
         cv.add("symbols", '<text x="%.3f" y="%.3f" font-family="%s" font-size="%.4f" font-weight="bold" fill="#333" text-anchor="middle">UP</text>' %
-               (cv.X(ss["up_text"][0]), cv.Y(ss["up_text"][1]) + 5.0 * 0.3528 * k * 0.3, mg.FONT, 5.0 * 0.3528 * k))
+               (cv.X(ss["up_text"][0]), cv.Y(ss["up_text"][1]) + ns["up_pt"] * 0.3528 * k * 0.3, mg.FONT, ns["up_pt"] * 0.3528 * k))
         avoid_core = U([LineString([a, b]).buffer(0.6), Point(ss["up_text"]).buffer(0.7), U(ss["light"]).buffer(0.2), U(ss["break"]).buffer(0.3)]
                        + [d["swing"].buffer(0.25) for d in doors if g.buffer(1.5).contains(Point(d["M"]))])
         core_numbers_extra[id(g)] = (None, avoid_core)
@@ -1574,12 +1592,14 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, 
     num_of = {n: i + 1 for i, n in enumerate(legend)}
     furn_union = U(furn_all)
     sym_union = U([h for it, g in tubes for key in ("light", "car", "x") for h in tube_symbol(it["name_ko"], g, hall_pt, rng)[key]])
-    avoid_base = U([wall_union.buffer(0.35), furn_union.buffer(0.3), sym_union.buffer(0.2), U(drawn_cols).buffer(0.3), shell_tubes.buffer(0.3), swing_union.buffer(0.2)] + ([model_only_union.buffer(0.45)] if level_s else []))
+    cl_ = ns["clear"]                                                                          # None = 기존 이격(0.35/0.3/0.2/0.45 m), 값이 있으면 큰 번호 기호가 가구·벽·기둥에 닿지 않게 이격을 키운다
+    b_w, b_f, b_s, b_m = (0.35, 0.3, 0.2, 0.45) if cl_ is None else (cl_ + 0.05, cl_, max(cl_ - 0.1, 0.1), cl_ + 0.15)
+    avoid_base = U([wall_union.buffer(b_w), furn_union.buffer(b_f), sym_union.buffer(b_s), U(drawn_cols).buffer(b_f), shell_tubes.buffer(b_f), swing_union.buffer(b_s)] + ([model_only_union.buffer(b_m)] if level_s else []))
     nums = []
     for n in legend:
         for kd, g, nm in prog_geoms[n]:
             small = n in ("화장실", "코어 / 피난계단·승강기")
-            rr = (1.2 if small else 1.8) * k
+            rr = (ns["r_small"] if small else ns["r"]) * k
             if kd == "core":
                 landing, avoid_core = core_numbers_extra.get(id(g), (None, Polygon()))
                 reg = (landing if landing is not None else g).difference(avoid_core).difference(wall_union.buffer(0.2))
@@ -1605,11 +1625,12 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, 
                 cand = [p for p in pc.iter_polygons(reg) if p.area > 1.5] or list(pc.iter_polygons(g))
                 pt = polylabel(max(cand, key=lambda p: p.area), tolerance=0.05)
             nums.append((num_of[n], pt.x, pt.y, rr))
-    pt_m = 6.5 * 0.3528 * k
+    pt_m = ns["pt"] * 0.3528 * k
+    big_r = ns["r"] * k
     for no, x, y, rr in nums:
-        cv.add("num", '<circle cx="%.3f" cy="%.3f" r="%.3f" fill="#ffffff" fill-opacity="0.96" stroke="#bbb" stroke-width="%.4f"/>' % (cv.X(x), cv.Y(y), rr, cv.lw(0.08)))
+        cv.add("num", '<circle cx="%.3f" cy="%.3f" r="%.3f" fill="#ffffff" fill-opacity="0.96" stroke="%s" stroke-width="%.4f"/>' % (cv.X(x), cv.Y(y), rr, ns["stroke"], cv.lw(ns["stroke_mm"])))
         cv.add("num", '<text x="%.3f" y="%.3f" font-family="%s" font-size="%.3f" fill="%s" text-anchor="middle">%d</text>' %
-               (cv.X(x), cv.Y(y) + pt_m * 0.35, mg.FONT, pt_m * (1.0 if rr > 1.5 * k else 0.85), TXT, no))
+               (cv.X(x), cv.Y(y) + pt_m * 0.35, mg.FONT, pt_m * (1.0 if rr >= big_r - 1e-9 else ns["small_factor"]), TXT, no))
 
     # ── 범례 / 북쪽 / 그래픽 스케일 ──
     chips = []
@@ -1737,6 +1758,15 @@ def render(out, floor, scale, png_width=4096, seed=7, crops=False, center=None, 
              "door_jamb_clearance_violations": jamb_viol, "doors_shifted_for_250mm_clearance": sum(1 for d in doors if d["shifted"]), "lineweight_tiers": tiers}
     if program:
         check["program"] = program_check(plan, plan_qa, chips, furn_all, drawn_cols, program)
+    if occupancy:                                                                            # 조립기용 점유 정보(옵션): 도면 좌표(m)의 WKT
+        from shapely import wkt as _wkt
+
+        def _w(g_):
+            return "" if g_ is None or g_.is_empty else _wkt.dumps(g_.simplify(0.01), rounding_precision=3)
+        check["occupancy"] = {"furniture": _w(U(furn_all)), "walls": _w(wall_union), "columns": _w(U(drawn_cols)), "tubes": _w(shell_tubes), "symbols": _w(sym_union),
+                              "model_only": _w(model_only_union), "door_swings": _w(swing_union), "footprint": _w(footprint),
+                              "numbers": [[no, round(x, 3), round(y, 3), round(rr, 3)] for no, x, y, rr in nums],
+                              "num_style": {kk: vv for kk, vv in ns.items()}}
     json.dump(check, open(base + "_check.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     if clean:
         json.dump(cv.curve_log, open(base + "_curvelog.json", "w", encoding="utf-8"), ensure_ascii=False)
@@ -1809,11 +1839,18 @@ def main():
     ap.add_argument("--bare", action="store_true", help="범례·축척 막대·북쪽 표시를 생략(도면집 시트가 자체 패널을 둔다)")
     ap.add_argument("--note", action="append", default=[], help="범례 아래에 쓸 줄(반복 지정). 도면집 시트 번호·적용 층·층간 차이")
     ap.add_argument("--cleanline", action="store_true", help="C-T13A 선 정리: 호·베지어 경로, 조경·구획 경계 정리, 시각 순위 조정")
+    ap.add_argument("--num-pt", type=float, default=None, help="구역 번호 글자 크기(pt). 기본 6.5(기존)")
+    ap.add_argument("--num-r", type=float, default=None, help="번호 기호 반지름(종이 mm). 기본 1.8(기존)")
+    ap.add_argument("--num-r-small", type=float, default=None, help="코어·화장실 작은 번호 기호 반지름(종이 mm). 기본 1.2(기존)")
+    ap.add_argument("--num-small-factor", type=float, default=None, help="작은 기호 글자 배율. 기본 0.85(기존)")
+    ap.add_argument("--num-clear", type=float, default=None, help="번호가 가구·벽·기둥에서 떨어질 거리(m). 기본 기존 이격")
+    ap.add_argument("--up-pt", type=float, default=None, help="계단 UP 글자 크기(pt). 기본 5.0(기존)")
+    ap.add_argument("--occupancy", action="store_true", help="점검 JSON에 가구·벽·기둥 점유 폴리곤(WKT)을 싣는다")
     a = ap.parse_args()
+    ns_ = {kk: vv for kk, vv in (("pt", a.num_pt), ("r", a.num_r), ("r_small", a.num_r_small), ("small_factor", a.num_small_factor), ("clear", a.num_clear), ("up_pt", a.up_pt)) if vv is not None} or None
     scale = a.scale or (500 if a.floor == "1F" else 100)                             # 1층 1:500, 상층 1:100
     out_ = os.path.abspath(a.out)
-    layout = pc.load_json(os.path.join(out_, "vector", "floor_%s_layout.json" % a.floor))
-    bx0, by0, bx1, by1 = layout["building"]
+    bx0, by0, bx1, by1 = load_building(out_, a.floor)
     k_ = scale / 1000.0
     hw, hh = A3[0] * k_ / 2, A3[1] * k_ / 2                                           # A3 한 장이 덮는 월드 반폭·반높이
     if (bx1 - bx0 + 4 > 2 * hw or by1 - by0 + 4 > 2 * hh) and scale <= 100:
@@ -1827,11 +1864,11 @@ def main():
             for ci_, xc in enumerate(xs_):
                 n_ += 1
                 render(out_, a.floor, scale, a.png_width, a.seed, a.crops and n_ == 1, center=(xc, yc), tag="_t%d" % n_,
-                       side="L" if ci_ == 0 else "R", top=(ri_ == 0), final_dir=a.final_dir, clean=a.cleanline, notes=tuple(a.note), v2layout=a.v2layout, bare=a.bare, v3layout=a.v3layout)
+                       side="L" if ci_ == 0 else "R", top=(ri_ == 0), final_dir=a.final_dir, clean=a.cleanline, notes=tuple(a.note), v2layout=a.v2layout, bare=a.bare, v3layout=a.v3layout, num_style=ns_, occupancy=a.occupancy)
     else:
         if scale == 100:
             print("1:100 단일 시트")
-        render(out_, a.floor, scale, a.png_width, a.seed, a.crops, program=a.program, final_dir=a.final_dir, name=a.name, clean=a.cleanline, notes=tuple(a.note), v2layout=a.v2layout, bare=a.bare, v3layout=a.v3layout)
+        render(out_, a.floor, scale, a.png_width, a.seed, a.crops, program=a.program, final_dir=a.final_dir, name=a.name, clean=a.cleanline, notes=tuple(a.note), v2layout=a.v2layout, bare=a.bare, v3layout=a.v3layout, num_style=ns_, occupancy=a.occupancy)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,19 @@
+{
+  "edition": "V4",
+  "head_at_build": "5575b5d",
+  "timestamp": "2026-11-14T03:17:33.216122+09:00",
+  "python": "3.14.0",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "commands": [
+    "python -X utf8 -m tools.t14i.build_plans --run <RUN>",
+    "python -X utf8 -m tools.t14i.build_details_v4 --run <RUN>",
+    "python -X utf8 -m tools.t14i.build_appendix_v4 --run <RUN>",
+    "python -X utf8 -m tools.t14i.build_books --run <RUN> --head <HEAD>",
+    "python -X utf8 -m tools.t14i.run_qa_v4 --run <RUN> --head <HEAD>"
+  ],
+  "sha256": {
+    "model_world.npz": "992e2ec51ec17dc494ed2f99ddb11298671449dd6661d92df3b3536a0049537b",
+    "Graduation_Drawing_Book_Candidate_V4.pdf": "cb8d98fd056de7632c23e8b5937189f865680f5cf03e53c15032773c9e4f587e",
+    "Technical_Drawing_Appendix_Candidate_V4.pdf": "5ba6b3495717a39a9f3554a9dcb94058e968869d61c75dab6adf3aaa066cb15d"
+  }
+}

@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
+<metadata>DOCUMENT · UNRESOLVED 목록</metadata>
+<rect width="420" height="297" fill="#fff"/>
+<path d="M10.00,8.00 L400.00,8.00 L400.00,16.00 L10.00,16.00 Z" fill="#eee" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="13.920" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="bold" fill="#111" text-anchor="start">번호</text>
+<text x="23.200" y="13.920" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="bold" fill="#111" text-anchor="start">항목</text>
+<text x="103.200" y="13.920" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="bold" fill="#111" text-anchor="start">현재 처리</text>
+<text x="253.200" y="13.920" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="bold" fill="#111" text-anchor="start">필요한 결정</text>
+<text x="11.200" y="21.772" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-01</text>
+<text x="23.200" y="21.772" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">상층 외벽·구획벽·문·창·화장실·피난 경로</text>
+<text x="103.200" y="21.772" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">모델에 없음 → LEVEL S, 그리지 않음</text>
+<text x="253.200" y="21.772" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">설계 여부(피난·방화 설계는 임의 확정하지 않음)</text>
+<path d="M10.00,23.40 L400.00,23.40" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M10.00,23.40 L400.00,23.40 L400.00,30.80 L10.00,30.80 Z" fill="#f7f7f7" stroke="none" stroke-width="0.000" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="29.172" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-02</text>
+<text x="23.200" y="29.172" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">캡슐 출입구·문</text>
+<text x="103.200" y="29.172" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">닫힘 (D-405)</text>
+<text x="253.200" y="29.172" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">위치·형식</text>
+<path d="M10.00,30.80 L400.00,30.80" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="36.572" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-03</text>
+<text x="23.200" y="36.572" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">상층 코어 내부(계단·부속실·승강기)</text>
+<text x="103.200" y="36.572" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">1F 마스터만 MODEL, 상층 코어 단면은 D-404에 CONCEPT PROPOSED로 분리</text>
+<text x="253.200" y="36.572" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">상층 코어 설계</text>
+<path d="M10.00,38.20 L400.00,38.20" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M10.00,38.20 L400.00,38.20 L400.00,45.60 L10.00,45.60 Z" fill="#f7f7f7" stroke="none" stroke-width="0.000" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="43.972" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-04</text>
+<text x="23.200" y="43.972" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">외피 성격과 접합(커튼월·벽·난간)</text>
+<text x="103.200" y="43.972" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">형상만 MODEL. D-406 접합 원리는 CONCEPT PROPOSED</text>
+<text x="253.200" y="43.972" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">외피 구분·재료</text>
+<path d="M10.00,45.60 L400.00,45.60" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="51.372" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-05</text>
+<text x="23.200" y="51.372" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">평면 축척 채택</text>
+<text x="103.200" y="51.372" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">A1 1:200 · A3 1:200 분할을 생성함. A3 1:250은 OVERVIEW</text>
+<text x="253.200" y="51.372" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">최종 출력 형식 선택</text>
+<path d="M10.00,53.00 L400.00,53.00" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M10.00,53.00 L400.00,53.00 L400.00,60.40 L10.00,60.40 Z" fill="#f7f7f7" stroke="none" stroke-width="0.000" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="58.772" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-06</text>
+<text x="23.200" y="58.772" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">8F~9F · 13F~14F 공통 평면</text>
+<text x="103.200" y="58.772" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">공통 + 차이 표기(A-902 붉은 부분), 동등 주장 없음</text>
+<text x="253.200" y="58.772" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">받아들일지</text>
+<path d="M10.00,60.40 L400.00,60.40" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="66.172" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-07</text>
+<text x="23.200" y="66.172" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">평면 미발행 층</text>
+<text x="103.200" y="66.172" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">B2·B1·2F·6F·7F·11F·12F 평면(P-106~112)과 차이도(A-904) 추가</text>
+<text x="253.200" y="66.172" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">4F·5F 별도 평면 필요 여부</text>
+<path d="M10.00,67.80 L400.00,67.80" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M10.00,67.80 L400.00,67.80 L400.00,75.20 L10.00,75.20 Z" fill="#f7f7f7" stroke="none" stroke-width="0.000" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="73.572" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-08</text>
+<text x="23.200" y="73.572" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">가구·프로그램·동선</text>
+<text x="103.200" y="73.572" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">전부 PROPOSED_ONLY / CONCEPT PROPOSED</text>
+<text x="253.200" y="73.572" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">어느 안을 채택할지</text>
+<path d="M10.00,75.20 L400.00,75.20" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="80.972" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-09</text>
+<text x="23.200" y="80.972" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">치수 반올림·구조 규격</text>
+<text x="103.200" y="80.972" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">10 mm 반올림. 부재 규격·재료는 모델에 없음</text>
+<text x="253.200" y="80.972" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">구조 규격 자료</text>
+<path d="M10.00,82.60 L400.00,82.60" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M10.00,82.60 L400.00,82.60 L400.00,90.00 L10.00,90.00 Z" fill="#f7f7f7" stroke="none" stroke-width="0.000" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="88.372" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-10</text>
+<text x="23.200" y="88.372" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">선큰 계단의 단 형식</text>
+<text x="103.200" y="88.372" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">12단·−5.5 m = 모델 사실. 458 mm는 계산값(승인 치수 아님)</text>
+<text x="253.200" y="88.372" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">보행 계단인지 객석형 단인지, 단 수의 뜻</text>
+<path d="M10.00,90.00 L400.00,90.00" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="95.772" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-11</text>
+<text x="23.200" y="95.772" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">화물 승강기 동선</text>
+<text x="103.200" y="95.772" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">형상만 MODEL, 하역→보관→승강로 동선은 CONCEPT PROPOSED</text>
+<text x="253.200" y="95.772" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">화물 동선·카·승강장</text>
+<path d="M10.00,97.40 L400.00,97.40" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M10.00,97.40 L400.00,97.40 L400.00,104.80 L10.00,104.80 Z" fill="#f7f7f7" stroke="none" stroke-width="0.000" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="103.172" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-12</text>
+<text x="23.200" y="103.172" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">입면 대지 지형</text>
+<text x="103.200" y="103.172" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">GL = 1F</text>
+<text x="253.200" y="103.172" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">대지 모델</text>
+<path d="M10.00,104.80 L400.00,104.80" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="110.572" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-13</text>
+<text x="23.200" y="110.572" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">배치도 A-003</text>
+<text x="103.200" y="110.572" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">사용자 제공, 수정 없음</text>
+<text x="253.200" y="110.572" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">1층 최종 승인</text>
+<path d="M10.00,112.20 L400.00,112.20" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M10.00,112.20 L400.00,112.20 L400.00,119.60 L10.00,119.60 Z" fill="#f7f7f7" stroke="none" stroke-width="0.000" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="117.972" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-14</text>
+<text x="23.200" y="117.972" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">클라우드·Modal</text>
+<text x="103.200" y="117.972" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">미사용(잔액·지출 한도 미확인), 결제 변경 없음</text>
+<text x="253.200" y="117.972" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">필요 시 별도 승인</text>
+<path d="M10.00,119.60 L400.00,119.60" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="125.372" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-16</text>
+<text x="23.200" y="125.372" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">지붕 개방 여부</text>
+<text x="103.200" y="125.372" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">단면에 슬래브의 모델 범위만 표기</text>
+<text x="253.200" y="125.372" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">지붕 슬래브 범위</text>
+<path d="M10.00,127.00 L400.00,127.00" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M10.00,127.00 L400.00,127.00 L400.00,134.40 L10.00,134.40 Z" fill="#f7f7f7" stroke="none" stroke-width="0.000" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="132.772" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-17</text>
+<text x="23.200" y="132.772" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">EV 피트 −16.5 m</text>
+<text x="103.200" y="132.772" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">단면은 B2−1.5 m에서 절단하고 기재</text>
+<text x="253.200" y="132.772" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">피트 도시 여부</text>
+<path d="M10.00,134.40 L400.00,134.40" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="140.172" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-18</text>
+<text x="23.200" y="140.172" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">프로그램 면적의 정의</text>
+<text x="103.200" y="140.172" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">'프로그램 볼륨 투영 면적'과 사용 면적은 다름(A-903)</text>
+<text x="253.200" y="140.172" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">순 사용 면적 정의</text>
+<path d="M10.00,141.80 L400.00,141.80" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M10.00,141.80 L400.00,141.80 L400.00,149.20 L10.00,149.20 Z" fill="#f7f7f7" stroke="none" stroke-width="0.000" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="147.572" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-19</text>
+<text x="23.200" y="147.572" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">Part I 서술(개념·시나리오)</text>
+<text x="103.200" y="147.572" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">작성자 해석 = CONCEPT PROPOSED</text>
+<text x="253.200" y="147.572" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">작성자 검토·수정</text>
+<path d="M10.00,149.20 L400.00,149.20" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="11.200" y="154.972" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">U-20</text>
+<text x="23.200" y="154.972" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">원본 GLB</text>
+<text x="103.200" y="154.972" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">BLOCKED_MISSING_SOURCE — 캐시로 생성, 원본 해시 미검증</text>
+<text x="253.200" y="154.972" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">GLB 제공 시 재검증</text>
+<path d="M10.00,156.60 L400.00,156.60" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M10.00,262.00 L410.00,262.00 L410.00,287.00 L10.00,287.00 Z" fill="#fff" stroke="#222" stroke-width="0.350" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M300.00,262.00 L300.00,287.00" fill="none" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M358.00,262.00 L358.00,287.00" fill="none" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="14.000" y="269.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="bold" fill="#111" text-anchor="start">A-900</text>
+<text x="40.000" y="269.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="bold" fill="#111" text-anchor="start">미확정 설계 결정·도면 한계</text>
+<text x="40.000" y="275.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#444" text-anchor="start">이 도면집은 후보(V4)이며 FREEZE가 아니다 · 아래 항목은 근거 부재 또는 사용자 결정 전이라 확정하지 않았다</text>
+<text x="305.000" y="269.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">축척 — (표·문서, A3)</text>
+<text x="305.000" y="274.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="bold" fill="#a33" text-anchor="start">DOCUMENT</text>
+<text x="305.000" y="278.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#a33" text-anchor="start">UNRESOLVED 목록</text>
+<text x="305.000" y="283.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">도면집 후보 V4 · FREEZE 아님</text>
+<text x="363.000" y="269.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">C-T14I</text>
+<text x="363.000" y="275.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">개정 R4 (V4)</text>
+<text x="363.000" y="280.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">출력 2026-11-13</text>
+</svg>

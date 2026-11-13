@@ -1,0 +1,16 @@
+﻿page,sheet,title,scale,paper,grade,folder,part
+1,G-001,졸업 설계 도면집 표지,—,A3,PRESENTATION,partI,I
+2,G-002,목차,—,A3,DOCUMENT,partI,I
+3,G-101,프로젝트 개요,—,A3,PRESENTATION,partI,I
+4,G-102,대지·도시 맥락,—,A3,PRESENTATION,partI,I
+5,G-103,설계 개념과 매스 형성,—,A3,PRESENTATION,partI,I
+6,G-104,수직 보행·튜브·램프 구조,—,A3,PRESENTATION,partI,I
+7,G-105,층별 프로그램 다이어그램,—,A3,PRESENTATION,partI,I
+8,G-106,대표층 평면도,—,A3,PRESENTATION,partI,I
+9,G-107,공간 사용 시나리오,—,A3,PRESENTATION,partI,I
+10,G-108,주요 입면도,—,A3,PRESENTATION,partI,I
+11,G-109,주요 단면도,—,A3,PRESENTATION,partI,I
+12,G-110,실제 모델 기반 3D 축투상,—,A3,PRESENTATION,partI,I
+13,G-111,대표 상세와 설계 의도,—,A3,PRESENTATION,partI,I
+14,G-112,층별 프로그램과 공간 경험,—,A3,PRESENTATION,partI,I
+15,G-113,설계 요약·기술 부록 참조,—,A3,PRESENTATION,partI,I

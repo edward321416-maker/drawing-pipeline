@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
+<metadata>MODEL VERIFIED + DERIVED · 사용면적 UNRESOLVED</metadata>
+<rect width="420" height="297" fill="#fff"/>
+<text x="14.000" y="16.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.881" font-weight="bold" fill="#111" text-anchor="start">핵심 재검증: 8F와 12F</text>
+<path d="M14.00,24.00 L356.00,24.00 L356.00,32.60 L14.00,32.60 Z" fill="#eee" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="15.200" y="30.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="bold" fill="#111" text-anchor="start">층</text>
+<text x="29.200" y="30.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="bold" fill="#111" text-anchor="start">프로그램 단순합</text>
+<text x="75.200" y="30.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="bold" fill="#111" text-anchor="start">합집합</text>
+<text x="117.200" y="30.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="bold" fill="#111" text-anchor="start">층판 외곽</text>
+<text x="159.200" y="30.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="bold" fill="#111" text-anchor="start">개구</text>
+<text x="195.200" y="30.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="bold" fill="#111" text-anchor="start">층판 순</text>
+<text x="237.200" y="30.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="bold" fill="#111" text-anchor="start">개구 위</text>
+<text x="277.200" y="30.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="bold" fill="#111" text-anchor="start">미피복</text>
+<text x="317.200" y="30.400" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="bold" fill="#111" text-anchor="start">차이</text>
+<text x="15.200" y="38.840" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">8F</text>
+<text x="29.200" y="38.840" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">2,526.0</text>
+<text x="75.200" y="38.840" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">2,526.0</text>
+<text x="117.200" y="38.840" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">2,916.1</text>
+<text x="159.200" y="38.840" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">576.8</text>
+<text x="195.200" y="38.840" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">2,339.3</text>
+<text x="237.200" y="38.840" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">279.8</text>
+<text x="277.200" y="38.840" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">93.2</text>
+<text x="317.200" y="38.840" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">186.7</text>
+<path d="M14.00,40.60 L356.00,40.60" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M14.00,40.60 L356.00,40.60 L356.00,48.60 L14.00,48.60 Z" fill="#f7f7f7" stroke="none" stroke-width="0.000" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="15.200" y="46.840" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">12F</text>
+<text x="29.200" y="46.840" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">2,489.1</text>
+<text x="75.200" y="46.840" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">2,489.1</text>
+<text x="117.200" y="46.840" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">2,916.1</text>
+<text x="159.200" y="46.840" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">903.9</text>
+<text x="195.200" y="46.840" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">2,012.2</text>
+<text x="237.200" y="46.840" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">588.7</text>
+<text x="277.200" y="46.840" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">111.8</text>
+<text x="317.200" y="46.840" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#222" text-anchor="start">476.9</text>
+<path d="M14.00,48.60 L356.00,48.60" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="14.000" y="58.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.175" font-weight="bold" fill="#111" text-anchor="start">회계식</text>
+<text x="14.000" y="68.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#333" text-anchor="start">프로그램 단순합 − 층판 순 = 겹침 + 개구 위 + 층판 밖 − 층판 미피복</text>
+<text x="18.000" y="84.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.528" font-weight="bold" fill="#111" text-anchor="start">8F</text>
+<text x="18.000" y="96.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#333" text-anchor="start">층판 순</text>
+<path d="M68.00,92.00 L317.53,92.00 L317.53,98.00 L68.00,98.00 Z" fill="#777" stroke="#777" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="321.530" y="97.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#333" text-anchor="start">2,339.3 ㎡</text>
+<text x="18.000" y="107.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#333" text-anchor="start">프로그램 합</text>
+<path d="M68.00,103.00 L337.44,103.00 L337.44,109.00 L68.00,109.00 Z" fill="#7e6eb5" stroke="#7e6eb5" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="341.442" y="108.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#333" text-anchor="start">2,526.0 ㎡</text>
+<text x="18.000" y="118.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#333" text-anchor="start">개구 위</text>
+<path d="M68.00,114.00 L97.85,114.00 L97.85,120.00 L68.00,120.00 Z" fill="#d98032" stroke="#d98032" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="101.850" y="119.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#333" text-anchor="start">279.8 ㎡</text>
+<text x="18.000" y="129.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#333" text-anchor="start">미피복</text>
+<path d="M68.00,125.00 L77.94,125.00 L77.94,131.00 L68.00,131.00 Z" fill="#7b9c5d" stroke="#7b9c5d" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="81.937" y="130.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#333" text-anchor="start">93.2 ㎡</text>
+<text x="18.000" y="142.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="normal" fill="#444" text-anchor="start">8F: 단순합 2,526.0 ㎡ − 층판 순면적 2,339.3 ㎡ = 186.7 ㎡ = 겹침 0.0 + 개구 위 279.8 + 층판 밖 0.0 − 층판 미피복 93.2 (㎡, 계산값).</text>
+<text x="18.000" y="151.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.528" font-weight="bold" fill="#111" text-anchor="start">12F</text>
+<text x="18.000" y="163.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#333" text-anchor="start">층판 순</text>
+<path d="M68.00,159.00 L282.64,159.00 L282.64,165.00 L68.00,165.00 Z" fill="#777" stroke="#777" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="286.638" y="164.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#333" text-anchor="start">2,012.2 ㎡</text>
+<text x="18.000" y="174.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#333" text-anchor="start">프로그램 합</text>
+<path d="M68.00,170.00 L333.50,170.00 L333.50,176.00 L68.00,176.00 Z" fill="#7e6eb5" stroke="#7e6eb5" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="337.503" y="175.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#333" text-anchor="start">2,489.1 ㎡</text>
+<text x="18.000" y="185.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#333" text-anchor="start">개구 위</text>
+<path d="M68.00,181.00 L130.79,181.00 L130.79,187.00 L68.00,187.00 Z" fill="#d98032" stroke="#d98032" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="134.791" y="186.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#333" text-anchor="start">588.7 ㎡</text>
+<text x="18.000" y="196.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#333" text-anchor="start">미피복</text>
+<path d="M68.00,192.00 L79.93,192.00 L79.93,198.00 L68.00,198.00 Z" fill="#7b9c5d" stroke="#7b9c5d" stroke-width="0.100" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="83.926" y="197.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#333" text-anchor="start">111.8 ㎡</text>
+<text x="18.000" y="209.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.293" font-weight="normal" fill="#444" text-anchor="start">12F: 단순합 2,489.1 ㎡ − 층판 순면적 2,012.2 ㎡ = 476.9 ㎡ = 겹침 0.0 + 개구 위 588.7 + 층판 밖 0.0 − 층판 미피복 111.8 (㎡, 계산값).</text>
+<text x="14.000" y="226.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.175" font-weight="bold" fill="#111" text-anchor="start">결론</text>
+<text x="20.000" y="237.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#333" text-anchor="start">· 8F 2,526.0㎡는 프로그램 볼륨 투영 단순합이며 층판 순면적 2,339.3㎡와 다른 정의다.</text>
+<text x="20.000" y="244.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#333" text-anchor="start">· 12F 2,489.1㎡에는 타층 볼륨 투영 323.7㎡가 포함되고, 프로그램 588.7㎡가 층판 개구 위에 걸친다.</text>
+<text x="20.000" y="251.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#333" text-anchor="start">· 전용/공용 벽 경계가 모델에 없어 순사용면적은 UNRESOLVED. 프로그램 값을 사용면적으로 바꾸지 않았다.</text>
+<path d="M10.00,262.00 L410.00,262.00 L410.00,287.00 L10.00,287.00 Z" fill="#fff" stroke="#222" stroke-width="0.350" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M300.00,262.00 L300.00,287.00" fill="none" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M358.00,262.00 L358.00,287.00" fill="none" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="14.000" y="269.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="bold" fill="#111" text-anchor="start">A-903</text>
+<text x="40.000" y="269.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="bold" fill="#111" text-anchor="start">면적 데이터 재검증</text>
+<text x="40.000" y="275.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#444" text-anchor="start">프로그램 볼륨 투영·층판·개구·미피복을 분리 — 숫자를 맞추려고 모델을 수정하지 않음</text>
+<text x="305.000" y="269.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">축척 — (표·문서, A3)</text>
+<text x="305.000" y="274.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="bold" fill="#a33" text-anchor="start">MODEL VERIFIED + DERIVED</text>
+<text x="305.000" y="278.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#a33" text-anchor="start">사용면적 UNRESOLVED</text>
+<text x="305.000" y="283.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">도면집 후보 V4 · FREEZE 아님</text>
+<text x="363.000" y="269.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">C-T14I</text>
+<text x="363.000" y="275.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">개정 R4 (V4)</text>
+<text x="363.000" y="280.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">출력 2026-11-13</text>
+</svg>
