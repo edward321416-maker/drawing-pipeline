@@ -12,6 +12,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT, "src"))
 sys.path.insert(0, HERE)
+import t14i  # noqa: E402,F401  (V4 edition env + minimum text size policy)
 import numpy as np  # noqa: E402
 import pipeline_common as pc  # noqa: E402
 from shapely.geometry import box  # noqa: E402
@@ -29,7 +30,7 @@ def r5(v):
     return round(v / 0.005) * 0.005
 
 
-def level_lines(sh, model, x_l, x_r, y_of, z_lo, z_hi, roof_z):
+def level_lines(sh, model, x_l, x_r, y_of, z_lo, z_hi, roof_z, extra=()):
     ffl0 = model.floors["1F"]
     for name, z in sorted(model.floors.items(), key=lambda kv: kv[1]):
         if z < z_lo or z > z_hi:
@@ -37,12 +38,17 @@ def level_lines(sh, model, x_l, x_r, y_of, z_lo, z_hi, roof_z):
         y = y_of(z)
         sh.line(x_l, y, x_r, y, 0.1, "#999", "2.2,1.6")
         lab = "%s  %+.3f" % (name, r5(z - ffl0))
-        sh.text(x_l - 1, y - 0.8, lab, 6, "normal", "#444", "end")
-        sh.text(x_r + 1, y - 0.8, lab, 6, "normal", "#444", "start")
+        sh.text(x_l - 1, y - 0.8, lab, 7, "normal", "#444", "end")
+        sh.text(x_r + 1, y - 0.8, lab, 7, "normal", "#444", "start")
     y = y_of(roof_z)
     sh.line(x_l, y, x_r, y, 0.1, "#999", "2.2,1.6")
-    sh.text(x_l - 1, y - 0.8, "ROOF  %+.3f" % r5(roof_z - ffl0), 6, "bold", "#444", "end")
-    sh.text(x_r + 1, y - 0.8, "ROOF  %+.3f" % r5(roof_z - ffl0), 6, "bold", "#444", "start")
+    sh.text(x_l - 1, y - 0.8, "ROOF  %+.3f" % r5(roof_z - ffl0), 7, "bold", "#444", "end")
+    sh.text(x_r + 1, y - 0.8, "ROOF  %+.3f" % r5(roof_z - ffl0), 7, "bold", "#444", "start")
+    for lab_, z in extra:                                                       # 튜브·코어 상단 등 지붕 아래의 별도 레벨(예: +75.000)
+        if abs(z - roof_z) > 0.05 and z_lo <= z <= z_hi + 2.0:
+            y = y_of(z)
+            sh.line(x_l, y, x_r, y, 0.08, "#b88", "1.2,1.6")
+            sh.text(x_r + 1, y - 0.8, "%s  %+.3f" % (lab_, r5(z - ffl0)), 7, "normal", "#844", "start")
 
 
 def axes_of(run):
@@ -65,9 +71,9 @@ def top_axes(sh, X, ytop, right, xs, ys, lo, hi, meta):
         dm.bubble(sh, X(u), ytop - 19.0, pos[u], r=3.0)
         meta["axis_bubbles"] += 1
     edges = [lo] + [u for u in us if lo + 0.2 < u < hi - 0.2] + [hi]
-    dm.chain_h(sh, [X(u) for u in edges], ytop - 6.0, [dm.fmt_mm(b - a) for a, b in zip(edges, edges[1:])], from_y=ytop + 1.0)
+    dm.chain_h(sh, [X(u) for u in edges], ytop - 6.0, [dm.fmt_mm(b - a) for a, b in zip(edges, edges[1:])], from_y=ytop + 1.0, pt=7.0)
     meta["grid_chains"] += 1
-    dm.dim_h(sh, X(lo), X(hi), ytop - 11.5, dm.fmt_mm(hi - lo), from_y=ytop + 1.0)
+    dm.dim_h(sh, X(lo), X(hi), ytop - 11.5, dm.fmt_mm(hi - lo), from_y=ytop + 1.0, pt=7.5)
     meta["overall_chains"] += 1
 
 
@@ -76,13 +82,13 @@ def height_dims(sh, model, Y, x_left, x_right, roof_z, z_lo_draw, tops, meta):
     zs = sorted([(n, z) for n, z in model.floors.items() if z >= z_lo_draw - 1e-6], key=lambda kv: kv[1]) + [("ROOF", roof_z)]
     chain = [Y(z) for _, z in zs]
     labels = [dm.fmt_mm(r5(b[1]) - r5(a[1])) for a, b in zip(zs, zs[1:])]
-    dm.chain_v(sh, chain, x_left, labels, from_x=x_left + 24.0)                    # 층고 체인(왼쪽)
+    dm.chain_v(sh, chain, x_left, labels, from_x=x_left + 24.0, pt=7.0)                    # 층고 체인(왼쪽)
     meta["level_dims"] += 1
-    dm.dim_v(sh, Y(roof_z), Y(ffl0), x_right, dm.fmt_mm(roof_z - ffl0), from_x=x_right - 24.0, left=False)    # GL~지붕 전체 높이
+    dm.dim_v(sh, Y(roof_z), Y(ffl0), x_right, dm.fmt_mm(roof_z - ffl0), from_x=x_right - 24.0, left=False, pt=7.5)    # GL~지붕 전체 높이
     meta["overall_chains"] += 1
     ex = sorted({round(t - ffl0, 2) for t in tops if t > ffl0 + 0.5})
     if ex:                                                                         # 주요 돌출부·튜브 상단 높이
-        dm.chain_v(sh, [Y(ffl0 + v) for v in [0.0] + ex], x_right + 9.0, [dm.fmt_mm(b - a) for a, b in zip([0.0] + ex, ex)], from_x=x_right - 24.0, left=False)
+        dm.chain_v(sh, [Y(ffl0 + v) for v in [0.0] + ex], x_right + 9.0, [dm.fmt_mm(b - a) for a, b in zip([0.0] + ex, ex)], from_x=x_right - 24.0, left=False, pt=7.0)
         meta["major_dims"] += 1
 
 
@@ -117,17 +123,17 @@ def height_table(sh, model, x, y, rows, title):
     sh.text(x, y, title, 8, "bold", "#111")
     y += 5.0
     sh.line(x, y - 3.2, x + 98, y - 3.2, 0.2, "#555")
-    sh.text(x, y, "요소", 6.2, "bold", "#222")
-    sh.text(x + 62, y, "하단", 6.2, "bold", "#222", "end")
-    sh.text(x + 80, y, "상단", 6.2, "bold", "#222", "end")
-    sh.text(x + 98, y, "높이", 6.2, "bold", "#222", "end")
-    y += 4.2
+    sh.text(x, y, "요소", 7, "bold", "#222")
+    sh.text(x + 62, y, "하단", 7, "bold", "#222", "end")
+    sh.text(x + 80, y, "상단", 7, "bold", "#222", "end")
+    sh.text(x + 98, y, "높이", 7, "bold", "#222", "end")
+    y += 4.6
     for nm, lo, hi in rows:
-        sh.text(x, y, nm[:22], 5.9, "normal", "#333")
-        sh.text(x + 62, y, "%+.2f" % (lo - ffl0), 5.9, "normal", "#333", "end")
-        sh.text(x + 80, y, "%+.2f" % (hi - ffl0), 5.9, "normal", "#333", "end")
-        sh.text(x + 98, y, dm.fmt_mm(hi - lo), 5.9, "normal", "#333", "end")
-        y += 4.0
+        sh.text(x, y, nm[:20], 7, "normal", "#333")
+        sh.text(x + 62, y, "%+.2f" % (lo - ffl0), 7, "normal", "#333", "end")
+        sh.text(x + 80, y, "%+.2f" % (hi - ffl0), 7, "normal", "#333", "end")
+        sh.text(x + 98, y, dm.fmt_mm(hi - lo), 7, "normal", "#333", "end")
+        y += 4.5
     return y
 
 
@@ -145,7 +151,7 @@ def main():
     regs = json.load(open(os.path.join(run, "qa", "ref_registries", "section_line_registry.json"), encoding="utf-8"))
     tops = sorted({o["zmax"] for o in model.objects if o["kind"] in ("tube_wall", "core_wall", "shaft", "ramp") and o["zmax"] > model.floors["15F"] + 0.5})
     ident = modelsrc.identity(run, a.glb)
-    reg = {"book": "C_T14G", "model": {"path": os.path.abspath(a.glb) if a.glb else ident["glb_name"] + " (not present)", "sha256": modelsrc.model_sha(run, a.glb),
+    reg = {"book": cfg.PROJECT_CODE.replace("-", "_"), "model": {"path": os.path.abspath(a.glb) if a.glb else ident["glb_name"] + " (not present)", "sha256": modelsrc.model_sha(run, a.glb),
                                         "status": ident["status"], "cache_sha256": ident["cache_sha256"]}, "frame": {"theta_deg": math.degrees(model.theta), "north_deg": model.north_deg},
            "elevations": [], "sections": [], "dimension_meta": {}}
     scale, k, pad = 400, 2.5, 0.3
@@ -164,7 +170,7 @@ def main():
         x0, y0, x1, y1 = el["extent"]
         zlim = box(x0 - 1, ffl0, x1 + 1, roof_z + pad)
         meta = {"overall_chains": 0, "grid_chains": 0, "level_dims": 0, "major_dims": 0, "axis_bubbles": 0, "detail_callouts": 0, "level_labels": 0}
-        sh = Sheet(sid, "%s측 입면도 (%s ELEVATION)" % (V1.CARD_KO[card], nm_en), scale, "MODEL_GEOMETRY · 외피 접합·재료 상세 미검증",
+        sh = Sheet(sid, "%s측 입면도 (%s ELEVATION)" % (V1.CARD_KO[card], nm_en), scale, "MODEL VERIFIED · 외피 접합·재료 UNRESOLVED",
                    subtitle="정면 방위 %s %.1f° (면 법선, 진북 기준) · 건물 면에 수직 정투영 · 기준 GL = 1F FFL ±0.000 · 치수 mm" % (V1.compass_name(cb), cb),
                    extra_lines=["원천: A-FACD·A-STRC·A-FLOR·A-CORE-TUBE·A-VERT·A-ROOF 모델 객체. 3D에 없는 유리 패널·루버·출입구는 그리지 않음",
                                 "가림 처리 벡터(숨은 선 제거). 대지 지형·지하 옹벽 미표시(모델에 없음) · 축선은 3F 모델 기둥 중심선"])
@@ -172,7 +178,7 @@ def main():
         y_ground = 232.0
         X = lambda u: 190.0 + (u - ucen) * k
         Y = lambda z: y_ground - (z - ffl0) * k
-        level_lines(sh, model, X(x0) - 6, X(x1) + 6, Y, ffl0 + 0.1, roof_z - 0.1, roof_z)
+        level_lines(sh, model, X(x0) - 6, X(x1) + 6, Y, ffl0 + 0.1, roof_z - 0.1, roof_z, extra=[("TUBE TOP", t_) for t_ in tops])
         meta["level_labels"] = 15
         drawn, drawq = [], []
         for o, vis, edge in el["items"]:
@@ -184,7 +190,7 @@ def main():
         for w, lines in sorted(drawq, key=lambda t: -t[0]):
             sh.path([[(X(u), Y(z)) for u, z in ln] for ln in lines], stroke="#222", w=w, closed=False)
         sh.line(12, Y(ffl0), 300, Y(ffl0), 0.6, "#000")
-        sh.text(X(x1) + 1, Y(ffl0) + 4.5, "GL ±0.000", 6.5, "bold", "#111")
+        sh.text(X(x1) + 1, Y(ffl0) + 4.5, "GL = 1F  ±0.000", 7, "bold", "#111")
         corners = [(bb["xmin"], bb["ymin"]), (bb["xmax"], bb["ymax"]), (bb["xmin"], bb["ymax"]), (bb["xmax"], bb["ymin"])]
         rr = el["right"]
         top_axes(sh, X, Y(roof_z), rr, xs, ys, min(p[0] * rr[0] + p[1] * rr[1] for p in corners), max(p[0] * rr[0] + p[1] * rr[1] for p in corners), meta)
@@ -204,6 +210,11 @@ def main():
         for i, t in enumerate(["정면 방위 %s %.1f° (면 법선)" % (V1.compass_name(cb), cb), "건물 면에 수직인 정투영", "보는 사람: 건물 바깥에서 건물 쪽", "도면 위쪽에서 진북 %.1f° (1층 기준)" % model.north_deg]):
             sh.text(306, 86 + i * 4.6, t, 6.0, "normal", "#333")
         sh.north_arrow(380, 108, model.north_deg, r=5.5)
+        over_m = (x1 - x0) - ((corners_w := max(p_[0] * el["right"][0] + p_[1] * el["right"][1] for p_ in corners) - min(p_[0] * el["right"][0] + p_[1] * el["right"][1] for p_ in corners)))
+        if over_m > 0.02:                                                           # 굵은 외곽선은 보이는 부재 전체의 실루엣: 건물 폭(축선 체인 외곽)보다 넓으면 그 이유를 밝힌다
+            wide = [o_["name"] for o_, v_, e_ in el["items"] if (lambda b_: (b_[2] - b_[0]) > corners_w + 0.02)(v_.bounds)]
+            sh.text(306, 112, "굵은 외곽 폭 %s = 건물 %d + 돌출 부재 %d (mm)" % (dm.fmt_mm(x1 - x0), int(dm.fmt_mm(corners_w)), int(dm.fmt_mm(x1 - x0)) - int(dm.fmt_mm(corners_w))), 7, "normal", "#844")
+            sh.text(306, 117, "(돌출: %s)" % ", ".join(wide[:2]) if wide else "(돌출 부재: 모델 측정)", 6, "normal", "#844")
         sh.scale_bar(306, 150, meters=(0, 5, 10, 20))
         sh.title_block()
         base = sh.save(os.path.join(run, "elevations", "%s_%s_elevation" % (sid, {"N": "north", "E": "east", "S": "south", "W": "west"}[card])))
@@ -229,7 +240,7 @@ def main():
         X = lambda u: 190.0 + (u - ucen) * kk
         Y = lambda z: SEC_TOP + (roof_z + 0.4 - z) * kk
         meta = {"overall_chains": 0, "grid_chains": 0, "level_dims": 0, "major_dims": 0, "axis_bubbles": 0, "detail_callouts": 0, "level_labels": 18}
-        sh = Sheet(sid, "단면도 %s–%s (SECTION %s–%s)" % (nm, nm, nm, nm), sc, "MODEL_GEOMETRY · 실제 메시 절단",
+        sh = Sheet(sid, "단면도 %s–%s (SECTION %s–%s)" % (nm, nm, nm, nm), sc, "MODEL VERIFIED · 실제 메시 절단",
                    subtitle="%s · 절단면 %s = %.3f (도면틀) · 바라보는 방향 %s · 치수 mm" % (s["description"], ax, val, ("+" if ls > 0 else "−") + ax),
                    extra_lines=["절단 포셰 = 모델 메시와 절단면의 교선(층 평면을 쌓은 가짜 단면 아님). 절단면 너머 객체는 가림 처리 윤곽선",
                                 "층 레벨·슬래브 두께는 A-FLOR 층판에서 읽음. 접합·재료 상세 미검증. 지반·옹벽은 모델에 없어 표시하지 않음(UNVERIFIED)"])
@@ -258,17 +269,22 @@ def main():
         top_axes(sh, X, Y(roof_z), right, xs, ys, lo_u, hi_u, meta)
         height_dims(sh, model, Y, X(x0) - 32.0, X(x1) + 30.0, roof_z, z_clip, tops, meta)
         if z_clip > z_lo + 0.01:
-            sh.text(X(x0) - 6, Y(z_clip) + 3.2, "▼ 절단 %+.3f 아래 생략 — EV 샤프트 피트는 %+.3f까지 연장 (제목란과 겹치지 않도록)" % (r5(z_clip - ffl0), r5(z_lo - ffl0)), 5.5, "normal", "#a33")
+            sh.text(X(x0) - 6, Y(z_clip) + 3.2, "▼ 절단 %+.3f 아래 생략 — EV 샤프트 피트는 %+.3f까지 연장 (제목란과 겹치지 않도록)" % (r5(z_clip - ffl0), r5(z_lo - ffl0)), 6.5, "normal", "#a33")
+        roof_cut = [p_ for o_, p_ in sec["cuts"] if o_["kind"] == "roof" and o_["name"] == "A-ROOF_slab"]
+        if roof_cut:
+            rb = roof_cut[0].bounds
+            sh.text(308, 112, "지붕 슬래브(A-ROOF_slab) 절단선상 %s / 건물 %s" % (dm.fmt_mm(rb[2] - rb[0]), dm.fmt_mm(hi_u - lo_u)), 7, "normal", "#844")
+            sh.text(308, 117, "지붕 개방 여부 U-16 미확정 (모델 범위만 표기)", 6.5, "normal", "#844")
         mini_keyplan(sh, run, 308, 24, 60, cut=s, letter=nm, north=model.north_deg)
-        sh.text(308, 101, "절단선 %s–%s: %s = %.2f, 바라봄 %s" % (nm, nm, ax, val, ("+" if ls > 0 else "−") + ax), 6.0, "normal", "#c00")
-        sh.text(308, 105.6, "키플랜 S-301 참조", 6.0, "normal", "#555")
+        sh.text(308, 101, "절단선 %s–%s: %s = %.2f, 바라봄 %s" % (nm, nm, ax, val, ("+" if ls > 0 else "−") + ax), 7, "normal", "#c00")
+        sh.text(308, 106.4, "키플랜 S-301 참조", 7, "normal", "#555")
         seen, rows = set(), []
         for o in cut_objs:
             if o["kind"] in ("tube_wall", "shaft", "ramp", "stair", "core_wall") and o["name"] not in seen:
                 seen.add(o["name"])
                 rows.append((o["name_ko"], o["zmin"], o["zmax"]))
         rows = sorted(rows, key=lambda r: -(r[2] - r[1]))[:14]
-        height_table(sh, model, 308, 120, rows, "절단 통과 요소 높이")
+        height_table(sh, model, 308, 124, rows, "절단 통과 요소 높이")
         sh.scale_bar(308, 253 - 14, meters=(0, 5, 10, 20))
         sh.title_block()
         base = sh.save(os.path.join(run, "sections", "%s_section_%s-%s" % (sid, nm, nm)))
@@ -278,7 +294,7 @@ def main():
         print("SEC", sid, nm, meta)
 
     # 키플랜 시트
-    sh = Sheet("S-301", "단면 키플랜 (SECTION LOCATOR)", 400, "MODEL_GEOMETRY · 절단선은 모델 좌표에서 계산", subtitle="3F 절단 평면 위에 A–A ~ D–D 절단선 · 화살표 = 바라보는 방향 · 치수 mm",
+    sh = Sheet("S-301", "단면 키플랜 (SECTION LOCATOR)", 400, "MODEL VERIFIED · 절단선은 모델 좌표에서 계산", subtitle="3F 절단 평면 위에 A–A ~ D–D 절단선 · 화살표 = 바라보는 방향 · 치수 mm",
                extra_lines=["절단선 좌표·방향·source 요소는 section_line_registry.json 에 기록", "1층 마스터와 같은 좌표틀(north_deg %.1f°)" % model.north_deg])
     kp = 2.5
     ox, oy = 150.0 - (bb["xmin"] + bb["xmax"]) / 2 * kp, 140.0 + (bb["ymin"] + bb["ymax"]) / 2 * kp
@@ -301,21 +317,26 @@ def main():
     for s in regs["sections"]:
         (ax0, ay0), (ax1, ay1) = s["line_drawing_frame"]
         p0, p1 = P(ax0, ay0), P(ax1, ay1)
-        sh.line(p0[0], p0[1], p1[0], p1[1], 0.5, "#c00", "7,2,1.2,2")
+        dx_, dy_ = p1[0] - p0[0], p1[1] - p0[1]
+        ln_ = math.hypot(dx_, dy_) or 1.0
+        ux, uy = dx_ / ln_, dy_ / ln_
+        e0 = (p0[0] - ux * 22.0, p0[1] - uy * 22.0)                                  # 축선 기호 고리(-12 mm) 바깥으로 절단선을 연장하고 거기에 절단 기호를 둔다
+        e1 = (p1[0] + ux * 22.0, p1[1] + uy * 22.0)
+        sh.line(e0[0], e0[1], e1[0], e1[1], 0.5, "#c00", "7,2,1.2,2")
         lk = s["view_direction_drawing_frame"]
-        mid = ((p0[0] + p1[0]) / 2, (p0[1] + p1[1]) / 2)
-        sh.path([[mid, (mid[0] + lk[0] * 12, mid[1] - lk[1] * 12)]], stroke="#c00", w=0.5, closed=False)
-        for p in (p0, p1):
-            dm.bubble(sh, p[0], p[1], s["name"][0], r=3.2, pt=7.5, color="#c00")
-            sh.text(p[0], p[1] + 7.2 if p[1] > mid[1] else p[1] - 4.6, s["sheet"], 5.0, "normal", "#c00", "middle")
+        for e_ in (e0, e1):                                                          # 바라보는 방향 화살표는 건물 밖 연장부에(다른 절단선 위에 얹지 않는다)
+            sh.path([[(e_[0] - ux * 0.0, e_[1] - uy * 0.0), (e_[0] + lk[0] * 9, e_[1] - lk[1] * 9)]], stroke="#c00", w=0.5, closed=False)
+        for p_, o_ in ((e0, -1), (e1, 1)):
+            dm.bubble(sh, p_[0] + ux * o_ * 4.0, p_[1] + uy * o_ * 4.0, s["name"][0], r=3.2, pt=7.5, color="#c00")
+            sh.text(p_[0] + ux * o_ * 11.0, p_[1] + uy * o_ * 11.0 + 1.2, s["sheet"], 6.0, "normal", "#c00", "middle")
     sh.north_arrow(380, 60, model.north_deg)
     yy = 40.0
     sh.text(250, yy - 6, "절단선 (도면틀 좌표, m)", 8, "bold", "#222")
     for s in regs["sections"]:
         pl = s["plane"]
-        sh.text(250, yy, "%s  %s = %.2f  바라봄 %s  (%s)" % (s["name"], pl["axis"], pl["value_drawing_frame"], ("+" if pl["look_sign"] > 0 else "−") + pl["axis"], s["sheet"]), 6.5, "normal", "#333")
-        sh.text(254, yy + 4.2, s["description"], 5.6, "normal", "#666")
-        yy += 11
+        sh.text(250, yy, "%s  %s = %.2f  바라봄 %s  (%s)" % (s["name"], pl["axis"], pl["value_drawing_frame"], ("+" if pl["look_sign"] > 0 else "−") + pl["axis"], s["sheet"]), 7, "normal", "#333")
+        sh.text(254, yy + 4.6, s["description"], 6.5, "normal", "#666")
+        yy += 12
     sh.scale_bar(300, 253 - 14)
     sh.title_block()
     base = sh.save(os.path.join(run, "sections", "S-301_section_locator_plan"))
