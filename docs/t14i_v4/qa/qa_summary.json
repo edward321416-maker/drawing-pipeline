@@ -1,0 +1,42 @@
+{
+  "edition": "V4",
+  "books": {
+    "I": {
+      "pdf": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14I\\output\\C_T14I_run\\v4\\book\\Graduation_Drawing_Book_Candidate_V4.pdf",
+      "sha256": "cb8d98fd056de7632c23e8b5937189f865680f5cf03e53c15032773c9e4f587e",
+      "pages": 15,
+      "checks": {
+        "page_size": [],
+        "index": [],
+        "callouts": [],
+        "scale_bars": [],
+        "text_bounds": [],
+        "text_overlap": [],
+        "fonts": [],
+        "duplicates": [],
+        "north": [],
+        "stale_refs": []
+      },
+      "total_findings": 0
+    },
+    "II": {
+      "pdf": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14I\\output\\C_T14I_run\\v4\\book\\Technical_Drawing_Appendix_Candidate_V4.pdf",
+      "sha256": "5ba6b3495717a39a9f3554a9dcb94058e968869d61c75dab6adf3aaa066cb15d",
+      "pages": 49,
+      "checks": {
+        "page_size": [],
+        "index": [],
+        "callouts": [],
+        "scale_bars": [],
+        "text_bounds": [],
+        "text_overlap": [],
+        "fonts": [],
+        "duplicates": [],
+        "north": [],
+        "stale_refs": []
+      },
+      "total_findings": 0
+    }
+  },
+  "all_checks_pass": true
+}

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
+<metadata>SOURCE RECORD · CACHE VERIFIED</metadata>
+<rect width="420" height="297" fill="#fff"/>
+<path d="M12.00,16.00 L400.00,16.00 L400.00,33.60 L12.00,33.60 Z" fill="#eee" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="13.200" y="29.600" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#111" text-anchor="start">소스</text>
+<text x="91.200" y="29.600" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#111" text-anchor="start">SHA256/상태</text>
+<text x="203.200" y="29.600" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#111" text-anchor="start">근거 등급</text>
+<text x="273.200" y="29.600" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#111" text-anchor="start">용도</text>
+<text x="13.200" y="46.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">model_world.npz</text>
+<text x="91.200" y="46.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">992e2ec51ec17dc494ed2f99ddb11298…</text>
+<text x="203.200" y="46.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">MODEL VERIFIED</text>
+<text x="273.200" y="46.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">메시 좌표·축투상·절단의 단일 캐시</text>
+<path d="M12.00,50.60 L400.00,50.60" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M12.00,50.60 L400.00,50.60 L400.00,67.60 L12.00,67.60 Z" fill="#f7f7f7" stroke="none" stroke-width="0.000" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="13.200" y="63.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">model_objects.json</text>
+<text x="91.200" y="63.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">722dd7359e2f13534ff4ae91088ba864…</text>
+<text x="203.200" y="63.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">MODEL VERIFIED</text>
+<text x="273.200" y="63.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">객체명·종류·층·메시 인덱스</text>
+<path d="M12.00,67.60 L400.00,67.60" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="13.200" y="80.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">raw_slices/</text>
+<text x="91.200" y="80.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">generated set</text>
+<text x="203.200" y="80.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">MODEL VERIFIED</text>
+<text x="273.200" y="80.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">층별 평면 절단·프로그램 구역</text>
+<path d="M12.00,84.60 L400.00,84.60" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M12.00,84.60 L400.00,84.60 L400.00,101.60 L12.00,101.60 Z" fill="#f7f7f7" stroke="none" stroke-width="0.000" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="13.200" y="97.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">reference_1F/floor_1F_slice.json</text>
+<text x="91.200" y="97.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">2795a1215a0a3f47c0d2146b06cb643b…</text>
+<text x="203.200" y="97.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">USER SUPPLIED</text>
+<text x="273.200" y="97.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">승인된 1층 18개 프로그램</text>
+<path d="M12.00,101.60 L400.00,101.60" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="13.200" y="114.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">원본 GLB</text>
+<text x="91.200" y="114.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">MISSING</text>
+<text x="203.200" y="114.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">BLOCKED_MISSING_SOURCE</text>
+<text x="273.200" y="114.860" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.364" font-weight="normal" fill="#222" text-anchor="start">캐시에서 역검증할 수 없는 재료·원본 계층</text>
+<path d="M12.00,118.60 L400.00,118.60" fill="none" stroke="#bbb" stroke-width="0.060" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="14.000" y="122.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.175" font-weight="bold" fill="#111" text-anchor="start">치수 생성 규칙</text>
+<text x="20.000" y="136.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="normal" fill="#333" text-anchor="start">· 모델 좌표(m)를 도면 축척 K=1000/분모(mm/m)로 변환</text>
+<text x="20.000" y="146.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="normal" fill="#333" text-anchor="start">· 주요 치수는 모델 좌표에서 계산 후 10 mm 반올림</text>
+<text x="20.000" y="156.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="normal" fill="#333" text-anchor="start">· 레벨은 1F FFL=±0.000 기준, 모델 floor map에서 읽음</text>
+<text x="20.000" y="166.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="normal" fill="#333" text-anchor="start">· A3 분할 정합 표식은 두 장에서 같은 모델 좌표</text>
+<text x="20.000" y="176.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="normal" fill="#333" text-anchor="start">· 상세 제안 치수는 모델 치수와 색·상태를 분리</text>
+<text x="14.000" y="198.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.175" font-weight="bold" fill="#111" text-anchor="start">차단된 검증</text>
+<text x="20.000" y="212.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#a32020" text-anchor="start">BLOCKED_MISSING_SOURCE · 원본 GLB 해시 재검증</text>
+<text x="20.000" y="222.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#a32020" text-anchor="start">BLOCKED_MISSING_SOURCE · 재료·레이어·원본 변환 행렬</text>
+<text x="20.000" y="232.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#a32020" text-anchor="start">BLOCKED_MISSING_SOURCE · GLB에서만 존재할 수 있는 상층 벽·문·피난 정보</text>
+<path d="M10.00,262.00 L410.00,262.00 L410.00,287.00 L10.00,287.00 Z" fill="#fff" stroke="#222" stroke-width="0.350" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M300.00,262.00 L300.00,287.00" fill="none" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M358.00,262.00 L358.00,287.00" fill="none" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="14.000" y="269.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="bold" fill="#111" text-anchor="start">A-907</text>
+<text x="40.000" y="269.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="bold" fill="#111" text-anchor="start">모델 출처·치수 검증 정보</text>
+<text x="40.000" y="275.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#444" text-anchor="start">원본 GLB 부재 시 캐시로 검증 가능한 범위만 발행</text>
+<text x="305.000" y="269.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">축척 — (표·문서, A3)</text>
+<text x="305.000" y="274.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="bold" fill="#a33" text-anchor="start">SOURCE RECORD</text>
+<text x="305.000" y="278.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#a33" text-anchor="start">CACHE VERIFIED</text>
+<text x="305.000" y="283.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">도면집 후보 V4 · FREEZE 아님</text>
+<text x="363.000" y="269.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">C-T14I</text>
+<text x="363.000" y="275.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">개정 R4 (V4)</text>
+<text x="363.000" y="280.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">출력 2026-11-13</text>
+</svg>

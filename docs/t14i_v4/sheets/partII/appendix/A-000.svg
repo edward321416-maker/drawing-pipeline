@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
+<metadata>DOCUMENT · NOT FROZEN</metadata>
+<rect width="420" height="297" fill="#fff"/>
+<text x="210.000" y="62.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="8.467" font-weight="bold" fill="#111" text-anchor="middle">다층 상업시설 — 기술 도면 부록</text>
+<text x="210.000" y="76.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="normal" fill="#444" text-anchor="middle">PART II  Technical Drawing Appendix (후보 V4 · NOT FROZEN)</text>
+<path d="M70.00,84.00 L350.00,84.00" fill="none" stroke="#111" stroke-width="0.500" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="210.000" y="98.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="normal" fill="#222" text-anchor="middle">이 부록은 Part I(졸업 설계 도면집)의 근거가 되는 기술 도면이다: 층별 평면·4면 입면·4개 단면·상세 D-401~D-410·치수/출처/검증 기록.</text>
+<text x="210.000" y="106.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="normal" fill="#222" text-anchor="middle">수록: 49장 (배치도 1 · 평면 12(+A1 2) · 입면 4 · 단면 5 · 상세 10 · 부록)</text>
+<text x="210.000" y="114.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="normal" fill="#222" text-anchor="middle">모델 출처: 전층 GLB 'GMC-ZZ-ZZ-M3-0701.glb' — 이 컴퓨터에 없음(BLOCKED_MISSING_SOURCE). 시트는 모델 캐시 model_world.npz sha256 992e2ec51ec17dc4…에서 생성</text>
+<text x="210.000" y="122.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="normal" fill="#222" text-anchor="middle">V2가 기록한 GLB sha256 b1927ffd8335853f… 는 원본이 없어 검증하지 못했다(기록값일 뿐).</text>
+<text x="210.000" y="130.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="normal" fill="#222" text-anchor="middle">코드 커밋 bc13014 · 개정 R4 (V4) · 출력 2026-11-13</text>
+<text x="40.000" y="152.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.528" font-weight="bold" fill="#111" text-anchor="start">표기 등급 (모든 도면 요소는 하나에 속한다)</text>
+<path d="M40.00,157.80 L82.00,157.80 L82.00,163.80 L40.00,163.80 Z" fill="#fff" stroke="#0a6b3d" stroke-width="0.300" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="61.000" y="162.120" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#0a6b3d" text-anchor="middle">MODEL VERIFIED</text>
+<text x="88.000" y="162.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="normal" fill="#222" text-anchor="start">모델 캐시의 메시·슬라이스·1층 마스터에서 코드가 직접 읽고 측정한 값(객체 이름을 근거로 적음)</text>
+<path d="M40.00,169.80 L82.00,169.80 L82.00,175.80 L40.00,175.80 Z" fill="#fff" stroke="#555" stroke-width="0.300" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="61.000" y="174.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#555" text-anchor="middle">DERIVED</text>
+<text x="88.000" y="174.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="normal" fill="#222" text-anchor="start">모델 값으로 한 계산(예: 5500÷12). 도면에 '계산값'으로 표시, 승인 치수 아님</text>
+<path d="M40.00,181.80 L82.00,181.80 L82.00,187.80 L40.00,187.80 Z" fill="#fff" stroke="#b5600a" stroke-width="0.300" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="61.000" y="186.120" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#b5600a" text-anchor="middle">CONCEPT PROPOSED</text>
+<text x="88.000" y="186.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="normal" fill="#222" text-anchor="start">근거 없는 제안(재료·접합·난간·가구·동선·서술). 시공 확정 정보가 아님. 제품명·규격 없음</text>
+<path d="M40.00,193.80 L82.00,193.80 L82.00,199.80 L40.00,199.80 Z" fill="#fff" stroke="#a32020" stroke-width="0.300" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="61.000" y="198.120" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#a32020" text-anchor="middle">UNRESOLVED</text>
+<text x="88.000" y="198.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="normal" fill="#222" text-anchor="start">모델·결정 근거가 없어 그리지 않고 사유를 적음(상층 벽·문·피난, 캡슐 출입구, 선큰 단 형식, 지붕 개방 …)</text>
+<text x="40.000" y="224.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="normal" fill="#555" text-anchor="start">글자 크기: 자체 품질 목표(A3 인쇄) — 기호·미세 주석 ≥ 6 pt, 주요 주석 ≥ 7 pt (법정 최소값이 아니다).</text>
+<text x="40.000" y="232.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.646" font-weight="normal" fill="#555" text-anchor="start">A1 1:200 시트(P-201·P-202)는 접이식/별도 출력, 나머지는 A3 가로. 목록 A-001에 쪽 번호와 용지를 적었다.</text>
+<path d="M386.00,84.00 L385.71,85.85 L384.85,87.53 L383.53,88.85 L381.85,89.71 L380.00,90.00 L378.15,89.71 L376.47,88.85 L375.15,87.53 L374.29,85.85 L374.00,84.00 L374.29,82.15 L375.15,80.47 L376.47,79.15 L378.15,78.29 L380.00,78.00 L381.85,78.29 L383.53,79.15 L384.85,80.47 L385.71,82.15 L386.00,84.00 Z" fill="none" stroke="#555" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M380.00,84.00 L388.48,79.72" fill="none" stroke="#222" stroke-width="0.350" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="388.480" y="78.717" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#111" text-anchor="middle">N</text>
+<path d="M10.00,262.00 L410.00,262.00 L410.00,287.00 L10.00,287.00 Z" fill="#fff" stroke="#222" stroke-width="0.350" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M300.00,262.00 L300.00,287.00" fill="none" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M358.00,262.00 L358.00,287.00" fill="none" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="14.000" y="269.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="bold" fill="#111" text-anchor="start">A-000</text>
+<text x="40.000" y="269.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="bold" fill="#111" text-anchor="start">기술 도면 부록 표지</text>
+<text x="40.000" y="275.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#444" text-anchor="start">PART II  Technical Drawing Appendix</text>
+<text x="305.000" y="269.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">축척 — (표·문서, A3)</text>
+<text x="305.000" y="274.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="bold" fill="#a33" text-anchor="start">DOCUMENT</text>
+<text x="305.000" y="278.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#a33" text-anchor="start">NOT FROZEN</text>
+<text x="305.000" y="283.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">도면집 후보 V4 · FREEZE 아님</text>
+<text x="363.000" y="269.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">C-T14I</text>
+<text x="363.000" y="275.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">개정 R4 (V4)</text>
+<text x="363.000" y="280.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">출력 2026-11-13</text>
+</svg>

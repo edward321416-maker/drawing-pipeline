@@ -1,0 +1,23 @@
+{
+ "head": "bc13014",
+ "date": "2026-11-13",
+ "part1": {
+  "pdf": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14I\\output\\C_T14I_run\\v4\\book\\Graduation_Drawing_Book_Candidate_V4.pdf",
+  "sha256": "cb8d98fd056de7632c23e8b5937189f865680f5cf03e53c15032773c9e4f587e",
+  "pages": 15
+ },
+ "part2": {
+  "pdf": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14I\\output\\C_T14I_run\\v4\\book\\Technical_Drawing_Appendix_Candidate_V4.pdf",
+  "sha256": "5ba6b3495717a39a9f3554a9dcb94058e968869d61c75dab6adf3aaa066cb15d",
+  "pages": 49
+ },
+ "missing_part2": [],
+ "model": {
+  "glb_present": false,
+  "cache_sha256": {
+   "model_world.npz": "992e2ec51ec17dc494ed2f99ddb11298671449dd6661d92df3b3536a0049537b",
+   "model_objects.json": "722dd7359e2f13534ff4ae91088ba8649e8a8f96b27c60f000ddb09c01106488"
+  },
+  "status": "GLB_ORIGINAL_MISSING__CACHE_ONLY"
+ }
+}

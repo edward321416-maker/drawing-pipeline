@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
+<metadata>DOCUMENT · SCALE QA</metadata>
+<rect width="420" height="297" fill="#fff"/>
+<text x="14.000" y="16.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.528" font-weight="bold" fill="#111" text-anchor="start">1  같은 54,000 mm 모델 폭의 종이상 길이</text>
+<path d="M24.00,40.00 L294.00,40.00" fill="none" stroke="#0a6b3d" stroke-width="0.700" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M24.00,37.00 L24.00,43.00" fill="none" stroke="#0a6b3d" stroke-width="0.250" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M294.00,37.00 L294.00,43.00" fill="none" stroke="#0a6b3d" stroke-width="0.250" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="24.000" y="34.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#0a6b3d" text-anchor="start">1:200 · 54,000 ÷ 200 = 270.0 mm</text>
+<path d="M24.00,76.00 L240.00,76.00" fill="none" stroke="#777" stroke-width="0.400" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M24.00,73.00 L24.00,79.00" fill="none" stroke="#777" stroke-width="0.250" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M240.00,73.00 L240.00,79.00" fill="none" stroke="#777" stroke-width="0.250" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="24.000" y="70.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#777" text-anchor="start">1:250 OVERVIEW · 54,000 ÷ 250 = 216.0 mm</text>
+<text x="14.000" y="102.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.528" font-weight="bold" fill="#111" text-anchor="start">2  발행 형식</text>
+<path d="M14.00,109.00 L406.00,109.00 L406.00,125.00 L14.00,125.00 Z" fill="#fff" stroke="#bbb" stroke-width="0.150" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="20.000" y="116.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">A1 841×594</text>
+<text x="92.000" y="116.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">P-201 3F · P-202 13F</text>
+<text x="226.000" y="116.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#333" text-anchor="start">전체 모델 창을 1:200으로 한 장에 출력</text>
+<path d="M14.00,129.00 L406.00,129.00 L406.00,145.00 L14.00,145.00 Z" fill="#f7f7f7" stroke="#bbb" stroke-width="0.150" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="20.000" y="136.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">A3 420×297</text>
+<text x="92.000" y="136.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">P-211/212 3F · P-213/214 13F</text>
+<text x="226.000" y="136.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#333" text-anchor="start">두 실제 좌표 창 + 중첩 구간 + MATCH LINE + R1~R3</text>
+<path d="M14.00,149.00 L406.00,149.00 L406.00,165.00 L14.00,165.00 Z" fill="#fff" stroke="#bbb" stroke-width="0.150" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="20.000" y="156.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">A3 420×297</text>
+<text x="92.000" y="156.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">P-101~P-112</text>
+<text x="226.000" y="156.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#333" text-anchor="start">1:250 OVERVIEW — 1:200으로 오인하지 않도록 명시</text>
+<text x="14.000" y="184.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="3.528" font-weight="bold" fill="#111" text-anchor="start">3  검증 기준</text>
+<text x="20.000" y="198.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="normal" fill="#333" text-anchor="start">· PDF MediaBox를 mm로 환산해 A1/A3 용지를 확인한다.</text>
+<text x="20.000" y="207.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="normal" fill="#333" text-anchor="start">· 그래픽 스케일바의 PDF 벡터 길이를 기대 길이와 비교한다.</text>
+<text x="20.000" y="216.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="normal" fill="#333" text-anchor="start">· P-211~214의 window_m과 plan_size_mm는 동일 좌표×5 mm/m(1:200)로 계산한다.</text>
+<text x="20.000" y="225.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="normal" fill="#333" text-anchor="start">· 원본 GLB 부재: model_world.npz 캐시로 검증 가능한 형상만 발행한다.</text>
+<path d="M20.00,240.00 L64.00,240.00 L64.00,246.00 L20.00,246.00 Z" fill="#fff" stroke="#0a6b3d" stroke-width="0.300" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="42.000" y="244.320" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#0a6b3d" text-anchor="middle">MODEL VERIFIED</text>
+<text x="70.000" y="245.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#333" text-anchor="start">모델 좌표·시트 물리 크기</text>
+<path d="M190.00,240.00 L226.00,240.00 L226.00,246.00 L190.00,246.00 Z" fill="#fff" stroke="#a32020" stroke-width="0.300" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="208.000" y="244.320" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="bold" fill="#a32020" text-anchor="middle">UNRESOLVED</text>
+<text x="232.000" y="245.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#333" text-anchor="start">최종 출력 형식 선택</text>
+<path d="M10.00,262.00 L410.00,262.00 L410.00,287.00 L10.00,287.00 Z" fill="#fff" stroke="#222" stroke-width="0.350" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M300.00,262.00 L300.00,287.00" fill="none" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<path d="M358.00,262.00 L358.00,287.00" fill="none" stroke="#222" stroke-width="0.200" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd"/>
+<text x="14.000" y="269.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="bold" fill="#111" text-anchor="start">A-905</text>
+<text x="40.000" y="269.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="4.234" font-weight="bold" fill="#111" text-anchor="start">A1/A3 1:200 출력 비교·물리 축척 검증</text>
+<text x="40.000" y="275.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.470" font-weight="normal" fill="#444" text-anchor="start">실제 모델 좌표 재출력 — 이미지 확대 금지</text>
+<text x="305.000" y="269.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">축척 — (표·문서, A3)</text>
+<text x="305.000" y="274.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="bold" fill="#a33" text-anchor="start">DOCUMENT</text>
+<text x="305.000" y="278.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#a33" text-anchor="start">SCALE QA</text>
+<text x="305.000" y="283.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">도면집 후보 V4 · FREEZE 아님</text>
+<text x="363.000" y="269.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.822" font-weight="bold" fill="#222" text-anchor="start">C-T14I</text>
+<text x="363.000" y="275.000" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">개정 R4 (V4)</text>
+<text x="363.000" y="280.500" font-family="Malgun Gothic, Arial, sans-serif" font-size="2.117" font-weight="normal" fill="#555" text-anchor="start">출력 2026-11-13</text>
+</svg>

@@ -1,0 +1,173 @@
+{
+ "edition": "V4",
+ "part": "I",
+ "pdf": "Graduation_Drawing_Book_Candidate_V4.pdf",
+ "pages": 15,
+ "sheets": [
+  {
+   "page": 1,
+   "sheet": "G-001",
+   "title": "졸업 설계 도면집 표지",
+   "scale": "—",
+   "grade": "PRESENTATION",
+   "folder": "partI",
+   "paper": "A3",
+   "part": "I",
+   "source_sha256": "e1f5ac9713955c66cc7244f7d4a5001878e47f009448ac8d9919819d8dded92f"
+  },
+  {
+   "page": 2,
+   "sheet": "G-002",
+   "title": "목차",
+   "scale": "—",
+   "grade": "DOCUMENT",
+   "folder": "partI",
+   "paper": "A3",
+   "part": "I",
+   "source_sha256": "0bcbfeab44476683ddc8503ece9f6bfae92456dbefe3937e4e4bd5cc7d6b11a9"
+  },
+  {
+   "page": 3,
+   "sheet": "G-101",
+   "title": "프로젝트 개요",
+   "scale": "—",
+   "grade": "PRESENTATION",
+   "folder": "partI",
+   "paper": "A3",
+   "part": "I",
+   "source_sha256": "3640dceaf5eece57e58e20a186b4e54427c7634b2f7b113738f9292027ae1f7f"
+  },
+  {
+   "page": 4,
+   "sheet": "G-102",
+   "title": "대지·도시 맥락",
+   "scale": "—",
+   "grade": "PRESENTATION",
+   "folder": "partI",
+   "paper": "A3",
+   "part": "I",
+   "source_sha256": "bc0ca00c1a111dc9d43484c7ae5adb9f5f40e4f8fa8cb455b8c5b992c2088393"
+  },
+  {
+   "page": 5,
+   "sheet": "G-103",
+   "title": "설계 개념과 매스 형성",
+   "scale": "—",
+   "grade": "PRESENTATION",
+   "folder": "partI",
+   "paper": "A3",
+   "part": "I",
+   "source_sha256": "700307cc3087dd16e8f806e1c307936d9b117ee2b1fbb3becc413bc9d65bd0f5"
+  },
+  {
+   "page": 6,
+   "sheet": "G-104",
+   "title": "수직 보행·튜브·램프 구조",
+   "scale": "—",
+   "grade": "PRESENTATION",
+   "folder": "partI",
+   "paper": "A3",
+   "part": "I",
+   "source_sha256": "a05b03bdecc3d2962c4613ee5313d598b2790cec76303607c4228a4e719cdddc"
+  },
+  {
+   "page": 7,
+   "sheet": "G-105",
+   "title": "층별 프로그램 다이어그램",
+   "scale": "—",
+   "grade": "PRESENTATION",
+   "folder": "partI",
+   "paper": "A3",
+   "part": "I",
+   "source_sha256": "99c5e3280f500a0d7b07704eec4bd54965af260cbdb6fae9fb670dbac542825d"
+  },
+  {
+   "page": 8,
+   "sheet": "G-106",
+   "title": "대표층 평면도",
+   "scale": "—",
+   "grade": "PRESENTATION",
+   "folder": "partI",
+   "paper": "A3",
+   "part": "I",
+   "source_sha256": "c0f6ab90ea261e970667899e1e0fe3936f4e8332ea128b6a1e5fea4e5fa58b50"
+  },
+  {
+   "page": 9,
+   "sheet": "G-107",
+   "title": "공간 사용 시나리오",
+   "scale": "—",
+   "grade": "PRESENTATION",
+   "folder": "partI",
+   "paper": "A3",
+   "part": "I",
+   "source_sha256": "1f59ce9ca57f3b7a0242f8824e35170b97abe89c80137f3d2d789cbaf7b4c1d8"
+  },
+  {
+   "page": 10,
+   "sheet": "G-108",
+   "title": "주요 입면도",
+   "scale": "—",
+   "grade": "PRESENTATION",
+   "folder": "partI",
+   "paper": "A3",
+   "part": "I",
+   "source_sha256": "fea95ecce16b4792b26ec6b3afd6e2dc6904b6bed06ced46a7f4bac88d640d8b"
+  },
+  {
+   "page": 11,
+   "sheet": "G-109",
+   "title": "주요 단면도",
+   "scale": "—",
+   "grade": "PRESENTATION",
+   "folder": "partI",
+   "paper": "A3",
+   "part": "I",
+   "source_sha256": "0238112ed911eda8d44adab915dfe027d387dd12bee58807499d6a6c0aadacdc"
+  },
+  {
+   "page": 12,
+   "sheet": "G-110",
+   "title": "실제 모델 기반 3D 축투상",
+   "scale": "—",
+   "grade": "PRESENTATION",
+   "folder": "partI",
+   "paper": "A3",
+   "part": "I",
+   "source_sha256": "42ebf30cdeb0be097f081fa3b13b5b716e4ea4bc273a762b8ade323eb4ea7cd7"
+  },
+  {
+   "page": 13,
+   "sheet": "G-111",
+   "title": "대표 상세와 설계 의도",
+   "scale": "—",
+   "grade": "PRESENTATION",
+   "folder": "partI",
+   "paper": "A3",
+   "part": "I",
+   "source_sha256": "f70e692724a7a4fc653019562087f97707ca38e210f006ef28c800ada08493b6"
+  },
+  {
+   "page": 14,
+   "sheet": "G-112",
+   "title": "층별 프로그램과 공간 경험",
+   "scale": "—",
+   "grade": "PRESENTATION",
+   "folder": "partI",
+   "paper": "A3",
+   "part": "I",
+   "source_sha256": "9ec64b8541dff5c531a8033314c734660a7b675b6ee841f97378f0b68df4a509"
+  },
+  {
+   "page": 15,
+   "sheet": "G-113",
+   "title": "설계 요약·기술 부록 참조",
+   "scale": "—",
+   "grade": "PRESENTATION",
+   "folder": "partI",
+   "paper": "A3",
+   "part": "I",
+   "source_sha256": "7c0bf44da721def548a3c6cc350efd034a5327ba9d6b28fefc272e8a56bfc498"
+  }
+ ]
+}

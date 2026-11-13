@@ -1,0 +1,249 @@
+{
+  "formula": "paper_mm = model_m * 1000 / denominator",
+  "required_1to200": {
+    "P-201": {
+      "paper": [
+        841.0,
+        594.0
+      ],
+      "window_m": [
+        -9.3006,
+        -18.3018,
+        45.3007,
+        36.2995
+      ],
+      "plan_size_mm": [
+        273.01,
+        273.01
+      ]
+    },
+    "P-202": {
+      "paper": [
+        841.0,
+        594.0
+      ],
+      "window_m": [
+        -9.3006,
+        -18.3018,
+        45.3007,
+        36.2995
+      ],
+      "plan_size_mm": [
+        273.01,
+        273.01
+      ]
+    },
+    "P-211": {
+      "paper": [
+        420.0,
+        297.0
+      ],
+      "window_m": [
+        -9.3005,
+        8.4985,
+        45.3007,
+        36.3005
+      ],
+      "plan_size_mm": [
+        273.01,
+        139.01
+      ]
+    },
+    "P-212": {
+      "paper": [
+        420.0,
+        297.0
+      ],
+      "window_m": [
+        -9.3005,
+        -18.3018,
+        45.3007,
+        18.4985
+      ],
+      "plan_size_mm": [
+        273.01,
+        184.0
+      ]
+    },
+    "P-213": {
+      "paper": [
+        420.0,
+        297.0
+      ],
+      "window_m": [
+        -9.3005,
+        8.4985,
+        45.3007,
+        36.3005
+      ],
+      "plan_size_mm": [
+        273.01,
+        139.01
+      ]
+    },
+    "P-214": {
+      "paper": [
+        420.0,
+        297.0
+      ],
+      "window_m": [
+        -9.3005,
+        -18.3018,
+        45.3007,
+        18.4985
+      ],
+      "plan_size_mm": [
+        273.01,
+        184.0
+      ]
+    }
+  },
+  "54m_at_1to200_mm": 270.0,
+  "bars": [
+    {
+      "sheet": "P-101",
+      "scale": "1:250",
+      "measured_mm": 80.0,
+      "expected_mm": 80.0,
+      "error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "sheet": "P-102",
+      "scale": "1:250",
+      "measured_mm": 80.0,
+      "expected_mm": 80.0,
+      "error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "sheet": "P-103",
+      "scale": "1:250",
+      "measured_mm": 80.0,
+      "expected_mm": 80.0,
+      "error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "sheet": "P-104",
+      "scale": "1:250",
+      "measured_mm": 80.0,
+      "expected_mm": 80.0,
+      "error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "sheet": "P-105",
+      "scale": "1:250",
+      "measured_mm": 80.0,
+      "expected_mm": 80.0,
+      "error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "sheet": "P-106",
+      "scale": "1:250",
+      "measured_mm": 80.0,
+      "expected_mm": 80.0,
+      "error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "sheet": "P-107",
+      "scale": "1:250",
+      "measured_mm": 80.0,
+      "expected_mm": 80.0,
+      "error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "sheet": "P-108",
+      "scale": "1:250",
+      "measured_mm": 80.0,
+      "expected_mm": 80.0,
+      "error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "sheet": "P-109",
+      "scale": "1:250",
+      "measured_mm": 80.0,
+      "expected_mm": 80.0,
+      "error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "sheet": "P-110",
+      "scale": "1:250",
+      "measured_mm": 80.0,
+      "expected_mm": 80.0,
+      "error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "sheet": "P-111",
+      "scale": "1:250",
+      "measured_mm": 80.0,
+      "expected_mm": 80.0,
+      "error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "sheet": "P-112",
+      "scale": "1:250",
+      "measured_mm": 80.0,
+      "expected_mm": 80.0,
+      "error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "sheet": "P-201",
+      "scale": "1:200",
+      "measured_mm": 100.0,
+      "expected_mm": 100.0,
+      "error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "sheet": "P-202",
+      "scale": "1:200",
+      "measured_mm": 100.0,
+      "expected_mm": 100.0,
+      "error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "sheet": "P-211",
+      "scale": "1:200",
+      "measured_mm": 25.0,
+      "expected_mm": 25.0,
+      "error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "sheet": "P-212",
+      "scale": "1:200",
+      "measured_mm": 25.0,
+      "expected_mm": 25.0,
+      "error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "sheet": "P-213",
+      "scale": "1:200",
+      "measured_mm": 25.0,
+      "expected_mm": 25.0,
+      "error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "sheet": "P-214",
+      "scale": "1:200",
+      "measured_mm": 25.0,
+      "expected_mm": 25.0,
+      "error_mm": 0.0,
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

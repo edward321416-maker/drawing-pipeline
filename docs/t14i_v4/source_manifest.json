@@ -1,0 +1,119 @@
+{
+ "git_head": "06b2d85f37d1cc0c859f10b2f36369e26be2b548",
+ "git_branch": "claude/t14i-graduation-book",
+ "base": "origin/claude/t14g-candidate-v3-full",
+ "base_sha": "23acf2e23e249a817c18cdce55acce112b02aba5",
+ "model": {
+  "glb_name": "GMC-ZZ-ZZ-M3-0701.glb",
+  "glb_present": false,
+  "glb_sha256_verified": null,
+  "glb_sha256_recorded_by_v2": "b1927ffd8335853fcdf55f6ec49cee3233465cfc1362295ffa717f214b45ab88",
+  "cache_sha256": {
+   "model_world.npz": "992e2ec51ec17dc494ed2f99ddb11298671449dd6661d92df3b3536a0049537b",
+   "model_objects.json": "722dd7359e2f13534ff4ae91088ba8649e8a8f96b27c60f000ddb09c01106488"
+  },
+  "status": "GLB_ORIGINAL_MISSING__CACHE_ONLY"
+ },
+ "model_cache_files": {
+  "model_world.npz": "992e2ec51ec17dc494ed2f99ddb11298671449dd6661d92df3b3536a0049537b",
+  "model_objects.json": "722dd7359e2f13534ff4ae91088ba8649e8a8f96b27c60f000ddb09c01106488"
+ },
+ "inputs": {
+  "V3_pdf_sha256": "3c82aa2a6e6187d757dae1f4ffb53e9f955874edecbb02875d4dd8f09b45ad54"
+ },
+ "outputs": {
+  "Graduation_Drawing_Book_Candidate_V4.pdf": {
+   "sha256": "cb8d98fd056de7632c23e8b5937189f865680f5cf03e53c15032773c9e4f587e",
+   "bytes": 34539211,
+   "pages": 15
+  },
+  "Technical_Drawing_Appendix_Candidate_V4.pdf": {
+   "sha256": "5ba6b3495717a39a9f3554a9dcb94058e968869d61c75dab6adf3aaa066cb15d",
+   "bytes": 5524032,
+   "pages": 49
+  },
+  "plans_1to200/P-201.pdf": {
+   "sha256": "b44878cb831ff789859e2d5a90da65ca28e6153366647d8af9102d537851c7e5",
+   "bytes": 136504,
+   "pages": 1
+  },
+  "plans_1to200/P-202.pdf": {
+   "sha256": "65908a81ce24b2b2c4f8781266d0f37211e0d55fd98eebdeefc8e4509dffd840",
+   "bytes": 114351,
+   "pages": 1
+  },
+  "plans_1to200/P-211.pdf": {
+   "sha256": "85493ec6995a5fff4680462293d7e7e230078371fa2cc477b1be3f3895755217",
+   "bytes": 95544,
+   "pages": 1
+  },
+  "plans_1to200/P-212.pdf": {
+   "sha256": "fc44fe6cc8add2aa166f659106005afa6a2ebe2686005840149737953d2a79ba",
+   "bytes": 109444,
+   "pages": 1
+  },
+  "plans_1to200/P-213.pdf": {
+   "sha256": "c7c14b2a253971ea7b0a069a2180ae7e511de2258389d761991a77e73e567d96",
+   "bytes": 86289,
+   "pages": 1
+  },
+  "plans_1to200/P-214.pdf": {
+   "sha256": "553114303eeabb56f30fd4d3175a777af114eea22ae1d062662388e5359c8343",
+   "bytes": 94118,
+   "pages": 1
+  }
+ },
+ "tools": {
+  "python": "3.14.0",
+  "pymupdf": "1.27.2.3",
+  "cairosvg": "2.9.1"
+ },
+ "fonts": {
+  "regular": "malgun.ttf",
+  "bold": "malgunbd.ttf"
+ },
+ "source_sha256": {
+  "tools/t14i/__init__.py": "847bfd643891e06c313e8275b5f7f72b9e46f8d3e4c27a9f5523abb88628f01b",
+  "tools/t14i/appendix_docs.py": "2bbcc429e784796c3fc63f078b7ca32452bf1834520e3b2fa361235a447294c0",
+  "tools/t14i/area_audit.py": "20b9b5cee7117ca65688e0124ce4325d2256c21712289b783d8848e548904857",
+  "tools/t14i/axon.py": "1ced95340589b93d8768c8bd3694171e10d01dfb71cca4dc7063e61a78772a10",
+  "tools/t14i/build_appendix_v4.py": "f5331fc1e0f834cf6e7b6f169f6e2d77bd8bcdffe76c0b5da4550a12ed0c6b5c",
+  "tools/t14i/build_books.py": "03f29b0f8b65515e65a05145d4d562838b99f2ab835a1703632824fd600491e1",
+  "tools/t14i/build_details_v4.py": "e8024dfd443b47766bad75df2c8fc56feeb908ac0387f6558290782c701d610b",
+  "tools/t14i/build_plans.py": "f96a7c407cadad26364e2b1fae1b6d1f52f849f3865a38ad3c5278b08daff4f1",
+  "tools/t14i/common.py": "7f3b89918b0f24fe6417a2dbb3b9d42147878a3a7f44d751fc650f664781adb0",
+  "tools/t14i/config.py": "93a7175d32b15b1d616132f2d954653498c6f1d695efb8c0fed30feb9891784a",
+  "tools/t14i/details_b.py": "886a554258f8abea74cc4891564704ced3fc104bd2eff8f41a25b3243cf756c3",
+  "tools/t14i/furniture_qa_extra.py": "e21771c5bb544a0a48fdc367ca3dc1828275fac046ae2b11992cde90ac26d5b5",
+  "tools/t14i/package_v4.py": "54a05862a7061dfa860c667d373bd068a2acd94f5f8d916a4cde11d505c2a72a",
+  "tools/t14i/partI_front.py": "e5fafcaf99aae79e01ce1c1a18fb9727de31c787b9cfc70e8625c914cc36cb55",
+  "tools/t14i/plan_sheet.py": "86513a654b6dc141cfbccfeab75a35e23fe303a1f779b8a94d663f543f9095b0",
+  "tools/t14i/run_qa_v4.py": "4cb4ba19c0e44262f0f76749fc67ca31a95c1e9e9ea1e9514b3078f3cd146866",
+  "tools/t14g/__init__.py": "51ef78261e8dc894629c6c114f8d506eeb99442d02dd16e3b0e779b15bab0e72",
+  "tools/t14g/before_after.py": "762310b75df2fed6d29deaadd57daf813de3e23fbef93889f708a707e60c0c0e",
+  "tools/t14g/config.py": "1da3c9d1c182578eb53b162030cb675c57ad1d8c4386ba1a0b53c16e22b44db1",
+  "tools/t14g/furniture_qa.py": "5f31b575a24849be70d48edf63e6161187ac30552a2f62e4246dc6cd420b5a62",
+  "tools/t14g/make_coverage.py": "f23909135c00bdc8375b8c4f9a4fa8080b08fe0d4169e0b3446371645b57090e",
+  "tools/t14g/modelsrc.py": "71adcae924e22005bfc5f600890070a3065ea5672bf1a14f7043c83fb38013c3",
+  "tools/t14g/mutations.py": "11dc8b86ce4417564b90dbc52354f1383e5dea58c04f3996087c5edac2f20f0e",
+  "tools/t14g/package_v3.py": "b92106fb1d35838933c5c0e2948b317718b547fe56d3eb66f0c5335123f42310",
+  "tools/t14g/qa_pdf.py": "3bb67837cee5bb5b355b418fe8a4405c6c358f8c5eb2e3a995b350b75ff92a42",
+  "tools/t14g/registry.py": "021c8408dc711731c6cf066959ea9cfd6e3f45f1e54135d2ce2a37555eb5af08",
+  "tools/t14g/truth.py": "2722243954d32086267e84b1ba46532ff2592af6e512c3ed0a014d744b6cccf8",
+  "tools/t14g/truth_report.py": "6de19413d26552e05adecff57faa3d7e044d59fb0980c48b49177340c3a6c6a5",
+  "tools/t14e_book_qa.py": "4bd78d35456fbfab7f83fb66c3a40a1388e08cafa6b1f14d3f0a75d00caf687a",
+  "tools/t14e_compare.py": "121595d6efbb01b1677572890910060ee4951bdeb4e7e3f1d3ebe7ff4feeb897",
+  "tools/t14e_dims.py": "c5dc7379b1f14d8ec75962534625afe3e953858a23889556a932563dcb6a4c81",
+  "tools/t14e_make_book.py": "36c1e5c9232859c6de4c9d8ea9050dc9a0139b316ccf5f7a750d50b2ddcefefa",
+  "tools/t14e_make_details.py": "1aaaf0386733f137ebc102bda55722550719defad0ad03ba6585e9c3b6aaa512",
+  "tools/t14e_make_views.py": "cf1573918b34d6d212ff1206ac60462bf7647424b8eef7ae0fb9bb934186cf01",
+  "tools/t14e_plan_sheet.py": "94d43ffe9950dc73854673235f5451e1f1242016905f5f43c6856d9b668e7bdf",
+  "tools/t14d_sheet.py": "89b5737d1b35c33352bc85ea1e45a1768436ee9dcfec0e44d113177db265c142",
+  "src/layouts_v3.py": "60d717396e380dee87dc52a8dda08b3b7d0d17ecaab1eb5bbc366c9b9d8dff18",
+  "src/architectural_plan_renderer.py": "d1bae2c1004c9afeb38bad537494f284a7f71efa74ca8153540d96d838158885",
+  "tests/test_t14i_qa.py": "fce5e8f30d176a430520ca8cccac8d4b4963a64157ee2d98fb1ff98b7e65c368",
+  "tests/test_t14g_qa.py": "0eff5f30aec0637463f9815f1c886a054bc0cd146277e0f120a162b5bc267514"
+ },
+ "cloud": "Modal/Claude cloud NOT used: no verified balance or spend limit; everything ran locally",
+ "svg_over_6MB_not_committed": []
+}
