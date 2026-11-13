@@ -721,6 +721,7 @@ def build_scenario(ctx):
         y = para(sh, 324, y + 2, text, 80, 7.2, "#333", "bold", ymax=232) + 16
     cm.badge(sh, 310, 224, CP, w=42, h=5, pt=6)
     sh.text(310, 238, "동선은 설계 의도 표현이며\n운영·피난 확정안이 아니다.", 6.5, "normal", "#555")
+    sh.text(310, 252, "운영·하역 동선 검토 D-409", 6.5, "bold", "#a32020")
     return _finish(ctx, sh, "scenario", "공간 사용 시나리오")
 
 

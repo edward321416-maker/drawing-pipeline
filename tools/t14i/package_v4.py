@@ -197,7 +197,10 @@ def main():
             for ln in qa_pdf._lines(doc[r["page"] - 1]):
                 for sid, den in qa_pdf.CALL_RE.findall(ln["text"]):
                     edges.append({"from": r["sheet"], "to": sid, "kind": "callout", "printed_scale": "1:" + den, "target_scale": scale.get(sid), "ok": scale.get(sid) == "1:" + den})
-                for sid in set(re.findall(r"\b[ESPD]-\d{3}\b", ln["text"])):
+                # Korean letters are Unicode word characters, so ``\bD-404``
+                # misses strings such as ``상세D-404``.  Only exclude an ASCII
+                # sheet-id prefix; Korean prose immediately before the id is valid.
+                for sid in set(re.findall(r"(?<![A-Z0-9])[ESPD]-\d{3}\b", ln["text"])):
                     if sid != r["sheet"] and not qa_pdf.CALL_RE.search(ln["text"]):
                         edges.append({"from": r["sheet"], "to": sid, "kind": "reference", "ok": sid in scale})
     uniq = {(e["from"], e["to"], e["kind"]): e for e in edges}
