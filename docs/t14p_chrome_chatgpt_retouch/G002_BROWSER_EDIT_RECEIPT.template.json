@@ -1,0 +1,51 @@
+{
+  "schema": "C-T14P-G002-CHROME-EDIT-RECEIPT-1.0",
+  "source_pr": 25,
+  "source_head": "b307d7e2db35bac6baec7ecd6ae3205f13dee595",
+  "chrome_session_used": false,
+  "browser_control_status": "NOT_AVAILABLE_IN_CURRENT_CHAT",
+  "actual_chatgpt_image_edits_downloaded": 0,
+  "status": "CHROME_HANDOFF_PENDING",
+  "input_A": {
+    "master_sha256": "adf0b98509d8548c19bee59c3637fe7a0c7947eed0de98b98c90caaf8a4a859f",
+    "master_pixels": [
+      4800,
+      2700
+    ],
+    "upload_copy_sha256": null
+  },
+  "input_B": {
+    "master_sha256": "fd347614119b4afe545850c3d3ed17c015ae756d106d2c8ca4a0329231c2cd42",
+    "master_pixels": [
+      4800,
+      2700
+    ],
+    "upload_copy_sha256": null
+  },
+  "chatgpt_A": {
+    "download_sha256": null,
+    "width": null,
+    "height": null,
+    "browser_evidence": null,
+    "geometry_review": "PENDING",
+    "visual_quality_review": "PENDING"
+  },
+  "chatgpt_B": {
+    "download_sha256": null,
+    "width": null,
+    "height": null,
+    "browser_evidence": null,
+    "geometry_review": "PENDING",
+    "visual_quality_review": "PENDING"
+  },
+  "authorizations": {
+    "browser": "Use only already-authorized local Chrome UI; do not extract cookies or OAuth tokens",
+    "paid_api": "NOT_AUTHORIZED"
+  },
+  "independent_review": {
+    "source_geometry": "PENDING",
+    "realism": "PENDING",
+    "print": "PENDING"
+  },
+  "final_approval": "NOT_APPROVED"
+}
