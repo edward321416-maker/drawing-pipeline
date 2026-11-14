@@ -145,9 +145,9 @@ class PSheet(TS.Sheet):
         lines = [parts[0], " · ".join(parts[1:])] if len(parts) > 1 else [parts[0]]
         yy2 = y0 + 12.5
         for i, ln_ in enumerate(lines[:2]):
-            self.text(c1 + 5, yy2, ln_, 5.5, "bold" if i == 0 else "normal", "#a33")
+            self.text(c1 + 5, yy2, ln_, 6.0, "bold" if i == 0 else "normal", "#a33")
             yy2 += 4.0
-        self.text(c1 + 5, y0 + 21.5, "도면집 후보 %s · FREEZE 아님" % TS.EDITION, 5.5, "normal", "#555")
+        self.text(c1 + 5, y0 + 21.5, "도면집 후보 %s · FREEZE 아님" % TS.EDITION, 6.0, "normal", "#555")
         self.text(c2 + 5, y0 + 7, TS.PROJECT_CODE, 8, "bold", "#222")
         self.text(c2 + 5, y0 + 13, ("개정 %s (%s)" % (TS.REVISION, TS.EDITION)) if TS.REVISION else TS.ISSUE_DATE, 6, "normal", "#555")
         if TS.REVISION:
@@ -588,15 +588,32 @@ def _pdf_image(path, dpi=120):
     return Image.frombytes("RGB", (pm.width, pm.height), pm.samples)
 
 
+def _pdf_crop_image(path, crop_mm, dpi=300):
+    """Rasterize an editorial crop from a source PDF without changing the source.
+
+    ``crop_mm`` is expressed in the source sheet's physical millimetres.  All
+    Part-I re-edits use this helper so technical title blocks and long legends
+    are not repeatedly miniaturised into presentation pages.
+    """
+    import pymupdf
+    d = pymupdf.open(path)
+    k = 72.0 / 25.4
+    clip = pymupdf.Rect(*(float(v) * k for v in crop_mm))
+    if not d[0].rect.contains(clip):
+        raise ValueError("crop outside page: %s %s" % (path, crop_mm))
+    pm = d[0].get_pixmap(dpi=dpi, alpha=False, clip=clip)
+    return Image.frombytes("RGB", (pm.width, pm.height), pm.samples)
+
+
 def _sheet(sid, title, status=STATUS_MIX, subtitle=""):
     return PSheet(sid, title, None, status, subtitle=subtitle, scale_text=NTS_TEXT)
 
 
-def _image_frame(sh, name, img, box, title, kind=MV, parent=None, quality=88):
+def _image_frame(sh, name, img, box, title, kind=MV, parent=None, quality=88, max_px=1800):
     x0, y0, x1, y1 = box
     frame(sh, name, x0, y0, x1, y1, title, kind, sub_of=parent)
     return put_image(sh, name + "_image", img, x0 + 2, y0 + 8, x1 - 2, y1 - 2,
-                     quality=quality, parent=name, max_px=1800)
+                     quality=quality, parent=name, max_px=max_px)
 
 
 def _finish(ctx, sh, name, title, classes=(MV, CP)):
@@ -607,13 +624,13 @@ def _finish(ctx, sh, name, title, classes=(MV, CP)):
 
 def build_cover(ctx):
     sh = _sheet("G-001", "졸업 설계 도면집 표지", STATUS_MIX,
-                "다층 상업시설의 수직 보행·튜브·프로그램 적층 — 후보 V4")
+                "다층 상업시설의 수직 보행·튜브·프로그램 적층 — 후보 %s" % cfg.EDITION)
     hero = _view(ctx, "hero")
     put_image(sh, "hero", hero, 18, 22, 402, 226, quality=91, max_px=1900)
     sh.path([[(18, 18), (244, 18), (244, 72), (18, 72)]], fill="#ffffff", stroke="none", w=0, opacity=0.92)
     sh.text(25, 34, "VERTICAL MARKET", 25, "bold", INK)
     sh.text(25, 48, "도시 안에서 층을 걷는 다층 상업시설", 13, "bold", "#333")
-    sh.text(25, 59, "GRADUATION DESIGN BOOK · CANDIDATE V4", 8, "normal", GREY)
+    sh.text(25, 59, "GRADUATION DESIGN BOOK · CANDIDATE %s" % cfg.EDITION, 8, "normal", GREY)
     cm.badge(sh, 25, 65, MV, w=42, h=5.5, pt=6)
     sh.text(72, 69.4, "3D = model_world.npz 캐시 실제 메시", 6.5, "normal", "#333")
     sh.text(20, 240, "원본 GLB 없음 · 캐시 기반 검증 가능 범위만 표현 · 제안 서술은 CONCEPT PROPOSED", 7, "normal", "#444")
@@ -621,40 +638,40 @@ def build_cover(ctx):
 
 
 def build_overview(ctx):
-    sh = _sheet("G-101", "프로젝트 개요", STATUS_MIX, "모델 사실과 설계 해석을 분리한 프로젝트 독해")
+    sh = _sheet("G-101", "프로젝트 개요와 문제의식", STATUS_MIX, "수직 이동을 공간 경험으로 전환하는 설계 질문")
     _image_frame(sh, "hero_overview", _view(ctx, "hero"), (12, 10, 254, 252), "실제 모델 축투상", MV)
     x = 266
-    sh.text(x, 20, "PROJECT FRAME", 12, "bold", INK)
-    fr = floors_rel(ctx.model)
-    facts = [("수직 범위", "%+.1f m ~ %+.1f m" % (min(fr.values()), max(fr.values())), MV),
-             ("층 레벨", "%d개 레벨" % len(fr), MV),
-             ("주요 수직 장치", "나선 램프 · 빛 튜브 · 승강기 튜브 · 에스컬레이터", MV),
-             ("공간 명제", "상업 프로그램을 층별 목적지가 아니라 연속 보행 경험으로 조직", CP)]
+    sh.text(x, 20, "DESIGN THESIS", 12, "bold", INK)
+    facts = [("문제", "엘리베이터 중심의 단절된 층 이동은 상업 프로그램 사이의 보행 경험을 짧게 만든다.", CP),
+             ("전략", "램프·튜브·에스컬레이터를 층판의 개구와 함께 드러내어 이동 자체를 공간의 중심으로 조직한다.", CP),
+             ("검증 범위", "층판·기둥·튜브·코어·수직 장치는 model_world.npz 캐시 형상에서 확인한다.", MV),
+             ("보류", "운영·피난·재료·외피 접합은 기술 부록의 UNRESOLVED 항목으로 남긴다.", UR)]
     y = 35
     for label, value, cls in facts:
         cm.badge(sh, x, y, cls, w=37, h=5, pt=6)
         sh.text(x, y + 10, label, 8, "bold", INK)
         y = para(sh, x, y + 17, value, 138, 7, "#333", ymax=238) + 7
-    sh.text(x, 212, "DESIGN QUESTION", 9, "bold", INK)
-    para(sh, x, 224, "엘리베이터 중심의 수직 이동을 어떻게 ‘걷고 머무르는 도시 경험’으로 다시 구성할 수 있는가?", 138, 8, "#333", "bold", ymax=250)
-    return _finish(ctx, sh, "overview", "프로젝트 개요")
+    sh.text(x, 218, "DESIGN QUESTION", 9, "bold", INK)
+    para(sh, x, 230, "도시의 수평 보행을 건물 안에서 ‘걷고 머무르는 수직 경험’으로 어떻게 연속시킬 것인가?", 138, 8, "#333", "bold", ymax=250)
+    return _finish(ctx, sh, "overview", "프로젝트 개요와 문제의식")
 
 
 def build_context(ctx):
-    sh = _sheet("G-102", "대지·도시 맥락", STATUS_MIX, "사용자 제공 A-003과 모델 프레임의 관계")
-    site = _pdf_image(os.path.join(ctx.run, "plans", "A-003_site_plan_1F_1to400.pdf"), 120)
-    _image_frame(sh, "site", site, (12, 10, 286, 252), "A-003 배치·1층 계획 (사용자 제공, 본문 수정 없음)", MV)
+    sh = _sheet("G-102", "대지·도시 맥락과 접근", STATUS_MIX, "A-003에서 확인되는 도시 보행의 건물 진입 방식")
+    site_path = os.path.join(ctx.run, "plans", "A-003_site_plan_1F_1to400.pdf")
+    site = _pdf_crop_image(site_path, (0, 0, 324, 282), 260)
+    _image_frame(sh, "site", site, (12, 10, 286, 252), "A-003 도시 맥락·대지 영역 발췌 · NTS", MV, max_px=3000)
     x = 298
     sh.text(x, 18, "URBAN READING", 11, "bold", INK)
-    items = [(MV, "건물 좌표·진북·1층 형상은 기존 A-003 및 모델 캐시와 대조한다."),
-             (CP, "주출입과 선큰·상업 홀을 도시 보행이 수직으로 전환되는 문턱으로 해석한다."),
-             (UR, "원본 GLB와 대지 지형 모델이 없어 주변 지형·법정 경계·도로 단면은 추가 확정하지 않는다."),
-             (MV, "기술 도면 참조: A-003 · P-106/107 지하층 · S-301 단면 키플랜." )]
+    items = [(MV, "A-003에서 도로·보도·대지 경계·조경·1층 건물 형상을 확인한다."),
+             (CP, "도로에서 외부공간과 1층 홀을 지나 수직 동선으로 전환되는 접근 시퀀스를 설계 해석으로 읽는다."),
+             (UR, "검증된 실제 지명·좌표·법정 경계·도로 단면 자료가 없어 임의 표기하지 않는다."),
+             (MV, "정확한 원본 참조: A-003 · 지하층 P-106/107 · 단면 키플랜 S-301." )]
     y = 34
     for cls, text in items:
         cm.badge(sh, x, y, cls, w=39, h=5, pt=6)
         y = para(sh, x, y + 10, text, 108, 7, "#333", ymax=246) + 7
-    return _finish(ctx, sh, "context", "대지·도시 맥락")
+    return _finish(ctx, sh, "context", "대지·도시 맥락과 접근")
 
 
 def build_mass(ctx):
@@ -700,12 +717,16 @@ def build_program(ctx):
 
 
 def build_plans(ctx):
-    sh = _sheet("G-106", "대표층 평면도", STATUS_MIX, "3F 시장층과 13F 문화·엔터층의 구조·프로그램 대비")
-    p3 = _img(os.path.join(ctx.run, "v4", "plans", "P-201_plan_3F_A1_1to200.png"))
-    p13 = _img(os.path.join(ctx.run, "v4", "plans", "P-202_plan_13F_A1_1to200.png"))
-    _image_frame(sh, "plan3", p3, (12, 10, 208, 226), "3F · P-201 A1 1:200 원본 참조", MV, quality=93)
-    _image_frame(sh, "plan13", p13, (212, 10, 408, 226), "13F · P-202 A1 1:200 원본 참조", MV, quality=93)
-    sh.text(14, 239, "이 페이지의 축소 이미지는 NTS. 치수·출력 축척 검증은 기술 부록 P-201/P-202 및 A-905에서 수행한다.", 7, "bold", "#a33")
+    sh = _sheet("G-106", "대표층 평면도", STATUS_MIX, "주요 도면 3F + 보조 도면 13F · 기술 제목란과 장문 범례 제외")
+    crop = (20, 128, 329, 432)
+    p3 = _pdf_crop_image(os.path.join(ctx.run, "v4", "plans", "P-201_plan_3F_A1_1to200.pdf"), crop, 320)
+    p13 = _pdf_crop_image(os.path.join(ctx.run, "v4", "plans", "P-202_plan_13F_A1_1to200.pdf"), crop, 320)
+    _image_frame(sh, "plan3", p3, (12, 10, 278, 238), "3F 시장층 · P-201 도면 영역 발췌 · NTS", MV, quality=94, max_px=3300)
+    _image_frame(sh, "plan13", p13, (284, 10, 408, 132), "13F 문화·엔터층 · P-202 · NTS", MV, quality=94, max_px=2200)
+    frame(sh, "plan_note", 284, 138, 408, 238, "평면 독해", CP)
+    para(sh, 290, 156, "3F는 시장 프로그램과 원형 수직 장치의 관계를 주도면으로 확대했다. 13F는 같은 구조 프레임 안에서 문화·엔터 프로그램으로 전환되는 비교층이다.", 112, 7, "#333", ymax=208)
+    sh.text(290, 220, "정확한 축척·치수: P-201 / P-202 / A-905", 6.5, "bold", "#555")
+    sh.text(14, 248, "재편집 도면 NTS · 원본 A1 1:200의 기하·축선·치수는 변경하지 않음", 7, "normal", "#444")
     return _finish(ctx, sh, "representative_plans", "대표층 평면도")
 
 
@@ -726,26 +747,30 @@ def build_scenario(ctx):
 
 
 def build_elevations(ctx):
-    sh = _sheet("G-108", "주요 입면도", STATUS_MV, "4면 정투영의 외피·튜브·층판 관계")
-    files = [("E-201", "북측", "E-201_north_elevation.png"), ("E-202", "동측", "E-202_east_elevation.png"),
-             ("E-203", "남측", "E-203_south_elevation.png"), ("E-204", "서측", "E-204_west_elevation.png")]
-    for i, (sid, name, fn) in enumerate(files):
-        c, r = i % 2, i // 2
-        x0, y0 = 12 + c * 198, 10 + r * 116
-        _image_frame(sh, "elev_" + sid, _img(os.path.join(ctx.run, "elevations", fn)), (x0, y0, x0 + 192, y0 + 106), "%s %s · 원본 1:400" % (sid, name), MV)
-    sh.text(14, 244, "이 페이지는 비교용 축소(NTS). 실제 축척·레벨·치수는 기술 부록 E-201~E-204 참조.", 7, "normal", "#444")
+    sh = _sheet("G-108", "주요 입면도", STATUS_MV, "북측 입면을 중심으로 외피·튜브·층판의 수직 질서를 읽기")
+    ecrop = (40, 8, 285, 257)
+    e201 = _pdf_crop_image(os.path.join(ctx.run, "elevations", "E-201_north_elevation.pdf"), ecrop, 320)
+    e202 = _pdf_crop_image(os.path.join(ctx.run, "elevations", "E-202_east_elevation.pdf"), ecrop, 280)
+    _image_frame(sh, "elev_E201", e201, (12, 10, 286, 238), "주요 도면 · E-201 북측 입면 발췌 · NTS", MV, quality=94, max_px=3200)
+    _image_frame(sh, "elev_E202", e202, (292, 10, 408, 126), "보조 · E-202 동측 · NTS", MV, quality=93, max_px=2000)
+    frame(sh, "elevation_note", 292, 132, 408, 238, "입면 설계 의도", MV)
+    para(sh, 298, 150, "북측 입면은 반복 층판과 수직 튜브가 외피 뒤에서 드러나는 관계를 가장 명확히 보여준다. 동측 입면은 같은 높이 체계의 측면 깊이를 보조한다.", 104, 7, "#333", ymax=210)
+    sh.text(298, 224, "전체 4면·레벨: E-201~E-204", 6.5, "bold", "#555")
+    sh.text(14, 248, "재편집 도면 NTS · 원본 1:400 도면의 레벨·치수·축척은 기술 부록 참조", 7, "normal", "#444")
     return _finish(ctx, sh, "elevations", "주요 입면도", (MV,))
 
 
 def build_sections(ctx):
-    sh = _sheet("G-109", "주요 단면도", STATUS_MV, "4개 절단면에서 수직 보행과 층판 개구를 검토")
-    files = [("S-302", "A-A", "S-302_section_A-A.png"), ("S-303", "B-B", "S-303_section_B-B.png"),
-             ("S-304", "C-C", "S-304_section_C-C.png"), ("S-305", "D-D", "S-305_section_D-D.png")]
-    for i, (sid, name, fn) in enumerate(files):
-        c, r = i % 2, i // 2
-        x0, y0 = 12 + c * 198, 10 + r * 116
-        _image_frame(sh, "section_" + sid, _img(os.path.join(ctx.run, "sections", fn)), (x0, y0, x0 + 192, y0 + 106), "%s 단면 %s · 원본 1:400" % (sid, name), MV)
-    sh.text(14, 244, "실제 메시 절단을 축소한 비교 페이지(NTS). 절단 위치는 S-301, 실제 도면은 S-302~S-305 참조.", 7, "normal", "#444")
+    sh = _sheet("G-109", "주요 단면도", STATUS_MV, "B-B 단면을 중심으로 층판 개구와 수직 이동의 공간 관계를 읽기")
+    scrop = (35, 8, 260, 257)
+    s303 = _pdf_crop_image(os.path.join(ctx.run, "sections", "S-303_section_B-B.pdf"), scrop, 320)
+    s302 = _pdf_crop_image(os.path.join(ctx.run, "sections", "S-302_section_A-A.pdf"), scrop, 280)
+    _image_frame(sh, "section_S303", s303, (12, 10, 286, 238), "주요 도면 · S-303 B-B 실제 메시 절단 · NTS", MV, quality=94, max_px=3200)
+    _image_frame(sh, "section_S302", s302, (292, 10, 408, 126), "보조 · S-302 A-A · NTS", MV, quality=93, max_px=2000)
+    frame(sh, "section_note", 292, 132, 408, 238, "수직 관계", MV)
+    para(sh, 298, 150, "B-B는 중앙의 큰 개구와 상·하부 층판 적층이 만나는 단면이다. 검은 절단면은 모델 메시의 실제 절단이며, 보행·피난 확정 경로를 뜻하지 않는다.", 104, 7, "#333", ymax=212)
+    sh.text(298, 224, "절단 위치 S-301 · 전체 S-302~305", 6.5, "bold", "#555")
+    sh.text(14, 248, "재편집 도면 NTS · 원본 1:400의 레벨·치수는 기술 부록 참조", 7, "normal", "#444")
     return _finish(ctx, sh, "sections", "주요 단면도", (MV,))
 
 
@@ -757,17 +782,20 @@ def build_axon(ctx):
 
 
 def build_details(ctx):
-    sh = _sheet("G-111", "대표 상세와 설계 의도", STATUS_MIX, "모델 형상·계산값·개념 제안을 같은 언어로 혼동하지 않기")
-    picks = [("D-401", "나선 램프", "경사·레벨·상행 동선"), ("D-404", "코어", "모델 층고 + 개념 내부"), ("D-408", "선큰", "12단·−5.5m + 미승인 계산값")]
-    for i, (sid, name, desc) in enumerate(picks):
-        x0 = 12 + i * 133
-        p = os.path.join(ctx.run, "v4", "details", sid + "_detail_v4.png")
-        _image_frame(sh, "detail_" + sid, _img(p), (x0, 10, x0 + 126, 212), "%s %s" % (sid, name), MV)
-        sh.text(x0 + 3, 223, desc, 7, "bold", "#333")
-    cm.badge(sh, 14, 238, MV, w=39, h=5, pt=6)
-    cm.badge(sh, 62, 238, CP, w=44, h=5, pt=6)
-    cm.badge(sh, 115, 238, UR, w=36, h=5, pt=6)
-    sh.text(160, 242, "기술 부록 D-401~D-410에서 전체 크기·축척·근거를 확인", 7, "normal", "#444")
+    sh = _sheet("G-111", "대표 상세와 설계 의도", STATUS_MIX, "D-401 나선 램프의 평면·수직 관계를 중심으로 확대")
+    d401 = os.path.join(ctx.run, "v4", "details", "D-401_detail_v4.pdf")
+    plan = _pdf_crop_image(d401, (10, 10, 202, 230), 320)
+    section = _pdf_crop_image(d401, (205, 10, 408, 230), 320)
+    d404 = _pdf_crop_image(os.path.join(ctx.run, "v4", "details", "D-404_detail_v4.pdf"), (10, 10, 202, 230), 260)
+    _image_frame(sh, "detail_D401_plan", plan, (12, 10, 166, 238), "D-401 / T1 램프 평면 · NTS", MV, quality=94, max_px=2500)
+    _image_frame(sh, "detail_D401_section", section, (172, 10, 326, 238), "D-401 / 레벨·경사 관계 · NTS", MV, quality=94, max_px=2500)
+    _image_frame(sh, "detail_D404", d404, (332, 10, 408, 104), "보조 D-404 코어 · NTS", MV, quality=92, max_px=1400)
+    frame(sh, "detail_note", 332, 110, 408, 238, "설계 의도와 근거", CP)
+    para(sh, 338, 128, "T1은 원형 평면과 층간 레벨을 연결하는 연속 보행 장치다. 램프 외곽·레벨은 모델 근거, 동선 해석은 설계 제안으로 구분한다.", 64, 6.5, "#333", ymax=190)
+    cm.badge(sh, 338, 200, MV, w=40, h=5, pt=6)
+    cm.badge(sh, 338, 210, CP, w=44, h=5, pt=6)
+    sh.text(338, 228, "전체 상세 D-401~410", 6.2, "bold", "#555")
+    sh.text(14, 248, "재편집 도면 NTS · 상세 축척·계산·미확정 항목은 기술 부록 원본 참조", 7, "normal", "#444")
     return _finish(ctx, sh, "details", "대표 상세와 설계 의도")
 
 
@@ -778,12 +806,15 @@ def build_floor_experience(ctx):
         c, r = i % 2, i // 2
         x0, y0 = 12 + c * 198, 10 + r * 116
         _image_frame(sh, "floor_" + fl, _view(ctx, "floor_" + fl), (x0, y0, x0 + 192, y0 + 106), fl + "  " + captions[fl], MV)
-    sh.text(14, 244, "가구·사용 방식은 CONCEPT PROPOSED. 층판·기둥·튜브·프로그램 볼륨은 캐시 기반 MODEL VERIFIED.", 7, "normal", "#444")
+    cm.badge(sh, 14, 242, MV, w=40, h=5, pt=6)
+    sh.text(58, 246, "층판·기둥·튜브·프로그램 볼륨", 6.5, "normal", "#444")
+    cm.badge(sh, 192, 242, CP, w=44, h=5, pt=6)
+    sh.text(240, 246, "가구·색상·사용 장면", 6.5, "normal", "#444")
     return _finish(ctx, sh, "floor_experience", "층별 프로그램과 공간 경험")
 
 
 def build_summary(ctx):
-    sh = _sheet("G-113", "설계 요약·기술 부록 참조", STATUS_MIX, "후보 V4의 성취와 미확정 사항을 함께 제시")
+    sh = _sheet("G-113", "설계 요약·기술 부록 참조", STATUS_MIX, "후보 %s의 성취와 미확정 사항을 함께 제시" % cfg.EDITION)
     sh.text(14, 20, "DESIGN SUMMARY", 13, "bold", INK)
     summaries = [("01", "수직 이동을 독립 설비가 아니라 프로그램을 잇는 공간 장치로 드러낸다."),
                  ("02", "층판·튜브·코어·외피를 실제 모델 형상으로 통합해 도면 간 참조를 만든다."),
@@ -814,28 +845,73 @@ def build_summary(ctx):
 
 
 def build_contents(run, out_base, entries):
-    sh = _sheet("G-002", "목차", STATUS_DOC, "Part I의 실제 페이지 번호와 Part II 기술 부록 참조")
-    p1 = [e for e in entries if e["part"] == "I"]
-    p2 = [e for e in entries if e["part"] == "II"]
-    sh.text(14, 18, "PART I  GRADUATION DESIGN BOOK", 12, "bold", INK)
-    y = 31
-    for e in p1:
-        sh.text(16, y, "%02d" % e["page"], 8, "bold", "#0a6b3d")
-        sh.text(35, y, e["sheet"], 7, "bold", INK)
-        sh.text(62, y, e["title"][:42], 7, "normal", "#333")
-        y += 10.5
-    sh.text(220, 18, "PART II  TECHNICAL APPENDIX", 12, "bold", INK)
-    y = 31
-    for e in p2:
-        if y > 250:
-            break
-        sh.text(222, y, "%02d" % e["page"], 7, "bold", "#555")
-        sh.text(240, y, e["sheet"], 6.5, "bold", INK)
-        sh.text(267, y, e["title"][:31], 6.2, "normal", "#333")
-        y += 6.1
+    sh = _sheet("G-002", "PROJECT INFORMATION / 건축개요 및 배치계획", STATUS_DOC,
+                "전체 도면 목록은 기술 부록 A-001 참조")
+    panels = {
+        "context": (12.0, 12.0, 206.0, 126.0),
+        "site": (214.0, 12.0, 408.0, 126.0),
+        "overview": (12.0, 134.0, 206.0, 248.0),
+        "area": (214.0, 134.0, 408.0, 248.0),
+    }
+    site_pdf = os.path.join(run, "plans", "A-003_site_plan_1F_1to400.pdf")
+    context_img = _pdf_crop_image(site_pdf, (0, 0, 324, 175), 320)
+    site_img = _pdf_crop_image(site_pdf, (8, 42, 316, 287), 320)
+    frame(sh, "panel_context", *panels["context"], "01  LOCATION / 위치도", MV)
+    put_image(sh, "context_crop", context_img, 16, 22, 202, 110, quality=94, parent="panel_context", max_px=3000)
+    sh.text(16, 119, "A-003 확인 주변 맥락 · 실제 지명·좌표 미확정 · NTS", 6.2, "normal", "#555")
+    frame(sh, "panel_site", *panels["site"], "02  SITE PLAN / 배치도", MV)
+    put_image(sh, "site_crop", site_img, 218, 22, 404, 110, quality=94, parent="panel_site", max_px=3000)
+    sh.text(218, 119, "대지경계·도로·조경·외부동선·건물 발췌 · A-003 · NTS", 6.2, "normal", "#555")
+
+    model = cm.load_model(run)
+    fr = floors_rel(model)
+    b = model.building
+    frame(sh, "panel_overview", *panels["overview"], "03  PROJECT DATA / 건축개요", MV)
+    rows = [
+        ("용도", "다층 상업시설"),
+        ("모델 레벨", "B2–15F · %d개 레벨" % len(fr)),
+        ("레벨 범위", "%+.1f m – %+.1f m (1F=±0.000)" % (min(fr.values()), max(fr.values()))),
+        ("모델 평면 범위", "%.1f × %.1f m" % (b["xmax"] - b["xmin"], b["ymax"] - b["ymin"])),
+        ("수직 장치", "나선 램프 · 빛 튜브 · 승강기 튜브 · 에스컬레이터"),
+        ("형상 근거", "model_world.npz 캐시 · 원본 GLB 미존재"),
+    ]
+    y = 153
+    for label, value in rows:
+        sh.text(18, y, label, 6.5, "bold", "#333")
+        sh.text(63, y, value, 6.5, "normal", "#333")
+        sh.line(18, y + 3.0, 200, y + 3.0, 0.08, "#d0d0d0")
+        y += 13.0
+    sh.text(18, 238, "법정 용적률·건폐율·연면적은 검증 자료가 없어 기재하지 않음.", 6.2, "normal", "#a32020")
+
+    frame(sh, "panel_area", *panels["area"], "04  FLOOR PROGRAM / 층별 프로그램·면적", MV)
+    sh.text(220, 151, "층", 6.2, "bold", "#555")
+    sh.text(241, 151, "프로그램", 6.2, "bold", "#555")
+    sh.text(316, 151, "볼륨 투영 합계", 6.2, "bold", "#555")
+    sh.text(367, 151, "층판 순면적", 6.2, "bold", "#555")
+    area = cm.jl(os.path.join(run, "v4", "area", "typical_floor_coverage_v2.json"))
+    by_floor = {r["floor"]: r for r in area["floors"]}
+    y = 164
+    for fl in ("1F", "3F", "8F", "12F", "13F", "15F"):
+        r = by_floor[fl]
+        names = " + ".join(r["program_volume_footprint_by_program_m2"].keys())
+        sh.text(220, y, fl, 6.5, "bold", "#222")
+        sh.text(241, y, names, 6.2, "normal", "#333")
+        sh.text(350, y, "{:,.1f}㎡".format(r["program_volume_footprint_union_m2"]), 6.2, "normal", "#333", "end")
+        sh.text(402, y, "{:,.1f}㎡".format(r["slab_net_m2"]), 6.2, "normal", "#333", "end")
+        sh.line(220, y + 3.0, 402, y + 3.0, 0.08, "#d0d0d0")
+        y += 11.2
+    sh.text(220, 238, "프로그램 볼륨 수평 투영 · 전용면적/법정 연면적 아님 · A-903", 6.2, "bold", "#a35a00")
     sh.title_block()
     sh.save2(out_base)
-    return cm.sheet_row(sh, out_base, "목차", "DOCUMENT", PART, None, sh.paper, "DOCUMENT")
+    layout = {"sheet": "G-002", "paper_mm": [420.0, 297.0], "panels_mm": panels,
+              "panel_size_mm": [194.0, 114.0], "gap_mm": [8.0, 8.0],
+              "source_a003": site_pdf, "source_a003_sha256": cm.sha_file(site_pdf),
+              "area_source": os.path.join(run, "v4", "area", "typical_floor_coverage_v2.json"),
+              "entries_part_i": len([e for e in entries if e.get("part") == "I"]),
+              "entries_part_ii": len([e for e in entries if e.get("part") == "II"])}
+    cm.jd(layout, out_base + "_layout.json")
+    return cm.sheet_row(sh, out_base, "PROJECT INFORMATION / 건축개요 및 배치계획", "DOCUMENT · MODEL VERIFIED", PART, None, sh.paper, "DOCUMENT",
+                        {"panel_boxes_mm": panels, "panel_size_mm": [194.0, 114.0], "part": "I", "kind": "presentation"})
 
 
 def build(run, out_dir=None):

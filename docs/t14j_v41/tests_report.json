@@ -1,0 +1,30 @@
+{
+  "result": "PASS",
+  "command": "T14I_RUN=<isolated C_T14J_run> python -X utf8 -m pytest -q --junitxml=<path>",
+  "total": 309,
+  "passed": 299,
+  "failed": 0,
+  "skipped": 10,
+  "seconds": 386.966,
+  "existing_regression": {
+    "passed": 274,
+    "skipped": 10,
+    "failed": 0
+  },
+  "new_editorial_and_mutation": {
+    "passed": 25,
+    "failed": 0,
+    "coverage": [
+      "G-002 exact panel geometry",
+      "16 coordinate mutations rejected",
+      "15-page A3 PDF",
+      "6pt searchable text",
+      "180/300dpi renders",
+      "NTS/source references",
+      "protected source hashes"
+    ]
+  },
+  "junit_xml": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\output\\C_T14J_run\\v41\\pytest_full_final.xml",
+  "raw_log": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\output\\C_T14J_run\\v41\\pytest_full_final.txt",
+  "failures": []
+}

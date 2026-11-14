@@ -178,6 +178,8 @@ def main():
     ap.add_argument("--head", required=True)
     ap.add_argument("--out", default=None)
     ap.add_argument("--allow-missing", action="store_true", help="skip ordered sheets that were not produced (reported)")
+    ap.add_argument("--part-i-only", action="store_true",
+                    help="assemble only the graduation book; do not regenerate or rewrite the 49-page technical appendix")
     a = ap.parse_args()
     run = os.path.abspath(a.run)
     out = a.out or common.v4_dir(run, "book")
@@ -189,15 +191,16 @@ def main():
     rows["A-000"] = {"sheet": "A-000", "title": "기술 도면 부록 표지", "scale": "—", "grade": "DOCUMENT", "folder": "appendix", "paper": list(A3), "files": {"pdf": {"path": os.path.join(dd, "A-000.pdf")}}}
     rows["A-001"] = {"sheet": "A-001", "title": "도면 목록 (두 도면집 전체)", "scale": "—", "grade": "DOCUMENT", "folder": "appendix", "paper": list(A3), "files": {"pdf": {"path": os.path.join(dd, "A-001.pdf")}}}
     if "G-001" in rows and "G-002" not in rows:
-        rows["G-002"] = {"sheet": "G-002", "title": "목차", "scale": "—", "grade": "DOCUMENT", "folder": "partI", "paper": list(A3), "files": {"pdf": {"path": os.path.join(dd, "G-002.pdf")}}}
+        rows["G-002"] = {"sheet": "G-002", "title": "PROJECT INFORMATION / 건축개요 및 배치계획", "scale": "—", "grade": "DOCUMENT · MODEL VERIFIED", "folder": "partI", "paper": list(A3), "files": {"pdf": {"path": os.path.join(dd, "G-002.pdf")}}}
     part1, part2 = order_parts(rows)
     # sheets that are produced here (placeholders above) are not on disk yet: generate A-002 / A-900 if no other agent made them
     nort = common.jl(os.path.join(run, "raw_slices", "camera_bounds.json"))["frame"]["north_deg"]
-    for sid, fn in (("A-002", lambda: ad.build_legend(run, os.path.join(dd, "A-002"), nort)), ("A-900", lambda: ad.build_unresolved(run, os.path.join(dd, "A-900")))):
-        if sid not in rows or "_registry" not in rows[sid]:
-            rows[sid] = fn()
+    if not a.part_i_only:
+        for sid, fn in (("A-002", lambda: ad.build_legend(run, os.path.join(dd, "A-002"), nort)), ("A-900", lambda: ad.build_unresolved(run, os.path.join(dd, "A-900")))):
+            if sid not in rows or "_registry" not in rows[sid]:
+                rows[sid] = fn()
     missing = [s for s in PART_II_ORDER if s not in rows]
-    if missing and not a.allow_missing:
+    if missing and not a.allow_missing and not a.part_i_only:
         print("MISSING part II sheets:", missing)
     part1, part2 = order_parts(rows)
     entries = []
@@ -208,24 +211,35 @@ def main():
             entries.append({"sheet": sid, "title": r["title"], "part": part, "page": i + 1, "paper": paper_name(p), "scale": r.get("scale") or "—", "status": r.get("grade")})
     # contents sheets
     cnt = "배치도 1 · 평면 %d(+A1 %d) · 입면 4 · 단면 5 · 상세 10 · 부록" % (len([s for s in part2 if s.startswith("P-1")]), len([s for s in part2 if s in ("P-201", "P-202")]))
-    ad.build_cover(run, os.path.join(dd, "A-000"), "%d장 (%s)" % (len(part2), cnt), ident, a.head)
-    ad.build_index(run, os.path.join(dd, "A-001"), entries)
+    if not a.part_i_only:
+        ad.build_cover(run, os.path.join(dd, "A-000"), "%d장 (%s)" % (len(part2), cnt), ident, a.head)
+        ad.build_index(run, os.path.join(dd, "A-001"), entries)
     if "G-002" in rows and rows["G-002"]["files"]["pdf"]["path"].startswith(dd):
         from t14i import partI_front
         partI_front.build_contents(run, os.path.join(dd, "G-002"), entries)
     out1 = os.path.join(out, cfg.OUT_BOOK_I)
-    out2 = os.path.join(out, cfg.OUT_BOOK_II)
     pg1 = assemble(run, part1, rows, out1, "I", "다층 상업시설 — 졸업 설계 도면집 후보 %s" % cfg.EDITION, "PART I Graduation Design Book — CANDIDATE, NOT FROZEN", a.head)
-    pg2 = assemble(run, part2, rows, out2, "II", "다층 상업시설 — 기술 도면 부록 후보 %s" % cfg.EDITION, "PART II Technical Drawing Appendix — CANDIDATE, NOT FROZEN", a.head)
-    for pdf, pgs, part, contact_name in ((out1, pg1, "I", cfg.OUT_CONTACT_I), (out2, pg2, "II", cfg.OUT_CONTACT_II)):
+    products = [(out1, pg1, "I", cfg.OUT_CONTACT_I)]
+    out2 = None
+    pg2 = []
+    if not a.part_i_only:
+        out2 = os.path.join(out, cfg.OUT_BOOK_II)
+        pg2 = assemble(run, part2, rows, out2, "II", "다층 상업시설 — 기술 도면 부록 후보 %s" % cfg.EDITION, "PART II Technical Drawing Appendix — CANDIDATE, NOT FROZEN", a.head)
+        products.append((out2, pg2, "II", cfg.OUT_CONTACT_II))
+    for pdf, pgs, part, contact_name in products:
         write_index(pgs, os.path.splitext(pdf)[0] + "_index", part, pdf)
         contact_sheet(pdf, os.path.join(out, contact_name), pgs)
-    json.dump({"head": a.head, "date": cfg.ISSUE_DATE, "part1": {"pdf": out1, "sha256": common.sha_file(out1), "pages": len(pg1)}, "part2": {"pdf": out2, "sha256": common.sha_file(out2), "pages": len(pg2)},
+    part2_record = ({"pdf": out2, "sha256": common.sha_file(out2), "pages": len(pg2)} if out2 else
+                    {"status": "NOT_REBUILT", "reason": "--part-i-only preserves the existing 49-page technical appendix"})
+    json.dump({"head": a.head, "date": cfg.ISSUE_DATE, "part1": {"pdf": out1, "sha256": common.sha_file(out1), "pages": len(pg1)}, "part2": part2_record,
                "missing_part2": missing, "model": {"glb_present": ident["glb_present"], "cache_sha256": ident["cache_sha256"], "status": ident["status"]}},
               open(os.path.join(out, "book_registry.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print("PART I ", out1, len(pg1), "pages", common.sha_file(out1))
-    print("PART II", out2, len(pg2), "pages", common.sha_file(out2))
-    if missing:
+    if out2:
+        print("PART II", out2, len(pg2), "pages", common.sha_file(out2))
+    else:
+        print("PART II NOT REBUILT (--part-i-only)")
+    if missing and not a.part_i_only:
         print("missing:", missing)
 
 
