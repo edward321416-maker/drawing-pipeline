@@ -183,4 +183,3 @@
 5. **A/B 동등성:** Urban Daylight와 Blue Hour는 같은 검증 메시와 같은 신규 시각화 카메라를 사용하고 광원 조건만 달리한다. 캐시 해시·정점/삼각형 수·건축 bbox·카메라·객체 종류 수가 A/B에서 모두 같은지 독립 검사한다.
 6. **승인 경계:** 실제 4800×2700 PNG와 A3 검토 PDF가 생성되어도 상태는 `PBR_TARGET_RENDER_COMPLETE__HUMAN_ARCHITECTURAL_APPROVAL_PENDING`이다. 사용자의 건축·재료·시각 승인 전에는 G-002를 도면집 정본에 반영하거나 G-103·G-106·G-111로 확대하지 않으며 FREEZE하지 않는다.
 7. **전달과 보존:** 원본 캐시와 기존 V4.2/PR #19~#24는 덮어쓰지 않는다. 새 브랜치·새 출력 폴더에 Daylight/Blue Hour PNG, `.blend`, before/after, 확대 타일, SHA 매니페스트, A3 PDF와 페이지별 렌더를 함께 보존한다.
-

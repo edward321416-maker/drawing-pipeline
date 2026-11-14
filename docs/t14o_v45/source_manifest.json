@@ -1,11 +1,11 @@
 {
   "schema": "C-T14O-DELIVERY-MANIFEST-1.0",
-  "created_local": "2026-11-15T02:02:23+09:00",
+  "created_local": "2026-11-15T02:03:29+09:00",
   "status": "CANDIDATE_PIXELS_VERIFIED__USER_ARCHITECTURAL_APPROVAL_PENDING",
   "repository": "edward321416-maker/drawing-pipeline",
   "branch": "codex/t14o-cycles-pbr-v45",
   "base_commit": "ccd356ea56ca0bc1252ddf78b1e49626cc469198",
-  "implementation_commit": "ccd356ea56ca0bc1252ddf78b1e49626cc469198",
+  "implementation_commit": "fb9aab0",
   "source_geometry": {
     "model_world_npz_sha256": "992e2ec51ec17dc494ed2f99ddb11298671449dd6661d92df3b3536a0049537b",
     "model_objects_json_sha256": "722dd7359e2f13534ff4ae91088ba8649e8a8f96b27c60f000ddb09c01106488",
