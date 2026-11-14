@@ -1,0 +1,8 @@
+Use case: precise-object-edit
+Asset type: architectural-detail background retouch
+Input image: the actual G-111 detail page with verified and unresolved information.
+Primary request: improve readability using only restrained tone, shading and texture in blank or non-technical areas.
+Constraints: preserve every joint line, attachment, lineweight, dimension figure, label, status, crop and page ratio. Keep unresolved construction information unresolved. Output a PNG background candidate only.
+Avoid: no invented waterproofing, fireproofing, rebar, fastener, material specification, constructible joint, text, dimension or geometry. If preservation is impossible, leave the area unchanged.
+
+ no redesign; no extra or missing floor; no moved core, tube, slab, void, garden, facade bay, roof opening or base; no invented glazing, stair, door, railing, balcony, roof edge, mass, vegetation affecting access, material specification, label, dimension or scale bar. If accurate preservation is impossible, leave that area unchanged.

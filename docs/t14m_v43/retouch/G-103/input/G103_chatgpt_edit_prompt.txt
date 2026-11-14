@@ -1,0 +1,8 @@
+Use case: precise-object-edit
+Asset type: massing/program diagram retouch
+Input image: the actual G-103 source page derived from the verified model.
+Primary request: improve only color hierarchy, restrained shading, contrast and clarity.
+Constraints: keep exactly the count and geometry of slabs and masses, positions of cores and tubes, every stage, legend mapping, label position, camera and page crop. Do not recreate labels. Output one clean PNG with the same aspect ratio.
+Avoid: no new building element, moved slab, core, tube, void, sequence step, legend item, text, dimension or symbol. If preservation is impossible, leave the area unchanged.
+
+ no redesign; no extra or missing floor; no moved core, tube, slab, void, garden, facade bay, roof opening or base; no invented glazing, stair, door, railing, balcony, roof edge, mass, vegetation affecting access, material specification, label, dimension or scale bar. If accurate preservation is impossible, leave that area unchanged.

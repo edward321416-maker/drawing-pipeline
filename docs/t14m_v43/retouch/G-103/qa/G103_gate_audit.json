@@ -1,0 +1,23 @@
+{
+  "asset_id": "G-103",
+  "status": "REJECTED_NOT_FOR_BOOK",
+  "errors": [
+    "independent review incomplete",
+    "review checklist not approved: source_geometry",
+    "review checklist not approved: sequence",
+    "review checklist not approved: legend",
+    "review checklist not approved: labels"
+  ],
+  "evidence": {
+    "source_actual_sha256": "45095eeb833c82343eeb2ff96acff6b4c1a9df181eb19d3b9fc8c240ada68798",
+    "retouched_actual_sha256": "7a45424e29c42a39ed02436f558b0b30a5b2374d077b2d9e20411ea776ac8f28",
+    "source_pixels": [
+      4961,
+      3508
+    ],
+    "retouched_pixels": [
+      4961,
+      3508
+    ]
+  }
+}

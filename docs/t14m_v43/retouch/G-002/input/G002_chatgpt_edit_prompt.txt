@@ -1,0 +1,7 @@
+Use case: lighting-weather
+Asset type: Candidate V4.3 architectural exterior-render retouch
+Input images: Image 1 is the immutable edit target; Image 2 is a structural-lock reference overlay only and must not appear in the output.
+Primary request: Retouch the supplied genuine exterior JPEG conservatively. Tidy only the sky/background, slightly raise shadow readability, balance white/color temperature, reduce compression noise, harmonize lighting, and improve foreground/background depth.
+Composition/framing: preserve the exact 2400x1350 16:9 camera, crop, perspective, silhouette, and tower position.
+Constraints: keep the 17 levels B2-15F, four corner cores, T1-T4 tubes, every floor slab and void, middle garden, facade repetition, roof openings, base and camera completely unchanged. Preserve input pixel dimensions and ratio. Output an actual PNG with no text or watermark.
+Avoid: no redesign; no extra or missing floor; no moved core, tube, slab, void, garden, facade bay, roof opening or base; no invented glazing, stair, door, railing, balcony, roof edge, mass, vegetation affecting access, material specification, label, dimension or scale bar. If accurate preservation is impossible, leave that area unchanged.

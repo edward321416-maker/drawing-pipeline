@@ -1,0 +1,25 @@
+{
+  "asset_id": "G-111",
+  "automated_only_not_design_approval": true,
+  "source_pixels": [
+    4961,
+    3508
+  ],
+  "raw_ai_pixels": [
+    1491,
+    1055
+  ],
+  "candidate_pixels": [
+    4961,
+    3508
+  ],
+  "same_candidate_dimensions": true,
+  "locked_pixel_count": 1860162,
+  "locked_changed_pixel_count": 0,
+  "locked_pixel_identity_pass": true,
+  "authoritative_svg_preserved": true,
+  "authoritative_pdf_preserved": true,
+  "spatial_ai_pixels_used_in_final": false,
+  "raw_direct_use_rejected": true,
+  "remaining_gate": "independent human review; source vectors remain authoritative"
+}

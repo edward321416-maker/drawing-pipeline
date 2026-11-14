@@ -1,0 +1,29 @@
+{
+  "asset_id": "G-002",
+  "automated_only_not_design_approval": true,
+  "source_pixels": [
+    2400,
+    1350
+  ],
+  "raw_ai_pixels": [
+    1672,
+    941
+  ],
+  "candidate_pixels": [
+    2400,
+    1350
+  ],
+  "same_candidate_dimensions": true,
+  "changed_pixel_fraction": 0.720312,
+  "mean_absolute_channel_delta": 2.1483,
+  "locked_pixel_count": 895673,
+  "locked_changed_pixel_count": 0,
+  "locked_pixel_identity_pass": true,
+  "spatial_ai_pixels_used_in_final": false,
+  "raw_direct_use_rejected": true,
+  "raw_direct_rejection_reasons": [
+    "raw output dimensions differ from the 2400x1350 source",
+    "generative spatial pixels are not accepted as architectural evidence"
+  ],
+  "remaining_gate": "independent human geometry review and inspected PDF page render"
+}

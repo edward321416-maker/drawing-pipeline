@@ -1,0 +1,54 @@
+{
+  "candidate_v43_issued": false,
+  "policy": "No asset enters Candidate V4.3 until independent architectural review passes.",
+  "pilots": [
+    {
+      "sheet": "G-002",
+      "status": "REJECTED_NOT_FOR_BOOK",
+      "actual_ai_download": true,
+      "source_pixels": [2400, 1350],
+      "raw_ai_pixels": [1672, 941],
+      "protected_pixels": 895673,
+      "protected_pixel_changes": 0,
+      "remaining_review": ["camera", "silhouette", "floor_count", "cores", "tubes", "voids", "facade", "roof"]
+    },
+    {
+      "sheet": "G-103",
+      "status": "REJECTED_NOT_FOR_BOOK",
+      "actual_ai_download": true,
+      "source_pixels": [4961, 3508],
+      "raw_ai_pixels": [1491, 1055],
+      "protected_pixels": 3683929,
+      "protected_pixel_changes": 0,
+      "remaining_review": ["source_geometry", "sequence", "legend", "labels"]
+    },
+    {
+      "sheet": "G-106",
+      "status": "REJECTED_NOT_FOR_BOOK",
+      "actual_ai_download": true,
+      "source_pixels": [4961, 3508],
+      "raw_ai_pixels": [1491, 1055],
+      "protected_pixels": 3269743,
+      "protected_pixel_changes": 0,
+      "remaining_review": ["source_geometry", "grid", "dimensions", "labels", "scale", "vector_overlay"]
+    },
+    {
+      "sheet": "G-111",
+      "status": "REJECTED_NOT_FOR_BOOK",
+      "actual_ai_download": true,
+      "source_pixels": [4961, 3508],
+      "raw_ai_pixels": [1491, 1055],
+      "protected_pixels": 1860162,
+      "protected_pixel_changes": 0,
+      "remaining_review": ["source_geometry", "grid", "dimensions", "labels", "scale", "vector_overlay"]
+    }
+  ],
+  "page_inventory": {
+    "total": 65,
+    "document_exempt": 4,
+    "pilot_rejected_pending_independent_review": 4,
+    "awaiting_external_ai_retouch": 57,
+    "approved_for_layout": 0,
+    "approved_for_print": 0
+  }
+}
