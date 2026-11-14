@@ -1,0 +1,20 @@
+{
+  "result": "PASS",
+  "total": 337,
+  "passed": 327,
+  "failed": 0,
+  "skipped": 10,
+  "seconds": 422.904,
+  "base_pr18_regression": {
+    "passed": 299,
+    "skipped": 10,
+    "failed": 0
+  },
+  "new_t14k_editorial_mutation": {
+    "passed": 28,
+    "failed": 0
+  },
+  "junit_xml": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14K\\output\\C_T14K_run\\v42\\pytest_full.xml",
+  "raw_log": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14K\\output\\C_T14K_run\\v42\\pytest_full.log",
+  "failures": []
+}

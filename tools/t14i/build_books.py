@@ -5,7 +5,7 @@
 Reads RUN\\v4\\*\\*_registry.json (rows from t14i.common.sheet_row) plus the legacy sheets (A-003 user supplied, E-201..204, S-301..305)
 and writes Graduation_Drawing_Book_Candidate.pdf (Part I) and Technical_Drawing_Appendix_Candidate.pdf (Part II) with bookmarks,
 per-PDF sheet_index.json/csv (page, sheet, title, scale, paper, grade, part) and contact sheets. Page numbers printed in the contents
-sheets (G-002, A-001) are the real positions in the assembled PDFs (assigned before the sheets are drawn; asserted afterwards).
+sheets (G-003, A-001) are the real positions in the assembled PDFs (assigned before the sheets are drawn; asserted afterwards).
 """
 import argparse
 import csv
@@ -44,12 +44,15 @@ def _legacy_rows(run):
                  "folder": "plans", "paper": None, "files": {"pdf": {"path": os.path.join(run, "plans", "A-003_site_plan_1F_1to400.pdf")}}})
     er = common.jl(os.path.join(run, "elevations", "elevation_registry.json"))
     for e in er["elevations"]:
+        files = {ext: dict(meta, path=os.path.join(run, "elevations", os.path.basename(meta["path"]))) for ext, meta in e["files"].items()}
         rows.append({"sheet": e["sheet"], "title": "%s측 입면도" % {"N": "북", "E": "동", "S": "남", "W": "서"}[e["name"]], "scale": e["scale"], "grade": "MODEL VERIFIED",
-                     "folder": "elevations", "paper": list(A3), "files": e["files"]})
+                     "folder": "elevations", "paper": list(A3), "files": files})
     sr = common.jl(os.path.join(run, "sections", "section_line_registry.json"))
-    rows.append({"sheet": "S-301", "title": "단면 키플랜", "scale": "1:400", "grade": "MODEL VERIFIED", "folder": "sections", "paper": list(A3), "files": sr["section_locator"]["files"]})
+    locator = {ext: dict(meta, path=os.path.join(run, "sections", os.path.basename(meta["path"]))) for ext, meta in sr["section_locator"]["files"].items()}
+    rows.append({"sheet": "S-301", "title": "단면 키플랜", "scale": "1:400", "grade": "MODEL VERIFIED", "folder": "sections", "paper": list(A3), "files": locator})
     for s in sr["sections"]:
-        rows.append({"sheet": s["sheet"], "title": "단면도 %s" % s["name"], "scale": s["scale"], "grade": "MODEL VERIFIED · 실제 메시 절단", "folder": "sections", "paper": list(A3), "files": s["files"]})
+        files = {ext: dict(meta, path=os.path.join(run, "sections", os.path.basename(meta["path"]))) for ext, meta in s["files"].items()}
+        rows.append({"sheet": s["sheet"], "title": "단면도 %s" % s["name"], "scale": s["scale"], "grade": "MODEL VERIFIED · 실제 메시 절단", "folder": "sections", "paper": list(A3), "files": files})
     return rows
 
 
@@ -64,6 +67,14 @@ def collect(run):
         for r in lst:
             if isinstance(r, dict) and r.get("sheet") and r.get("files"):
                 r = dict(r)
+                local_files = {}
+                for ext, meta in r["files"].items():
+                    meta = dict(meta)
+                    candidate = os.path.join(os.path.dirname(p), os.path.basename(meta["path"]))
+                    if os.path.exists(candidate):
+                        meta["path"] = candidate
+                    local_files[ext] = meta
+                r["files"] = local_files
                 r["_registry"] = p
                 rows[r["sheet"]] = r
     return rows
@@ -186,19 +197,35 @@ def main():
     os.makedirs(out, exist_ok=True)
     rows = collect(run)
     ident = modelsrc.identity(run)
-    # A-000/A-001/G-002 are generated here (their page numbers are known from the order, which only depends on which sheets exist)
+    # A-000/A-001/G-003 are generated here (their page numbers are known from the order, which only depends on which sheets exist)
     dd = common.v4_dir(run, "appendix_docs")
     rows["A-000"] = {"sheet": "A-000", "title": "기술 도면 부록 표지", "scale": "—", "grade": "DOCUMENT", "folder": "appendix", "paper": list(A3), "files": {"pdf": {"path": os.path.join(dd, "A-000.pdf")}}}
     rows["A-001"] = {"sheet": "A-001", "title": "도면 목록 (두 도면집 전체)", "scale": "—", "grade": "DOCUMENT", "folder": "appendix", "paper": list(A3), "files": {"pdf": {"path": os.path.join(dd, "A-001.pdf")}}}
-    if "G-001" in rows and "G-002" not in rows:
-        rows["G-002"] = {"sheet": "G-002", "title": "PROJECT INFORMATION / 건축개요 및 배치계획", "scale": "—", "grade": "DOCUMENT · MODEL VERIFIED", "folder": "partI", "paper": list(A3), "files": {"pdf": {"path": os.path.join(dd, "G-002.pdf")}}}
+    if "G-001" in rows and "G-003" not in rows:
+        rows["G-003"] = {"sheet": "G-003", "title": "PROJECT INFORMATION / 건축개요 및 배치계획", "scale": "—", "grade": "DOCUMENT · MODEL VERIFIED", "folder": "partI", "paper": list(A3), "files": {"pdf": {"path": os.path.join(dd, "G-003.pdf")}}}
     part1, part2 = order_parts(rows)
-    # sheets that are produced here (placeholders above) are not on disk yet: generate A-002 / A-900 if no other agent made them
+    # A-002 and A-900 are part of the preserved 49-page technical appendix.
+    # T14K may update A-000/A-001 for the new edition and current cross-index,
+    # but it must not silently re-render these two document sheets with a new
+    # revision stamp.  Prefer the checked-in V4 source sheets byte-for-byte;
+    # only generate them when no preserved source exists (legacy runs).
     nort = common.jl(os.path.join(run, "raw_slices", "camera_bounds.json"))["frame"]["north_deg"]
     if not a.part_i_only:
+        repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+        preserved_docs = os.path.join(repo_root, "docs", "t14i_v4", "sheets", "partII", "appendix")
+        document_meta = {
+            "A-002": ("범례·기호·축척 정책·표기 등급", os.path.join(preserved_docs, "A-002.pdf")),
+            "A-900": ("미확정 설계 결정·도면 한계", os.path.join(preserved_docs, "A-900.pdf")),
+        }
+        for sid, (title, preserved_pdf) in document_meta.items():
+            if os.path.exists(preserved_pdf):
+                rows[sid] = {"sheet": sid, "title": title, "scale": "—", "grade": "DOCUMENT",
+                             "folder": "appendix", "paper": list(A3),
+                             "files": {"pdf": {"path": preserved_pdf}}}
         for sid, fn in (("A-002", lambda: ad.build_legend(run, os.path.join(dd, "A-002"), nort)), ("A-900", lambda: ad.build_unresolved(run, os.path.join(dd, "A-900")))):
             if sid not in rows or "_registry" not in rows[sid]:
-                rows[sid] = fn()
+                if not (sid in rows and os.path.exists(_pdf_of(rows[sid]))):
+                    rows[sid] = fn()
     missing = [s for s in PART_II_ORDER if s not in rows]
     if missing and not a.allow_missing and not a.part_i_only:
         print("MISSING part II sheets:", missing)
@@ -207,16 +234,16 @@ def main():
     for part, order in (("I", part1), ("II", part2)):
         for i, sid in enumerate(order):
             r = rows[sid]
-            p = _paper_of(r) if sid not in ("A-000", "A-001", "G-002") else A3
+            p = _paper_of(r) if sid not in ("A-000", "A-001", "G-003") else A3
             entries.append({"sheet": sid, "title": r["title"], "part": part, "page": i + 1, "paper": paper_name(p), "scale": r.get("scale") or "—", "status": r.get("grade")})
     # contents sheets
     cnt = "배치도 1 · 평면 %d(+A1 %d) · 입면 4 · 단면 5 · 상세 10 · 부록" % (len([s for s in part2 if s.startswith("P-1")]), len([s for s in part2 if s in ("P-201", "P-202")]))
     if not a.part_i_only:
         ad.build_cover(run, os.path.join(dd, "A-000"), "%d장 (%s)" % (len(part2), cnt), ident, a.head)
         ad.build_index(run, os.path.join(dd, "A-001"), entries)
-    if "G-002" in rows and rows["G-002"]["files"]["pdf"]["path"].startswith(dd):
+    if "G-003" in rows and rows["G-003"]["files"]["pdf"]["path"].startswith(dd):
         from t14i import partI_front
-        partI_front.build_contents(run, os.path.join(dd, "G-002"), entries)
+        partI_front.build_contents(run, os.path.join(dd, "G-003"), entries)
     out1 = os.path.join(out, cfg.OUT_BOOK_I)
     pg1 = assemble(run, part1, rows, out1, "I", "다층 상업시설 — 졸업 설계 도면집 후보 %s" % cfg.EDITION, "PART I Graduation Design Book — CANDIDATE, NOT FROZEN", a.head)
     products = [(out1, pg1, "I", cfg.OUT_CONTACT_I)]

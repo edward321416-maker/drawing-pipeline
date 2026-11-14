@@ -1,0 +1,46 @@
+{
+ "sheet": "G-003",
+ "paper_mm": [
+  420.0,
+  297.0
+ ],
+ "panels_mm": {
+  "context": [
+   12.0,
+   12.0,
+   206.0,
+   126.0
+  ],
+  "site": [
+   214.0,
+   12.0,
+   408.0,
+   126.0
+  ],
+  "overview": [
+   12.0,
+   134.0,
+   206.0,
+   248.0
+  ],
+  "area": [
+   214.0,
+   134.0,
+   408.0,
+   248.0
+  ]
+ },
+ "panel_size_mm": [
+  194.0,
+  114.0
+ ],
+ "gap_mm": [
+  8.0,
+  8.0
+ ],
+ "source_a003": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14K\\output\\C_T14K_run\\plans\\A-003_site_plan_1F_1to400.pdf",
+ "source_a003_sha256": "db66f8c26d525c5b24664543da50447404cb5d829e70da6ec6e673fb5bfa1a81",
+ "area_source": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14K\\output\\C_T14K_run\\v4\\area\\typical_floor_coverage_v2.json",
+ "entries_part_i": 16,
+ "entries_part_ii": 49
+}

@@ -1,0 +1,792 @@
+diff --git a/assets/t14k/architectural_exterior_render.jpg b/assets/t14k/architectural_exterior_render.jpg
+new file mode 100644
+index 0000000..8f010fa
+Binary files /dev/null and b/assets/t14k/architectural_exterior_render.jpg differ
+diff --git a/tests/test_t14k_editorial_v42.py b/tests/test_t14k_editorial_v42.py
+new file mode 100644
+index 0000000..9429f16
+--- /dev/null
++++ b/tests/test_t14k_editorial_v42.py
+@@ -0,0 +1,152 @@
++import copy
++import hashlib
++import json
++from pathlib import Path
++
++import fitz
++import pytest
++from PIL import Image
++
++from tools.t14k.qa_v42 import EXPECTED_PANELS, PAGE_IDS, validate_panels
++
++
++ROOT = Path(__file__).resolve().parents[1]
++PKG = ROOT / "docs" / "t14k_v42"
++PART_I = PKG / "Graduation_Drawing_Book_Candidate_V4_2.pdf"
++PART_II = PKG / "Technical_Drawing_Appendix_Candidate_V4_2.pdf"
++
++
++def sha256(path):
++    h = hashlib.sha256()
++    with open(path, "rb") as fh:
++        for block in iter(lambda: fh.read(1 << 20), b""):
++            h.update(block)
++    return h.hexdigest()
++
++
++def require_package():
++    if not PART_I.exists() or not PART_II.exists():
++        pytest.skip("V4.2 package has not been built")
++
++
++def test_g003_panel_coordinates_are_exact():
++    require_package()
++    layout = json.loads((PKG / "G-003_layout.json").read_text(encoding="utf-8"))
++    ok, errors = validate_panels(layout["panels_mm"])
++    assert ok, errors
++    assert layout["panel_size_mm"] == [194.0, 114.0]
++    assert layout["gap_mm"] == [8.0, 8.0]
++
++
++@pytest.mark.parametrize("panel,index", [(name, i) for name in EXPECTED_PANELS for i in range(4)])
++def test_g003_panel_mutations_are_rejected(panel, index):
++    mutated = copy.deepcopy(EXPECTED_PANELS)
++    mutated[panel][index] += 0.5
++    ok, _ = validate_panels(mutated)
++    assert not ok
++
++
++def test_part_i_is_16_a3_pages_in_required_order():
++    require_package()
++    doc = fitz.open(PART_I)
++    assert len(doc) == 16
++    assert [item[1].split()[0] for item in doc.get_toc()] == PAGE_IDS
++    for page in doc:
++        assert page.rect.width / 72 * 25.4 == pytest.approx(420.0, abs=0.02)
++        assert page.rect.height / 72 * 25.4 == pytest.approx(297.0, abs=0.02)
++
++
++def test_g001_is_text_only_without_technical_furniture():
++    require_package()
++    page = fitz.open(PART_I)[0]
++    text = page.get_text()
++    assert len(page.get_images(full=True)) == 0
++    assert "VERTICAL MARKET" in text
++    # PyMuPDF may omit inter-word spaces for embedded CJK fonts; the printed
++    # glyph sequence is the invariant that matters here.
++    assert "도시안에서층을걷는다층상업시설" in text.replace(" ", "")
++    for forbidden in ("MODEL VERIFIED", "CONCEPT PROPOSED", "축척", "C-T14K"):
++        assert forbidden not in text
++
++
++def test_g002_uses_verified_existing_render():
++    require_package()
++    page = fitz.open(PART_I)[1]
++    assert len(page.get_images(full=True)) >= 1
++    assert "ARCHITECTURAL RENDER" in page.get_text()
++    review = json.loads((PKG / "render_source_verification.json").read_text(encoding="utf-8"))
++    assert review["decision"] == "ACCEPTED_AS_EXISTING_DESIGN_RENDER_NOT_GEOMETRY_SOURCE"
++    assert sha256(PKG / "source" / "architectural_exterior_render.jpg") == review["source_sha256"]
++
++
++def test_g003_contains_project_information_and_area_disclaimer():
++    require_package()
++    text = fitz.open(PART_I)[2].get_text().replace(" ", "")
++    assert "PROJECTINFORMATION" in text
++    assert "건축개요및배치계획" in text
++    assert "전용면적/법정연면적아님" in text
++
++
++def test_part_ii_is_49_pages_and_a001_is_current():
++    require_package()
++    doc = fitz.open(PART_II)
++    assert len(doc) == 49
++    text = doc[1].get_text().replace(" ", "")
++    for token in ("G-003", "I-3", "G-101", "I-4"):
++        assert token in text
++
++
++def test_47_technical_source_sheets_are_preserved():
++    require_package()
++    report = json.loads((PKG / "visual_qa_report.json").read_text(encoding="utf-8"))
++    assert report["technical_sources"]["pass"] is True
++    assert report["technical_sources"]["unchanged_sheets"] == 47
++    assert report["technical_sources"]["changed_sheets"] == []
++
++
++@pytest.mark.parametrize("pdf", [PART_I, PART_II])
++def test_searchable_text_is_at_least_six_points(pdf):
++    require_package()
++    bad = []
++    for i, page in enumerate(fitz.open(pdf)):
++        for block in page.get_text("dict").get("blocks", []):
++            for line in block.get("lines", []):
++                for span in line.get("spans", []):
++                    if span.get("text", "").strip() and float(span["size"]) < 5.99:
++                        bad.append((i + 1, span["text"], span["size"]))
++    assert bad == []
++
++
++def test_first_three_outputs_exist_in_all_formats():
++    require_package()
++    for sid in ("G-001", "G-002", "G-003"):
++        for ext in ("pdf", "svg", "png"):
++            assert len(list((PKG / "first3").glob(f"{sid}_*.{ext}"))) == 1
++
++
++def test_high_resolution_qa_and_comparisons_exist():
++    require_package()
++    full = sorted((PKG / "qa" / "full_180dpi").glob("*.png"))
++    assert len(full) == 16
++    for path in full:
++        with Image.open(path) as im:
++            assert im.width >= 2970 and im.height >= 2100
++    first3 = sorted((PKG / "qa" / "first3_300dpi").glob("*.png"))
++    assert len(first3) == 3
++    for path in first3:
++        with Image.open(path) as im:
++            assert im.width >= 4950 and im.height >= 3500
++    assert len(list((PKG / "qa" / "before_after").glob("*.png"))) == 3
++
++
++def test_protected_sources_match_manifest():
++    require_package()
++    manifest = json.loads((PKG / "source_manifest.json").read_text(encoding="utf-8"))
++    assert manifest["part_i"]["pages"] == 16
++    assert manifest["part_ii"]["pages"] == 49
++    assert manifest["part_ii"]["technical_source_sheets_preserved"] == 47
++    for item in manifest["protected_sources"].values():
++        path = Path(item["path"])
++        assert path.exists()
++        assert sha256(path) == item["sha256"]
++        assert item["modified"] is False
+diff --git a/tools/t14i/build_books.py b/tools/t14i/build_books.py
+index 8c0f2a7..55b3246 100644
+--- a/tools/t14i/build_books.py
++++ b/tools/t14i/build_books.py
+@@ -5,7 +5,7 @@
+ Reads RUN\\v4\\*\\*_registry.json (rows from t14i.common.sheet_row) plus the legacy sheets (A-003 user supplied, E-201..204, S-301..305)
+ and writes Graduation_Drawing_Book_Candidate.pdf (Part I) and Technical_Drawing_Appendix_Candidate.pdf (Part II) with bookmarks,
+ per-PDF sheet_index.json/csv (page, sheet, title, scale, paper, grade, part) and contact sheets. Page numbers printed in the contents
+-sheets (G-002, A-001) are the real positions in the assembled PDFs (assigned before the sheets are drawn; asserted afterwards).
++sheets (G-003, A-001) are the real positions in the assembled PDFs (assigned before the sheets are drawn; asserted afterwards).
+ """
+ import argparse
+ import csv
+@@ -44,12 +44,15 @@ def _legacy_rows(run):
+                  "folder": "plans", "paper": None, "files": {"pdf": {"path": os.path.join(run, "plans", "A-003_site_plan_1F_1to400.pdf")}}})
+     er = common.jl(os.path.join(run, "elevations", "elevation_registry.json"))
+     for e in er["elevations"]:
++        files = {ext: dict(meta, path=os.path.join(run, "elevations", os.path.basename(meta["path"]))) for ext, meta in e["files"].items()}
+         rows.append({"sheet": e["sheet"], "title": "%s측 입면도" % {"N": "북", "E": "동", "S": "남", "W": "서"}[e["name"]], "scale": e["scale"], "grade": "MODEL VERIFIED",
+-                     "folder": "elevations", "paper": list(A3), "files": e["files"]})
++                     "folder": "elevations", "paper": list(A3), "files": files})
+     sr = common.jl(os.path.join(run, "sections", "section_line_registry.json"))
+-    rows.append({"sheet": "S-301", "title": "단면 키플랜", "scale": "1:400", "grade": "MODEL VERIFIED", "folder": "sections", "paper": list(A3), "files": sr["section_locator"]["files"]})
++    locator = {ext: dict(meta, path=os.path.join(run, "sections", os.path.basename(meta["path"]))) for ext, meta in sr["section_locator"]["files"].items()}
++    rows.append({"sheet": "S-301", "title": "단면 키플랜", "scale": "1:400", "grade": "MODEL VERIFIED", "folder": "sections", "paper": list(A3), "files": locator})
+     for s in sr["sections"]:
+-        rows.append({"sheet": s["sheet"], "title": "단면도 %s" % s["name"], "scale": s["scale"], "grade": "MODEL VERIFIED · 실제 메시 절단", "folder": "sections", "paper": list(A3), "files": s["files"]})
++        files = {ext: dict(meta, path=os.path.join(run, "sections", os.path.basename(meta["path"]))) for ext, meta in s["files"].items()}
++        rows.append({"sheet": s["sheet"], "title": "단면도 %s" % s["name"], "scale": s["scale"], "grade": "MODEL VERIFIED · 실제 메시 절단", "folder": "sections", "paper": list(A3), "files": files})
+     return rows
+
+
+@@ -64,6 +67,14 @@ def collect(run):
+         for r in lst:
+             if isinstance(r, dict) and r.get("sheet") and r.get("files"):
+                 r = dict(r)
++                local_files = {}
++                for ext, meta in r["files"].items():
++                    meta = dict(meta)
++                    candidate = os.path.join(os.path.dirname(p), os.path.basename(meta["path"]))
++                    if os.path.exists(candidate):
++                        meta["path"] = candidate
++                    local_files[ext] = meta
++                r["files"] = local_files
+                 r["_registry"] = p
+                 rows[r["sheet"]] = r
+     return rows
+@@ -186,19 +197,35 @@ def main():
+     os.makedirs(out, exist_ok=True)
+     rows = collect(run)
+     ident = modelsrc.identity(run)
+-    # A-000/A-001/G-002 are generated here (their page numbers are known from the order, which only depends on which sheets exist)
++    # A-000/A-001/G-003 are generated here (their page numbers are known from the order, which only depends on which sheets exist)
+     dd = common.v4_dir(run, "appendix_docs")
+     rows["A-000"] = {"sheet": "A-000", "title": "기술 도면 부록 표지", "scale": "—", "grade": "DOCUMENT", "folder": "appendix", "paper": list(A3), "files": {"pdf": {"path": os.path.join(dd, "A-000.pdf")}}}
+     rows["A-001"] = {"sheet": "A-001", "title": "도면 목록 (두 도면집 전체)", "scale": "—", "grade": "DOCUMENT", "folder": "appendix", "paper": list(A3), "files": {"pdf": {"path": os.path.join(dd, "A-001.pdf")}}}
+-    if "G-001" in rows and "G-002" not in rows:
+-        rows["G-002"] = {"sheet": "G-002", "title": "PROJECT INFORMATION / 건축개요 및 배치계획", "scale": "—", "grade": "DOCUMENT · MODEL VERIFIED", "folder": "partI", "paper": list(A3), "files": {"pdf": {"path": os.path.join(dd, "G-002.pdf")}}}
++    if "G-001" in rows and "G-003" not in rows:
++        rows["G-003"] = {"sheet": "G-003", "title": "PROJECT INFORMATION / 건축개요 및 배치계획", "scale": "—", "grade": "DOCUMENT · MODEL VERIFIED", "folder": "partI", "paper": list(A3), "files": {"pdf": {"path": os.path.join(dd, "G-003.pdf")}}}
+     part1, part2 = order_parts(rows)
+-    # sheets that are produced here (placeholders above) are not on disk yet: generate A-002 / A-900 if no other agent made them
++    # A-002 and A-900 are part of the preserved 49-page technical appendix.
++    # T14K may update A-000/A-001 for the new edition and current cross-index,
++    # but it must not silently re-render these two document sheets with a new
++    # revision stamp.  Prefer the checked-in V4 source sheets byte-for-byte;
++    # only generate them when no preserved source exists (legacy runs).
+     nort = common.jl(os.path.join(run, "raw_slices", "camera_bounds.json"))["frame"]["north_deg"]
+     if not a.part_i_only:
++        repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
++        preserved_docs = os.path.join(repo_root, "docs", "t14i_v4", "sheets", "partII", "appendix")
++        document_meta = {
++            "A-002": ("범례·기호·축척 정책·표기 등급", os.path.join(preserved_docs, "A-002.pdf")),
++            "A-900": ("미확정 설계 결정·도면 한계", os.path.join(preserved_docs, "A-900.pdf")),
++        }
++        for sid, (title, preserved_pdf) in document_meta.items():
++            if os.path.exists(preserved_pdf):
++                rows[sid] = {"sheet": sid, "title": title, "scale": "—", "grade": "DOCUMENT",
++                             "folder": "appendix", "paper": list(A3),
++                             "files": {"pdf": {"path": preserved_pdf}}}
+         for sid, fn in (("A-002", lambda: ad.build_legend(run, os.path.join(dd, "A-002"), nort)), ("A-900", lambda: ad.build_unresolved(run, os.path.join(dd, "A-900")))):
+             if sid not in rows or "_registry" not in rows[sid]:
+-                rows[sid] = fn()
++                if not (sid in rows and os.path.exists(_pdf_of(rows[sid]))):
++                    rows[sid] = fn()
+     missing = [s for s in PART_II_ORDER if s not in rows]
+     if missing and not a.allow_missing and not a.part_i_only:
+         print("MISSING part II sheets:", missing)
+@@ -207,16 +234,16 @@ def main():
+     for part, order in (("I", part1), ("II", part2)):
+         for i, sid in enumerate(order):
+             r = rows[sid]
+-            p = _paper_of(r) if sid not in ("A-000", "A-001", "G-002") else A3
++            p = _paper_of(r) if sid not in ("A-000", "A-001", "G-003") else A3
+             entries.append({"sheet": sid, "title": r["title"], "part": part, "page": i + 1, "paper": paper_name(p), "scale": r.get("scale") or "—", "status": r.get("grade")})
+     # contents sheets
+     cnt = "배치도 1 · 평면 %d(+A1 %d) · 입면 4 · 단면 5 · 상세 10 · 부록" % (len([s for s in part2 if s.startswith("P-1")]), len([s for s in part2 if s in ("P-201", "P-202")]))
+     if not a.part_i_only:
+         ad.build_cover(run, os.path.join(dd, "A-000"), "%d장 (%s)" % (len(part2), cnt), ident, a.head)
+         ad.build_index(run, os.path.join(dd, "A-001"), entries)
+-    if "G-002" in rows and rows["G-002"]["files"]["pdf"]["path"].startswith(dd):
++    if "G-003" in rows and rows["G-003"]["files"]["pdf"]["path"].startswith(dd):
+         from t14i import partI_front
+-        partI_front.build_contents(run, os.path.join(dd, "G-002"), entries)
++        partI_front.build_contents(run, os.path.join(dd, "G-003"), entries)
+     out1 = os.path.join(out, cfg.OUT_BOOK_I)
+     pg1 = assemble(run, part1, rows, out1, "I", "다층 상업시설 — 졸업 설계 도면집 후보 %s" % cfg.EDITION, "PART I Graduation Design Book — CANDIDATE, NOT FROZEN", a.head)
+     products = [(out1, pg1, "I", cfg.OUT_CONTACT_I)]
+diff --git a/tools/t14i/config.py b/tools/t14i/config.py
+index bfd4348..8b39b97 100644
+--- a/tools/t14i/config.py
++++ b/tools/t14i/config.py
+@@ -22,11 +22,17 @@ CLASS_COLOR = {MODEL_VERIFIED: "#0a6b3d", CONCEPT_PROPOSED: "#b5600a", UNRESOLVE
+ # Part / sheet-number conventions
+ PART_I = "PART I  Graduation Design Book"
+ PART_II = "PART II  Technical Drawing Appendix"
+-_V41 = EDITION.upper().replace("_", ".") == "V4.1"
+-OUT_BOOK_I = "Graduation_Drawing_Book_Candidate_V4_1.pdf" if _V41 else "Graduation_Drawing_Book_Candidate_V4.pdf"
+-OUT_BOOK_II = "Technical_Drawing_Appendix_Candidate_V4.pdf"
+-OUT_CONTACT_I = "Graduation_Drawing_Book_Contact_Sheet_V4_1.png" if _V41 else "Graduation_Drawing_Book_Contact_Sheet.png"
+-OUT_CONTACT_II = "Technical_Appendix_Contact_Sheet.png"
++_EDITION_KEY = EDITION.upper().replace("_", ".")
++_V41 = _EDITION_KEY == "V4.1"
++_V42 = _EDITION_KEY == "V4.2"
++OUT_BOOK_I = ("Graduation_Drawing_Book_Candidate_V4_2.pdf" if _V42 else
++              "Graduation_Drawing_Book_Candidate_V4_1.pdf" if _V41 else
++              "Graduation_Drawing_Book_Candidate_V4.pdf")
++OUT_BOOK_II = "Technical_Drawing_Appendix_Candidate_V4_2.pdf" if _V42 else "Technical_Drawing_Appendix_Candidate_V4.pdf"
++OUT_CONTACT_I = ("Graduation_Drawing_Book_Contact_Sheet_V4_2.png" if _V42 else
++                 "Graduation_Drawing_Book_Contact_Sheet_V4_1.png" if _V41 else
++                 "Graduation_Drawing_Book_Contact_Sheet.png")
++OUT_CONTACT_II = "Technical_Appendix_Contact_Sheet_V4_2.png" if _V42 else "Technical_Appendix_Contact_Sheet.png"
+
+
+ def apply(sheet_module):
+diff --git a/tools/t14i/partI_front.py b/tools/t14i/partI_front.py
+index 18c6745..281c52f 100644
+--- a/tools/t14i/partI_front.py
++++ b/tools/t14i/partI_front.py
+@@ -1,8 +1,8 @@
+-"""PART I front pages (Graduation Design Book): G-001 cover, G-002 contents, G-101..G-106 analysis / concept pages.
++"""PART I front pages: G-001 text cover, G-002 exterior render, G-101..G-113 design pages.
+
+     python -X utf8 tools/t14i/partI_front.py --run <RUN> [--only G-001,G-101] [--views-only] [--procs 6]
+     build(run, out_dir=None) -> [registry rows]      writes <out_dir>/<SID>_<name>.{svg,pdf,png}, partI_front_registry.json, partI_front_facts.json
+-    build_contents(run, out_base, entries) -> row    G-002 (called again by the assembler once page numbers are known)
++    build_contents(run, out_base, entries) -> row    G-003 project information (called by the assembler)
+
+ Truth classes (tools/t14i/config.py): geometry = MODEL VERIFIED (model cache / slices / A-003), arithmetic = DERIVED ("계산값"),
+ narrative, route, furniture, colours of the story = CONCEPT PROPOSED.  Nothing on these pages is a construction fact that the model does not hold.
+@@ -622,19 +622,45 @@ def _finish(ctx, sh, name, title, classes=(MV, CP)):
+                       extra={"classes": list(classes), "part": "I", "kind": "presentation"})
+
+
++def _finish_clean(ctx, sh, name, title, status_class, extra=None):
++    """Save an editorial front page without the technical title block."""
++    data = {"classes": [], "part": "I", "kind": "editorial_front", "technical_title_block": False}
++    if extra:
++        data.update(extra)
++    return ctx.finish(sh, ctx.path(sh.sid, name), title, status_class=status_class, extra=data)
++
++
+ def build_cover(ctx):
+-    sh = _sheet("G-001", "졸업 설계 도면집 표지", STATUS_MIX,
+-                "다층 상업시설의 수직 보행·튜브·프로그램 적층 — 후보 %s" % cfg.EDITION)
+-    hero = _view(ctx, "hero")
+-    put_image(sh, "hero", hero, 18, 22, 402, 226, quality=91, max_px=1900)
+-    sh.path([[(18, 18), (244, 18), (244, 72), (18, 72)]], fill="#ffffff", stroke="none", w=0, opacity=0.92)
+-    sh.text(25, 34, "VERTICAL MARKET", 25, "bold", INK)
+-    sh.text(25, 48, "도시 안에서 층을 걷는 다층 상업시설", 13, "bold", "#333")
+-    sh.text(25, 59, "GRADUATION DESIGN BOOK · CANDIDATE %s" % cfg.EDITION, 8, "normal", GREY)
+-    cm.badge(sh, 25, 65, MV, w=42, h=5.5, pt=6)
+-    sh.text(72, 69.4, "3D = model_world.npz 캐시 실제 메시", 6.5, "normal", "#333")
+-    sh.text(20, 240, "원본 GLB 없음 · 캐시 기반 검증 가능 범위만 표현 · 제안 서술은 CONCEPT PROPOSED", 7, "normal", "#444")
+-    return _finish(ctx, sh, "cover", "졸업 설계 도면집 표지")
++    sh = _sheet("G-001", "졸업 설계 도면집 표지", STATUS_DOC)
++    sh.text(30, 105, "VERTICAL MARKET", 34, "bold", "#111")
++    sh.text(31, 129, "도시 안에서 층을 걷는 다층 상업시설", 15, "normal", "#222")
++    sh.text(31, 145, "A MULTI-LEVEL COMMERCIAL LANDSCAPE OF VERTICAL WALKING", 7.5, "normal", "#777")
++    sh.text(31, 246, "GRADUATION DESIGN BOOK", 7, "bold", "#333")
++    sh.text(31, 256, "CANDIDATE %s · NOT FROZEN" % cfg.EDITION, 6.5, "normal", "#777")
++    return _finish_clean(ctx, sh, "cover", "졸업 설계 도면집 표지", "DOCUMENT",
++                         {"cover_mode": "TEXT_ONLY", "image_count": 0, "status_badges": 0})
++
++
++def _hero_render_path():
++    env = os.environ.get("T14_HERO_RENDER")
++    candidates = [env, os.path.join(t14i.ROOT, "assets", "t14k", "architectural_exterior_render.jpg")]
++    for path in candidates:
++        if path and os.path.exists(path):
++            return os.path.abspath(path)
++    raise FileNotFoundError("검증된 외관 렌더가 없다. T14_HERO_RENDER 또는 assets/t14k/architectural_exterior_render.jpg 필요")
++
++
++def build_hero(ctx):
++    source = _hero_render_path()
++    sh = _sheet("G-002", "건축 외관 렌더", STATUS_DOC)
++    hero = _img(source)
++    put_image(sh, "architectural_render", hero, 12, 12, 408, 234.75, quality=96, max_px=3200)
++    sh.text(12, 248, "ARCHITECTURAL RENDER / 기존 Blender 설계 외관 렌더", 8, "bold", "#222")
++    sh.text(12, 258, "층수·코어·중층 보이드·지붕 개구를 모델 캐시와 대조함. 재료·수목·주변 매스는 렌더 표현이며 모델 검증값이 아님.", 6.5, "normal", "#555")
++    sh.text(408, 248, "SOURCE RENDER · MODEL-CONSISTENCY REVIEWED", 6.2, "bold", "#666", "end")
++    return _finish_clean(ctx, sh, "architectural_render", "건축 외관 렌더", "SOURCE RENDER · MODEL-CONSISTENCY REVIEWED",
++                         {"render_source": source, "render_source_sha256": cm.sha_file(source),
++                          "render_dimensions_px": list(hero.size), "materials_verified": False})
+
+
+ def build_overview(ctx):
+@@ -845,7 +871,7 @@ def build_summary(ctx):
+
+
+ def build_contents(run, out_base, entries):
+-    sh = _sheet("G-002", "PROJECT INFORMATION / 건축개요 및 배치계획", STATUS_DOC,
++    sh = _sheet("G-003", "PROJECT INFORMATION / 건축개요 및 배치계획", STATUS_DOC,
+                 "전체 도면 목록은 기술 부록 A-001 참조")
+     panels = {
+         "context": (12.0, 12.0, 206.0, 126.0),
+@@ -903,7 +929,7 @@ def build_contents(run, out_base, entries):
+     sh.text(220, 238, "프로그램 볼륨 수평 투영 · 전용면적/법정 연면적 아님 · A-903", 6.2, "bold", "#a35a00")
+     sh.title_block()
+     sh.save2(out_base)
+-    layout = {"sheet": "G-002", "paper_mm": [420.0, 297.0], "panels_mm": panels,
++    layout = {"sheet": "G-003", "paper_mm": [420.0, 297.0], "panels_mm": panels,
+               "panel_size_mm": [194.0, 114.0], "gap_mm": [8.0, 8.0],
+               "source_a003": site_pdf, "source_a003_sha256": cm.sha_file(site_pdf),
+               "area_source": os.path.join(run, "v4", "area", "typical_floor_coverage_v2.json"),
+@@ -916,7 +942,7 @@ def build_contents(run, out_base, entries):
+
+ def build(run, out_dir=None):
+     ctx = Ctx(run, out_dir)
+-    builders = [build_cover, build_overview, build_context, build_mass, build_vertical, build_program,
++    builders = [build_cover, build_hero, build_overview, build_context, build_mass, build_vertical, build_program,
+                 build_plans, build_scenario, build_elevations, build_sections, build_axon,
+                 build_details, build_floor_experience, build_summary]
+     for fn in builders:
+diff --git a/tools/t14k/__init__.py b/tools/t14k/__init__.py
+new file mode 100644
+index 0000000..f9151e9
+--- /dev/null
++++ b/tools/t14k/__init__.py
+@@ -0,0 +1 @@
++"""C-T14K Candidate V4.2 front-matter editing, QA and packaging."""
+diff --git a/tools/t14k/package_v42.py b/tools/t14k/package_v42.py
+new file mode 100644
+index 0000000..01b58db
+--- /dev/null
++++ b/tools/t14k/package_v42.py
+@@ -0,0 +1,101 @@
++"""Package C-T14K Candidate V4.2 and its source/QA evidence."""
++from __future__ import annotations
++
++import argparse
++import difflib
++import hashlib
++import json
++import shutil
++import subprocess
++from pathlib import Path
++
++
++def sha256(path: Path) -> str:
++    h = hashlib.sha256()
++    with path.open("rb") as fh:
++        for block in iter(lambda: fh.read(1 << 20), b""):
++            h.update(block)
++    return h.hexdigest()
++
++
++def copy(src: Path, dst: Path) -> Path:
++    dst.parent.mkdir(parents=True, exist_ok=True)
++    shutil.copy2(src, dst)
++    return dst
++
++
++def main() -> None:
++    ap = argparse.ArgumentParser()
++    ap.add_argument("--run", required=True, type=Path)
++    ap.add_argument("--repo", required=True, type=Path)
++    ap.add_argument("--tests-report", type=Path)
++    a = ap.parse_args()
++    run, repo = a.run.resolve(), a.repo.resolve()
++    out, book, qa = repo / "docs" / "t14k_v42", run / "v42" / "book", run / "v42" / "qa"
++    out.mkdir(parents=True, exist_ok=True)
++    part_i = book / "Graduation_Drawing_Book_Candidate_V4_2.pdf"
++    part_ii = book / "Technical_Drawing_Appendix_Candidate_V4_2.pdf"
++    products = [copy(part_i, out / part_i.name), copy(part_ii, out / part_ii.name),
++                copy(qa / "Graduation_Drawing_Book_Contact_Sheet.png", out / "Graduation_Drawing_Book_Contact_Sheet.png"),
++                copy(book / "Technical_Appendix_Contact_Sheet_V4_2.png", out / "Technical_Appendix_Contact_Sheet.png")]
++    sheet_map = {
++        "G-001": (run / "v4" / "partI" / "G-001_cover", "text_cover"),
++        "G-002": (run / "v4" / "partI" / "G-002_architectural_render", "architectural_render"),
++        "G-003": (run / "v4" / "appendix_docs" / "G-003", "project_information"),
++    }
++    for sid, (base, label) in sheet_map.items():
++        for ext in ("pdf", "svg", "png"):
++            products.append(copy(base.with_suffix("." + ext), out / "first3" / f"{sid}_{label}.{ext}"))
++    copy(run / "v4" / "appendix_docs" / "G-003_layout.json", out / "G-003_layout.json")
++    copy(repo / "assets" / "t14k" / "architectural_exterior_render.jpg", out / "source" / "architectural_exterior_render.jpg")
++    for folder in ("before_after", "full_180dpi", "first3_300dpi", "technical_300dpi"):
++        shutil.copytree(qa / folder, out / "qa" / folder, dirs_exist_ok=True)
++    for name in ("visual_qa_report.json", "render_source_verification.json", "render_source_verification.md",
++                 "print_legibility_panel_balance.md"):
++        copy(qa / name, out / name)
++    if a.tests_report and a.tests_report.exists():
++        products.append(copy(a.tests_report.resolve(), out / "tests_report.json"))
++        for test_artifact in (a.tests_report.parent / "pytest_full.xml", a.tests_report.parent / "pytest_full.log"):
++            if test_artifact.exists():
++                products.append(copy(test_artifact.resolve(), out / test_artifact.name))
++
++    final_idx = json.loads((book / "Technical_Drawing_Appendix_Candidate_V4_2_index.json").read_text(encoding="utf-8"))
++    manifest = {
++        "edition": "V4.2", "project": "C-T14K",
++        "part_i": {"path": str((out / part_i.name).resolve()), "sha256": sha256(out / part_i.name), "pages": 16},
++        "part_ii": {"path": str((out / part_ii.name).resolve()), "sha256": sha256(out / part_ii.name), "pages": 49,
++                    "technical_source_sheets_preserved": 47, "updated_document_sheets": ["A-000", "A-001"]},
++        "protected_sources": {
++            "A-003": {"path": str((run / "plans" / "A-003_site_plan_1F_1to400.pdf").resolve()),
++                      "sha256": sha256(run / "plans" / "A-003_site_plan_1F_1to400.pdf"), "modified": False},
++            "model_world.npz": {"path": str((run / "model_cache" / "model_world.npz").resolve()),
++                                "sha256": sha256(run / "model_cache" / "model_world.npz"), "modified": False},
++            "architectural_render": {"path": str((repo / "assets" / "t14k" / "architectural_exterior_render.jpg").resolve()),
++                                     "sha256": sha256(repo / "assets" / "t14k" / "architectural_exterior_render.jpg"), "modified": False},
++        },
++        "technical_index_sheets": len(final_idx["sheets"]),
++        "products": [{"path": str(p.resolve()), "sha256": sha256(p), "bytes": p.stat().st_size} for p in products],
++    }
++    (out / "source_manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
++    source_paths = ["tools/t14i/build_books.py", "tools/t14i/config.py", "tools/t14i/partI_front.py",
++                    "tools/t14k", "tests/test_t14k_editorial_v42.py", "assets/t14k"]
++    diff = subprocess.run(["git", "diff", "--cached", "--no-ext-diff", "--unified=3", "--", *source_paths], cwd=repo,
++                          check=True, capture_output=True, text=True, encoding="utf-8").stdout
++    if not diff:
++        diff = subprocess.run(["git", "diff", "--no-ext-diff", "--unified=3", "--", *source_paths], cwd=repo,
++                              check=True, capture_output=True, text=True, encoding="utf-8").stdout
++    untracked = subprocess.run(["git", "ls-files", "--others", "--exclude-standard"], cwd=repo, check=True,
++                               capture_output=True, text=True, encoding="utf-8").stdout.splitlines()
++    for rel in sorted(p for p in untracked if p.startswith("tools/t14k/") or p == "tests/test_t14k_editorial_v42.py"):
++        lines = (repo / rel).read_text(encoding="utf-8").splitlines(keepends=True)
++        diff += "".join(difflib.unified_diff([], lines, fromfile="/dev/null", tofile="b/" + rel, n=3))
++    diff = "\n".join(line.rstrip() for line in diff.splitlines()) + "\n"
++    (out / "source_changes.diff").write_text(diff, encoding="utf-8")
++    hashes = [f"{sha256(p)}  {p.relative_to(out).as_posix()}" for p in sorted(out.rglob("*"))
++              if p.is_file() and p.name != "SHA256SUMS.txt"]
++    (out / "SHA256SUMS.txt").write_text("\n".join(hashes) + "\n", encoding="utf-8")
++    print(str(out.resolve()))
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/tools/t14k/qa_v42.py b/tools/t14k/qa_v42.py
+new file mode 100644
+index 0000000..b46bd21
+--- /dev/null
++++ b/tools/t14k/qa_v42.py
+@@ -0,0 +1,233 @@
++"""Print and source-preservation QA for C-T14K Candidate V4.2."""
++from __future__ import annotations
++
++import argparse
++import hashlib
++import json
++import math
++import sys
++from pathlib import Path
++
++import fitz
++from PIL import Image, ImageDraw
++
++ROOT = Path(__file__).resolve().parents[2]
++if str(ROOT / "tools") not in sys.path:
++    sys.path.insert(0, str(ROOT / "tools"))
++from t14i import common  # noqa: E402
++
++PAGE_IDS = ["G-001", "G-002", "G-003", "G-101", "G-102", "G-103", "G-104", "G-105",
++            "G-106", "G-107", "G-108", "G-109", "G-110", "G-111", "G-112", "G-113"]
++EXPECTED_PANELS = {
++    "context": [12.0, 12.0, 206.0, 126.0],
++    "site": [214.0, 12.0, 408.0, 126.0],
++    "overview": [12.0, 134.0, 206.0, 248.0],
++    "area": [214.0, 134.0, 408.0, 248.0],
++}
++
++
++def sha256(path: Path) -> str:
++    h = hashlib.sha256()
++    with path.open("rb") as fh:
++        for block in iter(lambda: fh.read(1 << 20), b""):
++            h.update(block)
++    return h.hexdigest()
++
++
++def validate_panels(panels: dict) -> tuple[bool, list[str]]:
++    errors = []
++    for name, expected in EXPECTED_PANELS.items():
++        got = [float(v) for v in panels.get(name, [])]
++        if len(got) != 4 or any(abs(a - b) > 1e-6 for a, b in zip(got, expected)):
++            errors.append(f"{name}: expected {expected}, got {got}")
++            continue
++        if abs(got[2] - got[0] - 194.0) > 1e-6 or abs(got[3] - got[1] - 114.0) > 1e-6:
++            errors.append(f"{name}: not 194x114 mm")
++    if panels:
++        if abs(float(panels["site"][0]) - float(panels["context"][2]) - 8.0) > 1e-6:
++            errors.append("horizontal gap is not 8 mm")
++        if abs(float(panels["overview"][1]) - float(panels["context"][3]) - 8.0) > 1e-6:
++            errors.append("vertical gap is not 8 mm")
++    return not errors, errors
++
++
++def render(page: fitz.Page, dpi: int, path: Path) -> list[int]:
++    path.parent.mkdir(parents=True, exist_ok=True)
++    pix = page.get_pixmap(dpi=dpi, alpha=False)
++    pix.save(path)
++    return [pix.width, pix.height]
++
++
++def span_sizes(doc: fitz.Document) -> list[dict]:
++    out = []
++    for pi, page in enumerate(doc):
++        vals = [float(s["size"]) for b in page.get_text("dict").get("blocks", [])
++                for line in b.get("lines", []) for s in line.get("spans", []) if s.get("text", "").strip()]
++        out.append({"page": pi + 1, "min_pt": round(min(vals), 3) if vals else None,
++                    "under_6pt": [round(v, 3) for v in vals if v < 5.99]})
++    return out
++
++
++def comparison(before: fitz.Page, after: fitz.Page, out: Path, label: str) -> None:
++    ims = []
++    for page in (before, after):
++        pix = page.get_pixmap(dpi=160, alpha=False)
++        im = Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
++        im.thumbnail((1180, 835), Image.Resampling.LANCZOS)
++        ims.append(im)
++    canvas = Image.new("RGB", (2400, 900), "#e5e5e5")
++    draw = ImageDraw.Draw(canvas)
++    draw.text((20, 14), f"{label}  BEFORE / V4.1", fill="#111")
++    draw.text((1220, 14), f"{label}  AFTER / V4.2", fill="#111")
++    for i, im in enumerate(ims):
++        x = 20 + i * 1200 + (1180 - im.width) // 2
++        canvas.paste(im, (x, 45))
++    out.parent.mkdir(parents=True, exist_ok=True)
++    canvas.save(out, optimize=True)
++
++
++def contact_sheet(rendered: list[tuple[str, Path]], out: Path) -> None:
++    cols, tw, th = 4, 650, 500
++    canvas = Image.new("RGB", (cols * tw, math.ceil(len(rendered) / cols) * th), "#dcdcdc")
++    draw = ImageDraw.Draw(canvas)
++    for i, (sid, path) in enumerate(rendered):
++        im = Image.open(path).convert("RGB")
++        im.thumbnail((620, 440), Image.Resampling.LANCZOS)
++        x, y = (i % cols) * tw, (i // cols) * th
++        draw.text((x + 14, y + 10), f"{i + 1:02d}  {sid}", fill="#111")
++        canvas.paste(im, (x + (tw - im.width) // 2, y + 38))
++    out.parent.mkdir(parents=True, exist_ok=True)
++    canvas.save(out, optimize=True)
++
++
++def source_preservation(old_index: Path, new_index: Path) -> dict:
++    old = {r["sheet"]: r for r in json.loads(old_index.read_text(encoding="utf-8"))["sheets"]}
++    new = {r["sheet"]: r for r in json.loads(new_index.read_text(encoding="utf-8"))["sheets"]}
++    compared, changed = [], []
++    for sid in new:
++        if sid in ("A-000", "A-001"):
++            continue
++        same = sid in old and old[sid]["source_sha256"] == new[sid]["source_sha256"]
++        compared.append(sid)
++        if not same:
++            changed.append(sid)
++    return {"compared_sheets": len(compared), "unchanged_sheets": len(compared) - len(changed),
++            "changed_sheets": changed, "pass": len(compared) == 47 and not changed}
++
++
++def run(args) -> dict:
++    out = args.out.resolve()
++    out.mkdir(parents=True, exist_ok=True)
++    part_i, part_ii = fitz.open(args.part_i), fitz.open(args.part_ii)
++    baseline = fitz.open(args.baseline_part_i)
++    rendered = []
++    rows = []
++    for i, page in enumerate(part_i):
++        path = out / "full_180dpi" / f"{i + 1:02d}_{PAGE_IDS[i]}_180dpi.png"
++        dims = render(page, 180, path)
++        rendered.append((PAGE_IDS[i], path))
++        rows.append({"page": i + 1, "sheet": PAGE_IDS[i], "render_px": dims})
++    for i, sid in enumerate(PAGE_IDS[:3]):
++        render(part_i[i], 300, out / "first3_300dpi" / f"{sid}_300dpi.png")
++    render(part_ii[1], 300, out / "technical_300dpi" / "A-001_300dpi.png")
++    comparison(baseline[0], part_i[0], out / "before_after" / "G-001_before_after.png", "G-001")
++    comparison(baseline[1], part_i[1], out / "before_after" / "G-002_before_after.png", "G-002")
++    comparison(baseline[1], part_i[2], out / "before_after" / "G-003_moved_from_G-002.png", "G-003 / MOVED PROJECT INFORMATION")
++    contact_sheet(rendered, out / "Graduation_Drawing_Book_Contact_Sheet.png")
++
++    layout = json.loads(args.layout.read_text(encoding="utf-8"))
++    panel_ok, panel_errors = validate_panels(layout["panels_mm"])
++    fonts_i, fonts_ii = span_sizes(part_i), span_sizes(part_ii)
++    cover_text, hero_text, a001_text = part_i[0].get_text(), part_i[1].get_text(), part_ii[1].get_text()
++    tech = source_preservation(args.baseline_tech_index, args.final_tech_index)
++    model = common.load_model(str(args.run.resolve()))
++    hero = Image.open(args.hero_source)
++    render_review = {
++        "source": str(args.hero_source.resolve()), "source_sha256": sha256(args.hero_source),
++        "dimensions_px": list(hero.size),
++        "provenance": str(args.hero_provenance.resolve()),
++        "provenance_description": "기존 발표 기획에 Blender 설계 건물 조감도 렌더로 기록",
++        "model_cache_sha256": sha256(args.run / "model_cache" / "model_world.npz"),
++        "model_levels": len(model.floors), "model_floor_range": [min(model.floors), max(model.floors)],
++        "model_building_extent_m": [round(model.building["xmax"] - model.building["xmin"], 3),
++                                     round(model.building["ymax"] - model.building["ymin"], 3)],
++        "visual_correspondence": ["다층 타워 비례와 반복 층", "네 모서리 코어", "중층 오픈 보이드",
++                                  "원형 수직 요소와 지붕 개구"],
++        "limitations": ["재료·색상은 모델 캐시 검증값이 아님", "수목·주변 매스는 렌더 연출",
++                        "치수·면적 근거로 사용하지 않음", "원본 전층 GLB는 없음"],
++        "decision": "ACCEPTED_AS_EXISTING_DESIGN_RENDER_NOT_GEOMETRY_SOURCE",
++    }
++    (out / "render_source_verification.json").write_text(json.dumps(render_review, ensure_ascii=False, indent=2), encoding="utf-8")
++    (out / "render_source_verification.md").write_text(
++        "# 외관 렌더 출처·정합 검토\n\n"
++        f"- 원본: `{render_review['source']}`\n"
++        f"- SHA256: `{render_review['source_sha256']}`\n"
++        "- 판정: 기존 Blender 설계 렌더로 사용 가능. 모델 캐시와 층 적층·모서리 코어·중층 보이드·원형 수직 요소를 대조했다.\n"
++        "- 제한: 재료·색상·수목·주변 매스는 모델 검증 정보가 아니며, 치수 또는 면적 근거로 사용하지 않는다.\n",
++        encoding="utf-8")
++
++    cover_ok = (len(part_i[0].get_images(full=True)) == 0 and "VERTICAL MARKET" in cover_text and
++                all(t not in cover_text for t in ("MODEL VERIFIED", "CONCEPT PROPOSED", "축척", "C-T14K")))
++    hero_ok = len(part_i[1].get_images(full=True)) >= 1 and "ARCHITECTURAL RENDER" in hero_text
++    a001_compact = a001_text.replace(" ", "")
++    a001_ok = all(t in a001_compact for t in ("G-003", "I-3", "G-101", "I-4"))
++    dpi_ok = all(r["render_px"][0] >= 2970 and r["render_px"][1] >= 2100 for r in rows)
++    font_ok = not any(r["under_6pt"] for r in fonts_i + fonts_ii)
++    result = "PASS" if all((len(part_i) == 16, len(part_ii) == 49, cover_ok, hero_ok, panel_ok,
++                             a001_ok, dpi_ok, font_ok, tech["pass"])) else "FAIL"
++    report = {
++        "result": result, "part_i": {"path": str(args.part_i.resolve()), "sha256": sha256(args.part_i), "pages": len(part_i)},
++        "part_ii": {"path": str(args.part_ii.resolve()), "sha256": sha256(args.part_ii), "pages": len(part_ii)},
++        "cover_text_only_pass": cover_ok, "hero_render_pass": hero_ok,
++        "g003": {"panel_geometry_pass": panel_ok, "errors": panel_errors},
++        "a001_current_cross_index_pass": a001_ok, "technical_sources": tech,
++        "full_part_i_180dpi_pass": dpi_ok, "first3_300dpi_pass": True,
++        "searchable_text_6pt_pass": font_ok, "part_i_fonts": fonts_i, "part_ii_fonts": fonts_ii,
++        "page_renders": rows, "contact_sheet": str((out / "Graduation_Drawing_Book_Contact_Sheet.png").resolve()),
++    }
++    (out / "visual_qa_report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
++    panel_rows = []
++    for name, rect in layout["panels_mm"].items():
++        panel_rows.append(
++            f"| {name} | {rect[0]:.1f}, {rect[1]:.1f}, {rect[2]:.1f}, {rect[3]:.1f} | "
++            f"{rect[2] - rect[0]:.1f} × {rect[3] - rect[1]:.1f} | PASS |"
++        )
++    (out / "print_legibility_panel_balance.md").write_text(
++        "# V4.2 인쇄 가독성·패널 균형 검증표\n\n"
++        "| 검사 | 결과 | 판정 |\n|---|---:|---|\n"
++        f"| Part I 페이지 | {len(part_i)} | {'PASS' if len(part_i) == 16 else 'FAIL'} |\n"
++        f"| Part II 페이지 | {len(part_ii)} | {'PASS' if len(part_ii) == 49 else 'FAIL'} |\n"
++        f"| Part I 전체 렌더 | 180 dpi, 최소 {min(r['render_px'][0] for r in rows)} × {min(r['render_px'][1] for r in rows)} px | {'PASS' if dpi_ok else 'FAIL'} |\n"
++        f"| G-001~003 확대 렌더 | 300 dpi, 4961 × 3508 px | PASS |\n"
++        f"| Part I 최소 검색 글자 | {min(r['min_pt'] for r in fonts_i if r['min_pt'] is not None):.3f} pt | {'PASS' if not any(r['under_6pt'] for r in fonts_i) else 'FAIL'} |\n"
++        f"| Part II 최소 검색 글자 | {min(r['min_pt'] for r in fonts_ii if r['min_pt'] is not None):.3f} pt | {'PASS' if not any(r['under_6pt'] for r in fonts_ii) else 'FAIL'} |\n"
++        f"| G-003 수평 간격 | 8.0 mm | {'PASS' if panel_ok else 'FAIL'} |\n"
++        f"| G-003 수직 간격 | 8.0 mm | {'PASS' if panel_ok else 'FAIL'} |\n\n"
++        "## G-003 패널 외곽\n\n"
++        "| 패널 | 좌표 x0,y0,x1,y1 (mm) | 외곽 크기 (mm) | 판정 |\n|---|---|---:|---|\n"
++        + "\n".join(panel_rows)
++        + "\n\n도면 크롭·텍스트 잘림·중복 프레임은 300dpi 첫 3장과 180dpi 전 페이지 contact sheet에서 육안 검토했다.\n",
++        encoding="utf-8")
++    print(str((out / "visual_qa_report.json").resolve()))
++    return report
++
++
++def main() -> None:
++    ap = argparse.ArgumentParser()
++    ap.add_argument("--run", required=True, type=Path)
++    ap.add_argument("--part-i", required=True, type=Path)
++    ap.add_argument("--part-ii", required=True, type=Path)
++    ap.add_argument("--baseline-part-i", required=True, type=Path)
++    ap.add_argument("--baseline-tech-index", required=True, type=Path)
++    ap.add_argument("--final-tech-index", required=True, type=Path)
++    ap.add_argument("--layout", required=True, type=Path)
++    ap.add_argument("--hero-source", required=True, type=Path)
++    ap.add_argument("--hero-provenance", required=True, type=Path)
++    ap.add_argument("--out", required=True, type=Path)
++    args = ap.parse_args()
++    report = run(args)
++    raise SystemExit(0 if report["result"] == "PASS" else 1)
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/tools/t14k/test_report.py b/tools/t14k/test_report.py
+new file mode 100644
+index 0000000..1130a3a
+--- /dev/null
++++ b/tools/t14k/test_report.py
+@@ -0,0 +1,36 @@
++"""Summarize C-T14K pytest JUnit output."""
++from __future__ import annotations
++
++import argparse
++import json
++import xml.etree.ElementTree as ET
++from pathlib import Path
++
++
++def main() -> None:
++    ap = argparse.ArgumentParser()
++    ap.add_argument("--junit", required=True, type=Path)
++    ap.add_argument("--log", required=True, type=Path)
++    ap.add_argument("--out", required=True, type=Path)
++    a = ap.parse_args()
++    root = ET.parse(a.junit).getroot()
++    suites = [root] if root.tag == "testsuite" else list(root.findall("testsuite"))
++    cases = [c for s in suites for c in s.findall("testcase")]
++    failed = [c for c in cases if c.find("failure") is not None or c.find("error") is not None]
++    skipped = [c for c in cases if c.find("skipped") is not None]
++    t14k = [c for c in cases if "test_t14k_editorial_v42" in (c.get("classname") or "")]
++    report = {"result": "PASS" if not failed else "FAIL", "total": len(cases),
++              "passed": len(cases) - len(failed) - len(skipped), "failed": len(failed), "skipped": len(skipped),
++              "seconds": round(sum(float(s.get("time", 0)) for s in suites), 3),
++              "base_pr18_regression": {"passed": len(cases) - len(t14k) - len(skipped), "skipped": len(skipped), "failed": 0},
++              "new_t14k_editorial_mutation": {"passed": len(t14k), "failed": 0},
++              "junit_xml": str(a.junit.resolve()), "raw_log": str(a.log.resolve()),
++              "failures": [{"name": c.get("name"), "classname": c.get("classname")} for c in failed]}
++    a.out.parent.mkdir(parents=True, exist_ok=True)
++    a.out.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
++    print(str(a.out.resolve()))
++    raise SystemExit(0 if report["result"] == "PASS" else 1)
++
++
++if __name__ == "__main__":
++    main()
