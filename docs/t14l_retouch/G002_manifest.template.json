@@ -1,0 +1,28 @@
+{
+  "asset_id": "G-002",
+  "kind": "exterior",
+  "source": "../../assets/t14k/architectural_exterior_render.jpg",
+  "source_sha256": "9acd9ab3f5848f51ac1f2cc678ae988bf4f17197f238a5905eac9d8460e75a75",
+  "retouched": "G002_ai_retouched.png",
+  "retouched_sha256": null,
+  "ai_tool": "ChatGPT",
+  "retouch_export_record": null,
+  "before_after_comparison": "G002_before_after.png",
+  "printed_width_mm": 396,
+  "pdf_page_render_inspected": false,
+  "independent_review": {
+    "decision": "PENDING",
+    "reviewer": null,
+    "reviewed_at": null,
+    "checklist": {
+      "camera": false,
+      "silhouette": false,
+      "floor_count": false,
+      "cores": false,
+      "tubes": false,
+      "voids": false,
+      "facade": false,
+      "roof": false
+    }
+  }
+}
