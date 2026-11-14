@@ -1,0 +1,49 @@
+{
+  "asset_id": "G-002",
+  "review_date": "2026-11-14",
+  "approval_rule": "Every corrected-image criterion must be >= 4/5 and receive explicit human acceptance.",
+  "source_print_dpi_at_396mm": 153.9,
+  "raw_ai": {
+    "A": {
+      "geometry": "REJECTED_NOT_FOR_BOOK",
+      "reason": "Floor/slab rhythm, facade modules, roof and base were redesigned by AI."
+    },
+    "B": {
+      "geometry": "REJECTED_NOT_FOR_BOOK",
+      "reason": "Floor/slab rhythm, facade modules, roof and base were redesigned by AI."
+    }
+  },
+  "corrected_2_5d": {
+    "A": {
+      "name": "Urban Daylight",
+      "scores_out_of_5": {
+        "geometry_legibility": 4,
+        "lighting": 3,
+        "material_depth": 2,
+        "spatial_depth": 4,
+        "urban_context": 4,
+        "human_scale": 4,
+        "architectural_storytelling": 3,
+        "print_quality": 3
+      },
+      "decision": "VISUAL_QUALITY_NOT_APPROVED",
+      "note": "Context and depth improve materially, but source-model material fidelity and native print resolution remain limiting."
+    },
+    "B": {
+      "name": "Blue Hour",
+      "scores_out_of_5": {
+        "geometry_legibility": 4,
+        "lighting": 3,
+        "material_depth": 2,
+        "spatial_depth": 4,
+        "urban_context": 4,
+        "human_scale": 4,
+        "architectural_storytelling": 3,
+        "print_quality": 3
+      },
+      "decision": "VISUAL_QUALITY_NOT_APPROVED",
+      "note": "Atmosphere is coherent, but verified interior-light/material passes cannot be reconstructed without the full tower scene."
+    }
+  },
+  "next_gate": "User visual review of A/B. Do not expand to G-103, G-106 or G-111 before selection and direction."
+}
