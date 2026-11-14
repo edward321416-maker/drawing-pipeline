@@ -1,0 +1,141 @@
+{
+  "generated_at_utc": "2026-11-14T11:14:32.815300+00:00",
+  "file_count": 27,
+  "files": [
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\background_plates\\G002_A_Urban_Daylight_background_plate.png",
+      "bytes": 2392004,
+      "sha256": "97fa830f59c025f09a283b56554b0b2e085be3b1c145662e38f1364f19c1877e"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\background_plates\\G002_B_Blue_Hour_background_plate.png",
+      "bytes": 2045106,
+      "sha256": "8ff64c93b957365292c53a99d32b190d7d7810cb116fe07b67f66e6aaedaed53"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\comparisons\\G002_A_Urban_Daylight_source_raw_corrected.png",
+      "bytes": 2992513,
+      "sha256": "4f54a43122da36d3a0f747002cb568707428bf43be1e30f27e0d1e5b330a9978"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\comparisons\\G002_B_Blue_Hour_source_raw_corrected.png",
+      "bytes": 2646150,
+      "sha256": "bad1c6da371064956025d368cb572cbeff5f57927ab4fbbd7392f9d2cb7704e6"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\composites\\G002_A_Urban_Daylight_geometry_corrected.png",
+      "bytes": 3791333,
+      "sha256": "b901f26d04c6094b299e864b892f1a593950e37f8175d9e9444918d6f4ba1cf9"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\composites\\G002_B_Blue_Hour_geometry_corrected.png",
+      "bytes": 3094767,
+      "sha256": "f635c2e26a28f020a8983129891a0b9d93f32ddc4e8412534b720fc417baf128"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\crops\\G002_A_Urban_Daylight_detail_review.png",
+      "bytes": 1483550,
+      "sha256": "9b2166a6478f13d61d43ea855b0e0a74a66f6451fe35c4badb08bd9f867ddf11"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\crops\\G002_B_Blue_Hour_detail_review.png",
+      "bytes": 1344958,
+      "sha256": "242f2825d791c87a179a50362fa8043aade96401db92a00b060f825e27ff10ac"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\prompts\\G002_T14N_imagegen_prompts.md",
+      "bytes": 2046,
+      "sha256": "7c93101bc5f4152a93a770695ed91c4f09069939837d811707baf8feaa9c677f"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\qa\\G002_geometry_review.md",
+      "bytes": 1007,
+      "sha256": "bfd588087906726c6ae875b0fdf5f4578f7936de953c112bfcb6237df036ba0f"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\qa\\G002_hero_manifest.json",
+      "bytes": 4855,
+      "sha256": "9f7e834bdce1a88071d540f67955bdf1ed67b16c00f3ce4c5dda56d018496781"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\qa\\G002_source_model_audit.json",
+      "bytes": 1573,
+      "sha256": "e3118837442310a218c1104fb052269ffd9ae4452456afa6c30d6791a02a0397"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\qa\\G002_tower_composite_mask.png",
+      "bytes": 5992,
+      "sha256": "25b381c8b3f01aa0982f1b07c41743f9d7c65cd2a0aa613243caa30f56002abb"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\qa\\G002_visual_craft_review.json",
+      "bytes": 1674,
+      "sha256": "ec07f340b9a4379ae85521b774c8b8846a8bd18317c7de6fc015f59cd4627c65"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\qa\\tests_report.json",
+      "bytes": 1024,
+      "sha256": "f8ea001d7c65f0457d2ebf5f0b5673a06bc9fa35f9de2c6e036f91281878448f"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\raw_ai\\G002_A_Urban_Daylight_raw.png",
+      "bytes": 2498195,
+      "sha256": "147d5cd2f09f604fd133904d20f3e6f77464895ca1463ae4f41c411d794e40ff"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\raw_ai\\G002_B_Blue_Hour_raw.png",
+      "bytes": 2228661,
+      "sha256": "e71f9d00b075786361d6df1e5cc40b99d432700c0924330b53c79dd2e5d2064d"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\README_KO.md",
+      "bytes": 1532,
+      "sha256": "96bc807090556795f9e875edfa362ce08793aec776fa3cfa31d6e49c201a9782"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\report\\C_T14N_G002_Hero_Render_AB_Review_A3.pdf",
+      "bytes": 46760611,
+      "sha256": "5300d97a20ee352b6b129c005279cbd89e8e56cadee8d61a3ea9c0298646bcc8"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\report\\qa_renders\\C_T14N_G002_Hero_Render_AB_Review_Contact_Sheet.png",
+      "bytes": 964349,
+      "sha256": "344ba892829c2c21015ed487179b833700e22fb1089d2efa840466f2c7ae8a76"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\report\\qa_renders\\C_T14N_G002_Hero_Render_AB_Review_PDF_QA.json",
+      "bytes": 2043,
+      "sha256": "97dbe85ed2f071110f20bc9a2c0fe6e83e75efbed3f7b3d9f992aa2f60f71c62"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\report\\qa_renders\\page_01_160dpi.png",
+      "bytes": 3561110,
+      "sha256": "3689ebb105fdaee551fe35db48967a21cde19006535a9ec61620aedd7e7a9d0d"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\report\\qa_renders\\page_02_160dpi.png",
+      "bytes": 3550670,
+      "sha256": "260e708d2de76fca007b19d34e6e4ce312124aaaae7dde951d9c4ed4941a5879"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\report\\qa_renders\\page_02_300dpi.png",
+      "bytes": 10483601,
+      "sha256": "fcbdb434621a35222e93dac3da8dab21f8d219a98dbe50a8b214326fa2a83cdc"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\report\\qa_renders\\page_03_160dpi.png",
+      "bytes": 3415235,
+      "sha256": "9356c7480caa5f41ad8dbb2a4218bc38bd9e3fe6e9de79fd5301e36a00b95042"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\report\\qa_renders\\page_03_300dpi.png",
+      "bytes": 9580527,
+      "sha256": "91660729ac0d98ddba4063f48fd14e47a45a95fadfdc1e4717bd16d791708d4a"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\report\\qa_renders\\page_04_160dpi.png",
+      "bytes": 1923533,
+      "sha256": "5a070fe173f811c3417de6fe621bbc9614fd6d7864306432113d6d6b56e212b0"
+    }
+  ]
+}

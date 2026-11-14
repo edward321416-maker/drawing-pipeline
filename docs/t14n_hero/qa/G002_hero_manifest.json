@@ -1,0 +1,68 @@
+{
+  "generated_at_utc": "2026-11-14T11:01:28.192226+00:00",
+  "method": "2.5D_SOURCE_AUTHORITY_WITH_AI_CONTEXT",
+  "limitations": [
+    "No verified full-tower Blender scene or matching camera was found.",
+    "AI raw studies changed architectural geometry and are rejected as book images.",
+    "Corrected studies retain the source building and protected edge topology while using AI only for context.",
+    "Human geometry and visual-craft approval remain mandatory."
+  ],
+  "source": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\assets\\t14k\\architectural_exterior_render.jpg",
+  "source_sha256": "9acd9ab3f5848f51ac1f2cc678ae988bf4f17197f238a5905eac9d8460e75a75",
+  "source_size": [
+    2400,
+    1350
+  ],
+  "silhouette": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14m_v43\\retouch\\G-002\\input\\G002_building_silhouette.png",
+  "silhouette_sha256": "ee1cab14ffb2883c2959b4309bdfb4f401ae4d301c72841590306d64f9cb19f5",
+  "pixel_lock": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14m_v43\\retouch\\G-002\\input\\G002_pixel_lock_mask.png",
+  "pixel_lock_sha256": "ab6e3c9dcd6dd158d5e766ada28d12c1109d5d2ebf810b9c99da4187202d9dd0",
+  "tower_composite_mask": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\qa\\G002_tower_composite_mask.png",
+  "tower_composite_mask_sha256": "25b381c8b3f01aa0982f1b07c41743f9d7c65cd2a0aa613243caa30f56002abb",
+  "variants": {
+    "A": {
+      "raw": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\raw_ai\\G002_A_Urban_Daylight_raw.png",
+      "raw_sha256": "147d5cd2f09f604fd133904d20f3e6f77464895ca1463ae4f41c411d794e40ff",
+      "background_plate": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\background_plates\\G002_A_Urban_Daylight_background_plate.png",
+      "background_plate_sha256": "97fa830f59c025f09a283b56554b0b2e085be3b1c145662e38f1364f19c1877e",
+      "corrected": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\composites\\G002_A_Urban_Daylight_geometry_corrected.png",
+      "corrected_sha256": "b901f26d04c6094b299e864b892f1a593950e37f8175d9e9444918d6f4ba1cf9",
+      "comparison": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\comparisons\\G002_A_Urban_Daylight_source_raw_corrected.png",
+      "detail_review": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\crops\\G002_A_Urban_Daylight_detail_review.png",
+      "metrics": {
+        "locked_pixel_count": 695098,
+        "protected_edge_correlation": 0.9733106838308162,
+        "protected_region_mean_channel_delta": 11.926785383739656,
+        "building_mean_channel_delta": 10.348447305677887,
+        "outside_mean_channel_delta": 39.34572859082251,
+        "changed_outside_fraction": 0.9871717486360693
+      },
+      "raw_geometry_review": "REJECTED_NOT_FOR_BOOK",
+      "corrected_geometry_review": "HUMAN_REVIEW_REQUIRED",
+      "visual_craft_review": "VISUAL_QUALITY_NOT_APPROVED",
+      "book_status": "NOT_APPROVED_FOR_BOOK"
+    },
+    "B": {
+      "raw": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\raw_ai\\G002_B_Blue_Hour_raw.png",
+      "raw_sha256": "e71f9d00b075786361d6df1e5cc40b99d432700c0924330b53c79dd2e5d2064d",
+      "background_plate": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\background_plates\\G002_B_Blue_Hour_background_plate.png",
+      "background_plate_sha256": "8ff64c93b957365292c53a99d32b190d7d7810cb116fe07b67f66e6aaedaed53",
+      "corrected": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\composites\\G002_B_Blue_Hour_geometry_corrected.png",
+      "corrected_sha256": "f635c2e26a28f020a8983129891a0b9d93f32ddc4e8412534b720fc417baf128",
+      "comparison": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\comparisons\\G002_B_Blue_Hour_source_raw_corrected.png",
+      "detail_review": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\crops\\G002_B_Blue_Hour_detail_review.png",
+      "metrics": {
+        "locked_pixel_count": 695098,
+        "protected_edge_correlation": 0.9769205769036843,
+        "protected_region_mean_channel_delta": 45.460682282690115,
+        "building_mean_channel_delta": 47.816137820913916,
+        "outside_mean_channel_delta": 104.34372906388448,
+        "changed_outside_fraction": 0.999988367328738
+      },
+      "raw_geometry_review": "REJECTED_NOT_FOR_BOOK",
+      "corrected_geometry_review": "HUMAN_REVIEW_REQUIRED",
+      "visual_craft_review": "VISUAL_QUALITY_NOT_APPROVED",
+      "book_status": "NOT_APPROVED_FOR_BOOK"
+    }
+  }
+}

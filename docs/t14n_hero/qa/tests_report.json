@@ -1,0 +1,29 @@
+{
+  "run_date": "2026-11-14",
+  "scoped": {
+    "command": "python -m pytest tests/test_t14n_hero_composite.py tests/test_t14l_retouch_gate.py -q",
+    "passed": 16,
+    "failed": 0,
+    "skipped": 0,
+    "status": "PASS"
+  },
+  "full_regression": {
+    "command": "python -m pytest -q",
+    "passed": 328,
+    "failed": 10,
+    "skipped": 18,
+    "duration_seconds": 358.78,
+    "status": "PARTIAL_ENVIRONMENT_FAILURE",
+    "failure_scope": "tests/test_t14i_qa.py",
+    "cause": "The isolated C-T14N worktree does not contain legacy generated output/C_T14I_run model cache, plan/detail registries, area reconciliation files, or Part I registry. All ten failures are FileNotFoundError from those absent generated artifacts; no C-T14N test failed."
+  },
+  "pdf_qa": {
+    "page_count": 4,
+    "page_size_mm": [420, 297],
+    "page_size_pass": true,
+    "all_pages_rendered_at_dpi": 160,
+    "scheme_pages_rendered_at_dpi": 300,
+    "status": "PASS_WITH_VISUAL_GATE_OPEN"
+  },
+  "visual_gate": "VISUAL_QUALITY_NOT_APPROVED"
+}

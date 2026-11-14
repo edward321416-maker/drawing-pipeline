@@ -1,0 +1,32 @@
+{
+  "audit_date": "2026-11-14",
+  "authoritative_image": {
+    "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\assets\\t14k\\architectural_exterior_render.jpg",
+    "sha256": "9acd9ab3f5848f51ac1f2cc678ae988bf4f17197f238a5905eac9d8460e75a75",
+    "pixels": [2400, 1350],
+    "camera_metadata": "No EXIF camera data; camera is authoritative only through the rendered image."
+  },
+  "full_tower_same_camera_scene": {
+    "found": false,
+    "status": "BLOCKED_MISSING_SOURCE"
+  },
+  "blend_files_found": [
+    {
+      "path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\00_엔진\\model\\1F_master.blend",
+      "sha256": "30da41d693a967f9628da843f5ec6b6be40f410eeaa209c643d1cb8fdb3f1f1e",
+      "scope": "1F only; not a full-tower same-camera source"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\1F_나노바나나_시맨틱_모델.blend",
+      "sha256": "5ddd1ebd526ec29de2ce6527c13d151c774c8fddbbdec7b6fe07476a7cd289fa",
+      "scope": "1F only; not a full-tower same-camera source"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\1F_시장홀_모델.blend",
+      "sha256": "005cf521997777f0f83f790899618a14bb228c05a9c67dbbb2aadcc41dd20998",
+      "scope": "1F only; not a full-tower same-camera source"
+    }
+  ],
+  "selected_route": "2.5D source-authority composite",
+  "limitation": "PBR rerender of the verified full tower and exact camera cannot be produced from the available sources."
+}

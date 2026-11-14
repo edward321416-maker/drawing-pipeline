@@ -1,0 +1,46 @@
+{
+  "pdf": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\report\\C_T14N_G002_Hero_Render_AB_Review_A3.pdf",
+  "pdf_sha256": "5300d97a20ee352b6b129c005279cbd89e8e56cadee8d61a3ea9c0298646bcc8",
+  "page_count": 4,
+  "expected_page_size_mm": [
+    420,
+    297
+  ],
+  "page_size_pass": true,
+  "pages": [
+    {
+      "page": 1,
+      "width_pt": 1190.5511474609375,
+      "height_pt": 841.8897705078125,
+      "text_chars": 451,
+      "render": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\report\\qa_renders\\page_01_160dpi.png",
+      "highres_300dpi": null
+    },
+    {
+      "page": 2,
+      "width_pt": 1190.5511474609375,
+      "height_pt": 841.8897705078125,
+      "text_chars": 332,
+      "render": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\report\\qa_renders\\page_02_160dpi.png",
+      "highres_300dpi": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\report\\qa_renders\\page_02_300dpi.png"
+    },
+    {
+      "page": 3,
+      "width_pt": 1190.5511474609375,
+      "height_pt": 841.8897705078125,
+      "text_chars": 327,
+      "render": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\report\\qa_renders\\page_03_160dpi.png",
+      "highres_300dpi": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\report\\qa_renders\\page_03_300dpi.png"
+    },
+    {
+      "page": 4,
+      "width_pt": 1190.5511474609375,
+      "height_pt": 841.8897705078125,
+      "text_chars": 456,
+      "render": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\report\\qa_renders\\page_04_160dpi.png",
+      "highres_300dpi": null
+    }
+  ],
+  "contact_sheet": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14N\\docs\\t14n_hero\\report\\qa_renders\\C_T14N_G002_Hero_Render_AB_Review_Contact_Sheet.png",
+  "visual_status": "VISUAL_QUALITY_NOT_APPROVED"
+}
