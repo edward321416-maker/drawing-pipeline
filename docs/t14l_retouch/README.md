@@ -28,9 +28,14 @@ For each: **export source → submit source + prompt to ChatGPT/Adobe → actual
 
 ## Actual implementation handoff
 
-The independently created package is available from the current ChatGPT conversation:
-`C_T14L_AI_Retouch_Accuracy_Pipeline_Package.zip`.
-It includes full protocol and precise ChatGPT/Adobe prompts, `docs/pilot_G002.json`, `docs/asset_register.json`, a fail-closed offline script `tools/t14l/retouch_gate.py`, 8 local passing tests, and a full new-file **unified patch**. The full package is not embedded or executed in this Draft PR; Codex should apply its patch within a separate T14L worktree, rerun tests and then proceed with the real image handoff.
+The **actual fail-closed gate and regression tests are now committed to this Draft PR**, with verified blob hashes:
+- `tools/t14l/retouch_gate.py` (Git blob `e6075fec6f3b8655b5b1f7a55e136bb9ce94d6ef`)
+- `tests/test_t14l_retouch_gate.py` (Git blob `e5152e6e6c105aee661078064df416cb81560cc0`)
+- `docs/t14l_retouch/HANDOFF_PROMPTS.md`, `CODEX_EXECUTION.md`, `G002_manifest.template.json`.
+
+Local **synthetic-only** regression run: `python -m unittest discover -s tests -p test_t14l_retouch_gate.py -v` => **11/11 pass**. These results check only the gate logic; no real G-002 AI image was produced and no print gate passed. A separate downloadable ChatGPT-session PDF/package is supplementary, not a substitute for an actual edited PNG.
+
+For actual local handoff, copy the template to `G002_manifest.json` in the same directory; fill the real retouch image SHA, export record, comparison and independent review, then run `python tools/t14l/retouch_gate.py docs/t14l_retouch/G002_manifest.json --report docs/t14l_retouch/G002_audit.json`. Use `--print-gate` only after the real PDF page has been inspected and actual print DPI is adequate.
 
 Working directory to be created/verified:
 `D:\Users\admin\Desktop\중간마감\drawing-pipeline-T14L`.
