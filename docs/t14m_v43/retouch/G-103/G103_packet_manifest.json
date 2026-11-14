@@ -1,0 +1,43 @@
+{
+  "asset_id": "G-103",
+  "kind": "diagram",
+  "status": "RETOUCHED_PENDING_QA",
+  "source": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\retouch\\G-103\\input\\G103_source.png",
+  "source_sha256": "45095eeb833c82343eeb2ff96acff6b4c1a9df181eb19d3b9fc8c240ada68798",
+  "source_pixels": [
+    4961,
+    3508
+  ],
+  "authoritative_svg": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\retouch\\G-103\\input\\G103_source.svg",
+  "authoritative_svg_sha256": "8f53abe0af27c8e65219aac5f9d33a52dac7f7b9905491bbfabe6c60a46c135b",
+  "authoritative_pdf": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\retouch\\G-103\\input\\G103_source.pdf",
+  "authoritative_pdf_sha256": "4dd48b8769cfe14833fafcd18f3168402bcbd62e08e4dbe4594e0fb84aeb5f02",
+  "pixel_lock_mask": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\retouch\\G-103\\input\\G103_pixel_lock_mask.png",
+  "vector_overlay": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\retouch\\G-103\\input\\G103_authoritative_vector_overlay.png",
+  "vector_overlay_sha256": "ce5c8bfdf27fdf10888bd77f5da1ca4a5eccf1f71680cb847d9b7bec7c035cce",
+  "prompt": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\retouch\\G-103\\input\\G103_chatgpt_edit_prompt.txt",
+  "retouched": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\retouch\\G-103\\candidate\\G103_ai_grade_structure_locked.png",
+  "retouched_sha256": "7a45424e29c42a39ed02436f558b0b30a5b2374d077b2d9e20411ea776ac8f28",
+  "ai_tool": "ChatGPT",
+  "retouch_export_record": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\retouch\\G-103\\raw\\G103_ai_export_record.json",
+  "before_after_comparison": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\retouch\\G-103\\qa\\G103_before_after.png",
+  "printed_width_mm": 396,
+  "pdf_page_render_inspected": false,
+  "independent_review": {
+    "decision": "PENDING",
+    "reviewer": null,
+    "reviewed_at": null,
+    "checklist": {
+      "source_geometry": false,
+      "sequence": false,
+      "legend": false,
+      "labels": false
+    }
+  },
+  "raw_ai_retouched": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\retouch\\G-103\\raw\\G103_chatgpt_raw.png",
+  "raw_ai_retouched_sha256": "dba983be7f943a66afb8dc0fa2568f5005b9e512835dd3c7d79078b7e9165b99",
+  "final_composite": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\retouch\\G-103\\candidate\\G103_final_vector_recomposite.png",
+  "final_composite_sha256": "cf4f3012948e4674f0c460bbc81a0d48c4963578c4d5c13ad310ec5bd57145b8",
+  "automated_accuracy_report": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\retouch\\G-103\\qa\\G103_automated_accuracy.json",
+  "locked_pixel_change_bbox": null
+}

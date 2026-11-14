@@ -1,0 +1,71 @@
+{
+  "project": "C-T14M",
+  "edition_target": "Candidate V4.3",
+  "candidate_v43_issued": false,
+  "blocking_reason": "Independent architectural accuracy review is incomplete for all four pilot assets.",
+  "git_base": {
+    "pr_19_head": "aa8217a34c18e45075df5fd344de2d5d8a4baac9",
+    "pr_20_head": "ddc83d13f71f7f982cd5447d5c735af7f461a1e0",
+    "working_branch": "codex/t14m-retouch-v43"
+  },
+  "protected_v42_sources": {
+    "part_i": {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14k_v42\\Graduation_Drawing_Book_Candidate_V4_2.pdf",
+      "sha256": "7c7f14a5ad6037fd557511d3994df18920db6d1029343d295d3d95519e1351d4",
+      "pages": 16,
+      "modified": false
+    },
+    "part_ii": {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14k_v42\\Technical_Drawing_Appendix_Candidate_V4_2.pdf",
+      "sha256": "32e9630b31903d3bdfb26f26b47cce1bb6d1dc4b1782871d74699c6a74902279",
+      "pages": 49,
+      "modified": false
+    },
+    "g002_source": {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\assets\\t14k\\architectural_exterior_render.jpg",
+      "sha256": "9acd9ab3f5848f51ac1f2cc678ae988bf4f17197f238a5905eac9d8460e75a75",
+      "pixels": [2400, 1350],
+      "modified": false
+    },
+    "model_world_npz": {
+      "expected_sha256": "992e2ec51ec17dc494ed2f99ddb11298671449dd6661d92df3b3536a0049537b",
+      "modified": false
+    }
+  },
+  "actual_ai_edit_pilots": [
+    {
+      "sheet": "G-002",
+      "gate": "REJECTED_NOT_FOR_BOOK",
+      "safe_candidate_sha256": "1eba6a0bcc500cea467030595fdd3de5bf9ef5c377c6eafef1c07eafc44feb39",
+      "spatial_ai_pixels_used_in_final": false,
+      "protected_pixel_changes": 0
+    },
+    {
+      "sheet": "G-103",
+      "gate": "REJECTED_NOT_FOR_BOOK",
+      "final_vector_recomposite_sha256": "cf4f3012948e4674f0c460bbc81a0d48c4963578c4d5c13ad310ec5bd57145b8",
+      "spatial_ai_pixels_used_in_final": false,
+      "protected_pixel_changes": 0
+    },
+    {
+      "sheet": "G-106",
+      "gate": "REJECTED_NOT_FOR_BOOK",
+      "final_vector_recomposite_sha256": "dac20c363d40a12ab3a30382779a8b5bfc2e413e53a0d5e0171d254ea725a1dd",
+      "spatial_ai_pixels_used_in_final": false,
+      "protected_pixel_changes": 0
+    },
+    {
+      "sheet": "G-111",
+      "gate": "REJECTED_NOT_FOR_BOOK",
+      "final_vector_recomposite_sha256": "100fc4a22be914b220e58ee36498ea5b8edb900896f8d1ce1c567e2c4a41056c",
+      "spatial_ai_pixels_used_in_final": false,
+      "protected_pixel_changes": 0
+    }
+  ],
+  "report": {
+    "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\C_T14M_AI_Retouch_Execution_Report.pdf",
+    "sha256": "fb35c0645dc737efe4a0f2a6a45b5c2a236aa072260d489bd023441208938a14",
+    "pages": 8,
+    "status": "EXECUTION_AND_BLOCKER_REPORT_NOT_CANDIDATE"
+  }
+}

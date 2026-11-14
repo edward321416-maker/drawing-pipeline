@@ -1,0 +1,30 @@
+{
+  "pdf": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\C_T14M_AI_Retouch_Execution_Report.pdf",
+  "sha256": "fb35c0645dc737efe4a0f2a6a45b5c2a236aa072260d489bd023441208938a14",
+  "pages": 8,
+  "a3_landscape_page_size_pass": true,
+  "minimum_searchable_text_pt": 7.4,
+  "minimum_6pt_pass": true,
+  "text_bounds_pass": true,
+  "fonts": [
+    {
+      "extension": "ttf",
+      "type": "Type0",
+      "base_font": "Malgun Gothic Bold"
+    },
+    {
+      "extension": "ttf",
+      "type": "Type0",
+      "base_font": "Malgun Gothic Regular"
+    }
+  ],
+  "pilot_300dpi_renders": [
+    "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\qa\\pilot_report_300dpi\\report_03_pilot_300dpi.png",
+    "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\qa\\pilot_report_300dpi\\report_04_pilot_300dpi.png",
+    "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\qa\\pilot_report_300dpi\\report_05_pilot_300dpi.png",
+    "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\qa\\pilot_report_300dpi\\report_06_pilot_300dpi.png"
+  ],
+  "pilot_300dpi_render_pass": true,
+  "visual_contact_sheet_inspected": true,
+  "candidate_v43_issued": false
+}

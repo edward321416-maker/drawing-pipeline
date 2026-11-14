@@ -1,0 +1,318 @@
+..................................................s..................... [ 20%]
+........................................................................ [ 41%]
+........................................................................ [ 61%]
+........................................ssssssssssssssF.FFFFFFFFsFss.... [ 82%]
+...............................................................          [100%]
+================================== FAILURES ===================================
+__________________________ test_model_cache_identity __________________________
+
+    def test_model_cache_identity():
+        from t14i import common
+        p = os.path.join(RUN, "model_cache", "model_world.npz")
+>       assert common.sha_file(p) == "992e2ec51ec17dc494ed2f99ddb11298671449dd6661d92df3b3536a0049537b"
+               ^^^^^^^^^^^^^^^^^^
+
+tests\test_t14i_qa.py:53:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+p = 'D:\\Users\\admin\\Desktop\\�߰�����\\drawing-pipeline-T14L\\output\\C_T14I_run\\model_cache\\model_world.npz'
+
+    def sha_file(p):
+        h = hashlib.sha256()
+>       with open(p, "rb") as f:
+             ^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Users\\admin\\Desktop\\�߰�����\\drawing-pipeline-T14L\\output\\C_T14I_run\\model_cache\\model_world.npz'
+
+tools\t14i\common.py:14: FileNotFoundError
+___________________ test_plan_registry_has_required_sheets ____________________
+
+    def test_plan_registry_has_required_sheets():
+        p = os.path.join(RUN, "v4", "plans", "plan_registry.json")
+>       reg = {r["sheet"]: r for r in json.load(open(p, encoding="utf-8"))}
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Users\\admin\\Desktop\\�߰�����\\drawing-pipeline-T14L\\output\\C_T14I_run\\v4\\plans\\plan_registry.json'
+
+tests\test_t14i_qa.py:65: FileNotFoundError
+_________ test_one_to_two_hundred_paper_is_physical_not_image_scaled __________
+
+    def test_one_to_two_hundred_paper_is_physical_not_image_scaled():
+>       reg = {r["sheet"]: r for r in json.load(open(os.path.join(RUN, "v4", "plans", "plan_registry.json"), encoding="utf-8"))}
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Users\\admin\\Desktop\\�߰�����\\drawing-pipeline-T14L\\output\\C_T14I_run\\v4\\plans\\plan_registry.json'
+
+tests\test_t14i_qa.py:73: FileNotFoundError
+__________ test_tile_registration_marks_are_shared_model_coordinates __________
+
+    def test_tile_registration_marks_are_shared_model_coordinates():
+>       reg = {r["sheet"]: r for r in json.load(open(os.path.join(RUN, "v4", "plans", "plan_registry.json"), encoding="utf-8"))}
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Users\\admin\\Desktop\\�߰�����\\drawing-pipeline-T14L\\output\\C_T14I_run\\v4\\plans\\plan_registry.json'
+
+tests\test_t14i_qa.py:85: FileNotFoundError
+_______ test_area_reconciliation_keeps_reported_values_and_definitions ________
+
+    def test_area_reconciliation_keeps_reported_values_and_definitions():
+>       d = json.load(open(os.path.join(RUN, "v4", "area", "area_reconciliation.json"), encoding="utf-8"))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Users\\admin\\Desktop\\�߰�����\\drawing-pipeline-T14L\\output\\C_T14I_run\\v4\\area\\area_reconciliation.json'
+
+tests\test_t14i_qa.py:93: FileNotFoundError
+______________ test_area_accounting_identity_residuals_are_tiny _______________
+
+    def test_area_accounting_identity_residuals_are_tiny():
+>       d = json.load(open(os.path.join(RUN, "v4", "area", "area_reconciliation.json"), encoding="utf-8"))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Users\\admin\\Desktop\\�߰�����\\drawing-pipeline-T14L\\output\\C_T14I_run\\v4\\area\\area_reconciliation.json'
+
+tests\test_t14i_qa.py:104: FileNotFoundError
+___________________ test_detail_registry_is_complete_and_v4 ___________________
+
+    def test_detail_registry_is_complete_and_v4():
+        p = os.path.join(RUN, "v4", "details", "detail_registry.json")
+>       reg = {r["sheet"]: r for r in json.load(open(p, encoding="utf-8"))}
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Users\\admin\\Desktop\\�߰�����\\drawing-pipeline-T14L\\output\\C_T14I_run\\v4\\details\\detail_registry.json'
+
+tests\test_t14i_qa.py:110: FileNotFoundError
+____________ test_d408_does_not_present_458_as_approved_dimension _____________
+
+    def test_d408_does_not_present_458_as_approved_dimension():
+        p = os.path.join(RUN, "v4", "details", "D-408_detail_v4.pdf")
+>       text = pymupdf.open(p)[0].get_text()
+               ^^^^^^^^^^^^^^^
+
+tests\test_t14i_qa.py:119:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Document('D:\Users\admin\Desktop\�߰�����\drawing-pipeline-T14L\output\C_T14I_run\v4\details\D-408_detail_v4.pdf')
+filename = 'D:\\Users\\admin\\Desktop\\�߰�����\\drawing-pipeline-T14L\\output\\C_T14I_run\\v4\\details\\D-408_detail_v4.pdf'
+stream = None, filetype = None, rect = None, width = 0, height = 0
+fontsize = 11
+
+    def __init__(self, filename=None, stream=None, filetype=None, rect=None, width=0, height=0, fontsize=11):
+        """Creates a document. Use 'open' as a synonym.
+
+        Notes:
+            Basic usages:
+            open() - new PDF document
+            open(filename) - string or pathlib.Path, must have supported
+                    file extension.
+            open(type, buffer) - type: valid extension, buffer: bytes object.
+            open(stream=buffer, filetype=type) - keyword version of previous.
+            open(filename, fileype=type) - filename with unrecognized extension.
+            rect, width, height, fontsize: layout reflowable document
+            on open (e.g. EPUB). Ignored if n/a.
+        """
+        # We temporarily set JM_mupdf_show_errors=0 while we are constructing,
+        # then restore its original value in a `finally:` block.
+        #
+        global JM_mupdf_show_errors
+        JM_mupdf_show_errors_old = JM_mupdf_show_errors
+        JM_mupdf_show_errors = 0
+
+        try:
+            self.is_closed    = False
+            self.is_encrypted = False
+            self.is_encrypted = False
+            self.metadata    = None
+            self.FontInfos   = []
+            self.Graftmaps   = {}
+            self.ShownPages  = {}
+            self.InsertedImages  = {}
+            self._page_refs  = weakref.WeakValueDictionary()
+            if isinstance(filename, mupdf.PdfDocument):
+                pdf_document = filename
+                self.this = pdf_document
+                self.this_is_pdf = True
+                return
+
+            w = width
+            h = height
+            r = JM_rect_from_py(rect)
+            if not mupdf.fz_is_infinite_rect(r):
+                w = r.x1 - r.x0
+                h = r.y1 - r.y0
+
+            self._name = filename
+            self.stream = stream
+
+            if stream is not None:
+                if filename is not None and filetype is None:
+                    # 2025-05-06: Use <filename> as the filetype. This is
+                    # reversing precedence - we used to use <filename> if both
+                    # were set.
+                    filetype = filename
+                if isinstance(stream, (bytes, memoryview)):
+                    pass
+                elif isinstance(stream, bytearray):
+                    stream = bytes(stream)
+                elif isinstance(stream, io.BytesIO):
+                    stream = stream.getvalue()
+                else:
+                    raise TypeError(f"bad stream: {type(stream)=}.")
+                self.stream = stream
+
+                assert isinstance(stream, (bytes, memoryview))
+                if len(stream) == 0:
+                    # MuPDF raise an exception for this but also generates
+                    # warnings, which is not very helpful for us. So instead we
+                    # raise a specific exception.
+                    raise EmptyFileError('Cannot open empty stream.')
+
+                stream2 = mupdf.fz_open_memory(mupdf.python_buffer_data(stream), len(stream))
+                try:
+                    doc = mupdf.fz_open_document_with_stream(filetype if filetype else '', stream2)
+                except Exception as e:
+                    if g_exceptions_verbose > 1:    exception_info()
+                    raise FileDataError('Failed to open stream') from e
+
+            elif filename:
+                assert not stream
+                if isinstance(filename, str):
+                    pass
+                elif hasattr(filename, "absolute"):
+                    filename = str(filename)
+                elif hasattr(filename, "name"):
+                    filename = filename.name
+                else:
+                    raise TypeError(f"bad filename: {type(filename)=} {filename=}.")
+                self._name = filename
+
+                # Generate our own specific exceptions. This avoids MuPDF
+                # generating warnings etc.
+                if not os.path.exists(filename):
+>                   raise FileNotFoundError(f"no such file: '{filename}'")
+E                   pymupdf.FileNotFoundError: no such file: 'D:\Users\admin\Desktop\�߰�����\drawing-pipeline-T14L\output\C_T14I_run\v4\details\D-408_detail_v4.pdf'
+
+C:\Users\admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pymupdf\__init__.py:2992: FileNotFoundError
+_____________ test_d404_separates_model_levels_from_concept_core ______________
+
+    def test_d404_separates_model_levels_from_concept_core():
+        p = os.path.join(RUN, "v4", "details", "D-404_detail_v4.pdf")
+>       text = pymupdf.open(p)[0].get_text()
+               ^^^^^^^^^^^^^^^
+
+tests\test_t14i_qa.py:126:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Document('D:\Users\admin\Desktop\�߰�����\drawing-pipeline-T14L\output\C_T14I_run\v4\details\D-404_detail_v4.pdf')
+filename = 'D:\\Users\\admin\\Desktop\\�߰�����\\drawing-pipeline-T14L\\output\\C_T14I_run\\v4\\details\\D-404_detail_v4.pdf'
+stream = None, filetype = None, rect = None, width = 0, height = 0
+fontsize = 11
+
+    def __init__(self, filename=None, stream=None, filetype=None, rect=None, width=0, height=0, fontsize=11):
+        """Creates a document. Use 'open' as a synonym.
+
+        Notes:
+            Basic usages:
+            open() - new PDF document
+            open(filename) - string or pathlib.Path, must have supported
+                    file extension.
+            open(type, buffer) - type: valid extension, buffer: bytes object.
+            open(stream=buffer, filetype=type) - keyword version of previous.
+            open(filename, fileype=type) - filename with unrecognized extension.
+            rect, width, height, fontsize: layout reflowable document
+            on open (e.g. EPUB). Ignored if n/a.
+        """
+        # We temporarily set JM_mupdf_show_errors=0 while we are constructing,
+        # then restore its original value in a `finally:` block.
+        #
+        global JM_mupdf_show_errors
+        JM_mupdf_show_errors_old = JM_mupdf_show_errors
+        JM_mupdf_show_errors = 0
+
+        try:
+            self.is_closed    = False
+            self.is_encrypted = False
+            self.is_encrypted = False
+            self.metadata    = None
+            self.FontInfos   = []
+            self.Graftmaps   = {}
+            self.ShownPages  = {}
+            self.InsertedImages  = {}
+            self._page_refs  = weakref.WeakValueDictionary()
+            if isinstance(filename, mupdf.PdfDocument):
+                pdf_document = filename
+                self.this = pdf_document
+                self.this_is_pdf = True
+                return
+
+            w = width
+            h = height
+            r = JM_rect_from_py(rect)
+            if not mupdf.fz_is_infinite_rect(r):
+                w = r.x1 - r.x0
+                h = r.y1 - r.y0
+
+            self._name = filename
+            self.stream = stream
+
+            if stream is not None:
+                if filename is not None and filetype is None:
+                    # 2025-05-06: Use <filename> as the filetype. This is
+                    # reversing precedence - we used to use <filename> if both
+                    # were set.
+                    filetype = filename
+                if isinstance(stream, (bytes, memoryview)):
+                    pass
+                elif isinstance(stream, bytearray):
+                    stream = bytes(stream)
+                elif isinstance(stream, io.BytesIO):
+                    stream = stream.getvalue()
+                else:
+                    raise TypeError(f"bad stream: {type(stream)=}.")
+                self.stream = stream
+
+                assert isinstance(stream, (bytes, memoryview))
+                if len(stream) == 0:
+                    # MuPDF raise an exception for this but also generates
+                    # warnings, which is not very helpful for us. So instead we
+                    # raise a specific exception.
+                    raise EmptyFileError('Cannot open empty stream.')
+
+                stream2 = mupdf.fz_open_memory(mupdf.python_buffer_data(stream), len(stream))
+                try:
+                    doc = mupdf.fz_open_document_with_stream(filetype if filetype else '', stream2)
+                except Exception as e:
+                    if g_exceptions_verbose > 1:    exception_info()
+                    raise FileDataError('Failed to open stream') from e
+
+            elif filename:
+                assert not stream
+                if isinstance(filename, str):
+                    pass
+                elif hasattr(filename, "absolute"):
+                    filename = str(filename)
+                elif hasattr(filename, "name"):
+                    filename = filename.name
+                else:
+                    raise TypeError(f"bad filename: {type(filename)=} {filename=}.")
+                self._name = filename
+
+                # Generate our own specific exceptions. This avoids MuPDF
+                # generating warnings etc.
+                if not os.path.exists(filename):
+>                   raise FileNotFoundError(f"no such file: '{filename}'")
+E                   pymupdf.FileNotFoundError: no such file: 'D:\Users\admin\Desktop\�߰�����\drawing-pipeline-T14L\output\C_T14I_run\v4\details\D-404_detail_v4.pdf'
+
+C:\Users\admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pymupdf\__init__.py:2992: FileNotFoundError
+_______________ test_part_i_covers_required_editorial_sequence ________________
+
+    def test_part_i_covers_required_editorial_sequence():
+>       reg = json.load(open(os.path.join(RUN, "v4", "partI", "partI_front_registry.json"), encoding="utf-8"))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Users\\admin\\Desktop\\�߰�����\\drawing-pipeline-T14L\\output\\C_T14I_run\\v4\\partI\\partI_front_registry.json'
+
+tests\test_t14i_qa.py:139: FileNotFoundError
+=========================== short test summary info ===========================
+FAILED tests/test_t14i_qa.py::test_model_cache_identity - FileNotFoundError: ...
+FAILED tests/test_t14i_qa.py::test_plan_registry_has_required_sheets - FileNo...
+FAILED tests/test_t14i_qa.py::test_one_to_two_hundred_paper_is_physical_not_image_scaled
+FAILED tests/test_t14i_qa.py::test_tile_registration_marks_are_shared_model_coordinates
+FAILED tests/test_t14i_qa.py::test_area_reconciliation_keeps_reported_values_and_definitions
+FAILED tests/test_t14i_qa.py::test_area_accounting_identity_residuals_are_tiny
+FAILED tests/test_t14i_qa.py::test_detail_registry_is_complete_and_v4 - FileN...
+FAILED tests/test_t14i_qa.py::test_d408_does_not_present_458_as_approved_dimension
+FAILED tests/test_t14i_qa.py::test_d404_separates_model_levels_from_concept_core
+FAILED tests/test_t14i_qa.py::test_part_i_covers_required_editorial_sequence
+10 failed, 323 passed, 18 skipped in 372.80s (0:06:12)

@@ -1,0 +1,27 @@
+{
+  "asset_id": "G-002",
+  "status": "REJECTED_NOT_FOR_BOOK",
+  "errors": [
+    "independent review incomplete",
+    "review checklist not approved: camera",
+    "review checklist not approved: silhouette",
+    "review checklist not approved: floor_count",
+    "review checklist not approved: cores",
+    "review checklist not approved: tubes",
+    "review checklist not approved: voids",
+    "review checklist not approved: facade",
+    "review checklist not approved: roof"
+  ],
+  "evidence": {
+    "source_actual_sha256": "9acd9ab3f5848f51ac1f2cc678ae988bf4f17197f238a5905eac9d8460e75a75",
+    "retouched_actual_sha256": "1eba6a0bcc500cea467030595fdd3de5bf9ef5c377c6eafef1c07eafc44feb39",
+    "source_pixels": [
+      2400,
+      1350
+    ],
+    "retouched_pixels": [
+      2400,
+      1350
+    ]
+  }
+}

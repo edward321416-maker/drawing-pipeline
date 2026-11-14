@@ -1,0 +1,8 @@
+Use case: precise-object-edit
+Asset type: technical floor-plan background retouch
+Input image: the actual G-106 source page. Its CAD/SVG geometry is immutable.
+Primary request: adjust only non-technical background tone and agreed decorative color hierarchy.
+Constraints: preserve walls, columns, grids, circulation, doors, stairs, tubes, dimensions, scale bars, annotation positions, text, crop and page ratio. Output a PNG background candidate only.
+Avoid: never redraw or invent architectural geometry, technical linework, labels, dimensions, text, furniture, doors or egress. If preservation is impossible, leave the area unchanged.
+
+ no redesign; no extra or missing floor; no moved core, tube, slab, void, garden, facade bay, roof opening or base; no invented glazing, stair, door, railing, balcony, roof edge, mass, vegetation affecting access, material specification, label, dimension or scale bar. If accurate preservation is impossible, leave that area unchanged.

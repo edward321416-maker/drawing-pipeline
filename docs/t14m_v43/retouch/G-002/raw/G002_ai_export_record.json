@@ -1,0 +1,14 @@
+{
+  "tool": "ChatGPT built-in image edit",
+  "downloaded_at": "2026-11-14T06:26:19.615933+00:00",
+  "raw_file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\retouch\\G-002\\raw\\G002_chatgpt_raw_attempt_02.png",
+  "raw_sha256": "bf288f32fbce604674d22c21923c680ef68b1b9bc694f33a6d150ff7c5b8a8c7",
+  "raw_format": "PNG",
+  "raw_pixels": [
+    1672,
+    941
+  ],
+  "normalization": "center-fit for low-frequency color-field extraction only",
+  "spatial_ai_pixels_used_in_final": false,
+  "final_method": "AI-derived low-frequency color field applied to source; locked structural pixels restored exactly"
+}

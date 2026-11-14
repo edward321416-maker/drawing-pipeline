@@ -1,0 +1,27 @@
+{
+  "asset_id": "G-106",
+  "status": "REJECTED_NOT_FOR_BOOK",
+  "errors": [
+    "independent review incomplete",
+    "review checklist not approved: source_geometry",
+    "review checklist not approved: grid",
+    "review checklist not approved: dimensions",
+    "review checklist not approved: labels",
+    "review checklist not approved: scale",
+    "review checklist not approved: vector_overlay"
+  ],
+  "evidence": {
+    "source_actual_sha256": "17f67e37120f92c6b16c6fa55edae62fb50ac1272e68b039c9ab4d4028e732e5",
+    "retouched_actual_sha256": "3f1eee034c503ee6df82532a4ae300f42a3f312c73dd013683d2fe9f6bdfcf59",
+    "source_pixels": [
+      4961,
+      3508
+    ],
+    "retouched_pixels": [
+      4961,
+      3508
+    ],
+    "vector_overlay_actual_sha256": "22922f2aa615e3925e1ef306addcfc75ed88abbdd7f93f656f2976fc5ef990e9",
+    "final_composite_actual_sha256": "dac20c363d40a12ab3a30382779a8b5bfc2e413e53a0d5e0171d254ea725a1dd"
+  }
+}

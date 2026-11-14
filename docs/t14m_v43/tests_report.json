@@ -1,0 +1,27 @@
+{
+  "project": "C-T14M",
+  "generated_at": "2026-11-14T15:50:00+09:00",
+  "full_suite": {
+    "total": 351,
+    "passed": 323,
+    "failed": 10,
+    "skipped": 18,
+    "duration_seconds": 372.80,
+    "result": "PARTIAL_ENVIRONMENT_BLOCKED",
+    "failure_classification": "All 10 failures are FileNotFoundError failures for the absent generated output/C_T14I_run fixture tree in the isolated T14L worktree.",
+    "log": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\pytest_full.log",
+    "junit": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\pytest_full.xml"
+  },
+  "retouch_scoped_suite": {
+    "total": 14,
+    "passed": 14,
+    "failed": 0,
+    "skipped": 0,
+    "result": "PASS",
+    "tests": [
+      "tests/test_t14l_retouch_gate.py",
+      "tests/test_t14m_retouch_assets.py"
+    ]
+  },
+  "completion_claim": "Passing synthetic tests does not constitute architectural or design approval."
+}

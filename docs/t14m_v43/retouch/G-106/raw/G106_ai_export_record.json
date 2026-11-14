@@ -1,0 +1,13 @@
+{
+  "tool": "ChatGPT built-in image edit",
+  "downloaded_at": "2026-11-14T06:33:47.209604+00:00",
+  "raw_file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14L\\docs\\t14m_v43\\retouch\\G-106\\raw\\G106_chatgpt_raw.png",
+  "raw_sha256": "2aefb6a19dfec63fdcf3ed9a4f30764bec01582df65c33fbc953e3c5fe10689a",
+  "raw_format": "PNG",
+  "raw_pixels": [
+    1491,
+    1055
+  ],
+  "spatial_ai_pixels_used_in_final": false,
+  "method": "AI-derived low-frequency tone field; authoritative edge pixels restored; vector overlay recomposited"
+}
