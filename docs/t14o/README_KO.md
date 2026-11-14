@@ -32,6 +32,10 @@ python tools/t14o/cache_validation.py --cache-dir $Cache --expected-npz-sha256 9
 if ($LASTEXITCODE -ne 0) { throw 'SOURCE_CACHE_QA_FAILED' }
 
 # 새로운 빈 출력 디렉터리만 허용한다. 기존 결과 덮어쓰기를 금지한다.
+# 먼저 소형 프리뷰로 면 방향·메시 누락·카메라·그림자를 검사한다.
+blender -b --factory-startup -P tools/t14o/blender_pbr_scene.py -- --cache-dir $Cache --out-dir (Join-Path $Run 'G002_A_daylight_PREVIEW') --variant daylight --width 1600 --height 900 --samples 16
+if ($LASTEXITCODE -ne 0) { throw 'PREVIEW_PBR_FAILED' }
+# 프리뷰의 실물 시각 검수가 통과한 후에만 최종 해상도를 렌더한다.
 blender -b --factory-startup -P tools/t14o/blender_pbr_scene.py -- --cache-dir $Cache --out-dir (Join-Path $Run 'G002_A_daylight') --variant daylight --width 4800 --height 2700 --samples 64
 if ($LASTEXITCODE -ne 0) { throw 'DAYLIGHT_PBR_FAILED' }
 blender -b --factory-startup -P tools/t14o/blender_pbr_scene.py -- --cache-dir $Cache --out-dir (Join-Path $Run 'G002_B_bluehour') --variant bluehour --width 4800 --height 2700 --samples 64
@@ -44,7 +48,7 @@ if ($LASTEXITCODE -ne 0) { throw 'BLUEHOUR_PBR_FAILED' }
 
 1. NumPy 캐시의 SHA256, 실제 삼각형 인덱스·객체별 인덱스 범위·중복 구간, 객체 층 태그·전체 높이를 검사한다.
 2. 모든 실제 캐시 삼각형을 Blender mesh 객체로 생성한다. 임의로 슬래브나 코어, 튜브를 새로 만들지 않는다.
-3. 소스 종류별로 **시각화용 가정** 재질을 지정한다. 슬래브·코어·기둥 = 거친 콘크리트, 유리 파사드·튜브 = 투과성 유리, 샤프트 = 브러시드 메탈. 이것은 실제 건축자재의 확정이 아니다.
+3. 소스 종류별로 **시각화용 가정** 재질을 지정한다. 슬래브·코어·기둥 = 거친 콘크리트, 유리 튜브 = 투과성 유리, 파사드 종류만 있는 면 = 불투명 중립 재질, 샤프트 = 브러시드 메탈. 파사드가 실제 유리인지 판정되지 않았으므로 전체를 유리로 렌더링하지 않는다. 이것은 실제 건축자재의 확정이 아니다.
 4. 광선 추적 Cycles 렌더링, 자연광과 면광원, 유리의 반사·투과 및 물리 기반 셰이딩을 적용한다.
 5. 2점 원근 카메라를 **새로 제안**한다. 분실된 G-002 원본 카메라와 일치한다고 주장하지 않는다.
 6. 1F 슬래브 높이를 확인한 경우에만 기본 시각화용 지면을 만든다. 실제 측량 지형·신당동 배경은 사용 가능 근거가 없으면 생성하지 않는다.
