@@ -35,7 +35,7 @@ SUGGESTED_CLASS = {
     "column": "concrete_light", "stair": "concrete_light", "ramp": "concrete_light",
     "roof": "concrete_light", "exterior_wall": "concrete_light",
     "partition_wall": "concrete_light", "tube_wall": "glass_neutral",
-    "facade": "glass_neutral", "shaft": "metal_soft", "door": "metal_soft",
+    "facade": "facade_neutral", "shaft": "metal_soft", "door": "metal_soft",
     "context_building": "context_gray", "site": "ground", "road": "pavement",
     "sidewalk": "pavement", "exterior_space": "ground",
 }
@@ -71,6 +71,8 @@ def materials() -> dict[str, bpy.types.Material]:
     return {
         "concrete_light": build_material("LOOKDEV_PROPOSED_concrete_rough", (0.59, 0.60, 0.58, 1), .64),
         "glass_neutral": build_material("LOOKDEV_PROPOSED_glazing", (.21, .32, .36, 1), .12, .03, .72),
+        # A generic 'facade' label does not prove that the full surface is glass.
+        "facade_neutral": build_material("LOOKDEV_PROPOSED_opaque_facade_pending_material_approval", (.48, .52, .50, 1), .44, .05),
         "metal_soft": build_material("LOOKDEV_PROPOSED_brushed_metal", (.43, .46, .47, 1), .26, .73),
         "context_gray": build_material("CONCEPT_CONTEXT_unsurveyed", (.48, .50, .49, 1), .76),
         "ground": build_material("CONCEPT_STAGE_ground", (.38, .39, .37, 1), .86),
