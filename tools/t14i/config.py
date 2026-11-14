@@ -22,9 +22,10 @@ CLASS_COLOR = {MODEL_VERIFIED: "#0a6b3d", CONCEPT_PROPOSED: "#b5600a", UNRESOLVE
 # Part / sheet-number conventions
 PART_I = "PART I  Graduation Design Book"
 PART_II = "PART II  Technical Drawing Appendix"
-OUT_BOOK_I = "Graduation_Drawing_Book_Candidate_V4.pdf"
+_V41 = EDITION.upper().replace("_", ".") == "V4.1"
+OUT_BOOK_I = "Graduation_Drawing_Book_Candidate_V4_1.pdf" if _V41 else "Graduation_Drawing_Book_Candidate_V4.pdf"
 OUT_BOOK_II = "Technical_Drawing_Appendix_Candidate_V4.pdf"
-OUT_CONTACT_I = "Graduation_Drawing_Book_Contact_Sheet.png"
+OUT_CONTACT_I = "Graduation_Drawing_Book_Contact_Sheet_V4_1.png" if _V41 else "Graduation_Drawing_Book_Contact_Sheet.png"
 OUT_CONTACT_II = "Technical_Appendix_Contact_Sheet.png"
 
 

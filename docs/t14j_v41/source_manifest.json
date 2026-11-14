@@ -1,0 +1,125 @@
+{
+  "edition": "V4.1",
+  "project": "C-T14J",
+  "part_i_pdf": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\Graduation_Drawing_Book_Candidate_V4_1.pdf",
+  "part_i_sha256": "d095a2edba3fb7e4ad2ffd88c342128f1f30af15baed70add3a32d7f7d640a04",
+  "technical_appendix": {
+    "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14i_v4\\Technical_Drawing_Appendix_Candidate_V4.pdf",
+    "sha256": "5ba6b3495717a39a9f3554a9dcb94058e968869d61c75dab6adf3aaa066cb15d",
+    "status": "UNCHANGED_NOT_REBUILT"
+  },
+  "protected_sources": {
+    "A-003": {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\output\\C_T14J_run\\plans\\A-003_site_plan_1F_1to400.pdf",
+      "sha256": "db66f8c26d525c5b24664543da50447404cb5d829e70da6ec6e673fb5bfa1a81",
+      "modified": false
+    },
+    "model_world.npz": {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\output\\C_T14J_run\\model_cache\\model_world.npz",
+      "sha256": "992e2ec51ec17dc494ed2f99ddb11298671449dd6661d92df3b3536a0049537b",
+      "modified": false
+    }
+  },
+  "products": [
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\Graduation_Drawing_Book_Candidate_V4_1.pdf",
+      "sha256": "d095a2edba3fb7e4ad2ffd88c342128f1f30af15baed70add3a32d7f7d640a04",
+      "bytes": 37548884
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\Graduation_Drawing_Book_Contact_Sheet.png",
+      "sha256": "d77c6823078098c79b53829d6fd234f12c8b3b216bd8e67111840be13903504c",
+      "bytes": 1721758
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\sheets\\G-002_project_information.pdf",
+      "sha256": "0fd23456f942e7348280d229674021643c08bbece6c6b6033087d7ccb19c435a",
+      "bytes": 1928712
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\sheets\\G-002_project_information.svg",
+      "sha256": "a2996571b7036a871e76e375fcf1fce11a9bdc77ba0dcb7cc83add1602bb7f06",
+      "bytes": 1891442
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\sheets\\G-002_project_information.png",
+      "sha256": "d486b9f69957ef8a9a01cabbed5666b6a8404d6b7c42cdf77e06ea60c744549b",
+      "bytes": 1351044
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\sheets\\G-106_representative_plans.pdf",
+      "sha256": "09511851ba4be64474afae1c2d018f38431184d3808c2f4a554c041ac527728d",
+      "bytes": 2953763
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\sheets\\G-106_representative_plans.svg",
+      "sha256": "a2cccb234ef6711078c40690c20460378c5cb3f776c8400fcbaa5dbdc376c420",
+      "bytes": 2334013
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\sheets\\G-106_representative_plans.png",
+      "sha256": "c83f0cced1d1074465c22561531977a186add198798a09f90fd5c308be8b2233",
+      "bytes": 2160176
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\sheets\\G-108_elevations.pdf",
+      "sha256": "a7d6b3ab1ac95b553395474ca685eb49450f1e9730e2b44090da083c6384abbc",
+      "bytes": 1462370
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\sheets\\G-108_elevations.svg",
+      "sha256": "33102129b710e0e7585ef7bc1d968cf4423358ef906dac8f571c53937de6aecf",
+      "bytes": 1604539
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\sheets\\G-108_elevations.png",
+      "sha256": "31f355d28c35ac94e70a1a6d579221920e1bcd4c0ca59f556a7df65bec7429e9",
+      "bytes": 1026836
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\sheets\\G-109_sections.pdf",
+      "sha256": "cc2937a3c965cbddb65d87acc0b97611a6e318aca28354f9efc34a7590283bce",
+      "bytes": 573476
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\sheets\\G-109_sections.svg",
+      "sha256": "9ea8d5d6e4d136dcf175627036416121a7ccfd6f1c3bbf1fcb9b220754677a48",
+      "bytes": 1192114
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\sheets\\G-109_sections.png",
+      "sha256": "9d76a1b8fd3e54486598231879699569fd46e72207f3abc27342b6bfe28d21fa",
+      "bytes": 678521
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\sheets\\G-111_details.pdf",
+      "sha256": "c9361ec2eed3ba28cad55b4697e5167baa59eb02bd7f352b99363803ca715b95",
+      "bytes": 1451658
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\sheets\\G-111_details.svg",
+      "sha256": "65046d6d2efa582a22adfb025fb529db8ec139688b1aef100a1a351acc72d7f3",
+      "bytes": 1226192
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\sheets\\G-111_details.png",
+      "sha256": "8d870eb1ae86c182731d00efebbe30c35848a21dfdf35b003ccf6a2ec330564f",
+      "bytes": 1041345
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\sheets\\G-112_floor_experience.pdf",
+      "sha256": "29cfb95b575c0f1f0f0cd02df7e225f05ffdd418169ea95f3eea911b50a16eaf",
+      "bytes": 2103079
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\sheets\\G-112_floor_experience.svg",
+      "sha256": "944f85d9c77ee21de9ea46e6c9a55ee196dc252c7246dbff65ed3b7dd86f1445",
+      "bytes": 665296
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\docs\\t14j_v41\\sheets\\G-112_floor_experience.png",
+      "sha256": "dc3d4053a694d8a02db579a7df53db88ece0e984c94c64d8e91b1110f8572b7b",
+      "bytes": 3099300
+    }
+  ]
+}

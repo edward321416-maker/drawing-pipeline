@@ -1,0 +1,208 @@
+{
+  "result": "PASS",
+  "pdf": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\output\\C_T14J_run\\v41\\book\\Graduation_Drawing_Book_Candidate_V4_1.pdf",
+  "pdf_sha256": "d095a2edba3fb7e4ad2ffd88c342128f1f30af15baed70add3a32d7f7d640a04",
+  "pages": 15,
+  "paper_mm": [
+    420.0,
+    297.0
+  ],
+  "full_render_dpi": 180,
+  "full_render_pass": true,
+  "key_render_dpi": 300,
+  "key_render_dimensions": {
+    "G-002": [
+      4961,
+      3508
+    ],
+    "G-106": [
+      4961,
+      3508
+    ],
+    "G-108": [
+      4961,
+      3508
+    ],
+    "G-109": [
+      4961,
+      3508
+    ],
+    "G-111": [
+      4961,
+      3508
+    ],
+    "G-112": [
+      4961,
+      3508
+    ]
+  },
+  "key_render_pass": true,
+  "g002": {
+    "panel_geometry_pass": true,
+    "panel_errors": [],
+    "long_contents_removed": true,
+    "title_present": true,
+    "layout_manifest": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\output\\C_T14J_run\\v4\\appendix_docs\\G-002_layout.json"
+  },
+  "pages_qa": [
+    {
+      "page": 1,
+      "sheet": "G-001",
+      "render_px": [
+        2977,
+        2105
+      ],
+      "min_searchable_font_pt": 6.001,
+      "font_under_6pt": []
+    },
+    {
+      "page": 2,
+      "sheet": "G-002",
+      "render_px": [
+        2977,
+        2105
+      ],
+      "min_searchable_font_pt": 6.001,
+      "font_under_6pt": []
+    },
+    {
+      "page": 3,
+      "sheet": "G-101",
+      "render_px": [
+        2977,
+        2105
+      ],
+      "min_searchable_font_pt": 6.001,
+      "font_under_6pt": []
+    },
+    {
+      "page": 4,
+      "sheet": "G-102",
+      "render_px": [
+        2977,
+        2105
+      ],
+      "min_searchable_font_pt": 6.001,
+      "font_under_6pt": []
+    },
+    {
+      "page": 5,
+      "sheet": "G-103",
+      "render_px": [
+        2977,
+        2105
+      ],
+      "min_searchable_font_pt": 6.001,
+      "font_under_6pt": []
+    },
+    {
+      "page": 6,
+      "sheet": "G-104",
+      "render_px": [
+        2977,
+        2105
+      ],
+      "min_searchable_font_pt": 6.001,
+      "font_under_6pt": []
+    },
+    {
+      "page": 7,
+      "sheet": "G-105",
+      "render_px": [
+        2977,
+        2105
+      ],
+      "min_searchable_font_pt": 6.001,
+      "font_under_6pt": []
+    },
+    {
+      "page": 8,
+      "sheet": "G-106",
+      "render_px": [
+        2977,
+        2105
+      ],
+      "min_searchable_font_pt": 6.001,
+      "font_under_6pt": []
+    },
+    {
+      "page": 9,
+      "sheet": "G-107",
+      "render_px": [
+        2977,
+        2105
+      ],
+      "min_searchable_font_pt": 6.001,
+      "font_under_6pt": []
+    },
+    {
+      "page": 10,
+      "sheet": "G-108",
+      "render_px": [
+        2977,
+        2105
+      ],
+      "min_searchable_font_pt": 6.001,
+      "font_under_6pt": []
+    },
+    {
+      "page": 11,
+      "sheet": "G-109",
+      "render_px": [
+        2977,
+        2105
+      ],
+      "min_searchable_font_pt": 6.001,
+      "font_under_6pt": []
+    },
+    {
+      "page": 12,
+      "sheet": "G-110",
+      "render_px": [
+        2977,
+        2105
+      ],
+      "min_searchable_font_pt": 6.001,
+      "font_under_6pt": []
+    },
+    {
+      "page": 13,
+      "sheet": "G-111",
+      "render_px": [
+        2977,
+        2105
+      ],
+      "min_searchable_font_pt": 6.001,
+      "font_under_6pt": []
+    },
+    {
+      "page": 14,
+      "sheet": "G-112",
+      "render_px": [
+        2977,
+        2105
+      ],
+      "min_searchable_font_pt": 6.001,
+      "font_under_6pt": []
+    },
+    {
+      "page": 15,
+      "sheet": "G-113",
+      "render_px": [
+        2977,
+        2105
+      ],
+      "min_searchable_font_pt": 6.001,
+      "font_under_6pt": []
+    }
+  ],
+  "comparisons": [
+    "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\output\\C_T14J_run\\v41\\qa\\before_after\\G-002_before_after.png",
+    "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\output\\C_T14J_run\\v41\\qa\\before_after\\G-106_before_after.png",
+    "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\output\\C_T14J_run\\v41\\qa\\before_after\\G-108_before_after.png",
+    "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\output\\C_T14J_run\\v41\\qa\\before_after\\G-109_before_after.png",
+    "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\output\\C_T14J_run\\v41\\qa\\before_after\\G-111_before_after.png",
+    "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\output\\C_T14J_run\\v41\\qa\\before_after\\G-112_before_after.png"
+  ],
+  "contact_sheet": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14J\\output\\C_T14J_run\\v41\\qa\\Graduation_Drawing_Book_Contact_Sheet.png"
+}
