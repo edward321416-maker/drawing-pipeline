@@ -1,8 +1,8 @@
-"""PART I front pages (Graduation Design Book): G-001 cover, G-002 contents, G-101..G-106 analysis / concept pages.
+"""PART I front pages: G-001 text cover, G-002 exterior render, G-101..G-113 design pages.
 
     python -X utf8 tools/t14i/partI_front.py --run <RUN> [--only G-001,G-101] [--views-only] [--procs 6]
     build(run, out_dir=None) -> [registry rows]      writes <out_dir>/<SID>_<name>.{svg,pdf,png}, partI_front_registry.json, partI_front_facts.json
-    build_contents(run, out_base, entries) -> row    G-002 (called again by the assembler once page numbers are known)
+    build_contents(run, out_base, entries) -> row    G-003 project information (called by the assembler)
 
 Truth classes (tools/t14i/config.py): geometry = MODEL VERIFIED (model cache / slices / A-003), arithmetic = DERIVED ("계산값"),
 narrative, route, furniture, colours of the story = CONCEPT PROPOSED.  Nothing on these pages is a construction fact that the model does not hold.
@@ -622,19 +622,45 @@ def _finish(ctx, sh, name, title, classes=(MV, CP)):
                       extra={"classes": list(classes), "part": "I", "kind": "presentation"})
 
 
+def _finish_clean(ctx, sh, name, title, status_class, extra=None):
+    """Save an editorial front page without the technical title block."""
+    data = {"classes": [], "part": "I", "kind": "editorial_front", "technical_title_block": False}
+    if extra:
+        data.update(extra)
+    return ctx.finish(sh, ctx.path(sh.sid, name), title, status_class=status_class, extra=data)
+
+
 def build_cover(ctx):
-    sh = _sheet("G-001", "졸업 설계 도면집 표지", STATUS_MIX,
-                "다층 상업시설의 수직 보행·튜브·프로그램 적층 — 후보 %s" % cfg.EDITION)
-    hero = _view(ctx, "hero")
-    put_image(sh, "hero", hero, 18, 22, 402, 226, quality=91, max_px=1900)
-    sh.path([[(18, 18), (244, 18), (244, 72), (18, 72)]], fill="#ffffff", stroke="none", w=0, opacity=0.92)
-    sh.text(25, 34, "VERTICAL MARKET", 25, "bold", INK)
-    sh.text(25, 48, "도시 안에서 층을 걷는 다층 상업시설", 13, "bold", "#333")
-    sh.text(25, 59, "GRADUATION DESIGN BOOK · CANDIDATE %s" % cfg.EDITION, 8, "normal", GREY)
-    cm.badge(sh, 25, 65, MV, w=42, h=5.5, pt=6)
-    sh.text(72, 69.4, "3D = model_world.npz 캐시 실제 메시", 6.5, "normal", "#333")
-    sh.text(20, 240, "원본 GLB 없음 · 캐시 기반 검증 가능 범위만 표현 · 제안 서술은 CONCEPT PROPOSED", 7, "normal", "#444")
-    return _finish(ctx, sh, "cover", "졸업 설계 도면집 표지")
+    sh = _sheet("G-001", "졸업 설계 도면집 표지", STATUS_DOC)
+    sh.text(30, 105, "VERTICAL MARKET", 34, "bold", "#111")
+    sh.text(31, 129, "도시 안에서 층을 걷는 다층 상업시설", 15, "normal", "#222")
+    sh.text(31, 145, "A MULTI-LEVEL COMMERCIAL LANDSCAPE OF VERTICAL WALKING", 7.5, "normal", "#777")
+    sh.text(31, 246, "GRADUATION DESIGN BOOK", 7, "bold", "#333")
+    sh.text(31, 256, "CANDIDATE %s · NOT FROZEN" % cfg.EDITION, 6.5, "normal", "#777")
+    return _finish_clean(ctx, sh, "cover", "졸업 설계 도면집 표지", "DOCUMENT",
+                         {"cover_mode": "TEXT_ONLY", "image_count": 0, "status_badges": 0})
+
+
+def _hero_render_path():
+    env = os.environ.get("T14_HERO_RENDER")
+    candidates = [env, os.path.join(t14i.ROOT, "assets", "t14k", "architectural_exterior_render.jpg")]
+    for path in candidates:
+        if path and os.path.exists(path):
+            return os.path.abspath(path)
+    raise FileNotFoundError("검증된 외관 렌더가 없다. T14_HERO_RENDER 또는 assets/t14k/architectural_exterior_render.jpg 필요")
+
+
+def build_hero(ctx):
+    source = _hero_render_path()
+    sh = _sheet("G-002", "건축 외관 렌더", STATUS_DOC)
+    hero = _img(source)
+    put_image(sh, "architectural_render", hero, 12, 12, 408, 234.75, quality=96, max_px=3200)
+    sh.text(12, 248, "ARCHITECTURAL RENDER / 기존 Blender 설계 외관 렌더", 8, "bold", "#222")
+    sh.text(12, 258, "층수·코어·중층 보이드·지붕 개구를 모델 캐시와 대조함. 재료·수목·주변 매스는 렌더 표현이며 모델 검증값이 아님.", 6.5, "normal", "#555")
+    sh.text(408, 248, "SOURCE RENDER · MODEL-CONSISTENCY REVIEWED", 6.2, "bold", "#666", "end")
+    return _finish_clean(ctx, sh, "architectural_render", "건축 외관 렌더", "SOURCE RENDER · MODEL-CONSISTENCY REVIEWED",
+                         {"render_source": source, "render_source_sha256": cm.sha_file(source),
+                          "render_dimensions_px": list(hero.size), "materials_verified": False})
 
 
 def build_overview(ctx):
@@ -845,7 +871,7 @@ def build_summary(ctx):
 
 
 def build_contents(run, out_base, entries):
-    sh = _sheet("G-002", "PROJECT INFORMATION / 건축개요 및 배치계획", STATUS_DOC,
+    sh = _sheet("G-003", "PROJECT INFORMATION / 건축개요 및 배치계획", STATUS_DOC,
                 "전체 도면 목록은 기술 부록 A-001 참조")
     panels = {
         "context": (12.0, 12.0, 206.0, 126.0),
@@ -903,7 +929,7 @@ def build_contents(run, out_base, entries):
     sh.text(220, 238, "프로그램 볼륨 수평 투영 · 전용면적/법정 연면적 아님 · A-903", 6.2, "bold", "#a35a00")
     sh.title_block()
     sh.save2(out_base)
-    layout = {"sheet": "G-002", "paper_mm": [420.0, 297.0], "panels_mm": panels,
+    layout = {"sheet": "G-003", "paper_mm": [420.0, 297.0], "panels_mm": panels,
               "panel_size_mm": [194.0, 114.0], "gap_mm": [8.0, 8.0],
               "source_a003": site_pdf, "source_a003_sha256": cm.sha_file(site_pdf),
               "area_source": os.path.join(run, "v4", "area", "typical_floor_coverage_v2.json"),
@@ -916,7 +942,7 @@ def build_contents(run, out_base, entries):
 
 def build(run, out_dir=None):
     ctx = Ctx(run, out_dir)
-    builders = [build_cover, build_overview, build_context, build_mass, build_vertical, build_program,
+    builders = [build_cover, build_hero, build_overview, build_context, build_mass, build_vertical, build_program,
                 build_plans, build_scenario, build_elevations, build_sections, build_axon,
                 build_details, build_floor_experience, build_summary]
     for fn in builders:

@@ -1,0 +1,33 @@
+{
+  "source": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14K\\assets\\t14k\\architectural_exterior_render.jpg",
+  "source_sha256": "9acd9ab3f5848f51ac1f2cc678ae988bf4f17197f238a5905eac9d8460e75a75",
+  "dimensions_px": [
+    2400,
+    1350
+  ],
+  "provenance": "D:\\Users\\admin\\Desktop\\2학기 논문\\발표자료\\01_과정\\기획안_01_발표_구성안.html",
+  "provenance_description": "기존 발표 기획에 Blender 설계 건물 조감도 렌더로 기록",
+  "model_cache_sha256": "992e2ec51ec17dc494ed2f99ddb11298671449dd6661d92df3b3536a0049537b",
+  "model_levels": 17,
+  "model_floor_range": [
+    "10F",
+    "B2"
+  ],
+  "model_building_extent_m": [
+    54.001,
+    54.002
+  ],
+  "visual_correspondence": [
+    "다층 타워 비례와 반복 층",
+    "네 모서리 코어",
+    "중층 오픈 보이드",
+    "원형 수직 요소와 지붕 개구"
+  ],
+  "limitations": [
+    "재료·색상은 모델 캐시 검증값이 아님",
+    "수목·주변 매스는 렌더 연출",
+    "치수·면적 근거로 사용하지 않음",
+    "원본 전층 GLB는 없음"
+  ],
+  "decision": "ACCEPTED_AS_EXISTING_DESIGN_RENDER_NOT_GEOMETRY_SOURCE"
+}

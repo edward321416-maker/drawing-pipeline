@@ -1,0 +1,489 @@
+{
+  "result": "PASS",
+  "part_i": {
+    "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14K\\output\\C_T14K_run\\v42\\book\\Graduation_Drawing_Book_Candidate_V4_2.pdf",
+    "sha256": "7c7f14a5ad6037fd557511d3994df18920db6d1029343d295d3d95519e1351d4",
+    "pages": 16
+  },
+  "part_ii": {
+    "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14K\\output\\C_T14K_run\\v42\\book\\Technical_Drawing_Appendix_Candidate_V4_2.pdf",
+    "sha256": "32e9630b31903d3bdfb26f26b47cce1bb6d1dc4b1782871d74699c6a74902279",
+    "pages": 49
+  },
+  "cover_text_only_pass": true,
+  "hero_render_pass": true,
+  "g003": {
+    "panel_geometry_pass": true,
+    "errors": []
+  },
+  "a001_current_cross_index_pass": true,
+  "technical_sources": {
+    "compared_sheets": 47,
+    "unchanged_sheets": 47,
+    "changed_sheets": [],
+    "pass": true
+  },
+  "full_part_i_180dpi_pass": true,
+  "first3_300dpi_pass": true,
+  "searchable_text_6pt_pass": true,
+  "part_i_fonts": [
+    {
+      "page": 1,
+      "min_pt": 6.5,
+      "under_6pt": []
+    },
+    {
+      "page": 2,
+      "min_pt": 6.199,
+      "under_6pt": []
+    },
+    {
+      "page": 3,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 4,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 5,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 6,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 7,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 8,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 9,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 10,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 11,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 12,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 13,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 14,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 15,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 16,
+      "min_pt": 6.001,
+      "under_6pt": []
+    }
+  ],
+  "part_ii_fonts": [
+    {
+      "page": 1,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 2,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 3,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 4,
+      "min_pt": 6.0,
+      "under_6pt": []
+    },
+    {
+      "page": 5,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 6,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 7,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 8,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 9,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 10,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 11,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 12,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 13,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 14,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 15,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 16,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 17,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 18,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 19,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 20,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 21,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 22,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 23,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 24,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 25,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 26,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 27,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 28,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 29,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 30,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 31,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 32,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 33,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 34,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 35,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 36,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 37,
+      "min_pt": 6.0,
+      "under_6pt": []
+    },
+    {
+      "page": 38,
+      "min_pt": 6.0,
+      "under_6pt": []
+    },
+    {
+      "page": 39,
+      "min_pt": 6.0,
+      "under_6pt": []
+    },
+    {
+      "page": 40,
+      "min_pt": 6.0,
+      "under_6pt": []
+    },
+    {
+      "page": 41,
+      "min_pt": 6.0,
+      "under_6pt": []
+    },
+    {
+      "page": 42,
+      "min_pt": 6.0,
+      "under_6pt": []
+    },
+    {
+      "page": 43,
+      "min_pt": 6.0,
+      "under_6pt": []
+    },
+    {
+      "page": 44,
+      "min_pt": 6.0,
+      "under_6pt": []
+    },
+    {
+      "page": 45,
+      "min_pt": 6.0,
+      "under_6pt": []
+    },
+    {
+      "page": 46,
+      "min_pt": 6.0,
+      "under_6pt": []
+    },
+    {
+      "page": 47,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 48,
+      "min_pt": 6.001,
+      "under_6pt": []
+    },
+    {
+      "page": 49,
+      "min_pt": 6.001,
+      "under_6pt": []
+    }
+  ],
+  "page_renders": [
+    {
+      "page": 1,
+      "sheet": "G-001",
+      "render_px": [
+        2977,
+        2105
+      ]
+    },
+    {
+      "page": 2,
+      "sheet": "G-002",
+      "render_px": [
+        2977,
+        2105
+      ]
+    },
+    {
+      "page": 3,
+      "sheet": "G-003",
+      "render_px": [
+        2977,
+        2105
+      ]
+    },
+    {
+      "page": 4,
+      "sheet": "G-101",
+      "render_px": [
+        2977,
+        2105
+      ]
+    },
+    {
+      "page": 5,
+      "sheet": "G-102",
+      "render_px": [
+        2977,
+        2105
+      ]
+    },
+    {
+      "page": 6,
+      "sheet": "G-103",
+      "render_px": [
+        2977,
+        2105
+      ]
+    },
+    {
+      "page": 7,
+      "sheet": "G-104",
+      "render_px": [
+        2977,
+        2105
+      ]
+    },
+    {
+      "page": 8,
+      "sheet": "G-105",
+      "render_px": [
+        2977,
+        2105
+      ]
+    },
+    {
+      "page": 9,
+      "sheet": "G-106",
+      "render_px": [
+        2977,
+        2105
+      ]
+    },
+    {
+      "page": 10,
+      "sheet": "G-107",
+      "render_px": [
+        2977,
+        2105
+      ]
+    },
+    {
+      "page": 11,
+      "sheet": "G-108",
+      "render_px": [
+        2977,
+        2105
+      ]
+    },
+    {
+      "page": 12,
+      "sheet": "G-109",
+      "render_px": [
+        2977,
+        2105
+      ]
+    },
+    {
+      "page": 13,
+      "sheet": "G-110",
+      "render_px": [
+        2977,
+        2105
+      ]
+    },
+    {
+      "page": 14,
+      "sheet": "G-111",
+      "render_px": [
+        2977,
+        2105
+      ]
+    },
+    {
+      "page": 15,
+      "sheet": "G-112",
+      "render_px": [
+        2977,
+        2105
+      ]
+    },
+    {
+      "page": 16,
+      "sheet": "G-113",
+      "render_px": [
+        2977,
+        2105
+      ]
+    }
+  ],
+  "contact_sheet": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14K\\output\\C_T14K_run\\v42\\qa\\Graduation_Drawing_Book_Contact_Sheet.png"
+}
