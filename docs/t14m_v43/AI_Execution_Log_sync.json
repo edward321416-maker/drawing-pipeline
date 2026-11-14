@@ -4,6 +4,7 @@
   "sheet": "AI_Execution_Log",
   "range": "A704:D704",
   "verified_after_write": true,
+  "draft_pr": "https://github.com/edward321416-maker/drawing-pipeline/pull/21",
   "values": {
     "Timestamp": "2026-11-14T15:51:47+09:00",
     "Acquired Skill": "imagegen; pdf; google-sheets",
