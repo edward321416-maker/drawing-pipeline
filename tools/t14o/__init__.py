@@ -1,0 +1,1 @@
+"""C-T14O: authoritative mesh-cache validation and real Blender PBR rendering."""

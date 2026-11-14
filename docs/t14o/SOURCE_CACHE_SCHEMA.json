@@ -1,0 +1,24 @@
+{
+  "schema_version": "C-T14O-1.0",
+  "source": "docs/t14i_v4/source_manifest.json",
+  "model_world.npz": {
+    "expected_sha256": "992e2ec51ec17dc494ed2f99ddb11298671449dd6661d92df3b3536a0049537b",
+    "required_arrays": {
+      "V": "numeric[N,3] world-coordinate vertices (meters)",
+      "F": "integer[M,3] global vertex-index triangles"
+    }
+  },
+  "model_objects.json": {
+    "expected_sha256": "722dd7359e2f13534ff4ae91088ba8649e8a8f96b27c60f000ddb09c01106488",
+    "required_fields_per_object": ["name", "kind", "floor", "v0", "nv", "f0", "nf"],
+    "semantics": {
+      "v0_nv": "per-object half-open vertex interval in V",
+      "f0_nf": "per-object half-open face interval in F",
+      "face_indices": "global indices; subtract v0 only after boundary validation"
+    }
+  },
+  "status": "SCHEMA_VERIFIED_FROM_SOURCE_CODE__REAL_INPUT_BYTES_NOT_PRESENT_IN_CHATGPT_RUNTIME",
+  "material_authority": "PROVISIONAL_LOOKDEV_ONLY",
+  "camera_authority": "NEW_TWO_POINT_PERSPECTIVE__NOT_ORIGINAL_G002_CAMERA",
+  "release_gate": "REAL_CACHE_HASH_AND_GEOMETRY_QA__ACTUAL_BLENDER_RENDER__INDEPENDENT_VISUAL_AND_ARCHITECTURAL_REVIEW"
+}
