@@ -1,0 +1,32 @@
+{
+  "schema_version": "C-T14N-visual-review-v1",
+  "asset_id": "G-002",
+  "source_commit": "f8a031046494e382dea3c9cd74adbbed05afe6b7",
+  "reviewed_at": null,
+  "reviewer": null,
+  "geometry_review": "PENDING",
+  "visual_decision": "PENDING",
+  "candidate_file": null,
+  "candidate_sha256": null,
+  "source_sha256": "9acd9ab3f5848f51ac1f2cc678ae988bf4f17197f238a5905eac9d8460e75a75",
+  "full_size_before_after": null,
+  "crops": [
+    "base",
+    "four_corner_cores",
+    "tubes",
+    "slab_rhythm",
+    "middle_garden_and_voids",
+    "roof"
+  ],
+  "visual_scores_1_to_5": {
+    "architectural_narrative": null,
+    "composition_and_focal_point": null,
+    "lighting_and_shadows": null,
+    "material_and_depth": null,
+    "human_scale_and_public_life": null,
+    "urban_context_and_atmosphere": null,
+    "print_and_detail_quality": null
+  },
+  "score_rule": "Each item >=4, plus independent ACCEPT and geometry approval; scores entered only after real visual inspection",
+  "status": "VISUAL_QUALITY_NOT_APPROVED"
+}
