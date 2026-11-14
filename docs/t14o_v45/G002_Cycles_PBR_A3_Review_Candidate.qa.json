@@ -1,0 +1,47 @@
+{
+  "pdf": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\G002_Cycles_PBR_A3_Review_Candidate.pdf",
+  "sha256": "41fccfd3c35a3f14d2d8ff0a125d8c394d23fe7eafec72a129ad4702dfa2a300",
+  "bytes": 34972872,
+  "page_count": 7,
+  "page_sizes_mm": [
+    [
+      420.0,
+      297.0
+    ],
+    [
+      420.0,
+      297.0
+    ],
+    [
+      420.0,
+      297.0
+    ],
+    [
+      420.0,
+      297.0
+    ],
+    [
+      420.0,
+      297.0
+    ],
+    [
+      420.0,
+      297.0
+    ],
+    [
+      420.0,
+      297.0
+    ]
+  ],
+  "all_pages_a3_landscape": true,
+  "rendered_page_pngs": [
+    "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\review_pdf_pages_144dpi\\page_01.png",
+    "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\review_pdf_pages_144dpi\\page_02.png",
+    "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\review_pdf_pages_144dpi\\page_03.png",
+    "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\review_pdf_pages_144dpi\\page_04.png",
+    "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\review_pdf_pages_144dpi\\page_05.png",
+    "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\review_pdf_pages_144dpi\\page_06.png",
+    "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\review_pdf_pages_144dpi\\page_07.png"
+  ],
+  "contact_sheet": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\G002_A3_Review_Contact_Sheet.png"
+}
