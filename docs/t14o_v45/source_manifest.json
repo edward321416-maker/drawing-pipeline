@@ -1,0 +1,101 @@
+{
+  "schema": "C-T14O-DELIVERY-MANIFEST-1.0",
+  "created_local": "2026-11-15T02:02:23+09:00",
+  "status": "CANDIDATE_PIXELS_VERIFIED__USER_ARCHITECTURAL_APPROVAL_PENDING",
+  "repository": "edward321416-maker/drawing-pipeline",
+  "branch": "codex/t14o-cycles-pbr-v45",
+  "base_commit": "ccd356ea56ca0bc1252ddf78b1e49626cc469198",
+  "implementation_commit": "ccd356ea56ca0bc1252ddf78b1e49626cc469198",
+  "source_geometry": {
+    "model_world_npz_sha256": "992e2ec51ec17dc494ed2f99ddb11298671449dd6661d92df3b3536a0049537b",
+    "model_objects_json_sha256": "722dd7359e2f13534ff4ae91088ba8649e8a8f96b27c60f000ddb09c01106488",
+    "vertices": 119486,
+    "triangles": 237093,
+    "objects": 391
+  },
+  "render_masters": {
+    "urban_daylight_png": {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\output\\C_T14O_run\\final_v2\\G002_A_Urban_Daylight\\G002_daylight_CYCLES_PBR_SOURCE_MESH.png",
+      "bytes": 51524721,
+      "sha256": "adf0b98509d8548c19bee59c3637fe7a0c7947eed0de98b98c90caaf8a4a859f"
+    },
+    "blue_hour_png": {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\output\\C_T14O_run\\final_v2\\G002_B_Blue_Hour\\G002_bluehour_CYCLES_PBR_SOURCE_MESH.png",
+      "bytes": 44019260,
+      "sha256": "fd347614119b4afe545850c3d3ed17c015ae756d106d2c8ca4a0329231c2cd42"
+    },
+    "urban_daylight_blend": {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\output\\C_T14O_run\\final_v2\\G002_A_Urban_Daylight\\G002_daylight_SOURCE_MESH_LOOKDEV.blend",
+      "bytes": 11900400,
+      "sha256": "945f4a6ce0a2af0c066ce13bce01873a15740483e6e1ba37f2737f4171dc7370"
+    },
+    "blue_hour_blend": {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\output\\C_T14O_run\\final_v2\\G002_B_Blue_Hour\\G002_bluehour_SOURCE_MESH_LOOKDEV.blend",
+      "bytes": 11904640,
+      "sha256": "3c89b07667b1227aba490bd7f663911db6f04df186b66de03a5cad62f2fdd945"
+    },
+    "urban_daylight_audit": {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\output\\C_T14O_run\\final_v2\\G002_A_Urban_Daylight\\pbr_render_audit.json",
+      "bytes": 4159,
+      "sha256": "6c1019f3df22d4ec930aa69158f047c3fe395bcf3393994b3c5ee38e4378e6fb"
+    },
+    "blue_hour_audit": {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\output\\C_T14O_run\\final_v2\\G002_B_Blue_Hour\\pbr_render_audit.json",
+      "bytes": 4149,
+      "sha256": "33a786ff791b84c8006115d1f55b3a7cec67483b68c02479e6870c1effe3e3e3"
+    }
+  },
+  "review": {
+    "a3_pdf": {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\G002_Cycles_PBR_A3_Review_Candidate.pdf",
+      "bytes": 34972872,
+      "sha256": "41fccfd3c35a3f14d2d8ff0a125d8c394d23fe7eafec72a129ad4702dfa2a300"
+    },
+    "render_quality_qa": {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\output\\C_T14O_run\\qa_v2\\render_quality_qa.json",
+      "bytes": 7198,
+      "sha256": "d315c88f9efa36810d4194b8fb80ab8591f66ec6d2627f80263faf9397c5c93e"
+    },
+    "all_A_B_geometry_camera_equivalence_checks_pass": true,
+    "print_check": {
+      "target_sheet_width_mm": 396,
+      "target_minimum_dpi": 300,
+      "daylight_pass": true,
+      "bluehour_pass": true
+    },
+    "tracked_preview_assets": [
+      {
+        "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\render_previews\\G002_A_Urban_Daylight_preview_1600.png",
+        "bytes": 784032,
+        "sha256": "3edbbffe1135677b19ad2c111201c7f7658c3c7f694c7805ff33b70ee91734c7"
+      },
+      {
+        "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\render_previews\\G002_B_Blue_Hour_preview_1600.png",
+        "bytes": 477961,
+        "sha256": "4d06a635f6fd1ba9e5f5369b7532199b0392b74a4c6081f9c9616a20e9bb00ac"
+      },
+      {
+        "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\render_previews\\G002_source_vs_cycles_AB.png",
+        "bytes": 2047065,
+        "sha256": "37abee84f07df8b7c7aaa9fcf03b5a1c14b5c61d33e0d3605089d0bc9997674d"
+      },
+      {
+        "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\render_previews\\G002_before_after_daylight.png",
+        "bytes": 1545234,
+        "sha256": "4d9bf923dc36cc1b04bea892a5861c07a847b42d3c4fc92e3d4a57e4c094bcb3"
+      },
+      {
+        "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\render_previews\\G002_before_after_bluehour.png",
+        "bytes": 1239363,
+        "sha256": "1a5861b91d32982daf688152858d29fb6007542383f03948580239c838a8c95c"
+      }
+    ]
+  },
+  "authority_limits": [
+    "Original GLB, source materials, original camera, and surveyed city context are unavailable.",
+    "Materials and all added lights are look-development proposals, not construction specifications.",
+    "No people were introduced because no verified reusable people asset exists in the source cache.",
+    "User architectural approval is required before book placement or FREEZE."
+  ],
+  "scope_boundary": "G-002 only; no downstream drawing expansion before user approval."
+}

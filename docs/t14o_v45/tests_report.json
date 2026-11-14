@@ -1,0 +1,52 @@
+{
+  "status": "PASS_WITH_DOCUMENTED_SKIPS",
+  "final_full_suite": {
+    "artifact": {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\pytest_results_with_verified_t14i_run.xml",
+      "bytes": 48390,
+      "sha256": "6c03f81b6206ee9f09c296937a7235af94813d94c29fcb7d8835413d6f06d507"
+    },
+    "tests": 370,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 10,
+    "time_seconds": 399.024
+  },
+  "c_t14o_contract": {
+    "artifact": {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\pytest_t14o_results.xml",
+      "bytes": 2147,
+      "sha256": "cb0af796b67fadb729764ea84f8591ec14ee8d5d0897796c9024d72f779e468c"
+    },
+    "tests": 14,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "time_seconds": 0.259
+  },
+  "t14i_artifact_rerun": {
+    "artifact": {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\pytest_t14i_rerun.xml",
+      "bytes": 3192,
+      "sha256": "96a7f8117b94138929e685b72e9d32cec6b4935234ae0ca261a0f6a825ffe33d"
+    },
+    "tests": 19,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "time_seconds": 45.685
+  },
+  "initial_isolated_worktree_diagnostic": {
+    "artifact": {
+      "path": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14O\\docs\\t14o_v45\\pytest_results.xml",
+      "bytes": 66695,
+      "sha256": "719aa9b15c8e928ffc20e1066ee8831eec8be6a25403aaa397184df7f66fda72"
+    },
+    "tests": 370,
+    "failures": 10,
+    "errors": 0,
+    "skipped": 18,
+    "time_seconds": 354.355
+  },
+  "interpretation": "The initial isolated-worktree run exposed ten missing-default-output failures. The final full suite was rerun read-only against the verified C_T14K_run artifacts."
+}
