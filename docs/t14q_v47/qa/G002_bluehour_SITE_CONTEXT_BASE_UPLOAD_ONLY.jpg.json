@@ -1,0 +1,15 @@
+{
+ "variant": "bluehour",
+ "source_png": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\blender_base_v2\\G002_B_Blue_Hour\\G002_bluehour_SITE_CONTEXT_BASE.png",
+ "source_sha256": "1ed642b14417e81ebf0d3979643f9b90b4f18748518e8661e8b6c38b7705f553",
+ "source_bytes": 66832880,
+ "upload_jpg": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\uploads_q\\G002_bluehour_SITE_CONTEXT_BASE_UPLOAD_ONLY.jpg",
+ "upload_sha256": "a257e75d8612aa31a5e8f4e7ee4fb0248877776951d3006af3fa3938f6808a1c",
+ "upload_bytes": 3198928,
+ "upload_px": [
+  4800,
+  2700
+ ],
+ "jpeg_quality": 95,
+ "use": "ChatGPT Chrome attachment ONLY (not a print master)"
+}

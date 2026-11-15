@@ -1,0 +1,114 @@
+[
+  {
+    "id": "R01",
+    "manifest_licence": "CC BY-SA 4.0",
+    "live_licence": "CC BY-SA 4.0",
+    "licence_match": true,
+    "manifest_author": "Tristan Surtel",
+    "live_author": "Tristan Surtel"
+  },
+  {
+    "id": "R02",
+    "manifest_licence": "CC0",
+    "live_licence": "CC0",
+    "licence_match": true,
+    "manifest_author": "lumoplank",
+    "live_author": "lumoplank"
+  },
+  {
+    "id": "R03",
+    "manifest_licence": "CC0",
+    "live_licence": "CC0",
+    "licence_match": true,
+    "manifest_author": "lumoplank",
+    "live_author": "lumoplank"
+  },
+  {
+    "id": "R04",
+    "manifest_licence": "CC BY 2.0",
+    "live_licence": "CC BY 2.0",
+    "licence_match": true,
+    "manifest_author": "Eugene Lim",
+    "live_author": "Eugene Lim"
+  },
+  {
+    "id": "R05",
+    "manifest_licence": "CC BY-SA 4.0",
+    "live_licence": "CC BY-SA 4.0",
+    "licence_match": true,
+    "manifest_author": "Dquai",
+    "live_author": "Dquai"
+  },
+  {
+    "id": "R06",
+    "manifest_licence": "CC BY-SA 4.0",
+    "live_licence": "CC BY-SA 4.0",
+    "licence_match": true,
+    "manifest_author": "Dquai",
+    "live_author": "Dquai"
+  },
+  {
+    "id": "R07",
+    "manifest_licence": "CC BY-SA 4.0",
+    "live_licence": "CC BY-SA 4.0",
+    "licence_match": true,
+    "manifest_author": "Dquai",
+    "live_author": "Dquai"
+  },
+  {
+    "id": "R08",
+    "manifest_licence": "CC BY-SA 4.0",
+    "live_licence": "CC BY-SA 4.0",
+    "licence_match": true,
+    "manifest_author": "Dquai",
+    "live_author": "Dquai"
+  },
+  {
+    "id": "R09",
+    "manifest_licence": "CC BY-SA 3.0",
+    "live_licence": "CC BY-SA 3.0",
+    "licence_match": true,
+    "manifest_author": "Hst0129",
+    "live_author": "Hst0129"
+  },
+  {
+    "id": "R10",
+    "manifest_licence": "CC BY-SA 4.0",
+    "live_licence": "CC BY-SA 4.0",
+    "licence_match": true,
+    "manifest_author": "hyolee2",
+    "live_author": "hyolee2"
+  },
+  {
+    "id": "R11",
+    "manifest_licence": "CC BY-SA 4.0",
+    "live_licence": "CC BY-SA 4.0",
+    "licence_match": true,
+    "manifest_author": "Stck w This photo was taken with Sharp Aquos R3",
+    "live_author": "Stck w\n\n This photo was taken with Sharp"
+  },
+  {
+    "id": "R12",
+    "manifest_licence": "CC BY-SA 4.0",
+    "live_licence": "CC BY-SA 4.0",
+    "licence_match": true,
+    "manifest_author": "LERK",
+    "live_author": "LERK"
+  },
+  {
+    "id": "R13",
+    "manifest_licence": "CC BY-SA 3.0",
+    "live_licence": "CC BY-SA 3.0",
+    "licence_match": true,
+    "manifest_author": "hyolee2",
+    "live_author": "hyolee2"
+  },
+  {
+    "id": "R14",
+    "manifest_licence": "CC BY-SA 2.0",
+    "live_licence": "CC BY-SA 2.0",
+    "licence_match": true,
+    "manifest_author": "Republic of Korea from Seoul, Republic of Korea",
+    "live_author": "Republic of  Korea from Seoul, Republic "
+  }
+]

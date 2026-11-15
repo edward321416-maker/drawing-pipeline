@@ -1,0 +1,78 @@
+{
+ "daylight": {
+  "png": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\final_q\\G002_A_Urban_Daylight_PHOTOSHOP_FINAL.png",
+  "png_mode": "RGB",
+  "png_size": [
+   4800,
+   2700
+  ],
+  "png_dpi": [
+   299.9994,
+   299.9994
+  ],
+  "psd": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\final_q\\G002_A_Urban_Daylight_PHOTOSHOP_FINAL.psd",
+  "psd_header": {
+   "signature": "8BPS",
+   "version": 1,
+   "channels": 9,
+   "height": 2700,
+   "width": 4800,
+   "bits": 8,
+   "color_mode": 3
+  },
+  "mean_rgb": [
+   127.4,
+   123.2,
+   120.4
+  ],
+  "clipped_white_pct": 0.01,
+  "crushed_black_pct": 0.0,
+  "laplacian_variance_final": 178.3,
+  "laplacian_variance_blender": 285.8,
+  "laplacian_variance_gpt_upscaled": 46.8,
+  "final_vs_blender_registration": {
+   "blocks": 207,
+   "median_shift_px_at_1672": 0.0,
+   "share_within_3px": 0.855,
+   "share_over_8px": 0.077
+  }
+ },
+ "bluehour": {
+  "png": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\final_q\\G002_B_Blue_Hour_PHOTOSHOP_FINAL.png",
+  "png_mode": "RGB",
+  "png_size": [
+   4800,
+   2700
+  ],
+  "png_dpi": [
+   299.9994,
+   299.9994
+  ],
+  "psd": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\final_q\\G002_B_Blue_Hour_PHOTOSHOP_FINAL.psd",
+  "psd_header": {
+   "signature": "8BPS",
+   "version": 1,
+   "channels": 9,
+   "height": 2700,
+   "width": 4800,
+   "bits": 8,
+   "color_mode": 3
+  },
+  "mean_rgb": [
+   56.8,
+   59.6,
+   64.0
+  ],
+  "clipped_white_pct": 0.0,
+  "crushed_black_pct": 0.01,
+  "laplacian_variance_final": 81.8,
+  "laplacian_variance_blender": 205.9,
+  "laplacian_variance_gpt_upscaled": 35.8,
+  "final_vs_blender_registration": {
+   "blocks": 313,
+   "median_shift_px_at_1672": 2.0,
+   "share_within_3px": 0.757,
+   "share_over_8px": 0.073
+  }
+ }
+}

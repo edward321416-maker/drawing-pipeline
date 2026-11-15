@@ -1,0 +1,152 @@
+{
+  "cycles_device": {
+    "requested": "auto",
+    "selected": "OPTIX",
+    "available": [
+      {
+        "name": "NVIDIA GeForce RTX 2060",
+        "type": "CUDA"
+      },
+      {
+        "name": "12th Gen Intel Core i7-12700F",
+        "type": "CPU"
+      },
+      {
+        "name": "NVIDIA GeForce RTX 2060",
+        "type": "OPTIX"
+      }
+    ]
+  },
+  "source_coordinate_origin_m": [
+    0.08349609375,
+    20.123502731323242,
+    -16.5
+  ],
+  "architecture_kind_counts": {
+    "tube_wall": 10,
+    "shaft": 6,
+    "facade": 65,
+    "slab": 18,
+    "roof": 5,
+    "column": 38,
+    "stair": 18,
+    "ramp": 1,
+    "core_wall": 4
+  },
+  "cache_site_objects_kept": 25,
+  "design_trees_replaced_with_realistic_canopies": 83,
+  "street_lamps_assumed": 324,
+  "context": {
+    "buildings": 799,
+    "street_trees_assumed": 1829,
+    "carriageway_segments": 258,
+    "crossings": 29,
+    "sidewalk_polygons": 278
+  },
+  "sun": {
+    "time_local": "2026-10-17T18:12:00+09:00",
+    "azimuth_deg": 261.7949474410398,
+    "elevation_deg": -4.617897942267635,
+    "blender_sun_azimuth_check_deg": 261.7949474410398,
+    "status": "ASSUMED DATE/TIME; real solar geometry for the lot position"
+  },
+  "camera": {
+    "location_local_m": [
+      148.4501953125,
+      -279.1942138671875,
+      144.1531982421875
+    ],
+    "rotation_euler": [
+      1.2499282360076904,
+      -4.826122435019897e-08,
+      0.4886922240257263
+    ],
+    "lens_mm": 55.0,
+    "geo": [
+      127.0091230651644,
+      37.564359492399994
+    ],
+    "view_bearing_deg": 332.0
+  },
+  "building_mesh_verification": {
+    "objects": 165,
+    "vertices": 32040,
+    "triangles": 63068,
+    "counts_match_cache": true,
+    "max_vertex_deviation_m": 0.0,
+    "status": "UNCHANGED"
+  },
+  "scene_fingerprint_sha256": "209147744ff16531b71c62a4e1784522081401c6cbf36888d0cfe8b2e17f7c95",
+  "mesh_object_count": 4027,
+  "render_seconds": 179.9,
+  "variant": "bluehour",
+  "render_settings": {
+    "width_px": 4800,
+    "height_px": 2700,
+    "samples": 64,
+    "blender_version": "4.2.0",
+    "exposure": 0.0
+  },
+  "source_geometry_verification": {
+    "status": "CACHE_INDEX_VALID",
+    "cache_dir": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14K\\output\\C_T14K_run\\model_cache",
+    "errors": [],
+    "warnings": [],
+    "model_npz_sha256": "992e2ec51ec17dc494ed2f99ddb11298671449dd6661d92df3b3536a0049537b",
+    "model_objects_sha256": "722dd7359e2f13534ff4ae91088ba8649e8a8f96b27c60f000ddb09c01106488",
+    "vertex_count": 119486,
+    "triangle_count": 237093,
+    "object_count": 391,
+    "bbox_min": [
+      -224.14999389648438,
+      -244.87899780273438,
+      -16.5
+    ],
+    "bbox_max": [
+      289.7164611816406,
+      287.8810119628906,
+      122.40180206298828
+    ],
+    "z_span_m": 138.902,
+    "kinds": {
+      "column": 38,
+      "context_building": 1,
+      "core_wall": 4,
+      "facade": 65,
+      "ramp": 1,
+      "roof": 5,
+      "shaft": 6,
+      "site": 25,
+      "slab": 18,
+      "stair": 18,
+      "tree": 166,
+      "tube_wall": 10,
+      "zone": 34
+    },
+    "floor_tag_count": 17,
+    "floor_tags": [
+      "10F",
+      "11F",
+      "12F",
+      "13F",
+      "14F",
+      "15F",
+      "1F",
+      "2F",
+      "3F",
+      "4F",
+      "5F",
+      "6F",
+      "7F",
+      "8F",
+      "9F",
+      "B1",
+      "B2"
+    ],
+    "floor_registry_type": "dict",
+    "verified_cache_geometry": true,
+    "model_completeness_and_materials_verified": false
+  },
+  "status": "BLENDER_BASE_RENDER__LOOKDEV_CONTEXT__HUMAN_QA_PENDING",
+  "context_pack": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\site_context\\context_pack.json"
+}

@@ -1,0 +1,334 @@
+{
+ "generated": "2026-11-15",
+ "confidence_scale": {
+  "verified": "read on an authoritative/primary page or file in this session",
+  "likely": "OSM tag, secondary source, local-file fact or documented inference",
+  "assumed": "estimate that must be labelled 시각화 가정"
+ },
+ "sources": [
+  {
+   "id": "S01",
+   "name": "OpenStreetMap extract (local file osm_ddp.json, 3x3 tiles lon 127.000-127.021 lat 37.5595-37.5745)",
+   "url": "D:\\Users\\admin\\Desktop\\5-2\\설계스튜디오\\중간발표\\02_site_analysis\\data\\osm_ddp.json",
+   "publisher": "OpenStreetMap contributors (extract made by the student, downloaded 2026-10-26)",
+   "licence": "ODbL 1.0 (c) OpenStreetMap contributors",
+   "retrieved": "2026-10-26 (download) / 2026-11-15 (parsed)",
+   "supports": "Building footprints and tags (height, building:levels, name), road classes/lanes/oneway/sidewalk, crossings, bus stops, subway entrances (ref 12/13/14), layers/tunnels, pedestrian areas; every count in osm_census.json",
+   "confidence": "likely",
+   "notes": "Crowd-sourced; only what is tagged is reported. Tags absent in the file are listed as missing, not guessed. Geometry error of a few metres is possible."
+  },
+  {
+   "id": "S02",
+   "name": "Estimated site polygon (calibrated_site_xy in site_estimate.json)",
+   "url": "D:\\Users\\admin\\Desktop\\5-2\\설계스튜디오\\중간발표\\02_site_analysis\\data\\site_estimate.json",
+   "publisher": "student (local analysis, scripts/estimate_site.py)",
+   "licence": "own work",
+   "supports": "Site polygon used for the centroid (127.0074397 E, 37.5667032 N) and all distance calculations; area 7,792.7 m2 from polygon vs 7,792.5 m2 registered",
+   "confidence": "assumed",
+   "notes": "Not a cadastral boundary: OSM block estimate shrunk 3.15 m uniformly to match the registered area.",
+   "retrieved": "2026-11-15"
+  },
+  {
+   "id": "S03",
+   "name": "Local note summary.md (maps A1-A5, ridership, constraints)",
+   "url": "D:\\Users\\admin\\Desktop\\5-2\\설계스튜디오\\중간발표\\02_site_analysis\\summary.md",
+   "publisher": "student (local)",
+   "licence": "own work",
+   "supports": "Station ridership Sept 2026 (Dongdaemun History & Culture Park: alighting 1,215,736, peak alighting 08h, 20h-04h alighting share 14.5%); exits 12/13/14 location; registered shops 2,248 within 400 m",
+   "confidence": "likely",
+   "notes": "Cited as local-file facts. Underlying Seoul CardSubwayTime file not re-queried. Its '9-12 m from the site edge' for exits 13/14 matches distances to the EXISTING BUILDING outline (9.0 and 12.4 m), not to the site polygon (6.6 and 0.5 m).",
+   "retrieved": "2026-11-15"
+  },
+  {
+   "id": "S04",
+   "name": "Local note sources.md",
+   "url": "D:\\Users\\admin\\Desktop\\5-2\\설계스튜디오\\중간발표\\02_site_analysis\\sources.md",
+   "publisher": "student (local)",
+   "licence": "own work",
+   "supports": "Provenance of OSM, 토지이음, 고시 제2025-275호, 건축물대장 수록값, 소상공인 상가정보, CardSubwayTime",
+   "confidence": "likely",
+   "retrieved": "2026-11-15"
+  },
+  {
+   "id": "S05",
+   "name": "Local note regulation_site.md (지구단위계획 고시 제2025-275호 summary)",
+   "url": "D:\\Users\\admin\\Desktop\\5-2\\설계스튜디오\\중간발표\\02_site_analysis\\regulation_site.md",
+   "publisher": "student (local) quoting 서울특별시 고시 제2025-275호 (2025-05-22)",
+   "licence": "own work; underlying notice is an official publication",
+   "supports": "일반상업지역; 최고높이 90 m (77 m default because of 대공방어협조구역); 건축한계선 장충단로 5 m, 기타 간선 3 m, 이면 1 m; 1층 전면 50% 투시형; no vehicle access from 장충단로/을지로",
+   "confidence": "likely",
+   "notes": "Quoted from the local file; the PDF in data/raw/regulation was not re-read.",
+   "retrieved": "2026-11-15"
+  },
+  {
+   "id": "S06",
+   "name": "Local note 01_site_selection/selection.md (건축물대장 수록값 for 굿모닝시티)",
+   "url": "D:\\Users\\admin\\Desktop\\5-2\\설계스튜디오\\중간발표\\01_site_selection\\selection.md",
+   "publisher": "student (local) quoting zippoom.com aggregation of 건축물대장",
+   "licence": "own work",
+   "supports": "Existing building: 지하 7층 / 지상 16층, 연면적 92,206 m2, 건축면적 4,671.76 m2, 건폐율 59%, 용적률 634%, 사용승인 2008-08-28",
+   "confidence": "likely",
+   "notes": "Aggregator copy of the register; the register itself not re-read. Floors agree with Newdaily 2008 (S11); gross floor area differs (91,928 vs 92,206 m2).",
+   "retrieved": "2026-11-15"
+  },
+  {
+   "id": "S07",
+   "name": "소상공인시장진흥공단 상가(상권)정보 2026-06-30 (local CSV sbiz_ddp_20260630.csv)",
+   "url": "D:\\Users\\admin\\Desktop\\5-2\\설계스튜디오\\중간발표\\02_site_analysis\\data\\sbiz_ddp_20260630.csv",
+   "publisher": "소상공인시장진흥공단 (public data)",
+   "licence": "미확인 (공공데이터 이용허락 조건 확인 필요)",
+   "supports": "Within 150 m of the site centroid: 483 registered businesses (retail 263 of which textile/clothing/shoes 165; food 92); ground-floor tenants of 굿모닝시티 mostly women's clothing; building names '롯데FITIN' registered inside the OSM polygon of '던던' (w358288326)",
+   "confidence": "likely",
+   "notes": "Used for use-mix mood and for the Lotte Fitin = OSM '던던' identification only.",
+   "retrieved": "2026-11-15"
+  },
+  {
+   "id": "S08",
+   "name": "서울특별시 '서울톡톡' DDP 규모 기사 (mediahub.seoul.go.kr)",
+   "url": "https://mediahub.seoul.go.kr/archives/165767",
+   "publisher": "서울특별시",
+   "licence": "공공누리 제4유형 (출처표시, 상업적 이용금지, 변경금지); facts only, nothing copied",
+   "supports": "DDP: 대지면적 62,692 m2, 연면적 86,574 m2, 지하 3층, 지상 4층 (높이 29 m); published 2014-01-10",
+   "confidence": "verified",
+   "notes": "Exact sentence read on the page. OSM tags DDP at only height=20 m, levels=4; use 29 m.",
+   "retrieved": "2026-11-15"
+  },
+  {
+   "id": "S09",
+   "name": "서울특별시 문화분야 누리집 DDP 기사 (second copy of the same figures)",
+   "url": "https://news.seoul.go.kr/culture/?p=35644",
+   "publisher": "서울특별시 / 서울디자인재단",
+   "licence": "공공누리 제4유형",
+   "supports": "Same DDP figures: 62,692 / 86,574 m2, 지하 3층·지상 4층 (높이 29 m)",
+   "confidence": "verified",
+   "retrieved": "2026-11-15"
+  },
+  {
+   "id": "S10",
+   "name": "서울특별시 주택분야 누리집 'DDP 위용 드러내'",
+   "url": "https://news.seoul.go.kr/citybuild/archives/214657",
+   "publisher": "서울특별시 도시기반시설본부 건축부",
+   "licence": "공공누리 제4유형",
+   "supports": "연면적 86,575 m2 (1 m2 different from S08); construction completed 2013-11-30; opening planned 2014-03-21; no height stated on this page",
+   "confidence": "verified",
+   "retrieved": "2026-11-15"
+  },
+  {
+   "id": "S11",
+   "name": "Newdaily 2008-08-16 '테마상가의 변신, 그 결과는'",
+   "url": "https://www.newdaily.co.kr/site/data/html/2008/08/16/2008081600006.html",
+   "publisher": "뉴데일리",
+   "licence": "all rights reserved (news article); cited for facts only",
+   "supports": "굿모닝시티: 지하 7층 · 지상 16층, 연면적 91,928 m2, 4,500 shops; opening planned H2 2008",
+   "confidence": "likely",
+   "retrieved": "2026-11-15"
+  },
+  {
+   "id": "S12",
+   "name": "SkyscraperPage: Doosan Tower (Doota Mall)",
+   "url": "https://skyscraperpage.com/b3328",
+   "publisher": "SkyscraperPage",
+   "licence": "all rights reserved; cited for facts only",
+   "supports": "Doosan Tower 156.15 m, 34 floors + 7 basements, completed 1999, address 장충단로 275; page attributes the height to the Korean building register",
+   "confidence": "likely",
+   "notes": "Agrees with OSM (height 156, levels 34). The register itself not seen.",
+   "retrieved": "2026-11-15"
+  },
+  {
+   "id": "S13",
+   "name": "thewiki.kr '두타' (search-result summary only; page not opened)",
+   "url": "https://thewiki.kr/w/두타",
+   "publisher": "thewiki.kr (namu-wiki mirror)",
+   "licence": "CC BY-NC-SA 2.0 KR (assumed for namu wiki; not checked)",
+   "supports": "지하 7층 / 지상 34층 / 156 m (second, non-independent mention)",
+   "confidence": "likely",
+   "notes": "Only seen as a web-search summary; do not rely on it alone.",
+   "retrieved": "2026-11-15"
+  },
+  {
+   "id": "S14",
+   "name": "Inference: OSM '던던 / Dun Dun Mall' (w358288326, h=68, 14 levels, 2007) is the LOTTE FITIN building",
+   "url": "derived from S01 + S07 + R01 (photo)",
+   "publisher": "this research",
+   "licence": "n/a",
+   "supports": "Lotte Fitin lies immediately south of the site across 을지로; heights for it = OSM 68 m / 14 levels",
+   "confidence": "likely",
+   "notes": "Three independent hints: 7 registry rows 'building name = 롯데FITIN' fall inside that OSM polygon; R01 shows LOTTE FITIN directly south (left) of the Goodmorning City block; R14 caption places Lotte Fitin at 을지로6가. The OSM name is stale.",
+   "retrieved": "2026-11-15"
+  },
+  {
+   "id": "S15",
+   "name": "Wikimedia Commons API (metadata and thumbnails)",
+   "url": "https://commons.wikimedia.org/w/api.php",
+   "publisher": "Wikimedia Foundation",
+   "licence": "metadata per file page",
+   "supports": "Search, licence short name/URL, author, date; 35 requests in total, logged in refs/commons_request_log.jsonl",
+   "confidence": "verified",
+   "retrieved": "2026-11-15"
+  },
+  {
+   "id": "S16",
+   "name": "Photo R01: File:Dongdaemun Design Plaza grass.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Dongdaemun_Design_Plaza_grass.jpg",
+   "publisher": "Wikimedia Commons; author: Tristan Surtel",
+   "licence": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)",
+   "retrieved": "2026-11-15",
+   "supports": "Elevated view from the DDP green roof toward the existing Goodmorning City block: pale grey panelled east elevation with a large 'Goodmorning CITY / 굿모닝시티' sign, glass-clad cylindrical stair/lift towers with disc roofs, ",
+   "confidence": "verified",
+   "notes": "Licence as stated on the Commons file page; content identification from viewing the file. Local copy: D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\site_context\\refs\\R01_ddp_roof_view_west_to_goodmorning_city.jpg (sha256 0a2ae6c0d88ff2d3f8da240e6897b4b3385a3621e747d579ebe444ce37283872). Existing building, not the virtual design; sign text must not be reproduced. Elevated viewpoint, not eye level."
+  },
+  {
+   "id": "S17",
+   "name": "Photo R02: File:Dongdaemun Design Plaza - DDP2376.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Dongdaemun_Design_Plaza_-_DDP2376.jpg",
+   "publisher": "Wikimedia Commons; author: lumoplank",
+   "licence": "CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)",
+   "retrieved": "2026-11-15",
+   "supports": "Close-up of the DDP aluminium-panel skin at blue hour, perforated panels lit from behind, concrete retaining wall in the foreground.",
+   "confidence": "verified",
+   "notes": "Licence as stated on the Commons file page; content identification from viewing the file. Local copy: D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\site_context\\refs\\R02_ddp_facade_night_close_a.jpg (sha256 b384143fa10ff5a92c13991f785ea0cbf74fde9b4b1e2ea6fd51608069f39aa6). Visual reference only; DDP is a protected design (Zaha Hadid Architects), do not model or copy the panel pattern."
+  },
+  {
+   "id": "S18",
+   "name": "Photo R03: File:Dongdaemun Design Plaza - DDP2369.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Dongdaemun_Design_Plaza_-_DDP2369.jpg",
+   "publisher": "Wikimedia Commons; author: lumoplank",
+   "licence": "CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)",
+   "retrieved": "2026-11-15",
+   "supports": "DDP at night: curved panelled skin lit from inside, pedestrian ramp with LED strip, a street tree; a curved glass tower (probably Maxtyle) at upper left.",
+   "confidence": "verified",
+   "notes": "Licence as stated on the Commons file page; content identification from viewing the file. Local copy: D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\site_context\\refs\\R03_ddp_facade_night_close_b.jpg (sha256 80b673509841fba1112953ad184c100d60539c81516fc86560c07d4224615529). Visual reference only. Faces unrecognisable at this scale."
+  },
+  {
+   "id": "S19",
+   "name": "Photo R04: File:Dongdaemun Design Plaza at night, Seoul, Korea.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Dongdaemun_Design_Plaza_at_night,_Seoul,_Korea.jpg",
+   "publisher": "Wikimedia Commons; author: Eugene Lim",
+   "licence": "CC BY 2.0 (https://creativecommons.org/licenses/by/2.0)",
+   "retrieved": "2026-11-15",
+   "supports": "Wide elevated blue-hour panorama: DDP centre, Maxtyle (left, LED star facade), NUZZON tower (right), wet road with light trails, tour buses.",
+   "confidence": "verified",
+   "notes": "Licence as stated on the Commons file page; content identification from viewing the file. Local copy: D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\site_context\\refs\\R04_ddp_dusk_panorama.jpg (sha256 000ab979dece97195b02891309fe9ad54215701bf3bc031a3c5416fb40b95bc6). 2014 state; panorama crop (original 3600x1200). Not a view of the site."
+  },
+  {
+   "id": "S20",
+   "name": "Photo R05: File:Vendor on sidewalk near a subway station near Dongdaemun Market.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Vendor_on_sidewalk_near_a_subway_station_near_Dongdaemun_Market.jpg",
+   "publisher": "Wikimedia Commons; author: Dquai",
+   "licence": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)",
+   "retrieved": "2026-11-15",
+   "supports": "Night view of the subway exit 14 pylon (green/yellow, lines 205/422/536, '14 출입구 EXIT') behind a pavement vendor stall with awning; two-tone grey granite pavers with a yellow tactile strip; cobra-head lamp; LED billboard",
+   "confidence": "verified",
+   "notes": "Licence as stated on the Commons file page; content identification from viewing the file. Local copy: D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\site_context\\refs\\R05_exit14_sidewalk_vendor_night.jpg (sha256 488550985d4f16096d5226d3abf7607b74c1c859900c74e3e82eea815c58fbaf). 2012 state (14 years old at retrieval); a blurred finger covers part of the frame. Confirms the exit 14 pylon only; surroundings may have changed."
+  },
+  {
+   "id": "S21",
+   "name": "Photo R06: File:The Doota Mall in Seoul.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:The_Doota_Mall_in_Seoul.jpg",
+   "publisher": "Wikimedia Commons; author: Dquai",
+   "licence": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)",
+   "retrieved": "2026-11-15",
+   "supports": "Looking up at the Doota (두타) podium facade: light grey tile cladding grid, ribbon windows, blue glazed vertical bay, huge wall banner, rooftop 'doota!' sign; double-head street lamp with CCTV.",
+   "confidence": "verified",
+   "notes": "Licence as stated on the Commons file page; content identification from viewing the file. Local copy: D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\site_context\\refs\\R06_doota_facade_banner_dusk.jpg (sha256 c85b39856ecb6b52151f5b48141d648a167335434d5fb99f2cd8a89d3cd726bf). Banner shows commercial advertising with people; do not reproduce. 2012 state. Overcast dusk, not clear evening."
+  },
+  {
+   "id": "S22",
+   "name": "Photo R07: File:Entrance of the Doota Mall near Dongdaemun Market.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Entrance_of_the_Doota_Mall_near_Dongdaemun_Market.jpg",
+   "publisher": "Wikimedia Commons; author: Dquai",
+   "licence": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)",
+   "retrieved": "2026-11-15",
+   "supports": "Night plaza in front of the Doota entrance: brick-pattern grey granite pavers with inlaid lines, granite cube seats, mushroom-head lamp poles, planters; podium lit warm, people seated and walking (evening street life).",
+   "confidence": "verified",
+   "notes": "Licence as stated on the Commons file page; content identification from viewing the file. Local copy: D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\site_context\\refs\\R07_doota_entrance_plaza_night.jpg (sha256 f8ce00782b75c05a279e42a2574273f9c328b17d2193427dd7ee0076591f0057). People visible (low resolution, partly identifiable); reference only. 2012 state."
+  },
+  {
+   "id": "S23",
+   "name": "Photo R08: File:Buildings of the Doota Mall near Dongdaemun Market.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Buildings_of_the_Doota_Mall_near_Dongdaemun_Market.jpg",
+   "publisher": "Wikimedia Commons; author: Dquai",
+   "licence": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)",
+   "retrieved": "2026-11-15",
+   "supports": "Night view looking steeply up at the Doota podium and tower: sloped glazed atrium bays lit warm, white cladding, banner 'DOOTA STYLE in London'.",
+   "confidence": "verified",
+   "notes": "Licence as stated on the Commons file page; content identification from viewing the file. Local copy: D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\site_context\\refs\\R08_doota_podium_glazing_night.jpg (sha256 d563bb3f86c5801e672ef05283ae1b51900199ec4487580ed8b2ef34d176aca8). Strong perspective distortion; phone-quality. Banner advertising."
+  },
+  {
+   "id": "S24",
+   "name": "Photo R09: File:東大門某百貨外.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:%E6%9D%B1%E5%A4%A7%E9%96%80%E6%9F%90%E7%99%BE%E8%B2%A8%E5%A4%96.JPG",
+   "publisher": "Wikimedia Commons; author: Hst0129",
+   "licence": "CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)",
+   "retrieved": "2026-11-15",
+   "supports": "Night sidewalk with a group waiting beside parked tour coaches; Maxtyle LED star facade across the street; young street trees in tree pits; brick-type concrete pavers.",
+   "confidence": "verified",
+   "notes": "Licence as stated on the Commons file page; content identification from viewing the file. Local copy: D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\site_context\\refs\\R09_maxtyle_sidewalk_night_tour_buses.jpg (sha256 a23aef18d0ecb7a67345d96932c69d74d1a973713f24efc84a84251fdadd3fe1). Identifiable people (mostly from behind). The Commons title is only 'department store in Dongdaemun'; Maxtyle was identified from the sign in the image. 2012 state."
+  },
+  {
+   "id": "S25",
+   "name": "Photo R10: File:PyeongChang 2018 Olympic Torch Relay in 20180113 Jangchungdan-ro.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:PyeongChang_2018_Olympic_Torch_Relay_in_20180113_Jangchungdan-ro.JPG",
+   "publisher": "Wikimedia Commons; author: hyolee2",
+   "licence": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)",
+   "retrieved": "2026-11-15",
+   "supports": "Carriageway of a '장충단로 Jangchungdan-ro' junction during an Olympic torch-relay event: blue street-name sign, double-arm cobra-head lamps, traffic-signal heads, pines in planters, two glass-curtain-wall towers with clinic",
+   "confidence": "verified",
+   "notes": "Licence as stated on the Commons file page; content identification from viewing the file. Local copy: D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\site_context\\refs\\R10_jangchungdan_ro_street_2018.jpg (sha256 3bbe8fd458dc65216ac6b0d75965586dac28c70ef59725cbb88676a4cba7a6df). Location along 장충단로 NOT confirmed to be next to the site. Event scene with people and police; reference only."
+  },
+  {
+   "id": "S26",
+   "name": "Photo R11: File:Pyoung Hwa Fashion Plaza, Seoul 2020-02-01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Pyoung_Hwa_Fashion_Plaza,_Seoul_2020-02-01.jpg",
+   "publisher": "Wikimedia Commons; author: Stck w This photo was taken with Sharp Aquos R3",
+   "licence": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)",
+   "retrieved": "2026-11-15",
+   "supports": "Pyeonghwa Fashion Plaza (평화시장) long 4-5 storey street front with banners and shop signs, seen across the Cheonggyecheon; Doosan Tower and Hotel Skypark behind; bare winter trees.",
+   "confidence": "verified",
+   "notes": "Licence as stated on the Commons file page; content identification from viewing the file. Local copy: D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\site_context\\refs\\R11_pyeonghwa_fashion_plaza_cheonggyecheon.jpg (sha256 00ebedbefe005599a6d86d105ed6747f29320d3f8fd81995f92fbc0550bd7acf). Market is ~300 m north/north-west of the site, not on its frontage. Winter, no leaves."
+  },
+  {
+   "id": "S27",
+   "name": "Photo R12: File:Seoul-metro-Dongdaemun-history-and-culture-park-station-entrance-04-20181126-151610.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Seoul-metro-Dongdaemun-history-and-culture-park-station-entrance-04-20181126-151610.jpg",
+   "publisher": "Wikimedia Commons; author: LERK",
+   "licence": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)",
+   "retrieved": "2026-11-15",
+   "supports": "Subway exit 4 of 동대문역사문화공원: granite bollards with the '지하철입구' mark, black lattice railing, yellow tactile paving, interlocking concrete pavers on the sidewalk, pine street trees, cobra-head arm lamps, a blue city bus, mi",
+   "confidence": "verified",
+   "notes": "Licence as stated on the Commons file page; content identification from viewing the file. Local copy: D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\site_context\\refs\\R12_exit04_entrance_sidewalk_pine_trees.jpg (sha256 8cdcb1a72ca2ef95e36ebe67c3c9cf0727bf8ab581886c9ef29eeff7410920f8). Exit 4, not 12-14: the design of 12-14 is UNVERIFIED. Faces appear blurred on Commons."
+  },
+  {
+   "id": "S28",
+   "name": "Photo R13: File:Dongdaemun Maxtile.JPG",
+   "url": "https://commons.wikimedia.org/wiki/File:Dongdaemun_Maxtile.JPG",
+   "publisher": "Wikimedia Commons; author: hyolee2",
+   "licence": "CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)",
+   "retrieved": "2026-11-15",
+   "supports": "Daylight street view of Maxtyle (맥스타일): curved grey stone-clad podium with LED stars, glazed lift cylinders, overhead green road sign '광희문 / 흥인지문 / 충무아트홀', street lamps, young pines and deciduous trees, city buses.",
+   "confidence": "verified",
+   "notes": "Licence as stated on the Commons file page; content identification from viewing the file. Local copy: D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\site_context\\refs\\R13_maxtyle_day_street_signage_trees.jpg (sha256 c88bfa3b5b73440dea8b242bc6185c60dc89fc345ecb2b0e78d4647b9ee2da99). Maxtyle is near DDP (local note: ~51 m from DDP; 신당동 773, 마장로변), NOT adjacent to the site. EXIF date unreliable."
+  },
+  {
+   "id": "S29",
+   "name": "Photo R14: File:Korea Lotte Fitin Dongdaemun 14 (14623958914).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Korea_Lotte_Fitin_Dongdaemun_14_(14623958914).jpg",
+   "publisher": "Wikimedia Commons; author: Republic of Korea from Seoul, Republic of Korea",
+   "licence": "CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0)",
+   "retrieved": "2026-11-15",
+   "supports": "Entrance of LOTTE FITIN (white diamond-lattice facade with a 'Fashion Mall' tile wall) with the glass-canopy escalator entrance of the '을지로지하쇼핑센터' at the right edge; staged promotional event with two seated people.",
+   "confidence": "verified",
+   "notes": "Licence as stated on the Commons file page; content identification from viewing the file. Local copy: D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\site_context\\refs\\R14_lotte_fitin_entrance_underground_canopy.jpg (sha256 77b72770fc05f984a3a42e1d08c96315d73c9610805c923b9d9eec511692b92f). Identifiable people (event photo by Korea.net); reference only. Lotte Fitin = OSM '던던' is an inference, not verified."
+  },
+  {
+   "id": "S30",
+   "name": "Searched and NOT found: authoritative street-tree species list / sidewalk paving specification for 장충단로 and 을지로",
+   "url": "WebSearch 2026-11-15 (junggu.seoul.kr, koreascience.kr results, none give a species list)",
+   "publisher": "n/a",
+   "licence": "n/a",
+   "supports": "Nothing: street-tree species and pavement spec remain 미확인; only visual evidence (pines, granite/concrete pavers) in photos R05, R07, R09, R10, R12, R13",
+   "confidence": "assumed",
+   "retrieved": "2026-11-15"
+  }
+ ]
+}

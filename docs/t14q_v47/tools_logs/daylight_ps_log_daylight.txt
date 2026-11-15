@@ -1,0 +1,23 @@
+doc 4800 pxx2700 px px @300 dpi
+resample: PRESERVEDETAILS (fallback)
+layer: 01_CHATGPT_RAW_UPSCALED (Preserve Details)
+layer: 02_TOWER_GEOMETRY_RESTORE (Blender detail + ChatGPT tone)
+mask applied: 02_TOWER_GEOMETRY_RESTORE (Blender detail + ChatGPT tone)
+layer: 03_MICROTEXTURE_asphalt (Poly Haven CC0 asphalt_02)
+mask applied: 03_MICROTEXTURE_asphalt (Poly Haven CC0 asphalt_02)
+layer: 04_MICROTEXTURE_paving (Poly Haven CC0 concrete_pavement_02)
+mask applied: 04_MICROTEXTURE_paving (Poly Haven CC0 concrete_pavement_02)
+fill layer: 05_AERIAL_HAZE (depth-masked)
+mask applied: 05_AERIAL_HAZE (depth-masked)
+fill layer: 06_GRADE_daylight
+fill layer: 07_VIGNETTE
+mask applied: 07_VIGNETTE
+stamp: 08_STAMP_visible (curves, unsharp)
+curves + unsharp applied
+mask applied: 09_LENS_EDGE_SOFTNESS
+fill layer: 10_FILM_GRAIN
+grain applied
+saved PSD: D:\Temp\t14q_ps\day\G002_daylight_FINAL.psd
+saved PNG: D:\Temp\t14q_ps\day\G002_daylight_FINAL.png
+layers: 11  channels: 9
+PHOTOSHOP_FINISH_OK 27.7.0
