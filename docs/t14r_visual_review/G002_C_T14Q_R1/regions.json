@@ -1,0 +1,3296 @@
+{
+ "schema": "C-T14R-REGION-INDEX-1.0",
+ "note": "Boxes are approximate (visual placement). Focus crops are pixel-exact cuts of the originals.",
+ "regions": [
+  {
+   "id": "R1_roof",
+   "name_ko": "지붕 원형 개구부와 옥상 정원",
+   "look_for": "원형 개구 4개, 옥상 원통 구조물, 옥상 정원 윤곽, 지붕 모서리",
+   "boxes": [
+    [
+     1560,
+     30,
+     3300,
+     480
+    ]
+   ],
+   "tiles": {
+    "DAYLIGHT_FINAL": [
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01200_y00000_w0400_h0400.png",
+      "bounds": [
+       1200,
+       0,
+       1600,
+       400
+      ],
+      "sha256": "279375b7c764b5bff364473beea2bfa473f163868ca5b3ec575efffc0dd3b558"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01200_y00400_w0400_h0400.png",
+      "bounds": [
+       1200,
+       400,
+       1600,
+       800
+      ],
+      "sha256": "dc1f2366782fe9e0caa7aa7c0c844e64ddb57d6e2e116679c3286b6e0f3ed42d"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01600_y00000_w0400_h0400.png",
+      "bounds": [
+       1600,
+       0,
+       2000,
+       400
+      ],
+      "sha256": "95327a4b36392408780a73dd09ae8e25ddfe6eaacf0b39776f4396ff7e54bc8e"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01600_y00400_w0400_h0400.png",
+      "bounds": [
+       1600,
+       400,
+       2000,
+       800
+      ],
+      "sha256": "e2e42e1cb4f3394c68e24c36e78f8af7e46c092b1bd8a1f83c5de76d128e5947"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02000_y00000_w0400_h0400.png",
+      "bounds": [
+       2000,
+       0,
+       2400,
+       400
+      ],
+      "sha256": "9768ea0d0c7c8e86ac38e8302abab6a6cf7da8960bc41f8ddaeed27b8cb60447"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02000_y00400_w0400_h0400.png",
+      "bounds": [
+       2000,
+       400,
+       2400,
+       800
+      ],
+      "sha256": "a9352fe971128f1dd2cb6924de711d620d934ca017776a9ea36e7df4cb4c34f4"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02400_y00000_w0400_h0400.png",
+      "bounds": [
+       2400,
+       0,
+       2800,
+       400
+      ],
+      "sha256": "8ff2d8f27a0557414cea9a82e30e28da6fd5fd546d21dabdda7a116228679566"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02400_y00400_w0400_h0400.png",
+      "bounds": [
+       2400,
+       400,
+       2800,
+       800
+      ],
+      "sha256": "8a4c714cdd454d87481e5e74bee96b7359eaeb7257f4142cf12a77ad29ee971c"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02800_y00000_w0400_h0400.png",
+      "bounds": [
+       2800,
+       0,
+       3200,
+       400
+      ],
+      "sha256": "45d9b6e600dcc8a44935bb1f6d783b3cecf54a57e1ef61d45820e68fe8fa2d88"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02800_y00400_w0400_h0400.png",
+      "bounds": [
+       2800,
+       400,
+       3200,
+       800
+      ],
+      "sha256": "a6683f4a41666443dba65b99505aa4fdaa13a15ba5aee4cac142b206bafc0912"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y00000_w0400_h0400.png",
+      "bounds": [
+       3200,
+       0,
+       3600,
+       400
+      ],
+      "sha256": "16f857f3cece5ae597f9c1243ac8a4955aa8ce9ecaa4ae4ca60355accfb82815"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y00400_w0400_h0400.png",
+      "bounds": [
+       3200,
+       400,
+       3600,
+       800
+      ],
+      "sha256": "f679d560605deeef15134baab2caedfe7fbbd67dc23f7e8512a7a09ac5175924"
+     }
+    ],
+    "BLUEHOUR_FINAL": [
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01200_y00000_w0400_h0400.png",
+      "bounds": [
+       1200,
+       0,
+       1600,
+       400
+      ],
+      "sha256": "e43e4396c2a12bd83c2feec997e02b77f0b1eccfd1e882dca2b9c635146c2a91"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01200_y00400_w0400_h0400.png",
+      "bounds": [
+       1200,
+       400,
+       1600,
+       800
+      ],
+      "sha256": "5f7531a9ddab0b381b17839446bf24a98c6a74f7fcfd505ab19a57c6beefa84d"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01600_y00000_w0400_h0400.png",
+      "bounds": [
+       1600,
+       0,
+       2000,
+       400
+      ],
+      "sha256": "459a8f62f8d46b9714d4bb9d90af1f9fbc28482178ccfd3fa2c6179ab2641267"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01600_y00400_w0400_h0400.png",
+      "bounds": [
+       1600,
+       400,
+       2000,
+       800
+      ],
+      "sha256": "e254e17f148b02ecdeeebd0d9d68b085fd87f8b796815e22dce7bd10e08399cc"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02000_y00000_w0400_h0400.png",
+      "bounds": [
+       2000,
+       0,
+       2400,
+       400
+      ],
+      "sha256": "0946637580d4ff83f5c90003c52c87e34ada69af41edca41319c433091df018e"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02000_y00400_w0400_h0400.png",
+      "bounds": [
+       2000,
+       400,
+       2400,
+       800
+      ],
+      "sha256": "b7e8c6242b3f574209ad186d32075931562db53cc762c64485545172871ecf1e"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02400_y00000_w0400_h0400.png",
+      "bounds": [
+       2400,
+       0,
+       2800,
+       400
+      ],
+      "sha256": "15e24341bdc825b7fa1c4abb977a2ecd4b6f00f628cb1355bc2ae15d16cd7ef2"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02400_y00400_w0400_h0400.png",
+      "bounds": [
+       2400,
+       400,
+       2800,
+       800
+      ],
+      "sha256": "64e34fe276d28017b6b4fee06a8c68217680a4cda260bf6f3ff68ffd7d3a3905"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02800_y00000_w0400_h0400.png",
+      "bounds": [
+       2800,
+       0,
+       3200,
+       400
+      ],
+      "sha256": "9e977a3022f5615ad1d8065e5d4e5ee2eef25913929619527ecbd2e0a9ebcdd5"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02800_y00400_w0400_h0400.png",
+      "bounds": [
+       2800,
+       400,
+       3200,
+       800
+      ],
+      "sha256": "8514eb8f566f0a2fd7104a6034edb551ec71dd1e96095cc7c5012001ce0287a4"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y00000_w0400_h0400.png",
+      "bounds": [
+       3200,
+       0,
+       3600,
+       400
+      ],
+      "sha256": "047b7fddae17779e1c7ad943eee92f5dcf3db08a684d4f91cadaee57f8152002"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y00400_w0400_h0400.png",
+      "bounds": [
+       3200,
+       400,
+       3600,
+       800
+      ],
+      "sha256": "abc3929c4845859a9973170209f0d5e9781b2d62ab1961aac2ecc476728e5ce8"
+     }
+    ]
+   }
+  },
+  {
+   "id": "R2_fins",
+   "name_ko": "상층부 수직 파사드 핀",
+   "look_for": "수직 핀 간격·개수와 수평 띠 위치. C-T14Q 검수의 미해결 항목",
+   "boxes": [
+    [
+     1650,
+     480,
+     2230,
+     1250
+    ],
+    [
+     2380,
+     480,
+     3260,
+     1250
+    ]
+   ],
+   "tiles": {
+    "DAYLIGHT_FINAL": [
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01600_y00400_w0400_h0400.png",
+      "bounds": [
+       1600,
+       400,
+       2000,
+       800
+      ],
+      "sha256": "e2e42e1cb4f3394c68e24c36e78f8af7e46c092b1bd8a1f83c5de76d128e5947"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02000_y00400_w0400_h0400.png",
+      "bounds": [
+       2000,
+       400,
+       2400,
+       800
+      ],
+      "sha256": "a9352fe971128f1dd2cb6924de711d620d934ca017776a9ea36e7df4cb4c34f4"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02400_y00400_w0400_h0400.png",
+      "bounds": [
+       2400,
+       400,
+       2800,
+       800
+      ],
+      "sha256": "8a4c714cdd454d87481e5e74bee96b7359eaeb7257f4142cf12a77ad29ee971c"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02800_y00400_w0400_h0400.png",
+      "bounds": [
+       2800,
+       400,
+       3200,
+       800
+      ],
+      "sha256": "a6683f4a41666443dba65b99505aa4fdaa13a15ba5aee4cac142b206bafc0912"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y00400_w0400_h0400.png",
+      "bounds": [
+       3200,
+       400,
+       3600,
+       800
+      ],
+      "sha256": "f679d560605deeef15134baab2caedfe7fbbd67dc23f7e8512a7a09ac5175924"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01600_y00800_w0400_h0400.png",
+      "bounds": [
+       1600,
+       800,
+       2000,
+       1200
+      ],
+      "sha256": "2e73c3e2ab7b95cedcdc3b117c548200f9b267816d6fb50c8b8bc4ec273f9865"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01600_y01200_w0400_h0400.png",
+      "bounds": [
+       1600,
+       1200,
+       2000,
+       1600
+      ],
+      "sha256": "4c5d64d4e0c1698b67b3dad7305ba89158d9f4ed07f4c2dcc03986b7b1be91a0"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02000_y00800_w0400_h0400.png",
+      "bounds": [
+       2000,
+       800,
+       2400,
+       1200
+      ],
+      "sha256": "a4c9586cf791ec9413a0067d59298007b44e1ba20734f294932267fc848ff46c"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02000_y01200_w0400_h0400.png",
+      "bounds": [
+       2000,
+       1200,
+       2400,
+       1600
+      ],
+      "sha256": "19f6259c16743a16663fda6a953fe56602e88e047b8b91638437f95dc7dfb729"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02400_y00800_w0400_h0400.png",
+      "bounds": [
+       2400,
+       800,
+       2800,
+       1200
+      ],
+      "sha256": "13ad16936c9eb35631b686063b5131b21520f8fece8bdb46794c761d591e214a"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02400_y01200_w0400_h0400.png",
+      "bounds": [
+       2400,
+       1200,
+       2800,
+       1600
+      ],
+      "sha256": "163068b8f3021ba6f48a2aff09aa0e8430247967de17d9fac2cdd514e314f263"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02800_y00800_w0400_h0400.png",
+      "bounds": [
+       2800,
+       800,
+       3200,
+       1200
+      ],
+      "sha256": "e31de5384f161692667d036ced45dba10e65462a92a404c276eff5d41c801ae9"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02800_y01200_w0400_h0400.png",
+      "bounds": [
+       2800,
+       1200,
+       3200,
+       1600
+      ],
+      "sha256": "676cd640f4dad0c12110aca74420b95d6e0de2c13c7dde0a843eeec1e64208ea"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y00800_w0400_h0400.png",
+      "bounds": [
+       3200,
+       800,
+       3600,
+       1200
+      ],
+      "sha256": "2e3eb1f5f7a2266e3a4ed535248a20e00fa43d5545b63b1411cdc653c8c87457"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y01200_w0400_h0400.png",
+      "bounds": [
+       3200,
+       1200,
+       3600,
+       1600
+      ],
+      "sha256": "61b038baceeb0cf9dfc78b5240070e0d0b31a4480c90cbc8df38ca2d049d566a"
+     }
+    ],
+    "BLUEHOUR_FINAL": [
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01600_y00400_w0400_h0400.png",
+      "bounds": [
+       1600,
+       400,
+       2000,
+       800
+      ],
+      "sha256": "e254e17f148b02ecdeeebd0d9d68b085fd87f8b796815e22dce7bd10e08399cc"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02000_y00400_w0400_h0400.png",
+      "bounds": [
+       2000,
+       400,
+       2400,
+       800
+      ],
+      "sha256": "b7e8c6242b3f574209ad186d32075931562db53cc762c64485545172871ecf1e"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02400_y00400_w0400_h0400.png",
+      "bounds": [
+       2400,
+       400,
+       2800,
+       800
+      ],
+      "sha256": "64e34fe276d28017b6b4fee06a8c68217680a4cda260bf6f3ff68ffd7d3a3905"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02800_y00400_w0400_h0400.png",
+      "bounds": [
+       2800,
+       400,
+       3200,
+       800
+      ],
+      "sha256": "8514eb8f566f0a2fd7104a6034edb551ec71dd1e96095cc7c5012001ce0287a4"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y00400_w0400_h0400.png",
+      "bounds": [
+       3200,
+       400,
+       3600,
+       800
+      ],
+      "sha256": "abc3929c4845859a9973170209f0d5e9781b2d62ab1961aac2ecc476728e5ce8"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01600_y00800_w0400_h0400.png",
+      "bounds": [
+       1600,
+       800,
+       2000,
+       1200
+      ],
+      "sha256": "874975f66b915c6035e4bae2cb152a4e74654c9cfde01f6f5c0e41a632647c90"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01600_y01200_w0400_h0400.png",
+      "bounds": [
+       1600,
+       1200,
+       2000,
+       1600
+      ],
+      "sha256": "22194da0372f31c56470d043c8bb550af34f34934dea525303e0a7c635569d41"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02000_y00800_w0400_h0400.png",
+      "bounds": [
+       2000,
+       800,
+       2400,
+       1200
+      ],
+      "sha256": "6626317386bbcb630ae718c4e3c3fed4bb93d22039728f977207beac751fd4b1"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02000_y01200_w0400_h0400.png",
+      "bounds": [
+       2000,
+       1200,
+       2400,
+       1600
+      ],
+      "sha256": "1adc3f4a819b06e4063ea21f281129691f5c5cc9aaa7c3eeb45f591ac6cf8824"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02400_y00800_w0400_h0400.png",
+      "bounds": [
+       2400,
+       800,
+       2800,
+       1200
+      ],
+      "sha256": "e3036a3b1e5366883709b4f583412e803d94e32b1c0157a5f1b6bf99f2d46f7b"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02400_y01200_w0400_h0400.png",
+      "bounds": [
+       2400,
+       1200,
+       2800,
+       1600
+      ],
+      "sha256": "8d21e4f2918cf3961914312ceafa3be21d164ba7df7a8d7857bda0c7ed878146"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02800_y00800_w0400_h0400.png",
+      "bounds": [
+       2800,
+       800,
+       3200,
+       1200
+      ],
+      "sha256": "ffe2d71973a5b4f1abe6d47a44a65c0f6b6d133f353a592d944a1fef6b3441b2"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02800_y01200_w0400_h0400.png",
+      "bounds": [
+       2800,
+       1200,
+       3200,
+       1600
+      ],
+      "sha256": "845c3113956c145d4f51849442008af6decf69fd573ed6c4940bc6125ef63c73"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y00800_w0400_h0400.png",
+      "bounds": [
+       3200,
+       800,
+       3600,
+       1200
+      ],
+      "sha256": "21b947e91a611618dcc4ec518f63ea9c3a7875ff76a7f0adcc782384c69ed8c5"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y01200_w0400_h0400.png",
+      "bounds": [
+       3200,
+       1200,
+       3600,
+       1600
+      ],
+      "sha256": "5741209a90520875e85143958e1d3def54235e4381d9839b19f7417d3b8446f0"
+     }
+    ]
+   }
+  },
+  {
+   "id": "R3_mid_void",
+   "name_ko": "중층부 보이드와 정원",
+   "look_for": "중층 개방 슬롯, 기둥, 정원 식재, 슬롯 안 원통",
+   "boxes": [
+    [
+     1700,
+     1150,
+     3250,
+     1480
+    ]
+   ],
+   "tiles": {
+    "DAYLIGHT_FINAL": [
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01600_y00800_w0400_h0400.png",
+      "bounds": [
+       1600,
+       800,
+       2000,
+       1200
+      ],
+      "sha256": "2e73c3e2ab7b95cedcdc3b117c548200f9b267816d6fb50c8b8bc4ec273f9865"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01600_y01200_w0400_h0400.png",
+      "bounds": [
+       1600,
+       1200,
+       2000,
+       1600
+      ],
+      "sha256": "4c5d64d4e0c1698b67b3dad7305ba89158d9f4ed07f4c2dcc03986b7b1be91a0"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02000_y00800_w0400_h0400.png",
+      "bounds": [
+       2000,
+       800,
+       2400,
+       1200
+      ],
+      "sha256": "a4c9586cf791ec9413a0067d59298007b44e1ba20734f294932267fc848ff46c"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02000_y01200_w0400_h0400.png",
+      "bounds": [
+       2000,
+       1200,
+       2400,
+       1600
+      ],
+      "sha256": "19f6259c16743a16663fda6a953fe56602e88e047b8b91638437f95dc7dfb729"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02400_y00800_w0400_h0400.png",
+      "bounds": [
+       2400,
+       800,
+       2800,
+       1200
+      ],
+      "sha256": "13ad16936c9eb35631b686063b5131b21520f8fece8bdb46794c761d591e214a"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02400_y01200_w0400_h0400.png",
+      "bounds": [
+       2400,
+       1200,
+       2800,
+       1600
+      ],
+      "sha256": "163068b8f3021ba6f48a2aff09aa0e8430247967de17d9fac2cdd514e314f263"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02800_y00800_w0400_h0400.png",
+      "bounds": [
+       2800,
+       800,
+       3200,
+       1200
+      ],
+      "sha256": "e31de5384f161692667d036ced45dba10e65462a92a404c276eff5d41c801ae9"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02800_y01200_w0400_h0400.png",
+      "bounds": [
+       2800,
+       1200,
+       3200,
+       1600
+      ],
+      "sha256": "676cd640f4dad0c12110aca74420b95d6e0de2c13c7dde0a843eeec1e64208ea"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y00800_w0400_h0400.png",
+      "bounds": [
+       3200,
+       800,
+       3600,
+       1200
+      ],
+      "sha256": "2e3eb1f5f7a2266e3a4ed535248a20e00fa43d5545b63b1411cdc653c8c87457"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y01200_w0400_h0400.png",
+      "bounds": [
+       3200,
+       1200,
+       3600,
+       1600
+      ],
+      "sha256": "61b038baceeb0cf9dfc78b5240070e0d0b31a4480c90cbc8df38ca2d049d566a"
+     }
+    ],
+    "BLUEHOUR_FINAL": [
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01600_y00800_w0400_h0400.png",
+      "bounds": [
+       1600,
+       800,
+       2000,
+       1200
+      ],
+      "sha256": "874975f66b915c6035e4bae2cb152a4e74654c9cfde01f6f5c0e41a632647c90"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01600_y01200_w0400_h0400.png",
+      "bounds": [
+       1600,
+       1200,
+       2000,
+       1600
+      ],
+      "sha256": "22194da0372f31c56470d043c8bb550af34f34934dea525303e0a7c635569d41"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02000_y00800_w0400_h0400.png",
+      "bounds": [
+       2000,
+       800,
+       2400,
+       1200
+      ],
+      "sha256": "6626317386bbcb630ae718c4e3c3fed4bb93d22039728f977207beac751fd4b1"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02000_y01200_w0400_h0400.png",
+      "bounds": [
+       2000,
+       1200,
+       2400,
+       1600
+      ],
+      "sha256": "1adc3f4a819b06e4063ea21f281129691f5c5cc9aaa7c3eeb45f591ac6cf8824"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02400_y00800_w0400_h0400.png",
+      "bounds": [
+       2400,
+       800,
+       2800,
+       1200
+      ],
+      "sha256": "e3036a3b1e5366883709b4f583412e803d94e32b1c0157a5f1b6bf99f2d46f7b"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02400_y01200_w0400_h0400.png",
+      "bounds": [
+       2400,
+       1200,
+       2800,
+       1600
+      ],
+      "sha256": "8d21e4f2918cf3961914312ceafa3be21d164ba7df7a8d7857bda0c7ed878146"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02800_y00800_w0400_h0400.png",
+      "bounds": [
+       2800,
+       800,
+       3200,
+       1200
+      ],
+      "sha256": "ffe2d71973a5b4f1abe6d47a44a65c0f6b6d133f353a592d944a1fef6b3441b2"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02800_y01200_w0400_h0400.png",
+      "bounds": [
+       2800,
+       1200,
+       3200,
+       1600
+      ],
+      "sha256": "845c3113956c145d4f51849442008af6decf69fd573ed6c4940bc6125ef63c73"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y00800_w0400_h0400.png",
+      "bounds": [
+       3200,
+       800,
+       3600,
+       1200
+      ],
+      "sha256": "21b947e91a611618dcc4ec518f63ea9c3a7875ff76a7f0adcc782384c69ed8c5"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y01200_w0400_h0400.png",
+      "bounds": [
+       3200,
+       1200,
+       3600,
+       1600
+      ],
+      "sha256": "5741209a90520875e85143958e1d3def54235e4381d9839b19f7417d3b8446f0"
+     }
+    ]
+   }
+  },
+  {
+   "id": "R4_cores",
+   "name_ko": "코너 코어",
+   "look_for": "화면에서 보이는 코어 3개. 네 번째 코어는 이 카메라에서 가려짐",
+   "boxes": [
+    [
+     2140,
+     280,
+     2380,
+     2280
+    ],
+    [
+     3150,
+     200,
+     3300,
+     1900
+    ],
+    [
+     1540,
+     60,
+     1690,
+     1750
+    ]
+   ],
+   "tiles": {
+    "DAYLIGHT_FINAL": [
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01200_y00000_w0400_h0400.png",
+      "bounds": [
+       1200,
+       0,
+       1600,
+       400
+      ],
+      "sha256": "279375b7c764b5bff364473beea2bfa473f163868ca5b3ec575efffc0dd3b558"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01200_y00400_w0400_h0400.png",
+      "bounds": [
+       1200,
+       400,
+       1600,
+       800
+      ],
+      "sha256": "dc1f2366782fe9e0caa7aa7c0c844e64ddb57d6e2e116679c3286b6e0f3ed42d"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01600_y00000_w0400_h0400.png",
+      "bounds": [
+       1600,
+       0,
+       2000,
+       400
+      ],
+      "sha256": "95327a4b36392408780a73dd09ae8e25ddfe6eaacf0b39776f4396ff7e54bc8e"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01600_y00400_w0400_h0400.png",
+      "bounds": [
+       1600,
+       400,
+       2000,
+       800
+      ],
+      "sha256": "e2e42e1cb4f3394c68e24c36e78f8af7e46c092b1bd8a1f83c5de76d128e5947"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02000_y00000_w0400_h0400.png",
+      "bounds": [
+       2000,
+       0,
+       2400,
+       400
+      ],
+      "sha256": "9768ea0d0c7c8e86ac38e8302abab6a6cf7da8960bc41f8ddaeed27b8cb60447"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02000_y00400_w0400_h0400.png",
+      "bounds": [
+       2000,
+       400,
+       2400,
+       800
+      ],
+      "sha256": "a9352fe971128f1dd2cb6924de711d620d934ca017776a9ea36e7df4cb4c34f4"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02800_y00000_w0400_h0400.png",
+      "bounds": [
+       2800,
+       0,
+       3200,
+       400
+      ],
+      "sha256": "45d9b6e600dcc8a44935bb1f6d783b3cecf54a57e1ef61d45820e68fe8fa2d88"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02800_y00400_w0400_h0400.png",
+      "bounds": [
+       2800,
+       400,
+       3200,
+       800
+      ],
+      "sha256": "a6683f4a41666443dba65b99505aa4fdaa13a15ba5aee4cac142b206bafc0912"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y00000_w0400_h0400.png",
+      "bounds": [
+       3200,
+       0,
+       3600,
+       400
+      ],
+      "sha256": "16f857f3cece5ae597f9c1243ac8a4955aa8ce9ecaa4ae4ca60355accfb82815"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y00400_w0400_h0400.png",
+      "bounds": [
+       3200,
+       400,
+       3600,
+       800
+      ],
+      "sha256": "f679d560605deeef15134baab2caedfe7fbbd67dc23f7e8512a7a09ac5175924"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01200_y00800_w0400_h0400.png",
+      "bounds": [
+       1200,
+       800,
+       1600,
+       1200
+      ],
+      "sha256": "27abb6adf8ab3b4bd2f4bfb5968dd52d54d004205452225802d1f624a87b4337"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01200_y01200_w0400_h0400.png",
+      "bounds": [
+       1200,
+       1200,
+       1600,
+       1600
+      ],
+      "sha256": "b300292aeba6db33657502259a81cb97786cbcd7bcae951b790dcf1f6cfebd27"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01600_y00800_w0400_h0400.png",
+      "bounds": [
+       1600,
+       800,
+       2000,
+       1200
+      ],
+      "sha256": "2e73c3e2ab7b95cedcdc3b117c548200f9b267816d6fb50c8b8bc4ec273f9865"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01600_y01200_w0400_h0400.png",
+      "bounds": [
+       1600,
+       1200,
+       2000,
+       1600
+      ],
+      "sha256": "4c5d64d4e0c1698b67b3dad7305ba89158d9f4ed07f4c2dcc03986b7b1be91a0"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02000_y00800_w0400_h0400.png",
+      "bounds": [
+       2000,
+       800,
+       2400,
+       1200
+      ],
+      "sha256": "a4c9586cf791ec9413a0067d59298007b44e1ba20734f294932267fc848ff46c"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02000_y01200_w0400_h0400.png",
+      "bounds": [
+       2000,
+       1200,
+       2400,
+       1600
+      ],
+      "sha256": "19f6259c16743a16663fda6a953fe56602e88e047b8b91638437f95dc7dfb729"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02800_y00800_w0400_h0400.png",
+      "bounds": [
+       2800,
+       800,
+       3200,
+       1200
+      ],
+      "sha256": "e31de5384f161692667d036ced45dba10e65462a92a404c276eff5d41c801ae9"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02800_y01200_w0400_h0400.png",
+      "bounds": [
+       2800,
+       1200,
+       3200,
+       1600
+      ],
+      "sha256": "676cd640f4dad0c12110aca74420b95d6e0de2c13c7dde0a843eeec1e64208ea"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y00800_w0400_h0400.png",
+      "bounds": [
+       3200,
+       800,
+       3600,
+       1200
+      ],
+      "sha256": "2e3eb1f5f7a2266e3a4ed535248a20e00fa43d5545b63b1411cdc653c8c87457"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y01200_w0400_h0400.png",
+      "bounds": [
+       3200,
+       1200,
+       3600,
+       1600
+      ],
+      "sha256": "61b038baceeb0cf9dfc78b5240070e0d0b31a4480c90cbc8df38ca2d049d566a"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01200_y01600_w0400_h0400.png",
+      "bounds": [
+       1200,
+       1600,
+       1600,
+       2000
+      ],
+      "sha256": "d4784f807b5af01305fe5b28da0f7f16a742c1887d042134acdc51f2d760500c"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01600_y01600_w0400_h0400.png",
+      "bounds": [
+       1600,
+       1600,
+       2000,
+       2000
+      ],
+      "sha256": "5b797a1ae3f2378a48fff4a0b12f0d1019324947b3f9c8b7cb4c24fcb7ac5d10"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02000_y01600_w0400_h0400.png",
+      "bounds": [
+       2000,
+       1600,
+       2400,
+       2000
+      ],
+      "sha256": "31b9ac29f7d66fea3242ecb43ea9f1ed679e77b47fd4b42db3ad73901e763c1a"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02000_y02000_w0400_h0400.png",
+      "bounds": [
+       2000,
+       2000,
+       2400,
+       2400
+      ],
+      "sha256": "0b5fab15f9d60848261d1720acaec98a1cc9062e10d31715028ee91c7099f74a"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02800_y01600_w0400_h0400.png",
+      "bounds": [
+       2800,
+       1600,
+       3200,
+       2000
+      ],
+      "sha256": "f42f149a43ed81ec01c83b5910eb6188496bfb785ac83e53f33bc24716a8d3cf"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y01600_w0400_h0400.png",
+      "bounds": [
+       3200,
+       1600,
+       3600,
+       2000
+      ],
+      "sha256": "725dbf61acc4dfb77c1de93982a4523d913d14de07b00e88fa0b7f92d9bab0b1"
+     }
+    ],
+    "BLUEHOUR_FINAL": [
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01200_y00000_w0400_h0400.png",
+      "bounds": [
+       1200,
+       0,
+       1600,
+       400
+      ],
+      "sha256": "e43e4396c2a12bd83c2feec997e02b77f0b1eccfd1e882dca2b9c635146c2a91"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01200_y00400_w0400_h0400.png",
+      "bounds": [
+       1200,
+       400,
+       1600,
+       800
+      ],
+      "sha256": "5f7531a9ddab0b381b17839446bf24a98c6a74f7fcfd505ab19a57c6beefa84d"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01600_y00000_w0400_h0400.png",
+      "bounds": [
+       1600,
+       0,
+       2000,
+       400
+      ],
+      "sha256": "459a8f62f8d46b9714d4bb9d90af1f9fbc28482178ccfd3fa2c6179ab2641267"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01600_y00400_w0400_h0400.png",
+      "bounds": [
+       1600,
+       400,
+       2000,
+       800
+      ],
+      "sha256": "e254e17f148b02ecdeeebd0d9d68b085fd87f8b796815e22dce7bd10e08399cc"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02000_y00000_w0400_h0400.png",
+      "bounds": [
+       2000,
+       0,
+       2400,
+       400
+      ],
+      "sha256": "0946637580d4ff83f5c90003c52c87e34ada69af41edca41319c433091df018e"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02000_y00400_w0400_h0400.png",
+      "bounds": [
+       2000,
+       400,
+       2400,
+       800
+      ],
+      "sha256": "b7e8c6242b3f574209ad186d32075931562db53cc762c64485545172871ecf1e"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02800_y00000_w0400_h0400.png",
+      "bounds": [
+       2800,
+       0,
+       3200,
+       400
+      ],
+      "sha256": "9e977a3022f5615ad1d8065e5d4e5ee2eef25913929619527ecbd2e0a9ebcdd5"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02800_y00400_w0400_h0400.png",
+      "bounds": [
+       2800,
+       400,
+       3200,
+       800
+      ],
+      "sha256": "8514eb8f566f0a2fd7104a6034edb551ec71dd1e96095cc7c5012001ce0287a4"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y00000_w0400_h0400.png",
+      "bounds": [
+       3200,
+       0,
+       3600,
+       400
+      ],
+      "sha256": "047b7fddae17779e1c7ad943eee92f5dcf3db08a684d4f91cadaee57f8152002"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y00400_w0400_h0400.png",
+      "bounds": [
+       3200,
+       400,
+       3600,
+       800
+      ],
+      "sha256": "abc3929c4845859a9973170209f0d5e9781b2d62ab1961aac2ecc476728e5ce8"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01200_y00800_w0400_h0400.png",
+      "bounds": [
+       1200,
+       800,
+       1600,
+       1200
+      ],
+      "sha256": "406989ad4929e142a10cd7386e79c5875e15b22e6bd838f6d5e2925366b7de22"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01200_y01200_w0400_h0400.png",
+      "bounds": [
+       1200,
+       1200,
+       1600,
+       1600
+      ],
+      "sha256": "c5d294a7edb5f1417a1793c82201e27c12c48eb853344fca9490c6c0146d1275"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01600_y00800_w0400_h0400.png",
+      "bounds": [
+       1600,
+       800,
+       2000,
+       1200
+      ],
+      "sha256": "874975f66b915c6035e4bae2cb152a4e74654c9cfde01f6f5c0e41a632647c90"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01600_y01200_w0400_h0400.png",
+      "bounds": [
+       1600,
+       1200,
+       2000,
+       1600
+      ],
+      "sha256": "22194da0372f31c56470d043c8bb550af34f34934dea525303e0a7c635569d41"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02000_y00800_w0400_h0400.png",
+      "bounds": [
+       2000,
+       800,
+       2400,
+       1200
+      ],
+      "sha256": "6626317386bbcb630ae718c4e3c3fed4bb93d22039728f977207beac751fd4b1"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02000_y01200_w0400_h0400.png",
+      "bounds": [
+       2000,
+       1200,
+       2400,
+       1600
+      ],
+      "sha256": "1adc3f4a819b06e4063ea21f281129691f5c5cc9aaa7c3eeb45f591ac6cf8824"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02800_y00800_w0400_h0400.png",
+      "bounds": [
+       2800,
+       800,
+       3200,
+       1200
+      ],
+      "sha256": "ffe2d71973a5b4f1abe6d47a44a65c0f6b6d133f353a592d944a1fef6b3441b2"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02800_y01200_w0400_h0400.png",
+      "bounds": [
+       2800,
+       1200,
+       3200,
+       1600
+      ],
+      "sha256": "845c3113956c145d4f51849442008af6decf69fd573ed6c4940bc6125ef63c73"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y00800_w0400_h0400.png",
+      "bounds": [
+       3200,
+       800,
+       3600,
+       1200
+      ],
+      "sha256": "21b947e91a611618dcc4ec518f63ea9c3a7875ff76a7f0adcc782384c69ed8c5"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y01200_w0400_h0400.png",
+      "bounds": [
+       3200,
+       1200,
+       3600,
+       1600
+      ],
+      "sha256": "5741209a90520875e85143958e1d3def54235e4381d9839b19f7417d3b8446f0"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01200_y01600_w0400_h0400.png",
+      "bounds": [
+       1200,
+       1600,
+       1600,
+       2000
+      ],
+      "sha256": "10ed0b9b771942871d7e22e109a41875543f46ac780c01f715c564a379d22c81"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01600_y01600_w0400_h0400.png",
+      "bounds": [
+       1600,
+       1600,
+       2000,
+       2000
+      ],
+      "sha256": "cb7f29d3d3a85495529e819fde36cc989026abd18ad2fb3a79a2a21b8d98f2a9"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02000_y01600_w0400_h0400.png",
+      "bounds": [
+       2000,
+       1600,
+       2400,
+       2000
+      ],
+      "sha256": "612d94195bf9bad480d110e8d764fce24176443bed3d220da189da6993677ccf"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02000_y02000_w0400_h0400.png",
+      "bounds": [
+       2000,
+       2000,
+       2400,
+       2400
+      ],
+      "sha256": "3dbdcd07f3f66c015ddcc808f3cc1a4eb4864c8b768c05f3d0b8a764aeb41331"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02800_y01600_w0400_h0400.png",
+      "bounds": [
+       2800,
+       1600,
+       3200,
+       2000
+      ],
+      "sha256": "8a3ecb0b27b7054f7b51f20c0bc1a60d5cd6e876a641bc30f76e0c4e234277dd"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y01600_w0400_h0400.png",
+      "bounds": [
+       3200,
+       1600,
+       3600,
+       2000
+      ],
+      "sha256": "8e507b5a651433ee684def6e78500508dae10c31b0a8638a4eade85e95db99f1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "R5_tubes",
+   "name_ko": "수직 튜브 (T1–T4 계열, 지붕·중층·지상)",
+   "look_for": "원통형 튜브의 지붕 상단, 중층 슬롯, 지상 진입부. T1–T4 번호 대응은 도면 대조가 필요",
+   "boxes": [
+    [
+     2150,
+     100,
+     3050,
+     430
+    ],
+    [
+     2450,
+     1200,
+     3150,
+     1480
+    ],
+    [
+     2500,
+     1780,
+     2800,
+     2080
+    ]
+   ],
+   "tiles": {
+    "DAYLIGHT_FINAL": [
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02000_y00000_w0400_h0400.png",
+      "bounds": [
+       2000,
+       0,
+       2400,
+       400
+      ],
+      "sha256": "9768ea0d0c7c8e86ac38e8302abab6a6cf7da8960bc41f8ddaeed27b8cb60447"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02000_y00400_w0400_h0400.png",
+      "bounds": [
+       2000,
+       400,
+       2400,
+       800
+      ],
+      "sha256": "a9352fe971128f1dd2cb6924de711d620d934ca017776a9ea36e7df4cb4c34f4"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02400_y00000_w0400_h0400.png",
+      "bounds": [
+       2400,
+       0,
+       2800,
+       400
+      ],
+      "sha256": "8ff2d8f27a0557414cea9a82e30e28da6fd5fd546d21dabdda7a116228679566"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02400_y00400_w0400_h0400.png",
+      "bounds": [
+       2400,
+       400,
+       2800,
+       800
+      ],
+      "sha256": "8a4c714cdd454d87481e5e74bee96b7359eaeb7257f4142cf12a77ad29ee971c"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02800_y00000_w0400_h0400.png",
+      "bounds": [
+       2800,
+       0,
+       3200,
+       400
+      ],
+      "sha256": "45d9b6e600dcc8a44935bb1f6d783b3cecf54a57e1ef61d45820e68fe8fa2d88"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02800_y00400_w0400_h0400.png",
+      "bounds": [
+       2800,
+       400,
+       3200,
+       800
+      ],
+      "sha256": "a6683f4a41666443dba65b99505aa4fdaa13a15ba5aee4cac142b206bafc0912"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02400_y01200_w0400_h0400.png",
+      "bounds": [
+       2400,
+       1200,
+       2800,
+       1600
+      ],
+      "sha256": "163068b8f3021ba6f48a2aff09aa0e8430247967de17d9fac2cdd514e314f263"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02800_y01200_w0400_h0400.png",
+      "bounds": [
+       2800,
+       1200,
+       3200,
+       1600
+      ],
+      "sha256": "676cd640f4dad0c12110aca74420b95d6e0de2c13c7dde0a843eeec1e64208ea"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02400_y01600_w0400_h0400.png",
+      "bounds": [
+       2400,
+       1600,
+       2800,
+       2000
+      ],
+      "sha256": "16a595121bb2ff91b84a43b1d72daf991abb0ebdebbece7d1d92e40d1b13e128"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02400_y02000_w0400_h0400.png",
+      "bounds": [
+       2400,
+       2000,
+       2800,
+       2400
+      ],
+      "sha256": "bd6415e6a3de93f5e3c317a5ecad5d95ddbb761e76739195eef70aef124f497b"
+     }
+    ],
+    "BLUEHOUR_FINAL": [
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02000_y00000_w0400_h0400.png",
+      "bounds": [
+       2000,
+       0,
+       2400,
+       400
+      ],
+      "sha256": "0946637580d4ff83f5c90003c52c87e34ada69af41edca41319c433091df018e"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02000_y00400_w0400_h0400.png",
+      "bounds": [
+       2000,
+       400,
+       2400,
+       800
+      ],
+      "sha256": "b7e8c6242b3f574209ad186d32075931562db53cc762c64485545172871ecf1e"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02400_y00000_w0400_h0400.png",
+      "bounds": [
+       2400,
+       0,
+       2800,
+       400
+      ],
+      "sha256": "15e24341bdc825b7fa1c4abb977a2ecd4b6f00f628cb1355bc2ae15d16cd7ef2"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02400_y00400_w0400_h0400.png",
+      "bounds": [
+       2400,
+       400,
+       2800,
+       800
+      ],
+      "sha256": "64e34fe276d28017b6b4fee06a8c68217680a4cda260bf6f3ff68ffd7d3a3905"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02800_y00000_w0400_h0400.png",
+      "bounds": [
+       2800,
+       0,
+       3200,
+       400
+      ],
+      "sha256": "9e977a3022f5615ad1d8065e5d4e5ee2eef25913929619527ecbd2e0a9ebcdd5"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02800_y00400_w0400_h0400.png",
+      "bounds": [
+       2800,
+       400,
+       3200,
+       800
+      ],
+      "sha256": "8514eb8f566f0a2fd7104a6034edb551ec71dd1e96095cc7c5012001ce0287a4"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02400_y01200_w0400_h0400.png",
+      "bounds": [
+       2400,
+       1200,
+       2800,
+       1600
+      ],
+      "sha256": "8d21e4f2918cf3961914312ceafa3be21d164ba7df7a8d7857bda0c7ed878146"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02800_y01200_w0400_h0400.png",
+      "bounds": [
+       2800,
+       1200,
+       3200,
+       1600
+      ],
+      "sha256": "845c3113956c145d4f51849442008af6decf69fd573ed6c4940bc6125ef63c73"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02400_y01600_w0400_h0800.png",
+      "bounds": [
+       2400,
+       1600,
+       2800,
+       2400
+      ],
+      "sha256": "a69b248e3c0aa948191490a79b263663fc896539800f2b241475b5ece08c2216"
+     }
+    ]
+   }
+  },
+  {
+   "id": "R6_entrance",
+   "name_ko": "저층부 진입 램프와 1층 기둥",
+   "look_for": "램프 쐐기, 1층 기둥열, 캐노피, 선큰 진입",
+   "boxes": [
+    [
+     2150,
+     1750,
+     3000,
+     2330
+    ]
+   ],
+   "tiles": {
+    "DAYLIGHT_FINAL": [
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02000_y01600_w0400_h0400.png",
+      "bounds": [
+       2000,
+       1600,
+       2400,
+       2000
+      ],
+      "sha256": "31b9ac29f7d66fea3242ecb43ea9f1ed679e77b47fd4b42db3ad73901e763c1a"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02000_y02000_w0400_h0400.png",
+      "bounds": [
+       2000,
+       2000,
+       2400,
+       2400
+      ],
+      "sha256": "0b5fab15f9d60848261d1720acaec98a1cc9062e10d31715028ee91c7099f74a"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02400_y01600_w0400_h0400.png",
+      "bounds": [
+       2400,
+       1600,
+       2800,
+       2000
+      ],
+      "sha256": "16a595121bb2ff91b84a43b1d72daf991abb0ebdebbece7d1d92e40d1b13e128"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02400_y02000_w0400_h0400.png",
+      "bounds": [
+       2400,
+       2000,
+       2800,
+       2400
+      ],
+      "sha256": "bd6415e6a3de93f5e3c317a5ecad5d95ddbb761e76739195eef70aef124f497b"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02800_y01600_w0400_h0400.png",
+      "bounds": [
+       2800,
+       1600,
+       3200,
+       2000
+      ],
+      "sha256": "f42f149a43ed81ec01c83b5910eb6188496bfb785ac83e53f33bc24716a8d3cf"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02800_y02000_w0400_h0400.png",
+      "bounds": [
+       2800,
+       2000,
+       3200,
+       2400
+      ],
+      "sha256": "4646e55058cc5f23238a577ff9daa171744597ff4ce7ee73c627af438687526f"
+     }
+    ],
+    "BLUEHOUR_FINAL": [
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02000_y01600_w0400_h0400.png",
+      "bounds": [
+       2000,
+       1600,
+       2400,
+       2000
+      ],
+      "sha256": "612d94195bf9bad480d110e8d764fce24176443bed3d220da189da6993677ccf"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02000_y02000_w0400_h0400.png",
+      "bounds": [
+       2000,
+       2000,
+       2400,
+       2400
+      ],
+      "sha256": "3dbdcd07f3f66c015ddcc808f3cc1a4eb4864c8b768c05f3d0b8a764aeb41331"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02400_y01600_w0400_h0800.png",
+      "bounds": [
+       2400,
+       1600,
+       2800,
+       2400
+      ],
+      "sha256": "a69b248e3c0aa948191490a79b263663fc896539800f2b241475b5ece08c2216"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02800_y01600_w0400_h0400.png",
+      "bounds": [
+       2800,
+       1600,
+       3200,
+       2000
+      ],
+      "sha256": "8a3ecb0b27b7054f7b51f20c0bc1a60d5cd6e876a641bc30f76e0c4e234277dd"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02800_y02000_w0400_h0400.png",
+      "bounds": [
+       2800,
+       2000,
+       3200,
+       2400
+      ],
+      "sha256": "0ef0f892f59ddb83c4322204e80b5cdaaa60fbec4fe0adbf6d599d0d77a88b4d"
+     }
+    ]
+   }
+  },
+  {
+   "id": "R7_streets",
+   "name_ko": "건물 주변 도로·횡단보도",
+   "look_for": "차로, 차선, 횡단보도, 보도, 가로수 배치",
+   "boxes": [
+    [
+     500,
+     2000,
+     4800,
+     2700
+    ]
+   ],
+   "tiles": {
+    "DAYLIGHT_FINAL": [
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x00400_y02000_w0400_h0400.png",
+      "bounds": [
+       400,
+       2000,
+       800,
+       2400
+      ],
+      "sha256": "583f4ba37ab7c2ab0a5fc0b0f21ee8db6a641ddab46d41e0680a604e64bd9160"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x00800_y02000_w0400_h0400.png",
+      "bounds": [
+       800,
+       2000,
+       1200,
+       2400
+      ],
+      "sha256": "4351612ed6c203c04f30eda82983786eb0a87e57ba0821210c35a250c30096c4"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01200_y02000_w0400_h0400.png",
+      "bounds": [
+       1200,
+       2000,
+       1600,
+       2400
+      ],
+      "sha256": "4131f0ad303dbf3f72ca7db2306b25911b2856f26f21d21df0e4df280e6ba015"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01600_y02000_w0400_h0400.png",
+      "bounds": [
+       1600,
+       2000,
+       2000,
+       2400
+      ],
+      "sha256": "9dfb7818b44632214a60706ee24f32c7fcf7c5f2beda170c1c5334b0b847dba3"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02000_y02000_w0400_h0400.png",
+      "bounds": [
+       2000,
+       2000,
+       2400,
+       2400
+      ],
+      "sha256": "0b5fab15f9d60848261d1720acaec98a1cc9062e10d31715028ee91c7099f74a"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02400_y02000_w0400_h0400.png",
+      "bounds": [
+       2400,
+       2000,
+       2800,
+       2400
+      ],
+      "sha256": "bd6415e6a3de93f5e3c317a5ecad5d95ddbb761e76739195eef70aef124f497b"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02800_y02000_w0400_h0400.png",
+      "bounds": [
+       2800,
+       2000,
+       3200,
+       2400
+      ],
+      "sha256": "4646e55058cc5f23238a577ff9daa171744597ff4ce7ee73c627af438687526f"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y02000_w0400_h0400.png",
+      "bounds": [
+       3200,
+       2000,
+       3600,
+       2400
+      ],
+      "sha256": "0a7677d6ce1def535acc2a69ee862d9d2d0ed0f29e9176cfc1fa1a665b3ec015"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03600_y02000_w0400_h0400.png",
+      "bounds": [
+       3600,
+       2000,
+       4000,
+       2400
+      ],
+      "sha256": "2a3a3b6e67f657cdb98488461898bfbb3693d454d23416706a6a517ddb356aff"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x04000_y02000_w0400_h0400.png",
+      "bounds": [
+       4000,
+       2000,
+       4400,
+       2400
+      ],
+      "sha256": "23b4ee6513e7c06b63fd7cbecd81c7fb7e09216d0f9685a3ea993e59e538e9d7"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x04400_y02000_w0400_h0400.png",
+      "bounds": [
+       4400,
+       2000,
+       4800,
+       2400
+      ],
+      "sha256": "f7dff05e92a98afb6dd81c223e582217ee645216c24540cf943a68704c7ad313"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x00000_y02400_w0800_h0300.png",
+      "bounds": [
+       0,
+       2400,
+       800,
+       2700
+      ],
+      "sha256": "1b09397c799223cf497dd57703db0d6a377dcad413b63aee1bc1a90d8f99526d"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x00800_y02400_w0800_h0300.png",
+      "bounds": [
+       800,
+       2400,
+       1600,
+       2700
+      ],
+      "sha256": "740977f4670fc6f29d48b9905985258f7ff79ee33e2db863a23e81c39edff16b"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01600_y02400_w0800_h0300.png",
+      "bounds": [
+       1600,
+       2400,
+       2400,
+       2700
+      ],
+      "sha256": "3da34deedbf3578a9df7d3b917449ec25ac422d9bfbb8aacda85d33787f102d4"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x02400_y02400_w0800_h0300.png",
+      "bounds": [
+       2400,
+       2400,
+       3200,
+       2700
+      ],
+      "sha256": "6d7e01f5e60052f0dba48f457fa3b2f04b089a13f42040e9e834563abb7a5a98"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y02400_w0800_h0300.png",
+      "bounds": [
+       3200,
+       2400,
+       4000,
+       2700
+      ],
+      "sha256": "bf49f964514cef0d6ebb651602d0e5061a9537754136c31776bf8a00b186ad5e"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x04000_y02400_w0800_h0300.png",
+      "bounds": [
+       4000,
+       2400,
+       4800,
+       2700
+      ],
+      "sha256": "76b9abbe1b25db07f17acf44176a9eb9b21f51973b411ff7791fea40a8612ed1"
+     }
+    ],
+    "BLUEHOUR_FINAL": [
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x00400_y02000_w0400_h0400.png",
+      "bounds": [
+       400,
+       2000,
+       800,
+       2400
+      ],
+      "sha256": "5b00d8f2812a6acb6cd925fe3ed8b8e959b9cbe4b0087b4f414a6dd9f8badc22"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x00800_y02000_w0400_h0400.png",
+      "bounds": [
+       800,
+       2000,
+       1200,
+       2400
+      ],
+      "sha256": "e85908f2e727a360f5caefd7cf1607682a3449a243f95141d1ca5dd239b38ebf"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01200_y02000_w0400_h0400.png",
+      "bounds": [
+       1200,
+       2000,
+       1600,
+       2400
+      ],
+      "sha256": "ad86f6933c20cdc32809540efe57231ffbd4c3f772a1db50856bae22cc8652bc"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01600_y02000_w0400_h0400.png",
+      "bounds": [
+       1600,
+       2000,
+       2000,
+       2400
+      ],
+      "sha256": "80524e396a8bf98bc149c615bd004b1d5208c6b40cabae4c5775797f442d6032"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02000_y02000_w0400_h0400.png",
+      "bounds": [
+       2000,
+       2000,
+       2400,
+       2400
+      ],
+      "sha256": "3dbdcd07f3f66c015ddcc808f3cc1a4eb4864c8b768c05f3d0b8a764aeb41331"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02400_y01600_w0400_h0800.png",
+      "bounds": [
+       2400,
+       1600,
+       2800,
+       2400
+      ],
+      "sha256": "a69b248e3c0aa948191490a79b263663fc896539800f2b241475b5ece08c2216"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02800_y02000_w0400_h0400.png",
+      "bounds": [
+       2800,
+       2000,
+       3200,
+       2400
+      ],
+      "sha256": "0ef0f892f59ddb83c4322204e80b5cdaaa60fbec4fe0adbf6d599d0d77a88b4d"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y02000_w0400_h0400.png",
+      "bounds": [
+       3200,
+       2000,
+       3600,
+       2400
+      ],
+      "sha256": "3bb3975f6ee796283f3df7e5a2ef0f5d0e270a82254e3442dfa2ddc34f7de571"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03600_y02000_w0400_h0400.png",
+      "bounds": [
+       3600,
+       2000,
+       4000,
+       2400
+      ],
+      "sha256": "d3d54d1828763827e301114cb0cc319b3332c78724ef483af2a061f5220d18ba"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x04000_y02000_w0400_h0400.png",
+      "bounds": [
+       4000,
+       2000,
+       4400,
+       2400
+      ],
+      "sha256": "15b27b939ec631d7c574a94eeb507c3a4eb77d0da4665a4c35b899c539bd2f4d"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x04400_y02000_w0400_h0400.png",
+      "bounds": [
+       4400,
+       2000,
+       4800,
+       2400
+      ],
+      "sha256": "fd6b5f0f82ded962811337a9b7845b533c00e6a11fe2b3feb742de0aa0952a38"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x00000_y02400_w0800_h0300.png",
+      "bounds": [
+       0,
+       2400,
+       800,
+       2700
+      ],
+      "sha256": "55243ea1e764d105c15bdde3e0f9f0f5cf9fe34ec187314b85b8785f509f9935"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x00800_y02400_w0800_h0300.png",
+      "bounds": [
+       800,
+       2400,
+       1600,
+       2700
+      ],
+      "sha256": "a74364aad3798ae615b0dc690f5ff4d7e53cc735769cd75ebc0edeedfffc1444"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01600_y02400_w0800_h0300.png",
+      "bounds": [
+       1600,
+       2400,
+       2400,
+       2700
+      ],
+      "sha256": "81c0b01e6f3b322ffc9ee1a6d889c80ee377086eac89aeb51ab61c40aad57883"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x02400_y02400_w0800_h0300.png",
+      "bounds": [
+       2400,
+       2400,
+       3200,
+       2700
+      ],
+      "sha256": "54f03dd59d7f4dbdb394b40d1757c8b3945ac89a2e6fd4aa48f98c90afabf0e0"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y02400_w0800_h0300.png",
+      "bounds": [
+       3200,
+       2400,
+       4000,
+       2700
+      ],
+      "sha256": "f1a02e250a0ab412c8e619aefee56e8f201e8fcc966674fdc795b34122c83e3b"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x04000_y02400_w0800_h0300.png",
+      "bounds": [
+       4000,
+       2400,
+       4800,
+       2700
+      ],
+      "sha256": "9e49cfc02da7e1c6b538b87dafb818b6e071926e2ef682d1fb2cd5f7fba22aca"
+     }
+    ]
+   }
+  },
+  {
+   "id": "R8_context",
+   "name_ko": "실제 위치와 연결되는 도시 맥락",
+   "look_for": "이웃 건물 규모감, 스카이라인, 유리 커튼월 건물. 높이 다수는 가정값",
+   "boxes": [
+    [
+     0,
+     0,
+     1560,
+     900
+    ],
+    [
+     3300,
+     150,
+     4800,
+     1800
+    ]
+   ],
+   "tiles": {
+    "DAYLIGHT_FINAL": [
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x00000_y00000_w0400_h0400.png",
+      "bounds": [
+       0,
+       0,
+       400,
+       400
+      ],
+      "sha256": "3aa7a85e113945d03da9b9a327ad97a15f4a1d941e32a6029f94189c7fc3395e"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x00000_y00400_w0400_h0400.png",
+      "bounds": [
+       0,
+       400,
+       400,
+       800
+      ],
+      "sha256": "97e1c0a5cab43218aca87d4697b687511d24752f1bada7d7a6ae2889c971a3c8"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x00400_y00000_w0400_h0400.png",
+      "bounds": [
+       400,
+       0,
+       800,
+       400
+      ],
+      "sha256": "3282186354dbc359b96d36fd96bfa5f6cc922e37d659c9d3c641f3e8055086d5"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x00400_y00400_w0400_h0400.png",
+      "bounds": [
+       400,
+       400,
+       800,
+       800
+      ],
+      "sha256": "306b1e74486b9f5be6afd17c96c52c0a14ff51a69fd0338b983c23f866711be6"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x00800_y00000_w0400_h0400.png",
+      "bounds": [
+       800,
+       0,
+       1200,
+       400
+      ],
+      "sha256": "85a72cb4bafc5d6233e0c6bf8fc7f4f5bb89cdde8c8a8986b5de927547ef4bd6"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x00800_y00400_w0400_h0400.png",
+      "bounds": [
+       800,
+       400,
+       1200,
+       800
+      ],
+      "sha256": "bd18b604d887f6ce7cfc430eb47649d140a35fa80506244544eacc93b72fe69c"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01200_y00000_w0400_h0400.png",
+      "bounds": [
+       1200,
+       0,
+       1600,
+       400
+      ],
+      "sha256": "279375b7c764b5bff364473beea2bfa473f163868ca5b3ec575efffc0dd3b558"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01200_y00400_w0400_h0400.png",
+      "bounds": [
+       1200,
+       400,
+       1600,
+       800
+      ],
+      "sha256": "dc1f2366782fe9e0caa7aa7c0c844e64ddb57d6e2e116679c3286b6e0f3ed42d"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y00000_w0400_h0400.png",
+      "bounds": [
+       3200,
+       0,
+       3600,
+       400
+      ],
+      "sha256": "16f857f3cece5ae597f9c1243ac8a4955aa8ce9ecaa4ae4ca60355accfb82815"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y00400_w0400_h0400.png",
+      "bounds": [
+       3200,
+       400,
+       3600,
+       800
+      ],
+      "sha256": "f679d560605deeef15134baab2caedfe7fbbd67dc23f7e8512a7a09ac5175924"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03600_y00000_w0400_h0400.png",
+      "bounds": [
+       3600,
+       0,
+       4000,
+       400
+      ],
+      "sha256": "a6747867b9ac0d74c5a043495d2dad69737c1ec91f4a6ff204c9ea20c106ae31"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03600_y00400_w0400_h0400.png",
+      "bounds": [
+       3600,
+       400,
+       4000,
+       800
+      ],
+      "sha256": "26c034c42485d9c23842a580aea01ecaaea2e4c427c58700bd46d5d5fd381f2e"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x04000_y00000_w0400_h0400.png",
+      "bounds": [
+       4000,
+       0,
+       4400,
+       400
+      ],
+      "sha256": "4f86e5a67552bc214b98c20c44acb587b3a7e64ebc0a2f4650b7fd3e7b298345"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x04000_y00400_w0400_h0400.png",
+      "bounds": [
+       4000,
+       400,
+       4400,
+       800
+      ],
+      "sha256": "55fc3f589241bcb37e82a7736c4366de01c100803e870e1d18d0cc7553ea24d5"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x04400_y00000_w0400_h0400.png",
+      "bounds": [
+       4400,
+       0,
+       4800,
+       400
+      ],
+      "sha256": "cc8c69390a9e6a18676996fe361a87562cf96857543f0b52e91b812040b3670f"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x04400_y00400_w0400_h0400.png",
+      "bounds": [
+       4400,
+       400,
+       4800,
+       800
+      ],
+      "sha256": "0d736be1be0edef6ebfea426ea8bc348728c07089ef64b8f4ecbb0574c1563fc"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x00000_y00800_w0400_h0400.png",
+      "bounds": [
+       0,
+       800,
+       400,
+       1200
+      ],
+      "sha256": "da8a8310389962094b6c6aec9bbd1cc78497f7b5a7d8880f3c014567935f63c1"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x00400_y00800_w0400_h0400.png",
+      "bounds": [
+       400,
+       800,
+       800,
+       1200
+      ],
+      "sha256": "3c1caba9bf39ec37a454234b7d4a284b77d1a299edc162873455d9427611e042"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x00800_y00800_w0400_h0400.png",
+      "bounds": [
+       800,
+       800,
+       1200,
+       1200
+      ],
+      "sha256": "42e4c9e2c0e1678c812efeb01a9ebff075eb05ec8bd2398bfb0fc795c8781ddd"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x01200_y00800_w0400_h0400.png",
+      "bounds": [
+       1200,
+       800,
+       1600,
+       1200
+      ],
+      "sha256": "27abb6adf8ab3b4bd2f4bfb5968dd52d54d004205452225802d1f624a87b4337"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y00800_w0400_h0400.png",
+      "bounds": [
+       3200,
+       800,
+       3600,
+       1200
+      ],
+      "sha256": "2e3eb1f5f7a2266e3a4ed535248a20e00fa43d5545b63b1411cdc653c8c87457"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y01200_w0400_h0400.png",
+      "bounds": [
+       3200,
+       1200,
+       3600,
+       1600
+      ],
+      "sha256": "61b038baceeb0cf9dfc78b5240070e0d0b31a4480c90cbc8df38ca2d049d566a"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03600_y00800_w0400_h0400.png",
+      "bounds": [
+       3600,
+       800,
+       4000,
+       1200
+      ],
+      "sha256": "f8b7b87f6fb5f323533f0d06e63e2c46da5855d1fb80e9f67156e0981b543af0"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03600_y01200_w0400_h0400.png",
+      "bounds": [
+       3600,
+       1200,
+       4000,
+       1600
+      ],
+      "sha256": "ab3dc390bb934932090fc6af9152ca2178f81a5b00507b536a6c3f3b3648ba50"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x04000_y00800_w0400_h0400.png",
+      "bounds": [
+       4000,
+       800,
+       4400,
+       1200
+      ],
+      "sha256": "342a94d0e7ccc7bbc3f0f2cc0b9c63ef2e741ae1c388f50dff2423a2389843cf"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x04000_y01200_w0400_h0400.png",
+      "bounds": [
+       4000,
+       1200,
+       4400,
+       1600
+      ],
+      "sha256": "be2225e3f59b2f9aaeca8c0f2f7c3f18f21ab1300eb3f173b0d188ff5276bad5"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x04400_y00800_w0400_h0400.png",
+      "bounds": [
+       4400,
+       800,
+       4800,
+       1200
+      ],
+      "sha256": "1efc06b01327b91e8e08c02942417bd9262933b07e151e6ea7f7f85fe9fd5416"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x04400_y01200_w0400_h0400.png",
+      "bounds": [
+       4400,
+       1200,
+       4800,
+       1600
+      ],
+      "sha256": "eca93182ea4cb5e3dcdc6b18960b108169912836f98558834943a57e852856ac"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03200_y01600_w0400_h0400.png",
+      "bounds": [
+       3200,
+       1600,
+       3600,
+       2000
+      ],
+      "sha256": "725dbf61acc4dfb77c1de93982a4523d913d14de07b00e88fa0b7f92d9bab0b1"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x03600_y01600_w0400_h0400.png",
+      "bounds": [
+       3600,
+       1600,
+       4000,
+       2000
+      ],
+      "sha256": "06711d7fd6828cb4e1c276bbdaa95c60c038a92806c24d41b3328d830afccb16"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x04000_y01600_w0400_h0400.png",
+      "bounds": [
+       4000,
+       1600,
+       4400,
+       2000
+      ],
+      "sha256": "b6303c457552b661379b4188e7c167cd08b6049caa9ec74b1303a6b01208b525"
+     },
+     {
+      "path": "images/DAYLIGHT_FINAL/tiles/x04400_y01600_w0400_h0400.png",
+      "bounds": [
+       4400,
+       1600,
+       4800,
+       2000
+      ],
+      "sha256": "69b51a15762b7d929fed95735a25942e87a889b0a18eef806bef413b87e3d1d4"
+     }
+    ],
+    "BLUEHOUR_FINAL": [
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x00000_y00000_w0400_h0800.png",
+      "bounds": [
+       0,
+       0,
+       400,
+       800
+      ],
+      "sha256": "5362b9e9809da47319243bd030f516e6437ff71ecda9656f9c0c772292eeee64"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x00400_y00000_w0400_h0400.png",
+      "bounds": [
+       400,
+       0,
+       800,
+       400
+      ],
+      "sha256": "8c6dc49382e977efd3044a634cfd52f0fadb95703a7905eb322f020097f1bad8"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x00400_y00400_w0400_h0400.png",
+      "bounds": [
+       400,
+       400,
+       800,
+       800
+      ],
+      "sha256": "c8c47da2a6bc775ae780fcb9c50ee8315e35ef48a102a09b9b3524fd1f5259e4"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x00800_y00000_w0400_h0400.png",
+      "bounds": [
+       800,
+       0,
+       1200,
+       400
+      ],
+      "sha256": "14cc70003700e75c44eee693758fb7b01a7e761a5f463a4df3234909a1a237c8"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x00800_y00400_w0400_h0400.png",
+      "bounds": [
+       800,
+       400,
+       1200,
+       800
+      ],
+      "sha256": "6215a0a63f58284870ee2d351e1226c5301e764c854583b806c2d7f81e5d8ac6"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01200_y00000_w0400_h0400.png",
+      "bounds": [
+       1200,
+       0,
+       1600,
+       400
+      ],
+      "sha256": "e43e4396c2a12bd83c2feec997e02b77f0b1eccfd1e882dca2b9c635146c2a91"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01200_y00400_w0400_h0400.png",
+      "bounds": [
+       1200,
+       400,
+       1600,
+       800
+      ],
+      "sha256": "5f7531a9ddab0b381b17839446bf24a98c6a74f7fcfd505ab19a57c6beefa84d"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y00000_w0400_h0400.png",
+      "bounds": [
+       3200,
+       0,
+       3600,
+       400
+      ],
+      "sha256": "047b7fddae17779e1c7ad943eee92f5dcf3db08a684d4f91cadaee57f8152002"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y00400_w0400_h0400.png",
+      "bounds": [
+       3200,
+       400,
+       3600,
+       800
+      ],
+      "sha256": "abc3929c4845859a9973170209f0d5e9781b2d62ab1961aac2ecc476728e5ce8"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03600_y00000_w0400_h0400.png",
+      "bounds": [
+       3600,
+       0,
+       4000,
+       400
+      ],
+      "sha256": "42b00b5bc035ea06021de15f397f1f7e2447afd887e51d8eca61ab60c17c5d3d"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03600_y00400_w0400_h0400.png",
+      "bounds": [
+       3600,
+       400,
+       4000,
+       800
+      ],
+      "sha256": "413c35969103f087b9b712b89dd75ac107b2818caad4398f09cd916a6d8ce841"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x04000_y00000_w0400_h0400.png",
+      "bounds": [
+       4000,
+       0,
+       4400,
+       400
+      ],
+      "sha256": "67a2cb994c95880972fceba4a75b2f58793112a31904ad868c5ed675881f58d2"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x04000_y00400_w0400_h0400.png",
+      "bounds": [
+       4000,
+       400,
+       4400,
+       800
+      ],
+      "sha256": "f0414bd8c1dd5d578418e900d20c5a722871ee07f3e2852317ed32d7646c27a3"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x04400_y00000_w0400_h0400.png",
+      "bounds": [
+       4400,
+       0,
+       4800,
+       400
+      ],
+      "sha256": "a86b442b985eafa6dac87df83e2546dc1d04c146efcfa7fa44318bfe97109780"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x04400_y00400_w0400_h0400.png",
+      "bounds": [
+       4400,
+       400,
+       4800,
+       800
+      ],
+      "sha256": "4d970fca3bbc86138f7be44d4b96be7e390a705491c582f2803e16ee5d8537f6"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x00000_y00800_w0400_h0400.png",
+      "bounds": [
+       0,
+       800,
+       400,
+       1200
+      ],
+      "sha256": "9227d2f9d91889b79e136ec9fc42d01076da325056ce173f906aea545ec9b406"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x00400_y00800_w0400_h0400.png",
+      "bounds": [
+       400,
+       800,
+       800,
+       1200
+      ],
+      "sha256": "f1d2aa3e244944d21545c9d502190c99e3ade87e6ad9e6e75da574f862840311"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x00800_y00800_w0400_h0400.png",
+      "bounds": [
+       800,
+       800,
+       1200,
+       1200
+      ],
+      "sha256": "53187e245cb523d93c57cdeeb1f244f277ba9c7dd87f20e43f26745931fc5f0e"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x01200_y00800_w0400_h0400.png",
+      "bounds": [
+       1200,
+       800,
+       1600,
+       1200
+      ],
+      "sha256": "406989ad4929e142a10cd7386e79c5875e15b22e6bd838f6d5e2925366b7de22"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y00800_w0400_h0400.png",
+      "bounds": [
+       3200,
+       800,
+       3600,
+       1200
+      ],
+      "sha256": "21b947e91a611618dcc4ec518f63ea9c3a7875ff76a7f0adcc782384c69ed8c5"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y01200_w0400_h0400.png",
+      "bounds": [
+       3200,
+       1200,
+       3600,
+       1600
+      ],
+      "sha256": "5741209a90520875e85143958e1d3def54235e4381d9839b19f7417d3b8446f0"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03600_y00800_w0400_h0400.png",
+      "bounds": [
+       3600,
+       800,
+       4000,
+       1200
+      ],
+      "sha256": "9e7a228abb03aae3a1f1ad663dbd5660e4db0438c90c7b12cbf5cc1193974a50"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03600_y01200_w0400_h0400.png",
+      "bounds": [
+       3600,
+       1200,
+       4000,
+       1600
+      ],
+      "sha256": "d28279fc4cff3189b0f8da6e1a4ffdbf5cb001d3ce6317e5a06d11e0f542af7e"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x04000_y00800_w0400_h0400.png",
+      "bounds": [
+       4000,
+       800,
+       4400,
+       1200
+      ],
+      "sha256": "3e2f6047598d5a488975bb9c873f9ae0f03be32cf8ee167d313fba234d0b945b"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x04000_y01200_w0400_h0400.png",
+      "bounds": [
+       4000,
+       1200,
+       4400,
+       1600
+      ],
+      "sha256": "77503a4182d8086014c1046d247e06772523bd7617842b6b973e78741fd1e2f4"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x04400_y00800_w0400_h0400.png",
+      "bounds": [
+       4400,
+       800,
+       4800,
+       1200
+      ],
+      "sha256": "5e27b2c8128810045e68f0e7fe972853ee8ec446fc2bca5b67d4ce5478ace7fb"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x04400_y01200_w0400_h0400.png",
+      "bounds": [
+       4400,
+       1200,
+       4800,
+       1600
+      ],
+      "sha256": "9d5db9cc80726766b04e9fd21c9b4021df7f353bdda7d53d8078040f1335b667"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03200_y01600_w0400_h0400.png",
+      "bounds": [
+       3200,
+       1600,
+       3600,
+       2000
+      ],
+      "sha256": "8e507b5a651433ee684def6e78500508dae10c31b0a8638a4eade85e95db99f1"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x03600_y01600_w0400_h0400.png",
+      "bounds": [
+       3600,
+       1600,
+       4000,
+       2000
+      ],
+      "sha256": "44206179862b766d1ea393aecb6a82fcd8fb348be671cbad143714158eea9ef1"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x04000_y01600_w0400_h0400.png",
+      "bounds": [
+       4000,
+       1600,
+       4400,
+       2000
+      ],
+      "sha256": "25535846a35f026fecb5d715b34563e5d4e84235d446a81e28352c035fe380a4"
+     },
+     {
+      "path": "images/BLUEHOUR_FINAL/tiles/x04400_y01600_w0400_h0400.png",
+      "bounds": [
+       4400,
+       1600,
+       4800,
+       2000
+      ],
+      "sha256": "3943518a8ffdbadcdd6afd3f330031b420cefafcfa1bbacd702ed02a0f57b346"
+     }
+    ]
+   }
+  }
+ ],
+ "focus": [
+  {
+   "id": "F01_fins_right_upper",
+   "region": "R2_fins",
+   "asset": "DAYLIGHT_FINAL",
+   "path": "focus/F01_fins_right_upper__DAYLIGHT_FINAL__x02544_y00544_w0512_h0512.png",
+   "bounds": [
+    2544,
+    544,
+    3056,
+    1056
+   ],
+   "bytes": 375497,
+   "sha256": "fabe0da59618c96e703af0bd907ef16a4aff3afc701b0df82f53a7f128ab6a14",
+   "role": "final"
+  },
+  {
+   "id": "F01_fins_right_upper",
+   "region": "R2_fins",
+   "asset": "BLUEHOUR_FINAL",
+   "path": "focus/F01_fins_right_upper__BLUEHOUR_FINAL__x02544_y00544_w0512_h0512.png",
+   "bounds": [
+    2544,
+    544,
+    3056,
+    1056
+   ],
+   "bytes": 347447,
+   "sha256": "c6dfbfba98c393c7cfac8f39e115e7d5770a9bb47b0a085b391a16dc38389afe",
+   "role": "final"
+  },
+  {
+   "id": "F01_fins_right_upper",
+   "region": "R2_fins",
+   "asset": "DAYLIGHT_FINAL__REFERENCE_BLENDER_BASE",
+   "path": "focus/F01_fins_right_upper__DAYLIGHT_FINAL__REFERENCE_BLENDER_BASE__x02544_y00544_w0512_h0512.png",
+   "bounds": [
+    2544,
+    544,
+    3056,
+    1056
+   ],
+   "bytes": 210060,
+   "sha256": "70f852b3a02dd5be4a23226f86f0ef175bd11a3c42b2a88bbed7c3f274fbf56e",
+   "role": "reference (Blender base, same pixels box)"
+  },
+  {
+   "id": "F01_fins_right_upper",
+   "region": "R2_fins",
+   "asset": "BLUEHOUR_FINAL__REFERENCE_BLENDER_BASE",
+   "path": "focus/F01_fins_right_upper__BLUEHOUR_FINAL__REFERENCE_BLENDER_BASE__x02544_y00544_w0512_h0512.png",
+   "bounds": [
+    2544,
+    544,
+    3056,
+    1056
+   ],
+   "bytes": 132041,
+   "sha256": "bc2df832f4283a17c86f2273238893a89482d64b73670b16721d9d76c8b27b89",
+   "role": "reference (Blender base, same pixels box)"
+  },
+  {
+   "id": "F02_fins_right_lower",
+   "region": "R2_fins",
+   "asset": "DAYLIGHT_FINAL",
+   "path": "focus/F02_fins_right_lower__DAYLIGHT_FINAL__x02500_y01560_w0512_h0512.png",
+   "bounds": [
+    2500,
+    1560,
+    3012,
+    2072
+   ],
+   "bytes": 386273,
+   "sha256": "6a18ed05cf201ec522b4ce7e8fda909081956ef82f11fa8b29a2d8e3703ae20b",
+   "role": "final"
+  },
+  {
+   "id": "F02_fins_right_lower",
+   "region": "R2_fins",
+   "asset": "BLUEHOUR_FINAL",
+   "path": "focus/F02_fins_right_lower__BLUEHOUR_FINAL__x02500_y01560_w0512_h0512.png",
+   "bounds": [
+    2500,
+    1560,
+    3012,
+    2072
+   ],
+   "bytes": 344301,
+   "sha256": "ca47e81e13813bea1dc874b8632620fbd0cf157053e21830cb789dd34bfc2418",
+   "role": "final"
+  },
+  {
+   "id": "F02_fins_right_lower",
+   "region": "R2_fins",
+   "asset": "DAYLIGHT_FINAL__REFERENCE_BLENDER_BASE",
+   "path": "focus/F02_fins_right_lower__DAYLIGHT_FINAL__REFERENCE_BLENDER_BASE__x02500_y01560_w0512_h0512.png",
+   "bounds": [
+    2500,
+    1560,
+    3012,
+    2072
+   ],
+   "bytes": 213796,
+   "sha256": "2d6bebabfd5bfbbfd1f119f4a6de8d57b54fd2e781a7cd667dd939b98354b89f",
+   "role": "reference (Blender base, same pixels box)"
+  },
+  {
+   "id": "F02_fins_right_lower",
+   "region": "R2_fins",
+   "asset": "BLUEHOUR_FINAL__REFERENCE_BLENDER_BASE",
+   "path": "focus/F02_fins_right_lower__BLUEHOUR_FINAL__REFERENCE_BLENDER_BASE__x02500_y01560_w0512_h0512.png",
+   "bounds": [
+    2500,
+    1560,
+    3012,
+    2072
+   ],
+   "bytes": 155241,
+   "sha256": "584a180204ecc052ac964676f3dc7d8f1a17ad21cdd4b4a8472cc52771f251d6",
+   "role": "reference (Blender base, same pixels box)"
+  },
+  {
+   "id": "F03_fins_left_upper",
+   "region": "R2_fins",
+   "asset": "DAYLIGHT_FINAL",
+   "path": "focus/F03_fins_left_upper__DAYLIGHT_FINAL__x01700_y00700_w0512_h0512.png",
+   "bounds": [
+    1700,
+    700,
+    2212,
+    1212
+   ],
+   "bytes": 401729,
+   "sha256": "157609261b44f17e07a8353b73a25fec60c585ad389e63112502bf03dea2dca2",
+   "role": "final"
+  },
+  {
+   "id": "F03_fins_left_upper",
+   "region": "R2_fins",
+   "asset": "BLUEHOUR_FINAL",
+   "path": "focus/F03_fins_left_upper__BLUEHOUR_FINAL__x01700_y00700_w0512_h0512.png",
+   "bounds": [
+    1700,
+    700,
+    2212,
+    1212
+   ],
+   "bytes": 353618,
+   "sha256": "ec5e198e22b76342f0d622592e7251d7b209c692fbfe032c9eca2e6c6889d21a",
+   "role": "final"
+  },
+  {
+   "id": "F03_fins_left_upper",
+   "region": "R2_fins",
+   "asset": "DAYLIGHT_FINAL__REFERENCE_BLENDER_BASE",
+   "path": "focus/F03_fins_left_upper__DAYLIGHT_FINAL__REFERENCE_BLENDER_BASE__x01700_y00700_w0512_h0512.png",
+   "bounds": [
+    1700,
+    700,
+    2212,
+    1212
+   ],
+   "bytes": 254664,
+   "sha256": "34045fa1871de024db964e5a306ec4e6d228d6f4c4db0ac0a76da3eeb3548356",
+   "role": "reference (Blender base, same pixels box)"
+  },
+  {
+   "id": "F03_fins_left_upper",
+   "region": "R2_fins",
+   "asset": "BLUEHOUR_FINAL__REFERENCE_BLENDER_BASE",
+   "path": "focus/F03_fins_left_upper__BLUEHOUR_FINAL__REFERENCE_BLENDER_BASE__x01700_y00700_w0512_h0512.png",
+   "bounds": [
+    1700,
+    700,
+    2212,
+    1212
+   ],
+   "bytes": 190466,
+   "sha256": "ba6b068e3c1fd0b64b1f53ee3504b792c00f7c2e66e4a9ec46721a7e05cf9875",
+   "role": "reference (Blender base, same pixels box)"
+  },
+  {
+   "id": "F04_roof_left_opening",
+   "region": "R1_roof",
+   "asset": "DAYLIGHT_FINAL",
+   "path": "focus/F04_roof_left_opening__DAYLIGHT_FINAL__x01760_y00020_w0512_h0512.png",
+   "bounds": [
+    1760,
+    20,
+    2272,
+    532
+   ],
+   "bytes": 380715,
+   "sha256": "9f2df4030f3b7715040f825f5952b139ca7dbc309011b9180080173649e00f82",
+   "role": "final"
+  },
+  {
+   "id": "F04_roof_left_opening",
+   "region": "R1_roof",
+   "asset": "BLUEHOUR_FINAL",
+   "path": "focus/F04_roof_left_opening__BLUEHOUR_FINAL__x01760_y00020_w0512_h0512.png",
+   "bounds": [
+    1760,
+    20,
+    2272,
+    532
+   ],
+   "bytes": 365784,
+   "sha256": "0f188ddb420d8d1c66517a0b7a4f4b2f228dbcf428fbbb1e5f5af081debbc809",
+   "role": "final"
+  },
+  {
+   "id": "F05_roof_tubes",
+   "region": "R5_tubes",
+   "asset": "DAYLIGHT_FINAL",
+   "path": "focus/F05_roof_tubes__DAYLIGHT_FINAL__x02300_y00100_w0512_h0512.png",
+   "bounds": [
+    2300,
+    100,
+    2812,
+    612
+   ],
+   "bytes": 396323,
+   "sha256": "52e28ea7bf83fbfa7fca568567f0ec07a00f0267f4ffa3553c66c8984064caee",
+   "role": "final"
+  },
+  {
+   "id": "F05_roof_tubes",
+   "region": "R5_tubes",
+   "asset": "BLUEHOUR_FINAL",
+   "path": "focus/F05_roof_tubes__BLUEHOUR_FINAL__x02300_y00100_w0512_h0512.png",
+   "bounds": [
+    2300,
+    100,
+    2812,
+    612
+   ],
+   "bytes": 345608,
+   "sha256": "ca4879221708f6318f3ffccb18aecb95537a525d04d2b0d961107aa251c1483c",
+   "role": "final"
+  },
+  {
+   "id": "F06_roof_right_cylinder_garden",
+   "region": "R1_roof",
+   "asset": "DAYLIGHT_FINAL",
+   "path": "focus/F06_roof_right_cylinder_garden__DAYLIGHT_FINAL__x02780_y00040_w0512_h0512.png",
+   "bounds": [
+    2780,
+    40,
+    3292,
+    552
+   ],
+   "bytes": 392247,
+   "sha256": "2530fdf3c5139506eba9f102e182757095be147245cec6ca0e7f8385df047de7",
+   "role": "final"
+  },
+  {
+   "id": "F06_roof_right_cylinder_garden",
+   "region": "R1_roof",
+   "asset": "BLUEHOUR_FINAL",
+   "path": "focus/F06_roof_right_cylinder_garden__BLUEHOUR_FINAL__x02780_y00040_w0512_h0512.png",
+   "bounds": [
+    2780,
+    40,
+    3292,
+    552
+   ],
+   "bytes": 341713,
+   "sha256": "627e11090e276c3f3fab956369a6ab0cd2f1d52c515dcbefb19c7a10687cdcf8",
+   "role": "final"
+  },
+  {
+   "id": "F07_mid_slot_right",
+   "region": "R3_mid_void",
+   "asset": "DAYLIGHT_FINAL",
+   "path": "focus/F07_mid_slot_right__DAYLIGHT_FINAL__x02450_y01150_w0512_h0512.png",
+   "bounds": [
+    2450,
+    1150,
+    2962,
+    1662
+   ],
+   "bytes": 387689,
+   "sha256": "9d6a173e5d753389299b37b71b7cdc13ae21f554aa2a322b9a6a0de0b8918c18",
+   "role": "final"
+  },
+  {
+   "id": "F07_mid_slot_right",
+   "region": "R3_mid_void",
+   "asset": "BLUEHOUR_FINAL",
+   "path": "focus/F07_mid_slot_right__BLUEHOUR_FINAL__x02450_y01150_w0512_h0512.png",
+   "bounds": [
+    2450,
+    1150,
+    2962,
+    1662
+   ],
+   "bytes": 345906,
+   "sha256": "5f21d38d9ea3b2753962773b3d0506a736761d8811a0cc509d716bbd6f000497",
+   "role": "final"
+  },
+  {
+   "id": "F08_mid_notch_left",
+   "region": "R3_mid_void",
+   "asset": "DAYLIGHT_FINAL",
+   "path": "focus/F08_mid_notch_left__DAYLIGHT_FINAL__x01850_y01150_w0512_h0512.png",
+   "bounds": [
+    1850,
+    1150,
+    2362,
+    1662
+   ],
+   "bytes": 398547,
+   "sha256": "3909af633f22c63702e084d58d59534adae6a56bc769c2c75d692bbc386b253b",
+   "role": "final"
+  },
+  {
+   "id": "F08_mid_notch_left",
+   "region": "R3_mid_void",
+   "asset": "BLUEHOUR_FINAL",
+   "path": "focus/F08_mid_notch_left__BLUEHOUR_FINAL__x01850_y01150_w0512_h0512.png",
+   "bounds": [
+    1850,
+    1150,
+    2362,
+    1662
+   ],
+   "bytes": 364799,
+   "sha256": "7df0832e1504e3e5b5b0495b3116e7721ad96eab67192a634df16b027b14ba87",
+   "role": "final"
+  },
+  {
+   "id": "F09_core_front",
+   "region": "R4_cores",
+   "asset": "DAYLIGHT_FINAL",
+   "path": "focus/F09_core_front__DAYLIGHT_FINAL__x02004_y00900_w0512_h0512.png",
+   "bounds": [
+    2004,
+    900,
+    2516,
+    1412
+   ],
+   "bytes": 386943,
+   "sha256": "dbe6ec8508d4e29e27e41f05103c20d528cb776493e48b447f0f898afae39f32",
+   "role": "final"
+  },
+  {
+   "id": "F09_core_front",
+   "region": "R4_cores",
+   "asset": "BLUEHOUR_FINAL",
+   "path": "focus/F09_core_front__BLUEHOUR_FINAL__x02004_y00900_w0512_h0512.png",
+   "bounds": [
+    2004,
+    900,
+    2516,
+    1412
+   ],
+   "bytes": 364971,
+   "sha256": "36dbbe2de049d8fa6d75dc175ed949d74a2b509d8780ed8a5dff4ffe08ebf89d",
+   "role": "final"
+  },
+  {
+   "id": "F10_core_right",
+   "region": "R4_cores",
+   "asset": "DAYLIGHT_FINAL",
+   "path": "focus/F10_core_right__DAYLIGHT_FINAL__x02980_y00600_w0512_h0512.png",
+   "bounds": [
+    2980,
+    600,
+    3492,
+    1112
+   ],
+   "bytes": 383627,
+   "sha256": "d16ff2836313564d633d65e68987af877f6887be1cace6a8852a3f6671673783",
+   "role": "final"
+  },
+  {
+   "id": "F10_core_right",
+   "region": "R4_cores",
+   "asset": "BLUEHOUR_FINAL",
+   "path": "focus/F10_core_right__BLUEHOUR_FINAL__x02980_y00600_w0512_h0512.png",
+   "bounds": [
+    2980,
+    600,
+    3492,
+    1112
+   ],
+   "bytes": 348602,
+   "sha256": "edfec7cebc7f1647fc6793747b2128d443b657c8e72154de9580f095b1c4d38e",
+   "role": "final"
+  },
+  {
+   "id": "F11_tube_ground",
+   "region": "R5_tubes",
+   "asset": "DAYLIGHT_FINAL",
+   "path": "focus/F11_tube_ground__DAYLIGHT_FINAL__x02450_y01760_w0512_h0512.png",
+   "bounds": [
+    2450,
+    1760,
+    2962,
+    2272
+   ],
+   "bytes": 388153,
+   "sha256": "ea40d3c49e9c7343127fa9e5fc39ecf00b2d6c0cd25c4a452c90abd3f491c446",
+   "role": "final"
+  },
+  {
+   "id": "F11_tube_ground",
+   "region": "R5_tubes",
+   "asset": "BLUEHOUR_FINAL",
+   "path": "focus/F11_tube_ground__BLUEHOUR_FINAL__x02450_y01760_w0512_h0512.png",
+   "bounds": [
+    2450,
+    1760,
+    2962,
+    2272
+   ],
+   "bytes": 349288,
+   "sha256": "e2ce2813203f9a93feee20b5d916476c25d0ae83fa8b0b3e7000108ee8e0bc61",
+   "role": "final"
+  },
+  {
+   "id": "F12_entrance_ramp",
+   "region": "R6_entrance",
+   "asset": "DAYLIGHT_FINAL",
+   "path": "focus/F12_entrance_ramp__DAYLIGHT_FINAL__x02200_y01900_w0512_h0512.png",
+   "bounds": [
+    2200,
+    1900,
+    2712,
+    2412
+   ],
+   "bytes": 379173,
+   "sha256": "6c9dd60f829cfab6e2744f72f7eeaece731df8479fa6788f0a5f745532a2211e",
+   "role": "final"
+  },
+  {
+   "id": "F12_entrance_ramp",
+   "region": "R6_entrance",
+   "asset": "BLUEHOUR_FINAL",
+   "path": "focus/F12_entrance_ramp__BLUEHOUR_FINAL__x02200_y01900_w0512_h0512.png",
+   "bounds": [
+    2200,
+    1900,
+    2712,
+    2412
+   ],
+   "bytes": 346700,
+   "sha256": "b5b60e59fcc4250dc3fdc5f83eb8113470fa0c69e04b0a07323b81720bc5dfcd",
+   "role": "final"
+  },
+  {
+   "id": "F13_crosswalk_plaza_edge",
+   "region": "R7_streets",
+   "asset": "DAYLIGHT_FINAL",
+   "path": "focus/F13_crosswalk_plaza_edge__DAYLIGHT_FINAL__x01700_y02188_w0512_h0512.png",
+   "bounds": [
+    1700,
+    2188,
+    2212,
+    2700
+   ],
+   "bytes": 389208,
+   "sha256": "c0c59f69af4bb5e7966ff171b78584bfd33c0eed155059b8db7cb30b303f4dc1",
+   "role": "final"
+  },
+  {
+   "id": "F13_crosswalk_plaza_edge",
+   "region": "R7_streets",
+   "asset": "BLUEHOUR_FINAL",
+   "path": "focus/F13_crosswalk_plaza_edge__BLUEHOUR_FINAL__x01700_y02188_w0512_h0512.png",
+   "bounds": [
+    1700,
+    2188,
+    2212,
+    2700
+   ],
+   "bytes": 348339,
+   "sha256": "a5332a1fc51e41d795e2fc6023b36a2fc0ada33d4be05b8ce3138af041d5235e",
+   "role": "final"
+  },
+  {
+   "id": "F14_avenue_trees_cars",
+   "region": "R7_streets",
+   "asset": "DAYLIGHT_FINAL",
+   "path": "focus/F14_avenue_trees_cars__DAYLIGHT_FINAL__x03500_y02000_w0471_h0471.png",
+   "bounds": [
+    3500,
+    2000,
+    3971,
+    2471
+   ],
+   "bytes": 397993,
+   "sha256": "a9fe5cbe5adb34f20e73cf8953b3092cd92d919a667c080628e3125409f6123b",
+   "role": "final"
+  },
+  {
+   "id": "F14_avenue_trees_cars",
+   "region": "R7_streets",
+   "asset": "BLUEHOUR_FINAL",
+   "path": "focus/F14_avenue_trees_cars__BLUEHOUR_FINAL__x03500_y02000_w0471_h0471.png",
+   "bounds": [
+    3500,
+    2000,
+    3971,
+    2471
+   ],
+   "bytes": 359587,
+   "sha256": "5219b2fe23b9de69e1daaa8a473895060ee322583c42b78d17f0aed584fbd71e",
+   "role": "final"
+  },
+  {
+   "id": "F15_context_skyline",
+   "region": "R8_context",
+   "asset": "DAYLIGHT_FINAL",
+   "path": "focus/F15_context_skyline__DAYLIGHT_FINAL__x00300_y00100_w0512_h0512.png",
+   "bounds": [
+    300,
+    100,
+    812,
+    612
+   ],
+   "bytes": 370808,
+   "sha256": "5298c55df952f6adcf4c5075b6453f8100c2050544fcfe281ab7411890889675",
+   "role": "final"
+  },
+  {
+   "id": "F15_context_skyline",
+   "region": "R8_context",
+   "asset": "BLUEHOUR_FINAL",
+   "path": "focus/F15_context_skyline__BLUEHOUR_FINAL__x00300_y00100_w0512_h0512.png",
+   "bounds": [
+    300,
+    100,
+    812,
+    612
+   ],
+   "bytes": 349421,
+   "sha256": "fa617f1d008741f50a8ba35deca24fd349935297b09559fe52ca08000d8c8d73",
+   "role": "final"
+  },
+  {
+   "id": "F16_context_glass_tower",
+   "region": "R8_context",
+   "asset": "DAYLIGHT_FINAL",
+   "path": "focus/F16_context_glass_tower__DAYLIGHT_FINAL__x03600_y00700_w0512_h0512.png",
+   "bounds": [
+    3600,
+    700,
+    4112,
+    1212
+   ],
+   "bytes": 361185,
+   "sha256": "4ec3ad8dae2ca8374023815215f1991e03f66168edd5a606afe16ee78336d310",
+   "role": "final"
+  },
+  {
+   "id": "F16_context_glass_tower",
+   "region": "R8_context",
+   "asset": "BLUEHOUR_FINAL",
+   "path": "focus/F16_context_glass_tower__BLUEHOUR_FINAL__x03600_y00700_w0512_h0512.png",
+   "bounds": [
+    3600,
+    700,
+    4112,
+    1212
+   ],
+   "bytes": 371220,
+   "sha256": "ee2e9d8e2084fc85af12df5e52707a2256a7a14889ff08a2a1472bd2a373a7e9",
+   "role": "final"
+  }
+ ]
+}
