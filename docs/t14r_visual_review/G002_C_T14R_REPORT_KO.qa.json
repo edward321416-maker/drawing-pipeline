@@ -1,0 +1,410 @@
+{
+ "pages": [
+  {
+   "page": 1,
+   "title": "G-002 최종 PNG GitHub 이미지 검수 패킷 — C-T14R 보고서",
+   "images": [
+    {
+     "label": "overview.jpg",
+     "px": [
+      1280,
+      390
+     ],
+     "ppi": 103.6
+    }
+   ],
+   "overflow": 0
+  },
+  {
+   "page": 2,
+   "title": "1. 원본 검증 — PR #27 매니페스트와의 SHA256 대조",
+   "images": [],
+   "overflow": 0
+  },
+  {
+   "page": 3,
+   "title": "2. 전체 미리보기 (1600×900 JPEG)",
+   "images": [
+    {
+     "label": "images/DAYLIGHT_FINAL/preview.jpg",
+     "px": [
+      1600,
+      900
+     ],
+     "ppi": 205.6
+    },
+    {
+     "label": "images/BLUEHOUR_FINAL/preview.jpg",
+     "px": [
+      1600,
+      900
+     ],
+     "ppi": 205.6
+    }
+   ],
+   "overflow": 0
+  },
+  {
+   "page": 4,
+   "title": "3. 타일 구성과 재조립 결과",
+   "images": [],
+   "overflow": 0
+  },
+  {
+   "page": 5,
+   "title": "4. GitHub 업로드 후 읽기 검증",
+   "images": [],
+   "overflow": 0
+  },
+  {
+   "page": 6,
+   "title": "5. 확대 검수 영역 안내",
+   "images": [
+    {
+     "label": "F01_fins_right_upper DAYLIGHT_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F02_fins_right_lower DAYLIGHT_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F03_fins_left_upper DAYLIGHT_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F04_roof_left_opening DAYLIGHT_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F05_roof_tubes DAYLIGHT_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F06_roof_right_cylinder_garden DAYLIGHT_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F07_mid_slot_right DAYLIGHT_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F08_mid_notch_left DAYLIGHT_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F09_core_front DAYLIGHT_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F10_core_right DAYLIGHT_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F11_tube_ground DAYLIGHT_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F12_entrance_ramp DAYLIGHT_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F13_crosswalk_plaza_edge DAYLIGHT_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F14_avenue_trees_cars DAYLIGHT_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F15_context_skyline DAYLIGHT_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F16_context_glass_tower DAYLIGHT_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F01_fins_right_upper BLUEHOUR_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F02_fins_right_lower BLUEHOUR_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F03_fins_left_upper BLUEHOUR_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F04_roof_left_opening BLUEHOUR_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F05_roof_tubes BLUEHOUR_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F06_roof_right_cylinder_garden BLUEHOUR_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F07_mid_slot_right BLUEHOUR_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F08_mid_notch_left BLUEHOUR_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F09_core_front BLUEHOUR_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F10_core_right BLUEHOUR_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F11_tube_ground BLUEHOUR_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F12_entrance_ramp BLUEHOUR_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F13_crosswalk_plaza_edge BLUEHOUR_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F14_avenue_trees_cars BLUEHOUR_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F15_context_skyline BLUEHOUR_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    },
+    {
+     "label": "F16_context_glass_tower BLUEHOUR_FINAL",
+     "px": [
+      256,
+      256
+     ],
+     "ppi": 164.6
+    }
+   ],
+   "overflow": 0
+  },
+  {
+   "page": 7,
+   "title": "6. 수직 핀 복원 — 미해결 항목 (C-T14Q에서 이월)",
+   "images": [
+    {
+     "label": "F01_fins_right_upper Blender 기준본 · Daylight",
+     "px": [
+      512,
+      512
+     ],
+     "ppi": 136.5
+    },
+    {
+     "label": "F01_fins_right_upper 최종 · Daylight",
+     "px": [
+      512,
+      512
+     ],
+     "ppi": 136.5
+    },
+    {
+     "label": "F01_fins_right_upper Blender 기준본 · Blue Hour",
+     "px": [
+      512,
+      512
+     ],
+     "ppi": 136.5
+    },
+    {
+     "label": "F01_fins_right_upper 최종 · Blue Hour",
+     "px": [
+      512,
+      512
+     ],
+     "ppi": 136.5
+    },
+    {
+     "label": "F02_fins_right_lower Blender 기준본 · Daylight",
+     "px": [
+      512,
+      512
+     ],
+     "ppi": 136.5
+    },
+    {
+     "label": "F02_fins_right_lower 최종 · Daylight",
+     "px": [
+      512,
+      512
+     ],
+     "ppi": 136.5
+    },
+    {
+     "label": "F02_fins_right_lower Blender 기준본 · Blue Hour",
+     "px": [
+      512,
+      512
+     ],
+     "ppi": 136.5
+    },
+    {
+     "label": "F02_fins_right_lower 최종 · Blue Hour",
+     "px": [
+      512,
+      512
+     ],
+     "ppi": 136.5
+    }
+   ],
+   "overflow": 0
+  },
+  {
+   "page": 8,
+   "title": "6-2. 핀 복원 자동 계측과 판독",
+   "images": [],
+   "overflow": 0
+  },
+  {
+   "page": 9,
+   "title": "7. 남은 일과 승인 경계",
+   "images": [],
+   "overflow": 0
+  }
+ ],
+ "min_image_ppi": 103.6,
+ "text_overflows": [],
+ "pages_total": 9,
+ "overflow_total": 0
+}

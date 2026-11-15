@@ -183,3 +183,13 @@
 5. **A/B 동등성:** Urban Daylight와 Blue Hour는 같은 검증 메시와 같은 신규 시각화 카메라를 사용하고 광원 조건만 달리한다. 캐시 해시·정점/삼각형 수·건축 bbox·카메라·객체 종류 수가 A/B에서 모두 같은지 독립 검사한다.
 6. **승인 경계:** 실제 4800×2700 PNG와 A3 검토 PDF가 생성되어도 상태는 `PBR_TARGET_RENDER_COMPLETE__HUMAN_ARCHITECTURAL_APPROVAL_PENDING`이다. 사용자의 건축·재료·시각 승인 전에는 G-002를 도면집 정본에 반영하거나 G-103·G-106·G-111로 확대하지 않으며 FREEZE하지 않는다.
 7. **전달과 보존:** 원본 캐시와 기존 V4.2/PR #19~#24는 덮어쓰지 않는다. 새 브랜치·새 출력 폴더에 Daylight/Blue Hour PNG, `.blend`, before/after, 확대 타일, SHA 매니페스트, A3 PDF와 페이지별 렌더를 함께 보존한다.
+
+---
+
+## 10. GitHub 시각 검수 가능성 게이트 (C-T14R / 사용자 지시 2026-11-15)
+
+1. **GitHub에만 업로드했다고 완료가 아니다.** 렌더·다이어그램·도면·Photoshop 결과의 최종 원본과 별도로 GitHub 연결에서 실제 픽셀을 열람 가능한 작은 전체 미리보기와 **무손실 원본 픽셀 확대 타일**을 제출한다. 20MB 내외의 큰 PNG는 GitHub 연결이 빈 content를 반환할 수 있으므로 미리보기·확대 타일은 항목당 기본 400KiB 이하로 제작한다.
+2. **필수 패킷:** `tools/t14r/export_visual_review.py`로 source SHA256·픽셀 해시·타일 좌표·파일 SHA를 기록한 `manifest.json` 및 `README.md`를 생성하고 `verify` 재조립 검사를 통과시킨다. 기존 마스터는 수정하지 않는다.
+3. **GitHub push와 실제 readback 둘 다 필수:** 패킷을 대상 작업의 Draft PR 브랜치에 commit/push하고, ChatGPT가 GitHub connector를 통해 실제 preview JPEG와 주요 lossless PNG tile을 **base64로 읽어 디코드·검증**하는지 확인한다. 빈 content 또는 읽기 실패 시 `GITHUB_PUSHED_UNREADABLE`로 판정하고 작은 타일로 재제출한다.
+4. **시각 승인 분리:** 바이너리 열람·SHA·300dpi는 건축 형상/미학 승인과 별개다. 실제 픽셀의 전체 프레임 및 지붕·입구 램프·파사드 핀·코어·튜브·보이드 확대 독립 시각 검수가 완료되지 않으면 `INDEPENDENT_VISUAL_REVIEW_PENDING`이다.
+5. **모든 후속 작업 적용:** 새 건축 렌더·AI 편집·Photoshop 완성 이미지·기술 다이어그램 제작 후에는 이 GitHub 검수 가능 패킷을 PDF 보고서와 함께 제공한다. 패킷이 로컬에만 있으면 미완료. 사용자 승인 없는 main 병합·기존 원본 덮어쓰기·FREEZE 금지. 상세: `docs/t14r_visual_review/POLICY_KO.md`.

@@ -1,0 +1,71 @@
+{
+ "schema": "C-T14R-GITHUB-VISUAL-REVIEW-1.0",
+ "max_item_bytes": 409600,
+ "assets": {
+  "DAYLIGHT_FINAL": {
+   "original_sha256_actual": "b99cc66cdadd72be52461c25b0002cbb5ab08add26dc3a7933e3f1e4f12af80b",
+   "original_sha256_manifest": "b99cc66cdadd72be52461c25b0002cbb5ab08add26dc3a7933e3f1e4f12af80b",
+   "original_sha_match": true,
+   "original_dims": [
+    4800,
+    2700
+   ],
+   "original_mode": "RGB",
+   "dims_match": true,
+   "preview_dims": [
+    1600,
+    900
+   ],
+   "preview_bytes": 382414,
+   "tiles": 78,
+   "tiles_missing": 0,
+   "tile_sha_or_size_mismatch": 0,
+   "tiles_over_limit": 0,
+   "tile_overlap_pairs": 0,
+   "coverage_min": 1,
+   "coverage_max": 1,
+   "reassembled_equals_original_pixels": true,
+   "preview_within_limit": true,
+   "tile_bytes_total": 19181791,
+   "tile_bytes_max": 392183,
+   "tile_px_min_side": 300,
+   "PASS": true
+  },
+  "BLUEHOUR_FINAL": {
+   "original_sha256_actual": "ad5b9b07033ab258201173b48042849d3cf6575756511d103c6f3970129b1f57",
+   "original_sha256_manifest": "ad5b9b07033ab258201173b48042849d3cf6575756511d103c6f3970129b1f57",
+   "original_sha_match": true,
+   "original_dims": [
+    4800,
+    2700
+   ],
+   "original_mode": "RGB",
+   "dims_match": true,
+   "preview_dims": [
+    1600,
+    900
+   ],
+   "preview_bytes": 358606,
+   "tiles": 75,
+   "tiles_missing": 0,
+   "tile_sha_or_size_mismatch": 0,
+   "tiles_over_limit": 0,
+   "tile_overlap_pairs": 0,
+   "coverage_min": 1,
+   "coverage_max": 1,
+   "reassembled_equals_original_pixels": true,
+   "preview_within_limit": true,
+   "tile_bytes_total": 17727162,
+   "tile_bytes_max": 408371,
+   "tile_px_min_side": 300,
+   "PASS": true
+  }
+ },
+ "checks": {
+  "overview_bytes": 141630,
+  "overview_within_limit": true,
+  "orphan_files_not_in_manifest": [],
+  "files_on_disk": 201
+ },
+ "OVERALL_PASS": true
+}
