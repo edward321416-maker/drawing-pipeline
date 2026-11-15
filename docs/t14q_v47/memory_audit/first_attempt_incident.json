@@ -1,0 +1,17 @@
+{
+  "free_ram_gb_after_kill": 6.3,
+  "preserved": "blender_base\\G002_B_Blue_Hour (not deleted)",
+  "note": "Not a render error; reaped by the harness. Re-run only after stepwise measurement (see memory_audit/*.json).",
+  "bluehour_files_written": [
+    "SITE_CONTEXT.blend only"
+  ],
+  "time_local": "2026-11-15 ~13:42",
+  "event": "Blue Hour 4800x2700 / 96 samples / ID+Depth run stopped by the system (critically low memory)",
+  "daylight_files_written": [
+    "SITE_CONTEXT_BASE.png",
+    "ID.png",
+    "DEPTH.png",
+    ".blend",
+    "audit.json"
+  ]
+}

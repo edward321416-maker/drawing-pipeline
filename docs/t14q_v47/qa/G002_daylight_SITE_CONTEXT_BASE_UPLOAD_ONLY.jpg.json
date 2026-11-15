@@ -1,0 +1,15 @@
+{
+ "variant": "daylight",
+ "source_png": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\blender_base\\G002_A_Urban_Daylight\\G002_daylight_SITE_CONTEXT_BASE.png",
+ "source_sha256": "02ae2fc9c4c7070fc8c05dad13371eb8494efc1e7bb2f89c169aa45d6a319d6f",
+ "source_bytes": 68446054,
+ "upload_jpg": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\uploads_q\\G002_daylight_SITE_CONTEXT_BASE_UPLOAD_ONLY.jpg",
+ "upload_sha256": "29fb87cd9c391ef0f25b69634548feeeeb0b1142c91b34dea4f4f638580c1f90",
+ "upload_bytes": 3652636,
+ "upload_px": [
+  4800,
+  2700
+ ],
+ "jpeg_quality": 95,
+ "use": "ChatGPT Chrome attachment ONLY (not a print master)"
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "asphalt_02",
+    "name": "Asphalt 02",
+    "authors": "Rob Tuytel",
+    "license": "CC0 1.0 (Poly Haven)",
+    "page": "https://polyhaven.com/a/asphalt_02",
+    "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/asphalt_02/asphalt_02_diff_2k.jpg",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\textures_cc0\\asphalt_02_diffuse_2k.jpg",
+    "sha256": "28F5BA8690553F192C0E5E1A5FF40F34765B4B93F4CC7059B1A3E9C795B6C28C",
+    "bytes": 3075676,
+    "retrieved": "2026-11-15"
+  },
+  {
+    "id": "concrete_pavement_02",
+    "name": "Concrete Pavement 02",
+    "authors": "Charlotte Baglioni",
+    "license": "CC0 1.0 (Poly Haven)",
+    "page": "https://polyhaven.com/a/concrete_pavement_02",
+    "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavement_02/concrete_pavement_02_diff_2k.jpg",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\textures_cc0\\concrete_pavement_02_diffuse_2k.jpg",
+    "sha256": "A634F169EF1BB928585340F7FEAC69375B2BBBDFC0448E316DBAEBE03BD5BF89",
+    "bytes": 4215026,
+    "retrieved": "2026-11-15"
+  }
+]

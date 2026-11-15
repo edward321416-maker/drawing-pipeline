@@ -1,0 +1,44 @@
+{
+  "variant": "bluehour",
+  "width": 2400,
+  "height": 1350,
+  "samples": 16,
+  "out_dir": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\blender_base_v2\\G002_B_Blue_Hour_memtest_2400",
+  "min_free_ram_gb_allowed": 3.0,
+  "aborted_by_watchdog": false,
+  "exit_code": 0,
+  "before": {
+    "free_ram_gb": 10.13,
+    "gpu": {
+      "used": 818,
+      "total": 12288
+    },
+    "time": "2026-11-15T14:11:45"
+  },
+  "after": {
+    "free_ram_gb": 10.18,
+    "gpu": {
+      "used": 814,
+      "total": 12288
+    }
+  },
+  "min_free_ram_gb_during": 6.62,
+  "peak_blender_working_set_gb": 3.2,
+  "peak_gpu_used_mb": 1850,
+  "blender_reported_peak_mb": 594.7,
+  "monitor_samples": 18,
+  "outputs": [
+    {
+      "name": "G002_bluehour_site_context_audit.json",
+      "bytes": 3816
+    },
+    {
+      "name": "G002_bluehour_SITE_CONTEXT_BASE.png",
+      "bytes": 17817896
+    },
+    {
+      "name": "G002_bluehour_SITE_CONTEXT.blend",
+      "bytes": 17469228
+    }
+  ]
+}

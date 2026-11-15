@@ -1,0 +1,40 @@
+{
+ "image_px": [
+  1672,
+  941
+ ],
+ "tower": {
+  "label": "tower blocks",
+  "blocks": 79,
+  "median_shift_px": 2.24,
+  "p90_shift_px": 12.03,
+  "share_within_3px": 0.595,
+  "share_over_8px": 0.165,
+  "mean_dx": -1.29,
+  "mean_dy": -0.63,
+  "median_peak": 0.166
+ },
+ "context": {
+  "label": "context blocks",
+  "blocks": 55,
+  "median_shift_px": 4.12,
+  "p90_shift_px": 11.56,
+  "share_within_3px": 0.436,
+  "share_over_8px": 0.309,
+  "mean_dx": 1.29,
+  "mean_dy": -2.95,
+  "median_peak": 0.164
+ },
+ "silhouette_edge_response_vs_horizontal_shift_px": {
+  "-8": 0.82,
+  "-6": 0.84,
+  "-4": 0.834,
+  "-2": 0.807,
+  "0": 0.887,
+  "2": 0.918,
+  "4": 0.822,
+  "6": 0.792,
+  "8": 0.839
+ },
+ "silhouette_best_shift_px": 2
+}

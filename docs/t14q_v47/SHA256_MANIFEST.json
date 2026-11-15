@@ -1,0 +1,149 @@
+[
+  {
+    "role": "Blender Daylight beauty 4800x2700 (locked bottom layer)",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\blender_base\\G002_A_Urban_Daylight\\G002_daylight_SITE_CONTEXT_BASE.png",
+    "bytes": 68446054,
+    "sha256": "02AE2FC9C4C7070FC8C05DAD13371EB8494EFC1E7BB2F89C169AA45D6A319D6F",
+    "committed_to_git": false
+  },
+  {
+    "role": "Daylight object-class ID pass",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\blender_base\\G002_A_Urban_Daylight\\G002_daylight_ID.png",
+    "bytes": 7458017,
+    "sha256": "1BFB6A6464EA8E4283D04FBB8A5C401039E0D92432A59EB46214A8479F47E691",
+    "committed_to_git": false
+  },
+  {
+    "role": "Daylight depth pass",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\blender_base\\G002_A_Urban_Daylight\\G002_daylight_DEPTH.png",
+    "bytes": 9704169,
+    "sha256": "138F89B8D58104E99D485A8FBE26BBF8B1D49AB3AD4278C3A49AAD7397BB18CD",
+    "committed_to_git": false
+  },
+  {
+    "role": "Daylight Blender scene",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\blender_base\\G002_A_Urban_Daylight\\G002_daylight_SITE_CONTEXT.blend",
+    "bytes": 16085248,
+    "sha256": "67B833E42026FE8D76EE378D9F76AEA0172C1DF1C0514BF08BD24FD404F9F13F",
+    "committed_to_git": false
+  },
+  {
+    "role": "Blender Blue Hour beauty 4800x2700 (locked bottom layer)",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\blender_base_v2\\G002_B_Blue_Hour\\G002_bluehour_SITE_CONTEXT_BASE.png",
+    "bytes": 66832880,
+    "sha256": "1ED642B14417E81EBF0D3979643F9B90B4F18748518E8661E8B6C38B7705F553",
+    "committed_to_git": false
+  },
+  {
+    "role": "Blue Hour Blender scene",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\blender_base_v2\\G002_B_Blue_Hour\\G002_bluehour_SITE_CONTEXT.blend",
+    "bytes": 17469228,
+    "sha256": "0603877259A2CF0107A540A687E67C228C39CF0981A1E158BB2E61E741F48347",
+    "committed_to_git": false
+  },
+  {
+    "role": "Daylight editable PSD (11 layers)",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\final_q\\G002_A_Urban_Daylight_PHOTOSHOP_FINAL.psd",
+    "bytes": 336607277,
+    "sha256": "43C2CA6850920E4C4DA0F4AA211D407523B8CCFE022AA72E042BFA9EC0655698",
+    "committed_to_git": false
+  },
+  {
+    "role": "Blue Hour editable PSD (11 layers, v2 final)",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\final_q\\G002_B_Blue_Hour_PHOTOSHOP_FINAL.psd",
+    "bytes": 330433638,
+    "sha256": "FED70DC1042E9977FDEAEA91F46E69E9B109DC01A9C18848CBB9B1102F7BDC21",
+    "committed_to_git": false
+  },
+  {
+    "role": "Blue Hour PSD v1 (superseded, muddy lobby)",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\final_q\\G002_B_Blue_Hour_PHOTOSHOP_v1_SUPERSEDED.psd",
+    "bytes": 325239166,
+    "sha256": "C9FF51F1D2DFC4C5F1B61BEE898C2559551588504020FDB0E5A22A8DC0D5D667",
+    "committed_to_git": false
+  },
+  {
+    "role": "Blue Hour PNG v1 (superseded)",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\final_q\\G002_B_Blue_Hour_PHOTOSHOP_v1_SUPERSEDED.png",
+    "bytes": 18336740,
+    "sha256": "4DFC203F3DF89EE6E9BC7CEB569B8789B0EDF4DDDE4FC64C0607D306C2A760B2",
+    "committed_to_git": false
+  },
+  {
+    "role": "Blue Hour .blend from the first system-stopped attempt (preserved)",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\output\\C_T14Q_run\\blender_base\\G002_B_Blue_Hour\\G002_bluehour_SITE_CONTEXT.blend",
+    "bytes": 17469228,
+    "sha256": "69F8770ECF35557F6F6197FCA8FDD6EAFD4F82AFF9A5F7B73E1E97EFAAE13782",
+    "committed_to_git": false
+  },
+  {
+    "role": "committed deliverable/evidence: context_pack_plan_v2.png",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\docs\\t14q_v47\\images\\context_pack_plan_v2.png",
+    "bytes": 355382,
+    "sha256": "40C769DFE349729942DD1E3DA0526718218A2448ED4F61EA51568DAD666C4783",
+    "committed_to_git": true
+  },
+  {
+    "role": "committed deliverable/evidence: G002_A_Daylight_GPT_RAW.png",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\docs\\t14q_v47\\images\\G002_A_Daylight_GPT_RAW.png",
+    "bytes": 3170559,
+    "sha256": "2EBEDC90D96D5C36E5E707AB748B7FDD8A934D0DAD9339546C588F911B218683",
+    "committed_to_git": true
+  },
+  {
+    "role": "committed deliverable/evidence: G002_A_Urban_Daylight_PHOTOSHOP_FINAL.png",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\docs\\t14q_v47\\images\\G002_A_Urban_Daylight_PHOTOSHOP_FINAL.png",
+    "bytes": 19893629,
+    "sha256": "B99CC66CDADD72BE52461C25B0002CBB5AB08ADD26DC3A7933E3F1E4F12AF80B",
+    "committed_to_git": true
+  },
+  {
+    "role": "committed deliverable/evidence: G002_B_Blue_Hour_PHOTOSHOP_FINAL.png",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\docs\\t14q_v47\\images\\G002_B_Blue_Hour_PHOTOSHOP_FINAL.png",
+    "bytes": 18487101,
+    "sha256": "AD5B9B07033AB258201173B48042849D3CF6575756511D103C6F3970129B1F57",
+    "committed_to_git": true
+  },
+  {
+    "role": "committed deliverable/evidence: G002_B_BlueHour_GPT_RAW.png",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\docs\\t14q_v47\\images\\G002_B_BlueHour_GPT_RAW.png",
+    "bytes": 2848054,
+    "sha256": "520F911D80C7F67D03280E6AA63B7488BAC8AC0DB9011A98BCB11CABEC970B81",
+    "committed_to_git": true
+  },
+  {
+    "role": "committed deliverable/evidence: G002_bluehour_SITE_CONTEXT_BASE_UPLOAD_ONLY.jpg",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\docs\\t14q_v47\\images\\G002_bluehour_SITE_CONTEXT_BASE_UPLOAD_ONLY.jpg",
+    "bytes": 3198928,
+    "sha256": "A257E75D8612AA31A5E8F4E7EE4FB0248877776951D3006AF3FA3938F6808A1C",
+    "committed_to_git": true
+  },
+  {
+    "role": "committed deliverable/evidence: G002_daylight_SITE_CONTEXT_BASE_UPLOAD_ONLY.jpg",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\docs\\t14q_v47\\images\\G002_daylight_SITE_CONTEXT_BASE_UPLOAD_ONLY.jpg",
+    "bytes": 3652636,
+    "sha256": "29FB87CD9C391EF0F25B69634548FEEEEB0B1142C91B34DEA4F4F638580C1F90",
+    "committed_to_git": true
+  },
+  {
+    "role": "committed deliverable/evidence: three_stage_overview_bluehour.png",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\docs\\t14q_v47\\images\\three_stage_overview_bluehour.png",
+    "bytes": 6808511,
+    "sha256": "4C475C905862BC03C1A93B5D3A4DBFC59C46B5C3345A87A0AC0BC59B8D2D0893",
+    "committed_to_git": true
+  },
+  {
+    "role": "committed deliverable/evidence: three_stage_overview_daylight.png",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\docs\\t14q_v47\\images\\three_stage_overview_daylight.png",
+    "bytes": 7287318,
+    "sha256": "F9F7D6E9CA39E710C516E742615454DFD37AFF28FCD176552F03197CCA567623",
+    "committed_to_git": true
+  },
+  {
+    "role": "committed deliverable/evidence: G002_C-T14Q_Report_A3.pdf",
+    "file": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14Q\\docs\\t14q_v47\\G002_C-T14Q_Report_A3.pdf",
+    "bytes": 21402530,
+    "sha256": "C77702461D3392864C43818C89B8D22B259D9986A6996C0EF4EC42C8FFFA8267",
+    "committed_to_git": true
+  }
+]
