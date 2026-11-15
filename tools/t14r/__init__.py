@@ -1,0 +1,1 @@
+"""GitHub-inspectable, pixel-exact visual review packets."""
