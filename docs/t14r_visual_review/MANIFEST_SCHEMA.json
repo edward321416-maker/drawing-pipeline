@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "C-T14R GitHub visual review packet manifest",
+  "type": "object",
+  "required": ["schema", "max_item_bytes", "assets", "overview"],
+  "properties": {
+    "schema": {"const": "C-T14R-GITHUB-VISUAL-REVIEW-1.0"},
+    "purpose": {"type": "string"},
+    "max_item_bytes": {"type": "integer", "minimum": 16384, "maximum": 921600},
+    "source_master_rule": {"type": "string"},
+    "overview": {"$ref": "#/$defs/file"},
+    "assets": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["label", "original_name", "original_sha256", "original_bytes", "image_dimensions", "pixel_format", "pixel_sha256", "preview", "tiles"],
+        "properties": {
+          "label": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,63}$"},
+          "original_name": {"type": "string"},
+          "original_sha256": {"$ref": "#/$defs/hash"},
+          "original_bytes": {"type": "integer", "minimum": 1},
+          "image_dimensions": {"type": "array", "items": {"type": "integer", "minimum": 1}, "minItems": 2, "maxItems": 2},
+          "pixel_format": {"enum": ["RGB", "RGBA"]},
+          "pixel_sha256": {"$ref": "#/$defs/hash"},
+          "preview": {"$ref": "#/$defs/file"},
+          "tiles": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/tile"}}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"},
+    "file": {
+      "type": "object", "required": ["path", "bytes", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "bytes": {"type": "integer", "minimum": 1},
+        "sha256": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "tile": {
+      "allOf": [
+        {"$ref": "#/$defs/file"},
+        {"type": "object", "required": ["bounds"], "properties": {
+          "bounds": {"type": "array", "items": {"type": "integer", "minimum": 0}, "minItems": 4, "maxItems": 4}
+        }}
+      ]
+    }
+  }
+}
