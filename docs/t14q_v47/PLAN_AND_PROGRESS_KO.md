@@ -1,6 +1,6 @@
 # C-T14Q — G-002 위치 정합 주변 맥락 + 실사형 메인 렌더 (진행 기록)
 
-작성 시작: 2026-11-15. 기준: PR #25 (`b307d7e`), PR #26 (`1079ad5`). 새 브랜치 `claude/t14q-site-context-photoreal-20261115`, 워크트리 `D:\Users\admin\Desktop\중간마감\drawing-pipeline-T14Q`. 기존 PR #25/#26·main은 수정하지 않는다. merge/FREEZE 없음.
+작성: 2026-11-15 (최종 상태 갱신). 기준: PR #25 (`b307d7e`), PR #26 (`1079ad5`). 새 브랜치 `claude/t14q-site-context-photoreal-20261115`, 워크트리 `D:\Users\admin\Desktop\중간마감\drawing-pipeline-T14Q`. 기존 PR #25/#26·main은 수정하지 않는다. merge/FREEZE 없음.
 
 ## 사용자 지시 (2026-11-15)
 Blender 기준 렌더(위치 정합 맥락) → ChatGPT 편집(실제 Chrome 업로드/다운로드) → Photoshop 마감 → Daylight/Blue Hour 각각 `Blender 기준본 → ChatGPT raw → Photoshop final` 3단 비교와 확대 검수 → 실제 PNG + A3 가로 PDF. 건물 형상(코어·튜브·보이드·지붕·입구 램프) 변경 금지. 검증되지 않은 맥락을 사실처럼 표기 금지. ChatGPT 결과를 그대로 최종본으로 승인 금지. Photoshop 마감 필수.
@@ -17,15 +17,15 @@ Blender 기준 렌더(위치 정합 맥락) → ChatGPT 편집(실제 Chrome 업
 ## OSM 한계 (시야 원뿔 내)
 건물 706동 중 높이 태그 39동(5.5%), 층수 태그 93동(13%) → 나머지 높이는 **추정**(표기 필수). 나무·가로등 태그 0건, 횡단보도 77건, 차선수 태그 있는 간선 34개 구간. 도로 폭은 차선수×3.25 m 가정, 보도 3.15 m 가정.
 
-## 단계 계획
-1. [완료] 위치/카메라 확인 + 좌표 정합 코드·테스트
-2. [진행] Site Context Pack (OSM 정리 + 적법 참조사진 조사 — 하위 에이전트 병행)
-3. [ ] Blender 맥락 장면 (`tools/t14q/site_context_scene.py`), 건물 메시 불변 검증, 프리뷰 1600×900 → 최종 4800×2700 (A/B)
-4. [ ] ChatGPT 편집 (Chrome 실제 업로드/다운로드), 드리프트 영역 재편집
-5. [ ] Photoshop 마감 (`Photoshop.exe` 2026 설치 확인, COM 자동화) — 생성형 채우기(유료 크레딧) 사용 안 함
-6. [ ] 3단 비교·확대 검수, A3 가로 PDF, SHA 매니페스트
-7. [ ] 새 Draft PR (base = PR #26 브랜치)
-
+## 단계 계획과 최종 상태 (2026-11-15)
+1. [완료] 위치/카메라 확인 + 좌표 정합 코드·테스트 (13 passed 포함 T14P)
+2. [완료] Site Context Pack (OSM 정리 + 적법 참조사진 14장 조사, 라이선스 라이브 재검증 일치)
+3. [완료] Blender 맥락 장면: 건물 메시 불변(0.0 m), Daylight 4800×2700 + ID + Depth, Blue Hour 4800×2700 Beauty (메모리 단계 계측 후 64샘플)
+4. [완료] ChatGPT 실제 편집 PNG 2종 (Chrome 업로드/다운로드), 드리프트 계측
+5. [완료] Photoshop 2026(27.7.0) 실제 실행, 11레이어 PSD 2종 + PNG 2종 (Blue Hour 1차본은 탁한 로비로 폐기·보존, 2차본 채택)
+6. [완료] 3단 비교·확대 검수·A3 가로 PDF·SHA 대장
+7. [완료] 새 Draft PR (base = PR #26 브랜치)
+8. [미완료] 사람의 건축·재료·시각 승인 (HUMAN_REVIEW_PENDING). 승인 전 G-002 정본 반영·병합·FREEZE 금지.
 ## 참고
 - 저장소 `output/`은 gitignore. PR에 올릴 산출물은 `docs/t14q_v47/` 아래에 둔다(대용량 원본은 SHA만).
 - 렌더 장치: RTX 2060 OptiX, Blender 4.2.0 (설치: 4.2, 5.3). T14O 일광 4800×2700 / 64 samples = 210 s.
