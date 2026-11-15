@@ -65,7 +65,7 @@
   "overview_bytes": 141630,
   "overview_within_limit": true,
   "orphan_files_not_in_manifest": [],
-  "files_on_disk": 200
+  "files_on_disk": 201
  },
  "OVERALL_PASS": true
 }

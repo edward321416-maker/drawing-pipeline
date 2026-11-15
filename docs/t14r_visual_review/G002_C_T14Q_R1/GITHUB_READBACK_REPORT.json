@@ -1,0 +1,2220 @@
+{
+ "schema": "C-T14R-GITHUB-READBACK-1.0",
+ "recorded_utc": "2026-11-15T13:53:25Z",
+ "repository": "edward321416-maker/drawing-pipeline",
+ "pinned_commit": "29172d547efbcde0236ee7bc32a41053d16d2258",
+ "pull_requests": {
+  "finals": 27,
+  "tooling_and_rules": 28
+ },
+ "claude_side_readback": {
+  "method_1": "gh api raw contents at the pinned commit (REST), every image downloaded, SHA256, size, decode, dimensions and non-blank checks",
+  "files_checked": 194,
+  "by_kind": {
+   "preview": 2,
+   "tile": 153,
+   "overview": 1,
+   "focus": 38
+  },
+  "all_nonempty": true,
+  "all_sha_match": true,
+  "all_decode": true,
+  "all_dims_match": true,
+  "all_not_blank": true,
+  "failures": [],
+  "verdict": "GITHUB_CONNECTOR_READBACK_PASS(gh-api)",
+  "method_2": "GitHub MCP connector available to the Claude Code session (get_file_contents) on a sample of five packet images (both previews, one tile of each image, one focus crop)",
+  "connector_samples": [
+   {
+    "path": "docs/t14r_visual_review/G002_C_T14Q_R1/images/DAYLIGHT_FINAL/preview.jpg",
+    "tool": "GitHub MCP get_file_contents (sha pinned)",
+    "returned_image_block": true,
+    "connector_blob_sha": "01bf40c82184ad9d13b2e807bb7e5f83d94aac14",
+    "equals_local_git_blob_sha": true,
+    "media": "image/jpeg 1600x900"
+   },
+   {
+    "path": "docs/t14r_visual_review/G002_C_T14Q_R1/images/BLUEHOUR_FINAL/preview.jpg",
+    "tool": "GitHub MCP get_file_contents (sha pinned)",
+    "returned_image_block": true,
+    "connector_blob_sha": "fd9265c259a7a98ff25644db4c79b29d61a32c56",
+    "equals_local_git_blob_sha": true,
+    "media": "image/jpeg 1600x900"
+   },
+   {
+    "path": "docs/t14r_visual_review/G002_C_T14Q_R1/images/DAYLIGHT_FINAL/tiles/x02400_y00400_w0400_h0400.png",
+    "tool": "GitHub MCP get_file_contents (sha pinned)",
+    "returned_image_block": true,
+    "connector_blob_sha": "5aac5c64c722bffd16df17ed2795d1f2412b846f",
+    "equals_local_git_blob_sha": true,
+    "media": "image/png 400x400"
+   },
+   {
+    "path": "docs/t14r_visual_review/G002_C_T14Q_R1/images/BLUEHOUR_FINAL/tiles/x02400_y00400_w0400_h0400.png",
+    "tool": "GitHub MCP get_file_contents (sha pinned)",
+    "returned_image_block": true,
+    "connector_blob_sha": "3669013a98e4cd14b57aa55c1fcfe13f55632487",
+    "equals_local_git_blob_sha": true,
+    "media": "image/png 400x400"
+   },
+   {
+    "path": "docs/t14r_visual_review/G002_C_T14Q_R1/focus/F01_fins_right_upper__DAYLIGHT_FINAL__x02544_y00544_w0512_h0512.png",
+    "tool": "GitHub MCP get_file_contents (sha pinned)",
+    "returned_image_block": true,
+    "connector_blob_sha": "564b980162f103afa65a1fb959fb9758df7893b6",
+    "equals_local_git_blob_sha": true,
+    "media": "image/png 512x512"
+   }
+  ],
+  "connector_note": "The connector returned each file as a real image block, and the reported blob SHAs equal the locally committed bytes. The base64 text part of the tool output is cut at the tool's 25k-token limit, so large PNG tiles are not usable as text through this path; the rendered image block is.",
+  "connector_verdict": "GITHUB_CONNECTOR_READBACK_PASS(claude-code-mcp-sample)"
+ },
+ "chatgpt_side_readback": {
+  "status": "CHATGPT_CONNECTOR_READBACK_PENDING",
+  "reason": "No direct readback was performed from ChatGPT's own GitHub connection in this task. Claude-side success is not counted as ChatGPT-connector success.",
+  "how_to_verify": "In the ChatGPT chat, open the PR #28 branch at the pinned commit (or its newest head) and read docs/t14r_visual_review/G002_C_T14Q_R1/REVIEW_GUIDE_KO.md, then images/DAYLIGHT_FINAL/preview.jpg, images/BLUEHOUR_FINAL/preview.jpg and one focus/*.png; confirm the image content is visible, not only the file name."
+ },
+ "per_file_rest_results": [
+  {
+   "path": "images/DAYLIGHT_FINAL/preview.jpg",
+   "kind": "preview",
+   "bytes": 382414,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    1600,
+    900
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00000_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 228265,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00000_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 222567,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00400_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 229466,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00400_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 222527,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00800_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 230585,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00800_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 229061,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x01200_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 225837,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x01200_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 233958,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x01600_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 225481,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x01600_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 246069,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02000_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 228177,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02000_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 232552,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02400_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 243526,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02400_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 227524,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02800_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 243077,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02800_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 231557,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x03200_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 229928,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x03200_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 222631,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x03600_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 216784,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x03600_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 223930,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x04000_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 214644,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x04000_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 232670,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x04400_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 213567,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x04400_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 227207,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00000_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 229377,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00000_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 247710,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00400_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 228674,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00400_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 238380,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00800_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 234699,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00800_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 228767,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x01200_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 233700,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x01200_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 234233,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x01600_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 249303,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x01600_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 249949,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02000_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 231660,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02000_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 239730,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02400_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 222514,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02400_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 238045,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02800_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 242539,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02800_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 239135,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x03200_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 222035,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x03200_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 230281,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x03600_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 211013,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x03600_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 227960,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x04000_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 232659,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x04000_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 219554,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x04400_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 235940,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x04400_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 229124,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00000_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 237811,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00000_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 230458,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00400_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 244928,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00400_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 267715,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00800_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 248798,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00800_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 267170,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x01200_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 259556,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x01200_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 239904,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x01600_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 244256,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x01600_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 229543,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02000_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 229127,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02000_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 237459,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02400_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 229460,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02400_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 234766,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02800_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 242001,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02800_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 250210,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x03200_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 255070,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x03200_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 287503,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x03600_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 246904,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x03600_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 287446,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x04000_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 254748,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x04000_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 279456,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x04400_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 259322,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x04400_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 263349,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00000_y02400_w0800_h0300.png",
+   "kind": "tile",
+   "bytes": 337493,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    800,
+    300
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x00800_y02400_w0800_h0300.png",
+   "kind": "tile",
+   "bytes": 392183,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    800,
+    300
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x01600_y02400_w0800_h0300.png",
+   "kind": "tile",
+   "bytes": 354646,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    800,
+    300
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x02400_y02400_w0800_h0300.png",
+   "kind": "tile",
+   "bytes": 286756,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    800,
+    300
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x03200_y02400_w0800_h0300.png",
+   "kind": "tile",
+   "bytes": 357885,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    800,
+    300
+   ]
+  },
+  {
+   "path": "images/DAYLIGHT_FINAL/tiles/x04000_y02400_w0800_h0300.png",
+   "kind": "tile",
+   "bytes": 347297,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    800,
+    300
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/preview.jpg",
+   "kind": "preview",
+   "bytes": 358606,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    1600,
+    900
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x00000_y00000_w0400_h0800.png",
+   "kind": "tile",
+   "bytes": 407156,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    800
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x00400_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 222699,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x00400_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 213751,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x00800_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 224170,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x00800_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 202361,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x01200_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 223606,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x01200_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 215938,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x01600_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 219777,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x01600_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 223991,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x02000_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 221213,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x02000_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 221621,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x02400_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 223199,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x02400_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 213295,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x02800_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 217280,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x02800_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 198645,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x03200_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 214319,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x03200_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 221071,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x03600_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 223242,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x03600_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 221373,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x04000_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 218374,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x04000_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 213299,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x04400_y00000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 216772,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x04400_y00400_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 223967,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x00000_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 214804,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x00000_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 214166,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x00400_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 215555,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x00400_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 221734,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x00800_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 202183,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x00800_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 215801,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x01200_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 224785,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x01200_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 225922,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x01600_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 214625,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x01600_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 213815,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x02000_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 214790,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x02000_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 223857,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x02400_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 208177,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x02400_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 221226,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x02800_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 208457,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x02800_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 215240,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x03200_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 222623,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x03200_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 221506,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x03600_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 230134,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x03600_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 221952,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x04000_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 221260,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x04000_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 221347,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x04400_y00800_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 221107,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x04400_y01200_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 217879,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x00000_y01600_w0400_h0800.png",
+   "kind": "tile",
+   "bytes": 406176,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    800
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x00400_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 223507,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x00400_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 255413,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x00800_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 224447,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x00800_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 242640,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x01200_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 231764,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x01200_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 217386,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x01600_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 219633,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x01600_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 213702,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x02000_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 216405,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x02000_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 211764,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x02400_y01600_w0400_h0800.png",
+   "kind": "tile",
+   "bytes": 408371,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    800
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x02800_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 221432,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x02800_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 219450,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x03200_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 250136,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x03200_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 261252,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x03600_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 229204,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x03600_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 259072,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x04000_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 233119,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x04000_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 239765,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x04400_y01600_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 226763,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x04400_y02000_w0400_h0400.png",
+   "kind": "tile",
+   "bytes": 225937,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    400,
+    400
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x00000_y02400_w0800_h0300.png",
+   "kind": "tile",
+   "bytes": 316419,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    800,
+    300
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x00800_y02400_w0800_h0300.png",
+   "kind": "tile",
+   "bytes": 379591,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    800,
+    300
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x01600_y02400_w0800_h0300.png",
+   "kind": "tile",
+   "bytes": 314280,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    800,
+    300
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x02400_y02400_w0800_h0300.png",
+   "kind": "tile",
+   "bytes": 255655,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    800,
+    300
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x03200_y02400_w0800_h0300.png",
+   "kind": "tile",
+   "bytes": 310016,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    800,
+    300
+   ]
+  },
+  {
+   "path": "images/BLUEHOUR_FINAL/tiles/x04000_y02400_w0800_h0300.png",
+   "kind": "tile",
+   "bytes": 279799,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    800,
+    300
+   ]
+  },
+  {
+   "path": "overview.jpg",
+   "kind": "overview",
+   "bytes": 141630,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    1280,
+    390
+   ]
+  },
+  {
+   "path": "focus/F01_fins_right_upper__DAYLIGHT_FINAL__x02544_y00544_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 375497,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F01_fins_right_upper__BLUEHOUR_FINAL__x02544_y00544_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 347447,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F01_fins_right_upper__DAYLIGHT_FINAL__REFERENCE_BLENDER_BASE__x02544_y00544_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 210060,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F01_fins_right_upper__BLUEHOUR_FINAL__REFERENCE_BLENDER_BASE__x02544_y00544_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 132041,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F02_fins_right_lower__DAYLIGHT_FINAL__x02500_y01560_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 386273,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F02_fins_right_lower__BLUEHOUR_FINAL__x02500_y01560_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 344301,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F02_fins_right_lower__DAYLIGHT_FINAL__REFERENCE_BLENDER_BASE__x02500_y01560_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 213796,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F02_fins_right_lower__BLUEHOUR_FINAL__REFERENCE_BLENDER_BASE__x02500_y01560_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 155241,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F03_fins_left_upper__DAYLIGHT_FINAL__x01700_y00700_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 401729,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F03_fins_left_upper__BLUEHOUR_FINAL__x01700_y00700_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 353618,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F03_fins_left_upper__DAYLIGHT_FINAL__REFERENCE_BLENDER_BASE__x01700_y00700_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 254664,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F03_fins_left_upper__BLUEHOUR_FINAL__REFERENCE_BLENDER_BASE__x01700_y00700_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 190466,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F04_roof_left_opening__DAYLIGHT_FINAL__x01760_y00020_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 380715,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F04_roof_left_opening__BLUEHOUR_FINAL__x01760_y00020_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 365784,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F05_roof_tubes__DAYLIGHT_FINAL__x02300_y00100_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 396323,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F05_roof_tubes__BLUEHOUR_FINAL__x02300_y00100_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 345608,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F06_roof_right_cylinder_garden__DAYLIGHT_FINAL__x02780_y00040_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 392247,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F06_roof_right_cylinder_garden__BLUEHOUR_FINAL__x02780_y00040_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 341713,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F07_mid_slot_right__DAYLIGHT_FINAL__x02450_y01150_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 387689,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F07_mid_slot_right__BLUEHOUR_FINAL__x02450_y01150_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 345906,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F08_mid_notch_left__DAYLIGHT_FINAL__x01850_y01150_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 398547,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F08_mid_notch_left__BLUEHOUR_FINAL__x01850_y01150_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 364799,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F09_core_front__DAYLIGHT_FINAL__x02004_y00900_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 386943,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F09_core_front__BLUEHOUR_FINAL__x02004_y00900_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 364971,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F10_core_right__DAYLIGHT_FINAL__x02980_y00600_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 383627,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F10_core_right__BLUEHOUR_FINAL__x02980_y00600_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 348602,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F11_tube_ground__DAYLIGHT_FINAL__x02450_y01760_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 388153,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F11_tube_ground__BLUEHOUR_FINAL__x02450_y01760_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 349288,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F12_entrance_ramp__DAYLIGHT_FINAL__x02200_y01900_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 379173,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F12_entrance_ramp__BLUEHOUR_FINAL__x02200_y01900_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 346700,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F13_crosswalk_plaza_edge__DAYLIGHT_FINAL__x01700_y02188_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 389208,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F13_crosswalk_plaza_edge__BLUEHOUR_FINAL__x01700_y02188_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 348339,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F14_avenue_trees_cars__DAYLIGHT_FINAL__x03500_y02000_w0471_h0471.png",
+   "kind": "focus",
+   "bytes": 397993,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    471,
+    471
+   ]
+  },
+  {
+   "path": "focus/F14_avenue_trees_cars__BLUEHOUR_FINAL__x03500_y02000_w0471_h0471.png",
+   "kind": "focus",
+   "bytes": 359587,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    471,
+    471
+   ]
+  },
+  {
+   "path": "focus/F15_context_skyline__DAYLIGHT_FINAL__x00300_y00100_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 370808,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F15_context_skyline__BLUEHOUR_FINAL__x00300_y00100_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 349421,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F16_context_glass_tower__DAYLIGHT_FINAL__x03600_y00700_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 361185,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  },
+  {
+   "path": "focus/F16_context_glass_tower__BLUEHOUR_FINAL__x03600_y00700_w0512_h0512.png",
+   "kind": "focus",
+   "bytes": 371220,
+   "sha_match": true,
+   "decodes": true,
+   "dims": [
+    512,
+    512
+   ]
+  }
+ ],
+ "status_vocabulary": {
+  "packet": "PACKET_VERIFIED_LOSSLESS",
+  "github": "GITHUB_CONNECTOR_READBACK_PASS(gh-api + claude mcp sample)",
+  "chatgpt": "CHATGPT_CONNECTOR_READBACK_PENDING",
+  "review": "INDEPENDENT_VISUAL_REVIEW_PENDING"
+ },
+ "not_approval": "This report concerns accessibility of the inspection packet only. It is not an architectural or visual quality approval."
+}
