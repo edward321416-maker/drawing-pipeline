@@ -10,8 +10,8 @@ from .layout import PROG_KO, TINT
 A1 = (841.0, 594.0)
 A3 = (420.0, 297.0)
 INK, GREY = "#111111", "#555555"
-PROJECT = "C-T14S"
-ISSUE_DATE = "2026-11-22"
+PROJECT = "C-T14T"
+ISSUE_DATE = "2026-11-23"
 STATUS_LINE = "PROPOSED_DESIGN · NOT APPROVED · NOT FROZEN"
 PROG_ORDER = ["retail", "fnb", "culture", "garden", "restroom"]
 
@@ -38,12 +38,12 @@ def title_block(svg, x0, y0, x1, y1, info, sheet_text, paper_text):
     svg.text(cuts[0] + 4, y0 + h * 0.84, info["subtitle"], 6.25, "normal", GREY, "start")
     svg.text(cuts[1] + 4, y0 + h * 0.36, "축척 1:200 (%s)" % paper_text, 8, "bold", INK, "start")
     svg.text(cuts[1] + 4, y0 + h * 0.58, STATUS_LINE, 6.25, "bold", "#9b1c1c", "start")
-    svg.text(cuts[1] + 4, y0 + h * 0.78, "검수: READY_FOR_CHATGPT_INDEPENDENT_REVIEW", 6.25, "normal", GREY, "start")
+    svg.text(cuts[1] + 4, y0 + h * 0.78, "검수: C_T14T_READY_FOR_CHATGPT_INDEPENDENT_REVIEW", 6.25, "normal", GREY, "start")
     svg.text(cuts[2] + 4, y0 + h * 0.36, PROJECT, 11, "bold", INK, "start")
-    svg.text(cuts[2] + 4, y0 + h * 0.58, "개정 R0 (후보)", 6.25, "normal", GREY, "start")
+    svg.text(cuts[2] + 4, y0 + h * 0.58, "개정 R1 (정정 후보)", 6.25, "normal", GREY, "start")
     svg.text(cuts[2] + 4, y0 + h * 0.78, "출력 " + ISSUE_DATE, 6.25, "normal", GREY, "start")
     svg.text(cuts[3] + 4, y0 + h * 0.36, "진북 %.1f°" % info["north_deg"], 6.25, "normal", GREY, "start")
-    svg.text(cuts[3] + 4, y0 + h * 0.58, "PR #28 프로토콜", 6.25, "normal", GREY, "start")
+    svg.text(cuts[3] + 4, y0 + h * 0.58, "PR #29 기준 정정", 6.25, "normal", GREY, "start")
     svg.text(cuts[3] + 4, y0 + h * 0.78, "1F 원본 보존", 6.25, "normal", GREY, "start")
 
 
@@ -115,6 +115,10 @@ def legend(svg, x, y):
         ("core", "코어 벽 (1F 검증 심볼 재사용·제안)"), ("wall", "구획벽 150 mm (PROPOSED)"),
         ("door", "문 + 개폐 반경 (PROPOSED)"), ("furn", "가구·집기 (PROPOSED)"),
         ("circ", "방문객 주 동선 (PROPOSED)"), ("tag", "실 번호 · 이름 · 면적(폴리곤 계산)"),
+        ("svc", "서비스·반입 동선 → FR 반입 접점 (PROPOSED)"), ("prov", "미결 접점: 랜딩이 모델에 없음 (결정 D-01)"),
+        ("proj", "에스컬레이터 축 투영 (MODEL_VERIFIED 축)"), ("hatch", "바닥판 없음 · 개구부 = 하부 개방 (해칭)"),
+        ("rail", "가장자리 난간 제안 (미검증)"), ("thru", "개방부를 관통하는 기둥 (검증 위치)"),
+        ("supp", "지원·BOH 실 (창고·주방·세척 등, PROPOSED)"),
     ]
     for key, label in items:
         cy = y - 1.3
@@ -137,6 +141,24 @@ def legend(svg, x, y):
         elif key == "tag":
             svg.circle(x + 5, cy, 1.7, stroke="#444", sw=0.16, fill="#fff")
             svg.text(x + 5, cy + 0.7, "07", 5.25, "bold", "#333", "middle")
+        elif key == "svc":
+            svg.line(x + 1.5, cy, x + 8.5, cy, stroke="#9a5b1e", sw=0.18, dash=(1.6, 0.8))
+        elif key == "prov":
+            svg.line(x + 1.5, cy, x + 7.0, cy, stroke="#2f5d8a", sw=0.16, dash=(0.8, 1.2))
+            svg.circle(x + 8.2, cy, 0.9, stroke="#2f5d8a", sw=0.16, fill="#fff")
+        elif key == "proj":
+            svg.line(x + 1.5, cy, x + 8.5, cy, stroke="#7a3b8c", sw=0.14, dash=(3.0, 0.8, 0.6, 0.8))
+        elif key == "hatch":
+            svg.rect(x + 2, cy - 1.6, 6, 3.2, stroke="#8c8c8c", sw=0.1, fill="#ffffff")
+            for k in range(0, 5):
+                svg.line(x + 2 + k * 1.2, cy + 1.6, x + 2 + k * 1.2 + 1.2, cy - 1.6 + 2.0, stroke="#8c8c8c", sw=0.05)
+        elif key == "rail":
+            svg.line(x + 1.5, cy, x + 8.5, cy, stroke="#b3261e", sw=0.16, dash=(1.0, 0.5))
+        elif key == "thru":
+            svg.circle(x + 5, cy, 0.9, stroke="#000", sw=0.2, fill="#000")
+            svg.circle(x + 5, cy, 1.9, stroke="#333", sw=0.12)
+        elif key == "supp":
+            svg.rect(x + 2, cy - 1.4, 6, 2.8, stroke="#444", sw=0.2, fill="#ebe7df")
         svg.text(x + 11, y, label, 6.25, "normal", "#222", "start")
         y += 4.6
     svg.text(x + 1, y + 1, "프로그램 색조", 6.25, "bold", INK, "start")
@@ -151,7 +173,7 @@ def legend(svg, x, y):
 def schedule_rows(d: Drawing):
     rows = []
     for r in sorted(d.rooms, key=lambda r: r["id"]):
-        rows.append((r["id"], r["name"], PROG_KO.get(r["program"], r["program"]), format(r["area_m2"], ",.1f"),
+        rows.append((r["id"], r["name"], PROG_KO.get(r["program"], r["program"]) + ("·지원" if r["kind"] == "support" else ""), format(r["area_m2"], ",.1f"),
                      "제안" if r["prov"] == PROPOSED else "심볼"))
     return rows
 
@@ -194,20 +216,22 @@ def summary_and_status(svg, d: Drawing, info, x0, y0, width):
     rows = [("층판 외곽 (MODEL_VERIFIED)", format(info["slab_gross_m2"], ",.1f")),
             ("층판 개구 (MODEL_VERIFIED)", format(info["opening_m2"], ",.1f")),
             ("층판 순면적 (MODEL_VERIFIED)", format(info["slab_net_m2"], ",.1f"))]
-    for p in PROG_ORDER:
-        v = info["room_area_by_program"].get(p)
+    for k, lab in (("main", "공용 판매·객석·문화 주 공간"), ("support", "지원·BOH (창고·주방·세척)"), ("hall", "공용 홀·통로"),
+                   ("garden", "정원 (산책로·식재·휴게)"), ("restroom", "화장실")):
+        v = info.get("room_area_by_role", {}).get(k)
         if v:
-            rows.append(("제안 실 합계 · " + PROG_KO[p], format(v, ",.1f")))
+            rows.append(("제안 · " + lab, format(v, ",.1f")))
     rows.append(("제안 실 합계 (폴리곤)", format(sum(info["room_area_by_program"].values()), ",.1f")))
     y = table(svg, xl, y, (colw - 26, 26), rows, row_h=3.7, aligns=("start", "end"), pt=6.0)
     svg.text(xl + 1, y + 3.4, "※ 제안 실 합계 + 코어·튜브·복도·기둥 = 층판 순면적 아님(복도·미분류 틈 제외)", 5.25, "normal", GREY, "start")
     yy = heading(svg, xr, y0, "상태·한계 STATUS & LIMITS")
     lines = [
-        "MODEL_VERIFIED: 층판 외곽·개구, 기둥, 코어 외곽, 튜브 개구, 에스컬레이터 절단부, 파사드 부재.",
-        "PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 코어·화장실·튜브 내부(1F 검증 심볼 재사용 포함).",
+        "MODEL_VERIFIED: 층판 외곽·개구, 기둥, 코어 외곽, 튜브 개구, 에스컬레이터 절단부·축, 파사드 부재.",
+        "PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 난간, 코어·화장실·튜브 내부(1F 검증 심볼 재사용 포함).",
         "법규(피난·방화·장애인) 적합성, 구조 규격, 설비는 검증하지 않았다. 승인 아님.",
         "화장실 위치는 1F 승인 위치(사용자 승인 이동 반영)를 수직으로 쌓았다. 모델 사실 아님.",
-    ] + ["NOTE · " + n[:92] for n in d.notes[:5]]
+    ] + ["미결 · " + u["id"] + (" → " + u["decision"] if u.get("decision") else "") for u in d.meta.get("graph", {}).get("unresolved", [])[:6]] \
+      + ["NOTE · " + n[:92] for n in d.notes if not n.startswith(("ESC_LANDING", "CORE_", "TUBE_"))][:3]
     for ln in lines:
         svg.text(xr + 1, yy, ln, 5.6, "normal", "#333", "start")
         yy += 3.9
