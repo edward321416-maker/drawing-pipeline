@@ -99,6 +99,8 @@ def door_symbol(c, t, n, w):
 
 
 class Planner:
+    CARVE_PREFIX = ("core", "wc")
+
     def __init__(self, g: SRC.FloorGeometry, seed=7):
         self.g = g
         self.rng = random.Random(seed * 1000 + SRC.FLOORS.index(g.floor))
@@ -367,7 +369,7 @@ class Planner:
         self.make_cells()
         block = Polygon()
         self.fit_units(block)
-        nodes = {k: p for k, p in self.required_nodes().items() if k.startswith(("core", "wc"))}
+        nodes = {k: p for k, p in self.required_nodes().items() if k.startswith(self.CARVE_PREFIX)}
         tried = set()
         for _ in range(10):
             uu = unary_union([u["poly"] for u in self.units]) if self.units else Polygon()

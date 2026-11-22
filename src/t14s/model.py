@@ -22,6 +22,7 @@ PT = 0.3528                                          # mm per pt
 LAYERS = [
     ("A-ZONE", "Program zone tint (hatch)"),
     ("A-FLOR-OPEN", "Floor openings / voids"),
+    ("A-FLOR-HATCH", "Open-to-below / no-slab hatch (notation)"),
     ("A-GRID", "Structural grid"),
     ("A-FURN", "Furniture and fit-out (proposed)"),
     ("A-FIXT", "Sanitary fixtures"),
@@ -33,7 +34,10 @@ LAYERS = [
     ("A-WALL-CORE", "Core walls"),
     ("A-WALL-EXT", "Slab edge / exterior"),
     ("A-COLS", "Structural columns"),
-    ("A-CIRC", "Circulation routes (proposed)"),
+    ("A-RAIL", "Proposed edge protection at free openings (not verified)"),
+    ("A-CIRC", "Visitor circulation routes (proposed)"),
+    ("A-CIRC-SVC", "Service / delivery routes (proposed)"),
+    ("A-STAR-PROJ", "Escalator paths projected from other levels (model axis)"),
     ("A-ANNO-TAGS", "Room tags"),
     ("A-ANNO-TEXT", "Text"),
     ("A-ANNO-DIMS", "Dimensions"),
@@ -47,9 +51,12 @@ PEN_MM = {"cut_heavy": 0.50, "cut_medium": 0.30, "projection_light": 0.16, "deta
 PEN_COLOR = {k: v.color for k, v in LINE_CLASSES.items()}
 PEN_MM["circ"] = 0.18
 DXF_CIRC_LW = 15
-PEN_COLOR.update({"dim": "#555555", "hair": "#999999", "circ": "#2f5d8a", "zone": "#cfcfcf"})
+PEN_COLOR.update({"dim": "#555555", "hair": "#999999", "circ": "#2f5d8a", "zone": "#cfcfcf", "svc": "#9a5b1e", "proj": "#7a3b8c",
+                  "rail": "#b3261e", "hatch": "#8c8c8c", "prov": "#2f5d8a"})
+PEN_MM.update({"svc": 0.18, "proj": 0.14, "rail": 0.16, "hatch": 0.05, "prov": 0.16})
 PEN_MM["zone"] = 0.05
-PEN_DASH = {"detail": (1.2, 0.8), "grid": (4.0, 1.0, 0.8, 1.0), "circ": (2.2, 0.9, 0.5, 0.9)}   # paper mm
+PEN_DASH = {"detail": (1.2, 0.8), "grid": (4.0, 1.0, 0.8, 1.0), "circ": (2.2, 0.9, 0.5, 0.9), "svc": (1.6, 0.8), "proj": (3.0, 0.8, 0.6, 0.8),
+            "rail": (1.0, 0.5), "prov": (0.8, 1.2)}   # paper mm
 DXF_LW = {"cut_heavy": 50, "cut_medium": 30, "projection_light": 15, "detail": 9, "grid": 5, "dim": 9, "hair": 5,
           "boundary": 20, "context": 9}
 

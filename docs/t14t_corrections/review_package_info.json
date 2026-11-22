@@ -1,0 +1,25 @@
+{
+ "contact_sheet": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14T\\docs\\t14t_corrections\\contact_sheet_17_floors_T14T.jpg",
+ "contact_sheet_bytes": 405495,
+ "a3_pdf": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14T\\docs\\t14t_corrections\\T14T_correction_review_A3.pdf",
+ "a3_pages": 18,
+ "before_after": {
+  "B2": 400031,
+  "B1": 420746,
+  "2F": 503024,
+  "3F": 471928,
+  "4F": 470892,
+  "5F": 467133,
+  "6F": 477038,
+  "7F": 476717,
+  "8F": 469508,
+  "9F": 473419,
+  "10F": 477362,
+  "11F": 471182,
+  "12F": 459815,
+  "13F": 452749,
+  "14F": 466693,
+  "15F": 459480
+ },
+ "review_packet": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-T14T\\docs\\t14t_corrections\\review_packet"
+}

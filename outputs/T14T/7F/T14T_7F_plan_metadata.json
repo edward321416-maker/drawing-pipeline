@@ -1,0 +1,1095 @@
+{
+ "schema": "C-T14T-FLOOR-1.0",
+ "floor": "7F",
+ "level_ffl_m": 31.001,
+ "review_state": "C_T14T_READY_FOR_CHATGPT_INDEPENDENT_REVIEW",
+ "approval": "NOT_APPROVED",
+ "frozen": false,
+ "scale": "1:200",
+ "sheets": {
+  "A1": "841x594 mm landscape",
+  "A3": "420x297 mm landscape, 2-page north/south split with match line y=+9.000"
+ },
+ "source": {
+  "slice_file": "floor_7F_slice.json",
+  "slice_sha256": "db8d579e5916509f9fc0f798a8054bf7e5f6ffa0e5163059ff020291288efbeb",
+  "elements": 78,
+  "source_manifest": "data/t14s/source_slices/manifest.json",
+  "model_cache_sha256": {
+   "model_world.npz": "992e2ec51ec17dc494ed2f99ddb11298671449dd6661d92df3b3536a0049537b",
+   "model_objects.json": "722dd7359e2f13534ff4ae91088ba8649e8a8f96b27c60f000ddb09c01106488"
+  },
+  "glb": "BLOCKED_MISSING_SOURCE (cache only, as in V4 U-20)"
+ },
+ "geometry_verified": {
+  "slab_gross_m2": 1563.2,
+  "slab_net_m2": 1415.6,
+  "opening_m2": 147.6,
+  "openings": 5,
+  "columns": 34,
+  "cores": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "tubes": [
+   "FR",
+   "M1",
+   "M2",
+   "PL",
+   "T1",
+   "T2",
+   "T3",
+   "T4",
+   "capE"
+  ],
+  "shafts": [
+   "EV1",
+   "EV2"
+  ],
+  "escalator_cuts": [
+   "7F-10F_X7F-10F",
+   "7F-8F_E_7F"
+  ],
+  "ramp_present": false,
+  "escalator_axes": [
+   {
+    "source_id": "A-VERT-ESCL_6F-7F_E_6F",
+    "from": "6F",
+    "to": "7F",
+    "role_here": "arrive",
+    "low_xy": [
+     33.0,
+     3.5
+    ],
+    "high_xy": [
+     33.0,
+     14.16
+    ],
+    "z_low": 25.4,
+    "z_high": 31.0
+   },
+   {
+    "source_id": "A-VERT-ESCL_7F-10F_X7F-10F",
+    "from": "7F",
+    "to": "10F",
+    "role_here": "board",
+    "low_xy": [
+     35.2,
+     32.0
+    ],
+    "high_xy": [
+     8.95,
+     32.0
+    ],
+    "z_low": 30.4,
+    "z_high": 45.0
+   },
+   {
+    "source_id": "A-VERT-ESCL_7F-8F_E_7F",
+    "from": "7F",
+    "to": "8F",
+    "role_here": "board",
+    "low_xy": [
+     29.0,
+     14.16
+    ],
+    "high_xy": [
+     29.0,
+     3.5
+    ],
+    "z_low": 30.4,
+    "z_high": 36.0
+   }
+  ],
+  "model_objects_not_drawn": [
+   {
+    "source_id": "A-VERT-ELEV_car_2",
+    "bounds_m": [
+     28.3,
+     23.0,
+     30.5,
+     25.0
+    ],
+    "drawn": false,
+    "reason": "lift-car section object sits inside the T3/T4 shaft symbol; not drawn separately"
+   }
+  ],
+  "openings_classified": [
+   {
+    "kind": "no_slab_region",
+    "area_m2": 973.9
+   },
+   {
+    "kind": "exposed_slab_edge_rail",
+    "length_m": 79.4
+   },
+   {
+    "kind": "columns_through_open_volume",
+    "count": 14
+   }
+  ],
+  "program_zones": [
+   {
+    "name_ko": "F&B",
+    "program_floor": "7F",
+    "area_m2": 289.9
+   },
+   {
+    "name_ko": "판매",
+    "program_floor": "7F",
+    "area_m2": 946.8
+   }
+  ]
+ },
+ "design_proposed": {
+  "rooms": [
+   {
+    "id": "01",
+    "name": "판매 점포",
+    "program": "retail",
+    "kind": "unit",
+    "area_m2": 54.0,
+    "provenance": "PROPOSED_DESIGN",
+    "use": "",
+    "role": "sales",
+    "parent_id": null,
+    "garden": null
+   },
+   {
+    "id": "02",
+    "name": "창고·지원 (03)",
+    "program": "retail",
+    "kind": "support",
+    "area_m2": 16.4,
+    "provenance": "PROPOSED_DESIGN",
+    "use": "",
+    "role": "stock",
+    "parent_id": "03",
+    "garden": null
+   },
+   {
+    "id": "03",
+    "name": "판매 점포",
+    "program": "retail",
+    "kind": "unit",
+    "area_m2": 53.8,
+    "provenance": "PROPOSED_DESIGN",
+    "use": "",
+    "role": "sales",
+    "parent_id": null,
+    "garden": null
+   },
+   {
+    "id": "04",
+    "name": "창고·지원 (05)",
+    "program": "retail",
+    "kind": "support",
+    "area_m2": 9.4,
+    "provenance": "PROPOSED_DESIGN",
+    "use": "",
+    "role": "stock",
+    "parent_id": "05",
+    "garden": null
+   },
+   {
+    "id": "05",
+    "name": "판매 점포",
+    "program": "retail",
+    "kind": "unit",
+    "area_m2": 31.0,
+    "provenance": "PROPOSED_DESIGN",
+    "use": "",
+    "role": "sales",
+    "parent_id": null,
+    "garden": null
+   },
+   {
+    "id": "06",
+    "name": "창고·지원 (01)",
+    "program": "retail",
+    "kind": "support",
+    "area_m2": 16.2,
+    "provenance": "PROPOSED_DESIGN",
+    "use": "",
+    "role": "stock",
+    "parent_id": "01",
+    "garden": null
+   },
+   {
+    "id": "07",
+    "name": "화장실 공용·장애인 겸용",
+    "program": "restroom",
+    "kind": "restroom",
+    "area_m2": 22.4,
+    "provenance": "PROPOSED_DESIGN__VERIFIED_1F_SYMBOL",
+    "use": "공용",
+    "role": "restroom",
+    "parent_id": null,
+    "garden": null
+   },
+   {
+    "id": "08",
+    "name": "판매 홀",
+    "program": "retail",
+    "kind": "hall",
+    "area_m2": 646.3,
+    "provenance": "PROPOSED_DESIGN",
+    "use": "",
+    "role": "public_circulation",
+    "parent_id": null,
+    "garden": null
+   },
+   {
+    "id": "09",
+    "name": "창고·세척 (11)",
+    "program": "fnb",
+    "kind": "support",
+    "area_m2": 6.9,
+    "provenance": "PROPOSED_DESIGN",
+    "use": "",
+    "role": "wash",
+    "parent_id": "11",
+    "garden": null
+   },
+   {
+    "id": "10",
+    "name": "주방 (11)",
+    "program": "fnb",
+    "kind": "support",
+    "area_m2": 8.2,
+    "provenance": "PROPOSED_DESIGN",
+    "use": "",
+    "role": "kitchen",
+    "parent_id": "11",
+    "garden": null
+   },
+   {
+    "id": "11",
+    "name": "식음 점포 (객석)",
+    "program": "fnb",
+    "kind": "unit",
+    "area_m2": 33.5,
+    "provenance": "PROPOSED_DESIGN",
+    "use": "",
+    "role": "dining",
+    "parent_id": null,
+    "garden": null
+   },
+   {
+    "id": "12",
+    "name": "식음 홀",
+    "program": "fnb",
+    "kind": "hall",
+    "area_m2": 320.9,
+    "provenance": "PROPOSED_DESIGN",
+    "use": "",
+    "role": "public_circulation",
+    "parent_id": null,
+    "garden": null
+   },
+   {
+    "id": "13",
+    "name": "식음 홀",
+    "program": "fnb",
+    "kind": "hall",
+    "area_m2": 102.9,
+    "provenance": "PROPOSED_DESIGN",
+    "use": "",
+    "role": "public_circulation",
+    "parent_id": null,
+    "garden": null
+   }
+  ],
+  "unit_count": 4,
+  "doors": 11,
+  "room_area_by_program_m2": {
+   "retail": 827.2,
+   "restroom": 22.4,
+   "fnb": 472.4
+  },
+  "room_area_by_role_m2": {
+   "main": 172.3,
+   "support": 57.1,
+   "restroom": 22.4,
+   "hall": 1070.1
+  },
+  "circulation_graph": {
+   "model": "raster walking graph on the walkable hall polygon: 0.35 m wall setback, column face + 0.62 m, door swings and voids excluded",
+   "grid_step_m": 0.3,
+   "nodes": [
+    {
+     "id": "core A",
+     "type": "core",
+     "access_x": -6.0,
+     "access_y": 27.4,
+     "status": "ON_SLAB",
+     "snap_m": 0.16,
+     "x": -5.95,
+     "y": 27.55
+    },
+    {
+     "id": "core B",
+     "type": "core",
+     "access_x": 39.2,
+     "access_y": 27.4,
+     "status": "ON_SLAB",
+     "snap_m": 0.21,
+     "x": 39.35,
+     "y": 27.55
+    },
+    {
+     "id": "wc B",
+     "type": "wc",
+     "access_x": 41.51,
+     "access_y": 23.12,
+     "status": "ON_SLAB",
+     "snap_m": 0.09,
+     "x": 41.45,
+     "y": 23.05
+    },
+    {
+     "id": "tube T3",
+     "type": "elevator",
+     "access_x": 3.0,
+     "access_y": 18.5,
+     "status": "ON_SLAB",
+     "snap_m": 0.07,
+     "x": 3.05,
+     "y": 18.55,
+     "turn_deg": 0.0
+    },
+    {
+     "id": "tube T4",
+     "type": "elevator",
+     "access_x": 27.11,
+     "access_y": 20.11,
+     "status": "ON_SLAB",
+     "snap_m": 0.09,
+     "x": 27.05,
+     "y": 20.05,
+     "turn_deg": -45.0
+    },
+    {
+     "id": "esc 6F→7F arrive",
+     "type": "escalator",
+     "access_x": 33.0,
+     "access_y": 19.96,
+     "status": "AT_OPENING_EDGE",
+     "gap_m": 2.45,
+     "decision": "D-01",
+     "esc": "A-VERT-ESCL_6F-7F_E_6F",
+     "role": "arrive",
+     "end": [
+      33.0,
+      14.16
+     ],
+     "snap_m": 0.0,
+     "x": 35.45,
+     "y": 14.05
+    },
+    {
+     "id": "esc 7F→10F board",
+     "type": "escalator",
+     "access_x": 37.4,
+     "access_y": 32.0,
+     "status": "ON_SLAB",
+     "snap_m": 0.16,
+     "x": 37.55,
+     "y": 32.05,
+     "esc": "A-VERT-ESCL_7F-10F_X7F-10F",
+     "role": "board"
+    },
+    {
+     "id": "esc 7F→8F board",
+     "type": "escalator",
+     "access_x": 29.0,
+     "access_y": 19.96,
+     "status": "AT_OPENING_EDGE",
+     "gap_m": 2.55,
+     "decision": "D-01",
+     "esc": "A-VERT-ESCL_7F-8F_E_7F",
+     "role": "board",
+     "end": [
+      29.0,
+      14.16
+     ],
+     "snap_m": 0.0,
+     "x": 26.45,
+     "y": 14.05
+    }
+   ],
+   "edges": [
+    {
+     "a": "core A",
+     "b": "tube T3",
+     "length_m": 14.25,
+     "provisional": false,
+     "min_column_clear_m": 2.06,
+     "coords": [
+      [
+       -5.95,
+       27.55
+      ],
+      [
+       -2.95,
+       24.55
+      ],
+      [
+       -2.95,
+       21.85
+      ],
+      [
+       -1.45,
+       20.35
+      ],
+      [
+       0.95,
+       18.55
+      ],
+      [
+       2.15,
+       18.25
+      ],
+      [
+       3.05,
+       18.55
+      ]
+     ]
+    },
+    {
+     "a": "tube T3",
+     "b": "tube T4",
+     "length_m": 25.36,
+     "provisional": false,
+     "min_column_clear_m": 2.12,
+     "coords": [
+      [
+       3.05,
+       18.55
+      ],
+      [
+       3.35,
+       18.25
+      ],
+      [
+       5.75,
+       18.55
+      ],
+      [
+       8.45,
+       20.95
+      ],
+      [
+       25.85,
+       20.95
+      ],
+      [
+       27.05,
+       20.05
+      ]
+     ]
+    },
+    {
+     "a": "tube T4",
+     "b": "esc 7F→8F board",
+     "length_m": 7.0,
+     "provisional": true,
+     "min_column_clear_m": 6.5,
+     "coords": [
+      [
+       27.05,
+       20.05
+      ],
+      [
+       25.85,
+       18.55
+      ],
+      [
+       25.25,
+       16.45
+      ],
+      [
+       25.25,
+       15.25
+      ],
+      [
+       26.45,
+       14.05
+      ]
+     ]
+    },
+    {
+     "a": "tube T4",
+     "b": "esc 7F→10F board",
+     "length_m": 24.0,
+     "provisional": false,
+     "min_column_clear_m": 2.13,
+     "coords": [
+      [
+       27.05,
+       20.05
+      ],
+      [
+       24.35,
+       23.05
+      ],
+      [
+       24.05,
+       27.85
+      ],
+      [
+       26.45,
+       29.95
+      ],
+      [
+       34.25,
+       29.95
+      ],
+      [
+       36.35,
+       32.05
+      ],
+      [
+       37.55,
+       32.05
+      ]
+     ]
+    },
+    {
+     "a": "esc 7F→10F board",
+     "b": "core B",
+     "length_m": 6.69,
+     "provisional": false,
+     "min_column_clear_m": 1.75,
+     "coords": [
+      [
+       37.55,
+       32.05
+      ],
+      [
+       36.35,
+       30.85
+      ],
+      [
+       36.35,
+       29.95
+      ],
+      [
+       38.45,
+       27.55
+      ],
+      [
+       39.35,
+       27.55
+      ]
+     ]
+    },
+    {
+     "a": "core B",
+     "b": "wc B",
+     "length_m": 6.57,
+     "provisional": false,
+     "min_column_clear_m": 2.3,
+     "coords": [
+      [
+       39.35,
+       27.55
+      ],
+      [
+       38.75,
+       26.95
+      ],
+      [
+       38.75,
+       24.55
+      ],
+      [
+       40.25,
+       23.05
+      ],
+      [
+       41.45,
+       23.05
+      ]
+     ]
+    },
+    {
+     "a": "wc B",
+     "b": "esc 6F→7F arrive",
+     "length_m": 14.74,
+     "provisional": true,
+     "min_column_clear_m": 1.71,
+     "coords": [
+      [
+       41.45,
+       23.05
+      ],
+      [
+       43.25,
+       21.55
+      ],
+      [
+       43.25,
+       20.35
+      ],
+      [
+       42.35,
+       18.85
+      ],
+      [
+       42.05,
+       17.05
+      ],
+      [
+       40.25,
+       15.55
+      ],
+      [
+       37.55,
+       15.55
+      ],
+      [
+       35.45,
+       14.05
+      ]
+     ]
+    }
+   ],
+   "service_edges": [
+    {
+     "a": "service door room 05",
+     "length_m": 38.54,
+     "min_column_clear_m": 1.67,
+     "coords": [
+      [
+       39.05,
+       15.85
+      ],
+      [
+       40.55,
+       15.55
+      ],
+      [
+       42.05,
+       17.05
+      ],
+      [
+       42.35,
+       18.85
+      ],
+      [
+       43.25,
+       20.35
+      ],
+      [
+       43.25,
+       21.55
+      ],
+      [
+       42.35,
+       22.45
+      ],
+      [
+       40.25,
+       23.05
+      ],
+      [
+       38.75,
+       24.55
+      ],
+      [
+       38.75,
+       27.25
+      ],
+      [
+       36.05,
+       29.95
+      ],
+      [
+       26.45,
+       29.95
+      ],
+      [
+       25.25,
+       29.05
+      ],
+      [
+       20.45,
+       29.05
+      ],
+      [
+       18.95,
+       30.55
+      ]
+     ]
+    },
+    {
+     "a": "service door room 01",
+     "length_m": 39.7,
+     "min_column_clear_m": 2.24,
+     "coords": [
+      [
+       20.75,
+       29.05
+      ],
+      [
+       20.75,
+       24.25
+      ],
+      [
+       19.25,
+       22.75
+      ],
+      [
+       18.05,
+       22.15
+      ],
+      [
+       9.35,
+       22.15
+      ],
+      [
+       6.35,
+       19.15
+      ],
+      [
+       3.95,
+       18.25
+      ],
+      [
+       0.65,
+       18.25
+      ],
+      [
+       -2.35,
+       21.55
+      ],
+      [
+       -2.65,
+       26.95
+      ],
+      [
+       -0.85,
+       29.05
+      ]
+     ]
+    }
+   ],
+   "unit_doors": [
+    {
+     "room": "01",
+     "x": 0.0,
+     "y": 32.1,
+     "reachable": true,
+     "stub_m": 9.2
+    },
+    {
+     "room": "03",
+     "x": 12.66,
+     "y": 28.2,
+     "reachable": true,
+     "stub_m": 6.4
+    },
+    {
+     "room": "05",
+     "x": 24.72,
+     "y": 31.5,
+     "reachable": true,
+     "stub_m": 1.7
+    },
+    {
+     "room": "11",
+     "x": -3.43,
+     "y": 16.2,
+     "reachable": true,
+     "stub_m": 3.7
+    }
+   ],
+   "unresolved": [
+    {
+     "id": "esc 6F→7F arrive",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    },
+    {
+     "id": "esc 7F→8F board",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    }
+   ],
+   "service_root": {
+    "x": 39.05,
+    "y": 15.85
+   },
+   "service_doors": [
+    {
+     "room": "05",
+     "x": 19.05,
+     "y": 31.5,
+     "reachable": true,
+     "apron": [
+      19.05,
+      30.6
+     ]
+    },
+    {
+     "room": "01",
+     "x": 0.0,
+     "y": 29.1,
+     "reachable": true,
+     "apron": [
+      -0.9,
+      29.1
+     ]
+    }
+   ],
+   "not_modeled": [],
+   "summary": {
+    "visitor_nodes": 8,
+    "connected": 6,
+    "provisional_at_opening_edge": 2,
+    "unresolved": 2,
+    "unit_doors": 4,
+    "unit_doors_reachable": 4,
+    "service_doors": 2
+   }
+  },
+  "decision_refs": {
+   "D-02": [
+    {
+     "floor": "7F",
+     "core": "C",
+     "core_bounds_m": [
+      39.0,
+      -18.0,
+      45.0,
+      -12.0
+     ]
+    },
+    {
+     "floor": "7F",
+     "core": "D",
+     "core_bounds_m": [
+      -9.0,
+      -18.0,
+      -3.0,
+      -12.0
+     ]
+    }
+   ],
+   "D-03": [
+    {
+     "floor": "7F",
+     "tube": "T4",
+     "turn_deg": -45.0
+    }
+   ],
+   "D-01": [
+    {
+     "floor": "7F",
+     "escalator": "6F→7F",
+     "role": "arrive",
+     "end_m": [
+      33.0,
+      14.16
+     ],
+     "access_edge_m": [
+      35.45,
+      14.05
+     ],
+     "source_id": "A-VERT-ESCL_6F-7F_E_6F",
+     "axis_gap_m": 4.8,
+     "gap_to_slab_m": 2.45
+    },
+    {
+     "floor": "7F",
+     "escalator": "7F→8F",
+     "role": "board",
+     "end_m": [
+      29.0,
+      14.16
+     ],
+     "access_edge_m": [
+      26.45,
+      14.05
+     ],
+     "source_id": "A-VERT-ESCL_7F-8F_E_7F",
+     "axis_gap_m": 4.8,
+     "gap_to_slab_m": 2.55
+    }
+   ]
+  },
+  "vertical_elements": [
+   {
+    "id": "코어 A",
+    "name": "코어 A (특별피난계단)",
+    "status": "MODEL_VERIFIED footprint / interior = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "코어 B",
+    "name": "코어 B (특별피난계단)",
+    "status": "MODEL_VERIFIED footprint / interior = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "코어 C",
+    "name": "코어 C (특별피난계단)",
+    "status": "MODEL_VERIFIED footprint / no floor slab at this level (model); stair shaft continues, no access"
+   },
+   {
+    "id": "코어 D",
+    "name": "코어 D (특별피난계단)",
+    "status": "MODEL_VERIFIED footprint / no floor slab at this level (model); stair shaft continues, no access"
+   },
+   {
+    "id": "FR",
+    "name": "화물 승강기 FR (반입 접점 제안)",
+    "status": "MODEL_VERIFIED opening / content = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "M1",
+    "name": "설비 샤프트 M1",
+    "status": "MODEL_VERIFIED opening / content = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "M2",
+    "name": "설비 샤프트 M2",
+    "status": "MODEL_VERIFIED opening / content = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "PL",
+    "name": "광장 승강기 PL",
+    "status": "MODEL_VERIFIED opening / content = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "T1",
+    "name": "T1 빛 튜브 (램프 없음)",
+    "status": "MODEL_VERIFIED opening / content = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "T2",
+    "name": "T2 빛 튜브",
+    "status": "MODEL_VERIFIED opening / content = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "T3",
+    "name": "T3 전망 승강기",
+    "status": "MODEL_VERIFIED opening / content = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "T4",
+    "name": "T4 전망 승강기",
+    "status": "MODEL_VERIFIED opening / content = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "capE",
+    "name": "동측 캡슐",
+    "status": "MODEL_VERIFIED opening / content = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "EV1",
+    "name": "비상용 승강기 EV1",
+    "status": "MODEL_VERIFIED opening / content = symbol (PROPOSED)"
+   },
+   {
+    "id": "EV2",
+    "name": "비상용 승강기 EV2",
+    "status": "MODEL_VERIFIED opening / content = symbol (PROPOSED)"
+   },
+   {
+    "id": "ESC 6F→7F",
+    "name": "에스컬레이터 6F→7F (동측 캡슐·하차)",
+    "status": "MODEL_VERIFIED axis",
+    "source_id": "A-VERT-ESCL_6F-7F_E_6F"
+   },
+   {
+    "id": "ESC 7F→10F",
+    "name": "에스컬레이터 7F→10F (북측 급행·승차)",
+    "status": "MODEL_VERIFIED axis",
+    "source_id": "A-VERT-ESCL_7F-10F_X7F-10F"
+   },
+   {
+    "id": "ESC 7F→8F",
+    "name": "에스컬레이터 7F→8F (동측 캡슐·승차)",
+    "status": "MODEL_VERIFIED axis",
+    "source_id": "A-VERT-ESCL_7F-8F_E_7F"
+   }
+  ],
+  "notes": [
+   "CORE_C_NO_SLAB_AT_LEVEL: no verified floor slab at the core door; core drawn as closed pass-through shaft (decision D-02)",
+   "CORE_D_NO_SLAB_AT_LEVEL: no verified floor slab at the core door; core drawn as closed pass-through shaft (decision D-02)",
+   "RESTROOM_C_OMITTED: adjacent core absent/unserved or footprint not on the slab at this level",
+   "TUBE_T4_ENTRY_TURNED -45 deg: south entry abuts the capsule opening; lobby entry turned toward the hall (PROPOSED, decision D-03)",
+   "ESC_LANDING_NOT_ON_SLAB 6F→7F arrive: escalator end lies in an opening; nearest verified slab 4.8 m along its axis (decision D-01)",
+   "ESC_LANDING_NOT_ON_SLAB 7F→8F board: escalator end lies in an opening; nearest verified slab 4.8 m along its axis (decision D-01)",
+   "SERVICE_DOOR_DROPPED unit at (13.5, 32.1): no walkable apron in front of the service door; back-of-house is reached through the sales space",
+   "SERVICE_DOOR_DROPPED unit at (-4.5, 13.5): no walkable apron in front of the service door; back-of-house is reached through the sales space"
+  ],
+  "method": "C-T14T targeted corrections on the C-T14S planner: raster walking graph, sales/BOH sub-division, culture concepts, garden design, open-to-below notation; verified geometry unchanged"
+ },
+ "corrections_vs_pr29": [
+  {
+   "area": "P0",
+   "issue": "방문객 동선 연결 (PR #29 메모: CORE_C_NO_SLAB_AT_LEVEL; CORE_D_NO_SLAB_AT_LEVEL; RESTROOM_C_OMITTED)",
+   "change": "기하 보행 그래프로 재계산: 접근 노드 8개 중 6개 바닥판 위 연결, 개구 가장자리 임시 접점 2개, 미결 2건; 점포 문 앞 4/4 연결",
+   "open_items": [
+    "esc 6F→7F arrive",
+    "esc 7F→8F board"
+   ],
+   "decisions": [
+    "D-01",
+    "D-02",
+    "D-03"
+   ]
+  },
+  {
+   "area": "P0",
+   "issue": "승강기 로비 출입구가 캡슐 개구와 접해 설 자리 없음",
+   "change": "출입구를 홀 쪽으로 회전(제안): T4 -45°",
+   "decisions": [
+    "D-03"
+   ]
+  },
+  {
+   "area": "P0/P1",
+   "issue": "이 층에 바닥판이 없는 코어",
+   "change": "통과 전용 닫힌 샤프트로 그리고 '출입 불가' 표시(제안): 코어 C, D",
+   "decisions": [
+    "D-02"
+   ]
+  },
+  {
+   "area": "P1",
+   "issue": "도면에 내부 식별자 노출 (A-VERT-ELEV_car_2)",
+   "change": "도면 글자·실 일람에서 제거, 원본 식별자는 메타데이터(model_objects_not_drawn)에 보존"
+  },
+  {
+   "area": "P1",
+   "issue": "바닥판 없는 영역이 보행 바닥과 구분되지 않음",
+   "change": "하부 개방 해칭과 라벨 추가; 관통하는 기둥·튜브·코어는 그대로 표시(기둥에 점선 링)"
+  },
+  {
+   "area": "P2",
+   "issue": "점포가 분리되지 않은 단일 실",
+   "change": "판매·객석·문화 주 공간과 지원(BOH) 실 5개 분리, FR 반입 접점까지 서비스 경로 2개"
+  }
+ ],
+ "provenance_counts": {
+  "MODEL_VERIFIED": 180,
+  "PROPOSED_DESIGN__VERIFIED_1F_SYMBOL": 267,
+  "PROPOSED_DESIGN": 85
+ },
+ "provenance_legend": {
+  "MODEL_VERIFIED": "taken from the model slice",
+  "PROPOSED_DESIGN__VERIFIED_1F_SYMBOL": "verified 1F symbol geometry placed in a proposed position/content",
+  "PROPOSED_DESIGN": "architectural proposal, not in the model"
+ },
+ "dxf_entities": 810,
+ "png_dpi": 200,
+ "build_seconds": 2.4
+}

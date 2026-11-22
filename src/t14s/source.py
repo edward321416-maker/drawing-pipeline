@@ -1,6 +1,7 @@
 """Verified-source loader. Reads the hash-pinned slice copy; never modifies it."""
 from __future__ import annotations
 
+import functools
 import hashlib
 import json
 import math
@@ -95,6 +96,33 @@ class FloorGeometry:
     north_deg: float
     slice_sha256: str = ""
     elements_count: int = 0
+    esc_ends: list = field(default_factory=list)   # verified escalator axes seen from this floor (board / arrive / through)
+    cars: dict = field(default_factory=dict)       # elevator-car section objects (source id -> polygon); not drawn as labels
+
+
+@functools.lru_cache(maxsize=4)
+def all_escalators(src_dir: str = str(SRC_DIR)) -> dict:
+    """Every escalator axis in the pinned slices (name -> record). The slice of a floor only holds the flights that cross the
+    1.5 m cut plane, so arrivals are found in the slice of the lower floor."""
+    out = {}
+    for f in FLOORS:
+        d = json.loads((Path(src_dir) / ("floor_%s_slice.json" % f)).read_text(encoding="utf-8"))
+        for e in d["elements"]:
+            if "axis" in e and e["name"] not in out:
+                a = e["axis"]
+                fa, fb = e["escalator_range"]
+                lo, hi = tuple(a["low_xy"]), tuple(a["high_xy"])
+                L = math.hypot(hi[0] - lo[0], hi[1] - lo[1])
+                out[e["name"]] = {"source_id": e["name"], "from": fa, "to": fb, "low": lo, "high": hi, "z_low": a["z_low"],
+                                  "z_high": a["z_high"], "u": ((hi[0] - lo[0]) / L, (hi[1] - lo[1]) / L), "length": L,
+                                  "express": FLOORS.index(fb) - FLOORS.index(fa) > 1 and fa != "B1"}
+    return out
+
+
+def _esc_width(poly, u) -> float:
+    nx, ny = -u[1], u[0]
+    ps = [x * nx + y * ny for x, y in poly.exterior.coords]
+    return round(max(ps) - min(ps), 2)
 
 
 def _tube_from(name, g) -> Tube:
@@ -121,6 +149,18 @@ def load_floor(floor: str, src_dir: Path = SRC_DIR) -> FloorGeometry:
     esc = [{"name": it["name"].replace("A-VERT-ESCL_", ""), "poly": g} for it, g in cuts.get("stair", [])]
     ramps = [{"name": it["name"], "poly": g} for it, g in cuts.get("ramp", [])]
     facade = {it["name"].replace("A-FACD_", ""): g for it, g in cuts.get("facade", [])}
+    cars = {k: shafts.pop(k) for k in [k for k in shafts if k.startswith("A-VERT-ELEV_car")]}
+    esc_ends = []
+    fi = FLOORS.index(floor)
+    for rec in all_escalators(str(src_dir)).values():
+        a, b = FLOORS.index(rec["from"]), FLOORS.index(rec["to"])
+        role = "board" if a == fi else "arrive" if b == fi else "through" if a < fi < b else None
+        if role is None:
+            continue
+        cut = next((e["poly"] for e in esc if e["name"].startswith(rec["from"] + "-" + rec["to"]) or rec["source_id"].endswith(e["name"])), None)
+        width = _esc_width(cut, rec["u"]) if cut is not None else 3.6
+        esc_ends.append({**rec, "role": role, "width": width, "side": "N" if abs(rec["u"][0]) > abs(rec["u"][1]) else ("W" if (rec["low"][0] + rec["high"][0]) / 2 < 18 else "E"),
+                         "label": "%s→%s" % (rec["from"], rec["to"])})
     zones = []
     for z in sl["zones"]:
         g = pc.polygons_from_segments(z["segments"])
@@ -128,4 +168,4 @@ def load_floor(floor: str, src_dir: Path = SRC_DIR) -> FloorGeometry:
             zones.append({"name_ko": z["name_ko"], "program_floor": z.get("program_floor"), "poly": g})
     return FloorGeometry(floor, float(sl["floor_z"]), proj, outline, holes, cols, cores, tubes, shafts, esc, ramps,
                          facade, zones, north_angle_deg(),
-                         sha256(Path(src_dir) / ("floor_%s_slice.json" % floor)), len(sl["elements"]))
+                         sha256(Path(src_dir) / ("floor_%s_slice.json" % floor)), len(sl["elements"]), esc_ends, cars)
