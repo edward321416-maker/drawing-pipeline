@@ -1,0 +1,1668 @@
+{
+ "schema": "C-T14S-BUILD-TEST-1.0",
+ "scope": "deterministic technical-usability checks only; no architectural/visual review",
+ "source_geometry": {
+  "ok": true,
+  "problems": [],
+  "files": 19,
+  "original_checked": 19
+ },
+ "floors": [
+  {
+   "floor": "B2",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "w=841mm h=594mm"
+    },
+    "svg_sheet_A1": {
+     "pass": true,
+     "detail": "declared 841x594 mm"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_declares_scale": {
+     "pass": true,
+     "detail": "title block text"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=522"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2 [(420.0, 297.0), (420.0, 297.0)]"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1048 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "meta_geometry_matches_source": {
+     "pass": true,
+     "detail": "columns/slab/cores vs slice"
+    },
+    "meta_source_hash": {
+     "pass": true,
+     "detail": "slice sha256"
+    },
+    "rooms_present": {
+     "pass": true,
+     "detail": "rooms=27"
+    },
+    "room_areas_positive": {
+     "pass": true,
+     "detail": "areas computed from polygons"
+    },
+    "proposed_flagged": {
+     "pass": true,
+     "detail": "{'MODEL_VERIFIED': 137, 'PROPOSED_DESIGN__VERIFIED_1F_SYMBOL': 144, 'PROPOSED_DESIGN': 144}"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "unplaced labels=0 (listed in schedule)"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   }
+  },
+  {
+   "floor": "B1",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "w=841mm h=594mm"
+    },
+    "svg_sheet_A1": {
+     "pass": true,
+     "detail": "declared 841x594 mm"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_declares_scale": {
+     "pass": true,
+     "detail": "title block text"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=671"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2 [(420.0, 297.0), (420.0, 297.0)]"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1094 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "meta_geometry_matches_source": {
+     "pass": true,
+     "detail": "columns/slab/cores vs slice"
+    },
+    "meta_source_hash": {
+     "pass": true,
+     "detail": "slice sha256"
+    },
+    "rooms_present": {
+     "pass": true,
+     "detail": "rooms=21"
+    },
+    "room_areas_positive": {
+     "pass": true,
+     "detail": "areas computed from polygons"
+    },
+    "proposed_flagged": {
+     "pass": true,
+     "detail": "{'MODEL_VERIFIED': 155, 'PROPOSED_DESIGN__VERIFIED_1F_SYMBOL': 304, 'PROPOSED_DESIGN': 107}"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "unplaced labels=0 (listed in schedule)"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   }
+  },
+  {
+   "floor": "2F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "w=841mm h=594mm"
+    },
+    "svg_sheet_A1": {
+     "pass": true,
+     "detail": "declared 841x594 mm"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_declares_scale": {
+     "pass": true,
+     "detail": "title block text"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=625"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2 [(420.0, 297.0), (420.0, 297.0)]"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1320 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "meta_geometry_matches_source": {
+     "pass": true,
+     "detail": "columns/slab/cores vs slice"
+    },
+    "meta_source_hash": {
+     "pass": true,
+     "detail": "slice sha256"
+    },
+    "rooms_present": {
+     "pass": true,
+     "detail": "rooms=13"
+    },
+    "room_areas_positive": {
+     "pass": true,
+     "detail": "areas computed from polygons"
+    },
+    "proposed_flagged": {
+     "pass": true,
+     "detail": "{'MODEL_VERIFIED': 156, 'PROPOSED_DESIGN__VERIFIED_1F_SYMBOL': 308, 'PROPOSED_DESIGN': 61}"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "unplaced labels=0 (listed in schedule)"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   }
+  },
+  {
+   "floor": "3F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "w=841mm h=594mm"
+    },
+    "svg_sheet_A1": {
+     "pass": true,
+     "detail": "declared 841x594 mm"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_declares_scale": {
+     "pass": true,
+     "detail": "title block text"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=673"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2 [(420.0, 297.0), (420.0, 297.0)]"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1275 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "meta_geometry_matches_source": {
+     "pass": true,
+     "detail": "columns/slab/cores vs slice"
+    },
+    "meta_source_hash": {
+     "pass": true,
+     "detail": "slice sha256"
+    },
+    "rooms_present": {
+     "pass": true,
+     "detail": "rooms=19"
+    },
+    "room_areas_positive": {
+     "pass": true,
+     "detail": "areas computed from polygons"
+    },
+    "proposed_flagged": {
+     "pass": true,
+     "detail": "{'MODEL_VERIFIED': 160, 'PROPOSED_DESIGN__VERIFIED_1F_SYMBOL': 305, 'PROPOSED_DESIGN': 104}"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "unplaced labels=0 (listed in schedule)"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   }
+  },
+  {
+   "floor": "4F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "w=841mm h=594mm"
+    },
+    "svg_sheet_A1": {
+     "pass": true,
+     "detail": "declared 841x594 mm"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_declares_scale": {
+     "pass": true,
+     "detail": "title block text"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=679"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2 [(420.0, 297.0), (420.0, 297.0)]"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1274 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "meta_geometry_matches_source": {
+     "pass": true,
+     "detail": "columns/slab/cores vs slice"
+    },
+    "meta_source_hash": {
+     "pass": true,
+     "detail": "slice sha256"
+    },
+    "rooms_present": {
+     "pass": true,
+     "detail": "rooms=20"
+    },
+    "room_areas_positive": {
+     "pass": true,
+     "detail": "areas computed from polygons"
+    },
+    "proposed_flagged": {
+     "pass": true,
+     "detail": "{'MODEL_VERIFIED': 160, 'PROPOSED_DESIGN__VERIFIED_1F_SYMBOL': 305, 'PROPOSED_DESIGN': 108}"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "unplaced labels=0 (listed in schedule)"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   }
+  },
+  {
+   "floor": "5F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "w=841mm h=594mm"
+    },
+    "svg_sheet_A1": {
+     "pass": true,
+     "detail": "declared 841x594 mm"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_declares_scale": {
+     "pass": true,
+     "detail": "title block text"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=667"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2 [(420.0, 297.0), (420.0, 297.0)]"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1257 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "meta_geometry_matches_source": {
+     "pass": true,
+     "detail": "columns/slab/cores vs slice"
+    },
+    "meta_source_hash": {
+     "pass": true,
+     "detail": "slice sha256"
+    },
+    "rooms_present": {
+     "pass": true,
+     "detail": "rooms=18"
+    },
+    "room_areas_positive": {
+     "pass": true,
+     "detail": "areas computed from polygons"
+    },
+    "proposed_flagged": {
+     "pass": true,
+     "detail": "{'MODEL_VERIFIED': 160, 'PROPOSED_DESIGN__VERIFIED_1F_SYMBOL': 305, 'PROPOSED_DESIGN': 99}"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "unplaced labels=0 (listed in schedule)"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   }
+  },
+  {
+   "floor": "6F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "w=841mm h=594mm"
+    },
+    "svg_sheet_A1": {
+     "pass": true,
+     "detail": "declared 841x594 mm"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_declares_scale": {
+     "pass": true,
+     "detail": "title block text"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=641"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2 [(420.0, 297.0), (420.0, 297.0)]"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1079 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "meta_geometry_matches_source": {
+     "pass": true,
+     "detail": "columns/slab/cores vs slice"
+    },
+    "meta_source_hash": {
+     "pass": true,
+     "detail": "slice sha256"
+    },
+    "rooms_present": {
+     "pass": true,
+     "detail": "rooms=14"
+    },
+    "room_areas_positive": {
+     "pass": true,
+     "detail": "areas computed from polygons"
+    },
+    "proposed_flagged": {
+     "pass": true,
+     "detail": "{'MODEL_VERIFIED': 160, 'PROPOSED_DESIGN__VERIFIED_1F_SYMBOL': 303, 'PROPOSED_DESIGN': 75}"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "unplaced labels=0 (listed in schedule)"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   }
+  },
+  {
+   "floor": "7F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "w=841mm h=594mm"
+    },
+    "svg_sheet_A1": {
+     "pass": true,
+     "detail": "declared 841x594 mm"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_declares_scale": {
+     "pass": true,
+     "detail": "title block text"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=589"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2 [(420.0, 297.0), (420.0, 297.0)]"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=929 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "meta_geometry_matches_source": {
+     "pass": true,
+     "detail": "columns/slab/cores vs slice"
+    },
+    "meta_source_hash": {
+     "pass": true,
+     "detail": "slice sha256"
+    },
+    "rooms_present": {
+     "pass": true,
+     "detail": "rooms=10"
+    },
+    "room_areas_positive": {
+     "pass": true,
+     "detail": "areas computed from polygons"
+    },
+    "proposed_flagged": {
+     "pass": true,
+     "detail": "{'MODEL_VERIFIED': 160, 'PROPOSED_DESIGN__VERIFIED_1F_SYMBOL': 274, 'PROPOSED_DESIGN': 57}"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "unplaced labels=0 (listed in schedule)"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   }
+  },
+  {
+   "floor": "8F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "w=841mm h=594mm"
+    },
+    "svg_sheet_A1": {
+     "pass": true,
+     "detail": "declared 841x594 mm"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_declares_scale": {
+     "pass": true,
+     "detail": "title block text"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=621"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2 [(420.0, 297.0), (420.0, 297.0)]"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1122 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "meta_geometry_matches_source": {
+     "pass": true,
+     "detail": "columns/slab/cores vs slice"
+    },
+    "meta_source_hash": {
+     "pass": true,
+     "detail": "slice sha256"
+    },
+    "rooms_present": {
+     "pass": true,
+     "detail": "rooms=11"
+    },
+    "room_areas_positive": {
+     "pass": true,
+     "detail": "areas computed from polygons"
+    },
+    "proposed_flagged": {
+     "pass": true,
+     "detail": "{'MODEL_VERIFIED': 167, 'PROPOSED_DESIGN__VERIFIED_1F_SYMBOL': 302, 'PROPOSED_DESIGN': 56}"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "unplaced labels=0 (listed in schedule)"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   }
+  },
+  {
+   "floor": "9F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "w=841mm h=594mm"
+    },
+    "svg_sheet_A1": {
+     "pass": true,
+     "detail": "declared 841x594 mm"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_declares_scale": {
+     "pass": true,
+     "detail": "title block text"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=646"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2 [(420.0, 297.0), (420.0, 297.0)]"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1168 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "meta_geometry_matches_source": {
+     "pass": true,
+     "detail": "columns/slab/cores vs slice"
+    },
+    "meta_source_hash": {
+     "pass": true,
+     "detail": "slice sha256"
+    },
+    "rooms_present": {
+     "pass": true,
+     "detail": "rooms=14"
+    },
+    "room_areas_positive": {
+     "pass": true,
+     "detail": "areas computed from polygons"
+    },
+    "proposed_flagged": {
+     "pass": true,
+     "detail": "{'MODEL_VERIFIED': 167, 'PROPOSED_DESIGN__VERIFIED_1F_SYMBOL': 302, 'PROPOSED_DESIGN': 78}"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "unplaced labels=0 (listed in schedule)"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   }
+  },
+  {
+   "floor": "10F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "w=841mm h=594mm"
+    },
+    "svg_sheet_A1": {
+     "pass": true,
+     "detail": "declared 841x594 mm"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_declares_scale": {
+     "pass": true,
+     "detail": "title block text"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=612"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2 [(420.0, 297.0), (420.0, 297.0)]"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1349 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "meta_geometry_matches_source": {
+     "pass": true,
+     "detail": "columns/slab/cores vs slice"
+    },
+    "meta_source_hash": {
+     "pass": true,
+     "detail": "slice sha256"
+    },
+    "rooms_present": {
+     "pass": true,
+     "detail": "rooms=10"
+    },
+    "room_areas_positive": {
+     "pass": true,
+     "detail": "areas computed from polygons"
+    },
+    "proposed_flagged": {
+     "pass": true,
+     "detail": "{'MODEL_VERIFIED': 166, 'PROPOSED_DESIGN__VERIFIED_1F_SYMBOL': 302, 'PROPOSED_DESIGN': 49}"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "unplaced labels=0 (listed in schedule)"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   }
+  },
+  {
+   "floor": "11F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "w=841mm h=594mm"
+    },
+    "svg_sheet_A1": {
+     "pass": true,
+     "detail": "declared 841x594 mm"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_declares_scale": {
+     "pass": true,
+     "detail": "title block text"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=607"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2 [(420.0, 297.0), (420.0, 297.0)]"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1009 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "30 vs 30"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "meta_geometry_matches_source": {
+     "pass": true,
+     "detail": "columns/slab/cores vs slice"
+    },
+    "meta_source_hash": {
+     "pass": true,
+     "detail": "slice sha256"
+    },
+    "rooms_present": {
+     "pass": true,
+     "detail": "rooms=9"
+    },
+    "room_areas_positive": {
+     "pass": true,
+     "detail": "areas computed from polygons"
+    },
+    "proposed_flagged": {
+     "pass": true,
+     "detail": "{'MODEL_VERIFIED': 163, 'PROPOSED_DESIGN__VERIFIED_1F_SYMBOL': 305, 'PROPOSED_DESIGN': 43}"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "unplaced labels=0 (listed in schedule)"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   }
+  },
+  {
+   "floor": "12F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "w=841mm h=594mm"
+    },
+    "svg_sheet_A1": {
+     "pass": true,
+     "detail": "declared 841x594 mm"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_declares_scale": {
+     "pass": true,
+     "detail": "title block text"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=602"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2 [(420.0, 297.0), (420.0, 297.0)]"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=966 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "30 vs 30"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "meta_geometry_matches_source": {
+     "pass": true,
+     "detail": "columns/slab/cores vs slice"
+    },
+    "meta_source_hash": {
+     "pass": true,
+     "detail": "slice sha256"
+    },
+    "rooms_present": {
+     "pass": true,
+     "detail": "rooms=9"
+    },
+    "room_areas_positive": {
+     "pass": true,
+     "detail": "areas computed from polygons"
+    },
+    "proposed_flagged": {
+     "pass": true,
+     "detail": "{'MODEL_VERIFIED': 163, 'PROPOSED_DESIGN__VERIFIED_1F_SYMBOL': 302, 'PROPOSED_DESIGN': 43}"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "unplaced labels=0 (listed in schedule)"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   }
+  },
+  {
+   "floor": "13F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "w=841mm h=594mm"
+    },
+    "svg_sheet_A1": {
+     "pass": true,
+     "detail": "declared 841x594 mm"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_declares_scale": {
+     "pass": true,
+     "detail": "title block text"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=605"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2 [(420.0, 297.0), (420.0, 297.0)]"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1005 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "meta_geometry_matches_source": {
+     "pass": true,
+     "detail": "columns/slab/cores vs slice"
+    },
+    "meta_source_hash": {
+     "pass": true,
+     "detail": "slice sha256"
+    },
+    "rooms_present": {
+     "pass": true,
+     "detail": "rooms=9"
+    },
+    "room_areas_positive": {
+     "pass": true,
+     "detail": "areas computed from polygons"
+    },
+    "proposed_flagged": {
+     "pass": true,
+     "detail": "{'MODEL_VERIFIED': 166, 'PROPOSED_DESIGN__VERIFIED_1F_SYMBOL': 302, 'PROPOSED_DESIGN': 43}"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "unplaced labels=0 (listed in schedule)"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   }
+  },
+  {
+   "floor": "14F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "w=841mm h=594mm"
+    },
+    "svg_sheet_A1": {
+     "pass": true,
+     "detail": "declared 841x594 mm"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_declares_scale": {
+     "pass": true,
+     "detail": "title block text"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=611"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2 [(420.0, 297.0), (420.0, 297.0)]"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1012 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "meta_geometry_matches_source": {
+     "pass": true,
+     "detail": "columns/slab/cores vs slice"
+    },
+    "meta_source_hash": {
+     "pass": true,
+     "detail": "slice sha256"
+    },
+    "rooms_present": {
+     "pass": true,
+     "detail": "rooms=9"
+    },
+    "room_areas_positive": {
+     "pass": true,
+     "detail": "areas computed from polygons"
+    },
+    "proposed_flagged": {
+     "pass": true,
+     "detail": "{'MODEL_VERIFIED': 167, 'PROPOSED_DESIGN__VERIFIED_1F_SYMBOL': 305, 'PROPOSED_DESIGN': 43}"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "unplaced labels=0 (listed in schedule)"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   }
+  },
+  {
+   "floor": "15F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "w=841mm h=594mm"
+    },
+    "svg_sheet_A1": {
+     "pass": true,
+     "detail": "declared 841x594 mm"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_declares_scale": {
+     "pass": true,
+     "detail": "title block text"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=566"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2 [(420.0, 297.0), (420.0, 297.0)]"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=883 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "15 vs 15"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "meta_geometry_matches_source": {
+     "pass": true,
+     "detail": "columns/slab/cores vs slice"
+    },
+    "meta_source_hash": {
+     "pass": true,
+     "detail": "slice sha256"
+    },
+    "rooms_present": {
+     "pass": true,
+     "detail": "rooms=8"
+    },
+    "room_areas_positive": {
+     "pass": true,
+     "detail": "areas computed from polygons"
+    },
+    "proposed_flagged": {
+     "pass": true,
+     "detail": "{'MODEL_VERIFIED': 135, 'PROPOSED_DESIGN__VERIFIED_1F_SYMBOL': 302, 'PROPOSED_DESIGN': 36}"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "unplaced labels=0 (listed in schedule)"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   }
+  }
+ ],
+ "manifest": {},
+ "all_floors_produced": [
+  "B2",
+  "B1",
+  "2F",
+  "3F",
+  "4F",
+  "5F",
+  "6F",
+  "7F",
+  "8F",
+  "9F",
+  "10F",
+  "11F",
+  "12F",
+  "13F",
+  "14F",
+  "15F"
+ ],
+ "summary": {
+  "floors_tested": 16,
+  "floors_passed": 16,
+  "source_geometry_unchanged": true
+ }
+}

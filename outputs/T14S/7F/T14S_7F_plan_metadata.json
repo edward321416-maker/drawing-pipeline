@@ -1,0 +1,283 @@
+{
+ "schema": "C-T14S-FLOOR-1.0",
+ "floor": "7F",
+ "level_ffl_m": 31.001,
+ "review_state": "READY_FOR_CHATGPT_INDEPENDENT_REVIEW",
+ "approval": "NOT_APPROVED",
+ "frozen": false,
+ "scale": "1:200",
+ "sheets": {
+  "A1": "841x594 mm landscape",
+  "A3": "420x297 mm landscape, 2-page north/south split with match line y=+9.000"
+ },
+ "source": {
+  "slice_file": "floor_7F_slice.json",
+  "slice_sha256": "db8d579e5916509f9fc0f798a8054bf7e5f6ffa0e5163059ff020291288efbeb",
+  "elements": 78,
+  "source_manifest": "data/t14s/source_slices/manifest.json",
+  "model_cache_sha256": {
+   "model_world.npz": "992e2ec51ec17dc494ed2f99ddb11298671449dd6661d92df3b3536a0049537b",
+   "model_objects.json": "722dd7359e2f13534ff4ae91088ba8649e8a8f96b27c60f000ddb09c01106488"
+  },
+  "glb": "BLOCKED_MISSING_SOURCE (cache only, as in V4 U-20)"
+ },
+ "geometry_verified": {
+  "slab_gross_m2": 1563.2,
+  "slab_net_m2": 1415.6,
+  "opening_m2": 147.6,
+  "openings": 5,
+  "columns": 34,
+  "cores": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "tubes": [
+   "FR",
+   "M1",
+   "M2",
+   "PL",
+   "T1",
+   "T2",
+   "T3",
+   "T4",
+   "capE"
+  ],
+  "shafts": [
+   "A-VERT-ELEV_car_2",
+   "EV1",
+   "EV2"
+  ],
+  "escalator_cuts": [
+   "7F-10F_X7F-10F",
+   "7F-8F_E_7F"
+  ],
+  "ramp_present": false,
+  "program_zones": [
+   {
+    "name_ko": "F&B",
+    "program_floor": "7F",
+    "area_m2": 289.9
+   },
+   {
+    "name_ko": "판매",
+    "program_floor": "7F",
+    "area_m2": 946.8
+   }
+  ]
+ },
+ "design_proposed": {
+  "rooms": [
+   {
+    "id": "01",
+    "name": "판매 점포",
+    "program": "retail",
+    "kind": "unit",
+    "area_m2": 70.2,
+    "provenance": "PROPOSED_DESIGN",
+    "use": ""
+   },
+   {
+    "id": "02",
+    "name": "판매 점포",
+    "program": "retail",
+    "kind": "unit",
+    "area_m2": 70.2,
+    "provenance": "PROPOSED_DESIGN",
+    "use": ""
+   },
+   {
+    "id": "03",
+    "name": "판매 점포",
+    "program": "retail",
+    "kind": "unit",
+    "area_m2": 40.5,
+    "provenance": "PROPOSED_DESIGN",
+    "use": ""
+   },
+   {
+    "id": "04",
+    "name": "화장실 공용·장애인 겸용",
+    "program": "restroom",
+    "kind": "restroom",
+    "area_m2": 22.4,
+    "provenance": "PROPOSED_DESIGN__VERIFIED_1F_SYMBOL",
+    "use": "공용"
+   },
+   {
+    "id": "05",
+    "name": "판매 홀",
+    "program": "retail",
+    "kind": "hall",
+    "area_m2": 646.3,
+    "provenance": "PROPOSED_DESIGN",
+    "use": ""
+   },
+   {
+    "id": "06",
+    "name": "식음 점포",
+    "program": "fnb",
+    "kind": "unit",
+    "area_m2": 48.6,
+    "provenance": "PROPOSED_DESIGN",
+    "use": ""
+   },
+   {
+    "id": "07",
+    "name": "식음 홀",
+    "program": "fnb",
+    "kind": "hall",
+    "area_m2": 19.2,
+    "provenance": "PROPOSED_DESIGN",
+    "use": ""
+   },
+   {
+    "id": "08",
+    "name": "식음 점포",
+    "program": "fnb",
+    "kind": "unit",
+    "area_m2": 48.6,
+    "provenance": "PROPOSED_DESIGN",
+    "use": ""
+   },
+   {
+    "id": "09",
+    "name": "식음 홀",
+    "program": "fnb",
+    "kind": "hall",
+    "area_m2": 320.9,
+    "provenance": "PROPOSED_DESIGN",
+    "use": ""
+   },
+   {
+    "id": "10",
+    "name": "식음 점포",
+    "program": "fnb",
+    "kind": "unit",
+    "area_m2": 35.1,
+    "provenance": "PROPOSED_DESIGN",
+    "use": ""
+   }
+  ],
+  "unit_count": 6,
+  "doors": 6,
+  "room_area_by_program_m2": {
+   "retail": 827.2,
+   "restroom": 22.4,
+   "fnb": 472.4
+  },
+  "vertical_elements": [
+   {
+    "id": "코어 A",
+    "name": "코어 A (특별피난계단)",
+    "status": "MODEL_VERIFIED footprint / interior = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "코어 B",
+    "name": "코어 B (특별피난계단)",
+    "status": "MODEL_VERIFIED footprint / interior = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "코어 C",
+    "name": "코어 C (특별피난계단)",
+    "status": "MODEL_VERIFIED footprint / no floor slab at this level (model); shaft continues"
+   },
+   {
+    "id": "코어 D",
+    "name": "코어 D (특별피난계단)",
+    "status": "MODEL_VERIFIED footprint / no floor slab at this level (model); shaft continues"
+   },
+   {
+    "id": "FR",
+    "name": "화물 승강기 FR",
+    "status": "MODEL_VERIFIED opening / content = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "M1",
+    "name": "설비 샤프트 M1",
+    "status": "MODEL_VERIFIED opening / content = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "M2",
+    "name": "설비 샤프트 M2",
+    "status": "MODEL_VERIFIED opening / content = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "PL",
+    "name": "광장 승강기 PL",
+    "status": "MODEL_VERIFIED opening / content = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "T1",
+    "name": "T1 빛 튜브 (램프 없음)",
+    "status": "MODEL_VERIFIED opening / content = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "T2",
+    "name": "T2 빛 튜브",
+    "status": "MODEL_VERIFIED opening / content = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "T3",
+    "name": "T3 전망 승강기",
+    "status": "MODEL_VERIFIED opening / content = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "T4",
+    "name": "T4 전망 승강기",
+    "status": "MODEL_VERIFIED opening / content = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "capE",
+    "name": "동측 캡슐",
+    "status": "MODEL_VERIFIED opening / content = 1F symbol reuse (PROPOSED)"
+   },
+   {
+    "id": "A-VERT-ELEV_car_2",
+    "name": "A-VERT-ELEV_car_2",
+    "status": "MODEL_VERIFIED opening / content = symbol (PROPOSED)"
+   },
+   {
+    "id": "EV1",
+    "name": "비상용 승강기 EV1",
+    "status": "MODEL_VERIFIED opening / content = symbol (PROPOSED)"
+   },
+   {
+    "id": "EV2",
+    "name": "비상용 승강기 EV2",
+    "status": "MODEL_VERIFIED opening / content = symbol (PROPOSED)"
+   },
+   {
+    "id": "ESC",
+    "name": "에스컬레이터 절단부 7F-10F_X7F-10F",
+    "status": "MODEL_VERIFIED cut (1.5 m)"
+   },
+   {
+    "id": "ESC",
+    "name": "에스컬레이터 절단부 7F-8F_E_7F",
+    "status": "MODEL_VERIFIED cut (1.5 m)"
+   }
+  ],
+  "notes": [
+   "CORE_C_NO_SLAB_AT_LEVEL: core walls exist in model, no floor slab around the hall door",
+   "CORE_D_NO_SLAB_AT_LEVEL: core walls exist in model, no floor slab around the hall door",
+   "RESTROOM_C_OMITTED: adjacent core absent/unserved or footprint not on the slab at this level",
+   "LABEL_FORCED_TAG room 07 (식음 홀, 19.2 m2): too narrow for a clear label, white-masked tag used"
+  ],
+  "method": "shapely booleans on the verified slab; units on the 9 m column grid; engine stair-core/restroom/tube symbols reused; furniture from upper_layouts + fitout"
+ },
+ "provenance_counts": {
+  "MODEL_VERIFIED": 160,
+  "PROPOSED_DESIGN__VERIFIED_1F_SYMBOL": 274,
+  "PROPOSED_DESIGN": 57
+ },
+ "provenance_legend": {
+  "MODEL_VERIFIED": "taken from the model slice",
+  "PROPOSED_DESIGN__VERIFIED_1F_SYMBOL": "verified 1F symbol geometry placed in a proposed position/content",
+  "PROPOSED_DESIGN": "architectural proposal, not in the model"
+ },
+ "dxf_entities": 701,
+ "png_dpi": 200,
+ "build_seconds": 5.4
+}

@@ -1,0 +1,3 @@
+# C-T14S: deliverables and review packets must keep their exact bytes (SHA256 manifests); no EOL conversion
+outputs/T14S/** -text
+docs/t14s_floor_plans/review_packet/** -text
