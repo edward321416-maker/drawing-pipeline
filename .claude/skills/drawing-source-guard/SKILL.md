@@ -3,7 +3,7 @@ name: drawing-source-guard
 description: Use when a drawing task could change verified model geometry, pinned source slices, SHA256 manifests, the preserved 1F reference, or outputs of earlier PRs, and before writing any text that states a floor plan is approved, frozen or code compliant.
 metadata:
   status: CANDIDATE_UNREVIEWED
-  version: 0.1.0
+  version: 0.2.0
 ---
 
 # drawing-source-guard
@@ -24,8 +24,9 @@ Repository root, the PR base ref (or starting SHA), and the files you intend to 
 1. `python -I ${CLAUDE_SKILL_DIR}/scripts/guard_check.py sources --root .` runs the project's own `verify_sources()` for `data/t14s/source_slices/`.
 2. `python -I ${CLAUDE_SKILL_DIR}/scripts/guard_check.py manifests --root .` re-hashes every frozen `SHA256_MANIFEST.json` and the slice manifest.
 3. `python -I ${CLAUDE_SKILL_DIR}/scripts/guard_check.py diff --base <PR base ref> --root .` fails on any added, modified or deleted file under a protected path. The list is `references/protected_paths.json`.
-4. `python -I ${CLAUDE_SKILL_DIR}/scripts/guard_check.py claims <README / PR body / metadata files>` flags approval, freeze or compliance wording and `approval` / `frozen` metadata fields.
-5. If a fix would need verified geometry to change: do not change it. Write a decision packet using `references/decision_packet_template.md` and leave the item open.
+4. `python -I ${CLAUDE_SKILL_DIR}/scripts/guard_check.py destination <output folder> <report file> ...` fails for any path a build would write that is protected (case-insensitive, `..` resolved) or outside the repository. `floorplan-incremental-build` calls the same rule before it creates anything.
+5. `python -I ${CLAUDE_SKILL_DIR}/scripts/guard_check.py claims <README / PR body / metadata files>` flags approval, freeze or compliance wording and `approval` / `frozen` metadata fields.
+6. If a fix would need verified geometry to change: do not change it. Write a decision packet using `references/decision_packet_template.md` and leave the item open.
 
 ## Outputs
 JSON per check with `ok`, counts and a violation list. Exit 0 clean, 1 violation, 2 usage error.
@@ -44,4 +45,4 @@ python -I ${CLAUDE_SKILL_DIR}/scripts/guard_check.py diff --base origin/claude/t
 - No merge, release, freeze or approval states come from this skill.
 
 ## Tests
-`pytest tests/test_claude_skills.py -k source_guard` (clean pass; edited protected file, tampered manifest and approval wording fail; negated wording passes).
+`pytest tests/test_claude_skills.py -k "source_guard or destination"` (clean pass; edited protected file, tampered manifest, protected destination and approval wording fail; negated wording passes).

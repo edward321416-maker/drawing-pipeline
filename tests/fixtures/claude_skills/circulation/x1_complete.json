@@ -29,7 +29,8 @@
    ],
    "not_modeled": []
   },
-  "decision_refs": {}
+  "decision_refs": {},
+  "vertical_elements": []
  },
  "geometry_verified": {
   "cores": [

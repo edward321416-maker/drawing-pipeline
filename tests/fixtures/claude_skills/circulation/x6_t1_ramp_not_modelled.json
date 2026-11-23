@@ -20,14 +20,30 @@
     }
    ]
   },
-  "decision_refs": {}
+  "decision_refs": {
+   "D-08": [
+    {
+     "floor": "X6",
+     "element": "T1 spiral ramp"
+    }
+   ]
+  },
+  "vertical_elements": [
+   {
+    "id": "T1",
+    "name": "T1 나선 램프",
+    "status": "MODEL_VERIFIED opening"
+   }
+  ]
  },
  "geometry_verified": {
   "cores": [
    "A"
   ],
   "escalator_axes": [],
-  "tubes": [],
+  "tubes": [
+   "T1"
+  ],
   "shafts": []
  }
 }

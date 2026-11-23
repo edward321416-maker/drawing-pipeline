@@ -1,5 +1,5 @@
 {
- "floor": "X9",
+ "floor": "X14",
  "design_proposed": {
   "circulation_graph": {
    "nodes": [
@@ -14,20 +14,21 @@
    "unit_doors": [],
    "not_modeled": []
   },
-  "decision_refs": {}
+  "decision_refs": {
+   "D-99": [
+    {
+     "floor": "X14"
+    }
+   ]
+  },
+  "vertical_elements": []
  },
  "geometry_verified": {
   "cores": [
    "A"
   ],
   "escalator_axes": [],
-  "tubes": [
-   "FR",
-   "M1"
-  ],
-  "shafts": [
-   "EV1",
-   "EV2"
-  ]
+  "tubes": [],
+  "shafts": []
  }
 }

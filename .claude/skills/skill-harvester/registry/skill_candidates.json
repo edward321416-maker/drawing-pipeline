@@ -25,7 +25,7 @@
       ],
       "comparable_existing": [],
       "expected_reuse": "every correction round after the first full build",
-      "required_tests": ["generator change widens scope to all floors", "floor-scoped change keeps scope", "untouched floor change is detected", "stale manifest is detected", "change record rejects an invented approval"],
+      "required_tests": ["generator change widens scope to all floors", "floor-scoped change keeps scope", "protected output or report destination is refused before any write", "unaffected floors are byte-identical", "missing, partial or corrupt manifest fails closed", "change record rejects an invented approval"],
       "status": "IMPLEMENTED_CANDIDATE",
       "tests_passed": ["tests/test_claude_skills.py::incremental"],
       "independent_review": "PENDING"
@@ -39,7 +39,7 @@
       ],
       "comparable_existing": [],
       "expected_reuse": "every task that changes floors with escalators, lifts or cores",
-      "required_tests": ["complete floor", "provisional escalator landing", "core without slab", "disconnected graph", "not-modelled item kept separate", "validator flag overstating completeness is reported", "missing public lift lobby is required, service shafts are only listed"],
+      "required_tests": ["complete floor", "provisional escalator landing", "core without slab", "disconnected graph", "not-modelled item kept separate", "validator flag overstating completeness is reported", "missing public lift lobby is required", "unrouted passenger lifts block COMPLETE", "service-only shafts are listed, not required", "unknown labels and decision ids are never assumed"],
       "status": "IMPLEMENTED_CANDIDATE",
       "tests_passed": ["tests/test_claude_skills.py::circulation"],
       "independent_review": "PENDING"
@@ -54,7 +54,7 @@
       ],
       "comparable_existing": [],
       "expected_reuse": "every task that hands drawings to an independent reviewer",
-      "required_tests": ["valid packet passes", "corrupt tile fails", "unlisted file fails", "remote match passes", "remote mismatch fails", "remote check never reports connector readback"],
+      "required_tests": ["valid packet passes", "corrupt tile fails", "unlisted file fails", "remote match passes", "remote mismatch fails", "remote check never reports connector readback", "a local readback report is not independent proof", "packet text claiming a readback is rejected"],
       "status": "IMPLEMENTED_CANDIDATE",
       "tests_passed": ["tests/test_claude_skills.py::packet"],
       "independent_review": "PENDING"

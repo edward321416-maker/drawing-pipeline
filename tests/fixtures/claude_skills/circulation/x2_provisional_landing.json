@@ -39,7 +39,8 @@
      "floor": "X2"
     }
    ]
-  }
+  },
+  "vertical_elements": []
  },
  "geometry_verified": {
   "cores": [

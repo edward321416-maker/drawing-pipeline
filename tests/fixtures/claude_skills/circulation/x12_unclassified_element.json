@@ -1,5 +1,5 @@
 {
- "floor": "X8",
+ "floor": "X12",
  "design_proposed": {
   "circulation_graph": {
    "nodes": [
@@ -7,24 +7,21 @@
      "id": "core A",
      "type": "core",
      "status": "ON_SLAB"
-    },
-    {
-     "id": "tube T4",
-     "type": "elevator",
-     "status": "ON_SLAB"
     }
    ],
-   "edges": [
-    {
-     "a": "core A",
-     "b": "tube T4"
-    }
-   ],
+   "edges": [],
    "unresolved": [],
    "unit_doors": [],
    "not_modeled": []
   },
-  "decision_refs": {}
+  "decision_refs": {},
+  "vertical_elements": [
+   {
+    "id": "Z9",
+    "name": "알 수 없는 튜브 Z9",
+    "status": "MODEL_VERIFIED"
+   }
+  ]
  },
  "geometry_verified": {
   "cores": [
@@ -32,13 +29,8 @@
   ],
   "escalator_axes": [],
   "tubes": [
-   "FR",
-   "T3",
-   "T4",
-   "capW"
+   "Z9"
   ],
-  "shafts": [
-   "EV1"
-  ]
+  "shafts": []
  }
 }

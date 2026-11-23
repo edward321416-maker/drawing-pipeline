@@ -1,0 +1,86 @@
+{
+ "floor": "X10",
+ "design_proposed": {
+  "circulation_graph": {
+   "nodes": [
+    {
+     "id": "core C",
+     "type": "core",
+     "status": "ON_SLAB"
+    },
+    {
+     "id": "core D",
+     "type": "core",
+     "status": "ON_SLAB"
+    },
+    {
+     "id": "wc C",
+     "type": "wc",
+     "status": "ON_SLAB"
+    }
+   ],
+   "edges": [
+    {
+     "a": "core C",
+     "b": "core D"
+    },
+    {
+     "a": "core C",
+     "b": "wc C"
+    }
+   ],
+   "unresolved": [],
+   "unit_doors": [
+    {
+     "room": "01",
+     "reachable": true
+    }
+   ],
+   "not_modeled": []
+  },
+  "decision_refs": {},
+  "vertical_elements": [
+   {
+    "id": "FR",
+    "name": "화물 승강기 FR (반입 접점 제안)",
+    "status": "MODEL_VERIFIED opening"
+   },
+   {
+    "id": "M1",
+    "name": "설비 샤프트 M1",
+    "status": "MODEL_VERIFIED opening"
+   },
+   {
+    "id": "M2",
+    "name": "설비 샤프트 M2",
+    "status": "MODEL_VERIFIED opening"
+   },
+   {
+    "id": "EV1",
+    "name": "비상용 승강기 EV1",
+    "status": "MODEL_VERIFIED opening"
+   },
+   {
+    "id": "EV2",
+    "name": "비상용 승강기 EV2",
+    "status": "MODEL_VERIFIED opening"
+   }
+  ]
+ },
+ "geometry_verified": {
+  "cores": [
+   "C",
+   "D"
+  ],
+  "escalator_axes": [],
+  "tubes": [
+   "FR",
+   "M1",
+   "M2"
+  ],
+  "shafts": [
+   "EV1",
+   "EV2"
+  ]
+ }
+}

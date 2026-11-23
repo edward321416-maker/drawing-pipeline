@@ -4,7 +4,8 @@
     packet_check.py remote --packet docs/<task>/review_packet --repo OWNER/REPO --ref <commit SHA> [--root .] [--sample 6]
 
 local : T14R verify (tile coverage, pixel SHA) + every file in the packet is listed in the manifest + each size within the item budget
-        + README present + readback status. The readback status is NOT_TESTED unless a readback_report.json from a real test exists.
+        + README present + no packet text claiming a readback. github_readback is always NOT_TESTED here: a local readback_report.json is
+        reported as PRESENT_NOT_INDEPENDENT_PROOF and never counted, because only the reviewer can confirm a connector readback.
 remote: after the push, compares the packet's git blob SHAs with the GitHub tree of <ref> and downloads a sample of files raw
         (preview, overview, first tile per asset) to check they are non-empty and byte-identical.
         This is REMOTE_BYTE_IDENTITY. It is not a ChatGPT connector readback and never reports one.
@@ -16,6 +17,7 @@ import argparse
 import hashlib
 import importlib.util
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -61,16 +63,30 @@ def local_check(packet: Path, root: Path) -> dict:
         problems.append("over item budget (%d B): %s" % (man["max_item_bytes"], big[:5]))
     if not (packet / "README.md").exists():
         problems.append("README.md missing")
-    rb = packet / "readback_report.json"
-    readback = "NOT_TESTED"
-    if rb.exists():
-        r = json.loads(rb.read_text(encoding="utf-8"))
-        readback = "REPORTED_BY_REVIEWER" if r.get("tested_by") and r.get("files_decoded") else "REPORT_INCOMPLETE"
-        if readback == "REPORT_INCOMPLETE":
-            problems.append("readback_report.json lacks tested_by / files_decoded")
+    problems += readback_claims(packet)
+    warnings = []
+    local_report = "ABSENT"
+    if (packet / "readback_report.json").exists():
+        local_report = "PRESENT_NOT_INDEPENDENT_PROOF"
+        warnings.append("readback_report.json is a local file: it is not independent proof of a reviewer readback and is not counted")
     return {"check": "local", "ok": not problems, "t14r_verify": res["status"], "assets": res["assets"], "tiles": res["tiles"],
-            "github_readback": readback, "problems": problems,
-            "note": "bytes and pixels only; not an architectural or visual approval"}
+            "github_readback": "NOT_TESTED", "local_readback_report": local_report, "problems": problems, "warnings": warnings,
+            "note": "bytes and pixels only; connector readback is confirmed only by the reviewer's own review, never by a file in the packet"}
+
+
+READBACK_CLAIM = re.compile(r"read-?back\b[^.\n]{0,60}?\b(pass(?:ed)?|verified|confirmed|ok|succe(?:ss|eded))\b", re.I)
+NEGATION = re.compile(r"\b(not|never|no|un\w+|without|pending|awaiting|if|until|before)\b", re.I)
+
+
+def readback_claims(packet: Path) -> list[str]:
+    """Text inside the packet that states a readback happened. Only the reviewer can confirm one, so any such claim is a problem."""
+    found = []
+    for p in sorted(packet.rglob("*.md")):
+        for no, line in enumerate(p.read_text(encoding="utf-8", errors="replace").splitlines(), 1):
+            for m in READBACK_CLAIM.finditer(line):
+                if not NEGATION.search(line[max(0, m.start() - 24):m.end()]):
+                    found.append("%s:%d: claims a readback (%r); only the reviewer's own review can confirm one" % (p.name, no, m.group(0)))
+    return found
 
 
 # ------------------------------------------------------------------ remote

@@ -3,7 +3,7 @@ name: skill-harvester
 description: Use when a production task has just finished and a method in it reduced errors or repeated work, when someone proposes a new skill, or when reviewing the skill candidate registry.
 metadata:
   status: CANDIDATE_UNREVIEWED
-  version: 0.1.0
+  version: 0.2.0
 ---
 
 # skill-harvester

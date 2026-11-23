@@ -9,7 +9,7 @@ GitHub connectors can return empty content for files of about 20 MB. Each previe
 3. Windows byte-exactness: add `-text` for the deliverable and packet folders to `.gitattributes` before the first commit (example lines in the repository `.gitattributes` for `outputs/T14T/**` and `docs/t14t_corrections/review_packet/**`). Otherwise line-ending conversion changes bytes and the SHA manifest no longer matches what GitHub holds.
 4. Push to the task's own Draft PR branch. Set no upstream to the base branch (`git branch --unset-upstream` after `git worktree add ... origin/<base>`).
 5. `packet_check.py remote` with the pushed commit SHA.
-6. State in the handoff: `local` result, `remote` result, `github_readback: NOT_TESTED` unless a reviewer reported otherwise.
+6. State in the handoff: `local` result, `remote` result, and `github_readback: NOT_TESTED`. Connector readback is confirmed only by the independent reviewer's own review; quote their message with author and date. A readback report file made locally is not independent proof, and packet text must not claim a readback (`local` fails on it).
 
 ## Per-drawing handoff items
 - Revised preview and lossless tiles (packet).

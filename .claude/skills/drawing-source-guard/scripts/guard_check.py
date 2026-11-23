@@ -3,6 +3,7 @@
     python -I guard_check.py sources                       # pinned verified slices: copy == manifest (existing verify_sources)
     python -I guard_check.py manifests [--root .]           # frozen SHA256 manifests still match the files on disk
     python -I guard_check.py diff --base <ref> [--root .]   # git changes touching protected paths
+    python -I guard_check.py destination PATH [PATH ...] [--root .]   # may a build write here? fails for protected or outside-repo paths
     python -I guard_check.py claims FILE [FILE ...]         # unsupported approval / freeze claims in text or JSON metadata
 
 Exit status: 0 = clean, 1 = violation found, 2 = usage or configuration error.
@@ -113,6 +114,32 @@ def check_diff(root: Path, base: str, extra: list[str]) -> dict:
             "violations": ["%s %s" % h for h in hits[:80]], "violation_count": len(hits)}
 
 
+# ------------------------------------------------------------------ destinations
+def destination_problem(root: Path, path: str, patterns: list[str] | None = None) -> str | None:
+    """None if `path` may be written; otherwise why not. Case-insensitive, normalises `.` / `..` and follows existing links."""
+    root = Path(root).resolve()
+    cand = Path(path) if Path(path).is_absolute() else root / path
+    try:
+        rel = cand.resolve().relative_to(root).as_posix().casefold()
+    except ValueError:
+        return "%s is outside the repository root" % path
+    pats = patterns if patterns is not None else load_config()["protected_globs"]
+    for pat in pats:
+        low = pat.casefold()
+        if low.endswith("/**"):
+            base = low[:-3]
+            if rel == base or rel.startswith(base + "/"):
+                return "%s is protected (matches %s)" % (path, pat)
+        elif fnmatch.fnmatch(rel, low):
+            return "%s is protected (matches %s)" % (path, pat)
+    return None
+
+
+def check_destination(root: Path, paths: list[str]) -> dict:
+    bad = [m for m in (destination_problem(root, p) for p in paths) if m]
+    return {"check": "destination", "ok": not bad, "paths": len(paths), "violations": bad}
+
+
 # ------------------------------------------------------------------ claims
 def scan_text(text: str, name: str) -> list[str]:
     found, fenced = [], False
@@ -179,6 +206,9 @@ def main(argv=None) -> int:
     for name in ("sources", "manifests", "diff"):
         p = sub.add_parser(name)
         p.add_argument("--root", default=".")
+    d = sub.add_parser("destination")
+    d.add_argument("--root", default=".")
+    d.add_argument("paths", nargs="+")
     sub.choices["diff"].add_argument("--base", required=True, help="PR base ref or starting SHA")
     sub.choices["diff"].add_argument("--protect", action="append", default=[], help="extra protected glob (repeatable)")
     sub.choices["manifests"].add_argument("--manifest", action="append", help="relative manifest path (default: protected_manifests of the config)")
@@ -188,6 +218,8 @@ def main(argv=None) -> int:
     try:
         if a.cmd == "claims":
             res = check_claims(a.files)
+        elif a.cmd == "destination":
+            res = check_destination(Path(a.root), a.paths)
         else:
             root = Path(a.root).resolve()
             if a.cmd == "sources":

@@ -1,0 +1,74 @@
+{
+ "floor": "X11",
+ "design_proposed": {
+  "circulation_graph": {
+   "nodes": [
+    {
+     "id": "core A",
+     "type": "core",
+     "status": "ON_SLAB"
+    },
+    {
+     "id": "tube T3",
+     "type": "elevator",
+     "status": "ON_SLAB"
+    },
+    {
+     "id": "tube T4",
+     "type": "elevator",
+     "status": "ON_SLAB"
+    }
+   ],
+   "edges": [
+    {
+     "a": "core A",
+     "b": "tube T3"
+    },
+    {
+     "a": "core A",
+     "b": "tube T4"
+    }
+   ],
+   "unresolved": [],
+   "unit_doors": [],
+   "not_modeled": []
+  },
+  "decision_refs": {
+   "D-03": [
+    {
+     "floor": "X11",
+     "tube": "T3",
+     "turn_deg": 45.0
+    },
+    {
+     "floor": "X11",
+     "tube": "T4",
+     "turn_deg": -45.0
+    }
+   ]
+  },
+  "vertical_elements": [
+   {
+    "id": "T3",
+    "name": "T3 전망 승강기",
+    "status": "MODEL_VERIFIED opening"
+   },
+   {
+    "id": "T4",
+    "name": "T4 전망 승강기",
+    "status": "MODEL_VERIFIED opening"
+   }
+  ]
+ },
+ "geometry_verified": {
+  "cores": [
+   "A"
+  ],
+  "escalator_axes": [],
+  "tubes": [
+   "T3",
+   "T4"
+  ],
+  "shafts": []
+ }
+}

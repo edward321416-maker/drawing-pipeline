@@ -3,7 +3,7 @@ name: github-visual-review-packet
 description: Use when drawings or renders are handed to an independent reviewer through GitHub and the reviewer must inspect real pixels, when a PNG is too large for the GitHub connector, or after a push to confirm the packet on the remote is byte-identical to the local one.
 metadata:
   status: CANDIDATE_UNREVIEWED
-  version: 0.1.0
+  version: 0.2.0
 ---
 
 # github-visual-review-packet
@@ -21,7 +21,7 @@ Source images (absolute paths, one `LABEL=path` each; labels match `^[A-Za-z][A-
 
 ## Procedure
 1. Pack with the project tool (do not reimplement): `python -I tools/t14r/export_visual_review.py pack --out docs/<task>/review_packet --asset FLOOR_3F=<abs path to png> ...`. The default budget is 400 KiB per file. The tool refuses to overwrite an existing tile.
-2. `python -I ${CLAUDE_SKILL_DIR}/scripts/packet_check.py local --packet docs/<task>/review_packet --root .` runs T14R `verify` plus: no unlisted files, nothing over budget, README present, readback status.
+2. `python -I ${CLAUDE_SKILL_DIR}/scripts/packet_check.py local --packet docs/<task>/review_packet --root .` runs T14R `verify` plus: no unlisted files, nothing over budget, README present, no packet text claiming a readback.
 3. Commit and push to the task's Draft PR branch (see `references/packet_protocol.md` for the byte-exactness setting on Windows).
 4. `python -I ${CLAUDE_SKILL_DIR}/scripts/packet_check.py remote --packet docs/<task>/review_packet --repo OWNER/REPO --ref <pushed SHA> --root .` compares every packet file's git blob SHA with the remote tree and downloads an even sample raw.
 5. Before/after previews and the Korean A3 PDF are made by the task's packaging script (example: `tools/t14s/package_t14t.py`). Give each corrected drawing one before/after pair.
@@ -32,13 +32,14 @@ Packet folder, `PASS_BYTES_AND_PIXELS_ONLY` from `local`, `REMOTE_BYTE_IDENTITY_
 ## Example
 ```
 python -I ${CLAUDE_SKILL_DIR}/scripts/packet_check.py local --packet docs/t14t_corrections/review_packet --root .
-{"check": "local", "ok": true, "assets": 16, "tiles": 256, "github_readback": "NOT_TESTED", ...}
+{"check": "local", "ok": true, "assets": 16, "tiles": 256, "github_readback": "NOT_TESTED", "local_readback_report": "ABSENT", ...}
 ```
 
 ## Safety boundaries
-- `github_readback` stays `NOT_TESTED` until a reviewer's real readback produces `readback_report.json` with `tested_by` and `files_decoded`. Never write that file yourself and never say a connector readback passed without it.
+- `github_readback` is always `NOT_TESTED` in this tool's output. Only the independent reviewer's own review can confirm that the connector decoded the files. A `readback_report.json` in the packet is reported as `PRESENT_NOT_INDEPENDENT_PROOF` and never counted: a locally generated report is not independent proof. Packet text that claims a readback (README, notes) fails `local`.
+- Never create a readback report or write "readback passed" yourself. Record a reviewer's confirmation only by quoting their message in the PR, with its author and date.
 - `REMOTE_BYTE_IDENTITY_PASS` means GitHub holds identical bytes. It does not mean the reviewer's connector can decode them. Empty content or a read failure is `GITHUB_PUSHED_UNREADABLE`: resubmit smaller tiles.
 - Never modify source masters. Never push to a base or earlier PR branch. Visual and architectural approval stay `INDEPENDENT_VISUAL_REVIEW_PENDING`.
 
 ## Tests
-`pytest tests/test_claude_skills.py -k packet` (valid packet, corrupt tile, unlisted file; remote match, mismatch, empty download).
+`pytest tests/test_claude_skills.py -k packet` (valid packet, corrupt tile, unlisted file, readback claims and local readback report; remote match, mismatch, empty download).
