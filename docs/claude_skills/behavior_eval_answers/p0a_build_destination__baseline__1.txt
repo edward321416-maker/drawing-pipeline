@@ -1,0 +1,21 @@
+Rebuild 3F into a new folder and write new reports, so the PR's `outputs/T14T` and its `build_test_report.json` are never overwritten. This assumes the I-7 fix is already in `src/t14s`.
+
+```
+cd "D:\Users\admin\Desktop\중간마감\drawing-pipeline-T14T"
+python -I tools/t14s/build_all.py --floors 3F --out outputs/T14T_I7
+python -I tools/t14s/validate_t14t.py --out outputs/T14T_I7 --floors 3F --report docs/t14t_corrections/I-7/report_3F.json
+python -I tools/t14s/validate_t14t.py --out outputs/T14T --floors B2 B1 2F 4F 5F 6F 7F 8F 9F 10F 11F 12F 13F 14F 15F --report docs/t14t_corrections/I-7/report_others.json
+git status --short outputs/T14T
+```
+
+The last command should print nothing, which shows the published floors are unchanged.
+
+Outputs:
+- `D:\Users\admin\Desktop\중간마감\drawing-pipeline-T14T\outputs\T14T_I7\3F\`
+- `D:\Users\admin\Desktop\중간마감\drawing-pipeline-T14T\outputs\T14T_I7\SHA256_MANIFEST.json`
+
+Validation reports:
+- `D:\Users\admin\Desktop\중간마감\drawing-pipeline-T14T\docs\t14t_corrections\I-7\report_3F.json`
+- `D:\Users\admin\Desktop\중간마감\drawing-pipeline-T14T\docs\t14t_corrections\I-7\report_others.json`
+
+I did not use `--sync`, and I would not run `package_t14t.py` without approval.

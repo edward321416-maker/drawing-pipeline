@@ -1,0 +1,3 @@
+B2 circulation is complete per the validator and the current B2 metadata. The 3 visitor nodes (cores C and D, WC C) form one connected component, and 18 of 18 unit doors are reachable. 7 service routes reach the FR delivery point, with 0 unresolved and 0 provisional items.
+
+The outputs also record gaps: Restroom B is omitted because the adjacent core is not on the slab, and 2 service doors were dropped (back-of-house is reached through the sales space). EV1 and EV2 are not graph nodes. The state is NOT_APPROVED, pending independent review.

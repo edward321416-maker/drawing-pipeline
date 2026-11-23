@@ -942,6 +942,15 @@ def test_behavior_scorer_json_destination_is_guarded_and_run_checks_report_is_to
     capsys.readouterr()
 
 
+def test_behavior_committed_scores_are_reproduced_from_the_saved_answers():
+    folder = ROOT / "docs" / "claude_skills" / "behavior_eval_answers"
+    if not folder.is_dir():
+        pytest.skip("evaluation answers not on this branch")
+    saved = json.loads((ROOT / "docs" / "claude_skills" / "behavior_eval_scores.json").read_text(encoding="utf-8"))
+    assert beh.score_dir(folder, root=ROOT) == saved
+    assert sum(len(list(folder.glob(p))) for p in ("*__with_skill__*.txt", "*__baseline__*.txt")) == 12
+
+
 def test_behavior_scenarios_are_fixed_and_target_the_two_p0_issues():
     data = json.loads((FX / "behavior_eval" / "scenarios.json").read_text(encoding="utf-8"))
     assert [s["id"] for s in data["scenarios"]] == ["p0a_build_destination", "p0b_b2_status"]

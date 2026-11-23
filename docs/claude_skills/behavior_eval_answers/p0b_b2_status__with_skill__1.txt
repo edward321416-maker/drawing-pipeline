@@ -1,0 +1,3 @@
+B2 is CONNECTED_WITH_OPEN_ITEMS, not COMPLETE, so "circulation complete" does not apply. The validator's `floors_circulation_complete` entry for B2 overstates this (audit note `VALIDATOR_FLAG_OVERSTATES`).
+
+Connected on verified slab: core C, core D and wc C, with no provisional or excluded items. Not assessed: EV1 and EV2 (emergency lifts, role in visitor circulation not stated, a user decision). Service only, not required: FR, M1 and M2. This audit is not an approval.

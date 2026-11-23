@@ -1,0 +1,20 @@
+Nothing was run. The commands assume Git Bash from the worktree root `D:\Users\admin\Desktop\중간마감\drawing-pipeline-SKILLS`. Because T14T is already published in an open PR, the rebuild goes to a new folder, `outputs/T14U`, and never into the baseline.
+
+```
+G=.claude/skills/drawing-source-guard/scripts/guard_check.py
+I=.claude/skills/floorplan-incremental-build/scripts/incremental.py
+B=origin/claude/t14t-targeted-corrections-20261123
+python -I $G sources --root .
+python -I $G manifests --root .
+python -I $G diff --base $B --root .
+python -I $G destination outputs/T14U docs/t14u/build_test_report.json
+python -I $I scope --base $B --out outputs/T14U --report docs/t14u/build_test_report.json --baseline outputs/T14T --floors 3F
+python -I $I run --out outputs/T14U --report docs/t14u/build_test_report.json --baseline outputs/T14T --floors 3F
+python -I $I verify-untouched --outputs outputs/T14U --baseline outputs/T14T --floors 3F
+```
+
+Add `--regression` to `run` only if `scope` prints `ALL_FLOORS_REGRESSION`.
+
+`run` builds and validates 3F and byte-copies the other floors from T14T.
+
+3F outputs go to `D:\Users\admin\Desktop\중간마감\drawing-pipeline-SKILLS\outputs\T14U\3F\`. The report goes to `D:\Users\admin\Desktop\중간마감\drawing-pipeline-SKILLS\docs\t14u\build_test_report.json`.

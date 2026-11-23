@@ -1,0 +1,6 @@
+B2 circulation is complete for what is modelled: 3 of 3 visitor nodes (cores C and D, WC C) connect with no unresolved items, and 18 of 18 shop doors and 7 service doors are reachable. The report and `outputs/T14T/B2` agree and are current.
+
+Caveats for the handoff:
+- B2 has one restroom, at core C. Restroom B was omitted because the adjacent core is absent or unserved on this level.
+- Two service doors were dropped for lack of a walkable apron.
+- All of this is proposed design, not approved, and checked only by deterministic geometry tests.

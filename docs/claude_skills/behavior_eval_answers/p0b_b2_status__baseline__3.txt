@@ -1,0 +1,3 @@
+B2 (`outputs/T14T/B2`, 1:200, NOT_APPROVED) is circulation-complete per the validator, with 0 open or not-modeled items. Core C, core D and wc C form one connected walking graph (2 edges, minimum column clearance 1.84 m). 18/18 unit doors are reachable, and 7 service routes reach the freight lift (FR). This floor has no escalators or ramp.
+
+Caveat: "complete" covers only the nodes the planner modeled. The B2 metadata still notes RESTROOM_B_OMITTED and 2 SERVICE_DOOR_DROPPED units, which are reached through the sales space. EV1 and EV2 are not graph nodes. The checks are geometric only, with no architectural review.
