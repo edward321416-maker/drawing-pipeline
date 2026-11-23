@@ -1,0 +1,1742 @@
+{
+ "schema": "C-T14T-AUDIT-PDF-CONSISTENCY-1.0",
+ "scope": "agreement of the PDFs with their metadata and with each other; no architectural review",
+ "folder": "D:\\Users\\admin\\Desktop\\중간마감\\drawing-pipeline-AUDIT\\outputs\\T14T",
+ "source_geometry": {
+  "ok": true,
+  "problems": [],
+  "files": 19,
+  "original_checked": 19
+ },
+ "floors": [
+  {
+   "floor": "B2",
+   "checks": {
+    "P1_page_count_and_size": {
+     "pass": true,
+     "detail": "A1 841.0x594.0 mm (1 page), A3 pages=2"
+    },
+    "P2_vector_only": {
+     "pass": true,
+     "detail": "images A1=0 A3=0"
+    },
+    "P3_label_scale_level": {
+     "pass": true,
+     "detail": "level lines [('-11.000', 'B2')] vs metadata -11.000"
+    },
+    "P4_main_room_areas_printed": {
+     "pass": true,
+     "detail": "unit/hall/garden rooms=19, area values not printed as often as in metadata: none"
+    },
+    "P5_no_internal_identifiers": {
+     "pass": true,
+     "detail": "leaks=[]"
+    }
+   },
+   "finding_F4_support_or_restroom_area_not_printed": {
+    "rooms": 19,
+    "area_not_printed": 19
+   },
+   "level_stack": [
+    [
+     "B2",
+     "-11.0"
+    ],
+    [
+     "B1",
+     "-5.5"
+    ],
+    [
+     "1F",
+     "+0.0"
+    ],
+    [
+     "2F",
+     "+6.0"
+    ],
+    [
+     "3F",
+     "+11.0"
+    ],
+    [
+     "4F",
+     "+16.0"
+    ],
+    [
+     "5F",
+     "+21.0"
+    ],
+    [
+     "6F",
+     "+26.0"
+    ],
+    [
+     "7F",
+     "+31.0"
+    ],
+    [
+     "8F",
+     "+36.0"
+    ],
+    [
+     "9F",
+     "+40.5"
+    ],
+    [
+     "10F",
+     "+45.0"
+    ],
+    [
+     "11F",
+     "+51.0"
+    ],
+    [
+     "12F",
+     "+57.0"
+    ],
+    [
+     "13F",
+     "+61.5"
+    ],
+    [
+     "14F",
+     "+66.0"
+    ],
+    [
+     "15F",
+     "+70.5"
+    ]
+   ],
+   "title_strings": [
+    "2026-11-23",
+    "C-T14T",
+    "PROPOSED_DESIGN · NOT APPROVED · NOT FROZEN",
+    "PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 난간, 코어·화장실·튜브내부(1F 검증심볼재사용포함).",
+    "R1 (정정후보)"
+   ],
+   "pass": true
+  },
+  {
+   "floor": "B1",
+   "checks": {
+    "P1_page_count_and_size": {
+     "pass": true,
+     "detail": "A1 841.0x594.0 mm (1 page), A3 pages=2"
+    },
+    "P2_vector_only": {
+     "pass": true,
+     "detail": "images A1=0 A3=0"
+    },
+    "P3_label_scale_level": {
+     "pass": true,
+     "detail": "level lines [('-5.500', 'B1')] vs metadata -5.500"
+    },
+    "P4_main_room_areas_printed": {
+     "pass": false,
+     "detail": "unit/hall/garden rooms=12, area values not printed as often as in metadata: {'35.1': 1, '48.4': 1, '45.0': 1, '40.5': 1}"
+    },
+    "P5_no_internal_identifiers": {
+     "pass": true,
+     "detail": "leaks=[]"
+    }
+   },
+   "finding_F4_support_or_restroom_area_not_printed": {
+    "rooms": 16,
+    "area_not_printed": 16
+   },
+   "level_stack": [
+    [
+     "B2",
+     "-11.0"
+    ],
+    [
+     "B1",
+     "-5.5"
+    ],
+    [
+     "1F",
+     "+0.0"
+    ],
+    [
+     "2F",
+     "+6.0"
+    ],
+    [
+     "3F",
+     "+11.0"
+    ],
+    [
+     "4F",
+     "+16.0"
+    ],
+    [
+     "5F",
+     "+21.0"
+    ],
+    [
+     "6F",
+     "+26.0"
+    ],
+    [
+     "7F",
+     "+31.0"
+    ],
+    [
+     "8F",
+     "+36.0"
+    ],
+    [
+     "9F",
+     "+40.5"
+    ],
+    [
+     "10F",
+     "+45.0"
+    ],
+    [
+     "11F",
+     "+51.0"
+    ],
+    [
+     "12F",
+     "+57.0"
+    ],
+    [
+     "13F",
+     "+61.5"
+    ],
+    [
+     "14F",
+     "+66.0"
+    ],
+    [
+     "15F",
+     "+70.5"
+    ]
+   ],
+   "title_strings": [
+    "2026-11-23",
+    "C-T14T",
+    "PROPOSED_DESIGN · NOT APPROVED · NOT FROZEN",
+    "PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 난간, 코어·화장실·튜브내부(1F 검증심볼재사용포함).",
+    "R1 (정정후보)"
+   ],
+   "pass": false
+  },
+  {
+   "floor": "2F",
+   "checks": {
+    "P1_page_count_and_size": {
+     "pass": true,
+     "detail": "A1 841.0x594.0 mm (1 page), A3 pages=2"
+    },
+    "P2_vector_only": {
+     "pass": true,
+     "detail": "images A1=0 A3=0"
+    },
+    "P3_label_scale_level": {
+     "pass": true,
+     "detail": "level lines [('+6.000', '2F')] vs metadata +6.000"
+    },
+    "P4_main_room_areas_printed": {
+     "pass": false,
+     "detail": "unit/hall/garden rooms=8, area values not printed as often as in metadata: {'29.8': 1, '41.0': 1, '28.8': 1, '57.6': 1, '45.0': 1, '40.5': 1}"
+    },
+    "P5_no_internal_identifiers": {
+     "pass": true,
+     "detail": "leaks=[]"
+    }
+   },
+   "finding_F4_support_or_restroom_area_not_printed": {
+    "rooms": 18,
+    "area_not_printed": 18
+   },
+   "level_stack": [
+    [
+     "B2",
+     "-11.0"
+    ],
+    [
+     "B1",
+     "-5.5"
+    ],
+    [
+     "1F",
+     "+0.0"
+    ],
+    [
+     "2F",
+     "+6.0"
+    ],
+    [
+     "3F",
+     "+11.0"
+    ],
+    [
+     "4F",
+     "+16.0"
+    ],
+    [
+     "5F",
+     "+21.0"
+    ],
+    [
+     "6F",
+     "+26.0"
+    ],
+    [
+     "7F",
+     "+31.0"
+    ],
+    [
+     "8F",
+     "+36.0"
+    ],
+    [
+     "9F",
+     "+40.5"
+    ],
+    [
+     "10F",
+     "+45.0"
+    ],
+    [
+     "11F",
+     "+51.0"
+    ],
+    [
+     "12F",
+     "+57.0"
+    ],
+    [
+     "13F",
+     "+61.5"
+    ],
+    [
+     "14F",
+     "+66.0"
+    ],
+    [
+     "15F",
+     "+70.5"
+    ]
+   ],
+   "title_strings": [
+    "2026-11-23",
+    "C-T14T",
+    "PROPOSED_DESIGN · NOT APPROVED · NOT FROZEN",
+    "PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 난간, 코어·화장실·튜브내부(1F 검증심볼재사용포함).",
+    "R1 (정정후보)"
+   ],
+   "pass": false
+  },
+  {
+   "floor": "3F",
+   "checks": {
+    "P1_page_count_and_size": {
+     "pass": true,
+     "detail": "A1 841.0x594.0 mm (1 page), A3 pages=2"
+    },
+    "P2_vector_only": {
+     "pass": true,
+     "detail": "images A1=0 A3=0"
+    },
+    "P3_label_scale_level": {
+     "pass": true,
+     "detail": "level lines [('+11.000', '3F')] vs metadata +11.000"
+    },
+    "P4_main_room_areas_printed": {
+     "pass": true,
+     "detail": "unit/hall/garden rooms=12, area values not printed as often as in metadata: none"
+    },
+    "P5_no_internal_identifiers": {
+     "pass": true,
+     "detail": "leaks=[]"
+    }
+   },
+   "finding_F4_support_or_restroom_area_not_printed": {
+    "rooms": 11,
+    "area_not_printed": 11
+   },
+   "level_stack": [
+    [
+     "B2",
+     "-11.0"
+    ],
+    [
+     "B1",
+     "-5.5"
+    ],
+    [
+     "1F",
+     "+0.0"
+    ],
+    [
+     "2F",
+     "+6.0"
+    ],
+    [
+     "3F",
+     "+11.0"
+    ],
+    [
+     "4F",
+     "+16.0"
+    ],
+    [
+     "5F",
+     "+21.0"
+    ],
+    [
+     "6F",
+     "+26.0"
+    ],
+    [
+     "7F",
+     "+31.0"
+    ],
+    [
+     "8F",
+     "+36.0"
+    ],
+    [
+     "9F",
+     "+40.5"
+    ],
+    [
+     "10F",
+     "+45.0"
+    ],
+    [
+     "11F",
+     "+51.0"
+    ],
+    [
+     "12F",
+     "+57.0"
+    ],
+    [
+     "13F",
+     "+61.5"
+    ],
+    [
+     "14F",
+     "+66.0"
+    ],
+    [
+     "15F",
+     "+70.5"
+    ]
+   ],
+   "title_strings": [
+    "2026-11-23",
+    "C-T14T",
+    "PROPOSED_DESIGN · NOT APPROVED · NOT FROZEN",
+    "PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 난간, 코어·화장실·튜브내부(1F 검증심볼재사용포함).",
+    "R1 (정정후보)"
+   ],
+   "pass": true
+  },
+  {
+   "floor": "4F",
+   "checks": {
+    "P1_page_count_and_size": {
+     "pass": true,
+     "detail": "A1 841.0x594.0 mm (1 page), A3 pages=2"
+    },
+    "P2_vector_only": {
+     "pass": true,
+     "detail": "images A1=0 A3=0"
+    },
+    "P3_label_scale_level": {
+     "pass": true,
+     "detail": "level lines [('+16.000', '4F')] vs metadata +16.000"
+    },
+    "P4_main_room_areas_printed": {
+     "pass": false,
+     "detail": "unit/hall/garden rooms=13, area values not printed as often as in metadata: {'33.9': 1, '35.1': 1}"
+    },
+    "P5_no_internal_identifiers": {
+     "pass": true,
+     "detail": "leaks=[]"
+    }
+   },
+   "finding_F4_support_or_restroom_area_not_printed": {
+    "rooms": 11,
+    "area_not_printed": 11
+   },
+   "level_stack": [
+    [
+     "B2",
+     "-11.0"
+    ],
+    [
+     "B1",
+     "-5.5"
+    ],
+    [
+     "1F",
+     "+0.0"
+    ],
+    [
+     "2F",
+     "+6.0"
+    ],
+    [
+     "3F",
+     "+11.0"
+    ],
+    [
+     "4F",
+     "+16.0"
+    ],
+    [
+     "5F",
+     "+21.0"
+    ],
+    [
+     "6F",
+     "+26.0"
+    ],
+    [
+     "7F",
+     "+31.0"
+    ],
+    [
+     "8F",
+     "+36.0"
+    ],
+    [
+     "9F",
+     "+40.5"
+    ],
+    [
+     "10F",
+     "+45.0"
+    ],
+    [
+     "11F",
+     "+51.0"
+    ],
+    [
+     "12F",
+     "+57.0"
+    ],
+    [
+     "13F",
+     "+61.5"
+    ],
+    [
+     "14F",
+     "+66.0"
+    ],
+    [
+     "15F",
+     "+70.5"
+    ]
+   ],
+   "title_strings": [
+    "2026-11-23",
+    "C-T14T",
+    "PROPOSED_DESIGN · NOT APPROVED · NOT FROZEN",
+    "PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 난간, 코어·화장실·튜브내부(1F 검증심볼재사용포함).",
+    "R1 (정정후보)"
+   ],
+   "pass": false
+  },
+  {
+   "floor": "5F",
+   "checks": {
+    "P1_page_count_and_size": {
+     "pass": true,
+     "detail": "A1 841.0x594.0 mm (1 page), A3 pages=2"
+    },
+    "P2_vector_only": {
+     "pass": true,
+     "detail": "images A1=0 A3=0"
+    },
+    "P3_label_scale_level": {
+     "pass": true,
+     "detail": "level lines [('+21.000', '5F')] vs metadata +21.000"
+    },
+    "P4_main_room_areas_printed": {
+     "pass": false,
+     "detail": "unit/hall/garden rooms=11, area values not printed as often as in metadata: {'33.9': 1, '30.2': 1}"
+    },
+    "P5_no_internal_identifiers": {
+     "pass": true,
+     "detail": "leaks=[]"
+    }
+   },
+   "finding_F4_support_or_restroom_area_not_printed": {
+    "rooms": 10,
+    "area_not_printed": 10
+   },
+   "level_stack": [
+    [
+     "B2",
+     "-11.0"
+    ],
+    [
+     "B1",
+     "-5.5"
+    ],
+    [
+     "1F",
+     "+0.0"
+    ],
+    [
+     "2F",
+     "+6.0"
+    ],
+    [
+     "3F",
+     "+11.0"
+    ],
+    [
+     "4F",
+     "+16.0"
+    ],
+    [
+     "5F",
+     "+21.0"
+    ],
+    [
+     "6F",
+     "+26.0"
+    ],
+    [
+     "7F",
+     "+31.0"
+    ],
+    [
+     "8F",
+     "+36.0"
+    ],
+    [
+     "9F",
+     "+40.5"
+    ],
+    [
+     "10F",
+     "+45.0"
+    ],
+    [
+     "11F",
+     "+51.0"
+    ],
+    [
+     "12F",
+     "+57.0"
+    ],
+    [
+     "13F",
+     "+61.5"
+    ],
+    [
+     "14F",
+     "+66.0"
+    ],
+    [
+     "15F",
+     "+70.5"
+    ]
+   ],
+   "title_strings": [
+    "2026-11-23",
+    "C-T14T",
+    "PROPOSED_DESIGN · NOT APPROVED · NOT FROZEN",
+    "PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 난간, 코어·화장실·튜브내부(1F 검증심볼재사용포함).",
+    "R1 (정정후보)"
+   ],
+   "pass": false
+  },
+  {
+   "floor": "6F",
+   "checks": {
+    "P1_page_count_and_size": {
+     "pass": true,
+     "detail": "A1 841.0x594.0 mm (1 page), A3 pages=2"
+    },
+    "P2_vector_only": {
+     "pass": true,
+     "detail": "images A1=0 A3=0"
+    },
+    "P3_label_scale_level": {
+     "pass": true,
+     "detail": "level lines [('+26.000', '6F')] vs metadata +26.000"
+    },
+    "P4_main_room_areas_printed": {
+     "pass": false,
+     "detail": "unit/hall/garden rooms=9, area values not printed as often as in metadata: {'29.8': 1}"
+    },
+    "P5_no_internal_identifiers": {
+     "pass": true,
+     "detail": "leaks=[]"
+    }
+   },
+   "finding_F4_support_or_restroom_area_not_printed": {
+    "rooms": 8,
+    "area_not_printed": 8
+   },
+   "level_stack": [
+    [
+     "B2",
+     "-11.0"
+    ],
+    [
+     "B1",
+     "-5.5"
+    ],
+    [
+     "1F",
+     "+0.0"
+    ],
+    [
+     "2F",
+     "+6.0"
+    ],
+    [
+     "3F",
+     "+11.0"
+    ],
+    [
+     "4F",
+     "+16.0"
+    ],
+    [
+     "5F",
+     "+21.0"
+    ],
+    [
+     "6F",
+     "+26.0"
+    ],
+    [
+     "7F",
+     "+31.0"
+    ],
+    [
+     "8F",
+     "+36.0"
+    ],
+    [
+     "9F",
+     "+40.5"
+    ],
+    [
+     "10F",
+     "+45.0"
+    ],
+    [
+     "11F",
+     "+51.0"
+    ],
+    [
+     "12F",
+     "+57.0"
+    ],
+    [
+     "13F",
+     "+61.5"
+    ],
+    [
+     "14F",
+     "+66.0"
+    ],
+    [
+     "15F",
+     "+70.5"
+    ]
+   ],
+   "title_strings": [
+    "2026-11-23",
+    "C-T14T",
+    "PROPOSED_DESIGN · NOT APPROVED · NOT FROZEN",
+    "PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 난간, 코어·화장실·튜브내부(1F 검증심볼재사용포함).",
+    "R1 (정정후보)"
+   ],
+   "pass": false
+  },
+  {
+   "floor": "7F",
+   "checks": {
+    "P1_page_count_and_size": {
+     "pass": true,
+     "detail": "A1 841.0x594.0 mm (1 page), A3 pages=2"
+    },
+    "P2_vector_only": {
+     "pass": true,
+     "detail": "images A1=0 A3=0"
+    },
+    "P3_label_scale_level": {
+     "pass": true,
+     "detail": "level lines [('+31.001', '7F')] vs metadata +31.001"
+    },
+    "P4_main_room_areas_printed": {
+     "pass": false,
+     "detail": "unit/hall/garden rooms=7, area values not printed as often as in metadata: {'33.5': 1}"
+    },
+    "P5_no_internal_identifiers": {
+     "pass": true,
+     "detail": "leaks=[]"
+    }
+   },
+   "finding_F4_support_or_restroom_area_not_printed": {
+    "rooms": 6,
+    "area_not_printed": 6
+   },
+   "level_stack": [
+    [
+     "B2",
+     "-11.0"
+    ],
+    [
+     "B1",
+     "-5.5"
+    ],
+    [
+     "1F",
+     "+0.0"
+    ],
+    [
+     "2F",
+     "+6.0"
+    ],
+    [
+     "3F",
+     "+11.0"
+    ],
+    [
+     "4F",
+     "+16.0"
+    ],
+    [
+     "5F",
+     "+21.0"
+    ],
+    [
+     "6F",
+     "+26.0"
+    ],
+    [
+     "7F",
+     "+31.0"
+    ],
+    [
+     "8F",
+     "+36.0"
+    ],
+    [
+     "9F",
+     "+40.5"
+    ],
+    [
+     "10F",
+     "+45.0"
+    ],
+    [
+     "11F",
+     "+51.0"
+    ],
+    [
+     "12F",
+     "+57.0"
+    ],
+    [
+     "13F",
+     "+61.5"
+    ],
+    [
+     "14F",
+     "+66.0"
+    ],
+    [
+     "15F",
+     "+70.5"
+    ]
+   ],
+   "title_strings": [
+    "2026-11-23",
+    "C-T14T",
+    "PROPOSED_DESIGN · NOT APPROVED · NOT FROZEN",
+    "PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 난간, 코어·화장실·튜브내부(1F 검증심볼재사용포함).",
+    "R1 (정정후보)"
+   ],
+   "pass": false
+  },
+  {
+   "floor": "8F",
+   "checks": {
+    "P1_page_count_and_size": {
+     "pass": true,
+     "detail": "A1 841.0x594.0 mm (1 page), A3 pages=2"
+    },
+    "P2_vector_only": {
+     "pass": true,
+     "detail": "images A1=0 A3=0"
+    },
+    "P3_label_scale_level": {
+     "pass": true,
+     "detail": "level lines [('+36.000', '8F')] vs metadata +36.000"
+    },
+    "P4_main_room_areas_printed": {
+     "pass": true,
+     "detail": "unit/hall/garden rooms=8, area values not printed as often as in metadata: none"
+    },
+    "P5_no_internal_identifiers": {
+     "pass": true,
+     "detail": "leaks=[]"
+    }
+   },
+   "finding_F4_support_or_restroom_area_not_printed": {
+    "rooms": 7,
+    "area_not_printed": 7
+   },
+   "level_stack": [
+    [
+     "B2",
+     "-11.0"
+    ],
+    [
+     "B1",
+     "-5.5"
+    ],
+    [
+     "1F",
+     "+0.0"
+    ],
+    [
+     "2F",
+     "+6.0"
+    ],
+    [
+     "3F",
+     "+11.0"
+    ],
+    [
+     "4F",
+     "+16.0"
+    ],
+    [
+     "5F",
+     "+21.0"
+    ],
+    [
+     "6F",
+     "+26.0"
+    ],
+    [
+     "7F",
+     "+31.0"
+    ],
+    [
+     "8F",
+     "+36.0"
+    ],
+    [
+     "9F",
+     "+40.5"
+    ],
+    [
+     "10F",
+     "+45.0"
+    ],
+    [
+     "11F",
+     "+51.0"
+    ],
+    [
+     "12F",
+     "+57.0"
+    ],
+    [
+     "13F",
+     "+61.5"
+    ],
+    [
+     "14F",
+     "+66.0"
+    ],
+    [
+     "15F",
+     "+70.5"
+    ]
+   ],
+   "title_strings": [
+    "2026-11-23",
+    "C-T14T",
+    "PROPOSED_DESIGN · NOT APPROVED · NOT FROZEN",
+    "PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 난간, 코어·화장실·튜브내부(1F 검증심볼재사용포함).",
+    "R1 (정정후보)"
+   ],
+   "pass": true
+  },
+  {
+   "floor": "9F",
+   "checks": {
+    "P1_page_count_and_size": {
+     "pass": true,
+     "detail": "A1 841.0x594.0 mm (1 page), A3 pages=2"
+    },
+    "P2_vector_only": {
+     "pass": true,
+     "detail": "images A1=0 A3=0"
+    },
+    "P3_label_scale_level": {
+     "pass": true,
+     "detail": "level lines [('+40.500', '9F')] vs metadata +40.500"
+    },
+    "P4_main_room_areas_printed": {
+     "pass": false,
+     "detail": "unit/hall/garden rooms=7, area values not printed as often as in metadata: {'35.1': 1}"
+    },
+    "P5_no_internal_identifiers": {
+     "pass": true,
+     "detail": "leaks=[]"
+    }
+   },
+   "finding_F4_support_or_restroom_area_not_printed": {
+    "rooms": 8,
+    "area_not_printed": 8
+   },
+   "level_stack": [
+    [
+     "B2",
+     "-11.0"
+    ],
+    [
+     "B1",
+     "-5.5"
+    ],
+    [
+     "1F",
+     "+0.0"
+    ],
+    [
+     "2F",
+     "+6.0"
+    ],
+    [
+     "3F",
+     "+11.0"
+    ],
+    [
+     "4F",
+     "+16.0"
+    ],
+    [
+     "5F",
+     "+21.0"
+    ],
+    [
+     "6F",
+     "+26.0"
+    ],
+    [
+     "7F",
+     "+31.0"
+    ],
+    [
+     "8F",
+     "+36.0"
+    ],
+    [
+     "9F",
+     "+40.5"
+    ],
+    [
+     "10F",
+     "+45.0"
+    ],
+    [
+     "11F",
+     "+51.0"
+    ],
+    [
+     "12F",
+     "+57.0"
+    ],
+    [
+     "13F",
+     "+61.5"
+    ],
+    [
+     "14F",
+     "+66.0"
+    ],
+    [
+     "15F",
+     "+70.5"
+    ]
+   ],
+   "title_strings": [
+    "2026-11-23",
+    "C-T14T",
+    "PROPOSED_DESIGN · NOT APPROVED · NOT FROZEN",
+    "PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 난간, 코어·화장실·튜브내부(1F 검증심볼재사용포함).",
+    "R1 (정정후보)"
+   ],
+   "pass": false
+  },
+  {
+   "floor": "10F",
+   "checks": {
+    "P1_page_count_and_size": {
+     "pass": true,
+     "detail": "A1 841.0x594.0 mm (1 page), A3 pages=2"
+    },
+    "P2_vector_only": {
+     "pass": true,
+     "detail": "images A1=0 A3=0"
+    },
+    "P3_label_scale_level": {
+     "pass": true,
+     "detail": "level lines [('+45.000', '10F')] vs metadata +45.000"
+    },
+    "P4_main_room_areas_printed": {
+     "pass": false,
+     "detail": "unit/hall/garden rooms=7, area values not printed as often as in metadata: {'59.4': 1, '45.0': 1, '40.5': 1}"
+    },
+    "P5_no_internal_identifiers": {
+     "pass": true,
+     "detail": "leaks=[]"
+    }
+   },
+   "finding_F4_support_or_restroom_area_not_printed": {
+    "rooms": 18,
+    "area_not_printed": 18
+   },
+   "level_stack": [
+    [
+     "B2",
+     "-11.0"
+    ],
+    [
+     "B1",
+     "-5.5"
+    ],
+    [
+     "1F",
+     "+0.0"
+    ],
+    [
+     "2F",
+     "+6.0"
+    ],
+    [
+     "3F",
+     "+11.0"
+    ],
+    [
+     "4F",
+     "+16.0"
+    ],
+    [
+     "5F",
+     "+21.0"
+    ],
+    [
+     "6F",
+     "+26.0"
+    ],
+    [
+     "7F",
+     "+31.0"
+    ],
+    [
+     "8F",
+     "+36.0"
+    ],
+    [
+     "9F",
+     "+40.5"
+    ],
+    [
+     "10F",
+     "+45.0"
+    ],
+    [
+     "11F",
+     "+51.0"
+    ],
+    [
+     "12F",
+     "+57.0"
+    ],
+    [
+     "13F",
+     "+61.5"
+    ],
+    [
+     "14F",
+     "+66.0"
+    ],
+    [
+     "15F",
+     "+70.5"
+    ]
+   ],
+   "title_strings": [
+    "2026-11-23",
+    "C-T14T",
+    "PROPOSED_DESIGN · NOT APPROVED · NOT FROZEN",
+    "PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 난간, 코어·화장실·튜브내부(1F 검증심볼재사용포함).",
+    "R1 (정정후보)"
+   ],
+   "pass": false
+  },
+  {
+   "floor": "11F",
+   "checks": {
+    "P1_page_count_and_size": {
+     "pass": true,
+     "detail": "A1 841.0x594.0 mm (1 page), A3 pages=2"
+    },
+    "P2_vector_only": {
+     "pass": true,
+     "detail": "images A1=0 A3=0"
+    },
+    "P3_label_scale_level": {
+     "pass": true,
+     "detail": "level lines [('+51.000', '11F')] vs metadata +51.000"
+    },
+    "P4_main_room_areas_printed": {
+     "pass": false,
+     "detail": "unit/hall/garden rooms=6, area values not printed as often as in metadata: {'59.4': 1}"
+    },
+    "P5_no_internal_identifiers": {
+     "pass": true,
+     "detail": "leaks=[]"
+    }
+   },
+   "finding_F4_support_or_restroom_area_not_printed": {
+    "rooms": 6,
+    "area_not_printed": 6
+   },
+   "level_stack": [
+    [
+     "B2",
+     "-11.0"
+    ],
+    [
+     "B1",
+     "-5.5"
+    ],
+    [
+     "1F",
+     "+0.0"
+    ],
+    [
+     "2F",
+     "+6.0"
+    ],
+    [
+     "3F",
+     "+11.0"
+    ],
+    [
+     "4F",
+     "+16.0"
+    ],
+    [
+     "5F",
+     "+21.0"
+    ],
+    [
+     "6F",
+     "+26.0"
+    ],
+    [
+     "7F",
+     "+31.0"
+    ],
+    [
+     "8F",
+     "+36.0"
+    ],
+    [
+     "9F",
+     "+40.5"
+    ],
+    [
+     "10F",
+     "+45.0"
+    ],
+    [
+     "11F",
+     "+51.0"
+    ],
+    [
+     "12F",
+     "+57.0"
+    ],
+    [
+     "13F",
+     "+61.5"
+    ],
+    [
+     "14F",
+     "+66.0"
+    ],
+    [
+     "15F",
+     "+70.5"
+    ]
+   ],
+   "title_strings": [
+    "2026-11-23",
+    "C-T14T",
+    "PROPOSED_DESIGN · NOT APPROVED · NOT FROZEN",
+    "PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 난간, 코어·화장실·튜브내부(1F 검증심볼재사용포함).",
+    "R1 (정정후보)"
+   ],
+   "pass": false
+  },
+  {
+   "floor": "12F",
+   "checks": {
+    "P1_page_count_and_size": {
+     "pass": true,
+     "detail": "A1 841.0x594.0 mm (1 page), A3 pages=2"
+    },
+    "P2_vector_only": {
+     "pass": true,
+     "detail": "images A1=0 A3=0"
+    },
+    "P3_label_scale_level": {
+     "pass": true,
+     "detail": "level lines [('+57.000', '12F')] vs metadata +57.000"
+    },
+    "P4_main_room_areas_printed": {
+     "pass": false,
+     "detail": "unit/hall/garden rooms=4, area values not printed as often as in metadata: {'59.4': 1}"
+    },
+    "P5_no_internal_identifiers": {
+     "pass": true,
+     "detail": "leaks=[]"
+    }
+   },
+   "finding_F4_support_or_restroom_area_not_printed": {
+    "rooms": 6,
+    "area_not_printed": 6
+   },
+   "level_stack": [
+    [
+     "B2",
+     "-11.0"
+    ],
+    [
+     "B1",
+     "-5.5"
+    ],
+    [
+     "1F",
+     "+0.0"
+    ],
+    [
+     "2F",
+     "+6.0"
+    ],
+    [
+     "3F",
+     "+11.0"
+    ],
+    [
+     "4F",
+     "+16.0"
+    ],
+    [
+     "5F",
+     "+21.0"
+    ],
+    [
+     "6F",
+     "+26.0"
+    ],
+    [
+     "7F",
+     "+31.0"
+    ],
+    [
+     "8F",
+     "+36.0"
+    ],
+    [
+     "9F",
+     "+40.5"
+    ],
+    [
+     "10F",
+     "+45.0"
+    ],
+    [
+     "11F",
+     "+51.0"
+    ],
+    [
+     "12F",
+     "+57.0"
+    ],
+    [
+     "13F",
+     "+61.5"
+    ],
+    [
+     "14F",
+     "+66.0"
+    ],
+    [
+     "15F",
+     "+70.5"
+    ]
+   ],
+   "title_strings": [
+    "2026-11-23",
+    "C-T14T",
+    "PROPOSED_DESIGN · NOT APPROVED · NOT FROZEN",
+    "PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 난간, 코어·화장실·튜브내부(1F 검증심볼재사용포함).",
+    "R1 (정정후보)"
+   ],
+   "pass": false
+  },
+  {
+   "floor": "13F",
+   "checks": {
+    "P1_page_count_and_size": {
+     "pass": true,
+     "detail": "A1 841.0x594.0 mm (1 page), A3 pages=2"
+    },
+    "P2_vector_only": {
+     "pass": true,
+     "detail": "images A1=0 A3=0"
+    },
+    "P3_label_scale_level": {
+     "pass": true,
+     "detail": "level lines [('+61.500', '13F')] vs metadata +61.500"
+    },
+    "P4_main_room_areas_printed": {
+     "pass": false,
+     "detail": "unit/hall/garden rooms=6, area values not printed as often as in metadata: {'59.4': 1}"
+    },
+    "P5_no_internal_identifiers": {
+     "pass": true,
+     "detail": "leaks=[]"
+    }
+   },
+   "finding_F4_support_or_restroom_area_not_printed": {
+    "rooms": 6,
+    "area_not_printed": 6
+   },
+   "level_stack": [
+    [
+     "B2",
+     "-11.0"
+    ],
+    [
+     "B1",
+     "-5.5"
+    ],
+    [
+     "1F",
+     "+0.0"
+    ],
+    [
+     "2F",
+     "+6.0"
+    ],
+    [
+     "3F",
+     "+11.0"
+    ],
+    [
+     "4F",
+     "+16.0"
+    ],
+    [
+     "5F",
+     "+21.0"
+    ],
+    [
+     "6F",
+     "+26.0"
+    ],
+    [
+     "7F",
+     "+31.0"
+    ],
+    [
+     "8F",
+     "+36.0"
+    ],
+    [
+     "9F",
+     "+40.5"
+    ],
+    [
+     "10F",
+     "+45.0"
+    ],
+    [
+     "11F",
+     "+51.0"
+    ],
+    [
+     "12F",
+     "+57.0"
+    ],
+    [
+     "13F",
+     "+61.5"
+    ],
+    [
+     "14F",
+     "+66.0"
+    ],
+    [
+     "15F",
+     "+70.5"
+    ]
+   ],
+   "title_strings": [
+    "2026-11-23",
+    "C-T14T",
+    "PROPOSED_DESIGN · NOT APPROVED · NOT FROZEN",
+    "PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 난간, 코어·화장실·튜브내부(1F 검증심볼재사용포함).",
+    "R1 (정정후보)"
+   ],
+   "pass": false
+  },
+  {
+   "floor": "14F",
+   "checks": {
+    "P1_page_count_and_size": {
+     "pass": true,
+     "detail": "A1 841.0x594.0 mm (1 page), A3 pages=2"
+    },
+    "P2_vector_only": {
+     "pass": true,
+     "detail": "images A1=0 A3=0"
+    },
+    "P3_label_scale_level": {
+     "pass": true,
+     "detail": "level lines [('+66.000', '14F')] vs metadata +66.000"
+    },
+    "P4_main_room_areas_printed": {
+     "pass": false,
+     "detail": "unit/hall/garden rooms=4, area values not printed as often as in metadata: {'59.4': 1}"
+    },
+    "P5_no_internal_identifiers": {
+     "pass": true,
+     "detail": "leaks=[]"
+    }
+   },
+   "finding_F4_support_or_restroom_area_not_printed": {
+    "rooms": 5,
+    "area_not_printed": 5
+   },
+   "level_stack": [
+    [
+     "B2",
+     "-11.0"
+    ],
+    [
+     "B1",
+     "-5.5"
+    ],
+    [
+     "1F",
+     "+0.0"
+    ],
+    [
+     "2F",
+     "+6.0"
+    ],
+    [
+     "3F",
+     "+11.0"
+    ],
+    [
+     "4F",
+     "+16.0"
+    ],
+    [
+     "5F",
+     "+21.0"
+    ],
+    [
+     "6F",
+     "+26.0"
+    ],
+    [
+     "7F",
+     "+31.0"
+    ],
+    [
+     "8F",
+     "+36.0"
+    ],
+    [
+     "9F",
+     "+40.5"
+    ],
+    [
+     "10F",
+     "+45.0"
+    ],
+    [
+     "11F",
+     "+51.0"
+    ],
+    [
+     "12F",
+     "+57.0"
+    ],
+    [
+     "13F",
+     "+61.5"
+    ],
+    [
+     "14F",
+     "+66.0"
+    ],
+    [
+     "15F",
+     "+70.5"
+    ]
+   ],
+   "title_strings": [
+    "2026-11-23",
+    "C-T14T",
+    "PROPOSED_DESIGN · NOT APPROVED · NOT FROZEN",
+    "PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 난간, 코어·화장실·튜브내부(1F 검증심볼재사용포함).",
+    "R1 (정정후보)"
+   ],
+   "pass": false
+  },
+  {
+   "floor": "15F",
+   "checks": {
+    "P1_page_count_and_size": {
+     "pass": true,
+     "detail": "A1 841.0x594.0 mm (1 page), A3 pages=2"
+    },
+    "P2_vector_only": {
+     "pass": true,
+     "detail": "images A1=0 A3=0"
+    },
+    "P3_label_scale_level": {
+     "pass": true,
+     "detail": "level lines [('+70.500', '15F')] vs metadata +70.500"
+    },
+    "P4_main_room_areas_printed": {
+     "pass": true,
+     "detail": "unit/hall/garden rooms=3, area values not printed as often as in metadata: none"
+    },
+    "P5_no_internal_identifiers": {
+     "pass": true,
+     "detail": "leaks=[]"
+    }
+   },
+   "finding_F4_support_or_restroom_area_not_printed": {
+    "rooms": 6,
+    "area_not_printed": 6
+   },
+   "level_stack": [
+    [
+     "B2",
+     "-11.0"
+    ],
+    [
+     "B1",
+     "-5.5"
+    ],
+    [
+     "1F",
+     "+0.0"
+    ],
+    [
+     "2F",
+     "+6.0"
+    ],
+    [
+     "3F",
+     "+11.0"
+    ],
+    [
+     "4F",
+     "+16.0"
+    ],
+    [
+     "5F",
+     "+21.0"
+    ],
+    [
+     "6F",
+     "+26.0"
+    ],
+    [
+     "7F",
+     "+31.0"
+    ],
+    [
+     "8F",
+     "+36.0"
+    ],
+    [
+     "9F",
+     "+40.5"
+    ],
+    [
+     "10F",
+     "+45.0"
+    ],
+    [
+     "11F",
+     "+51.0"
+    ],
+    [
+     "12F",
+     "+57.0"
+    ],
+    [
+     "13F",
+     "+61.5"
+    ],
+    [
+     "14F",
+     "+66.0"
+    ],
+    [
+     "15F",
+     "+70.5"
+    ]
+   ],
+   "title_strings": [
+    "2026-11-23",
+    "C-T14T",
+    "PROPOSED_DESIGN · NOT APPROVED · NOT FROZEN",
+    "PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 난간, 코어·화장실·튜브내부(1F 검증심볼재사용포함).",
+    "R1 (정정후보)"
+   ],
+   "pass": true
+  }
+ ],
+ "cross_floor": {
+  "P6_level_stack_identical_across_floors": {
+   "pass": true,
+   "detail": "1 distinct level stacks, 17 entries"
+  },
+  "P7_title_strings_identical_across_floors": {
+   "pass": true,
+   "detail": "1 distinct title-string sets: ['2026-11-23', 'C-T14T', 'PROPOSED_DESIGN · NOT APPROVED · NOT FROZEN', 'PROPOSED_DESIGN: 구획벽, 문, 실, 가구, 동선, 난간, 코어·화장실·튜브내부(1F 검증심볼재사용포함).', 'R1 (정정후보)']"
+  }
+ },
+ "summary": {
+  "floors": 16,
+  "floors_all_pass": 4,
+  "cross_floor_pass": true,
+  "F4_support_or_restroom_rooms": 161,
+  "F4_area_not_printed": 161
+ }
+}

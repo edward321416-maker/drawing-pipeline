@@ -1,0 +1,12 @@
+{
+ "check": "local",
+ "ok": true,
+ "t14r_verify": "PASS_BYTES_AND_PIXELS_ONLY",
+ "assets": 16,
+ "tiles": 256,
+ "github_readback": "NOT_TESTED",
+ "local_readback_report": "ABSENT",
+ "problems": [],
+ "warnings": [],
+ "note": "bytes and pixels only; connector readback is confirmed only by the reviewer's own review, never by a file in the packet"
+}

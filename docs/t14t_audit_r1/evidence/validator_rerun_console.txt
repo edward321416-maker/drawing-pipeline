@@ -1,0 +1,19 @@
+B2   technical=PASS circulation_complete=True open_items=0 
+B1   technical=PASS circulation_complete=False open_items=1 
+2F   technical=PASS circulation_complete=False open_items=2 
+3F   technical=PASS circulation_complete=True open_items=0 
+4F   technical=PASS circulation_complete=False open_items=2 
+5F   technical=PASS circulation_complete=False open_items=2 
+6F   technical=PASS circulation_complete=False open_items=1 
+7F   technical=PASS circulation_complete=False open_items=2 
+8F   technical=PASS circulation_complete=False open_items=2 
+9F   technical=PASS circulation_complete=False open_items=2 
+10F  technical=PASS circulation_complete=False open_items=2 
+11F  technical=PASS circulation_complete=False open_items=2 
+12F  technical=PASS circulation_complete=False open_items=2 
+13F  technical=PASS circulation_complete=False open_items=2 
+14F  technical=PASS circulation_complete=False open_items=2 
+15F  technical=PASS circulation_complete=False open_items=1 
+source geometry unchanged: True | technical pass 16/16 | circulation complete on 2 floors, 25 open items on 14 floors
+report: D:\Users\admin\Desktop\중간마감\drawing-pipeline-AUDIT\docs\t14t_audit_r1\evidence\validator_rerun_report.json
+exit=0

@@ -1,0 +1,4 @@
+id,floor,core,bounds_m,footprint_m2,core_on_slab_m2,nearest_slab_m,slice_sha256,method
+D02-2F-core-D,2F,D,"[-9.0, -18.0, -3.0, -12.0]",36.0,0.0,17.0,a80696fe8ff486103cc1192641dbe68eed2d7b7ddcb4458d53ebc8bbe50c523e,"MEASURED_FROM_VERIFIED_SLICE: geometry arithmetic only; no design validity, egress or code compliance is implied"
+D02-7F-core-C,7F,C,"[39.0, -18.0, 45.0, -12.0]",36.0,0.0,17.0,db8d579e5916509f9fc0f798a8054bf7e5f6ffa0e5163059ff020291288efbeb,"MEASURED_FROM_VERIFIED_SLICE: geometry arithmetic only; no design validity, egress or code compliance is implied"
+D02-7F-core-D,7F,D,"[-9.0, -18.0, -3.0, -12.0]",36.0,0.0,17.0,db8d579e5916509f9fc0f798a8054bf7e5f6ffa0e5163059ff020291288efbeb,"MEASURED_FROM_VERIFIED_SLICE: geometry arithmetic only; no design validity, egress or code compliance is implied"

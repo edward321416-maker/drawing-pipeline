@@ -1,0 +1,2835 @@
+{
+ "schema": "C-T14T-BUILD-TEST-1.0",
+ "scope": "deterministic technical-usability and route-geometry checks only; no architectural or visual review",
+ "source_geometry": {
+  "ok": true,
+  "problems": [],
+  "files": 19,
+  "original_checked": 19
+ },
+ "floors": [
+  {
+   "floor": "B2",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "A1 841x594 mm declared"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "no_internal_identifiers_in_visible_text": {
+     "pass": true,
+     "detail": "leaks=[]"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=616"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "physical_scale_1to200": {
+     "pass": true,
+     "detail": "column discs=34 (source 34), grid span 264.0 mm (expected 264.0)"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1070 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "dxf_no_internal_identifiers": {
+     "pass": true,
+     "detail": "text entities=125"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "source_geometry_unchanged": {
+     "pass": true,
+     "detail": "slice sha256 + columns/slab/cores vs pinned slice"
+    },
+    "deterministic_replan_matches_metadata": {
+     "pass": true,
+     "detail": "rooms=38"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "every room has a label or forced tag"
+    },
+    "drawing_uses_verified_geometry": {
+     "pass": true,
+     "detail": "columns, slab edge and openings equal the pinned slice"
+    },
+    "rooms_within_slab": {
+     "pass": true,
+     "detail": "rooms outside slab: []"
+    },
+    "routes_within_slab": {
+     "pass": true,
+     "detail": "routes=9 outside=[]"
+    },
+    "routes_avoid_cores": {
+     "pass": true,
+     "detail": "crossing cores: []"
+    },
+    "corridor_to_column_clearance": {
+     "pass": true,
+     "detail": "min clear gap column face -> route centre line = 1.84 m (rule >= 0.60 m, 0.55 tolerance) at core C"
+    },
+    "door_swings_clear_of_columns": {
+     "pass": true,
+     "detail": "41 doors checked, hits=[]"
+    },
+    "door_swings_do_not_overlap": {
+     "pass": true,
+     "detail": "overlapping main-door swings=0"
+    },
+    "partitions_clear_of_columns": {
+     "pass": true,
+     "detail": "partitions=16"
+    },
+    "door_openings_on_walls": {
+     "pass": true,
+     "detail": "doors off any wall line: []"
+    },
+    "door_swings_do_not_cross_partitions": {
+     "pass": true,
+     "detail": "swings crossing a partition=0"
+    },
+    "route_graph_connected": {
+     "pass": true,
+     "detail": "3 routed nodes in 1 component(s), 2 edges"
+    },
+    "route_endpoints_match_nodes": {
+     "pass": true,
+     "detail": "edge ends within 0.6 m of their nodes"
+    },
+    "unit_door_aprons_reachable": {
+     "pass": true,
+     "detail": "doors=18 unreachable=0"
+    },
+    "unresolved_items_have_decision_ids": {
+     "pass": true,
+     "detail": "open items=0"
+    },
+    "provenance_labels": {
+     "pass": true,
+     "detail": "verified-only layers mislabelled=[], proposed-only layers tagged verified=[]"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   },
+   "unresolved": [],
+   "circulation_complete": true,
+   "not_modeled": [],
+   "decision_refs": []
+  },
+  {
+   "floor": "B1",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "A1 841x594 mm declared"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "no_internal_identifiers_in_visible_text": {
+     "pass": true,
+     "detail": "leaks=[]"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=738"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "physical_scale_1to200": {
+     "pass": true,
+     "detail": "column discs=34 (source 34), grid span 264.0 mm (expected 264.0)"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1100 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "dxf_no_internal_identifiers": {
+     "pass": true,
+     "detail": "text entities=99"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "source_geometry_unchanged": {
+     "pass": true,
+     "detail": "slice sha256 + columns/slab/cores vs pinned slice"
+    },
+    "deterministic_replan_matches_metadata": {
+     "pass": true,
+     "detail": "rooms=28"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "every room has a label or forced tag"
+    },
+    "drawing_uses_verified_geometry": {
+     "pass": true,
+     "detail": "columns, slab edge and openings equal the pinned slice"
+    },
+    "rooms_within_slab": {
+     "pass": true,
+     "detail": "rooms outside slab: []"
+    },
+    "routes_within_slab": {
+     "pass": true,
+     "detail": "routes=10 outside=[]"
+    },
+    "routes_avoid_cores": {
+     "pass": true,
+     "detail": "crossing cores: []"
+    },
+    "corridor_to_column_clearance": {
+     "pass": true,
+     "detail": "min clear gap column face -> route centre line = 1.81 m (rule >= 0.60 m, 0.55 tolerance) at tube T4"
+    },
+    "door_swings_clear_of_columns": {
+     "pass": true,
+     "detail": "26 doors checked, hits=[]"
+    },
+    "door_swings_do_not_overlap": {
+     "pass": true,
+     "detail": "overlapping main-door swings=0"
+    },
+    "partitions_clear_of_columns": {
+     "pass": true,
+     "detail": "partitions=12"
+    },
+    "door_openings_on_walls": {
+     "pass": true,
+     "detail": "doors off any wall line: []"
+    },
+    "door_swings_do_not_cross_partitions": {
+     "pass": true,
+     "detail": "swings crossing a partition=0"
+    },
+    "route_graph_connected": {
+     "pass": true,
+     "detail": "8 routed nodes in 1 component(s), 7 edges"
+    },
+    "route_endpoints_match_nodes": {
+     "pass": true,
+     "detail": "edge ends within 0.6 m of their nodes"
+    },
+    "unit_door_aprons_reachable": {
+     "pass": true,
+     "detail": "doors=10 unreachable=0"
+    },
+    "unresolved_items_have_decision_ids": {
+     "pass": true,
+     "detail": "open items=1"
+    },
+    "provenance_labels": {
+     "pass": true,
+     "detail": "verified-only layers mislabelled=[], proposed-only layers tagged verified=[]"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   },
+   "unresolved": [
+    {
+     "id": "esc B1→1F board",
+     "type": "escalator",
+     "status": "BLOCKED_BY_SOLID",
+     "decision": "D-01",
+     "reason": "escalator end lies inside a core / restroom footprint (verified model conflict)"
+    }
+   ],
+   "circulation_complete": false,
+   "not_modeled": [
+    {
+     "id": "T1 ramp",
+     "reason": "ramp entry/exit points are not defined in the verified model or the 1F symbol; not counted as connected or failed",
+     "decision": "D-08"
+    }
+   ],
+   "decision_refs": [
+    "D-01",
+    "D-08"
+   ]
+  },
+  {
+   "floor": "2F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "A1 841x594 mm declared"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "no_internal_identifiers_in_visible_text": {
+     "pass": true,
+     "detail": "leaks=[]"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=755"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "physical_scale_1to200": {
+     "pass": true,
+     "detail": "column discs=34 (source 34), grid span 264.0 mm (expected 264.0)"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1315 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "dxf_no_internal_identifiers": {
+     "pass": true,
+     "detail": "text entities=91"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "source_geometry_unchanged": {
+     "pass": true,
+     "detail": "slice sha256 + columns/slab/cores vs pinned slice"
+    },
+    "deterministic_replan_matches_metadata": {
+     "pass": true,
+     "detail": "rooms=26"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "every room has a label or forced tag"
+    },
+    "drawing_uses_verified_geometry": {
+     "pass": true,
+     "detail": "columns, slab edge and openings equal the pinned slice"
+    },
+    "rooms_within_slab": {
+     "pass": true,
+     "detail": "rooms outside slab: []"
+    },
+    "routes_within_slab": {
+     "pass": true,
+     "detail": "routes=12 outside=[]"
+    },
+    "routes_avoid_cores": {
+     "pass": true,
+     "detail": "crossing cores: []"
+    },
+    "corridor_to_column_clearance": {
+     "pass": true,
+     "detail": "min clear gap column face -> route centre line = 1.38 m (rule >= 0.60 m, 0.55 tolerance) at tube T3"
+    },
+    "door_swings_clear_of_columns": {
+     "pass": true,
+     "detail": "28 doors checked, hits=[]"
+    },
+    "door_swings_do_not_overlap": {
+     "pass": true,
+     "detail": "overlapping main-door swings=0"
+    },
+    "partitions_clear_of_columns": {
+     "pass": true,
+     "detail": "partitions=14"
+    },
+    "door_openings_on_walls": {
+     "pass": true,
+     "detail": "doors off any wall line: []"
+    },
+    "door_swings_do_not_cross_partitions": {
+     "pass": true,
+     "detail": "swings crossing a partition=0"
+    },
+    "route_graph_connected": {
+     "pass": true,
+     "detail": "9 routed nodes in 1 component(s), 8 edges"
+    },
+    "route_endpoints_match_nodes": {
+     "pass": true,
+     "detail": "edge ends within 0.6 m of their nodes"
+    },
+    "unit_door_aprons_reachable": {
+     "pass": true,
+     "detail": "doors=7 unreachable=0"
+    },
+    "unresolved_items_have_decision_ids": {
+     "pass": true,
+     "detail": "open items=2"
+    },
+    "provenance_labels": {
+     "pass": true,
+     "detail": "verified-only layers mislabelled=[], proposed-only layers tagged verified=[]"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   },
+   "unresolved": [
+    {
+     "id": "esc 1F→2F arrive",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    },
+    {
+     "id": "esc 2F→3F board",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    }
+   ],
+   "circulation_complete": false,
+   "not_modeled": [
+    {
+     "id": "T1 ramp",
+     "reason": "ramp entry/exit points are not defined in the verified model or the 1F symbol; not counted as connected or failed",
+     "decision": "D-08"
+    }
+   ],
+   "decision_refs": [
+    "D-01",
+    "D-02",
+    "D-03",
+    "D-08"
+   ]
+  },
+  {
+   "floor": "3F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "A1 841x594 mm declared"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "no_internal_identifiers_in_visible_text": {
+     "pass": true,
+     "detail": "leaks=[]"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=746"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "physical_scale_1to200": {
+     "pass": true,
+     "detail": "column discs=34 (source 34), grid span 264.0 mm (expected 264.0)"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1322 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "dxf_no_internal_identifiers": {
+     "pass": true,
+     "detail": "text entities=105"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "source_geometry_unchanged": {
+     "pass": true,
+     "detail": "slice sha256 + columns/slab/cores vs pinned slice"
+    },
+    "deterministic_replan_matches_metadata": {
+     "pass": true,
+     "detail": "rooms=23"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "every room has a label or forced tag"
+    },
+    "drawing_uses_verified_geometry": {
+     "pass": true,
+     "detail": "columns, slab edge and openings equal the pinned slice"
+    },
+    "rooms_within_slab": {
+     "pass": true,
+     "detail": "rooms outside slab: []"
+    },
+    "routes_within_slab": {
+     "pass": true,
+     "detail": "routes=14 outside=[]"
+    },
+    "routes_avoid_cores": {
+     "pass": true,
+     "detail": "crossing cores: []"
+    },
+    "corridor_to_column_clearance": {
+     "pass": true,
+     "detail": "min clear gap column face -> route centre line = 1.53 m (rule >= 0.60 m, 0.55 tolerance) at core A"
+    },
+    "door_swings_clear_of_columns": {
+     "pass": true,
+     "detail": "23 doors checked, hits=[]"
+    },
+    "door_swings_do_not_overlap": {
+     "pass": true,
+     "detail": "overlapping main-door swings=0"
+    },
+    "partitions_clear_of_columns": {
+     "pass": true,
+     "detail": "partitions=7"
+    },
+    "door_openings_on_walls": {
+     "pass": true,
+     "detail": "doors off any wall line: []"
+    },
+    "door_swings_do_not_cross_partitions": {
+     "pass": true,
+     "detail": "swings crossing a partition=0"
+    },
+    "route_graph_connected": {
+     "pass": true,
+     "detail": "10 routed nodes in 1 component(s), 9 edges"
+    },
+    "route_endpoints_match_nodes": {
+     "pass": true,
+     "detail": "edge ends within 0.6 m of their nodes"
+    },
+    "unit_door_aprons_reachable": {
+     "pass": true,
+     "detail": "doors=11 unreachable=0"
+    },
+    "unresolved_items_have_decision_ids": {
+     "pass": true,
+     "detail": "open items=0"
+    },
+    "provenance_labels": {
+     "pass": true,
+     "detail": "verified-only layers mislabelled=[], proposed-only layers tagged verified=[]"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   },
+   "unresolved": [],
+   "circulation_complete": true,
+   "not_modeled": [
+    {
+     "id": "T1 ramp",
+     "reason": "ramp entry/exit points are not defined in the verified model or the 1F symbol; not counted as connected or failed",
+     "decision": "D-08"
+    }
+   ],
+   "decision_refs": [
+    "D-03",
+    "D-08"
+   ]
+  },
+  {
+   "floor": "4F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "A1 841x594 mm declared"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "no_internal_identifiers_in_visible_text": {
+     "pass": true,
+     "detail": "leaks=[]"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=739"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "physical_scale_1to200": {
+     "pass": true,
+     "detail": "column discs=34 (source 34), grid span 264.0 mm (expected 264.0)"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1303 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "dxf_no_internal_identifiers": {
+     "pass": true,
+     "detail": "text entities=104"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "source_geometry_unchanged": {
+     "pass": true,
+     "detail": "slice sha256 + columns/slab/cores vs pinned slice"
+    },
+    "deterministic_replan_matches_metadata": {
+     "pass": true,
+     "detail": "rooms=24"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "every room has a label or forced tag"
+    },
+    "drawing_uses_verified_geometry": {
+     "pass": true,
+     "detail": "columns, slab edge and openings equal the pinned slice"
+    },
+    "rooms_within_slab": {
+     "pass": true,
+     "detail": "rooms outside slab: []"
+    },
+    "routes_within_slab": {
+     "pass": true,
+     "detail": "routes=12 outside=[]"
+    },
+    "routes_avoid_cores": {
+     "pass": true,
+     "detail": "crossing cores: []"
+    },
+    "corridor_to_column_clearance": {
+     "pass": true,
+     "detail": "min clear gap column face -> route centre line = 1.27 m (rule >= 0.60 m, 0.55 tolerance) at esc 3F→4F arrive"
+    },
+    "door_swings_clear_of_columns": {
+     "pass": true,
+     "detail": "22 doors checked, hits=[]"
+    },
+    "door_swings_do_not_overlap": {
+     "pass": true,
+     "detail": "overlapping main-door swings=0"
+    },
+    "partitions_clear_of_columns": {
+     "pass": true,
+     "detail": "partitions=7"
+    },
+    "door_openings_on_walls": {
+     "pass": true,
+     "detail": "doors off any wall line: []"
+    },
+    "door_swings_do_not_cross_partitions": {
+     "pass": true,
+     "detail": "swings crossing a partition=0"
+    },
+    "route_graph_connected": {
+     "pass": true,
+     "detail": "10 routed nodes in 1 component(s), 9 edges"
+    },
+    "route_endpoints_match_nodes": {
+     "pass": true,
+     "detail": "edge ends within 0.6 m of their nodes"
+    },
+    "unit_door_aprons_reachable": {
+     "pass": true,
+     "detail": "doors=11 unreachable=0"
+    },
+    "unresolved_items_have_decision_ids": {
+     "pass": true,
+     "detail": "open items=2"
+    },
+    "provenance_labels": {
+     "pass": true,
+     "detail": "verified-only layers mislabelled=[], proposed-only layers tagged verified=[]"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   },
+   "unresolved": [
+    {
+     "id": "esc 3F→4F arrive",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    },
+    {
+     "id": "esc 4F→5F board",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    }
+   ],
+   "circulation_complete": false,
+   "not_modeled": [
+    {
+     "id": "T1 ramp",
+     "reason": "ramp entry/exit points are not defined in the verified model or the 1F symbol; not counted as connected or failed",
+     "decision": "D-08"
+    }
+   ],
+   "decision_refs": [
+    "D-01",
+    "D-03",
+    "D-08"
+   ]
+  },
+  {
+   "floor": "5F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "A1 841x594 mm declared"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "no_internal_identifiers_in_visible_text": {
+     "pass": true,
+     "detail": "leaks=[]"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=728"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "physical_scale_1to200": {
+     "pass": true,
+     "detail": "column discs=34 (source 34), grid span 264.0 mm (expected 264.0)"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1278 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "dxf_no_internal_identifiers": {
+     "pass": true,
+     "detail": "text entities=97"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "source_geometry_unchanged": {
+     "pass": true,
+     "detail": "slice sha256 + columns/slab/cores vs pinned slice"
+    },
+    "deterministic_replan_matches_metadata": {
+     "pass": true,
+     "detail": "rooms=21"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "every room has a label or forced tag"
+    },
+    "drawing_uses_verified_geometry": {
+     "pass": true,
+     "detail": "columns, slab edge and openings equal the pinned slice"
+    },
+    "rooms_within_slab": {
+     "pass": true,
+     "detail": "rooms outside slab: []"
+    },
+    "routes_within_slab": {
+     "pass": true,
+     "detail": "routes=14 outside=[]"
+    },
+    "routes_avoid_cores": {
+     "pass": true,
+     "detail": "crossing cores: []"
+    },
+    "corridor_to_column_clearance": {
+     "pass": true,
+     "detail": "min clear gap column face -> route centre line = 1.53 m (rule >= 0.60 m, 0.55 tolerance) at core A"
+    },
+    "door_swings_clear_of_columns": {
+     "pass": true,
+     "detail": "21 doors checked, hits=[]"
+    },
+    "door_swings_do_not_overlap": {
+     "pass": true,
+     "detail": "overlapping main-door swings=0"
+    },
+    "partitions_clear_of_columns": {
+     "pass": true,
+     "detail": "partitions=6"
+    },
+    "door_openings_on_walls": {
+     "pass": true,
+     "detail": "doors off any wall line: []"
+    },
+    "door_swings_do_not_cross_partitions": {
+     "pass": true,
+     "detail": "swings crossing a partition=0"
+    },
+    "route_graph_connected": {
+     "pass": true,
+     "detail": "10 routed nodes in 1 component(s), 9 edges"
+    },
+    "route_endpoints_match_nodes": {
+     "pass": true,
+     "detail": "edge ends within 0.6 m of their nodes"
+    },
+    "unit_door_aprons_reachable": {
+     "pass": true,
+     "detail": "doors=10 unreachable=0"
+    },
+    "unresolved_items_have_decision_ids": {
+     "pass": true,
+     "detail": "open items=2"
+    },
+    "provenance_labels": {
+     "pass": true,
+     "detail": "verified-only layers mislabelled=[], proposed-only layers tagged verified=[]"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   },
+   "unresolved": [
+    {
+     "id": "esc 4F→5F arrive",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    },
+    {
+     "id": "esc 5F→6F board",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    }
+   ],
+   "circulation_complete": false,
+   "not_modeled": [
+    {
+     "id": "T1 ramp",
+     "reason": "ramp entry/exit points are not defined in the verified model or the 1F symbol; not counted as connected or failed",
+     "decision": "D-08"
+    }
+   ],
+   "decision_refs": [
+    "D-01",
+    "D-03",
+    "D-08"
+   ]
+  },
+  {
+   "floor": "6F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "A1 841x594 mm declared"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "no_internal_identifiers_in_visible_text": {
+     "pass": true,
+     "detail": "leaks=[]"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=728"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "physical_scale_1to200": {
+     "pass": true,
+     "detail": "column discs=34 (source 34), grid span 264.0 mm (expected 264.0)"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1134 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "dxf_no_internal_identifiers": {
+     "pass": true,
+     "detail": "text entities=92"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "source_geometry_unchanged": {
+     "pass": true,
+     "detail": "slice sha256 + columns/slab/cores vs pinned slice"
+    },
+    "deterministic_replan_matches_metadata": {
+     "pass": true,
+     "detail": "rooms=17"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "every room has a label or forced tag"
+    },
+    "drawing_uses_verified_geometry": {
+     "pass": true,
+     "detail": "columns, slab edge and openings equal the pinned slice"
+    },
+    "rooms_within_slab": {
+     "pass": true,
+     "detail": "rooms outside slab: []"
+    },
+    "routes_within_slab": {
+     "pass": true,
+     "detail": "routes=12 outside=[]"
+    },
+    "routes_avoid_cores": {
+     "pass": true,
+     "detail": "crossing cores: []"
+    },
+    "corridor_to_column_clearance": {
+     "pass": true,
+     "detail": "min clear gap column face -> route centre line = 1.19 m (rule >= 0.60 m, 0.55 tolerance) at tube T4"
+    },
+    "door_swings_clear_of_columns": {
+     "pass": true,
+     "detail": "12 doors checked, hits=[]"
+    },
+    "door_swings_do_not_overlap": {
+     "pass": true,
+     "detail": "overlapping main-door swings=0"
+    },
+    "partitions_clear_of_columns": {
+     "pass": true,
+     "detail": "partitions=4"
+    },
+    "door_openings_on_walls": {
+     "pass": true,
+     "detail": "doors off any wall line: []"
+    },
+    "door_swings_do_not_cross_partitions": {
+     "pass": true,
+     "detail": "swings crossing a partition=0"
+    },
+    "route_graph_connected": {
+     "pass": true,
+     "detail": "10 routed nodes in 1 component(s), 9 edges"
+    },
+    "route_endpoints_match_nodes": {
+     "pass": true,
+     "detail": "edge ends within 0.6 m of their nodes"
+    },
+    "unit_door_aprons_reachable": {
+     "pass": true,
+     "detail": "doors=5 unreachable=0"
+    },
+    "unresolved_items_have_decision_ids": {
+     "pass": true,
+     "detail": "open items=1"
+    },
+    "provenance_labels": {
+     "pass": true,
+     "detail": "verified-only layers mislabelled=[], proposed-only layers tagged verified=[]"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   },
+   "unresolved": [
+    {
+     "id": "esc 5F→6F arrive",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    }
+   ],
+   "circulation_complete": false,
+   "not_modeled": [],
+   "decision_refs": [
+    "D-01",
+    "D-03"
+   ]
+  },
+  {
+   "floor": "7F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "A1 841x594 mm declared"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "no_internal_identifiers_in_visible_text": {
+     "pass": true,
+     "detail": "leaks=[]"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=658"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "physical_scale_1to200": {
+     "pass": true,
+     "detail": "column discs=34 (source 34), grid span 264.0 mm (expected 264.0)"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1061 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "dxf_no_internal_identifiers": {
+     "pass": true,
+     "detail": "text entities=89"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "source_geometry_unchanged": {
+     "pass": true,
+     "detail": "slice sha256 + columns/slab/cores vs pinned slice"
+    },
+    "deterministic_replan_matches_metadata": {
+     "pass": true,
+     "detail": "rooms=13"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "every room has a label or forced tag"
+    },
+    "drawing_uses_verified_geometry": {
+     "pass": true,
+     "detail": "columns, slab edge and openings equal the pinned slice"
+    },
+    "rooms_within_slab": {
+     "pass": true,
+     "detail": "rooms outside slab: []"
+    },
+    "routes_within_slab": {
+     "pass": true,
+     "detail": "routes=9 outside=[]"
+    },
+    "routes_avoid_cores": {
+     "pass": true,
+     "detail": "crossing cores: []"
+    },
+    "corridor_to_column_clearance": {
+     "pass": true,
+     "detail": "min clear gap column face -> route centre line = 1.67 m (rule >= 0.60 m, 0.55 tolerance) at service door room 05"
+    },
+    "door_swings_clear_of_columns": {
+     "pass": true,
+     "detail": "11 doors checked, hits=[]"
+    },
+    "door_swings_do_not_overlap": {
+     "pass": true,
+     "detail": "overlapping main-door swings=0"
+    },
+    "partitions_clear_of_columns": {
+     "pass": true,
+     "detail": "partitions=5"
+    },
+    "door_openings_on_walls": {
+     "pass": true,
+     "detail": "doors off any wall line: []"
+    },
+    "door_swings_do_not_cross_partitions": {
+     "pass": true,
+     "detail": "swings crossing a partition=0"
+    },
+    "route_graph_connected": {
+     "pass": true,
+     "detail": "8 routed nodes in 1 component(s), 7 edges"
+    },
+    "route_endpoints_match_nodes": {
+     "pass": true,
+     "detail": "edge ends within 0.6 m of their nodes"
+    },
+    "unit_door_aprons_reachable": {
+     "pass": true,
+     "detail": "doors=4 unreachable=0"
+    },
+    "unresolved_items_have_decision_ids": {
+     "pass": true,
+     "detail": "open items=2"
+    },
+    "provenance_labels": {
+     "pass": true,
+     "detail": "verified-only layers mislabelled=[], proposed-only layers tagged verified=[]"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   },
+   "unresolved": [
+    {
+     "id": "esc 6F→7F arrive",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    },
+    {
+     "id": "esc 7F→8F board",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    }
+   ],
+   "circulation_complete": false,
+   "not_modeled": [],
+   "decision_refs": [
+    "D-01",
+    "D-02",
+    "D-03"
+   ]
+  },
+  {
+   "floor": "8F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "A1 841x594 mm declared"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "no_internal_identifiers_in_visible_text": {
+     "pass": true,
+     "detail": "leaks=[]"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=698"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "physical_scale_1to200": {
+     "pass": true,
+     "detail": "column discs=34 (source 34), grid span 264.0 mm (expected 264.0)"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1210 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "dxf_no_internal_identifiers": {
+     "pass": true,
+     "detail": "text entities=92"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "source_geometry_unchanged": {
+     "pass": true,
+     "detail": "slice sha256 + columns/slab/cores vs pinned slice"
+    },
+    "deterministic_replan_matches_metadata": {
+     "pass": true,
+     "detail": "rooms=15"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "every room has a label or forced tag"
+    },
+    "drawing_uses_verified_geometry": {
+     "pass": true,
+     "detail": "columns, slab edge and openings equal the pinned slice"
+    },
+    "rooms_within_slab": {
+     "pass": true,
+     "detail": "rooms outside slab: []"
+    },
+    "routes_within_slab": {
+     "pass": true,
+     "detail": "routes=12 outside=[]"
+    },
+    "routes_avoid_cores": {
+     "pass": true,
+     "detail": "crossing cores: []"
+    },
+    "corridor_to_column_clearance": {
+     "pass": true,
+     "detail": "min clear gap column face -> route centre line = 1.10 m (rule >= 0.60 m, 0.55 tolerance) at tube T4"
+    },
+    "door_swings_clear_of_columns": {
+     "pass": true,
+     "detail": "13 doors checked, hits=[]"
+    },
+    "door_swings_do_not_overlap": {
+     "pass": true,
+     "detail": "overlapping main-door swings=0"
+    },
+    "partitions_clear_of_columns": {
+     "pass": true,
+     "detail": "partitions=3"
+    },
+    "door_openings_on_walls": {
+     "pass": true,
+     "detail": "doors off any wall line: []"
+    },
+    "door_swings_do_not_cross_partitions": {
+     "pass": true,
+     "detail": "swings crossing a partition=0"
+    },
+    "route_graph_connected": {
+     "pass": true,
+     "detail": "10 routed nodes in 1 component(s), 9 edges"
+    },
+    "route_endpoints_match_nodes": {
+     "pass": true,
+     "detail": "edge ends within 0.6 m of their nodes"
+    },
+    "unit_door_aprons_reachable": {
+     "pass": true,
+     "detail": "doors=7 unreachable=0"
+    },
+    "unresolved_items_have_decision_ids": {
+     "pass": true,
+     "detail": "open items=2"
+    },
+    "provenance_labels": {
+     "pass": true,
+     "detail": "verified-only layers mislabelled=[], proposed-only layers tagged verified=[]"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   },
+   "unresolved": [
+    {
+     "id": "esc 7F→8F arrive",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    },
+    {
+     "id": "esc 8F→9F board",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 4.2 m"
+    }
+   ],
+   "circulation_complete": false,
+   "not_modeled": [],
+   "decision_refs": [
+    "D-01",
+    "D-03"
+   ]
+  },
+  {
+   "floor": "9F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "A1 841x594 mm declared"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "no_internal_identifiers_in_visible_text": {
+     "pass": true,
+     "detail": "leaks=[]"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=700"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "physical_scale_1to200": {
+     "pass": true,
+     "detail": "column discs=34 (source 34), grid span 264.0 mm (expected 264.0)"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1219 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "dxf_no_internal_identifiers": {
+     "pass": true,
+     "detail": "text entities=88"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "source_geometry_unchanged": {
+     "pass": true,
+     "detail": "slice sha256 + columns/slab/cores vs pinned slice"
+    },
+    "deterministic_replan_matches_metadata": {
+     "pass": true,
+     "detail": "rooms=15"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "every room has a label or forced tag"
+    },
+    "drawing_uses_verified_geometry": {
+     "pass": true,
+     "detail": "columns, slab edge and openings equal the pinned slice"
+    },
+    "rooms_within_slab": {
+     "pass": true,
+     "detail": "rooms outside slab: []"
+    },
+    "routes_within_slab": {
+     "pass": true,
+     "detail": "routes=12 outside=[]"
+    },
+    "routes_avoid_cores": {
+     "pass": true,
+     "detail": "crossing cores: []"
+    },
+    "corridor_to_column_clearance": {
+     "pass": true,
+     "detail": "min clear gap column face -> route centre line = 1.09 m (rule >= 0.60 m, 0.55 tolerance) at service door room 10"
+    },
+    "door_swings_clear_of_columns": {
+     "pass": true,
+     "detail": "13 doors checked, hits=[]"
+    },
+    "door_swings_do_not_overlap": {
+     "pass": true,
+     "detail": "overlapping main-door swings=0"
+    },
+    "partitions_clear_of_columns": {
+     "pass": true,
+     "detail": "partitions=4"
+    },
+    "door_openings_on_walls": {
+     "pass": true,
+     "detail": "doors off any wall line: []"
+    },
+    "door_swings_do_not_cross_partitions": {
+     "pass": true,
+     "detail": "swings crossing a partition=0"
+    },
+    "route_graph_connected": {
+     "pass": true,
+     "detail": "10 routed nodes in 1 component(s), 9 edges"
+    },
+    "route_endpoints_match_nodes": {
+     "pass": true,
+     "detail": "edge ends within 0.6 m of their nodes"
+    },
+    "unit_door_aprons_reachable": {
+     "pass": true,
+     "detail": "doors=6 unreachable=0"
+    },
+    "unresolved_items_have_decision_ids": {
+     "pass": true,
+     "detail": "open items=2"
+    },
+    "provenance_labels": {
+     "pass": true,
+     "detail": "verified-only layers mislabelled=[], proposed-only layers tagged verified=[]"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   },
+   "unresolved": [
+    {
+     "id": "esc 8F→9F arrive",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    },
+    {
+     "id": "esc 9F→10F board",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    }
+   ],
+   "circulation_complete": false,
+   "not_modeled": [],
+   "decision_refs": [
+    "D-01",
+    "D-03"
+   ]
+  },
+  {
+   "floor": "10F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "A1 841x594 mm declared"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "no_internal_identifiers_in_visible_text": {
+     "pass": true,
+     "detail": "leaks=[]"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=764"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "physical_scale_1to200": {
+     "pass": true,
+     "detail": "column discs=34 (source 34), grid span 264.0 mm (expected 264.0)"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1346 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "dxf_no_internal_identifiers": {
+     "pass": true,
+     "detail": "text entities=95"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "source_geometry_unchanged": {
+     "pass": true,
+     "detail": "slice sha256 + columns/slab/cores vs pinned slice"
+    },
+    "deterministic_replan_matches_metadata": {
+     "pass": true,
+     "detail": "rooms=25"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "every room has a label or forced tag"
+    },
+    "drawing_uses_verified_geometry": {
+     "pass": true,
+     "detail": "columns, slab edge and openings equal the pinned slice"
+    },
+    "rooms_within_slab": {
+     "pass": true,
+     "detail": "rooms outside slab: []"
+    },
+    "routes_within_slab": {
+     "pass": true,
+     "detail": "routes=14 outside=[]"
+    },
+    "routes_avoid_cores": {
+     "pass": true,
+     "detail": "crossing cores: []"
+    },
+    "corridor_to_column_clearance": {
+     "pass": true,
+     "detail": "min clear gap column face -> route centre line = 1.10 m (rule >= 0.60 m, 0.55 tolerance) at tube T4"
+    },
+    "door_swings_clear_of_columns": {
+     "pass": true,
+     "detail": "26 doors checked, hits=[]"
+    },
+    "door_swings_do_not_overlap": {
+     "pass": true,
+     "detail": "overlapping main-door swings=0"
+    },
+    "partitions_clear_of_columns": {
+     "pass": true,
+     "detail": "partitions=14"
+    },
+    "door_openings_on_walls": {
+     "pass": true,
+     "detail": "doors off any wall line: []"
+    },
+    "door_swings_do_not_cross_partitions": {
+     "pass": true,
+     "detail": "swings crossing a partition=0"
+    },
+    "route_graph_connected": {
+     "pass": true,
+     "detail": "12 routed nodes in 1 component(s), 11 edges"
+    },
+    "route_endpoints_match_nodes": {
+     "pass": true,
+     "detail": "edge ends within 0.6 m of their nodes"
+    },
+    "unit_door_aprons_reachable": {
+     "pass": true,
+     "detail": "doors=6 unreachable=0"
+    },
+    "unresolved_items_have_decision_ids": {
+     "pass": true,
+     "detail": "open items=2"
+    },
+    "provenance_labels": {
+     "pass": true,
+     "detail": "verified-only layers mislabelled=[], proposed-only layers tagged verified=[]"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   },
+   "unresolved": [
+    {
+     "id": "esc 9F→10F arrive",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    },
+    {
+     "id": "esc 10F→11F board",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    }
+   ],
+   "circulation_complete": false,
+   "not_modeled": [],
+   "decision_refs": [
+    "D-01",
+    "D-03"
+   ]
+  },
+  {
+   "floor": "11F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "A1 841x594 mm declared"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "no_internal_identifiers_in_visible_text": {
+     "pass": true,
+     "detail": "leaks=[]"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=663"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "physical_scale_1to200": {
+     "pass": true,
+     "detail": "column discs=30 (source 30), grid span 264.0 mm (expected 264.0)"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1083 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "30 vs 30"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "dxf_no_internal_identifiers": {
+     "pass": true,
+     "detail": "text entities=83"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "source_geometry_unchanged": {
+     "pass": true,
+     "detail": "slice sha256 + columns/slab/cores vs pinned slice"
+    },
+    "deterministic_replan_matches_metadata": {
+     "pass": true,
+     "detail": "rooms=12"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "every room has a label or forced tag"
+    },
+    "drawing_uses_verified_geometry": {
+     "pass": true,
+     "detail": "columns, slab edge and openings equal the pinned slice"
+    },
+    "rooms_within_slab": {
+     "pass": true,
+     "detail": "rooms outside slab: []"
+    },
+    "routes_within_slab": {
+     "pass": true,
+     "detail": "routes=11 outside=[]"
+    },
+    "routes_avoid_cores": {
+     "pass": true,
+     "detail": "crossing cores: []"
+    },
+    "corridor_to_column_clearance": {
+     "pass": true,
+     "detail": "min clear gap column face -> route centre line = 1.40 m (rule >= 0.60 m, 0.55 tolerance) at tube T4"
+    },
+    "door_swings_clear_of_columns": {
+     "pass": true,
+     "detail": "9 doors checked, hits=[]"
+    },
+    "door_swings_do_not_overlap": {
+     "pass": true,
+     "detail": "overlapping main-door swings=0"
+    },
+    "partitions_clear_of_columns": {
+     "pass": true,
+     "detail": "partitions=2"
+    },
+    "door_openings_on_walls": {
+     "pass": true,
+     "detail": "doors off any wall line: []"
+    },
+    "door_swings_do_not_cross_partitions": {
+     "pass": true,
+     "detail": "swings crossing a partition=0"
+    },
+    "route_graph_connected": {
+     "pass": true,
+     "detail": "10 routed nodes in 1 component(s), 9 edges"
+    },
+    "route_endpoints_match_nodes": {
+     "pass": true,
+     "detail": "edge ends within 0.6 m of their nodes"
+    },
+    "unit_door_aprons_reachable": {
+     "pass": true,
+     "detail": "doors=5 unreachable=0"
+    },
+    "unresolved_items_have_decision_ids": {
+     "pass": true,
+     "detail": "open items=2"
+    },
+    "provenance_labels": {
+     "pass": true,
+     "detail": "verified-only layers mislabelled=[], proposed-only layers tagged verified=[]"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   },
+   "unresolved": [
+    {
+     "id": "esc 10F→11F arrive",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    },
+    {
+     "id": "esc 11F→12F board",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.3 m"
+    }
+   ],
+   "circulation_complete": false,
+   "not_modeled": [],
+   "decision_refs": [
+    "D-01",
+    "D-03"
+   ]
+  },
+  {
+   "floor": "12F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "A1 841x594 mm declared"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "no_internal_identifiers_in_visible_text": {
+     "pass": true,
+     "detail": "leaks=[]"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=664"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "physical_scale_1to200": {
+     "pass": true,
+     "detail": "column discs=30 (source 30), grid span 264.0 mm (expected 264.0)"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1067 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "30 vs 30"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "dxf_no_internal_identifiers": {
+     "pass": true,
+     "detail": "text entities=80"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "source_geometry_unchanged": {
+     "pass": true,
+     "detail": "slice sha256 + columns/slab/cores vs pinned slice"
+    },
+    "deterministic_replan_matches_metadata": {
+     "pass": true,
+     "detail": "rooms=10"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "every room has a label or forced tag"
+    },
+    "drawing_uses_verified_geometry": {
+     "pass": true,
+     "detail": "columns, slab edge and openings equal the pinned slice"
+    },
+    "rooms_within_slab": {
+     "pass": true,
+     "detail": "rooms outside slab: []"
+    },
+    "routes_within_slab": {
+     "pass": true,
+     "detail": "routes=11 outside=[]"
+    },
+    "routes_avoid_cores": {
+     "pass": true,
+     "detail": "crossing cores: []"
+    },
+    "corridor_to_column_clearance": {
+     "pass": true,
+     "detail": "min clear gap column face -> route centre line = 1.28 m (rule >= 0.60 m, 0.55 tolerance) at esc 12F→13F board"
+    },
+    "door_swings_clear_of_columns": {
+     "pass": true,
+     "detail": "6 doors checked, hits=[]"
+    },
+    "door_swings_do_not_overlap": {
+     "pass": true,
+     "detail": "overlapping main-door swings=0"
+    },
+    "partitions_clear_of_columns": {
+     "pass": true,
+     "detail": "partitions=2"
+    },
+    "door_openings_on_walls": {
+     "pass": true,
+     "detail": "doors off any wall line: []"
+    },
+    "door_swings_do_not_cross_partitions": {
+     "pass": true,
+     "detail": "swings crossing a partition=0"
+    },
+    "route_graph_connected": {
+     "pass": true,
+     "detail": "12 routed nodes in 1 component(s), 11 edges"
+    },
+    "route_endpoints_match_nodes": {
+     "pass": true,
+     "detail": "edge ends within 0.6 m of their nodes"
+    },
+    "unit_door_aprons_reachable": {
+     "pass": true,
+     "detail": "doors=3 unreachable=0"
+    },
+    "unresolved_items_have_decision_ids": {
+     "pass": true,
+     "detail": "open items=2"
+    },
+    "provenance_labels": {
+     "pass": true,
+     "detail": "verified-only layers mislabelled=[], proposed-only layers tagged verified=[]"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   },
+   "unresolved": [
+    {
+     "id": "esc 11F→12F arrive",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 3.0 m"
+    },
+    {
+     "id": "esc 12F→13F board",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    }
+   ],
+   "circulation_complete": false,
+   "not_modeled": [],
+   "decision_refs": [
+    "D-01",
+    "D-03"
+   ]
+  },
+  {
+   "floor": "13F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "A1 841x594 mm declared"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "no_internal_identifiers_in_visible_text": {
+     "pass": true,
+     "detail": "leaks=[]"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=670"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "physical_scale_1to200": {
+     "pass": true,
+     "detail": "column discs=34 (source 34), grid span 264.0 mm (expected 264.0)"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1096 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "dxf_no_internal_identifiers": {
+     "pass": true,
+     "detail": "text entities=83"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "source_geometry_unchanged": {
+     "pass": true,
+     "detail": "slice sha256 + columns/slab/cores vs pinned slice"
+    },
+    "deterministic_replan_matches_metadata": {
+     "pass": true,
+     "detail": "rooms=12"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "every room has a label or forced tag"
+    },
+    "drawing_uses_verified_geometry": {
+     "pass": true,
+     "detail": "columns, slab edge and openings equal the pinned slice"
+    },
+    "rooms_within_slab": {
+     "pass": true,
+     "detail": "rooms outside slab: []"
+    },
+    "routes_within_slab": {
+     "pass": true,
+     "detail": "routes=11 outside=[]"
+    },
+    "routes_avoid_cores": {
+     "pass": true,
+     "detail": "crossing cores: []"
+    },
+    "corridor_to_column_clearance": {
+     "pass": true,
+     "detail": "min clear gap column face -> route centre line = 1.19 m (rule >= 0.60 m, 0.55 tolerance) at tube T4"
+    },
+    "door_swings_clear_of_columns": {
+     "pass": true,
+     "detail": "9 doors checked, hits=[]"
+    },
+    "door_swings_do_not_overlap": {
+     "pass": true,
+     "detail": "overlapping main-door swings=0"
+    },
+    "partitions_clear_of_columns": {
+     "pass": true,
+     "detail": "partitions=2"
+    },
+    "door_openings_on_walls": {
+     "pass": true,
+     "detail": "doors off any wall line: []"
+    },
+    "door_swings_do_not_cross_partitions": {
+     "pass": true,
+     "detail": "swings crossing a partition=0"
+    },
+    "route_graph_connected": {
+     "pass": true,
+     "detail": "10 routed nodes in 1 component(s), 9 edges"
+    },
+    "route_endpoints_match_nodes": {
+     "pass": true,
+     "detail": "edge ends within 0.6 m of their nodes"
+    },
+    "unit_door_aprons_reachable": {
+     "pass": true,
+     "detail": "doors=5 unreachable=0"
+    },
+    "unresolved_items_have_decision_ids": {
+     "pass": true,
+     "detail": "open items=2"
+    },
+    "provenance_labels": {
+     "pass": true,
+     "detail": "verified-only layers mislabelled=[], proposed-only layers tagged verified=[]"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   },
+   "unresolved": [
+    {
+     "id": "esc 12F→13F arrive",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    },
+    {
+     "id": "esc 13F→14F board",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    }
+   ],
+   "circulation_complete": false,
+   "not_modeled": [],
+   "decision_refs": [
+    "D-01",
+    "D-03"
+   ]
+  },
+  {
+   "floor": "14F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "A1 841x594 mm declared"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "no_internal_identifiers_in_visible_text": {
+     "pass": true,
+     "detail": "leaks=[]"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=649"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "physical_scale_1to200": {
+     "pass": true,
+     "detail": "column discs=34 (source 34), grid span 264.0 mm (expected 264.0)"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1072 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "34 vs 34"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "dxf_no_internal_identifiers": {
+     "pass": true,
+     "detail": "text entities=76"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "source_geometry_unchanged": {
+     "pass": true,
+     "detail": "slice sha256 + columns/slab/cores vs pinned slice"
+    },
+    "deterministic_replan_matches_metadata": {
+     "pass": true,
+     "detail": "rooms=9"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "every room has a label or forced tag"
+    },
+    "drawing_uses_verified_geometry": {
+     "pass": true,
+     "detail": "columns, slab edge and openings equal the pinned slice"
+    },
+    "rooms_within_slab": {
+     "pass": true,
+     "detail": "rooms outside slab: []"
+    },
+    "routes_within_slab": {
+     "pass": true,
+     "detail": "routes=10 outside=[]"
+    },
+    "routes_avoid_cores": {
+     "pass": true,
+     "detail": "crossing cores: []"
+    },
+    "corridor_to_column_clearance": {
+     "pass": true,
+     "detail": "min clear gap column face -> route centre line = 1.26 m (rule >= 0.60 m, 0.55 tolerance) at wc C"
+    },
+    "door_swings_clear_of_columns": {
+     "pass": true,
+     "detail": "5 doors checked, hits=[]"
+    },
+    "door_swings_do_not_overlap": {
+     "pass": true,
+     "detail": "overlapping main-door swings=0"
+    },
+    "partitions_clear_of_columns": {
+     "pass": true,
+     "detail": "partitions=1"
+    },
+    "door_openings_on_walls": {
+     "pass": true,
+     "detail": "doors off any wall line: []"
+    },
+    "door_swings_do_not_cross_partitions": {
+     "pass": true,
+     "detail": "swings crossing a partition=0"
+    },
+    "route_graph_connected": {
+     "pass": true,
+     "detail": "10 routed nodes in 1 component(s), 9 edges"
+    },
+    "route_endpoints_match_nodes": {
+     "pass": true,
+     "detail": "edge ends within 0.6 m of their nodes"
+    },
+    "unit_door_aprons_reachable": {
+     "pass": true,
+     "detail": "doors=3 unreachable=0"
+    },
+    "unresolved_items_have_decision_ids": {
+     "pass": true,
+     "detail": "open items=2"
+    },
+    "provenance_labels": {
+     "pass": true,
+     "detail": "verified-only layers mislabelled=[], proposed-only layers tagged verified=[]"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   },
+   "unresolved": [
+    {
+     "id": "esc 13F→14F arrive",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    },
+    {
+     "id": "esc 14F→15F board",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    }
+   ],
+   "circulation_complete": false,
+   "not_modeled": [],
+   "decision_refs": [
+    "D-01",
+    "D-03"
+   ]
+  },
+  {
+   "floor": "15F",
+   "pass": true,
+   "checks": {
+    "files_present": {
+     "pass": true,
+     "detail": "6 expected files"
+    },
+    "svg_parses": {
+     "pass": true,
+     "detail": "A1 841x594 mm declared"
+    },
+    "svg_layers_present": {
+     "pass": true,
+     "detail": "layer groups"
+    },
+    "svg_has_provenance": {
+     "pass": true,
+     "detail": "data-prov groups"
+    },
+    "no_internal_identifiers_in_visible_text": {
+     "pass": true,
+     "detail": "leaks=[]"
+    },
+    "a1_pdf_size": {
+     "pass": true,
+     "detail": "841.0 x 594.0 mm"
+    },
+    "a1_pdf_vector": {
+     "pass": true,
+     "detail": "images=0 drawings=706"
+    },
+    "a1_pdf_text": {
+     "pass": true,
+     "detail": "scale + floor text extractable"
+    },
+    "physical_scale_1to200": {
+     "pass": true,
+     "detail": "column discs=15 (source 15), grid span 264.0 mm (expected 264.0)"
+    },
+    "a3_pdf_size": {
+     "pass": true,
+     "detail": "pages=2"
+    },
+    "a3_pdf_vector": {
+     "pass": true,
+     "detail": "no raster images"
+    },
+    "png_decodes": {
+     "pass": true,
+     "detail": "6622x4677"
+    },
+    "dxf_opens_audits": {
+     "pass": true,
+     "detail": "entities=1074 audit_errors=0"
+    },
+    "dxf_columns_match_source": {
+     "pass": true,
+     "detail": "15 vs 15"
+    },
+    "dxf_units_mm": {
+     "pass": true,
+     "detail": "INSUNITS=4"
+    },
+    "dxf_no_internal_identifiers": {
+     "pass": true,
+     "detail": "text entities=75"
+    },
+    "meta_state": {
+     "pass": true,
+     "detail": "review state / no approval claimed"
+    },
+    "source_geometry_unchanged": {
+     "pass": true,
+     "detail": "slice sha256 + columns/slab/cores vs pinned slice"
+    },
+    "deterministic_replan_matches_metadata": {
+     "pass": true,
+     "detail": "rooms=9"
+    },
+    "no_geometry_outside_sheet_window": {
+     "pass": true,
+     "detail": "outside: []"
+    },
+    "labels_placed": {
+     "pass": true,
+     "detail": "every room has a label or forced tag"
+    },
+    "drawing_uses_verified_geometry": {
+     "pass": true,
+     "detail": "columns, slab edge and openings equal the pinned slice"
+    },
+    "rooms_within_slab": {
+     "pass": true,
+     "detail": "rooms outside slab: []"
+    },
+    "routes_within_slab": {
+     "pass": true,
+     "detail": "routes=9 outside=[]"
+    },
+    "routes_avoid_cores": {
+     "pass": true,
+     "detail": "crossing cores: []"
+    },
+    "corridor_to_column_clearance": {
+     "pass": true,
+     "detail": "min clear gap column face -> route centre line = 1.19 m (rule >= 0.60 m, 0.55 tolerance) at tube T4"
+    },
+    "door_swings_clear_of_columns": {
+     "pass": true,
+     "detail": "3 doors checked, hits=[]"
+    },
+    "door_swings_do_not_overlap": {
+     "pass": true,
+     "detail": "overlapping main-door swings=0"
+    },
+    "partitions_clear_of_columns": {
+     "pass": true,
+     "detail": "partitions=2"
+    },
+    "door_openings_on_walls": {
+     "pass": true,
+     "detail": "doors off any wall line: []"
+    },
+    "door_swings_do_not_cross_partitions": {
+     "pass": true,
+     "detail": "swings crossing a partition=0"
+    },
+    "route_graph_connected": {
+     "pass": true,
+     "detail": "10 routed nodes in 1 component(s), 9 edges"
+    },
+    "route_endpoints_match_nodes": {
+     "pass": true,
+     "detail": "edge ends within 0.6 m of their nodes"
+    },
+    "unit_door_aprons_reachable": {
+     "pass": true,
+     "detail": "doors=1 unreachable=0"
+    },
+    "unresolved_items_have_decision_ids": {
+     "pass": true,
+     "detail": "open items=1"
+    },
+    "provenance_labels": {
+     "pass": true,
+     "detail": "verified-only layers mislabelled=[], proposed-only layers tagged verified=[]"
+    },
+    "manifest_sha256": {
+     "pass": true,
+     "detail": "files=6 mismatches=[]"
+    }
+   },
+   "unresolved": [
+    {
+     "id": "esc 14F→15F arrive",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "escalator end lies in an opening; route stops at the verified slab edge, gap 2.5 m"
+    }
+   ],
+   "circulation_complete": false,
+   "not_modeled": [],
+   "decision_refs": [
+    "D-01",
+    "D-03"
+   ]
+  }
+ ],
+ "summary": {
+  "floors_tested": 16,
+  "floors_technical_pass": 16,
+  "source_geometry_unchanged": true,
+  "floors_circulation_complete": [
+   "B2",
+   "3F"
+  ],
+  "floors_circulation_pending_decision": [
+   "10F",
+   "11F",
+   "12F",
+   "13F",
+   "14F",
+   "15F",
+   "2F",
+   "4F",
+   "5F",
+   "6F",
+   "7F",
+   "8F",
+   "9F",
+   "B1"
+  ],
+  "open_circulation_items": 25
+ }
+}

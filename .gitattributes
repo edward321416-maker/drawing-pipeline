@@ -6,3 +6,6 @@ docs/t14s_floor_plans/review_packet/** -text
 outputs/T14T/** -text
 docs/t14t_corrections/review_packet/** -text
 docs/t14t_corrections/before_after/** -text
+
+# C-T14T audit reconciliation pack: exact bytes (SHA256 manifest, PDF, previews)
+docs/t14t_audit_r1/** -text
