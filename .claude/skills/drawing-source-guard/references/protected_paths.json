@@ -1,0 +1,21 @@
+{
+  "schema": "C-T14-SKILLS-PROTECTED-1.0",
+  "protected_globs": [
+    "data/t14s/source_slices/**",
+    "outputs/T13/**",
+    "outputs/T13A/**",
+    "outputs/T14S/**",
+    "outputs/T14T/**",
+    "docs/baselines/**",
+    "docs/decisions/**",
+    "docs/t14r_visual_review/**",
+    "docs/t14s_floor_plans/**",
+    "docs/t14t_corrections/**"
+  ],
+  "protected_manifests": [
+    "data/t14s/source_slices/manifest.json",
+    "outputs/T14S/SHA256_MANIFEST.json",
+    "outputs/T14T/SHA256_MANIFEST.json"
+  ],
+  "note": "Verified model slices, the preserved 1F reference (docs/t14s_floor_plans/reference_1F), approved decision records and the outputs of earlier PRs. A new task writes to its own outputs/<TASK>/ and docs/<task>/ folders; add them here only after they become a baseline."
+}

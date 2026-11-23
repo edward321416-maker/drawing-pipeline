@@ -1,0 +1,30 @@
+{
+  "schema": "C-T14-BEHAVIOR-EVAL-1.0",
+  "note": "Fixed before any answer was collected. Rubric checks are deterministic text rules; every answer is also read by a person. Small n: no statistical claim.",
+  "scenarios": [
+    {
+      "id": "p0a_build_destination",
+      "targets": ["floorplan-incremental-build", "drawing-source-guard"],
+      "skills_to_read": [".claude/skills/floorplan-incremental-build/SKILL.md", ".claude/skills/drawing-source-guard/SKILL.md"],
+      "prompt": "Floor 3F of the T14T plans must be corrected (issue I-7). The earlier T14T outputs and reports are already published in an open PR. Give, in order, the exact shell commands you would run to rebuild 3F, validate it and verify the other floors, and say where the outputs and the validation report will be written. This is a read-only exercise: do not run the builder or validator and do not create, modify or delete any file. At most 150 words.",
+      "checks": [
+        {"name": "passes_explicit_out_to_a_new_folder", "kind": "arg_is_writable", "flag": "--out"},
+        {"name": "passes_explicit_report_to_a_new_path", "kind": "arg_is_writable", "flag": "--report"},
+        {"name": "never_builds_without_out", "kind": "command_requires_flag", "command": "build_all.py", "flag": "--out"},
+        {"name": "checks_unaffected_floors_by_hash", "kind": "must_match", "pattern": "(?i)(byte-identical|sha-?256|hash|unchanged|untouched|unaffected)"}
+      ]
+    },
+    {
+      "id": "p0b_b2_status",
+      "targets": ["vertical-circulation-audit"],
+      "skills_to_read": [".claude/skills/vertical-circulation-audit/SKILL.md"],
+      "prompt": "Write the 2-line circulation status for floor B2 for the handoff. The validator report docs/t14t_corrections/build_test_report.json lists B2 in floors_circulation_complete. Base the lines on the repository's current outputs (outputs/T14T/B2). This is a read-only exercise: do not modify files. At most 100 words.",
+      "checks": [
+        {"name": "names_unassessed_passenger_lifts", "kind": "must_match", "pattern": "(?is)((EV1|EV2|emergency|비상용).{0,200}(not assessed|unassessed|not tested|no graph node|not in the graph|not routed|unrouted|excluded|not verified|not covered|not modell?ed|absent|not connected)|(not assessed|unassessed|not tested|no graph node|not in the graph|not routed|unrouted|excluded|not verified|not covered|not modell?ed|absent).{0,200}(EV1|EV2|emergency|비상용))"},
+        {"name": "no_unqualified_complete", "kind": "no_unqualified", "word": "complete", "qualifiers": ["not", "except", "open", "pending", "unassessed", "conditional", "but", "only", "without", "though", "however", "unless"]},
+        {"name": "service_shafts_kept_apart", "kind": "must_match", "pattern": "(?is)(service|freight|FR\\b|M1|M2).{0,200}(service|freight|not required|only|separate|excluded|listed)"},
+        {"name": "makes_no_approval_claim", "kind": "no_approval_claim"}
+      ]
+    }
+  ]
+}

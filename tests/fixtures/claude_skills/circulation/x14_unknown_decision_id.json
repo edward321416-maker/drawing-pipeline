@@ -1,0 +1,34 @@
+{
+ "floor": "X14",
+ "design_proposed": {
+  "circulation_graph": {
+   "nodes": [
+    {
+     "id": "core A",
+     "type": "core",
+     "status": "ON_SLAB"
+    }
+   ],
+   "edges": [],
+   "unresolved": [],
+   "unit_doors": [],
+   "not_modeled": []
+  },
+  "decision_refs": {
+   "D-99": [
+    {
+     "floor": "X14"
+    }
+   ]
+  },
+  "vertical_elements": []
+ },
+ "geometry_verified": {
+  "cores": [
+   "A"
+  ],
+  "escalator_axes": [],
+  "tubes": [],
+  "shafts": []
+ }
+}

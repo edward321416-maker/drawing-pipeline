@@ -1,0 +1,44 @@
+{
+ "floor": "X1",
+ "design_proposed": {
+  "circulation_graph": {
+   "nodes": [
+    {
+     "id": "core A",
+     "type": "core",
+     "status": "ON_SLAB"
+    },
+    {
+     "id": "core B",
+     "type": "core",
+     "status": "ON_SLAB"
+    }
+   ],
+   "edges": [
+    {
+     "a": "core A",
+     "b": "core B"
+    }
+   ],
+   "unresolved": [],
+   "unit_doors": [
+    {
+     "room": "01",
+     "reachable": true
+    }
+   ],
+   "not_modeled": []
+  },
+  "decision_refs": {},
+  "vertical_elements": []
+ },
+ "geometry_verified": {
+  "cores": [
+   "A",
+   "B"
+  ],
+  "escalator_axes": [],
+  "tubes": [],
+  "shafts": []
+ }
+}

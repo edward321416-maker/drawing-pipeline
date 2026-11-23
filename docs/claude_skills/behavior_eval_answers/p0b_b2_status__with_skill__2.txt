@@ -1,0 +1,8 @@
+**B2 circulation: CONNECTED_WITH_OPEN_ITEMS, not COMPLETE.** The validator's `floors_circulation_complete` listing is a technical flag, not proof. Three graph nodes are connected on verified slab (core C, core D, wc C), and 18 of 18 unit doors are reachable.
+
+**Open or excluded:**
+- EV1 and EV2 (emergency lifts) have no graph node. Their role in visitor circulation is not stated, so they are not assessed and need a user decision.
+- FR, M1 and M2 are service only and not required.
+- `decision_refs` is empty and B2 has no ramp or escalator.
+- The plan is NOT_APPROVED.
+- I applied the skill's rules to the metadata by hand and did not run its script.

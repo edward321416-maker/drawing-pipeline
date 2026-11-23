@@ -1,0 +1,3 @@
+B2 circulation is CONNECTED_WITH_OPEN_ITEMS, not complete. Connected on the verified slab: core C, core D and the C restroom node. All 18 unit doors are reachable, and there are no excluded or provisional nodes.
+
+Open items: the emergency lifts EV1 and EV2 are not assessed, because their role in visitor circulation is undecided. The freight lift FR and shafts M1 and M2 are service-only. The validator's circulation_complete=true overstates this. A technical pass is not circulation proof, and this is not an approval.

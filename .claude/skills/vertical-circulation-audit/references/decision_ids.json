@@ -1,0 +1,14 @@
+{
+  "schema": "C-T14-DECISION-IDS-1.0",
+  "source": "docs/t14t_corrections/decision_packet.md (headings D-01 to D-09). An id that is not listed here is reported as UNCLASSIFIED_DECISION and keeps a floor from being COMPLETE.",
+  "ids": {
+    "D-01": {"category": "OPEN_CONNECTION", "meaning": "escalator landing is not on verified slab (capsule opening or core)"},
+    "D-02": {"category": "OPEN_CONNECTION", "meaning": "core footprint has no floor slab on this level"},
+    "D-03": {"category": "PROPOSED_DESIGN_AWAITING_APPROVAL", "meaning": "lift lobby entry rotated away from the capsule opening; departs from the approved 1F symbol orientation"},
+    "D-05": {"category": "PROPOSED_DESIGN_AWAITING_APPROVAL", "meaning": "freight lift (FR) delivery landing"},
+    "D-06": {"category": "PROPOSED_DESIGN_AWAITING_APPROVAL", "meaning": "back-of-house route shares the public hall"},
+    "D-07": {"category": "PROPOSED_DESIGN_AWAITING_APPROVAL", "meaning": "edge protection at free openings"},
+    "D-08": {"category": "NOT_ASSESSED", "meaning": "T1 spiral ramp access points are not defined in the model"},
+    "D-09": {"category": "PROPOSED_DESIGN_AWAITING_APPROVAL", "meaning": "culture and garden operating concepts"}
+  }
+}

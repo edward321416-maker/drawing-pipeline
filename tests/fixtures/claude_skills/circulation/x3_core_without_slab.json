@@ -1,0 +1,36 @@
+{
+ "floor": "X3",
+ "design_proposed": {
+  "circulation_graph": {
+   "nodes": [
+    {
+     "id": "core A",
+     "type": "core",
+     "status": "ON_SLAB"
+    }
+   ],
+   "edges": [],
+   "unresolved": [],
+   "unit_doors": [],
+   "not_modeled": []
+  },
+  "decision_refs": {
+   "D-02": [
+    {
+     "floor": "X3",
+     "core": "D"
+    }
+   ]
+  },
+  "vertical_elements": []
+ },
+ "geometry_verified": {
+  "cores": [
+   "A",
+   "D"
+  ],
+  "escalator_axes": [],
+  "tubes": [],
+  "shafts": []
+ }
+}

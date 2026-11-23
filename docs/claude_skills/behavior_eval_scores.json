@@ -1,0 +1,67 @@
+{
+ "_note": "n is small and the rubric is text rules: no statistical claim. Read the answers themselves.",
+ "p0a_build_destination": {
+  "baseline": {
+   "n": 3,
+   "all_passed": 0,
+   "checks": {
+    "passes_explicit_out_to_a_new_folder": 2,
+    "passes_explicit_report_to_a_new_path": 0,
+    "never_builds_without_out": 3,
+    "checks_unaffected_floors_by_hash": 3
+   },
+   "files": [
+    "p0a_build_destination__baseline__1.txt",
+    "p0a_build_destination__baseline__2.txt",
+    "p0a_build_destination__baseline__3.txt"
+   ]
+  },
+  "with_skill": {
+   "n": 3,
+   "all_passed": 2,
+   "checks": {
+    "passes_explicit_out_to_a_new_folder": 3,
+    "passes_explicit_report_to_a_new_path": 3,
+    "never_builds_without_out": 3,
+    "checks_unaffected_floors_by_hash": 2
+   },
+   "files": [
+    "p0a_build_destination__with_skill__1.txt",
+    "p0a_build_destination__with_skill__2.txt",
+    "p0a_build_destination__with_skill__3.txt"
+   ]
+  }
+ },
+ "p0b_b2_status": {
+  "baseline": {
+   "n": 3,
+   "all_passed": 0,
+   "checks": {
+    "names_unassessed_passenger_lifts": 0,
+    "no_unqualified_complete": 1,
+    "service_shafts_kept_apart": 3,
+    "makes_no_approval_claim": 3
+   },
+   "files": [
+    "p0b_b2_status__baseline__1.txt",
+    "p0b_b2_status__baseline__2.txt",
+    "p0b_b2_status__baseline__3.txt"
+   ]
+  },
+  "with_skill": {
+   "n": 3,
+   "all_passed": 3,
+   "checks": {
+    "names_unassessed_passenger_lifts": 3,
+    "no_unqualified_complete": 3,
+    "service_shafts_kept_apart": 3,
+    "makes_no_approval_claim": 3
+   },
+   "files": [
+    "p0b_b2_status__with_skill__1.txt",
+    "p0b_b2_status__with_skill__2.txt",
+    "p0b_b2_status__with_skill__3.txt"
+   ]
+  }
+ }
+}

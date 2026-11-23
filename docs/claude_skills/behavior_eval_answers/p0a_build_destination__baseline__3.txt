@@ -1,0 +1,15 @@
+Run from `D:\Users\admin\Desktop\중간마감\drawing-pipeline-T14T`, after the I-7 code fix is made on a new branch. The default output paths would overwrite the PR-published files, so I redirect them.
+
+```
+python -I tools/t14s/build_all.py --floors 3F --out outputs/T14T_I7
+python -I tools/t14s/validate_t14t.py --out outputs/T14T_I7 --floors 3F --report docs/t14t_corrections/I7/build_test_report_3F.json
+python -I tools/t14s/validate_t14t.py --floors B2 B1 2F 4F 5F 6F 7F 8F 9F 10F 11F 12F 13F 14F 15F --report docs/t14t_corrections/I7/build_test_report_other_floors.json
+python -m pytest tests/test_t14t_build.py tests/test_t14s_build.py
+git status --short
+```
+
+Outputs go to `D:\Users\admin\Desktop\중간마감\drawing-pipeline-T14T\outputs\T14T_I7\3F\` (`T14T_3F_plan_*` files and `D:\Users\admin\Desktop\중간마감\drawing-pipeline-T14T\outputs\T14T_I7\SHA256_MANIFEST.json`).
+
+The 3F validation report is `D:\Users\admin\Desktop\중간마감\drawing-pipeline-T14T\docs\t14t_corrections\I7\build_test_report_3F.json`. The other-floors report is `D:\Users\admin\Desktop\중간마감\drawing-pipeline-T14T\docs\t14t_corrections\I7\build_test_report_other_floors.json`.
+
+Expected: `git status` shows no changes under `outputs\T14T` or `data\t14s\source_slices`.

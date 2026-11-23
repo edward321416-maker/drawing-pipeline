@@ -1,0 +1,17 @@
+{
+  "schema": "C-T14-ELEMENT-CLASSES-1.0",
+  "source": "Korean labels in design_proposed.vertical_elements[].name of the C-T14T metadata, written by the builder from the verified model objects and the label table TUBE_KO in src/t14s/layout.py. Nothing is inferred from geometry or ids. An element whose label matches no rule, or that has no label, is UNCLASSIFIED and is reported as not assessed.",
+  "rules": [
+    {"match": "화물", "class": "SERVICE_ONLY", "kind": "FREIGHT_LIFT", "label_means": "freight lift"},
+    {"match": "설비 샤프트", "class": "SERVICE_ONLY", "kind": "MEP_SHAFT", "label_means": "building services shaft"},
+    {"match": "비상용 승강기", "class": "PASSENGER_TRANSPORT", "kind": "EMERGENCY_LIFT", "label_means": "emergency lift",
+     "note": "carries people; its role in visitor circulation is not stated by the source, so it is required to be assessed or decided"},
+    {"match": "승강기", "class": "PASSENGER_TRANSPORT", "kind": "LIFT", "label_means": "lift (panoramic or plaza lift)"},
+    {"match": "나선 램프", "class": "PASSENGER_TRANSPORT", "kind": "RAMP", "label_means": "spiral ramp",
+     "note": "access points are reported through not_modeled (decision D-08)"},
+    {"match": "빛 튜브", "class": "NON_TRANSPORT", "kind": "LIGHT_TUBE", "label_means": "light tube"},
+    {"match": "코어", "class": "HANDLED_ELSEWHERE", "kind": "CORE", "label_means": "core: graph node core X or D-02"},
+    {"match": "에스컬레이터", "class": "HANDLED_ELSEWHERE", "kind": "ESCALATOR", "label_means": "escalator: board/arrive nodes"},
+    {"match": "캡슐", "class": "HANDLED_ELSEWHERE", "kind": "ESCALATOR_OPENING", "label_means": "capsule opening"}
+  ]
+}

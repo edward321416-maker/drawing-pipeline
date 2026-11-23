@@ -1,0 +1,16 @@
+Nothing was built, validated or changed. I ran from `D:\Users\admin\Desktop\중간마감\drawing-pipeline-SKILLS`. `outputs/T14T` belongs to the open PR, so it stays a read-only baseline. 3F is rebuilt into the new folder `outputs/T14U`.
+
+```
+G=.claude/skills/drawing-source-guard/scripts/guard_check.py
+I=.claude/skills/floorplan-incremental-build/scripts/incremental.py
+python -I $G sources --root .
+python -I $G manifests --root .
+python -I $G diff --base origin/claude/t14t-targeted-corrections-20261123 --root .
+python -I $G destination outputs/T14U docs/t14u/build_test_report.json
+python -I $I scope --base origin/claude/t14t-targeted-corrections-20261123 --out outputs/T14U --report docs/t14u/build_test_report.json --baseline outputs/T14T --floors 3F
+python -I $I run --out outputs/T14U --report docs/t14u/build_test_report.json --baseline outputs/T14T --floors 3F
+```
+
+If `scope` prints `ALL_FLOORS_REGRESSION`, add `--regression` to `run`. `run` copies the other floors byte-for-byte from the baseline, builds and validates 3F, then verifies those floors are identical and the manifest is complete.
+
+Outputs go to `D:\Users\admin\Desktop\중간마감\drawing-pipeline-SKILLS\outputs\T14U\3F\`. The validation report goes to `D:\Users\admin\Desktop\중간마감\drawing-pipeline-SKILLS\docs\t14u\build_test_report.json`.

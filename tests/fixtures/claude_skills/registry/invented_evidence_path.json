@@ -1,0 +1,27 @@
+{
+ "schema": "C-T14-SKILL-CANDIDATES-1.0",
+ "candidates": [
+  {
+   "name": "ghost",
+   "kind": "NEW_SKILL",
+   "evidence": [
+    {
+     "task": "T-A",
+     "ref": "path:tools/does_not_exist.py",
+     "reduced": "r"
+    },
+    {
+     "task": "T-B",
+     "ref": "path:AGENTS.md",
+     "reduced": "r"
+    }
+   ],
+   "comparable_existing": [],
+   "expected_reuse": "x",
+   "required_tests": [
+    "t"
+   ],
+   "status": "CANDIDATE"
+  }
+ ]
+}
