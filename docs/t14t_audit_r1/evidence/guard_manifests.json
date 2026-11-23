@@ -1,0 +1,6 @@
+{
+ "check": "manifests",
+ "ok": true,
+ "files_checked": 211,
+ "problems": []
+}

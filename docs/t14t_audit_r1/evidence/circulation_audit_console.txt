@@ -1,0 +1,88 @@
+10F  INCOMPLETE                 connected=10 provisional=2 excluded=0 passenger_transport_not_assessed=3 service_only=3 not_assessed=0 proposed_decisions=1
+       not assessed EV1                            EMERGENCY_LIFT
+       not assessed EV2                            EMERGENCY_LIFT
+       not assessed PL                             LIFT
+11F  INCOMPLETE                 connected=8 provisional=2 excluded=0 passenger_transport_not_assessed=3 service_only=3 not_assessed=0 proposed_decisions=1
+       not assessed EV1                            EMERGENCY_LIFT
+       not assessed EV2                            EMERGENCY_LIFT
+       not assessed PL                             LIFT
+12F  INCOMPLETE                 connected=10 provisional=2 excluded=0 passenger_transport_not_assessed=3 service_only=3 not_assessed=0 proposed_decisions=1
+       not assessed EV1                            EMERGENCY_LIFT
+       not assessed EV2                            EMERGENCY_LIFT
+       not assessed PL                             LIFT
+13F  INCOMPLETE                 connected=8 provisional=2 excluded=0 passenger_transport_not_assessed=3 service_only=3 not_assessed=0 proposed_decisions=1
+       not assessed EV1                            EMERGENCY_LIFT
+       not assessed EV2                            EMERGENCY_LIFT
+       not assessed PL                             LIFT
+14F  INCOMPLETE                 connected=8 provisional=2 excluded=0 passenger_transport_not_assessed=3 service_only=3 not_assessed=0 proposed_decisions=1
+       not assessed EV1                            EMERGENCY_LIFT
+       not assessed EV2                            EMERGENCY_LIFT
+       not assessed PL                             LIFT
+15F  INCOMPLETE                 connected=9 provisional=1 excluded=0 passenger_transport_not_assessed=3 service_only=3 not_assessed=0 proposed_decisions=1
+       not assessed EV1                            EMERGENCY_LIFT
+       not assessed EV2                            EMERGENCY_LIFT
+       not assessed PL                             LIFT
+2F   INCOMPLETE                 connected=7 provisional=2 excluded=1 passenger_transport_not_assessed=3 service_only=3 not_assessed=1 proposed_decisions=1
+       excluded     core D                         CORE_WITHOUT_SLAB            D-02
+       not assessed EV1                            EMERGENCY_LIFT
+       not assessed EV2                            EMERGENCY_LIFT
+       not assessed PL                             LIFT
+3F   CONNECTED_WITH_OPEN_ITEMS  connected=10 provisional=0 excluded=0 passenger_transport_not_assessed=3 service_only=3 not_assessed=1 proposed_decisions=1
+       not assessed EV1                            EMERGENCY_LIFT
+       not assessed EV2                            EMERGENCY_LIFT
+       not assessed PL                             LIFT
+4F   INCOMPLETE                 connected=8 provisional=2 excluded=0 passenger_transport_not_assessed=3 service_only=3 not_assessed=1 proposed_decisions=1
+       not assessed EV1                            EMERGENCY_LIFT
+       not assessed EV2                            EMERGENCY_LIFT
+       not assessed PL                             LIFT
+5F   INCOMPLETE                 connected=8 provisional=2 excluded=0 passenger_transport_not_assessed=3 service_only=3 not_assessed=1 proposed_decisions=1
+       not assessed EV1                            EMERGENCY_LIFT
+       not assessed EV2                            EMERGENCY_LIFT
+       not assessed PL                             LIFT
+6F   INCOMPLETE                 connected=9 provisional=1 excluded=0 passenger_transport_not_assessed=3 service_only=3 not_assessed=0 proposed_decisions=1
+       not assessed EV1                            EMERGENCY_LIFT
+       not assessed EV2                            EMERGENCY_LIFT
+       not assessed PL                             LIFT
+7F   INCOMPLETE                 connected=6 provisional=2 excluded=2 passenger_transport_not_assessed=3 service_only=3 not_assessed=0 proposed_decisions=1
+       excluded     core C                         CORE_WITHOUT_SLAB            D-02
+       excluded     core D                         CORE_WITHOUT_SLAB            D-02
+       not assessed EV1                            EMERGENCY_LIFT
+       not assessed EV2                            EMERGENCY_LIFT
+       not assessed PL                             LIFT
+8F   INCOMPLETE                 connected=8 provisional=2 excluded=0 passenger_transport_not_assessed=3 service_only=3 not_assessed=0 proposed_decisions=1
+       not assessed EV1                            EMERGENCY_LIFT
+       not assessed EV2                            EMERGENCY_LIFT
+       not assessed PL                             LIFT
+9F   INCOMPLETE                 connected=8 provisional=2 excluded=0 passenger_transport_not_assessed=3 service_only=3 not_assessed=0 proposed_decisions=1
+       not assessed EV1                            EMERGENCY_LIFT
+       not assessed EV2                            EMERGENCY_LIFT
+       not assessed PL                             LIFT
+B1   INCOMPLETE                 connected=8 provisional=0 excluded=1 passenger_transport_not_assessed=3 service_only=3 not_assessed=1 proposed_decisions=0
+       excluded     esc B1¡æ1F board                BLOCKED_BY_SOLID             D-01
+       not assessed EV1                            EMERGENCY_LIFT
+       not assessed EV2                            EMERGENCY_LIFT
+       not assessed PL                             LIFT
+B2   CONNECTED_WITH_OPEN_ITEMS  connected=3 provisional=0 excluded=0 passenger_transport_not_assessed=2 service_only=3 not_assessed=0 proposed_decisions=0
+       not assessed EV1                            EMERGENCY_LIFT
+       not assessed EV2                            EMERGENCY_LIFT
+floors=16 COMPLETE=0 CONNECTED_WITH_OPEN_ITEMS=2 INCOMPLETE=14 | provisional nodes=24 excluded nodes=4 passenger transport not assessed=47
+NOTE 10F: TECHNICAL_PASS_NOT_CIRCULATION_PROOF (technical pass, circulation INCOMPLETE)
+NOTE 11F: TECHNICAL_PASS_NOT_CIRCULATION_PROOF (technical pass, circulation INCOMPLETE)
+NOTE 12F: TECHNICAL_PASS_NOT_CIRCULATION_PROOF (technical pass, circulation INCOMPLETE)
+NOTE 13F: TECHNICAL_PASS_NOT_CIRCULATION_PROOF (technical pass, circulation INCOMPLETE)
+NOTE 14F: TECHNICAL_PASS_NOT_CIRCULATION_PROOF (technical pass, circulation INCOMPLETE)
+NOTE 15F: TECHNICAL_PASS_NOT_CIRCULATION_PROOF (technical pass, circulation INCOMPLETE)
+NOTE 2F: TECHNICAL_PASS_NOT_CIRCULATION_PROOF (technical pass, circulation INCOMPLETE)
+NOTE 3F: TECHNICAL_PASS_NOT_CIRCULATION_PROOF (technical pass, circulation CONNECTED_WITH_OPEN_ITEMS)
+NOTE 3F: VALIDATOR_FLAG_OVERSTATES (circulation_complete=true but audit=CONNECTED_WITH_OPEN_ITEMS: PASSENGER_TRANSPORT_NOT_ASSESSED, NOT_ASSESSED, PROPOSED_DESIGN_AWAITING_APPROVAL)
+NOTE 4F: TECHNICAL_PASS_NOT_CIRCULATION_PROOF (technical pass, circulation INCOMPLETE)
+NOTE 5F: TECHNICAL_PASS_NOT_CIRCULATION_PROOF (technical pass, circulation INCOMPLETE)
+NOTE 6F: TECHNICAL_PASS_NOT_CIRCULATION_PROOF (technical pass, circulation INCOMPLETE)
+NOTE 7F: TECHNICAL_PASS_NOT_CIRCULATION_PROOF (technical pass, circulation INCOMPLETE)
+NOTE 8F: TECHNICAL_PASS_NOT_CIRCULATION_PROOF (technical pass, circulation INCOMPLETE)
+NOTE 9F: TECHNICAL_PASS_NOT_CIRCULATION_PROOF (technical pass, circulation INCOMPLETE)
+NOTE B1: TECHNICAL_PASS_NOT_CIRCULATION_PROOF (technical pass, circulation INCOMPLETE)
+NOTE B2: TECHNICAL_PASS_NOT_CIRCULATION_PROOF (technical pass, circulation CONNECTED_WITH_OPEN_ITEMS)
+NOTE B2: VALIDATOR_FLAG_OVERSTATES (circulation_complete=true but audit=CONNECTED_WITH_OPEN_ITEMS: PASSENGER_TRANSPORT_NOT_ASSESSED)
+COMPLETE = nothing open. CONNECTED_WITH_OPEN_ITEMS = assessed nodes connected, but passenger transport / not-assessed / proposed items remain. Service-only shafts (freight lift, services shafts) are listed, not required.
+Technical PASS is not circulation proof. No egress, fire, accessibility or architectural approval is assessed here.
