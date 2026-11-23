@@ -1,0 +1,33 @@
+{
+ "floor": "X5",
+ "design_proposed": {
+  "circulation_graph": {
+   "nodes": [
+    {
+     "id": "core A",
+     "type": "core",
+     "status": "ON_SLAB"
+    },
+    {
+     "id": "core B",
+     "type": "core",
+     "status": "ON_SLAB"
+    }
+   ],
+   "edges": [],
+   "unresolved": [],
+   "unit_doors": [],
+   "not_modeled": []
+  },
+  "decision_refs": {}
+ },
+ "geometry_verified": {
+  "cores": [
+   "A",
+   "B"
+  ],
+  "escalator_axes": [],
+  "tubes": [],
+  "shafts": []
+ }
+}

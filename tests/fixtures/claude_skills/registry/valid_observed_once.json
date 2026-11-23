@@ -1,0 +1,22 @@
+{
+ "schema": "C-T14-SKILL-CANDIDATES-1.0",
+ "candidates": [
+  {
+   "name": "seen-once",
+   "kind": "NEW_SKILL",
+   "evidence": [
+    {
+     "task": "T-A",
+     "ref": "brief:x",
+     "reduced": "r"
+    }
+   ],
+   "comparable_existing": [],
+   "expected_reuse": "x",
+   "required_tests": [
+    "t"
+   ],
+   "status": "OBSERVED_ONCE"
+  }
+ ]
+}

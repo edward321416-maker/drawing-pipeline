@@ -1,0 +1,162 @@
+{
+  "schema": "C-T14-SKILL-CANDIDATES-1.0",
+  "candidates": [
+    {
+      "name": "drawing-source-guard",
+      "kind": "NEW_SKILL",
+      "evidence": [
+        {"task": "C-T14O", "ref": "path:tools/t14o/cache_validation.py", "reduced": "validates the model cache (hashes, object-level geometry) before any render; exits non-zero on failure and never manufactures missing geometry"},
+        {"task": "C-T14S", "ref": "path:src/t14s/source.py", "reduced": "verified slices are copied and hash-pinned; verify_sources() compares copy, manifest and original"}
+      ],
+      "comparable_existing": ["guard (personal, gstack: destructive-command and directory freeze)"],
+      "why_not_improve": "the personal guard skill blocks edits by directory at run time; it knows nothing of verified-geometry hashes, protected baselines or approval-state wording",
+      "expected_reuse": "every drawing task that builds on a verified model",
+      "required_tests": ["clean repo passes", "edited protected file fails", "tampered manifest entry fails", "unsupported approval wording fails", "approved wording with negation passes"],
+      "status": "IMPLEMENTED_CANDIDATE",
+      "tests_passed": ["tests/test_claude_skills.py::source_guard"],
+      "independent_review": "PENDING"
+    },
+    {
+      "name": "floorplan-incremental-build",
+      "kind": "NEW_SKILL",
+      "evidence": [
+        {"task": "C-T14S", "ref": "path:tools/t14s/build_all.py", "reduced": "--floors rebuilds a subset and the SHA manifest keeps the other floors"},
+        {"task": "C-T14T", "ref": "path:tools/t14s/validate_t14t.py", "reduced": "re-plans each floor deterministically, so a shared-generator change shows up as a mismatch on floors that were not meant to change"}
+      ],
+      "comparable_existing": [],
+      "expected_reuse": "every correction round after the first full build",
+      "required_tests": ["generator change widens scope to all floors", "floor-scoped change keeps scope", "untouched floor change is detected", "stale manifest is detected", "change record rejects an invented approval"],
+      "status": "IMPLEMENTED_CANDIDATE",
+      "tests_passed": ["tests/test_claude_skills.py::incremental"],
+      "independent_review": "PENDING"
+    },
+    {
+      "name": "vertical-circulation-audit",
+      "kind": "NEW_SKILL",
+      "evidence": [
+        {"task": "C-T14S", "ref": "path:tools/t14s/validate.py", "reduced": "the independent review of PR #29 found unreachable destinations that the technical checks had not reported (C-T14T brief), which is why circulation needs its own report"},
+        {"task": "C-T14T", "ref": "path:tools/t14s/validate_t14t.py", "reduced": "open circulation items are listed with decision ids and never counted as passed"}
+      ],
+      "comparable_existing": [],
+      "expected_reuse": "every task that changes floors with escalators, lifts or cores",
+      "required_tests": ["complete floor", "provisional escalator landing", "core without slab", "disconnected graph", "not-modelled item kept separate", "validator flag overstating completeness is reported", "missing public lift lobby is required, service shafts are only listed"],
+      "status": "IMPLEMENTED_CANDIDATE",
+      "tests_passed": ["tests/test_claude_skills.py::circulation"],
+      "independent_review": "PENDING"
+    },
+    {
+      "name": "github-visual-review-packet",
+      "kind": "NEW_SKILL",
+      "evidence": [
+        {"task": "C-T14R", "ref": "path:tools/t14r/export_visual_review.py", "reduced": "previews plus lossless tiles stay under the connector size limit and verify rebuilds the pixels"},
+        {"task": "C-T14S", "ref": "path:tools/t14s/package_review.py", "reduced": "one call packs 16 floors with the T14R tool"},
+        {"task": "C-T14T", "ref": "path:tools/t14s/package_t14t.py", "reduced": "after the push, files were compared with the remote tree and downloaded raw to confirm identity"}
+      ],
+      "comparable_existing": [],
+      "expected_reuse": "every task that hands drawings to an independent reviewer",
+      "required_tests": ["valid packet passes", "corrupt tile fails", "unlisted file fails", "remote match passes", "remote mismatch fails", "remote check never reports connector readback"],
+      "status": "IMPLEMENTED_CANDIDATE",
+      "tests_passed": ["tests/test_claude_skills.py::packet"],
+      "independent_review": "PENDING"
+    },
+    {
+      "name": "skill-harvester",
+      "kind": "NEW_SKILL",
+      "evidence": [
+        {"task": "C-T14-SKILLS brief", "ref": "brief:section 4 continuous skill harvesting", "reduced": "user requirement: registry, prefer improving existing skills, no skill from a single success"},
+        {"task": "AGENTS.md 6.5 defect ledger", "ref": "path:AGENTS.md", "reduced": "a user-reported defect becomes a dedicated check and a rule update, the same loop the harvester applies to methods"}
+      ],
+      "comparable_existing": ["skillify (personal gstack: codifies a scrape flow)", "skillify / learner (OMC: drafts a skill from a session)", "superpowers:writing-skills (authoring)"],
+      "why_not_improve": "those skills create a skill from one session; this one gates creation on multi-task evidence, a registry and a preference for improving an existing skill",
+      "expected_reuse": "end of every production task",
+      "required_tests": ["registry validates", "single-task new skill is rejected", "invented evidence path is rejected", "VERIFIED without reviewer is rejected", "render is in sync"],
+      "status": "IMPLEMENTED_CANDIDATE",
+      "tests_passed": ["tests/test_claude_skills.py::harvester"],
+      "independent_review": "PENDING"
+    },
+    {
+      "name": "decision-packet-for-verified-geometry-conflicts",
+      "kind": "IMPROVE_EXISTING",
+      "improve_target": "drawing-source-guard",
+      "evidence": [
+        {"task": "C-T14T", "ref": "path:tools/t14s/decision_packet.py", "reduced": "geometry conflicts (D-01..D-09) were recorded with alternatives instead of editing verified slabs"},
+        {"task": "1F door-resolution packet (2026-11-03)", "ref": "branch:origin/chatgpt/1f-door-resolution-decision-packet-20261103", "reduced": "branch name shows the same artefact type; its content was not re-read for this registry"}
+      ],
+      "comparable_existing": [],
+      "expected_reuse": "whenever the guard blocks a fix",
+      "required_tests": ["template lists the fields the C-T14T packet used"],
+      "status": "MERGED_INTO_EXISTING",
+      "notes": "merged as .claude/skills/drawing-source-guard/references/decision_packet_template.md"
+    },
+    {
+      "name": "windows-byte-exact-deliverables",
+      "kind": "IMPROVE_EXISTING",
+      "improve_target": "github-visual-review-packet",
+      "evidence": [
+        {"task": "C-T14S", "ref": "path:.gitattributes", "reduced": "-text entries keep SVG/DXF/PDF/PNG bytes identical to the SHA manifest on Windows"},
+        {"task": "C-T14T", "ref": "path:.gitattributes", "reduced": "the same -text rule was extended to outputs/T14T, its review packet and the before/after folder"}
+      ],
+      "comparable_existing": [],
+      "expected_reuse": "every new outputs/ folder",
+      "required_tests": ["remote byte identity check"],
+      "status": "MERGED_INTO_EXISTING",
+      "notes": "merged as a checklist line in .claude/skills/github-visual-review-packet/references/packet_protocol.md"
+    },
+    {
+      "name": "before-after-correction-sheets",
+      "kind": "IMPROVE_EXISTING",
+      "improve_target": "github-visual-review-packet",
+      "evidence": [
+        {"task": "C-T14G", "ref": "path:tools/t14g/before_after.py", "reduced": "same-position before/after panels with captions"},
+        {"task": "C-T14T", "ref": "path:tools/t14s/package_t14t.py", "reduced": "16 before/after JPEGs with correction reasons (largest about 503 KB)"}
+      ],
+      "comparable_existing": [],
+      "expected_reuse": "every correction round",
+      "required_tests": ["one pair per corrected floor", "pair dimensions and size budget"],
+      "status": "CANDIDATE",
+      "notes": "add a before_after subcommand to packet_check.py only after a second correction round confirms the layout"
+    },
+    {
+      "name": "korean-a3-review-pdf",
+      "kind": "NEW_SKILL",
+      "evidence": [
+        {"task": "C-T14N", "ref": "path:tools/t14n/build_review_pdf.py", "reduced": "A3 review PDF generated from the audit data"},
+        {"task": "C-T14O", "ref": "path:tools/t14o/build_review_pdf.py", "reduced": "second independent PDF builder with the same page contract"},
+        {"task": "C-T14T", "ref": "path:tools/t14s/package_t14t.py", "reduced": "Korean A3 landscape PDF with corrected previews and open decision items"}
+      ],
+      "comparable_existing": [],
+      "why_not_improve": "report layout and Korean typography are separate from packet integrity",
+      "expected_reuse": "every handoff that needs a PDF",
+      "required_tests": ["A3 landscape page size", "Korean text extractable", "page count matches the item list"],
+      "status": "CANDIDATE",
+      "notes": "three tools exist; consolidate them into one shared builder before writing a skill"
+    },
+    {
+      "name": "stacked-draft-pr-delivery",
+      "kind": "NEW_SKILL",
+      "evidence": [
+        {"task": "C-T14S", "ref": "pr:#29", "reduced": "head claude/t14s-all-floor-plans-20261122 stacked on the C-T14R branch, so the diff shows only the new work"},
+        {"task": "C-T14T", "ref": "pr:#30", "reduced": "stacked on #29; the base was kept and nothing earlier was modified"},
+        {"task": "C-T14-SKILLS", "ref": "brief:section 6 GitHub delivery", "reduced": "git worktree add set the new branch to track the base branch; the upstream had to be unset so a push could not land on the base PR"}
+      ],
+      "comparable_existing": ["superpowers:using-git-worktrees", "superpowers:finishing-a-development-branch"],
+      "why_not_improve": "those skills do not cover stacking on an open Draft PR, the explicit PR base, or the tracking-branch trap",
+      "expected_reuse": "most tasks of this repository (PR chain #16 to #30)",
+      "required_tests": ["branch has no upstream before the first push", "PR base is the previous head", "diff against the base touches only new paths"],
+      "status": "CANDIDATE",
+      "notes": "good personal-install candidate once written; repo-specific paths must stay out of it"
+    },
+    {
+      "name": "workflow-delta-report",
+      "kind": "NEW_SKILL",
+      "evidence": [
+        {"task": "C-T14-SKILLS brief addendum", "ref": "brief:workflow optimization addendum, WORKFLOW_DELTA", "reduced": "asks for what improved, supporting evidence and remaining inefficiencies in every handoff"}
+      ],
+      "comparable_existing": [],
+      "expected_reuse": "unknown",
+      "required_tests": [],
+      "status": "OBSERVED_ONCE",
+      "notes": "seen in one brief only: no skill until a second task asks for it"
+    }
+  ]
+}

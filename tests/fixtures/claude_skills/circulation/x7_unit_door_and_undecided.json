@@ -1,0 +1,50 @@
+{
+ "floor": "X7",
+ "design_proposed": {
+  "circulation_graph": {
+   "nodes": [
+    {
+     "id": "core A",
+     "type": "core",
+     "status": "ON_SLAB"
+    },
+    {
+     "id": "esc 2F→3F board",
+     "type": "escalator",
+     "status": "BLOCKED_BY_SOLID"
+    }
+   ],
+   "edges": [],
+   "unresolved": [
+    {
+     "id": "esc 2F→3F board",
+     "type": "escalator",
+     "status": "BLOCKED_BY_SOLID",
+     "reason": "inside a core"
+    }
+   ],
+   "unit_doors": [
+    {
+     "room": "07",
+     "reachable": false
+    }
+   ],
+   "not_modeled": []
+  },
+  "decision_refs": {}
+ },
+ "geometry_verified": {
+  "cores": [
+   "A"
+  ],
+  "escalator_axes": [
+   {
+    "from": "2F",
+    "to": "3F",
+    "role_here": "board"
+   }
+  ],
+  "tubes": [],
+  "shafts": []
+ }
+}

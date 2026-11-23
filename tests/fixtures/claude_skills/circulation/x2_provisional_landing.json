@@ -1,0 +1,58 @@
+{
+ "floor": "X2",
+ "design_proposed": {
+  "circulation_graph": {
+   "nodes": [
+    {
+     "id": "core A",
+     "type": "core",
+     "status": "ON_SLAB"
+    },
+    {
+     "id": "esc 1F→2F arrive",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01"
+    }
+   ],
+   "edges": [
+    {
+     "a": "core A",
+     "b": "esc 1F→2F arrive"
+    }
+   ],
+   "unresolved": [
+    {
+     "id": "esc 1F→2F arrive",
+     "type": "escalator",
+     "status": "AT_OPENING_EDGE",
+     "decision": "D-01",
+     "reason": "landing in an opening"
+    }
+   ],
+   "unit_doors": [],
+   "not_modeled": []
+  },
+  "decision_refs": {
+   "D-01": [
+    {
+     "floor": "X2"
+    }
+   ]
+  }
+ },
+ "geometry_verified": {
+  "cores": [
+   "A"
+  ],
+  "escalator_axes": [
+   {
+    "from": "1F",
+    "to": "2F",
+    "role_here": "arrive"
+   }
+  ],
+  "tubes": [],
+  "shafts": []
+ }
+}

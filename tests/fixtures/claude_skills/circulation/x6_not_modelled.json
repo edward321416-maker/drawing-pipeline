@@ -1,0 +1,33 @@
+{
+ "floor": "X6",
+ "design_proposed": {
+  "circulation_graph": {
+   "nodes": [
+    {
+     "id": "core A",
+     "type": "core",
+     "status": "ON_SLAB"
+    }
+   ],
+   "edges": [],
+   "unresolved": [],
+   "unit_doors": [],
+   "not_modeled": [
+    {
+     "id": "T1 ramp",
+     "reason": "ramp access not defined in the model",
+     "decision": "D-08"
+    }
+   ]
+  },
+  "decision_refs": {}
+ },
+ "geometry_verified": {
+  "cores": [
+   "A"
+  ],
+  "escalator_axes": [],
+  "tubes": [],
+  "shafts": []
+ }
+}

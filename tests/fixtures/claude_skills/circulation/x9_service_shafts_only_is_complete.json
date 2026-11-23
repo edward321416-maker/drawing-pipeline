@@ -1,0 +1,33 @@
+{
+ "floor": "X9",
+ "design_proposed": {
+  "circulation_graph": {
+   "nodes": [
+    {
+     "id": "core A",
+     "type": "core",
+     "status": "ON_SLAB"
+    }
+   ],
+   "edges": [],
+   "unresolved": [],
+   "unit_doors": [],
+   "not_modeled": []
+  },
+  "decision_refs": {}
+ },
+ "geometry_verified": {
+  "cores": [
+   "A"
+  ],
+  "escalator_axes": [],
+  "tubes": [
+   "FR",
+   "M1"
+  ],
+  "shafts": [
+   "EV1",
+   "EV2"
+  ]
+ }
+}

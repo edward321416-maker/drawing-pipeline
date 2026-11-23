@@ -1,0 +1,28 @@
+{
+ "schema": "C-T14-SKILL-CANDIDATES-1.0",
+ "candidates": [
+  {
+   "name": "tweak",
+   "kind": "IMPROVE_EXISTING",
+   "evidence": [
+    {
+     "task": "T-A",
+     "ref": "path:AGENTS.md",
+     "reduced": "r"
+    },
+    {
+     "task": "T-B",
+     "ref": "path:README.md",
+     "reduced": "r"
+    }
+   ],
+   "comparable_existing": [],
+   "expected_reuse": "x",
+   "required_tests": [
+    "t"
+   ],
+   "status": "CANDIDATE",
+   "improve_target": "no-such-skill"
+  }
+ ]
+}

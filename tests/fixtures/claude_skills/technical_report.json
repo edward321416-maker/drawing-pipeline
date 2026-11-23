@@ -1,0 +1,49 @@
+{
+ "floors": [
+  {
+   "floor": "X1",
+   "pass": true,
+   "circulation_complete": true
+  },
+  {
+   "floor": "X2",
+   "pass": true,
+   "circulation_complete": true
+  },
+  {
+   "floor": "X3",
+   "pass": true,
+   "circulation_complete": true
+  },
+  {
+   "floor": "X4",
+   "pass": true,
+   "circulation_complete": true
+  },
+  {
+   "floor": "X5",
+   "pass": true,
+   "circulation_complete": true
+  },
+  {
+   "floor": "X6",
+   "pass": true,
+   "circulation_complete": true
+  },
+  {
+   "floor": "X7",
+   "pass": true,
+   "circulation_complete": true
+  },
+  {
+   "floor": "X8",
+   "pass": true,
+   "circulation_complete": true
+  },
+  {
+   "floor": "X9",
+   "pass": true,
+   "circulation_complete": true
+  }
+ ]
+}

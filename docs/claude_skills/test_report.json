@@ -1,0 +1,79 @@
+{
+ "schema": "C-T14-SKILLS-TEST-REPORT-1.0",
+ "scope": "scripts, format and registry rules only; agent behaviour with the skills was not measured and no drawing is approved",
+ "git_head_when_run": "1164fc0f58d943598d8e48146a02fcb3214c852e",
+ "worktree_dirty_when_run": true,
+ "base": "origin/claude/t14t-targeted-corrections-20261123",
+ "steps": [
+  {
+   "name": "skill lint",
+   "ok": true,
+   "detail": "skills checked: 5 | problems: 0"
+  },
+  {
+   "name": "registry validate",
+   "ok": true,
+   "detail": "candidates=11"
+  },
+  {
+   "name": "registry render in sync",
+   "ok": true,
+   "detail": "render up to date"
+  },
+  {
+   "name": "official claude plugin validate",
+   "ok": true,
+   "detail": "✔ Validation passed"
+  },
+  {
+   "name": "guard: no protected path changed",
+   "ok": true,
+   "detail": "violation_count=0"
+  },
+  {
+   "name": "pytest tests/test_claude_skills.py",
+   "ok": true,
+   "detail": "passed=62 failed=0 skipped=0"
+  }
+ ],
+ "pytest_by_skill": {
+  "drawing-source-guard": {
+   "passed": 13,
+   "failed": 0,
+   "skipped": 0
+  },
+  "floorplan-incremental-build": {
+   "passed": 12,
+   "failed": 0,
+   "skipped": 0
+  },
+  "vertical-circulation-audit": {
+   "passed": 11,
+   "failed": 0,
+   "skipped": 0
+  },
+  "github-visual-review-packet": {
+   "passed": 10,
+   "failed": 0,
+   "skipped": 0
+  },
+  "skill-harvester": {
+   "passed": 9,
+   "failed": 0,
+   "skipped": 0
+  },
+  "skill_format": {
+   "passed": 7,
+   "failed": 0,
+   "skipped": 0
+  }
+ },
+ "skills": [
+  "drawing-source-guard",
+  "floorplan-incremental-build",
+  "vertical-circulation-audit",
+  "github-visual-review-packet",
+  "skill-harvester"
+ ],
+ "all_steps_passed": true
+}
