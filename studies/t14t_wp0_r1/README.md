@@ -9,17 +9,22 @@
 - No external graphics / remote dependencies, no claim of independent visual verification. Numbers come from existing PR #32 measurement JSON; no newly recomputed physical capacity.
 - No PR, merge, FREEZE or final approval requested.
 
-## New spatial study drawings (editable SVG)
-| Floor | Measured issue placements | Study finding |
+## New spatial study drawings (editable SVG, 15 affected floors)
+All measured D01/D02/D03 placements are now represented on separate source-preserving concept overlays for **B1 and every floor 2F–15F**: `overlays/WP0_<floor>_CONCEPT_ONLY.svg`. **B2** has no D01/D02/D03 measured placement and therefore is not included in WP0 overlays. All drawings are only **concept geometry annotations**.
+
+| Floor(s) | Measured items | Required future checks |
 |---|---|---|
-| B1 | D01: B1->1F boarding in core | Local landing patch cannot be treated as a feasible core fix; source redesign must be studied separately |
-| 2F | 2 D01, core D no slab, T3 +45° study | 2 local deck/bridge envelopes plotted; core requires non-local connection |
-| 7F | 2 D01, cores C+D no slab, T4 -45° study | Missing south slab makes both cores inaccessible and ordinary local apron inadequate |
-| 12F | 2 D01, T4 -75° study | 12F is exception; -45° would leave only 94.9% of apron on slab |
+| B1 | D01 boarding inside core | Core conflict; local patch must not be treated as an approved solution |
+| 2F | 2 D01, 1 D02 core-D, 1 D03 T3 | Missing slab for core-D; landings outside slab; proposed entry direction |
+| 3F | 1 D03 T3 | Entrance orientation and actual usable threshold |
+| 4F–6F | 6 D01, 4 D03 (T3 4F/5F/6F and T4 6F) | End slab continuity, support and entrance feasibility |
+| 7F | 2 D01, 2 D02 cores C+D, 1 D03 T4 | South slab missing, 17m core-to-slab distance |
+| 8F–11F | 8 D01, 4 D03 T4 | Deck footprints, columns, hall and vertical sections |
+| 12F | 2 D01, 1 D03 T4 -75° | Different turn due to slab edge; actual doorway must be checked |
+| 13F–14F | 4 D01, 2 D03 T4 | Continuous access and section compatibility |
+| 15F | 1 D01, 1 D03 T4 | Arrival landing and garden-level section/access |
 
-Files: `overlays/WP0_B1_CONCEPT_ONLY.svg`, `WP0_2F_CONCEPT_ONLY.svg`, `WP0_7F_CONCEPT_ONLY.svg`, `WP0_12F_CONCEPT_ONLY.svg`.
-
-Legend: orange dashed footprint = **schematic gross envelope**, derived from the builder's 3.6m escalator width, 2.6m landing, and measured longitudinal gap; it is NOT clipped to verified slab and does NOT equal the audited net deck polygon. Red = unslabbed core/exception. Blue = location of proposed entry direction, **NOT a drawn door**.
+Legend: orange dashed footprint = **schematic gross envelope**, derived from the builder's 3.6m escalator width, 2.6m landing, and measured longitudinal gap; it is NOT clipped to verified slab and does NOT equal the audited net deck polygon. Red = unslabbed core/exception. Blue = location of proposed entry direction, **NOT a drawn door**. The drawings use consistent model-coordinate framing, not a certified plotting scale.
 
 ## D01 / D02 / D03 measured action linkage
 `WP0_GEOMETRY_ACTION_REGISTER_43.csv`: 25 D01 instances, 3 D02 cores, 15 D03 lobby-entry cases. Each row carries floor/source coordinates, design-option study action, known quantitative measurement and missing plan/section evidence. This is **NOT** the separately reported 47-ID audit register; it cannot be claimed as 47 item reconciliation.
