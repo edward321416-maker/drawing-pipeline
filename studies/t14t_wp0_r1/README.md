@@ -17,7 +17,7 @@ All measured D01/D02/D03 placements are now represented on separate source-prese
 | B1 | D01 boarding inside core | Core conflict; local patch must not be treated as an approved solution |
 | 2F | 2 D01, 1 D02 core-D, 1 D03 T3 | Missing slab for core-D; landings outside slab; proposed entry direction |
 | 3F | 1 D03 T3 | Entrance orientation and actual usable threshold |
-| 4F–6F | 6 D01, 4 D03 (T3 4F/5F/6F and T4 6F) | End slab continuity, support and entrance feasibility |
+| 4F–6F | 5 D01, 4 D03 (T3 4F/5F/6F and T4 6F) | End slab continuity, support and entrance feasibility |
 | 7F | 2 D01, 2 D02 cores C+D, 1 D03 T4 | South slab missing, 17m core-to-slab distance |
 | 8F–11F | 8 D01, 4 D03 T4 | Deck footprints, columns, hall and vertical sections |
 | 12F | 2 D01, 1 D03 T4 -75° | Different turn due to slab edge; actual doorway must be checked |
