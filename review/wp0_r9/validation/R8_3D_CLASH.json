@@ -1,0 +1,1963 @@
+{
+  "slabs": [
+    {
+      "core": "C",
+      "from_floor": "1F",
+      "to_floor": "2F",
+      "physical_collision": [
+        {
+          "slab": "A-FLOR_s7_2F",
+          "foot": "F4 tread 09",
+          "xy": [
+            41.5275,
+            -14.02
+          ],
+          "overlap_m2": 0.3344340000000035,
+          "depth_m": 0.1474588235294121,
+          "estimated_volume_m3": 0.04931524418823592
+        },
+        {
+          "slab": "A-FLOR_s7_2F",
+          "foot": "F4 tread 10",
+          "xy": [
+            41.5275,
+            -13.74
+          ],
+          "overlap_m2": 0.3344340000000035,
+          "depth_m": 0.17999999999999972,
+          "estimated_volume_m3": 0.060198120000000535
+        }
+      ],
+      "insufficient_headroom": [
+        {
+          "slab": "A-FLOR_s7_2F",
+          "foot": "F3 tread 03",
+          "xy": [
+            42.8375,
+            -17.1475
+          ],
+          "headroom_m": 1.9701882352941178,
+          "headroom_deficit_m": 0.1298117647058823,
+          "xy_overlap_m2": 0.33443400000000584,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_2F",
+          "foot": "F3 tread 04",
+          "xy": [
+            42.5575,
+            -17.1475
+          ],
+          "headroom_m": 1.7937176470588234,
+          "headroom_deficit_m": 0.30628235294117667,
+          "xy_overlap_m2": 0.33443400000000584,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_2F",
+          "foot": "F3 tread 05",
+          "xy": [
+            42.2775,
+            -17.1475
+          ],
+          "headroom_m": 1.6172470588235295,
+          "headroom_deficit_m": 0.4827529411764706,
+          "xy_overlap_m2": 0.33443400000000584,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_2F",
+          "foot": "F3 upper extension",
+          "xy": [
+            42.13375,
+            -17.1475
+          ],
+          "headroom_m": 1.4407764705882355,
+          "headroom_deficit_m": 0.6592235294117645,
+          "xy_overlap_m2": 0.006616500000005927,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_2F",
+          "foot": "F3 landing",
+          "xy": [
+            41.5275,
+            -17.1475
+          ],
+          "headroom_m": 1.4407764705882355,
+          "headroom_deficit_m": 0.6592235294117645,
+          "xy_overlap_m2": 1.447209000000007,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_2F",
+          "foot": "F4 lower extension",
+          "xy": [
+            41.5275,
+            -16.4725
+          ],
+          "headroom_m": 1.4407764705882355,
+          "headroom_deficit_m": 0.6592235294117645,
+          "xy_overlap_m2": 0.17202899999999696,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_2F",
+          "foot": "F4 tread 01",
+          "xy": [
+            41.5275,
+            -16.26
+          ],
+          "headroom_m": 1.2643058823529412,
+          "headroom_deficit_m": 0.8356941176470589,
+          "xy_overlap_m2": 0.33443399999999923,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_2F",
+          "foot": "F4 tread 02",
+          "xy": [
+            41.5275,
+            -15.98
+          ],
+          "headroom_m": 1.0878352941176477,
+          "headroom_deficit_m": 1.0121647058823524,
+          "xy_overlap_m2": 0.3344340000000014,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_2F",
+          "foot": "F4 tread 03",
+          "xy": [
+            41.5275,
+            -15.7
+          ],
+          "headroom_m": 0.9113647058823533,
+          "headroom_deficit_m": 1.1886352941176468,
+          "xy_overlap_m2": 0.3344340000000035,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_2F",
+          "foot": "F4 tread 04",
+          "xy": [
+            41.5275,
+            -15.42
+          ],
+          "headroom_m": 0.7348941176470589,
+          "headroom_deficit_m": 1.3651058823529412,
+          "xy_overlap_m2": 0.3344340000000035,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_2F",
+          "foot": "F4 tread 05",
+          "xy": [
+            41.5275,
+            -15.14
+          ],
+          "headroom_m": 0.5584235294117645,
+          "headroom_deficit_m": 1.5415764705882355,
+          "xy_overlap_m2": 0.3344340000000035,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_2F",
+          "foot": "F4 tread 06",
+          "xy": [
+            41.5275,
+            -14.86
+          ],
+          "headroom_m": 0.38195294117647105,
+          "headroom_deficit_m": 1.718047058823529,
+          "xy_overlap_m2": 0.3344340000000035,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_2F",
+          "foot": "F4 tread 07",
+          "xy": [
+            41.5275,
+            -14.58
+          ],
+          "headroom_m": 0.20548235294117667,
+          "headroom_deficit_m": 1.8945176470588234,
+          "xy_overlap_m2": 0.3344340000000035,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_2F",
+          "foot": "F4 tread 08",
+          "xy": [
+            41.5275,
+            -14.3
+          ],
+          "headroom_m": 0.029011764705882293,
+          "headroom_deficit_m": 2.070988235294118,
+          "xy_overlap_m2": 0.3344340000000035,
+          "section_stability": true
+        }
+      ],
+      "proxy_overlap_is_ignored": true,
+      "proxy_area_m2": 36.01975376000001,
+      "bbox_only_secondary_filters": [],
+      "minimum_detected_before_geometric_headroom_m": 0.029011764705882293,
+      "minimum_against_r8_stair_above_m": 4.820000000000001,
+      "before_status": "FAIL",
+      "after_status": "PASS_CONDITIONAL",
+      "proposed_tread_body_overlap": [],
+      "openings": {
+        "A-FLOR_s7_2F": {
+          "label": "SLAB 2F C",
+          "plan_m": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  40.875,
+                  -17.8
+                ],
+                [
+                  40.87500000000001,
+                  -13.549999999999995
+                ],
+                [
+                  42.18,
+                  -13.549999999999995
+                ],
+                [
+                  42.18,
+                  -16.495
+                ],
+                [
+                  43.027499999999996,
+                  -16.495
+                ],
+                [
+                  43.027499999999996,
+                  -17.8
+                ],
+                [
+                  40.875,
+                  -17.8
+                ]
+              ]
+            ]
+          },
+          "removed_polygon_m": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  40.87500000000001,
+                  -13.549999999999995
+                ],
+                [
+                  42.18,
+                  -13.549999999999995
+                ],
+                [
+                  42.18,
+                  -16.495
+                ],
+                [
+                  43.027499999999996,
+                  -16.495
+                ],
+                [
+                  43.027499999999996,
+                  -17.8
+                ],
+                [
+                  40.875,
+                  -17.8
+                ],
+                [
+                  40.87500000000001,
+                  -13.549999999999995
+                ]
+              ]
+            ]
+          },
+          "floor": "2F",
+          "elevation_interval_m": [
+            5.5,
+            6.000391960144043
+          ],
+          "bounds_m": [
+            40.875,
+            -17.8,
+            43.0275,
+            -13.55
+          ],
+          "minimum_hit_area_m2": 6.0219875,
+          "study_opening_area_m2": 6.652237499999986,
+          "removed_area_m2": 6.652237499999986,
+          "source_floor_projection_area_m2": 2002.4532782049969,
+          "removed_ratio_pct": 0.33220438011732617,
+          "nearest_column_distance_and_id": null,
+          "max_remaining_tested_hit_area_m2": 0.0,
+          "slab_cross_section_consistent": true,
+          "beams_and_reinforcement": "UNVERIFIED; available GLB does not resolve framing"
+        }
+      }
+    },
+    {
+      "core": "C",
+      "from_floor": "2F",
+      "to_floor": "3F",
+      "physical_collision": [
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F4 tread 07",
+          "xy": [
+            41.5275,
+            -14.3
+          ],
+          "overlap_m2": 0.3344340000000035,
+          "depth_m": 0.1432571428571432,
+          "estimated_volume_m3": 0.04791005931428633
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F4 tread 08",
+          "xy": [
+            41.5275,
+            -14.02
+          ],
+          "overlap_m2": 0.3344340000000035,
+          "depth_m": 0.17999999999999972,
+          "estimated_volume_m3": 0.060198120000000535
+        }
+      ],
+      "insufficient_headroom": [
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F2 upper extension",
+          "xy": [
+            44.1475,
+            -16.3325
+          ],
+          "headroom_m": 1.9995999999999992,
+          "headroom_deficit_m": 0.10040000000000093,
+          "xy_overlap_m2": 0.5088689999999991,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F2 landing",
+          "xy": [
+            44.1475,
+            -17.1475
+          ],
+          "headroom_m": 1.9995999999999992,
+          "headroom_deficit_m": 0.10040000000000093,
+          "xy_overlap_m2": 1.4472089999999986,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F3 lower extension",
+          "xy": [
+            43.47125,
+            -17.1475
+          ],
+          "headroom_m": 1.9995999999999992,
+          "headroom_deficit_m": 0.10040000000000093,
+          "xy_overlap_m2": 0.17503650000000603,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F3 tread 01",
+          "xy": [
+            43.2575,
+            -17.1475
+          ],
+          "headroom_m": 1.8210285714285703,
+          "headroom_deficit_m": 0.27897142857142976,
+          "xy_overlap_m2": 0.33443400000000584,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F3 tread 02",
+          "xy": [
+            42.9775,
+            -17.1475
+          ],
+          "headroom_m": 1.6424571428571415,
+          "headroom_deficit_m": 0.4575428571428586,
+          "xy_overlap_m2": 0.33443400000000584,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F3 tread 03",
+          "xy": [
+            42.6975,
+            -17.1475
+          ],
+          "headroom_m": 1.4638857142857127,
+          "headroom_deficit_m": 0.6361142857142874,
+          "xy_overlap_m2": 0.33443400000000584,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F3 tread 04",
+          "xy": [
+            42.4175,
+            -17.1475
+          ],
+          "headroom_m": 1.2853142857142856,
+          "headroom_deficit_m": 0.8146857142857145,
+          "xy_overlap_m2": 0.33443400000000584,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F3 upper extension",
+          "xy": [
+            42.20375,
+            -17.1475
+          ],
+          "headroom_m": 1.1067428571428568,
+          "headroom_deficit_m": 0.9932571428571433,
+          "xy_overlap_m2": 0.17503650000000603,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F3 landing",
+          "xy": [
+            41.5275,
+            -17.1475
+          ],
+          "headroom_m": 1.1067428571428568,
+          "headroom_deficit_m": 0.9932571428571433,
+          "xy_overlap_m2": 1.447209000000007,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F4 lower extension",
+          "xy": [
+            41.5275,
+            -16.3325
+          ],
+          "headroom_m": 1.1067428571428568,
+          "headroom_deficit_m": 0.9932571428571433,
+          "xy_overlap_m2": 0.5088689999999991,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F4 tread 01",
+          "xy": [
+            41.5275,
+            -15.98
+          ],
+          "headroom_m": 0.928171428571428,
+          "headroom_deficit_m": 1.171828571428572,
+          "xy_overlap_m2": 0.3344340000000014,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F4 tread 02",
+          "xy": [
+            41.5275,
+            -15.7
+          ],
+          "headroom_m": 0.7495999999999992,
+          "headroom_deficit_m": 1.350400000000001,
+          "xy_overlap_m2": 0.3344340000000035,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F4 tread 03",
+          "xy": [
+            41.5275,
+            -15.42
+          ],
+          "headroom_m": 0.5710285714285703,
+          "headroom_deficit_m": 1.5289714285714298,
+          "xy_overlap_m2": 0.3344340000000035,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F4 tread 04",
+          "xy": [
+            41.5275,
+            -15.14
+          ],
+          "headroom_m": 0.3924571428571433,
+          "headroom_deficit_m": 1.7075428571428568,
+          "xy_overlap_m2": 0.3344340000000035,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F4 tread 05",
+          "xy": [
+            41.5275,
+            -14.86
+          ],
+          "headroom_m": 0.21388571428571446,
+          "headroom_deficit_m": 1.8861142857142856,
+          "xy_overlap_m2": 0.3344340000000035,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F4 tread 06",
+          "xy": [
+            41.5275,
+            -14.58
+          ],
+          "headroom_m": 0.03531428571428563,
+          "headroom_deficit_m": 2.0646857142857145,
+          "xy_overlap_m2": 0.3344340000000035,
+          "section_stability": true
+        }
+      ],
+      "proxy_overlap_is_ignored": true,
+      "proxy_area_m2": 36.01958623000001,
+      "bbox_only_secondary_filters": [],
+      "minimum_detected_before_geometric_headroom_m": 0.03531428571428563,
+      "minimum_against_r8_stair_above_m": 4.820000000000001,
+      "before_status": "FAIL",
+      "after_status": "PASS_CONDITIONAL",
+      "proposed_tread_body_overlap": [],
+      "openings": {
+        "A-FLOR_s7_3F": {
+          "label": "SLAB 3F C",
+          "plan_m": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  40.875,
+                  -17.8
+                ],
+                [
+                  40.87500000000001,
+                  -13.829999999999995
+                ],
+                [
+                  42.18,
+                  -13.829999999999995
+                ],
+                [
+                  42.18,
+                  -16.495
+                ],
+                [
+                  43.495000000000005,
+                  -16.495
+                ],
+                [
+                  43.495000000000005,
+                  -16.069999999999997
+                ],
+                [
+                  44.8,
+                  -16.069999999999997
+                ],
+                [
+                  44.8,
+                  -17.8
+                ],
+                [
+                  40.875,
+                  -17.8
+                ]
+              ]
+            ]
+          },
+          "removed_polygon_m": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  40.87500000000001,
+                  -13.829999999999995
+                ],
+                [
+                  42.18,
+                  -13.829999999999995
+                ],
+                [
+                  42.18,
+                  -16.495
+                ],
+                [
+                  43.495000000000005,
+                  -16.495
+                ],
+                [
+                  43.495000000000005,
+                  -16.069999999999997
+                ],
+                [
+                  44.8,
+                  -16.069999999999997
+                ],
+                [
+                  44.8,
+                  -17.8
+                ],
+                [
+                  40.875,
+                  -17.8
+                ],
+                [
+                  40.87500000000001,
+                  -13.829999999999995
+                ]
+              ]
+            ]
+          },
+          "floor": "3F",
+          "elevation_interval_m": [
+            10.5,
+            11.000391960144043
+          ],
+          "bounds_m": [
+            40.875,
+            -17.8,
+            44.8,
+            -13.83
+          ],
+          "minimum_hit_area_m2": 8.332574999999999,
+          "study_opening_area_m2": 9.15457499999999,
+          "removed_area_m2": 9.15457499999999,
+          "source_floor_projection_area_m2": 2449.572101755,
+          "removed_ratio_pct": 0.37372139376673913,
+          "nearest_column_distance_and_id": null,
+          "max_remaining_tested_hit_area_m2": 0.0,
+          "slab_cross_section_consistent": true,
+          "beams_and_reinforcement": "UNVERIFIED; available GLB does not resolve framing"
+        }
+      }
+    },
+    {
+      "core": "C",
+      "from_floor": "6F",
+      "to_floor": "7F",
+      "physical_collision": [],
+      "insufficient_headroom": [],
+      "proxy_overlap_is_ignored": true,
+      "proxy_area_m2": 36.01962821500002,
+      "bbox_only_secondary_filters": [],
+      "minimum_detected_before_geometric_headroom_m": null,
+      "minimum_against_r8_stair_above_m": 4.819400000000002,
+      "before_status": "PASS_CONDITIONAL",
+      "after_status": "PASS_CONDITIONAL",
+      "proposed_tread_body_overlap": [],
+      "openings": {}
+    },
+    {
+      "core": "C",
+      "from_floor": "7F",
+      "to_floor": "8F",
+      "physical_collision": [
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F4 tread 07",
+          "xy": [
+            41.5275,
+            -14.3
+          ],
+          "overlap_m2": 0.3344340000000035,
+          "depth_m": 0.14330000000000354,
+          "estimated_volume_m3": 0.047924392200001685
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F4 tread 08",
+          "xy": [
+            41.5275,
+            -14.02
+          ],
+          "overlap_m2": 0.3344340000000035,
+          "depth_m": 0.17999999999999972,
+          "estimated_volume_m3": 0.060198120000000535
+        }
+      ],
+      "insufficient_headroom": [
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F2 upper extension",
+          "xy": [
+            44.1475,
+            -16.3325
+          ],
+          "headroom_m": 1.999299999999998,
+          "headroom_deficit_m": 0.10070000000000201,
+          "xy_overlap_m2": 0.5088689999999991,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F2 landing",
+          "xy": [
+            44.1475,
+            -17.1475
+          ],
+          "headroom_m": 1.999299999999998,
+          "headroom_deficit_m": 0.10070000000000201,
+          "xy_overlap_m2": 1.4472089999999986,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F3 lower extension",
+          "xy": [
+            43.47125,
+            -17.1475
+          ],
+          "headroom_m": 1.999299999999998,
+          "headroom_deficit_m": 0.10070000000000201,
+          "xy_overlap_m2": 0.17503650000000603,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F3 tread 01",
+          "xy": [
+            43.2575,
+            -17.1475
+          ],
+          "headroom_m": 1.8207499999999968,
+          "headroom_deficit_m": 0.27925000000000333,
+          "xy_overlap_m2": 0.33443400000000584,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F3 tread 02",
+          "xy": [
+            42.9775,
+            -17.1475
+          ],
+          "headroom_m": 1.6421999999999954,
+          "headroom_deficit_m": 0.45780000000000465,
+          "xy_overlap_m2": 0.33443400000000584,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F3 tread 03",
+          "xy": [
+            42.6975,
+            -17.1475
+          ],
+          "headroom_m": 1.4636500000000012,
+          "headroom_deficit_m": 0.6363499999999989,
+          "xy_overlap_m2": 0.33443400000000584,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F3 tread 04",
+          "xy": [
+            42.4175,
+            -17.1475
+          ],
+          "headroom_m": 1.2851,
+          "headroom_deficit_m": 0.8149000000000002,
+          "xy_overlap_m2": 0.33443400000000584,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F3 upper extension",
+          "xy": [
+            42.20375,
+            -17.1475
+          ],
+          "headroom_m": 1.1065499999999986,
+          "headroom_deficit_m": 0.9934500000000015,
+          "xy_overlap_m2": 0.17503650000000603,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F3 landing",
+          "xy": [
+            41.5275,
+            -17.1475
+          ],
+          "headroom_m": 1.1065499999999986,
+          "headroom_deficit_m": 0.9934500000000015,
+          "xy_overlap_m2": 1.447209000000007,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F4 lower extension",
+          "xy": [
+            41.5275,
+            -16.3325
+          ],
+          "headroom_m": 1.1065499999999986,
+          "headroom_deficit_m": 0.9934500000000015,
+          "xy_overlap_m2": 0.5088689999999991,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F4 tread 01",
+          "xy": [
+            41.5275,
+            -15.98
+          ],
+          "headroom_m": 0.9279999999999973,
+          "headroom_deficit_m": 1.1720000000000028,
+          "xy_overlap_m2": 0.3344340000000014,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F4 tread 02",
+          "xy": [
+            41.5275,
+            -15.7
+          ],
+          "headroom_m": 0.749449999999996,
+          "headroom_deficit_m": 1.3505500000000041,
+          "xy_overlap_m2": 0.3344340000000035,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F4 tread 03",
+          "xy": [
+            41.5275,
+            -15.42
+          ],
+          "headroom_m": 0.5709000000000017,
+          "headroom_deficit_m": 1.5290999999999983,
+          "xy_overlap_m2": 0.3344340000000035,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F4 tread 04",
+          "xy": [
+            41.5275,
+            -15.14
+          ],
+          "headroom_m": 0.3923500000000004,
+          "headroom_deficit_m": 1.7076499999999997,
+          "xy_overlap_m2": 0.3344340000000035,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F4 tread 05",
+          "xy": [
+            41.5275,
+            -14.86
+          ],
+          "headroom_m": 0.2137999999999991,
+          "headroom_deficit_m": 1.886200000000001,
+          "xy_overlap_m2": 0.3344340000000035,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F4 tread 06",
+          "xy": [
+            41.5275,
+            -14.58
+          ],
+          "headroom_m": 0.03524999999999778,
+          "headroom_deficit_m": 2.0647500000000023,
+          "xy_overlap_m2": 0.3344340000000035,
+          "section_stability": true
+        }
+      ],
+      "proxy_overlap_is_ignored": true,
+      "proxy_area_m2": 36.01978889,
+      "bbox_only_secondary_filters": [],
+      "minimum_detected_before_geometric_headroom_m": 0.03524999999999778,
+      "minimum_against_r8_stair_above_m": 4.819399999999998,
+      "before_status": "FAIL",
+      "after_status": "PASS_CONDITIONAL",
+      "proposed_tread_body_overlap": [],
+      "openings": {
+        "A-FLOR_s7_8F": {
+          "label": "SLAB 8F C",
+          "plan_m": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  40.875,
+                  -17.8
+                ],
+                [
+                  40.87500000000001,
+                  -13.829999999999995
+                ],
+                [
+                  42.18,
+                  -13.829999999999995
+                ],
+                [
+                  42.18,
+                  -16.495
+                ],
+                [
+                  43.495000000000005,
+                  -16.495
+                ],
+                [
+                  43.495000000000005,
+                  -16.069999999999997
+                ],
+                [
+                  44.8,
+                  -16.069999999999997
+                ],
+                [
+                  44.8,
+                  -17.8
+                ],
+                [
+                  40.875,
+                  -17.8
+                ]
+              ]
+            ]
+          },
+          "removed_polygon_m": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  40.87500000000001,
+                  -13.829999999999995
+                ],
+                [
+                  42.18,
+                  -13.829999999999995
+                ],
+                [
+                  42.18,
+                  -16.495
+                ],
+                [
+                  43.495000000000005,
+                  -16.495
+                ],
+                [
+                  43.495000000000005,
+                  -16.069999999999997
+                ],
+                [
+                  44.8,
+                  -16.069999999999997
+                ],
+                [
+                  44.8,
+                  -17.8
+                ],
+                [
+                  40.875,
+                  -17.8
+                ],
+                [
+                  40.87500000000001,
+                  -13.829999999999995
+                ]
+              ]
+            ]
+          },
+          "floor": "8F",
+          "elevation_interval_m": [
+            35.5,
+            36.00039291381836
+          ],
+          "bounds_m": [
+            40.875,
+            -17.8,
+            44.8,
+            -13.83
+          ],
+          "minimum_hit_area_m2": 8.332574999999999,
+          "study_opening_area_m2": 9.15457499999999,
+          "removed_area_m2": 9.15457499999999,
+          "source_floor_projection_area_m2": 2339.3360562199996,
+          "removed_ratio_pct": 0.391332189133713,
+          "nearest_column_distance_and_id": null,
+          "max_remaining_tested_hit_area_m2": 0.0,
+          "slab_cross_section_consistent": true,
+          "beams_and_reinforcement": "UNVERIFIED; available GLB does not resolve framing"
+        }
+      }
+    },
+    {
+      "core": "D",
+      "from_floor": "1F",
+      "to_floor": "2F",
+      "physical_collision": [],
+      "insufficient_headroom": [],
+      "proxy_overlap_is_ignored": true,
+      "proxy_area_m2": 36.019666550000004,
+      "bbox_only_secondary_filters": [],
+      "minimum_detected_before_geometric_headroom_m": null,
+      "minimum_against_r8_stair_above_m": 4.820000000000001,
+      "before_status": "PASS_CONDITIONAL",
+      "after_status": "PASS_CONDITIONAL",
+      "proposed_tread_body_overlap": [],
+      "openings": {}
+    },
+    {
+      "core": "D",
+      "from_floor": "2F",
+      "to_floor": "3F",
+      "physical_collision": [
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F4 tread 07",
+          "xy": [
+            -5.5275,
+            -14.3
+          ],
+          "overlap_m2": 0.33443400000000256,
+          "depth_m": 0.1432571428571432,
+          "estimated_volume_m3": 0.04791005931428619
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F4 tread 08",
+          "xy": [
+            -5.5275,
+            -14.02
+          ],
+          "overlap_m2": 0.33443400000000256,
+          "depth_m": 0.17999999999999972,
+          "estimated_volume_m3": 0.06019812000000037
+        }
+      ],
+      "insufficient_headroom": [
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F2 upper extension",
+          "xy": [
+            -8.1475,
+            -16.3325
+          ],
+          "headroom_m": 1.9995999999999992,
+          "headroom_deficit_m": 0.10040000000000093,
+          "xy_overlap_m2": 0.5088689999999985,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F2 landing",
+          "xy": [
+            -8.1475,
+            -17.1475
+          ],
+          "headroom_m": 1.9995999999999992,
+          "headroom_deficit_m": 0.10040000000000093,
+          "xy_overlap_m2": 1.4472089999999953,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F3 lower extension",
+          "xy": [
+            -7.47125,
+            -17.1475
+          ],
+          "headroom_m": 1.9995999999999992,
+          "headroom_deficit_m": 0.10040000000000093,
+          "xy_overlap_m2": 0.17503649999999854,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F3 tread 01",
+          "xy": [
+            -7.2575,
+            -17.1475
+          ],
+          "headroom_m": 1.8210285714285703,
+          "headroom_deficit_m": 0.27897142857142976,
+          "xy_overlap_m2": 0.33443399999999834,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F3 tread 02",
+          "xy": [
+            -6.9775,
+            -17.1475
+          ],
+          "headroom_m": 1.6424571428571415,
+          "headroom_deficit_m": 0.4575428571428586,
+          "xy_overlap_m2": 0.33443399999999834,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F3 tread 03",
+          "xy": [
+            -6.6975,
+            -17.1475
+          ],
+          "headroom_m": 1.4638857142857127,
+          "headroom_deficit_m": 0.6361142857142874,
+          "xy_overlap_m2": 0.33443399999999834,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F3 tread 04",
+          "xy": [
+            -6.4175,
+            -17.1475
+          ],
+          "headroom_m": 1.2853142857142856,
+          "headroom_deficit_m": 0.8146857142857145,
+          "xy_overlap_m2": 0.33443399999999834,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F3 upper extension",
+          "xy": [
+            -6.20375,
+            -17.1475
+          ],
+          "headroom_m": 1.1067428571428568,
+          "headroom_deficit_m": 0.9932571428571433,
+          "xy_overlap_m2": 0.17503649999999854,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F3 landing",
+          "xy": [
+            -5.5275,
+            -17.1475
+          ],
+          "headroom_m": 1.1067428571428568,
+          "headroom_deficit_m": 0.9932571428571433,
+          "xy_overlap_m2": 1.4472089999999942,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F4 lower extension",
+          "xy": [
+            -5.5275,
+            -16.3325
+          ],
+          "headroom_m": 1.1067428571428568,
+          "headroom_deficit_m": 0.9932571428571433,
+          "xy_overlap_m2": 0.5088689999999977,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F4 tread 01",
+          "xy": [
+            -5.5275,
+            -15.98
+          ],
+          "headroom_m": 0.928171428571428,
+          "headroom_deficit_m": 1.171828571428572,
+          "xy_overlap_m2": 0.3344340000000004,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F4 tread 02",
+          "xy": [
+            -5.5275,
+            -15.7
+          ],
+          "headroom_m": 0.7495999999999992,
+          "headroom_deficit_m": 1.350400000000001,
+          "xy_overlap_m2": 0.33443400000000256,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F4 tread 03",
+          "xy": [
+            -5.5275,
+            -15.42
+          ],
+          "headroom_m": 0.5710285714285703,
+          "headroom_deficit_m": 1.5289714285714298,
+          "xy_overlap_m2": 0.33443400000000256,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F4 tread 04",
+          "xy": [
+            -5.5275,
+            -15.14
+          ],
+          "headroom_m": 0.3924571428571433,
+          "headroom_deficit_m": 1.7075428571428568,
+          "xy_overlap_m2": 0.33443400000000256,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F4 tread 05",
+          "xy": [
+            -5.5275,
+            -14.86
+          ],
+          "headroom_m": 0.21388571428571446,
+          "headroom_deficit_m": 1.8861142857142856,
+          "xy_overlap_m2": 0.33443400000000256,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_3F",
+          "foot": "F4 tread 06",
+          "xy": [
+            -5.5275,
+            -14.58
+          ],
+          "headroom_m": 0.03531428571428563,
+          "headroom_deficit_m": 2.0646857142857145,
+          "xy_overlap_m2": 0.33443400000000256,
+          "section_stability": true
+        }
+      ],
+      "proxy_overlap_is_ignored": true,
+      "proxy_area_m2": 36.019757215000006,
+      "bbox_only_secondary_filters": [],
+      "minimum_detected_before_geometric_headroom_m": 0.03531428571428563,
+      "minimum_against_r8_stair_above_m": 4.820000000000001,
+      "before_status": "FAIL",
+      "after_status": "PASS_CONDITIONAL",
+      "proposed_tread_body_overlap": [],
+      "openings": {
+        "A-FLOR_s7_3F": {
+          "label": "SLAB 3F D",
+          "plan_m": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -8.8,
+                  -17.8
+                ],
+                [
+                  -8.800000000000002,
+                  -16.069999999999997
+                ],
+                [
+                  -7.495000000000001,
+                  -16.069999999999997
+                ],
+                [
+                  -7.495000000000001,
+                  -16.495
+                ],
+                [
+                  -6.18,
+                  -16.495
+                ],
+                [
+                  -6.18,
+                  -13.829999999999995
+                ],
+                [
+                  -4.875,
+                  -13.829999999999995
+                ],
+                [
+                  -4.875,
+                  -17.8
+                ],
+                [
+                  -8.8,
+                  -17.8
+                ]
+              ]
+            ]
+          },
+          "removed_polygon_m": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -8.800000000000002,
+                  -16.069999999999997
+                ],
+                [
+                  -7.495000000000001,
+                  -16.069999999999997
+                ],
+                [
+                  -7.495000000000001,
+                  -16.495
+                ],
+                [
+                  -6.18,
+                  -16.495
+                ],
+                [
+                  -6.18,
+                  -13.829999999999995
+                ],
+                [
+                  -4.875,
+                  -13.829999999999995
+                ],
+                [
+                  -4.875,
+                  -17.8
+                ],
+                [
+                  -8.8,
+                  -17.8
+                ],
+                [
+                  -8.800000000000002,
+                  -16.069999999999997
+                ]
+              ]
+            ]
+          },
+          "floor": "3F",
+          "elevation_interval_m": [
+            10.5,
+            11.000391960144043
+          ],
+          "bounds_m": [
+            -8.8,
+            -17.8,
+            -4.875,
+            -13.83
+          ],
+          "minimum_hit_area_m2": 8.332575000000002,
+          "study_opening_area_m2": 9.154575000000015,
+          "removed_area_m2": 9.154575000000015,
+          "source_floor_projection_area_m2": 2449.572101755,
+          "removed_ratio_pct": 0.37372139376674013,
+          "nearest_column_distance_and_id": null,
+          "max_remaining_tested_hit_area_m2": 0.0,
+          "slab_cross_section_consistent": true,
+          "beams_and_reinforcement": "UNVERIFIED; available GLB does not resolve framing"
+        }
+      }
+    },
+    {
+      "core": "D",
+      "from_floor": "6F",
+      "to_floor": "7F",
+      "physical_collision": [],
+      "insufficient_headroom": [],
+      "proxy_overlap_is_ignored": true,
+      "proxy_area_m2": 36.01965958500001,
+      "bbox_only_secondary_filters": [],
+      "minimum_detected_before_geometric_headroom_m": null,
+      "minimum_against_r8_stair_above_m": 4.819400000000002,
+      "before_status": "PASS_CONDITIONAL",
+      "after_status": "PASS_CONDITIONAL",
+      "proposed_tread_body_overlap": [],
+      "openings": {}
+    },
+    {
+      "core": "D",
+      "from_floor": "7F",
+      "to_floor": "8F",
+      "physical_collision": [
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F4 tread 07",
+          "xy": [
+            -5.5275,
+            -14.3
+          ],
+          "overlap_m2": 0.33443400000000256,
+          "depth_m": 0.14330000000000354,
+          "estimated_volume_m3": 0.047924392200001546
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F4 tread 08",
+          "xy": [
+            -5.5275,
+            -14.02
+          ],
+          "overlap_m2": 0.33443400000000256,
+          "depth_m": 0.17999999999999972,
+          "estimated_volume_m3": 0.06019812000000037
+        }
+      ],
+      "insufficient_headroom": [
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F2 upper extension",
+          "xy": [
+            -8.1475,
+            -16.3325
+          ],
+          "headroom_m": 1.999299999999998,
+          "headroom_deficit_m": 0.10070000000000201,
+          "xy_overlap_m2": 0.5088689999999985,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F2 landing",
+          "xy": [
+            -8.1475,
+            -17.1475
+          ],
+          "headroom_m": 1.999299999999998,
+          "headroom_deficit_m": 0.10070000000000201,
+          "xy_overlap_m2": 1.4472089999999953,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F3 lower extension",
+          "xy": [
+            -7.47125,
+            -17.1475
+          ],
+          "headroom_m": 1.999299999999998,
+          "headroom_deficit_m": 0.10070000000000201,
+          "xy_overlap_m2": 0.17503649999999854,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F3 tread 01",
+          "xy": [
+            -7.2575,
+            -17.1475
+          ],
+          "headroom_m": 1.8207499999999968,
+          "headroom_deficit_m": 0.27925000000000333,
+          "xy_overlap_m2": 0.33443399999999834,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F3 tread 02",
+          "xy": [
+            -6.9775,
+            -17.1475
+          ],
+          "headroom_m": 1.6421999999999954,
+          "headroom_deficit_m": 0.45780000000000465,
+          "xy_overlap_m2": 0.33443399999999834,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F3 tread 03",
+          "xy": [
+            -6.6975,
+            -17.1475
+          ],
+          "headroom_m": 1.4636500000000012,
+          "headroom_deficit_m": 0.6363499999999989,
+          "xy_overlap_m2": 0.33443399999999834,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F3 tread 04",
+          "xy": [
+            -6.4175,
+            -17.1475
+          ],
+          "headroom_m": 1.2851,
+          "headroom_deficit_m": 0.8149000000000002,
+          "xy_overlap_m2": 0.33443399999999834,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F3 upper extension",
+          "xy": [
+            -6.20375,
+            -17.1475
+          ],
+          "headroom_m": 1.1065499999999986,
+          "headroom_deficit_m": 0.9934500000000015,
+          "xy_overlap_m2": 0.17503649999999854,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F3 landing",
+          "xy": [
+            -5.5275,
+            -17.1475
+          ],
+          "headroom_m": 1.1065499999999986,
+          "headroom_deficit_m": 0.9934500000000015,
+          "xy_overlap_m2": 1.4472089999999942,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F4 lower extension",
+          "xy": [
+            -5.5275,
+            -16.3325
+          ],
+          "headroom_m": 1.1065499999999986,
+          "headroom_deficit_m": 0.9934500000000015,
+          "xy_overlap_m2": 0.5088689999999977,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F4 tread 01",
+          "xy": [
+            -5.5275,
+            -15.98
+          ],
+          "headroom_m": 0.9279999999999973,
+          "headroom_deficit_m": 1.1720000000000028,
+          "xy_overlap_m2": 0.3344340000000004,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F4 tread 02",
+          "xy": [
+            -5.5275,
+            -15.7
+          ],
+          "headroom_m": 0.749449999999996,
+          "headroom_deficit_m": 1.3505500000000041,
+          "xy_overlap_m2": 0.33443400000000256,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F4 tread 03",
+          "xy": [
+            -5.5275,
+            -15.42
+          ],
+          "headroom_m": 0.5709000000000017,
+          "headroom_deficit_m": 1.5290999999999983,
+          "xy_overlap_m2": 0.33443400000000256,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F4 tread 04",
+          "xy": [
+            -5.5275,
+            -15.14
+          ],
+          "headroom_m": 0.3923500000000004,
+          "headroom_deficit_m": 1.7076499999999997,
+          "xy_overlap_m2": 0.33443400000000256,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F4 tread 05",
+          "xy": [
+            -5.5275,
+            -14.86
+          ],
+          "headroom_m": 0.2137999999999991,
+          "headroom_deficit_m": 1.886200000000001,
+          "xy_overlap_m2": 0.33443400000000256,
+          "section_stability": true
+        },
+        {
+          "slab": "A-FLOR_s7_8F",
+          "foot": "F4 tread 06",
+          "xy": [
+            -5.5275,
+            -14.58
+          ],
+          "headroom_m": 0.03524999999999778,
+          "headroom_deficit_m": 2.0647500000000023,
+          "xy_overlap_m2": 0.33443400000000256,
+          "section_stability": true
+        }
+      ],
+      "proxy_overlap_is_ignored": true,
+      "proxy_area_m2": 36.019485335,
+      "bbox_only_secondary_filters": [],
+      "minimum_detected_before_geometric_headroom_m": 0.03524999999999778,
+      "minimum_against_r8_stair_above_m": 4.819399999999998,
+      "before_status": "FAIL",
+      "after_status": "PASS_CONDITIONAL",
+      "proposed_tread_body_overlap": [],
+      "openings": {
+        "A-FLOR_s7_8F": {
+          "label": "SLAB 8F D",
+          "plan_m": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -8.8,
+                  -17.8
+                ],
+                [
+                  -8.800000000000002,
+                  -16.069999999999997
+                ],
+                [
+                  -7.495000000000001,
+                  -16.069999999999997
+                ],
+                [
+                  -7.495000000000001,
+                  -16.495
+                ],
+                [
+                  -6.18,
+                  -16.495
+                ],
+                [
+                  -6.18,
+                  -13.829999999999995
+                ],
+                [
+                  -4.875,
+                  -13.829999999999995
+                ],
+                [
+                  -4.875,
+                  -17.8
+                ],
+                [
+                  -8.8,
+                  -17.8
+                ]
+              ]
+            ]
+          },
+          "removed_polygon_m": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -8.800000000000002,
+                  -16.069999999999997
+                ],
+                [
+                  -7.495000000000001,
+                  -16.069999999999997
+                ],
+                [
+                  -7.495000000000001,
+                  -16.495
+                ],
+                [
+                  -6.18,
+                  -16.495
+                ],
+                [
+                  -6.18,
+                  -13.829999999999995
+                ],
+                [
+                  -4.875,
+                  -13.829999999999995
+                ],
+                [
+                  -4.875,
+                  -17.8
+                ],
+                [
+                  -8.8,
+                  -17.8
+                ],
+                [
+                  -8.800000000000002,
+                  -16.069999999999997
+                ]
+              ]
+            ]
+          },
+          "floor": "8F",
+          "elevation_interval_m": [
+            35.5,
+            36.00039291381836
+          ],
+          "bounds_m": [
+            -8.8,
+            -17.8,
+            -4.875,
+            -13.83
+          ],
+          "minimum_hit_area_m2": 8.332575000000002,
+          "study_opening_area_m2": 9.154575000000015,
+          "removed_area_m2": 9.154575000000015,
+          "source_floor_projection_area_m2": 2339.3360562199996,
+          "removed_ratio_pct": 0.39133218913371404,
+          "nearest_column_distance_and_id": null,
+          "max_remaining_tested_hit_area_m2": 0.0,
+          "slab_cross_section_consistent": true,
+          "beams_and_reinforcement": "UNVERIFIED; available GLB does not resolve framing"
+        }
+      }
+    }
+  ],
+  "approved_1F_interface": {
+    "C": {
+      "grade": "MODEL_VERIFIED geometry only",
+      "translation_m": [
+        -9.0,
+        -18.0
+      ],
+      "approved_flight_top_levels_m": [
+        1.0588239431381226,
+        3.176470994949341,
+        4.235293865203857,
+        6.0
+      ],
+      "R8_flight_landing_levels_m": [
+        1.0592235294117647,
+        3.0004,
+        4.0592235294117645,
+        6.0004
+      ],
+      "2F_receiver_xy_m": [
+        40.925,
+        -13.455,
+        42.13,
+        -12.25
+      ],
+      "2F_receiving_edge_plan_gap_m": 0.0,
+      "2F_flight4_to_landing_edge_length_m": 1.2005000000000052,
+      "2F_top_level_difference_m": 0.00039999999999995595,
+      "receiving_interface": "PASS_CONDITIONAL: geometric level and edge registration",
+      "combined_flight_stack": "BLOCKED_USER_DECISION: overlapping incompatible 1F-2F alternatives; approved master unchanged"
+    },
+    "D": {
+      "grade": "MODEL_VERIFIED geometry only",
+      "translation_m": [
+        -9.0,
+        -18.0
+      ],
+      "approved_flight_top_levels_m": [
+        1.0588239431381226,
+        3.176470994949341,
+        4.235293865203857,
+        6.0
+      ],
+      "R8_flight_landing_levels_m": [
+        1.0592235294117647,
+        3.0004,
+        4.0592235294117645,
+        6.0004
+      ],
+      "2F_receiver_xy_m": [
+        -6.13,
+        -13.455,
+        -4.925,
+        -12.25
+      ],
+      "2F_receiving_edge_plan_gap_m": 0.0,
+      "2F_flight4_to_landing_edge_length_m": 1.2005,
+      "2F_top_level_difference_m": 0.00039999999999995595,
+      "receiving_interface": "PASS_CONDITIONAL: geometric level and edge registration",
+      "combined_flight_stack": "BLOCKED_USER_DECISION: overlapping incompatible 1F-2F alternatives; approved master unchanged"
+    }
+  },
+  "staircase": {
+    "C 1F-2F": {
+      "risers": [
+        6,
+        11,
+        6,
+        11
+      ],
+      "riser_mm": 176.47058823529412,
+      "going_mm": 280.0,
+      "tread_count": 30,
+      "joins": true,
+      "floor_to_floor_m": 6.0,
+      "clear_width_m": 1.205,
+      "landing_elevations_m": [
+        1.0592235294117647,
+        3.0004,
+        4.0592235294117645,
+        6.0004
+      ],
+      "stage": "PASS_CONDITIONAL",
+      "installed_research_proposal_post_opening": "PASS_CONDITIONAL"
+    },
+    "C 2F-3F": {
+      "risers": [
+        5,
+        9,
+        5,
+        9
+      ],
+      "riser_mm": 178.5714285714286,
+      "going_mm": 280.0,
+      "tread_count": 24,
+      "joins": true,
+      "floor_to_floor_m": 5.000000000000001,
+      "clear_width_m": 1.205,
+      "landing_elevations_m": [
+        6.893257142857143,
+        8.5004,
+        9.393257142857143,
+        11.0004
+      ],
+      "stage": "PASS_CONDITIONAL",
+      "installed_research_proposal_post_opening": "PASS_CONDITIONAL"
+    },
+    "C 6F-7F": {
+      "risers": [
+        5,
+        9,
+        5,
+        9
+      ],
+      "riser_mm": 178.5928571428572,
+      "going_mm": 280.0,
+      "tread_count": 24,
+      "joins": true,
+      "floor_to_floor_m": 5.000600000000002,
+      "clear_width_m": 1.205,
+      "landing_elevations_m": [
+        26.893364285714284,
+        28.5007,
+        29.393664285714287,
+        31.001
+      ],
+      "stage": "PASS_CONDITIONAL",
+      "installed_research_proposal_post_opening": "PASS_CONDITIONAL"
+    },
+    "C 7F-8F": {
+      "risers": [
+        5,
+        9,
+        5,
+        9
+      ],
+      "riser_mm": 178.54999999999993,
+      "going_mm": 280.0,
+      "tread_count": 24,
+      "joins": true,
+      "floor_to_floor_m": 4.999399999999998,
+      "clear_width_m": 1.205,
+      "landing_elevations_m": [
+        31.89375,
+        33.5007,
+        34.39345,
+        36.0004
+      ],
+      "stage": "PASS_CONDITIONAL",
+      "installed_research_proposal_post_opening": "PASS_CONDITIONAL"
+    },
+    "D 1F-2F": {
+      "risers": [
+        6,
+        11,
+        6,
+        11
+      ],
+      "riser_mm": 176.47058823529412,
+      "going_mm": 280.0,
+      "tread_count": 30,
+      "joins": true,
+      "floor_to_floor_m": 6.0,
+      "clear_width_m": 1.205,
+      "landing_elevations_m": [
+        1.0592235294117647,
+        3.0004,
+        4.0592235294117645,
+        6.0004
+      ],
+      "stage": "PASS_CONDITIONAL",
+      "installed_research_proposal_post_opening": "PASS_CONDITIONAL"
+    },
+    "D 2F-3F": {
+      "risers": [
+        5,
+        9,
+        5,
+        9
+      ],
+      "riser_mm": 178.5714285714286,
+      "going_mm": 280.0,
+      "tread_count": 24,
+      "joins": true,
+      "floor_to_floor_m": 5.000000000000001,
+      "clear_width_m": 1.205,
+      "landing_elevations_m": [
+        6.893257142857143,
+        8.5004,
+        9.393257142857143,
+        11.0004
+      ],
+      "stage": "PASS_CONDITIONAL",
+      "installed_research_proposal_post_opening": "PASS_CONDITIONAL"
+    },
+    "D 6F-7F": {
+      "risers": [
+        5,
+        9,
+        5,
+        9
+      ],
+      "riser_mm": 178.5928571428572,
+      "going_mm": 280.0,
+      "tread_count": 24,
+      "joins": true,
+      "floor_to_floor_m": 5.000600000000002,
+      "clear_width_m": 1.205,
+      "landing_elevations_m": [
+        26.893364285714284,
+        28.5007,
+        29.393664285714287,
+        31.001
+      ],
+      "stage": "PASS_CONDITIONAL",
+      "installed_research_proposal_post_opening": "PASS_CONDITIONAL"
+    },
+    "D 7F-8F": {
+      "risers": [
+        5,
+        9,
+        5,
+        9
+      ],
+      "riser_mm": 178.54999999999993,
+      "going_mm": 280.0,
+      "tread_count": 24,
+      "joins": true,
+      "floor_to_floor_m": 4.999399999999998,
+      "clear_width_m": 1.205,
+      "landing_elevations_m": [
+        31.89375,
+        33.5007,
+        34.39345,
+        36.0004
+      ],
+      "stage": "PASS_CONDITIONAL",
+      "installed_research_proposal_post_opening": "PASS_CONDITIONAL"
+    }
+  },
+  "method": "Actual triangle slices; intersect solid plan sections with modeled tread solids and vertical 2.10 m headroom. Core mass is a documented representation proxy."
+}

@@ -1,0 +1,650 @@
+{
+  "results": {
+    "2F D": {
+      "case": "2F D",
+      "waiting_center_xy_m": [
+        -4.0125,
+        -15.0
+      ],
+      "rail_band_z_m": [
+        6.0203999999999995,
+        8.1004
+      ],
+      "included_guard_triangles": [
+        "STAIR D 1F-2F F4 rail -1",
+        "STAIR D 1F-2F F4 rail +1",
+        "STAIR D 2F-3F F1 rail -1",
+        "STAIR D 2F-3F F1 rail +1",
+        "STAIR D 2F-3F F2 rail -1",
+        "STAIR D 2F-3F F2 rail +1",
+        "RETURN 2F D 1",
+        "RETURN 2F D 2",
+        "LANDING WING GUARD 2F D",
+        "2F D E2 guard 1",
+        "2F D E2 guard 2"
+      ],
+      "assumptions": [
+        {
+          "frame_mm": 35.0,
+          "tolerance_per_side_mm": 0.0,
+          "leaf_mm": 45,
+          "fixed_test_disc_mm": 1200,
+          "stages": [
+            {
+              "stage": "range_outside_both_continuous_leaf_sweeps",
+              "from_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "to_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "external_open_internal_closed_to_wait",
+              "from_xy_m": [
+                -4.2,
+                5.95
+              ],
+              "to_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "external_closed_internal_open_to_landing",
+              "from_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "to_xy_m": [
+                -5.55,
+                -12.925
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "both_open_slab_to_landing",
+              "from_xy_m": [
+                -4.2,
+                5.95
+              ],
+              "to_xy_m": [
+                -5.55,
+                -12.925
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            }
+          ],
+          "single_person_sequence_pass": true
+        },
+        {
+          "frame_mm": 35.0,
+          "tolerance_per_side_mm": 5.0,
+          "leaf_mm": 45,
+          "fixed_test_disc_mm": 1200,
+          "stages": [
+            {
+              "stage": "range_outside_both_continuous_leaf_sweeps",
+              "from_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "to_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "external_open_internal_closed_to_wait",
+              "from_xy_m": [
+                -4.2,
+                5.95
+              ],
+              "to_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "external_closed_internal_open_to_landing",
+              "from_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "to_xy_m": [
+                -5.55,
+                -12.925
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "both_open_slab_to_landing",
+              "from_xy_m": [
+                -4.2,
+                5.95
+              ],
+              "to_xy_m": [
+                -5.55,
+                -12.925
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            }
+          ],
+          "single_person_sequence_pass": true
+        },
+        {
+          "frame_mm": 45.0,
+          "tolerance_per_side_mm": 10.0,
+          "leaf_mm": 45,
+          "fixed_test_disc_mm": 1200,
+          "stages": [
+            {
+              "stage": "range_outside_both_continuous_leaf_sweeps",
+              "from_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "to_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "external_open_internal_closed_to_wait",
+              "from_xy_m": [
+                -4.2,
+                5.95
+              ],
+              "to_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "external_closed_internal_open_to_landing",
+              "from_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "to_xy_m": [
+                -5.55,
+                -12.925
+              ],
+              "pass": false,
+              "failure_boundary_witness_xy_m": [
+                -4.7998248,
+                -12.9657588
+              ]
+            },
+            {
+              "stage": "both_open_slab_to_landing",
+              "from_xy_m": [
+                -4.2,
+                5.95
+              ],
+              "to_xy_m": [
+                -5.55,
+                -12.925
+              ],
+              "pass": false,
+              "failure_boundary_witness_xy_m": [
+                -4.7998248,
+                -12.9657588
+              ]
+            }
+          ],
+          "single_person_sequence_pass": false
+        }
+      ]
+    },
+    "7F D": {
+      "case": "7F D",
+      "waiting_center_xy_m": [
+        -4.0125,
+        -15.0
+      ],
+      "rail_band_z_m": [
+        31.021,
+        33.101
+      ],
+      "included_guard_triangles": [
+        "STAIR D 6F-7F F4 rail -1",
+        "STAIR D 6F-7F F4 rail +1",
+        "STAIR D 7F-8F F1 rail -1",
+        "STAIR D 7F-8F F1 rail +1",
+        "STAIR D 7F-8F F2 rail -1",
+        "STAIR D 7F-8F F2 rail +1",
+        "RETURN 7F D 1",
+        "RETURN 7F D 2",
+        "LANDING WING GUARD 7F D",
+        "7F D E2 guard 1",
+        "7F D E2 guard 2"
+      ],
+      "assumptions": [
+        {
+          "frame_mm": 35.0,
+          "tolerance_per_side_mm": 0.0,
+          "leaf_mm": 45,
+          "fixed_test_disc_mm": 1200,
+          "stages": [
+            {
+              "stage": "range_outside_both_continuous_leaf_sweeps",
+              "from_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "to_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "external_open_internal_closed_to_wait",
+              "from_xy_m": [
+                -4.2,
+                5.95
+              ],
+              "to_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "external_closed_internal_open_to_landing",
+              "from_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "to_xy_m": [
+                -5.55,
+                -13.065
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "both_open_slab_to_landing",
+              "from_xy_m": [
+                -4.2,
+                5.95
+              ],
+              "to_xy_m": [
+                -5.55,
+                -13.065
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            }
+          ],
+          "single_person_sequence_pass": true
+        },
+        {
+          "frame_mm": 35.0,
+          "tolerance_per_side_mm": 5.0,
+          "leaf_mm": 45,
+          "fixed_test_disc_mm": 1200,
+          "stages": [
+            {
+              "stage": "range_outside_both_continuous_leaf_sweeps",
+              "from_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "to_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "external_open_internal_closed_to_wait",
+              "from_xy_m": [
+                -4.2,
+                5.95
+              ],
+              "to_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "external_closed_internal_open_to_landing",
+              "from_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "to_xy_m": [
+                -5.55,
+                -13.065
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "both_open_slab_to_landing",
+              "from_xy_m": [
+                -4.2,
+                5.95
+              ],
+              "to_xy_m": [
+                -5.55,
+                -13.065
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            }
+          ],
+          "single_person_sequence_pass": true
+        },
+        {
+          "frame_mm": 45.0,
+          "tolerance_per_side_mm": 10.0,
+          "leaf_mm": 45,
+          "fixed_test_disc_mm": 1200,
+          "stages": [
+            {
+              "stage": "range_outside_both_continuous_leaf_sweeps",
+              "from_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "to_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "external_open_internal_closed_to_wait",
+              "from_xy_m": [
+                -4.2,
+                5.95
+              ],
+              "to_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "external_closed_internal_open_to_landing",
+              "from_xy_m": [
+                -4.0125,
+                -15.0
+              ],
+              "to_xy_m": [
+                -5.55,
+                -13.065
+              ],
+              "pass": false,
+              "failure_boundary_witness_xy_m": [
+                -4.7998248,
+                -12.9657588
+              ]
+            },
+            {
+              "stage": "both_open_slab_to_landing",
+              "from_xy_m": [
+                -4.2,
+                5.95
+              ],
+              "to_xy_m": [
+                -5.55,
+                -13.065
+              ],
+              "pass": false,
+              "failure_boundary_witness_xy_m": [
+                -4.7998248,
+                -12.9657588
+              ]
+            }
+          ],
+          "single_person_sequence_pass": false
+        }
+      ]
+    },
+    "7F C": {
+      "case": "7F C",
+      "waiting_center_xy_m": [
+        40.0125,
+        -15.0
+      ],
+      "rail_band_z_m": [
+        31.021,
+        33.101
+      ],
+      "included_guard_triangles": [
+        "STAIR C 6F-7F F4 rail -1",
+        "STAIR C 6F-7F F4 rail +1",
+        "STAIR C 7F-8F F1 rail -1",
+        "STAIR C 7F-8F F1 rail +1",
+        "STAIR C 7F-8F F2 rail -1",
+        "STAIR C 7F-8F F2 rail +1",
+        "RETURN 7F C 1",
+        "RETURN 7F C 2",
+        "LANDING WING GUARD 7F C",
+        "7F C E2 guard 1",
+        "7F C E2 guard 2"
+      ],
+      "assumptions": [
+        {
+          "frame_mm": 35.0,
+          "tolerance_per_side_mm": 0.0,
+          "leaf_mm": 45,
+          "fixed_test_disc_mm": 1200,
+          "stages": [
+            {
+              "stage": "range_outside_both_continuous_leaf_sweeps",
+              "from_xy_m": [
+                40.0125,
+                -15.0
+              ],
+              "to_xy_m": [
+                40.0125,
+                -15.0
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "external_open_internal_closed_to_wait",
+              "from_xy_m": [
+                40.2,
+                5.95
+              ],
+              "to_xy_m": [
+                40.0125,
+                -15.0
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "external_closed_internal_open_to_landing",
+              "from_xy_m": [
+                40.0125,
+                -15.0
+              ],
+              "to_xy_m": [
+                41.55,
+                -13.065
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "both_open_slab_to_landing",
+              "from_xy_m": [
+                40.2,
+                5.95
+              ],
+              "to_xy_m": [
+                41.55,
+                -13.065
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            }
+          ],
+          "single_person_sequence_pass": true
+        },
+        {
+          "frame_mm": 35.0,
+          "tolerance_per_side_mm": 5.0,
+          "leaf_mm": 45,
+          "fixed_test_disc_mm": 1200,
+          "stages": [
+            {
+              "stage": "range_outside_both_continuous_leaf_sweeps",
+              "from_xy_m": [
+                40.0125,
+                -15.0
+              ],
+              "to_xy_m": [
+                40.0125,
+                -15.0
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "external_open_internal_closed_to_wait",
+              "from_xy_m": [
+                40.2,
+                5.95
+              ],
+              "to_xy_m": [
+                40.0125,
+                -15.0
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "external_closed_internal_open_to_landing",
+              "from_xy_m": [
+                40.0125,
+                -15.0
+              ],
+              "to_xy_m": [
+                41.55,
+                -13.065
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "both_open_slab_to_landing",
+              "from_xy_m": [
+                40.2,
+                5.95
+              ],
+              "to_xy_m": [
+                41.55,
+                -13.065
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            }
+          ],
+          "single_person_sequence_pass": true
+        },
+        {
+          "frame_mm": 45.0,
+          "tolerance_per_side_mm": 10.0,
+          "leaf_mm": 45,
+          "fixed_test_disc_mm": 1200,
+          "stages": [
+            {
+              "stage": "range_outside_both_continuous_leaf_sweeps",
+              "from_xy_m": [
+                40.0125,
+                -15.0
+              ],
+              "to_xy_m": [
+                40.0125,
+                -15.0
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "external_open_internal_closed_to_wait",
+              "from_xy_m": [
+                40.2,
+                5.95
+              ],
+              "to_xy_m": [
+                40.0125,
+                -15.0
+              ],
+              "pass": true,
+              "failure_boundary_witness_xy_m": null
+            },
+            {
+              "stage": "external_closed_internal_open_to_landing",
+              "from_xy_m": [
+                40.0125,
+                -15.0
+              ],
+              "to_xy_m": [
+                41.55,
+                -13.065
+              ],
+              "pass": false,
+              "failure_boundary_witness_xy_m": [
+                40.7998248,
+                -12.9657588
+              ]
+            },
+            {
+              "stage": "both_open_slab_to_landing",
+              "from_xy_m": [
+                40.2,
+                5.95
+              ],
+              "to_xy_m": [
+                41.55,
+                -13.065
+              ],
+              "pass": false,
+              "failure_boundary_witness_xy_m": [
+                40.7998248,
+                -12.9657588
+              ]
+            }
+          ],
+          "single_person_sequence_pass": false
+        }
+      ]
+    }
+  },
+  "scope": "Geometric single 1.2m disc; fixed waiting center. No door actuation/reach force, latency, smoke protection, hardware or simultaneous crowd operation."
+}

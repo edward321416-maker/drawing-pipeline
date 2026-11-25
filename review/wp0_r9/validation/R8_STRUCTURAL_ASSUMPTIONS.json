@@ -1,0 +1,63 @@
+{
+  "status": "BLOCKED_STRUCTURAL_EVIDENCE",
+  "OS1": {
+    "supports": "Proposed interface strips only; real bearings unknown; twin torsion-resistant closed side girders/stiffened box and end diaphragm are a structural concept. No section size assigned.",
+    "geometric_run_m": 17.0,
+    "actual_support_span_m": null,
+    "spine_width_m": 2.4000000000000004,
+    "spine_area_m2": 40.800000000000004,
+    "wrap_area_m2": 16.915,
+    "total_three_decks_area_m2": 173.145,
+    "change_from_R5_m2": 3.2250000000000085,
+    "wrap_centroid_m": [
+      -1.7083160902551975,
+      -13.050852300719283
+    ],
+    "eccentricity_m": 2.4916839097448027,
+    "wrap_transverse_first_moment_m3": 42.14683333333333,
+    "line_load_coefficient": 2.4000000000000004,
+    "reaction_each_q_coefficient": 20.400000000000002,
+    "moment_q_coefficient": 86.70000000000002,
+    "units": "q kN/m²; line kN/m; reaction kN; moment kN·m",
+    "engineering_inputs_missing": [
+      "real supports and as-built framing",
+      "sections and reinforcement",
+      "material grades",
+      "dead/live/guard loads",
+      "torsional rigidity",
+      "deflection",
+      "human induced vibration",
+      "existing slab anchorage",
+      "seismic relative displacement",
+      "rated fire assemblies"
+    ],
+    "status": "BLOCKED_STRUCTURAL_EVIDENCE",
+    "additional_wrap_reaction_core_q_coefficient": 17.960598039215686,
+    "additional_wrap_reaction_slab_q_coefficient": -1.0455980392156867,
+    "total_core_q_coefficient": 38.36059803921569,
+    "total_slab_q_coefficient": 19.354401960784315,
+    "support_line_plane_y_m": [
+      -12.0,
+      5.0
+    ],
+    "side_eccentric_action": "Wrap gravity first moment about bridge axis requires torsion-resisting section/end frame. Signs reverse on C mirror.",
+    "sensitivity_note": "Uniform q, vertical resultant bookkeeping. Does not resolve two support lines into a beam/anchor design, support span is unverified.",
+    "missing_calculation_inputs": [
+      "as-built beam/wall centerlines and sections at three core ends and three slab ends",
+      "slab edge supporting collectors and their continuity",
+      "anchorage and bearing dimensions and reinforcement",
+      "steel/concrete strength and section properties including torsional stiffness",
+      "dead loads, pedestrian traffic load and fatigue/serviceability criteria",
+      "existing capacity and allowable differential movements",
+      "load combinations, wind/seismic movements, fire resistance and connection erection sequence"
+    ]
+  },
+  "OS2": {
+    "status": "NOT_EVALUATED",
+    "reason": "OS1 has insufficient evidence, and has not been technically rejected."
+  },
+  "OS3": {
+    "status": "NOT_EVALUATED",
+    "reason": "No intermediate support modeled. OS1/OS2 rejection and a separate decision would be required."
+  }
+}

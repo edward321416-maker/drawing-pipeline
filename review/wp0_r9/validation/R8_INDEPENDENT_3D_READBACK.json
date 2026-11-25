@@ -1,0 +1,515 @@
+{
+  "cutter_sections": [
+    {
+      "label": "GUARD 2F D",
+      "source": "A-FACD_bal2_rail.003",
+      "sections": [
+        {
+          "z_m": 6.164982891082763,
+          "source_inside_m2": 0.14421494223053488,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 9.846838783866376e-06
+        },
+        {
+          "z_m": 6.549942970275879,
+          "source_inside_m2": 0.1441106982230308,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 2.8011424232232427e-06
+        },
+        {
+          "z_m": 6.9349030494689945,
+          "source_inside_m2": 0.1441541440164098,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 4.645553136980671e-06
+        }
+      ],
+      "pass_geometric_slice": true
+    },
+    {
+      "label": "GUARD 7F D",
+      "source": "A-FACD_valley_handrail_7F.002",
+      "sections": [
+        {
+          "z_m": 32.108980369567874,
+          "source_inside_m2": 0.2403267640525897,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 1.617587241527118e-05
+        },
+        {
+          "z_m": 32.12993812561035,
+          "source_inside_m2": 0.2404614210628559,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 1.740819306492097e-05
+        },
+        {
+          "z_m": 32.15089588165283,
+          "source_inside_m2": 0.2403267572388082,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 2.1050972996520905e-05
+        }
+      ],
+      "pass_geometric_slice": true
+    },
+    {
+      "label": "GUARD 7F D",
+      "source": "A-FACD_valley_rail_7F.002",
+      "sections": [
+        {
+          "z_m": 31.165030670166015,
+          "source_inside_m2": 0.14508701538461646,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 1.3527397853967396e-05
+        },
+        {
+          "z_m": 31.55010223388672,
+          "source_inside_m2": 0.14514228922564035,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 1.1842253549996234e-05
+        },
+        {
+          "z_m": 31.935173797607423,
+          "source_inside_m2": 0.14511526515837087,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 1.4827768561302073e-05
+        }
+      ],
+      "pass_geometric_slice": true
+    },
+    {
+      "label": "GUARD 7F C",
+      "source": "A-FACD_valley_handrail_7F",
+      "sections": [
+        {
+          "z_m": 32.10901412963867,
+          "source_inside_m2": 0.24078166003191603,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 1.809174608269951e-05
+        },
+        {
+          "z_m": 32.13005065917969,
+          "source_inside_m2": 0.24090592275536174,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 1.988614043659866e-05
+        },
+        {
+          "z_m": 32.1510871887207,
+          "source_inside_m2": 0.2407505493480523,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 1.673486726931044e-05
+        }
+      ],
+      "pass_geometric_slice": true
+    },
+    {
+      "label": "GUARD 7F C",
+      "source": "A-FACD_valley_rail_7F",
+      "sections": [
+        {
+          "z_m": 31.165004348754884,
+          "source_inside_m2": 0.14377930313762013,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 1.936933224048178e-05
+        },
+        {
+          "z_m": 31.55001449584961,
+          "source_inside_m2": 0.14351276155038464,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 2.754791806522776e-05
+        },
+        {
+          "z_m": 31.935024642944335,
+          "source_inside_m2": 0.1435928937909405,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 1.8474846468311574e-05
+        }
+      ],
+      "pass_geometric_slice": true
+    },
+    {
+      "label": "SLAB 2F C",
+      "source": "A-FLOR_s7_2F",
+      "sections": [
+        {
+          "z_m": 5.575058794021606,
+          "source_inside_m2": 6.652237499999986,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 0.0
+        },
+        {
+          "z_m": 5.7501959800720215,
+          "source_inside_m2": 6.652237499999986,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 0.0
+        },
+        {
+          "z_m": 5.925333166122437,
+          "source_inside_m2": 6.652237499999986,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 0.0
+        }
+      ],
+      "pass_geometric_slice": true
+    },
+    {
+      "label": "SLAB 3F C",
+      "source": "A-FLOR_s7_3F",
+      "sections": [
+        {
+          "z_m": 10.575058794021606,
+          "source_inside_m2": 9.15457499999999,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 0.0
+        },
+        {
+          "z_m": 10.750195980072021,
+          "source_inside_m2": 9.15457499999999,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 0.0
+        },
+        {
+          "z_m": 10.925333166122437,
+          "source_inside_m2": 9.15457499999999,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 0.0
+        }
+      ],
+      "pass_geometric_slice": true
+    },
+    {
+      "label": "SLAB 8F C",
+      "source": "A-FLOR_s7_8F",
+      "sections": [
+        {
+          "z_m": 35.575058937072754,
+          "source_inside_m2": 9.15457499999999,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 0.0
+        },
+        {
+          "z_m": 35.75019645690918,
+          "source_inside_m2": 9.15457499999999,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 0.0
+        },
+        {
+          "z_m": 35.925333976745605,
+          "source_inside_m2": 9.15457499999999,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 0.0
+        }
+      ],
+      "pass_geometric_slice": true
+    },
+    {
+      "label": "SLAB 3F D",
+      "source": "A-FLOR_s7_3F",
+      "sections": [
+        {
+          "z_m": 10.575058794021606,
+          "source_inside_m2": 9.154575000000015,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 0.0
+        },
+        {
+          "z_m": 10.750195980072021,
+          "source_inside_m2": 9.154575000000015,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 0.0
+        },
+        {
+          "z_m": 10.925333166122437,
+          "source_inside_m2": 9.154575000000015,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 0.0
+        }
+      ],
+      "pass_geometric_slice": true
+    },
+    {
+      "label": "SLAB 8F D",
+      "source": "A-FLOR_s7_8F",
+      "sections": [
+        {
+          "z_m": 35.575058937072754,
+          "source_inside_m2": 9.154575000000015,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 0.0
+        },
+        {
+          "z_m": 35.75019645690918,
+          "source_inside_m2": 9.154575000000015,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 0.0
+        },
+        {
+          "z_m": 35.925333976745605,
+          "source_inside_m2": 9.154575000000015,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 0.0
+        }
+      ],
+      "pass_geometric_slice": true
+    },
+    {
+      "label": "CAPSULE 2F arrive",
+      "source": "A-CORE-TUBE_capW",
+      "sections": [
+        {
+          "z_m": 6.3209,
+          "source_inside_m2": 0.782537493648162,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 1.458800200665145e-05
+        },
+        {
+          "z_m": 7.115399999999999,
+          "source_inside_m2": 0.7825275855267895,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 1.4819292050064352e-05
+        },
+        {
+          "z_m": 7.9098999999999995,
+          "source_inside_m2": 0.7825351221531817,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 1.5728892041770694e-05
+        }
+      ],
+      "pass_geometric_slice": true
+    },
+    {
+      "label": "CAPSULE 2F board",
+      "source": "A-CORE-TUBE_capW",
+      "sections": [
+        {
+          "z_m": 6.3209,
+          "source_inside_m2": 0.782358758149006,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 1.1300193043507632e-05
+        },
+        {
+          "z_m": 7.115399999999999,
+          "source_inside_m2": 0.7823121142333817,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 1.533606375676203e-05
+        },
+        {
+          "z_m": 7.9098999999999995,
+          "source_inside_m2": 0.782333789550286,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 1.2802358501290058e-05
+        }
+      ],
+      "pass_geometric_slice": true
+    },
+    {
+      "label": "CAPSULE 7F arrive",
+      "source": "A-CORE-TUBE_capE",
+      "sections": [
+        {
+          "z_m": 31.3215,
+          "source_inside_m2": 0.8344758773728715,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 1.0812991902714047e-05
+        },
+        {
+          "z_m": 32.116,
+          "source_inside_m2": 0.834468129927246,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 9.721559060932646e-06
+        },
+        {
+          "z_m": 32.910500000000006,
+          "source_inside_m2": 0.834464303070172,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 7.949182493346669e-06
+        }
+      ],
+      "pass_geometric_slice": true
+    },
+    {
+      "label": "CAPSULE 7F board",
+      "source": "A-CORE-TUBE_capE",
+      "sections": [
+        {
+          "z_m": 31.3215,
+          "source_inside_m2": 0.8344566745744727,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 3.8115838871233853e-06
+        },
+        {
+          "z_m": 32.116,
+          "source_inside_m2": 0.8344606425945027,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 2.9885754982695855e-06
+        },
+        {
+          "z_m": 32.910500000000006,
+          "source_inside_m2": 0.8344581855854251,
+          "after_inside_m2": 0.0,
+          "outside_local_footprint_change_m2": 3.132133370398333e-06
+        }
+      ],
+      "pass_geometric_slice": true
+    }
+  ],
+  "boolean_volume_checks": [
+    {
+      "label": "GUARD 2F D",
+      "status": "PASS_VERIFIED",
+      "removed_m3": 0.1585618092951686
+    },
+    {
+      "label": "GUARD 7F D",
+      "status": "PASS_VERIFIED",
+      "removed_m3": 0.014388822372780836
+    },
+    {
+      "label": "GUARD 7F D",
+      "status": "PASS_VERIFIED",
+      "removed_m3": 0.15968702954429537
+    },
+    {
+      "label": "GUARD 7F C",
+      "status": "PASS_VERIFIED",
+      "removed_m3": 0.014469614227718523
+    },
+    {
+      "label": "GUARD 7F C",
+      "status": "PASS_VERIFIED",
+      "removed_m3": 0.15805160053376893
+    },
+    {
+      "label": "SLAB 2F C",
+      "status": "PASS_VERIFIED",
+      "removed_m3": 3.3287254091212617
+    },
+    {
+      "label": "SLAB 3F C",
+      "status": "PASS_VERIFIED",
+      "removed_m3": 4.5808739006245105
+    },
+    {
+      "label": "SLAB 8F C",
+      "status": "PASS_VERIFIED",
+      "removed_m3": 4.5808826311085795
+    },
+    {
+      "label": "SLAB 3F D",
+      "status": "PASS_VERIFIED",
+      "removed_m3": 4.580873887503685
+    },
+    {
+      "label": "SLAB 8F D",
+      "status": "PASS_VERIFIED",
+      "removed_m3": 4.5808826179836615
+    },
+    {
+      "label": "CAPSULE 2F arrive",
+      "status": "PASS_VERIFIED",
+      "removed_m3": 1.7762408860909318
+    },
+    {
+      "label": "CAPSULE 2F board",
+      "status": "PASS_VERIFIED",
+      "removed_m3": 1.775863196835644
+    },
+    {
+      "label": "CAPSULE 7F arrive",
+      "status": "PASS_VERIFIED",
+      "removed_m3": 1.894365407321402
+    },
+    {
+      "label": "CAPSULE 7F board",
+      "status": "PASS_VERIFIED",
+      "removed_m3": 1.8942422599263864
+    }
+  ],
+  "slab_calculated_vs_blender": [
+    {
+      "label": "SLAB 2F C",
+      "approx_triangle_slice_volume_m3": 3.3287261619687007,
+      "measured_blender_boolean_volume_m3": 3.3287254091212617,
+      "absolute_difference_m3": 7.528474390561257e-07,
+      "status": "PASS_VERIFIED"
+    },
+    {
+      "label": "SLAB 3F C",
+      "approx_triangle_slice_volume_m3": 4.580875728535648,
+      "measured_blender_boolean_volume_m3": 4.5808739006245105,
+      "absolute_difference_m3": 1.8279111371199974e-06,
+      "status": "PASS_VERIFIED"
+    },
+    {
+      "label": "SLAB 8F C",
+      "approx_triangle_slice_volume_m3": 4.580884459018702,
+      "measured_blender_boolean_volume_m3": 4.5808826311085795,
+      "absolute_difference_m3": 1.8279101228202421e-06,
+      "status": "PASS_VERIFIED"
+    },
+    {
+      "label": "SLAB 3F D",
+      "approx_triangle_slice_volume_m3": 4.58087572853566,
+      "measured_blender_boolean_volume_m3": 4.580873887503685,
+      "absolute_difference_m3": 1.8410319748696224e-06,
+      "status": "PASS_VERIFIED"
+    },
+    {
+      "label": "SLAB 8F D",
+      "approx_triangle_slice_volume_m3": 4.580884459018715,
+      "measured_blender_boolean_volume_m3": 4.5808826179836615,
+      "absolute_difference_m3": 1.8410350532960251e-06,
+      "status": "PASS_VERIFIED"
+    }
+  ],
+  "remaining_head_and_body_clashes": [
+    {
+      "core": "C",
+      "interval": "1F-2F",
+      "remaining": [],
+      "status": "PASS_CONDITIONAL"
+    },
+    {
+      "core": "C",
+      "interval": "2F-3F",
+      "remaining": [],
+      "status": "PASS_CONDITIONAL"
+    },
+    {
+      "core": "C",
+      "interval": "6F-7F",
+      "remaining": [],
+      "status": "PASS_CONDITIONAL"
+    },
+    {
+      "core": "C",
+      "interval": "7F-8F",
+      "remaining": [],
+      "status": "PASS_CONDITIONAL"
+    },
+    {
+      "core": "D",
+      "interval": "1F-2F",
+      "remaining": [],
+      "status": "PASS_CONDITIONAL"
+    },
+    {
+      "core": "D",
+      "interval": "2F-3F",
+      "remaining": [],
+      "status": "PASS_CONDITIONAL"
+    },
+    {
+      "core": "D",
+      "interval": "6F-7F",
+      "remaining": [],
+      "status": "PASS_CONDITIONAL"
+    },
+    {
+      "core": "D",
+      "interval": "7F-8F",
+      "remaining": [],
+      "status": "PASS_CONDITIONAL"
+    }
+  ],
+  "proposal_nonmanifold_objects": [],
+  "editable_brep_note": "Mesh objects checked; no construction or rated assembly certification"
+}

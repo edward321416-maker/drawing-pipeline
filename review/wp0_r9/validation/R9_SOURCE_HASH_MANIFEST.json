@@ -1,0 +1,793 @@
+{
+  "baseline": "R8 recorded digests, verified from disk at R9 delivery",
+  "checkout_head": "273453f660fdae3150192dcf7e0863a2f469c0a8",
+  "checkout_status": "?? studies/wp0_r7/",
+  "files": [
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\5-2\\설계스튜디오\\중간발표\\07_representation\\render\\out\\GMC-ZZ-ZZ-M3-0701.glb",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "b1927ffd8335853fcdf55f6ec49cee3233465cfc1362295ffa717f214b45ab88",
+      "r9_sha256": "b1927ffd8335853fcdf55f6ec49cee3233465cfc1362295ffa717f214b45ab88",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\00_엔진\\model\\1F_master.blend",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "30da41d693a967f9628da843f5ec6b6be40f410eeaa209c643d1cb8fdb3f1f1e",
+      "r9_sha256": "30da41d693a967f9628da843f5ec6b6be40f410eeaa209c643d1cb8fdb3f1f1e",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\checkout\\engine\\model\\m_1f_source.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "37b9c2d71defe7b28508a7629913f90bec37ddfd595ac343ea569f2253d28368",
+      "r9_sha256": "37b9c2d71defe7b28508a7629913f90bec37ddfd595ac343ea569f2253d28368",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\source_geometry\\model_world.npz",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "992e2ec51ec17dc494ed2f99ddb11298671449dd6661d92df3b3536a0049537b",
+      "r9_sha256": "992e2ec51ec17dc494ed2f99ddb11298671449dd6661d92df3b3536a0049537b",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\source_geometry\\model_objects.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "722dd7359e2f13534ff4ae91088ba8649e8a8f96b27c60f000ddb09c01106488",
+      "r9_sha256": "722dd7359e2f13534ff4ae91088ba8649e8a8f96b27c60f000ddb09c01106488",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\source_geometry\\1F_master_current.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "cb5267d2c1a07971a6ee67a6bbbb1787fd0b136e0166cda5dac3dd817b724e61",
+      "r9_sha256": "cb5267d2c1a07971a6ee67a6bbbb1787fd0b136e0166cda5dac3dd817b724e61",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\source_geometry\\raw_slices\\floor_1F_slice.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "927470bbddc203071cb9a7bfcdde020510ec6ba4e49f0bd9ecef090089bb94d1",
+      "r9_sha256": "927470bbddc203071cb9a7bfcdde020510ec6ba4e49f0bd9ecef090089bb94d1",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\source_geometry\\raw_slices\\floor_2F_slice.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "a80696fe8ff486103cc1192641dbe68eed2d7b7ddcb4458d53ebc8bbe50c523e",
+      "r9_sha256": "a80696fe8ff486103cc1192641dbe68eed2d7b7ddcb4458d53ebc8bbe50c523e",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\source_geometry\\raw_slices\\floor_3F_slice.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "3ac7885576c03f2400cc9289ae2d9e358d18156e97bd8c83d4bb963ca241a829",
+      "r9_sha256": "3ac7885576c03f2400cc9289ae2d9e358d18156e97bd8c83d4bb963ca241a829",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\source_geometry\\raw_slices\\floor_6F_slice.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "1f93e63581edc3b6bf11e91902642c3d4e3c0be42f37af190e0f96dd00990895",
+      "r9_sha256": "1f93e63581edc3b6bf11e91902642c3d4e3c0be42f37af190e0f96dd00990895",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\source_geometry\\raw_slices\\floor_7F_slice.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "db8d579e5916509f9fc0f798a8054bf7e5f6ffa0e5163059ff020291288efbeb",
+      "r9_sha256": "db8d579e5916509f9fc0f798a8054bf7e5f6ffa0e5163059ff020291288efbeb",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\source_geometry\\raw_slices\\floor_8F_slice.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "8650b9823e99097ddcbfee58b36862b58297c9ac5231fa11b6dce8f82c0fd61e",
+      "r9_sha256": "8650b9823e99097ddcbfee58b36862b58297c9ac5231fa11b6dce8f82c0fd61e",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\BR-S2F-D.pdf",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "036b7b8284b6cd3a8a10f39374261a3f90d5e2f41b13ed0d7e40017d15cc31a1",
+      "r9_sha256": "036b7b8284b6cd3a8a10f39374261a3f90d5e2f41b13ed0d7e40017d15cc31a1",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\BR-S2F-D.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "4948d38c291c989f5440f187fd1672fee6f344d3053dd9e9e17331ab063445fe",
+      "r9_sha256": "4948d38c291c989f5440f187fd1672fee6f344d3053dd9e9e17331ab063445fe",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\BR-S2F-D.svg",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "473f25683c423c57df605874efd95f85b49cab3309aa895fbcc827da8186dbaf",
+      "r9_sha256": "473f25683c423c57df605874efd95f85b49cab3309aa895fbcc827da8186dbaf",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\BR-S7F-C.pdf",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "3d43c825630a63636f061a2117af9252a96bdc57bc8447c1546e37c65a24d090",
+      "r9_sha256": "3d43c825630a63636f061a2117af9252a96bdc57bc8447c1546e37c65a24d090",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\BR-S7F-C.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "ed05d746e26cb3ff23093a26fbd6b9c6e41b73396e9ae4d7b74d1904bedad540",
+      "r9_sha256": "ed05d746e26cb3ff23093a26fbd6b9c6e41b73396e9ae4d7b74d1904bedad540",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\BR-S7F-C.svg",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "0c897059df2798d3b2139896ab0ff68a8b9567cd55664ccf1fad1301178aee67",
+      "r9_sha256": "0c897059df2798d3b2139896ab0ff68a8b9567cd55664ccf1fad1301178aee67",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\BR-X7F-C.pdf",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "8919a72dc6da12ea3af39dfeacdf63714ceb1b973c7d228b2571e6ebcf2a4892",
+      "r9_sha256": "8919a72dc6da12ea3af39dfeacdf63714ceb1b973c7d228b2571e6ebcf2a4892",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\BR-X7F-C.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "f65de79ce23ce45b6c9fb40eb9f123a154c37d8ed24a75117a6ae903fc599d6d",
+      "r9_sha256": "f65de79ce23ce45b6c9fb40eb9f123a154c37d8ed24a75117a6ae903fc599d6d",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\BR-X7F-C.svg",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "7e06496eb39dc0106a4585e4d117c0cf0e722c753a64fd1be8003570f9457f9c",
+      "r9_sha256": "7e06496eb39dc0106a4585e4d117c0cf0e722c753a64fd1be8003570f9457f9c",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\DT-CORE.pdf",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "e165513a23cdf37901bc9958ea2a0a0a413af29e497e8655edfa150a93eabb05",
+      "r9_sha256": "e165513a23cdf37901bc9958ea2a0a0a413af29e497e8655edfa150a93eabb05",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\DT-CORE.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "f475bb5dca985f8414fd6bbb58638655bda1e0fb2b74ef5293d779ff27ab4e17",
+      "r9_sha256": "f475bb5dca985f8414fd6bbb58638655bda1e0fb2b74ef5293d779ff27ab4e17",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\DT-CORE.svg",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "da6ae0c1f8d6361ad7fcc50289460c77ea4319b3ccc8f2b4980a7c9d0087ada7",
+      "r9_sha256": "da6ae0c1f8d6361ad7fcc50289460c77ea4319b3ccc8f2b4980a7c9d0087ada7",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\DT-SLAB.pdf",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "31e0d229f15a627f3dd09cea9373e6e5c1dc32ef0249adff199d0ff167b8eb00",
+      "r9_sha256": "31e0d229f15a627f3dd09cea9373e6e5c1dc32ef0249adff199d0ff167b8eb00",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\DT-SLAB.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "3bfd87a9d0b3a8c95bcf9e76014d9d6c475945e8e2ea0b40c5e3ef6a8441b841",
+      "r9_sha256": "3bfd87a9d0b3a8c95bcf9e76014d9d6c475945e8e2ea0b40c5e3ef6a8441b841",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\DT-SLAB.svg",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "a1dc7b2339b2068c6521807ba0c48e78e65daf7323efa3c6f2bd95da9448d258",
+      "r9_sha256": "a1dc7b2339b2068c6521807ba0c48e78e65daf7323efa3c6f2bd95da9448d258",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\P2F-D.pdf",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "37f508f9dcba11e917ecb2f6e41a4d89947ef4bdfad57fbb41548acf817770f6",
+      "r9_sha256": "37f508f9dcba11e917ecb2f6e41a4d89947ef4bdfad57fbb41548acf817770f6",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\P2F-D.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "83c092b7eab49b87b5f7c3a1553b9a4b761f345197d4512dd207506572a1d635",
+      "r9_sha256": "83c092b7eab49b87b5f7c3a1553b9a4b761f345197d4512dd207506572a1d635",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\P2F-D.svg",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "a752ad7bac169a60434ba3f56bd4b8203c2a2e44128e982ac6866f68c03ff8a5",
+      "r9_sha256": "a752ad7bac169a60434ba3f56bd4b8203c2a2e44128e982ac6866f68c03ff8a5",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\P2F.pdf",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "e70ede3628e52f5b8947e7675db666b4bc731794a7f7f5fd6a19af907770bfb0",
+      "r9_sha256": "e70ede3628e52f5b8947e7675db666b4bc731794a7f7f5fd6a19af907770bfb0",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\P2F.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "7c5061b875ab1781cbd089099b7f1edd2d7d067440420f7ecd5fa2b78ad108a9",
+      "r9_sha256": "7c5061b875ab1781cbd089099b7f1edd2d7d067440420f7ecd5fa2b78ad108a9",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\P2F.svg",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "b7000ec1c18f0263a350d409736b763a9a11b2e61732123c4719fe9844fd4bc4",
+      "r9_sha256": "b7000ec1c18f0263a350d409736b763a9a11b2e61732123c4719fe9844fd4bc4",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\P7F-C.pdf",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "f5fa3c25527ab1ce930312cfeae422e941f8aa0be771dcfad4c4faae1b26dad6",
+      "r9_sha256": "f5fa3c25527ab1ce930312cfeae422e941f8aa0be771dcfad4c4faae1b26dad6",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\P7F-C.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "cb239ef24e4cc1f995d301f27f622cb40042bb804def4a93c4d535caea7507d9",
+      "r9_sha256": "cb239ef24e4cc1f995d301f27f622cb40042bb804def4a93c4d535caea7507d9",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\P7F-C.svg",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "4e2d4ccefb2334a81408b5aae846cc40e6ad0337a2a2587dcc17c8fe2b22bef0",
+      "r9_sha256": "4e2d4ccefb2334a81408b5aae846cc40e6ad0337a2a2587dcc17c8fe2b22bef0",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\P7F-D.pdf",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "9aa12e19ed069cb2f37e4341574ed4ff89c56b5433ba7039ba14e5967bb9502a",
+      "r9_sha256": "9aa12e19ed069cb2f37e4341574ed4ff89c56b5433ba7039ba14e5967bb9502a",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\P7F-D.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "c82d2711ab9fd02ec1d6f6fb12cab7bf14dbd53ed5a914e0182bb9546a073dad",
+      "r9_sha256": "c82d2711ab9fd02ec1d6f6fb12cab7bf14dbd53ed5a914e0182bb9546a073dad",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\P7F-D.svg",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "b25d051ba7938cedddc8c61f5cee42867d07e21a539f0817c6fd7ab45b498e43",
+      "r9_sha256": "b25d051ba7938cedddc8c61f5cee42867d07e21a539f0817c6fd7ab45b498e43",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\P7F.pdf",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "ac7ac73eb995481bb77d57782627a0bedd056b620ccacf92077ed068b32fef77",
+      "r9_sha256": "ac7ac73eb995481bb77d57782627a0bedd056b620ccacf92077ed068b32fef77",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\P7F.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "5d0572ed80f9145718a47665bd7875a48eaa1e2e27758d64426e7bf089155878",
+      "r9_sha256": "5d0572ed80f9145718a47665bd7875a48eaa1e2e27758d64426e7bf089155878",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\P7F.svg",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "9687d8e29d1e6b8b31b734c8c5e9a3a2adc8acb1bcda372950d7b1444c3b0a49",
+      "r9_sha256": "9687d8e29d1e6b8b31b734c8c5e9a3a2adc8acb1bcda372950d7b1444c3b0a49",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\ST-P2F-D.pdf",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "7107f3f7ba1e148227fc2615173da07454dea94df96c11c15ad578404c6d0eae",
+      "r9_sha256": "7107f3f7ba1e148227fc2615173da07454dea94df96c11c15ad578404c6d0eae",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\ST-P2F-D.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "64f7f9c558203f65d55c9efa4a9a3324d466ae33ad04970a1db4fd2943de8c65",
+      "r9_sha256": "64f7f9c558203f65d55c9efa4a9a3324d466ae33ad04970a1db4fd2943de8c65",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\ST-P2F-D.svg",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "5ba15cbae98712c6c28ce9b4ccb480cd01fcdf467751e36dba73d9de625cda04",
+      "r9_sha256": "5ba15cbae98712c6c28ce9b4ccb480cd01fcdf467751e36dba73d9de625cda04",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\ST-P7F-C.pdf",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "e3c0bf36ed9c8fb221d9bf1b2d94fdb197fce896bfb8a8bbcc62b123227c5139",
+      "r9_sha256": "e3c0bf36ed9c8fb221d9bf1b2d94fdb197fce896bfb8a8bbcc62b123227c5139",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\ST-P7F-C.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "052c6c805b3175ac785eca3f9b79127290bdd9e870c820c28a02a20aa49cd890",
+      "r9_sha256": "052c6c805b3175ac785eca3f9b79127290bdd9e870c820c28a02a20aa49cd890",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\ST-P7F-C.svg",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "240f61fc3b01b0c473ad562ca8773878522e23614ec5a8fe2967fe3922b1035f",
+      "r9_sha256": "240f61fc3b01b0c473ad562ca8773878522e23614ec5a8fe2967fe3922b1035f",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\ST-S-C.pdf",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "7e4437aa8fd7041c94397a8d09fb2fa4f02304a36f6368172bf04893f68dfbdf",
+      "r9_sha256": "7e4437aa8fd7041c94397a8d09fb2fa4f02304a36f6368172bf04893f68dfbdf",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\ST-S-C.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "bdf1ef374babe8bb645e2877091184c23f16859d3976e364469ef65f4c8b684f",
+      "r9_sha256": "bdf1ef374babe8bb645e2877091184c23f16859d3976e364469ef65f4c8b684f",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\ST-S-C.svg",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "68dc73f20214a568ea849d99a07d7c2162ef6d2ef9abd7e8b99c7476c7e3d0a5",
+      "r9_sha256": "68dc73f20214a568ea849d99a07d7c2162ef6d2ef9abd7e8b99c7476c7e3d0a5",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\ST-S-D.pdf",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "3e2498d7ef6bd22b86da6d59566c9c87c90279b7d1e574925632e31b39524198",
+      "r9_sha256": "3e2498d7ef6bd22b86da6d59566c9c87c90279b7d1e574925632e31b39524198",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\ST-S-D.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "f2d0a4672f6ac6d62204a8bfb0004728ae7ecce8c07dcc35ce4a87ce3ecc060c",
+      "r9_sha256": "f2d0a4672f6ac6d62204a8bfb0004728ae7ecce8c07dcc35ce4a87ce3ecc060c",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\drawings\\ST-S-D.svg",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "1973ea44e2e449bde8bfc4ba973a6f2be4d63a6629c2ca3f322648293dcacf9e",
+      "r9_sha256": "1973ea44e2e449bde8bfc4ba973a6f2be4d63a6629c2ca3f322648293dcacf9e",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\qa\\drawings_contact.jpg",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "3f79ebce3ffd0611fa7755c55880c0851bb6608d85e556a672af1f0369591011",
+      "r9_sha256": "3f79ebce3ffd0611fa7755c55880c0851bb6608d85e556a672af1f0369591011",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\qa\\DT-SLAB_detail.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "3a6ac26ceb99fcd97e4986da4d9512c831e23e5b07680fd48df8f884ef26a0f9",
+      "r9_sha256": "3a6ac26ceb99fcd97e4986da4d9512c831e23e5b07680fd48df8f884ef26a0f9",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\qa\\P2F_detail.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "a401085c279f7ae5a610d002af2968e99eeab503019537e31e6f0cdbc8951a07",
+      "r9_sha256": "a401085c279f7ae5a610d002af2968e99eeab503019537e31e6f0cdbc8951a07",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\qa\\R7_BLEND_READBACK.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "edcce182590e6c57da4c8db035e05c184e256845f829c9f4913f5628af79191c",
+      "r9_sha256": "edcce182590e6c57da4c8db035e05c184e256845f829c9f4913f5628af79191c",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\qa\\R7_PDF_SCALE_CHECK.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "4c548590a8a2f27cb814b9bbaaed284a94550b666cca503504f74ea41d81f458",
+      "r9_sha256": "4c548590a8a2f27cb814b9bbaaed284a94550b666cca503504f74ea41d81f458",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\qa\\report_page_01.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "50f0fca644688b959738a6d365a7cbde1e581b26111f9fd3b2a5ed4441bb62a9",
+      "r9_sha256": "50f0fca644688b959738a6d365a7cbde1e581b26111f9fd3b2a5ed4441bb62a9",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\qa\\report_page_02.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "837de96ec8f2bc7f98be0998f7461edc220f6ec821e73e72e08a7da284a98129",
+      "r9_sha256": "837de96ec8f2bc7f98be0998f7461edc220f6ec821e73e72e08a7da284a98129",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\qa\\report_page_17.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "6badb92d2f625f0f8f6b33ce8733ed2f3c9592a2a68ebacb3a849f5b837b950d",
+      "r9_sha256": "6badb92d2f625f0f8f6b33ce8733ed2f3c9592a2a68ebacb3a849f5b837b950d",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\qa\\report_page_18.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "c647f014496274f28d2755c821e5a5c34983eb4799f35c822851e73adbf596ac",
+      "r9_sha256": "c647f014496274f28d2755c821e5a5c34983eb4799f35c822851e73adbf596ac",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\qa\\report_page_19.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "2256dd32b4816e9ed80c4a0a6ebf18e27127a590a2bacb4ca0d436dcd41c7c7a",
+      "r9_sha256": "2256dd32b4816e9ed80c4a0a6ebf18e27127a590a2bacb4ca0d436dcd41c7c7a",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\qa\\ST-P2F-D_detail.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "990ef245e3dc098a388721850976f471398062e0d4457009dee7f0d202d07976",
+      "r9_sha256": "990ef245e3dc098a388721850976f471398062e0d4457009dee7f0d202d07976",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\qa\\ST-S-D_detail.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "6bba5e2d7244fcefbe69df8ab7e87c487babb55eeb5a91688282d92046627ffe",
+      "r9_sha256": "6bba5e2d7244fcefbe69df8ab7e87c487babb55eeb5a91688282d92046627ffe",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\qa\\V04_C_column_clearance_detail.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "f544931e4334d79c596630b2b0cb55f668f621c626dd660424e09b6c4cd3a4a5",
+      "r9_sha256": "f544931e4334d79c596630b2b0cb55f668f621c626dd660424e09b6c4cd3a4a5",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\qa\\views_contact.jpg",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "186415c9319165b213ee3e4161f01cf8b367935e8b7443af3762ba87591073b0",
+      "r9_sha256": "186415c9319165b213ee3e4161f01cf8b367935e8b7443af3762ba87591073b0",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\R7_CHANGE_PROPOSAL.md",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "322f3673cd4d2b8e723bd20e33db3c48b09b5d125e2d84af8f7fd5b601e977d2",
+      "r9_sha256": "322f3673cd4d2b8e723bd20e33db3c48b09b5d125e2d84af8f7fd5b601e977d2",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\R7_CODE_CHANGES.diff",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "c0970eb795b2e83123ad9e61c48358df243c02eb38e003e971384c20c6505e0b",
+      "r9_sha256": "c0970eb795b2e83123ad9e61c48358df243c02eb38e003e971384c20c6505e0b",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\R7_COMPLETION_STATUS.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "60fcc55a61dfd8437b4768530efdafcdc68d1c4abf971b903baf425d269596bb",
+      "r9_sha256": "60fcc55a61dfd8437b4768530efdafcdc68d1c4abf971b903baf425d269596bb",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\R7_GEOMETRY_VALIDATION.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "91185c621e29af4c7cf183dc289200f18d6771ce8725f1c7821a35d335dd4ce9",
+      "r9_sha256": "91185c621e29af4c7cf183dc289200f18d6771ce8725f1c7821a35d335dd4ce9",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\R7_ISSUE_REGISTER.csv",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "b3b2754d4dcfa16aeeec60657f55ddafb5acec6302ff0153e9f599001ab7de51",
+      "r9_sha256": "b3b2754d4dcfa16aeeec60657f55ddafb5acec6302ff0153e9f599001ab7de51",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\R7_SHEET_INDEX.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "f2dc29da8059105bd914eba08e82ec011a07bacdc06cae75d3ec6d54dc660da8",
+      "r9_sha256": "f2dc29da8059105bd914eba08e82ec011a07bacdc06cae75d3ec6d54dc660da8",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\R7_SOURCE_HASH_MANIFEST.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "584ed7e8d57500336f29337cf6e462995548fc30e3ac953fe437f720eb381f7a",
+      "r9_sha256": "584ed7e8d57500336f29337cf6e462995548fc30e3ac953fe437f720eb381f7a",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\R7_STAIR_STACK_VALIDATION.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "87253c7c495b32d6bb74f12dcee8631f83715085723900dff3710a039a538793",
+      "r9_sha256": "87253c7c495b32d6bb74f12dcee8631f83715085723900dff3710a039a538793",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\R7_STRUCTURAL_ASSUMPTIONS.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "ab682fcb75785fa80a0a4ba80136528a6440cf5091acfd3fe6812d83ebc43ff1",
+      "r9_sha256": "ab682fcb75785fa80a0a4ba80136528a6440cf5091acfd3fe6812d83ebc43ff1",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\R7_VISUAL_QA_REPORT.md",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "49dace5fe9755a7ece0a6c3dd7d3ee84984cc8a7f26fc12f95b993780788aae3",
+      "r9_sha256": "49dace5fe9755a7ece0a6c3dd7d3ee84984cc8a7f26fc12f95b993780788aae3",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\R7_WALKABILITY_VALIDATION.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "964ce16b3826e36fbbf5364ee00ab5f03e69678d8cba17f689206ced8a0c0339",
+      "r9_sha256": "964ce16b3826e36fbbf5364ee00ab5f03e69678d8cba17f689206ced8a0c0339",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\views\\V01_south_open_space.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "46a5a2a16abd9c776efa658c544104c1266736be1689cfee2342e46977d30749",
+      "r9_sha256": "46a5a2a16abd9c776efa658c544104c1266736be1689cfee2342e46977d30749",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\views\\V02_D_stair_cutaway.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "eff5ce4ce10060249aa44802dcd44d203d47c144755070785b8706cb6c63a559",
+      "r9_sha256": "eff5ce4ce10060249aa44802dcd44d203d47c144755070785b8706cb6c63a559",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\views\\V03_D_approach.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "711a4ae7049607c3d159a3807b2650c2f674fcbe22493fbae8735a91fad46823",
+      "r9_sha256": "711a4ae7049607c3d159a3807b2650c2f674fcbe22493fbae8735a91fad46823",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\views\\V04_C_column_clearance.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "b0b29f906a505d70d5755bf70c24e9efdcd4bd1fecba6569597a9bd75f66e60f",
+      "r9_sha256": "b0b29f906a505d70d5755bf70c24e9efdcd4bd1fecba6569597a9bd75f66e60f",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\views\\V05_under_bridge.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "98dd5373f9f18c800de567984b02ed540e6cae4f241143391889058615b97cfb",
+      "r9_sha256": "98dd5373f9f18c800de567984b02ed540e6cae4f241143391889058615b97cfb",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\views\\V06_D_vestibule.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "9b6ed21760424d85d334f71fc7f9f802191e51c85c16368fc835dfc9d01bffc6",
+      "r9_sha256": "9b6ed21760424d85d334f71fc7f9f802191e51c85c16368fc835dfc9d01bffc6",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\views\\views.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "ce6cc250f7636cab6c4c8452ec4f9351eb6fe37588a540aa8150eb350b43705c",
+      "r9_sha256": "ce6cc250f7636cab6c4c8452ec4f9351eb6fe37588a540aa8150eb350b43705c",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\WP0_R7_RESEARCH_A3.pdf",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "2cd46576f6c6dcbdfe5fb83fd42dd8e1208695ec9dfd9fd803a461b77b2774e1",
+      "r9_sha256": "2cd46576f6c6dcbdfe5fb83fd42dd8e1208695ec9dfd9fd803a461b77b2774e1",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\_rejected\\WP0_R7_E2_Study.blend",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "756cef9c7658ce99746743493d846f046653b6b3b754ae1a1beb46f10d31963d",
+      "r9_sha256": "756cef9c7658ce99746743493d846f046653b6b3b754ae1a1beb46f10d31963d",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\_rejected\\R7_proposal_meshes.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "aff678727908b93bad6e65951bc464da2d3ab0e40f5d453d543fab06b3487019",
+      "r9_sha256": "aff678727908b93bad6e65951bc464da2d3ab0e40f5d453d543fab06b3487019",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\_rejected\\V03_D_approach.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "484144d5f44deac08fdc2a6df4d933929fb817d8f7f5645fbfef2aae4d269835",
+      "r9_sha256": "484144d5f44deac08fdc2a6df4d933929fb817d8f7f5645fbfef2aae4d269835",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\_rejected\\V04_C_column_clearance.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "35b23a0b0d3559f9c35dfd195f08f0ffff47de24e53250bf26b0ccf60f52feed",
+      "r9_sha256": "35b23a0b0d3559f9c35dfd195f08f0ffff47de24e53250bf26b0ccf60f52feed",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\_rejected\\ST-P2F-D_first.png",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "7c952db1bf9bbdf116262ab69dac920c70978c640bdfc7f942995c5c262872c6",
+      "r9_sha256": "7c952db1bf9bbdf116262ab69dac920c70978c640bdfc7f942995c5c262872c6",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\original_git_start.txt",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "bed0060e6d2254a39f31a2bff3a730316496bb4b945b9c487bdcb98219475ed1",
+      "r9_sha256": "bed0060e6d2254a39f31a2bff3a730316496bb4b945b9c487bdcb98219475ed1",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\original_git_end.txt",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "bed0060e6d2254a39f31a2bff3a730316496bb4b945b9c487bdcb98219475ed1",
+      "r9_sha256": "bed0060e6d2254a39f31a2bff3a730316496bb4b945b9c487bdcb98219475ed1",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\blender_run.log",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "c98c8a2cbc576b5b86289c4d9a1aed9a9bf46ccae5768e077b04f395dfaf4f5c",
+      "r9_sha256": "c98c8a2cbc576b5b86289c4d9a1aed9a9bf46ccae5768e077b04f395dfaf4f5c",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\blender_final.log",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "e1b72532017f88c619e0608ca6bdb2d89e0037523e254706b9e44c339c35a6b9",
+      "r9_sha256": "e1b72532017f88c619e0608ca6bdb2d89e0037523e254706b9e44c339c35a6b9",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\blender_readback.log",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "ebdf12258588259813490dd4e3ae7b1aff7a75e4ed95c16d19a91d7340084f81",
+      "r9_sha256": "ebdf12258588259813490dd4e3ae7b1aff7a75e4ed95c16d19a91d7340084f81",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\checkout\\studies\\wp0_r7\\blender_r7.py",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "91e3b08ded6d025a301b05c40ad7f9fcb682aea150899fab2d25b594ed6443e4",
+      "r9_sha256": "91e3b08ded6d025a301b05c40ad7f9fcb682aea150899fab2d25b594ed6443e4",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\checkout\\studies\\wp0_r7\\draw_r7.py",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "ca4ebe5ed92b4f554039f7eee87519645014b7d9caf04f28a21ce4a04eeece46",
+      "r9_sha256": "ca4ebe5ed92b4f554039f7eee87519645014b7d9caf04f28a21ce4a04eeece46",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\checkout\\studies\\wp0_r7\\model_r7.py",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "e25cdb5b5a64b032b825c7f179fc4e1c7d4ed85b0a6482d41135f3efd84fb2f5",
+      "r9_sha256": "e25cdb5b5a64b032b825c7f179fc4e1c7d4ed85b0a6482d41135f3efd84fb2f5",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\checkout\\studies\\wp0_r7\\package_r7.py",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "a33d0a59c0ec29f005c750ea131e019f266bd71a47ebee231432500430403e2b",
+      "r9_sha256": "a33d0a59c0ec29f005c750ea131e019f266bd71a47ebee231432500430403e2b",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\checkout\\studies\\wp0_r7\\readback_r7.py",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "22c95b2a47dea0c4380f11a4f285ab0d774210f9dc523debba94cc7084d71cb2",
+      "r9_sha256": "22c95b2a47dea0c4380f11a4f285ab0d774210f9dc523debba94cc7084d71cb2",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\checkout\\studies\\wp0_r7\\validate_r7.py",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "a4b2be021269deaca8bfad1ac55be60be01a4ec8249c1bc2a9cb3ae9f2ce42bc",
+      "r9_sha256": "a4b2be021269deaca8bfad1ac55be60be01a4ec8249c1bc2a9cb3ae9f2ce42bc",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\WP0_R7_STUDY_PACKAGE.zip",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "cea956aa3fbbf09f60a522bd001c670709df4955e7b4e062843594d2c90cb820",
+      "r9_sha256": "cea956aa3fbbf09f60a522bd001c670709df4955e7b4e062843594d2c90cb820",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\R7_PACKAGE_INTEGRITY.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "cd5a19d6b35a658d3d92cef6d5cec6da24bf2849b5f0b5169fbbbec869fd8b51",
+      "r9_sha256": "cd5a19d6b35a658d3d92cef6d5cec6da24bf2849b5f0b5169fbbbec869fd8b51",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\delivery\\R7_PACKAGE_INVENTORY.json",
+      "comparison": "R8 pinned after-hash",
+      "baseline_sha256": "ab4e9d8e1d42f36cf18cdaddef01e7e4bec6e5f15b1ae6a224cbb2a93a58bd24",
+      "r9_sha256": "ab4e9d8e1d42f36cf18cdaddef01e7e4bec6e5f15b1ae6a224cbb2a93a58bd24",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R8_20261125\\_rejected\\WP0_R8_Research.blend",
+      "comparison": "R8 package hash",
+      "baseline_sha256": "ab7eb43ca1d356a3b49f7170215e98e3d5f768cc5b9b397569f7086b084074ef",
+      "r9_sha256": "ab7eb43ca1d356a3b49f7170215e98e3d5f768cc5b9b397569f7086b084074ef",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R8_20261125\\_rejected\\R8_PROPOSAL_MESHES.json",
+      "comparison": "R8 package hash",
+      "baseline_sha256": "abb4b892b88b933a298bf424d2e8e8a1b07c2e8d43b907bc5216bca2c1f56535",
+      "r9_sha256": "abb4b892b88b933a298bf424d2e8e8a1b07c2e8d43b907bc5216bca2c1f56535",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R8_20261125\\_rejected\\R8_EDITED_TRIANGLES.json",
+      "comparison": "R8 package hash",
+      "baseline_sha256": "77dc73dcc724c70afd912402847827a927474c7abd24aecd29a534b52c29c1aa",
+      "r9_sha256": "77dc73dcc724c70afd912402847827a927474c7abd24aecd29a534b52c29c1aa",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R8_20261125\\delivery\\R8_WALKABILITY.json",
+      "comparison": "R8 package hash",
+      "baseline_sha256": "8e8f994aa2f618bbe679398ab256cca7a69a10f7ae33a620c64c476d14fb951b",
+      "r9_sha256": "8e8f994aa2f618bbe679398ab256cca7a69a10f7ae33a620c64c476d14fb951b",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R8_20261125\\delivery\\R8_INDEPENDENT_3D_READBACK.json",
+      "comparison": "R8 package hash",
+      "baseline_sha256": "05e7a0b0c4c3453ccc7eb5c39e3d0ed247db425ecef02634b79aeec93ca8032d",
+      "r9_sha256": "05e7a0b0c4c3453ccc7eb5c39e3d0ed247db425ecef02634b79aeec93ca8032d",
+      "same": true
+    },
+    {
+      "absolute_path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R8_20261125\\A2_상세개정\\WP0_R8_A2_상세개정_도면집.pdf",
+      "comparison": "R8 A2 output verified hash",
+      "baseline_sha256": "79da663100242f73315785b19c58cf8ce4fd77b08e3dce6c5889a7222bdd818d",
+      "r9_sha256": "79da663100242f73315785b19c58cf8ce4fd77b08e3dce6c5889a7222bdd818d",
+      "same": true
+    }
+  ],
+  "matched": 112,
+  "different": 0
+}

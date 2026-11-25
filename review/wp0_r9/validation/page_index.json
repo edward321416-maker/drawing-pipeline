@@ -1,0 +1,4147 @@
+{
+  "source_pdf": "pdf/WP0_R9_A2_Drawing_Book.pdf",
+  "sheet_size_mm": [
+    594,
+    420
+  ],
+  "page_count": 21,
+  "pages": [
+    {
+      "page": 1,
+      "sheet": "I-00",
+      "title": "E2 브리지 · 수직동선 기술 도면집",
+      "scale_denominators": [],
+      "scale_note": "비축척",
+      "graphic_scale_checks": [],
+      "images": {
+        "150": {
+          "path": "previews/P01-I-00.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P01-I-00.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P01-I-00/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P01-I-00/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P01-I-00/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P01-I-00/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P01-I-00/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P01-I-00/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P01-I-00/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P01-I-00/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P01-I-00/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P01-I-00/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P01-I-00/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P01-I-00/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": null,
+      "original_blender_renders": [
+        "renders/2D_01.png"
+      ],
+      "evidence": [
+        "validation/page_index.json",
+        "validation/R9_OUTPUT_QA.json",
+        "validation/R9_ISSUE_REGISTER.csv"
+      ]
+    },
+    {
+      "page": 2,
+      "sheet": "N-2F",
+      "title": "2F 통합 보행 평면",
+      "scale_denominators": [
+        200
+      ],
+      "scale_note": "1:200",
+      "graphic_scale_checks": [
+        {
+          "scale": 200,
+          "mm": 20.000001,
+          "represents_m": 4
+        }
+      ],
+      "images": {
+        "150": {
+          "path": "previews/P02-N-2F.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P02-N-2F.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P02-N-2F/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P02-N-2F/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P02-N-2F/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P02-N-2F/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P02-N-2F/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P02-N-2F/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P02-N-2F/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P02-N-2F/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P02-N-2F/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P02-N-2F/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P02-N-2F/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P02-N-2F/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": {
+        "pdf": "vector_drawings/P02-N-2F.pdf",
+        "svg": "vector_drawings/P02-N-2F.svg"
+      },
+      "original_blender_renders": [],
+      "evidence": [
+        "validation/R8_WALKABILITY.json",
+        "validation/R9_DRAWING_EVIDENCE.json"
+      ]
+    },
+    {
+      "page": 3,
+      "sheet": "N-7F",
+      "title": "7F 통합 보행 평면",
+      "scale_denominators": [
+        200
+      ],
+      "scale_note": "1:200",
+      "graphic_scale_checks": [
+        {
+          "scale": 200,
+          "mm": 20.000001,
+          "represents_m": 4
+        }
+      ],
+      "images": {
+        "150": {
+          "path": "previews/P03-N-7F.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P03-N-7F.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P03-N-7F/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P03-N-7F/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P03-N-7F/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P03-N-7F/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P03-N-7F/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P03-N-7F/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P03-N-7F/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P03-N-7F/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P03-N-7F/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P03-N-7F/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P03-N-7F/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P03-N-7F/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": {
+        "pdf": "vector_drawings/P03-N-7F.pdf",
+        "svg": "vector_drawings/P03-N-7F.svg"
+      },
+      "original_blender_renders": [],
+      "evidence": [
+        "validation/R8_WALKABILITY.json",
+        "validation/R9_DRAWING_EVIDENCE.json"
+      ]
+    },
+    {
+      "page": 4,
+      "sheet": "T-2D",
+      "title": "2층 D  접합부 확대 및 보행 기준점",
+      "scale_denominators": [
+        25,
+        50
+      ],
+      "scale_note": "01 1:50 · 02/03 1:25",
+      "graphic_scale_checks": [
+        {
+          "scale": 50,
+          "mm": 39.999997
+        },
+        {
+          "scale": 25,
+          "mm": 80.000005
+        }
+      ],
+      "images": {
+        "150": {
+          "path": "previews/P04-T-2D.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P04-T-2D.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P04-T-2D/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P04-T-2D/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P04-T-2D/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P04-T-2D/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P04-T-2D/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P04-T-2D/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P04-T-2D/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P04-T-2D/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P04-T-2D/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P04-T-2D/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P04-T-2D/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P04-T-2D/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": {
+        "pdf": "vector_drawings/P04-T-2D.pdf",
+        "svg": "vector_drawings/P04-T-2D.svg"
+      },
+      "original_blender_renders": [],
+      "evidence": [
+        "validation/R9_DRAWING_EVIDENCE.json",
+        "validation/R9_DOOR_SEQUENCE_VALIDATION.json"
+      ]
+    },
+    {
+      "page": 5,
+      "sheet": "L-2D",
+      "title": "2층 코어 D  보행 종단과 교량 횡단",
+      "scale_denominators": [
+        50,
+        200
+      ],
+      "scale_note": "01 1:200 · 02/03 1:50",
+      "graphic_scale_checks": [
+        {
+          "scale": 200,
+          "mm": 10.000036
+        },
+        {
+          "scale": 50,
+          "mm": 39.99997
+        },
+        {
+          "scale": 50,
+          "mm": 39.999992
+        }
+      ],
+      "images": {
+        "150": {
+          "path": "previews/P05-L-2D.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P05-L-2D.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P05-L-2D/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P05-L-2D/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P05-L-2D/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P05-L-2D/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P05-L-2D/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P05-L-2D/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P05-L-2D/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P05-L-2D/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P05-L-2D/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P05-L-2D/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P05-L-2D/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P05-L-2D/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": {
+        "pdf": "vector_drawings/P05-L-2D.pdf",
+        "svg": "vector_drawings/P05-L-2D.svg"
+      },
+      "original_blender_renders": [],
+      "evidence": [
+        "validation/R9_DRAWING_EVIDENCE.json",
+        "validation/R8_STRUCTURAL_ASSUMPTIONS.json"
+      ]
+    },
+    {
+      "page": 6,
+      "sheet": "L-7C",
+      "title": "7층 코어 C  보행 종단과 교량 횡단",
+      "scale_denominators": [
+        50,
+        200
+      ],
+      "scale_note": "01 1:200 · 02/03 1:50",
+      "graphic_scale_checks": [
+        {
+          "scale": 200,
+          "mm": 10.000036
+        },
+        {
+          "scale": 50,
+          "mm": 39.99997
+        },
+        {
+          "scale": 50,
+          "mm": 39.999992
+        }
+      ],
+      "images": {
+        "150": {
+          "path": "previews/P06-L-7C.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P06-L-7C.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P06-L-7C/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P06-L-7C/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P06-L-7C/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P06-L-7C/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P06-L-7C/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P06-L-7C/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P06-L-7C/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P06-L-7C/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P06-L-7C/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P06-L-7C/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P06-L-7C/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P06-L-7C/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": {
+        "pdf": "vector_drawings/P06-L-7C.pdf",
+        "svg": "vector_drawings/P06-L-7C.svg"
+      },
+      "original_blender_renders": [],
+      "evidence": [
+        "validation/R9_DRAWING_EVIDENCE.json",
+        "validation/R8_STRUCTURAL_ASSUMPTIONS.json"
+      ]
+    },
+    {
+      "page": 7,
+      "sheet": "L-7D",
+      "title": "7층 코어 D  보행 종단과 교량 횡단",
+      "scale_denominators": [
+        50,
+        250
+      ],
+      "scale_note": "01 1:250 · 02/03 1:50",
+      "graphic_scale_checks": [
+        {
+          "scale": 250,
+          "mm": 8.000028
+        },
+        {
+          "scale": 50,
+          "mm": 39.99997
+        },
+        {
+          "scale": 50,
+          "mm": 39.999992
+        }
+      ],
+      "images": {
+        "150": {
+          "path": "previews/P07-L-7D.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P07-L-7D.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P07-L-7D/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P07-L-7D/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P07-L-7D/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P07-L-7D/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P07-L-7D/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P07-L-7D/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P07-L-7D/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P07-L-7D/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P07-L-7D/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P07-L-7D/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P07-L-7D/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P07-L-7D/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": {
+        "pdf": "vector_drawings/P07-L-7D.pdf",
+        "svg": "vector_drawings/P07-L-7D.svg"
+      },
+      "original_blender_renders": [],
+      "evidence": [
+        "validation/R9_DRAWING_EVIDENCE.json",
+        "validation/R8_STRUCTURAL_ASSUMPTIONS.json"
+      ]
+    },
+    {
+      "page": 8,
+      "sheet": "B-2F-D",
+      "title": "2층 D 난간과 두 방화문",
+      "scale_denominators": [
+        25,
+        50
+      ],
+      "scale_note": "1:50 · 1:25",
+      "graphic_scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        },
+        {
+          "scale": 25,
+          "mm": 80.000005
+        }
+      ],
+      "images": {
+        "150": {
+          "path": "previews/P08-B-2F-D.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P08-B-2F-D.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P08-B-2F-D/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P08-B-2F-D/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P08-B-2F-D/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P08-B-2F-D/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P08-B-2F-D/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P08-B-2F-D/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P08-B-2F-D/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P08-B-2F-D/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P08-B-2F-D/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P08-B-2F-D/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P08-B-2F-D/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P08-B-2F-D/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": {
+        "pdf": "vector_drawings/P08-B-2F-D.pdf",
+        "svg": "vector_drawings/P08-B-2F-D.svg"
+      },
+      "original_blender_renders": [],
+      "evidence": [
+        "validation/R9_DOOR_SEQUENCE_VALIDATION.json",
+        "validation/R8_WALKABILITY.json",
+        "validation/R8_INDEPENDENT_3D_READBACK.json"
+      ]
+    },
+    {
+      "page": 9,
+      "sheet": "B-7F-C",
+      "title": "7층 C 난간과 두 방화문",
+      "scale_denominators": [
+        25,
+        50
+      ],
+      "scale_note": "1:50 · 1:25",
+      "graphic_scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        },
+        {
+          "scale": 25,
+          "mm": 80.000005
+        }
+      ],
+      "images": {
+        "150": {
+          "path": "previews/P09-B-7F-C.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P09-B-7F-C.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P09-B-7F-C/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P09-B-7F-C/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P09-B-7F-C/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P09-B-7F-C/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P09-B-7F-C/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P09-B-7F-C/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P09-B-7F-C/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P09-B-7F-C/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P09-B-7F-C/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P09-B-7F-C/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P09-B-7F-C/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P09-B-7F-C/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": {
+        "pdf": "vector_drawings/P09-B-7F-C.pdf",
+        "svg": "vector_drawings/P09-B-7F-C.svg"
+      },
+      "original_blender_renders": [],
+      "evidence": [
+        "validation/R9_DOOR_SEQUENCE_VALIDATION.json",
+        "validation/R8_WALKABILITY.json",
+        "validation/R8_INDEPENDENT_3D_READBACK.json"
+      ]
+    },
+    {
+      "page": 10,
+      "sheet": "B-7F-D",
+      "title": "7층 D 난간과 두 방화문",
+      "scale_denominators": [
+        25,
+        50
+      ],
+      "scale_note": "1:50 · 1:25",
+      "graphic_scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        },
+        {
+          "scale": 25,
+          "mm": 80.000005
+        }
+      ],
+      "images": {
+        "150": {
+          "path": "previews/P10-B-7F-D.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P10-B-7F-D.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P10-B-7F-D/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P10-B-7F-D/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P10-B-7F-D/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P10-B-7F-D/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P10-B-7F-D/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P10-B-7F-D/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P10-B-7F-D/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P10-B-7F-D/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P10-B-7F-D/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P10-B-7F-D/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P10-B-7F-D/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P10-B-7F-D/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": {
+        "pdf": "vector_drawings/P10-B-7F-D.pdf",
+        "svg": "vector_drawings/P10-B-7F-D.svg"
+      },
+      "original_blender_renders": [],
+      "evidence": [
+        "validation/R9_DOOR_SEQUENCE_VALIDATION.json",
+        "validation/R8_WALKABILITY.json",
+        "validation/R8_INDEPENDENT_3D_READBACK.json"
+      ]
+    },
+    {
+      "page": 11,
+      "sheet": "A-C",
+      "title": "코어 C 계단 대안 비교",
+      "scale_denominators": [
+        50
+      ],
+      "scale_note": "1:50",
+      "graphic_scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        }
+      ],
+      "images": {
+        "150": {
+          "path": "previews/P11-A-C.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P11-A-C.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P11-A-C/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P11-A-C/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P11-A-C/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P11-A-C/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P11-A-C/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P11-A-C/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P11-A-C/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P11-A-C/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P11-A-C/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P11-A-C/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P11-A-C/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P11-A-C/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": {
+        "pdf": "vector_drawings/P11-A-C.pdf",
+        "svg": "vector_drawings/P11-A-C.svg"
+      },
+      "original_blender_renders": [],
+      "evidence": [
+        "validation/R8_RISER_ENUMERATION.csv",
+        "validation/R8_INDEPENDENT_3D_READBACK.json"
+      ]
+    },
+    {
+      "page": 12,
+      "sheet": "A-D",
+      "title": "코어 D 계단 대안 비교",
+      "scale_denominators": [
+        50
+      ],
+      "scale_note": "1:50",
+      "graphic_scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        }
+      ],
+      "images": {
+        "150": {
+          "path": "previews/P12-A-D.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P12-A-D.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P12-A-D/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P12-A-D/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P12-A-D/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P12-A-D/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P12-A-D/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P12-A-D/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P12-A-D/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P12-A-D/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P12-A-D/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P12-A-D/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P12-A-D/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P12-A-D/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": {
+        "pdf": "vector_drawings/P12-A-D.pdf",
+        "svg": "vector_drawings/P12-A-D.svg"
+      },
+      "original_blender_renders": [],
+      "evidence": [
+        "validation/R8_RISER_ENUMERATION.csv",
+        "validation/R8_INDEPENDENT_3D_READBACK.json"
+      ]
+    },
+    {
+      "page": 13,
+      "sheet": "C-2F",
+      "title": "2층 슬래브 개구 검토",
+      "scale_denominators": [
+        50
+      ],
+      "scale_note": "1:50",
+      "graphic_scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        }
+      ],
+      "images": {
+        "150": {
+          "path": "previews/P13-C-2F.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P13-C-2F.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P13-C-2F/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P13-C-2F/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P13-C-2F/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P13-C-2F/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P13-C-2F/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P13-C-2F/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P13-C-2F/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P13-C-2F/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P13-C-2F/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P13-C-2F/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P13-C-2F/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P13-C-2F/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": {
+        "pdf": "vector_drawings/P13-C-2F.pdf",
+        "svg": "vector_drawings/P13-C-2F.svg"
+      },
+      "original_blender_renders": [],
+      "evidence": [
+        "validation/R8_3D_CLASH.json",
+        "validation/R8_INDEPENDENT_3D_READBACK.json"
+      ]
+    },
+    {
+      "page": 14,
+      "sheet": "C-3F",
+      "title": "3층 슬래브 개구 검토",
+      "scale_denominators": [
+        50
+      ],
+      "scale_note": "1:50",
+      "graphic_scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        }
+      ],
+      "images": {
+        "150": {
+          "path": "previews/P14-C-3F.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P14-C-3F.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P14-C-3F/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P14-C-3F/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P14-C-3F/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P14-C-3F/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P14-C-3F/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P14-C-3F/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P14-C-3F/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P14-C-3F/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P14-C-3F/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P14-C-3F/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P14-C-3F/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P14-C-3F/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": {
+        "pdf": "vector_drawings/P14-C-3F.pdf",
+        "svg": "vector_drawings/P14-C-3F.svg"
+      },
+      "original_blender_renders": [],
+      "evidence": [
+        "validation/R8_3D_CLASH.json",
+        "validation/R8_INDEPENDENT_3D_READBACK.json"
+      ]
+    },
+    {
+      "page": 15,
+      "sheet": "C-8F",
+      "title": "8층 슬래브 개구 검토",
+      "scale_denominators": [
+        50
+      ],
+      "scale_note": "1:50",
+      "graphic_scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        }
+      ],
+      "images": {
+        "150": {
+          "path": "previews/P15-C-8F.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P15-C-8F.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P15-C-8F/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P15-C-8F/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P15-C-8F/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P15-C-8F/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P15-C-8F/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P15-C-8F/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P15-C-8F/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P15-C-8F/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P15-C-8F/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P15-C-8F/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P15-C-8F/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P15-C-8F/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": {
+        "pdf": "vector_drawings/P15-C-8F.pdf",
+        "svg": "vector_drawings/P15-C-8F.svg"
+      },
+      "original_blender_renders": [],
+      "evidence": [
+        "validation/R8_3D_CLASH.json",
+        "validation/R8_INDEPENDENT_3D_READBACK.json"
+      ]
+    },
+    {
+      "page": 16,
+      "sheet": "D-2F",
+      "title": "2층 에스컬레이터 랜딩",
+      "scale_denominators": [
+        50
+      ],
+      "scale_note": "1:50",
+      "graphic_scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        }
+      ],
+      "images": {
+        "150": {
+          "path": "previews/P16-D-2F.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P16-D-2F.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P16-D-2F/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P16-D-2F/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P16-D-2F/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P16-D-2F/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P16-D-2F/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P16-D-2F/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P16-D-2F/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P16-D-2F/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P16-D-2F/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P16-D-2F/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P16-D-2F/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P16-D-2F/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": {
+        "pdf": "vector_drawings/P16-D-2F.pdf",
+        "svg": "vector_drawings/P16-D-2F.svg"
+      },
+      "original_blender_renders": [],
+      "evidence": [
+        "validation/R8_WALKABILITY.json",
+        "validation/R8_INDEPENDENT_3D_READBACK.json"
+      ]
+    },
+    {
+      "page": 17,
+      "sheet": "D-7F",
+      "title": "7층 에스컬레이터 랜딩",
+      "scale_denominators": [
+        50
+      ],
+      "scale_note": "1:50",
+      "graphic_scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        }
+      ],
+      "images": {
+        "150": {
+          "path": "previews/P17-D-7F.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P17-D-7F.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P17-D-7F/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P17-D-7F/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P17-D-7F/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P17-D-7F/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P17-D-7F/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P17-D-7F/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P17-D-7F/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P17-D-7F/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P17-D-7F/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P17-D-7F/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P17-D-7F/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P17-D-7F/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": {
+        "pdf": "vector_drawings/P17-D-7F.pdf",
+        "svg": "vector_drawings/P17-D-7F.svg"
+      },
+      "original_blender_renders": [],
+      "evidence": [
+        "validation/R8_WALKABILITY.json",
+        "validation/R8_INDEPENDENT_3D_READBACK.json"
+      ]
+    },
+    {
+      "page": 18,
+      "sheet": "P-2F",
+      "title": "2층  접합 위치 대응 투시",
+      "scale_denominators": [],
+      "scale_note": "비축척",
+      "graphic_scale_checks": [],
+      "images": {
+        "150": {
+          "path": "previews/P18-P-2F.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P18-P-2F.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P18-P-2F/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P18-P-2F/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P18-P-2F/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P18-P-2F/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P18-P-2F/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P18-P-2F/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P18-P-2F/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P18-P-2F/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P18-P-2F/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P18-P-2F/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P18-P-2F/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P18-P-2F/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": null,
+      "original_blender_renders": [
+        "renders/2D_01.png",
+        "renders/2D_02.png",
+        "renders/2F_ESC.png",
+        "renders/2D_CONTEXT.png"
+      ],
+      "evidence": [
+        "validation/R9_BLENDER_READBACK.json"
+      ]
+    },
+    {
+      "page": 19,
+      "sheet": "P-7F",
+      "title": "7층  접합 위치 대응 투시",
+      "scale_denominators": [],
+      "scale_note": "비축척",
+      "graphic_scale_checks": [],
+      "images": {
+        "150": {
+          "path": "previews/P19-P-7F.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P19-P-7F.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P19-P-7F/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P19-P-7F/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P19-P-7F/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P19-P-7F/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P19-P-7F/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P19-P-7F/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P19-P-7F/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P19-P-7F/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P19-P-7F/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P19-P-7F/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P19-P-7F/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P19-P-7F/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": null,
+      "original_blender_renders": [
+        "renders/7C_01.png",
+        "renders/7C_02.png",
+        "renders/7D_01.png",
+        "renders/7D_02.png",
+        "renders/7F_ESC.png"
+      ],
+      "evidence": [
+        "validation/R9_BLENDER_READBACK.json"
+      ]
+    },
+    {
+      "page": 20,
+      "sheet": "V-01",
+      "title": "문 개방 조건과 통행 직경",
+      "scale_denominators": [],
+      "scale_note": "비축척",
+      "graphic_scale_checks": [],
+      "images": {
+        "150": {
+          "path": "previews/P20-V-01.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P20-V-01.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P20-V-01/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P20-V-01/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P20-V-01/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P20-V-01/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P20-V-01/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P20-V-01/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P20-V-01/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P20-V-01/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P20-V-01/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P20-V-01/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P20-V-01/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P20-V-01/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": {
+        "pdf": "vector_drawings/P20-V-01.pdf",
+        "svg": "vector_drawings/P20-V-01.svg"
+      },
+      "original_blender_renders": [],
+      "evidence": [
+        "validation/R9_DOOR_SEQUENCE_VALIDATION.json",
+        "validation/R9_DRAWING_EVIDENCE.json"
+      ]
+    },
+    {
+      "page": 21,
+      "sheet": "V-02",
+      "title": "검증 및 구조 검토 장부",
+      "scale_denominators": [],
+      "scale_note": "비축척",
+      "graphic_scale_checks": [],
+      "images": {
+        "150": {
+          "path": "previews/P21-V-02.png",
+          "dpi": 150,
+          "width_px": 3508,
+          "height_px": 2481
+        },
+        "300": {
+          "path": "high_resolution/P21-V-02.png",
+          "dpi": 300,
+          "width_px": 7016,
+          "height_px": 4961
+        }
+      },
+      "tiles": [
+        {
+          "path": "tiles/P21-V-02/r01-c01.png",
+          "row": 1,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            0,
+            1802,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P21-V-02/r01-c02.png",
+          "row": 1,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            0,
+            3556,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P21-V-02/r01-c03.png",
+          "row": 1,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            0,
+            5310,
+            1701
+          ],
+          "width_px": 1850,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P21-V-02/r01-c04.png",
+          "row": 1,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            0,
+            7016,
+            1701
+          ],
+          "width_px": 1802,
+          "height_px": 1701
+        },
+        {
+          "path": "tiles/P21-V-02/r02-c01.png",
+          "row": 2,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            1605,
+            1802,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P21-V-02/r02-c02.png",
+          "row": 2,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            1605,
+            3556,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P21-V-02/r02-c03.png",
+          "row": 2,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            1605,
+            5310,
+            3355
+          ],
+          "width_px": 1850,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P21-V-02/r02-c04.png",
+          "row": 2,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            1605,
+            7016,
+            3355
+          ],
+          "width_px": 1802,
+          "height_px": 1750
+        },
+        {
+          "path": "tiles/P21-V-02/r03-c01.png",
+          "row": 3,
+          "column": 1,
+          "bounds_in_300_dpi_image_px": [
+            0,
+            3259,
+            1802,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P21-V-02/r03-c02.png",
+          "row": 3,
+          "column": 2,
+          "bounds_in_300_dpi_image_px": [
+            1706,
+            3259,
+            3556,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P21-V-02/r03-c03.png",
+          "row": 3,
+          "column": 3,
+          "bounds_in_300_dpi_image_px": [
+            3460,
+            3259,
+            5310,
+            4961
+          ],
+          "width_px": 1850,
+          "height_px": 1702
+        },
+        {
+          "path": "tiles/P21-V-02/r03-c04.png",
+          "row": 3,
+          "column": 4,
+          "bounds_in_300_dpi_image_px": [
+            5214,
+            3259,
+            7016,
+            4961
+          ],
+          "width_px": 1802,
+          "height_px": 1702
+        }
+      ],
+      "vector": {
+        "pdf": "vector_drawings/P21-V-02.pdf",
+        "svg": "vector_drawings/P21-V-02.svg"
+      },
+      "original_blender_renders": [],
+      "evidence": [
+        "validation/R9_ISSUE_REGISTER.csv",
+        "validation/R8_STRUCTURAL_ASSUMPTIONS.json",
+        "validation/R9_SOURCE_HASH_MANIFEST.json"
+      ]
+    }
+  ]
+}

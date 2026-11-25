@@ -1,0 +1,447 @@
+{
+  "pdf": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\WP0_R9_A2_기술도면집.pdf",
+  "sha256": "4342a5288e6ca36bb88d5bf8d6c98a6e273f2c354e4683923be216f80cd0f21a",
+  "reference": "D:\\Temp\\BNZ.6b06ea4da76e6d\\3조_신태규_장산_도면집(A2)-복사.pdf",
+  "reference_page_dimensions_mm": [
+    [
+      594.08,
+      420.16
+    ],
+    [
+      594.08,
+      420.16
+    ],
+    [
+      594.08,
+      420.16
+    ],
+    [
+      594.08,
+      420.16
+    ],
+    [
+      594.08,
+      420.16
+    ],
+    [
+      594.08,
+      420.16
+    ],
+    [
+      594.08,
+      420.16
+    ],
+    [
+      594.08,
+      420.16
+    ],
+    [
+      594.08,
+      420.16
+    ],
+    [
+      594.08,
+      420.16
+    ],
+    [
+      420.16,
+      594.08
+    ],
+    [
+      420.16,
+      594.08
+    ],
+    [
+      420.16,
+      594.08
+    ],
+    [
+      594.08,
+      420.16
+    ],
+    [
+      594.08,
+      420.16
+    ]
+  ],
+  "page_count": 21,
+  "clickable_references": 150,
+  "blender_mesh_cut_dimension_checks": 10,
+  "graphic_scale_checks": 26,
+  "page_checks": [
+    {
+      "sheet": "I-00",
+      "page": 1,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 65,
+      "internal_links": 24,
+      "scale_checks": [],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\I-00_전체_135dpi.png"
+    },
+    {
+      "sheet": "N-2F",
+      "page": 2,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 165,
+      "internal_links": 9,
+      "scale_checks": [
+        {
+          "scale": 200,
+          "mm": 20.000001,
+          "represents_m": 4
+        }
+      ],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\N-2F_전체_135dpi.png"
+    },
+    {
+      "sheet": "N-7F",
+      "page": 3,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 176,
+      "internal_links": 11,
+      "scale_checks": [
+        {
+          "scale": 200,
+          "mm": 20.000001,
+          "represents_m": 4
+        }
+      ],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\N-7F_전체_135dpi.png"
+    },
+    {
+      "sheet": "T-2D",
+      "page": 4,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 153,
+      "internal_links": 5,
+      "scale_checks": [
+        {
+          "scale": 50,
+          "mm": 39.999997
+        },
+        {
+          "scale": 25,
+          "mm": 80.000005
+        }
+      ],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\T-2D_전체_135dpi.png"
+    },
+    {
+      "sheet": "L-2D",
+      "page": 5,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 240,
+      "internal_links": 9,
+      "scale_checks": [
+        {
+          "scale": 200,
+          "mm": 10.000036
+        },
+        {
+          "scale": 50,
+          "mm": 39.99997
+        },
+        {
+          "scale": 50,
+          "mm": 39.999992
+        }
+      ],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\L-2D_전체_135dpi.png"
+    },
+    {
+      "sheet": "L-7C",
+      "page": 6,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 230,
+      "internal_links": 9,
+      "scale_checks": [
+        {
+          "scale": 200,
+          "mm": 10.000036
+        },
+        {
+          "scale": 50,
+          "mm": 39.99997
+        },
+        {
+          "scale": 50,
+          "mm": 39.999992
+        }
+      ],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\L-7C_전체_135dpi.png"
+    },
+    {
+      "sheet": "L-7D",
+      "page": 7,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 258,
+      "internal_links": 9,
+      "scale_checks": [
+        {
+          "scale": 250,
+          "mm": 8.000028
+        },
+        {
+          "scale": 50,
+          "mm": 39.99997
+        },
+        {
+          "scale": 50,
+          "mm": 39.999992
+        }
+      ],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\L-7D_전체_135dpi.png"
+    },
+    {
+      "sheet": "B-2F-D",
+      "page": 8,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 183,
+      "internal_links": 5,
+      "scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        },
+        {
+          "scale": 25,
+          "mm": 80.000005
+        }
+      ],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\B-2F-D_전체_135dpi.png"
+    },
+    {
+      "sheet": "B-7F-C",
+      "page": 9,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 183,
+      "internal_links": 4,
+      "scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        },
+        {
+          "scale": 25,
+          "mm": 80.000005
+        }
+      ],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\B-7F-C_전체_135dpi.png"
+    },
+    {
+      "sheet": "B-7F-D",
+      "page": 10,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 183,
+      "internal_links": 4,
+      "scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        },
+        {
+          "scale": 25,
+          "mm": 80.000005
+        }
+      ],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\B-7F-D_전체_135dpi.png"
+    },
+    {
+      "sheet": "A-C",
+      "page": 11,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 367,
+      "internal_links": 4,
+      "scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        }
+      ],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\A-C_전체_135dpi.png"
+    },
+    {
+      "sheet": "A-D",
+      "page": 12,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 367,
+      "internal_links": 4,
+      "scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        }
+      ],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\A-D_전체_135dpi.png"
+    },
+    {
+      "sheet": "C-2F",
+      "page": 13,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 99,
+      "internal_links": 5,
+      "scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        }
+      ],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\C-2F_전체_135dpi.png"
+    },
+    {
+      "sheet": "C-3F",
+      "page": 14,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 137,
+      "internal_links": 5,
+      "scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        }
+      ],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\C-3F_전체_135dpi.png"
+    },
+    {
+      "sheet": "C-8F",
+      "page": 15,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 137,
+      "internal_links": 5,
+      "scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        }
+      ],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\C-8F_전체_135dpi.png"
+    },
+    {
+      "sheet": "D-2F",
+      "page": 16,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 138,
+      "internal_links": 4,
+      "scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        }
+      ],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\D-2F_전체_135dpi.png"
+    },
+    {
+      "sheet": "D-7F",
+      "page": 17,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 133,
+      "internal_links": 5,
+      "scale_checks": [
+        {
+          "scale": 50,
+          "mm": 40.000002
+        }
+      ],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\D-7F_전체_135dpi.png"
+    },
+    {
+      "sheet": "P-2F",
+      "page": 18,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 33,
+      "internal_links": 8,
+      "scale_checks": [],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\P-2F_전체_135dpi.png"
+    },
+    {
+      "sheet": "P-7F",
+      "page": 19,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 36,
+      "internal_links": 10,
+      "scale_checks": [],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\P-7F_전체_135dpi.png"
+    },
+    {
+      "sheet": "V-01",
+      "page": 20,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 44,
+      "internal_links": 7,
+      "scale_checks": [],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\V-01_전체_135dpi.png"
+    },
+    {
+      "sheet": "V-02",
+      "page": 21,
+      "a2_mm": [
+        594,
+        420
+      ],
+      "paths": 31,
+      "internal_links": 4,
+      "scale_checks": [],
+      "render": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\검수\\V-02_전체_135dpi.png"
+    }
+  ]
+}
