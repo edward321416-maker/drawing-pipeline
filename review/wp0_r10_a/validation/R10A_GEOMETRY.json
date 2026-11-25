@@ -1,0 +1,6316 @@
+{
+  "sheets": {
+    "A-201": {
+      "PR30_source_commit": "1164fc0f58d943598d8e48146a02fcb3214c852e",
+      "source_slice_sha256": "a80696fe8ff486103cc1192641dbe68eed2d7b7ddcb4458d53ebc8bbe50c523e",
+      "rooms": [
+        {
+          "id": "2-01",
+          "name": "주방·창고",
+          "area": 13.4386,
+          "centre_paper_mm": [
+            114.68765625,
+            85.31359374999998
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-02",
+          "name": "식음 점포 객석",
+          "area": 29.7569,
+          "centre_paper_mm": [
+            138.5,
+            84.00124999999997
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-03",
+          "name": "식음 점포 객석",
+          "area": 88.9143,
+          "centre_paper_mm": [
+            182.640625,
+            91.079375
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-04",
+          "name": "주방",
+          "area": 15.4069,
+          "centre_paper_mm": [
+            230.6875,
+            78.71443749999997
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-05",
+          "name": "세척·준비",
+          "area": 11.5482,
+          "centre_paper_mm": [
+            225.76562500000003,
+            94.39416249999998
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-06",
+          "name": "창고",
+          "area": 10.4825,
+          "centre_paper_mm": [
+            227.07812499999997,
+            105.21222499999999
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-07",
+          "name": "공용·장애인 화장실",
+          "area": 22.4025,
+          "centre_paper_mm": [
+            320.26171875,
+            120.98046875
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN__VERIFIED_1F_SYMBOL"
+        },
+        {
+          "id": "2-08",
+          "name": "식음 점포 객석",
+          "area": 41.04,
+          "centre_paper_mm": [
+            73.0,
+            140.6257116151421
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-09",
+          "name": "주방·창고",
+          "area": 17.28,
+          "centre_paper_mm": [
+            71.6875,
+            195.93749999999997
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-10",
+          "name": "식음 홀",
+          "area": 1337.3357,
+          "centre_paper_mm": [
+            228.54626341723525,
+            185.29953593566825
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-11",
+          "name": "식음 점포 객석",
+          "area": 28.8,
+          "centre_paper_mm": [
+            304.0,
+            195.00000000000003
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-12",
+          "name": "창고·세척",
+          "area": 6.66,
+          "centre_paper_mm": [
+            327.9816254365113,
+            188.54787426814593
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-13",
+          "name": "창고·세척",
+          "area": 7.2,
+          "centre_paper_mm": [
+            309.9999999999999,
+            212.7500426873855
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-14",
+          "name": "주방",
+          "area": 10.8,
+          "centre_paper_mm": [
+            324.0624999999999,
+            213.5625
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-15",
+          "name": "주방",
+          "area": 7.74,
+          "centre_paper_mm": [
+            325.45,
+            200.55
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-16",
+          "name": "식음 점포 객석",
+          "area": 57.6,
+          "centre_paper_mm": [
+            319.35156249999994,
+            237.2109375
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-17",
+          "name": "창고",
+          "area": 7.056,
+          "centre_paper_mm": [
+            238.375,
+            304.67499999999995
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-18",
+          "name": "여자 화장실",
+          "area": 7.95,
+          "centre_paper_mm": [
+            313.5,
+            292.4666457972873
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN__VERIFIED_1F_SYMBOL"
+        },
+        {
+          "id": "2-19",
+          "name": "장애인 화장실",
+          "area": 7.65,
+          "centre_paper_mm": [
+            326.875,
+            288.625
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN__VERIFIED_1F_SYMBOL"
+        },
+        {
+          "id": "2-20",
+          "name": "식음 점포 객석",
+          "area": 45.0,
+          "centre_paper_mm": [
+            217.5,
+            329.5
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-21",
+          "name": "세척·준비",
+          "area": 6.804,
+          "centre_paper_mm": [
+            238.375,
+            317.04999999999995
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-22",
+          "name": "주방",
+          "area": 11.34,
+          "centre_paper_mm": [
+            238.34765625000006,
+            330.52734375
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-23",
+          "name": "창고·세척",
+          "area": 9.0,
+          "centre_paper_mm": [
+            250.375,
+            332.625
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-24",
+          "name": "주방",
+          "area": 13.5,
+          "centre_paper_mm": [
+            250.28125,
+            316.96875
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-25",
+          "name": "식음 점포 객석",
+          "area": 40.5,
+          "centre_paper_mm": [
+            272.5,
+            321.1517074202952
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN"
+        },
+        {
+          "id": "2-26",
+          "name": "남자 화장실",
+          "area": 13.375,
+          "centre_paper_mm": [
+            322.18107778840505,
+            305.0
+          ],
+          "ceiling_height": null,
+          "grade": "PROPOSED_DESIGN__VERIFIED_1F_SYMBOL"
+        }
+      ],
+      "grid": {
+        "x": [
+          [
+            "A",
+            -8.4
+          ],
+          [
+            "B",
+            -0.0
+          ],
+          [
+            "C",
+            9.0
+          ],
+          [
+            "D",
+            18.0
+          ],
+          [
+            "E",
+            27.0
+          ],
+          [
+            "F",
+            36.0
+          ],
+          [
+            "G",
+            44.4
+          ]
+        ],
+        "y": [
+          [
+            "7",
+            -17.4
+          ],
+          [
+            "6",
+            -9.0
+          ],
+          [
+            "5",
+            0.0
+          ],
+          [
+            "4",
+            9.0
+          ],
+          [
+            "3",
+            18.0
+          ],
+          [
+            "2",
+            27.0
+          ],
+          [
+            "1",
+            35.4
+          ]
+        ]
+      },
+      "section": {
+        "x": -4.2,
+        "direction": "+X",
+        "target": "A-301"
+      },
+      "architectural_model_items": {
+        "A-WALL-EXT": 1,
+        "A-GLAZ": 2,
+        "A-FLOR-OPEN": 7,
+        "A-COLS": 34,
+        "A-WALL-CORE": 13,
+        "A-TUBE": 47,
+        "A-STAR": 198,
+        "A-DOOR": 87,
+        "A-WALL-PART": 17,
+        "A-FIXT": 22,
+        "A-FURN": 16,
+        "A-ZONE": 22,
+        "A-FLOR-HATCH": 1,
+        "A-RAIL": 1,
+        "A-ANNO-SYMB": 34,
+        "A-STAR-PROJ": 4,
+        "A-ANNO-TAGS": 26,
+        "A-GRID": 14,
+        "A-ANNO-DIMS": 48
+      },
+      "removed_layers": [
+        "A-CIRC",
+        "A-CIRC-SVC"
+      ],
+      "unknown_ceiling_count": 26
+    },
+    "A-301": {
+      "cut_axis": "X",
+      "value": -4.2,
+      "direction": "+X",
+      "source_levels": {
+        "B2": -10.9996,
+        "B1": -5.4996,
+        "1F": 0.0004,
+        "2F": 6.0004,
+        "3F": 11.0004,
+        "4F": 16.0004,
+        "5F": 21.0004,
+        "6F": 26.0004,
+        "7F": 31.001,
+        "8F": 36.0004,
+        "9F": 40.5004,
+        "10F": 45.0004,
+        "11F": 51.0004,
+        "12F": 57.0004,
+        "13F": 61.5004,
+        "14F": 66.0004,
+        "15F": 70.5004
+      },
+      "roof_max": 76.4996,
+      "original_cuts": [
+        {
+          "name": "A-CORE-TUBE_M1",
+          "kind": "tube_wall",
+          "section_bounds": [
+            -10.5843,
+            -11.0,
+            -7.4138,
+            75.0
+          ]
+        },
+        {
+          "name": "A-FACD_bal2_rail.003",
+          "kind": "facade",
+          "section_bounds": [
+            -5.0302,
+            6.0,
+            -4.9701,
+            7.0999
+          ]
+        },
+        {
+          "name": "A-FACD_valley_handrail_7F.002",
+          "kind": "facade",
+          "section_bounds": [
+            -5.0502,
+            32.1,
+            -4.9501,
+            32.1599
+          ]
+        },
+        {
+          "name": "A-FACD_valley_rail_7F.002",
+          "kind": "facade",
+          "section_bounds": [
+            -5.0305,
+            31.0,
+            -4.9701,
+            32.1002
+          ]
+        },
+        {
+          "name": "A-VERT-ESCL_B1-1F_B1-1F",
+          "kind": "stair",
+          "section_bounds": [
+            13.2001,
+            -5.7999,
+            16.7999,
+            -5.4998
+          ]
+        },
+        {
+          "name": "A-VERT-STRS_A",
+          "kind": "core_wall",
+          "section_bounds": [
+            -36.002,
+            -5.5,
+            -28.9989,
+            76.5
+          ]
+        },
+        {
+          "name": "A-VERT-STRS_D",
+          "kind": "core_wall",
+          "section_bounds": [
+            11.9982,
+            -11.0,
+            18.0005,
+            75.0
+          ]
+        },
+        {
+          "name": "A-FLOR_glassfloor",
+          "kind": "slab",
+          "section_bounds": [
+            -0.1304,
+            10.5,
+            12.1303,
+            10.9996
+          ]
+        },
+        {
+          "name": "A-FLOR_s7_10F",
+          "kind": "slab",
+          "section_bounds": [
+            -35.9995,
+            44.5,
+            18.0018,
+            45.0004
+          ]
+        },
+        {
+          "name": "A-FLOR_s7_11F",
+          "kind": "slab",
+          "section_bounds": [
+            -35.9995,
+            50.5,
+            18.0018,
+            51.0004
+          ]
+        },
+        {
+          "name": "A-FLOR_s7_12F",
+          "kind": "slab",
+          "section_bounds": [
+            -35.9995,
+            56.5,
+            18.0018,
+            57.0004
+          ]
+        },
+        {
+          "name": "A-FLOR_s7_13F",
+          "kind": "slab",
+          "section_bounds": [
+            -35.9995,
+            61.0,
+            18.0018,
+            61.5004
+          ]
+        },
+        {
+          "name": "A-FLOR_s7_14F",
+          "kind": "slab",
+          "section_bounds": [
+            -35.9995,
+            65.5,
+            18.0018,
+            66.0004
+          ]
+        },
+        {
+          "name": "A-FLOR_s7_15F",
+          "kind": "slab",
+          "section_bounds": [
+            -35.9995,
+            70.0,
+            18.0018,
+            70.5004
+          ]
+        },
+        {
+          "name": "A-FLOR_s7_1F",
+          "kind": "slab",
+          "section_bounds": [
+            -35.9995,
+            -0.5,
+            18.0018,
+            0.0004
+          ]
+        },
+        {
+          "name": "A-FLOR_s7_2F",
+          "kind": "slab",
+          "section_bounds": [
+            -35.9995,
+            5.5,
+            -4.999,
+            6.0004
+          ]
+        },
+        {
+          "name": "A-FLOR_s7_3F",
+          "kind": "slab",
+          "section_bounds": [
+            -35.9995,
+            10.5,
+            18.0018,
+            11.0004
+          ]
+        },
+        {
+          "name": "A-FLOR_s7_4F",
+          "kind": "slab",
+          "section_bounds": [
+            -35.9995,
+            15.5,
+            18.0018,
+            16.0004
+          ]
+        },
+        {
+          "name": "A-FLOR_s7_5F",
+          "kind": "slab",
+          "section_bounds": [
+            -35.9995,
+            20.5,
+            18.0018,
+            21.0004
+          ]
+        },
+        {
+          "name": "A-FLOR_s7_6F",
+          "kind": "slab",
+          "section_bounds": [
+            -35.9995,
+            25.5,
+            18.0018,
+            26.0004
+          ]
+        },
+        {
+          "name": "A-FLOR_s7_7F",
+          "kind": "slab",
+          "section_bounds": [
+            -36.0004,
+            30.5,
+            -4.9994,
+            31.001
+          ]
+        },
+        {
+          "name": "A-FLOR_s7_8F",
+          "kind": "slab",
+          "section_bounds": [
+            -35.9995,
+            35.5,
+            18.0018,
+            36.0004
+          ]
+        },
+        {
+          "name": "A-FLOR_s7_9F",
+          "kind": "slab",
+          "section_bounds": [
+            -35.9995,
+            40.0,
+            18.0018,
+            40.5004
+          ]
+        },
+        {
+          "name": "A-FLOR_s7_B1",
+          "kind": "slab",
+          "section_bounds": [
+            -35.9995,
+            -6.0,
+            18.0018,
+            -5.4996
+          ]
+        },
+        {
+          "name": "A-FLOR_s7_B2",
+          "kind": "slab",
+          "section_bounds": [
+            -35.9998,
+            -11.5,
+            18.0007,
+            -10.9996
+          ]
+        },
+        {
+          "name": "A-ROOF_slab",
+          "kind": "roof",
+          "section_bounds": [
+            -29.001,
+            76.05,
+            -14.0,
+            76.4996
+          ]
+        }
+      ],
+      "projected_objects": [
+        "A-CORE-TUBE_capW",
+        "A-CORE-TUBE_T1",
+        "A-CORE-TUBE_T3",
+        "A-VERT-ELEV_car_0",
+        "A-VERT-ELEV_car_1",
+        "A-VERT-ESCL_12F-15F_X12F-15F",
+        "A-VERT-ESCL_1F-2F_W_1F",
+        "A-VERT-ESCL_2F-3F_W_2F",
+        "A-VERT-ESCL_3F-4F_W_3F",
+        "A-VERT-ESCL_4F-5F_W_4F",
+        "A-VERT-ESCL_5F-6F_W_5F",
+        "A-VERT-ESCL_B1-1F_B1-1F",
+        "A-VERT-SPRL_B1-6F_T1_spiral"
+      ],
+      "projection_window_x_m": [
+        -4.2,
+        7.2
+      ],
+      "core_original_grade": "expression envelope",
+      "proposed_bridge_cuts": [
+        "2F D E2 deck",
+        "7F D E2 deck"
+      ],
+      "floor_programs": [
+        [
+          "B2",
+          -10.9996,
+          [
+            "판매"
+          ]
+        ],
+        [
+          "B1",
+          -5.4996,
+          [
+            "식음",
+            "판매"
+          ]
+        ],
+        [
+          "1F",
+          0.0004,
+          [
+            "판매"
+          ]
+        ],
+        [
+          "2F",
+          6.0004,
+          [
+            "식음"
+          ]
+        ],
+        [
+          "3F",
+          11.0004,
+          [
+            "판매"
+          ]
+        ],
+        [
+          "4F",
+          16.0004,
+          [
+            "식음",
+            "판매"
+          ]
+        ],
+        [
+          "5F",
+          21.0004,
+          [
+            "판매"
+          ]
+        ],
+        [
+          "6F",
+          26.0004,
+          [
+            "식음",
+            "정원",
+            "판매"
+          ]
+        ],
+        [
+          "7F",
+          31.001,
+          [
+            "식음",
+            "판매"
+          ]
+        ],
+        [
+          "8F",
+          36.0004,
+          [
+            "판매"
+          ]
+        ],
+        [
+          "9F",
+          40.5004,
+          [
+            "판매"
+          ]
+        ],
+        [
+          "10F",
+          45.0004,
+          [
+            "식음"
+          ]
+        ],
+        [
+          "11F",
+          51.0004,
+          [
+            "문화·엔터"
+          ]
+        ],
+        [
+          "12F",
+          57.0004,
+          [
+            "문화·엔터"
+          ]
+        ],
+        [
+          "13F",
+          61.5004,
+          [
+            "문화·엔터"
+          ]
+        ],
+        [
+          "14F",
+          66.0004,
+          [
+            "문화·엔터"
+          ]
+        ],
+        [
+          "15F",
+          70.5004,
+          [
+            "식음",
+            "정원"
+          ]
+        ]
+      ]
+    },
+    "A-501": {
+      "core": "D",
+      "left_views": [
+        "1F-2F",
+        "2F-3F"
+      ],
+      "stacks": [
+        {
+          "risers": [
+            6,
+            11,
+            6,
+            11
+          ],
+          "riser_mm": 176.47058823529412,
+          "going_mm": 280.0,
+          "tread_count": 30,
+          "joins": true,
+          "floor_to_floor_m": 6.0,
+          "clear_width_m": 1.205,
+          "landing_elevations_m": [
+            1.0592235294117647,
+            3.0004,
+            4.0592235294117645,
+            6.0004
+          ],
+          "stage": "PASS_CONDITIONAL",
+          "installed_research_proposal_post_opening": "PASS_CONDITIONAL"
+        },
+        {
+          "risers": [
+            5,
+            9,
+            5,
+            9
+          ],
+          "riser_mm": 178.5714285714286,
+          "going_mm": 280.0,
+          "tread_count": 24,
+          "joins": true,
+          "floor_to_floor_m": 5.000000000000001,
+          "clear_width_m": 1.205,
+          "landing_elevations_m": [
+            6.893257142857143,
+            8.5004,
+            9.393257142857143,
+            11.0004
+          ],
+          "stage": "PASS_CONDITIONAL",
+          "installed_research_proposal_post_opening": "PASS_CONDITIONAL"
+        }
+      ],
+      "section_x_m": -8.1,
+      "master_meshes": [
+        "Core_D_flight2"
+      ],
+      "intersecting_steps": [
+        "STAIR D 1F-2F F2 tread 01",
+        "STAIR D 1F-2F F2 tread 02",
+        "STAIR D 1F-2F F2 tread 03",
+        "STAIR D 1F-2F F2 tread 04",
+        "STAIR D 1F-2F F2 tread 05",
+        "STAIR D 1F-2F F2 tread 06",
+        "STAIR D 1F-2F F2 tread 07",
+        "STAIR D 1F-2F F2 tread 08",
+        "STAIR D 1F-2F F2 tread 09",
+        "STAIR D 1F-2F F2 tread 10",
+        "STAIR D 2F-3F F2 tread 01",
+        "STAIR D 2F-3F F2 tread 02",
+        "STAIR D 2F-3F F2 tread 03",
+        "STAIR D 2F-3F F2 tread 04",
+        "STAIR D 2F-3F F2 tread 05",
+        "STAIR D 2F-3F F2 tread 06",
+        "STAIR D 2F-3F F2 tread 07",
+        "STAIR D 2F-3F F2 tread 08"
+      ],
+      "actual_section_meshes": [
+        "CORE 1F D wall 0",
+        "CORE 1F D wall 1",
+        "CORE 1F D wall 2",
+        "CORE 1F D wall 3",
+        "CORE 1F D wall 4",
+        "CORE 1F D wall 5",
+        "CORE 1F D wall 6",
+        "CORE 1F D wall 7",
+        "CORE 1F D wall 8",
+        "CORE 2F D wall 0",
+        "CORE 2F D wall 1",
+        "CORE 2F D wall 2",
+        "CORE 2F D wall 3",
+        "CORE 2F D wall 4",
+        "CORE 2F D wall 5",
+        "CORE 2F D wall 6",
+        "CORE 2F D wall 7",
+        "CORE 2F D wall 8",
+        "CORE 3F D wall 0",
+        "CORE 3F D wall 1",
+        "STAIR D 1F-2F F1 landing",
+        "STAIR D 1F-2F F2 lower extension",
+        "STAIR D 1F-2F F2 tread 01",
+        "STAIR D 1F-2F F2 tread 02",
+        "STAIR D 1F-2F F2 tread 03",
+        "STAIR D 1F-2F F2 tread 04",
+        "STAIR D 1F-2F F2 tread 05",
+        "STAIR D 1F-2F F2 tread 06",
+        "STAIR D 1F-2F F2 tread 07",
+        "STAIR D 1F-2F F2 tread 08",
+        "STAIR D 1F-2F F2 tread 09",
+        "STAIR D 1F-2F F2 tread 10",
+        "STAIR D 1F-2F F2 upper extension",
+        "STAIR D 1F-2F F2 landing",
+        "STAIR D 2F-3F F1 landing",
+        "STAIR D 2F-3F F2 lower extension",
+        "STAIR D 2F-3F F2 tread 01",
+        "STAIR D 2F-3F F2 tread 02",
+        "STAIR D 2F-3F F2 tread 03",
+        "STAIR D 2F-3F F2 tread 04",
+        "STAIR D 2F-3F F2 tread 05",
+        "STAIR D 2F-3F F2 tread 06",
+        "STAIR D 2F-3F F2 tread 07",
+        "STAIR D 2F-3F F2 tread 08",
+        "STAIR D 2F-3F F2 upper extension",
+        "STAIR D 2F-3F F2 landing"
+      ],
+      "match": {
+        "grade": "MODEL_VERIFIED geometry only",
+        "translation_m": [
+          -9.0,
+          -18.0
+        ],
+        "approved_flight_top_levels_m": [
+          1.0588239431381226,
+          3.176470994949341,
+          4.235293865203857,
+          6.0
+        ],
+        "R8_flight_landing_levels_m": [
+          1.0592235294117647,
+          3.0004,
+          4.0592235294117645,
+          6.0004
+        ],
+        "2F_receiver_xy_m": [
+          -6.13,
+          -13.455,
+          -4.925,
+          -12.25
+        ],
+        "2F_receiving_edge_plan_gap_m": 0.0,
+        "2F_flight4_to_landing_edge_length_m": 1.2005,
+        "2F_top_level_difference_m": 0.00039999999999995595,
+        "receiving_interface": "PASS_CONDITIONAL: geometric level and edge registration",
+        "combined_flight_stack": "BLOCKED_USER_DECISION: overlapping incompatible 1F-2F alternatives; approved master unchanged"
+      },
+      "max_landing_mismatch_mm": 176.07099494934087
+    },
+    "S-401": {
+      "core": "2F D",
+      "deck_area_m2": 57.715,
+      "deck_thickness_m": 0.25,
+      "gap_m": 17.0,
+      "bridge_width_m": 2.4000000000000004,
+      "ends": {
+        "IF-01": [
+          -3.0,
+          -12.1,
+          -0.6,
+          -12.0
+        ],
+        "IF-02": [
+          -5.4,
+          4.9,
+          -3.0,
+          5.0
+        ]
+      },
+      "core_section_y": -12.050000000000002,
+      "slab_section_x": -4.2,
+      "transverse_section_y": -3.5,
+      "expression_core_edge_to_assumed_interface_m": 0.0009999999999998899,
+      "structure_status": "BLOCKED_STRUCTURAL_EVIDENCE",
+      "structure_inputs": {
+        "supports": "Proposed interface strips only; real bearings unknown; twin torsion-resistant closed side girders/stiffened box and end diaphragm are a structural concept. No section size assigned.",
+        "geometric_run_m": 17.0,
+        "actual_support_span_m": null,
+        "spine_width_m": 2.4000000000000004,
+        "spine_area_m2": 40.800000000000004,
+        "wrap_area_m2": 16.915,
+        "total_three_decks_area_m2": 173.145,
+        "change_from_R5_m2": 3.2250000000000085,
+        "wrap_centroid_m": [
+          -1.7083160902551975,
+          -13.050852300719283
+        ],
+        "eccentricity_m": 2.4916839097448027,
+        "wrap_transverse_first_moment_m3": 42.14683333333333,
+        "line_load_coefficient": 2.4000000000000004,
+        "reaction_each_q_coefficient": 20.400000000000002,
+        "moment_q_coefficient": 86.70000000000002,
+        "units": "q kN/m²; line kN/m; reaction kN; moment kN·m",
+        "engineering_inputs_missing": [
+          "real supports and as-built framing",
+          "sections and reinforcement",
+          "material grades",
+          "dead/live/guard loads",
+          "torsional rigidity",
+          "deflection",
+          "human induced vibration",
+          "existing slab anchorage",
+          "seismic relative displacement",
+          "rated fire assemblies"
+        ],
+        "status": "BLOCKED_STRUCTURAL_EVIDENCE",
+        "additional_wrap_reaction_core_q_coefficient": 17.960598039215686,
+        "additional_wrap_reaction_slab_q_coefficient": -1.0455980392156867,
+        "total_core_q_coefficient": 38.36059803921569,
+        "total_slab_q_coefficient": 19.354401960784315,
+        "support_line_plane_y_m": [
+          -12.0,
+          5.0
+        ],
+        "side_eccentric_action": "Wrap gravity first moment about bridge axis requires torsion-resisting section/end frame. Signs reverse on C mirror.",
+        "sensitivity_note": "Uniform q, vertical resultant bookkeeping. Does not resolve two support lines into a beam/anchor design, support span is unverified.",
+        "missing_calculation_inputs": [
+          "as-built beam/wall centerlines and sections at three core ends and three slab ends",
+          "slab edge supporting collectors and their continuity",
+          "anchorage and bearing dimensions and reinforcement",
+          "steel/concrete strength and section properties including torsional stiffness",
+          "dead loads, pedestrian traffic load and fatigue/serviceability criteria",
+          "existing capacity and allowable differential movements",
+          "load combinations, wind/seismic movements, fire resistance and connection erection sequence"
+        ]
+      }
+    }
+  },
+  "calculated_dimensions": [
+    {
+      "panel": "A-501/01",
+      "scale": 50,
+      "metres": 6.0,
+      "paper_mm": 120.0,
+      "label": "6,000"
+    },
+    {
+      "panel": "A-501/01",
+      "scale": 50,
+      "metres": 6.0,
+      "paper_mm": 119.99999999999999,
+      "label": "6,000"
+    },
+    {
+      "panel": "A-501/01",
+      "scale": 50,
+      "metres": 1.5250000000000004,
+      "paper_mm": 30.5,
+      "label": "1,525"
+    },
+    {
+      "panel": "A-501/01",
+      "scale": 50,
+      "metres": 1.1999999999999993,
+      "paper_mm": 23.99999999999997,
+      "label": "1,200"
+    },
+    {
+      "panel": "A-501/01",
+      "scale": 50,
+      "metres": 1.1999999999999993,
+      "paper_mm": 23.999999999999986,
+      "label": "1,200"
+    },
+    {
+      "panel": "A-501/02",
+      "scale": 50,
+      "metres": 6.0,
+      "paper_mm": 120.0,
+      "label": "6,000"
+    },
+    {
+      "panel": "A-501/02",
+      "scale": 50,
+      "metres": 6.0,
+      "paper_mm": 120.0,
+      "label": "6,000"
+    },
+    {
+      "panel": "A-501/02",
+      "scale": 50,
+      "metres": 1.5250000000000004,
+      "paper_mm": 30.5,
+      "label": "1,525"
+    },
+    {
+      "panel": "A-501/02",
+      "scale": 50,
+      "metres": 1.370000000000001,
+      "paper_mm": 27.400000000000034,
+      "label": "1,370"
+    },
+    {
+      "panel": "A-501/02",
+      "scale": 50,
+      "metres": 1.370000000000001,
+      "paper_mm": 27.400000000000034,
+      "label": "1,370"
+    },
+    {
+      "panel": "A-501/03",
+      "scale": 50,
+      "metres": 2.799999999999999,
+      "paper_mm": 55.99999999999994,
+      "label": "2,800"
+    },
+    {
+      "panel": "A-501/03",
+      "scale": 50,
+      "metres": 2.24,
+      "paper_mm": 44.799999999999955,
+      "label": "2,240"
+    },
+    {
+      "panel": "S-401/01",
+      "scale": 100,
+      "metres": 2.4000000000000004,
+      "paper_mm": 24.0,
+      "label": "2,400"
+    },
+    {
+      "panel": "S-401/01",
+      "scale": 100,
+      "metres": 17.0,
+      "paper_mm": 170.0,
+      "label": "17,000"
+    },
+    {
+      "panel": "S-401/02",
+      "scale": 75,
+      "metres": 17.0,
+      "paper_mm": 226.66666666666669,
+      "label": "17,000"
+    },
+    {
+      "panel": "S-401/03",
+      "scale": 25,
+      "metres": 2.4000000000000004,
+      "paper_mm": 96.00000000000003,
+      "label": "2,400"
+    },
+    {
+      "panel": "S-401/03",
+      "scale": 25,
+      "metres": 0.25,
+      "paper_mm": 10.0,
+      "label": "250"
+    },
+    {
+      "panel": "S-401/05",
+      "scale": 25,
+      "metres": 0.5004,
+      "paper_mm": 20.01600000000002,
+      "label": "500"
+    },
+    {
+      "panel": "S-401/05",
+      "scale": 25,
+      "metres": 0.15000000000000036,
+      "paper_mm": 6.0,
+      "label": "150"
+    }
+  ],
+  "graphical_scales": [
+    {
+      "panel": "A-201",
+      "scale": 200,
+      "metres": 10,
+      "paper_mm": 50.0,
+      "bar": [
+        57,
+        378,
+        1.35
+      ]
+    },
+    {
+      "panel": "A-301",
+      "scale": 250,
+      "metres": 10,
+      "paper_mm": 40.0,
+      "bar": [
+        112,
+        394,
+        1.35
+      ]
+    },
+    {
+      "panel": "A-501/02",
+      "scale": 50,
+      "metres": 2,
+      "paper_mm": 40.0,
+      "bar": [
+        41,
+        389,
+        1.35
+      ]
+    },
+    {
+      "panel": "S-401/01",
+      "scale": 100,
+      "metres": 5,
+      "paper_mm": 50.0,
+      "bar": [
+        43,
+        338,
+        1.35
+      ]
+    },
+    {
+      "panel": "S-401/03",
+      "scale": 25,
+      "metres": 2,
+      "paper_mm": 80.0,
+      "bar": [
+        428,
+        384,
+        1.35
+      ]
+    }
+  ],
+  "normalized_geometry_at_draft_clip": [
+    [
+      "A-201",
+      "MultiPolygon",
+      [
+        11.504173528159328,
+        -7.284859781157179,
+        36.211672874841746,
+        33.3493984651647
+      ]
+    ],
+    [
+      "A-201",
+      "MultiPolygon",
+      [
+        27.12,
+        -14.880000000000003,
+        29.88,
+        -10.620000000000003
+      ]
+    ]
+  ],
+  "labels": [
+    [
+      0,
+      536,
+      17.84,
+      548.929443359375,
+      21.0,
+      "PROJECT NO."
+    ],
+    [
+      0,
+      536,
+      48.84,
+      550.15107421875,
+      52.0,
+      "PROJECT TITLE"
+    ],
+    [
+      0,
+      536,
+      82.84,
+      551.5825113932292,
+      86.0,
+      "DRAWING TITLE"
+    ],
+    [
+      0,
+      536,
+      118.84,
+      548.1274251302083,
+      122.0,
+      "REFERENCES"
+    ],
+    [
+      0,
+      536,
+      158.84,
+      546.8654866536458,
+      162.0,
+      "GEOMETRY"
+    ],
+    [
+      0,
+      536,
+      196.84,
+      542.6300862630209,
+      200.0,
+      "NOTES"
+    ],
+    [
+      0,
+      536,
+      244.84,
+      545.276953125,
+      248.0,
+      "REVISION"
+    ],
+    [
+      0,
+      536,
+      278.84,
+      541.4518636067709,
+      282.0,
+      "ISSUE"
+    ],
+    [
+      0,
+      536,
+      311.84,
+      548.5604736328125,
+      315.0,
+      "PRINT SCALE"
+    ],
+    [
+      0,
+      536,
+      348.84,
+      541.1356038411458,
+      352.0,
+      "DATE"
+    ],
+    [
+      0,
+      536,
+      379.84,
+      550.3608805338541,
+      383.0,
+      "DRAWING NO."
+    ],
+    [
+      0,
+      536,
+      30.22,
+      558.5921610514323,
+      35.0,
+      "WP0 · R10-A"
+    ],
+    [
+      0,
+      536,
+      59.04,
+      560.6475911458333,
+      64.0,
+      "다층 상업시설"
+    ],
+    [
+      0,
+      536,
+      67.3,
+      562.60302734375,
+      71.0,
+      "수직동선 및 접합 연구"
+    ],
+    [
+      0,
+      536,
+      92.616,
+      549.0361379665799,
+      97.0,
+      "2층 전체"
+    ],
+    [
+      0,
+      536,
+      98.616,
+      553.7463758680556,
+      103.0,
+      "건축 평면도"
+    ],
+    [
+      0,
+      536,
+      129.408,
+      555.316650390625,
+      133.0,
+      "A-301  A–A 종단"
+    ],
+    [
+      0,
+      536,
+      134.408,
+      552.491396484375,
+      138.0,
+      "A-501  코어 D"
+    ],
+    [
+      0,
+      536,
+      139.408,
+      553.089189453125,
+      143.0,
+      "S-401  E2 접합"
+    ],
+    [
+      0,
+      536,
+      167.48,
+      559.8781290690104,
+      171.0,
+      "회색·흑색 / 기준 형상"
+    ],
+    [
+      0,
+      536,
+      173.48,
+      554.3990492078993,
+      177.0,
+      "청록 / 연구 후보"
+    ],
+    [
+      0,
+      536,
+      179.516,
+      562.2944673665364,
+      183.0,
+      "점선 / 투영 또는 미확인"
+    ],
+    [
+      0,
+      536,
+      205.552,
+      561.1543646918403,
+      209.0,
+      "기준 2F FFL +6.0004 m"
+    ],
+    [
+      0,
+      536,
+      211.25199999999998,
+      557.5501746961805,
+      214.7,
+      "절단면 FFL +1.50 m"
+    ],
+    [
+      0,
+      536,
+      216.952,
+      566.0189084201389,
+      220.4,
+      "실 구성·가구는 PR #30 검토"
+    ],
+    [
+      0,
+      536,
+      222.652,
+      556.1844010416667,
+      226.1,
+      "CH는 전 실 미확인"
+    ],
+    [
+      0,
+      536,
+      257.228,
+      556.887545030382,
+      261.0,
+      "A  대표 도면 4장"
+    ],
+    [
+      0,
+      536,
+      293.76,
+      552.9912109375,
+      298.0,
+      "독립 검수용"
+    ],
+    [
+      0,
+      536,
+      323.832,
+      544.0097092013889,
+      328.0,
+      "1:200"
+    ],
+    [
+      0,
+      536,
+      332.372,
+      560.0086809624565,
+      336.0,
+      "A2 · 실제 크기 100%"
+    ],
+    [
+      0,
+      536,
+      363.012,
+      552.2415581597222,
+      367.0,
+      "2026. 11. 26"
+    ],
+    [
+      0,
+      536,
+      391.88,
+      553.1278089735243,
+      399.0,
+      "A-201"
+    ],
+    [
+      0,
+      399,
+      43.04,
+      417.65433078342016,
+      48.0,
+      "2F 실 목록"
+    ],
+    [
+      0,
+      491.7607638888889,
+      44.552,
+      515.0,
+      48.0,
+      "면적 ㎡  ·  CH 천장고"
+    ],
+    [
+      0,
+      398.08416666666665,
+      55.336,
+      405.9158333333333,
+      59.0,
+      "실번호"
+    ],
+    [
+      0,
+      426.38944444444445,
+      55.336,
+      431.61055555555555,
+      59.0,
+      "실명"
+    ],
+    [
+      0,
+      486.38944444444445,
+      55.336,
+      491.61055555555555,
+      59.0,
+      "면적"
+    ],
+    [
+      0,
+      510.1619037543403,
+      55.336,
+      513.8380962456597,
+      59.0,
+      "CH"
+    ],
+    [
+      0,
+      66.09400017632379,
+      36.372,
+      67.90599982367623,
+      40.0,
+      "A"
+    ],
+    [
+      0,
+      108.17950744628907,
+      36.372,
+      109.82049255371093,
+      40.0,
+      "B"
+    ],
+    [
+      0,
+      153.1776212565104,
+      36.372,
+      154.82237874348957,
+      40.0,
+      "C"
+    ],
+    [
+      0,
+      198.03992940266926,
+      36.372,
+      199.9600705973307,
+      40.0,
+      "D"
+    ],
+    [
+      0,
+      243.30651089138456,
+      36.372,
+      244.69348910861547,
+      40.0,
+      "E"
+    ],
+    [
+      0,
+      288.3247440592448,
+      36.372,
+      289.6752559407552,
+      40.0,
+      "F"
+    ],
+    [
+      0,
+      330.0701084391276,
+      36.372,
+      331.92989156087236,
+      40.0,
+      "G"
+    ],
+    [
+      0,
+      36.253697577582464,
+      337.372,
+      37.746302422417536,
+      341.0,
+      "7"
+    ],
+    [
+      0,
+      36.253697577582464,
+      295.372,
+      37.746302422417536,
+      299.0,
+      "6"
+    ],
+    [
+      0,
+      36.253697577582464,
+      250.372,
+      37.746302422417536,
+      254.0,
+      "5"
+    ],
+    [
+      0,
+      36.253697577582464,
+      205.372,
+      37.746302422417536,
+      209.0,
+      "4"
+    ],
+    [
+      0,
+      36.253697577582464,
+      160.372,
+      37.746302422417536,
+      164.0,
+      "3"
+    ],
+    [
+      0,
+      36.253697577582464,
+      115.372,
+      37.746302422417536,
+      119.0,
+      "2"
+    ],
+    [
+      0,
+      36.253697577582464,
+      73.372,
+      37.746302422417536,
+      77.0,
+      "1"
+    ],
+    [
+      0,
+      85.1378146701389,
+      56.438,
+      90.86218532986112,
+      59.85,
+      "8,400"
+    ],
+    [
+      0,
+      128.63781467013888,
+      56.438,
+      134.3621853298611,
+      59.85,
+      "9,000"
+    ],
+    [
+      0,
+      173.63781467013888,
+      56.438,
+      179.3621853298611,
+      59.85,
+      "9,000"
+    ],
+    [
+      0,
+      218.63781467013888,
+      56.438,
+      224.3621853298611,
+      59.85,
+      "9,000"
+    ],
+    [
+      0,
+      263.6378146701389,
+      56.438,
+      269.3621853298611,
+      59.85,
+      "9,000"
+    ],
+    [
+      0,
+      307.1378146701389,
+      56.438,
+      312.8621853298611,
+      59.85,
+      "8,400"
+    ],
+    [
+      0,
+      195.48689832899305,
+      49.438,
+      202.51310167100695,
+      52.85,
+      "52,800"
+    ],
+    [
+      0,
+      46.446506076388886,
+      316.16,
+      52.0,
+      319.5,
+      "8,400"
+    ],
+    [
+      0,
+      46.446506076388886,
+      272.66,
+      52.0,
+      276.0,
+      "9,000"
+    ],
+    [
+      0,
+      46.446506076388886,
+      227.66,
+      52.0,
+      231.0,
+      "9,000"
+    ],
+    [
+      0,
+      46.446506076388886,
+      182.66,
+      52.0,
+      186.0,
+      "9,000"
+    ],
+    [
+      0,
+      46.446506076388886,
+      137.66,
+      52.0,
+      141.0,
+      "9,000"
+    ],
+    [
+      0,
+      46.446506076388886,
+      94.16,
+      52.0,
+      97.5,
+      "8,400"
+    ],
+    [
+      0,
+      17.183534071180556,
+      205.16,
+      24.0,
+      208.5,
+      "52,800"
+    ],
+    [
+      0,
+      399.1716110568576,
+      67.068,
+      404.82838894314233,
+      70.75,
+      "2-01"
+    ],
+    [
+      0,
+      414,
+      66.96,
+      425.5341796875,
+      70.75,
+      "주방·창고"
+    ],
+    [
+      0,
+      492.08240180121527,
+      67.068,
+      497.0,
+      70.75,
+      "13.4"
+    ],
+    [
+      0,
+      509.73332451714407,
+      67.23,
+      512.2666754828559,
+      70.75,
+      "—"
+    ],
+    [
+      0,
+      112.61856635199653,
+      84.09159374999997,
+      116.75674614800347,
+      87.05359374999998,
+      "2-01"
+    ],
+    [
+      0,
+      399.1716110568576,
+      75.318,
+      404.82838894314233,
+      79.0,
+      "2-02"
+    ],
+    [
+      0,
+      414,
+      75.21,
+      432.32652994791664,
+      79.0,
+      "식음 점포 객석"
+    ],
+    [
+      0,
+      492.08240180121527,
+      75.318,
+      497.0,
+      79.0,
+      "29.8"
+    ],
+    [
+      0,
+      509.73332451714407,
+      75.48,
+      512.2666754828559,
+      79.0,
+      "—"
+    ],
+    [
+      0,
+      135.67777777777778,
+      77.57124999999998,
+      141.32222222222222,
+      81.45124999999997,
+      "객석"
+    ],
+    [
+      0,
+      136.43091010199652,
+      82.77924999999996,
+      140.56908989800345,
+      85.74124999999997,
+      "2-02"
+    ],
+    [
+      0,
+      399.1716110568576,
+      83.568,
+      404.82838894314233,
+      87.25,
+      "2-03"
+    ],
+    [
+      0,
+      414,
+      83.46,
+      432.32652994791664,
+      87.25,
+      "식음 점포 객석"
+    ],
+    [
+      0,
+      492.08240180121527,
+      83.568,
+      497.0,
+      87.25,
+      "88.9"
+    ],
+    [
+      0,
+      509.73332451714407,
+      83.73,
+      512.2666754828559,
+      87.25,
+      "—"
+    ],
+    [
+      0,
+      179.81840277777778,
+      84.649375,
+      185.46284722222222,
+      88.529375,
+      "객석"
+    ],
+    [
+      0,
+      180.57153510199652,
+      89.85737499999999,
+      184.70971489800345,
+      92.819375,
+      "2-03"
+    ],
+    [
+      0,
+      399.1716110568576,
+      91.818,
+      404.82838894314233,
+      95.5,
+      "2-04"
+    ],
+    [
+      0,
+      414,
+      91.71,
+      419.46805555555557,
+      95.5,
+      "주방"
+    ],
+    [
+      0,
+      492.08240180121527,
+      91.818,
+      497.0,
+      95.5,
+      "15.4"
+    ],
+    [
+      0,
+      509.73332451714407,
+      91.98,
+      512.2666754828559,
+      95.5,
+      "—"
+    ],
+    [
+      0,
+      228.61841010199652,
+      77.49243749999997,
+      232.75658989800345,
+      80.45443749999997,
+      "2-04"
+    ],
+    [
+      0,
+      399.1716110568576,
+      100.068,
+      404.82838894314233,
+      103.75,
+      "2-05"
+    ],
+    [
+      0,
+      414,
+      99.96,
+      425.5341796875,
+      103.75,
+      "세척·준비"
+    ],
+    [
+      0,
+      492.08240180121527,
+      100.068,
+      497.0,
+      103.75,
+      "11.5"
+    ],
+    [
+      0,
+      509.73332451714407,
+      100.23,
+      512.2666754828559,
+      103.75,
+      "—"
+    ],
+    [
+      0,
+      223.69653510199655,
+      93.17216249999997,
+      227.83471489800348,
+      96.13416249999997,
+      "2-05"
+    ],
+    [
+      0,
+      399.1716110568576,
+      108.318,
+      404.82838894314233,
+      112.0,
+      "2-06"
+    ],
+    [
+      0,
+      414,
+      108.21,
+      419.46805555555557,
+      112.0,
+      "창고"
+    ],
+    [
+      0,
+      492.08240180121527,
+      108.318,
+      497.0,
+      112.0,
+      "10.5"
+    ],
+    [
+      0,
+      509.73332451714407,
+      108.48,
+      512.2666754828559,
+      112.0,
+      "—"
+    ],
+    [
+      0,
+      225.0090351019965,
+      103.99022499999998,
+      229.14721489800343,
+      106.95222499999998,
+      "2-06"
+    ],
+    [
+      0,
+      399.1716110568576,
+      116.568,
+      404.82838894314233,
+      120.25,
+      "2-07"
+    ],
+    [
+      0,
+      414,
+      116.46,
+      437.43147243923613,
+      120.25,
+      "공용·장애인 화장실"
+    ],
+    [
+      0,
+      492.08240180121527,
+      116.568,
+      497.0,
+      120.25,
+      "22.4"
+    ],
+    [
+      0,
+      509.73332451714407,
+      116.73,
+      512.2666754828559,
+      120.25,
+      "—"
+    ],
+    [
+      0,
+      318.1926288519965,
+      119.75846874999999,
+      322.3308086480035,
+      122.72046875,
+      "2-07"
+    ],
+    [
+      0,
+      399.1716110568576,
+      124.818,
+      404.82838894314233,
+      128.5,
+      "2-08"
+    ],
+    [
+      0,
+      414,
+      124.71,
+      432.32652994791664,
+      128.5,
+      "식음 점포 객석"
+    ],
+    [
+      0,
+      492.08240180121527,
+      124.818,
+      497.0,
+      128.5,
+      "41.0"
+    ],
+    [
+      0,
+      509.73332451714407,
+      124.98,
+      512.2666754828559,
+      128.5,
+      "—"
+    ],
+    [
+      0,
+      70.17777777777778,
+      134.1957116151421,
+      75.82222222222222,
+      138.0757116151421,
+      "객석"
+    ],
+    [
+      0,
+      70.93091010199653,
+      139.40371161514213,
+      75.06908989800347,
+      142.36571161514212,
+      "2-08"
+    ],
+    [
+      0,
+      399.1716110568576,
+      133.068,
+      404.82838894314233,
+      136.75,
+      "2-09"
+    ],
+    [
+      0,
+      414,
+      132.96,
+      425.5341796875,
+      136.75,
+      "주방·창고"
+    ],
+    [
+      0,
+      492.08240180121527,
+      133.068,
+      497.0,
+      136.75,
+      "17.3"
+    ],
+    [
+      0,
+      509.73332451714407,
+      133.23,
+      512.2666754828559,
+      136.75,
+      "—"
+    ],
+    [
+      0,
+      69.61841010199653,
+      194.7155,
+      73.75658989800347,
+      197.67749999999998,
+      "2-09"
+    ],
+    [
+      0,
+      399.1716110568576,
+      141.318,
+      404.82838894314233,
+      145.0,
+      "2-10"
+    ],
+    [
+      0,
+      414,
+      141.21,
+      423.16326497395835,
+      145.0,
+      "식음 홀"
+    ],
+    [
+      0,
+      488.61236382378473,
+      141.318,
+      497.0,
+      145.0,
+      "1,337.3"
+    ],
+    [
+      0,
+      509.73332451714407,
+      141.48,
+      512.2666754828559,
+      145.0,
+      "—"
+    ],
+    [
+      0,
+      222.6344795630686,
+      178.14953593566824,
+      234.45804727140194,
+      182.74953593566823,
+      "식음 홀"
+    ],
+    [
+      0,
+      226.47717351923177,
+      184.07753593566827,
+      230.6153533152387,
+      187.03953593566825,
+      "2-10"
+    ],
+    [
+      0,
+      399.1716110568576,
+      149.568,
+      404.82838894314233,
+      153.25,
+      "2-11"
+    ],
+    [
+      0,
+      414,
+      149.46,
+      432.32652994791664,
+      153.25,
+      "식음 점포 객석"
+    ],
+    [
+      0,
+      492.08240180121527,
+      149.568,
+      497.0,
+      153.25,
+      "28.8"
+    ],
+    [
+      0,
+      509.73332451714407,
+      149.73,
+      512.2666754828559,
+      153.25,
+      "—"
+    ],
+    [
+      0,
+      301.1777777777778,
+      188.57000000000002,
+      306.82222222222225,
+      192.45000000000002,
+      "객석"
+    ],
+    [
+      0,
+      301.9309101019965,
+      193.77800000000005,
+      306.0690898980035,
+      196.74000000000004,
+      "2-11"
+    ],
+    [
+      0,
+      399.1716110568576,
+      157.818,
+      404.82838894314233,
+      161.5,
+      "2-12"
+    ],
+    [
+      0,
+      414,
+      157.71,
+      425.5341796875,
+      161.5,
+      "창고·세척"
+    ],
+    [
+      0,
+      493.52996202256946,
+      157.818,
+      497.0,
+      161.5,
+      "6.7"
+    ],
+    [
+      0,
+      509.73332451714407,
+      157.98,
+      512.2666754828559,
+      161.5,
+      "—"
+    ],
+    [
+      0,
+      325.9125355385078,
+      187.32587426814595,
+      330.0507153345148,
+      190.28787426814594,
+      "2-12"
+    ],
+    [
+      0,
+      399.1716110568576,
+      166.068,
+      404.82838894314233,
+      169.75,
+      "2-13"
+    ],
+    [
+      0,
+      414,
+      165.96,
+      425.5341796875,
+      169.75,
+      "창고·세척"
+    ],
+    [
+      0,
+      493.52996202256946,
+      166.068,
+      497.0,
+      169.75,
+      "7.2"
+    ],
+    [
+      0,
+      509.73332451714407,
+      166.23,
+      512.2666754828559,
+      169.75,
+      "—"
+    ],
+    [
+      0,
+      307.9309101019964,
+      211.52804268738552,
+      312.06908989800337,
+      214.4900426873855,
+      "2-13"
+    ],
+    [
+      0,
+      399.1716110568576,
+      174.318,
+      404.82838894314233,
+      178.0,
+      "2-14"
+    ],
+    [
+      0,
+      414,
+      174.21,
+      419.46805555555557,
+      178.0,
+      "주방"
+    ],
+    [
+      0,
+      492.08240180121527,
+      174.318,
+      497.0,
+      178.0,
+      "10.8"
+    ],
+    [
+      0,
+      509.73332451714407,
+      174.48,
+      512.2666754828559,
+      178.0,
+      "—"
+    ],
+    [
+      0,
+      321.9934101019964,
+      212.34050000000002,
+      326.13158989800337,
+      215.3025,
+      "2-14"
+    ],
+    [
+      0,
+      399.1716110568576,
+      182.568,
+      404.82838894314233,
+      186.25,
+      "2-15"
+    ],
+    [
+      0,
+      414,
+      182.46,
+      419.46805555555557,
+      186.25,
+      "주방"
+    ],
+    [
+      0,
+      493.52996202256946,
+      182.568,
+      497.0,
+      186.25,
+      "7.7"
+    ],
+    [
+      0,
+      509.73332451714407,
+      182.73,
+      512.2666754828559,
+      186.25,
+      "—"
+    ],
+    [
+      0,
+      323.3809101019965,
+      199.32800000000003,
+      327.5190898980035,
+      202.29000000000002,
+      "2-15"
+    ],
+    [
+      0,
+      399.1716110568576,
+      190.818,
+      404.82838894314233,
+      194.5,
+      "2-16"
+    ],
+    [
+      0,
+      414,
+      190.71,
+      432.32652994791664,
+      194.5,
+      "식음 점포 객석"
+    ],
+    [
+      0,
+      492.08240180121527,
+      190.818,
+      497.0,
+      194.5,
+      "57.6"
+    ],
+    [
+      0,
+      509.73332451714407,
+      190.98,
+      512.2666754828559,
+      194.5,
+      "—"
+    ],
+    [
+      0,
+      316.52934027777775,
+      230.7809375,
+      322.1737847222222,
+      234.6609375,
+      "객석"
+    ],
+    [
+      0,
+      317.28247260199646,
+      235.98893750000002,
+      321.4206523980034,
+      238.9509375,
+      "2-16"
+    ],
+    [
+      0,
+      399.1716110568576,
+      199.068,
+      404.82838894314233,
+      202.75,
+      "2-17"
+    ],
+    [
+      0,
+      414,
+      198.96,
+      419.46805555555557,
+      202.75,
+      "창고"
+    ],
+    [
+      0,
+      493.52996202256946,
+      199.068,
+      497.0,
+      202.75,
+      "7.1"
+    ],
+    [
+      0,
+      509.73332451714407,
+      199.23,
+      512.2666754828559,
+      202.75,
+      "—"
+    ],
+    [
+      0,
+      236.30591010199652,
+      303.453,
+      240.44408989800345,
+      306.41499999999996,
+      "2-17"
+    ],
+    [
+      0,
+      399.1716110568576,
+      207.318,
+      404.82838894314233,
+      211.0,
+      "2-18"
+    ],
+    [
+      0,
+      414,
+      207.21,
+      428.6313205295139,
+      211.0,
+      "여자 화장실"
+    ],
+    [
+      0,
+      493.52996202256946,
+      207.318,
+      497.0,
+      211.0,
+      "7.9"
+    ],
+    [
+      0,
+      509.73332451714407,
+      207.48,
+      512.2666754828559,
+      211.0,
+      "—"
+    ],
+    [
+      0,
+      311.4309101019965,
+      291.2446457972873,
+      315.5690898980035,
+      294.2066457972873,
+      "2-18"
+    ],
+    [
+      0,
+      399.1716110568576,
+      215.568,
+      404.82838894314233,
+      219.25,
+      "2-19"
+    ],
+    [
+      0,
+      414,
+      215.46,
+      431.36534830729164,
+      219.25,
+      "장애인 화장실"
+    ],
+    [
+      0,
+      493.52996202256946,
+      215.568,
+      497.0,
+      219.25,
+      "7.6"
+    ],
+    [
+      0,
+      509.73332451714407,
+      215.73,
+      512.2666754828559,
+      219.25,
+      "—"
+    ],
+    [
+      0,
+      324.8059101019965,
+      287.403,
+      328.9440898980035,
+      290.365,
+      "2-19"
+    ],
+    [
+      0,
+      399.1716110568576,
+      223.818,
+      404.82838894314233,
+      227.5,
+      "2-20"
+    ],
+    [
+      0,
+      414,
+      223.71,
+      432.32652994791664,
+      227.5,
+      "식음 점포 객석"
+    ],
+    [
+      0,
+      492.08240180121527,
+      223.818,
+      497.0,
+      227.5,
+      "45.0"
+    ],
+    [
+      0,
+      509.73332451714407,
+      223.98,
+      512.2666754828559,
+      227.5,
+      "—"
+    ],
+    [
+      0,
+      214.67777777777778,
+      323.07,
+      220.32222222222222,
+      326.95,
+      "객석"
+    ],
+    [
+      0,
+      215.43091010199652,
+      328.278,
+      219.56908989800345,
+      331.24,
+      "2-20"
+    ],
+    [
+      0,
+      399.1716110568576,
+      232.068,
+      404.82838894314233,
+      235.75,
+      "2-21"
+    ],
+    [
+      0,
+      414,
+      231.96,
+      425.5341796875,
+      235.75,
+      "세척·준비"
+    ],
+    [
+      0,
+      493.52996202256946,
+      232.068,
+      497.0,
+      235.75,
+      "6.8"
+    ],
+    [
+      0,
+      509.73332451714407,
+      232.23,
+      512.2666754828559,
+      235.75,
+      "—"
+    ],
+    [
+      0,
+      236.30591010199652,
+      315.828,
+      240.44408989800345,
+      318.78999999999996,
+      "2-21"
+    ],
+    [
+      0,
+      399.1716110568576,
+      240.318,
+      404.82838894314233,
+      244.0,
+      "2-22"
+    ],
+    [
+      0,
+      414,
+      240.21,
+      419.46805555555557,
+      244.0,
+      "주방"
+    ],
+    [
+      0,
+      492.08240180121527,
+      240.318,
+      497.0,
+      244.0,
+      "11.3"
+    ],
+    [
+      0,
+      509.73332451714407,
+      240.48,
+      512.2666754828559,
+      244.0,
+      "—"
+    ],
+    [
+      0,
+      236.27856635199657,
+      329.30534375,
+      240.4167461480035,
+      332.26734375,
+      "2-22"
+    ],
+    [
+      0,
+      399.1716110568576,
+      248.568,
+      404.82838894314233,
+      252.25,
+      "2-23"
+    ],
+    [
+      0,
+      414,
+      248.46,
+      425.5341796875,
+      252.25,
+      "창고·세척"
+    ],
+    [
+      0,
+      493.52996202256946,
+      248.568,
+      497.0,
+      252.25,
+      "9.0"
+    ],
+    [
+      0,
+      509.73332451714407,
+      248.73,
+      512.2666754828559,
+      252.25,
+      "—"
+    ],
+    [
+      0,
+      248.30591010199652,
+      331.403,
+      252.44408989800345,
+      334.365,
+      "2-23"
+    ],
+    [
+      0,
+      399.1716110568576,
+      256.818,
+      404.82838894314233,
+      260.5,
+      "2-24"
+    ],
+    [
+      0,
+      414,
+      256.71,
+      419.46805555555557,
+      260.5,
+      "주방"
+    ],
+    [
+      0,
+      492.08240180121527,
+      256.818,
+      497.0,
+      260.5,
+      "13.5"
+    ],
+    [
+      0,
+      509.73332451714407,
+      256.98,
+      512.2666754828559,
+      260.5,
+      "—"
+    ],
+    [
+      0,
+      248.21216010199652,
+      315.74675,
+      252.35033989800345,
+      318.70875,
+      "2-24"
+    ],
+    [
+      0,
+      399.1716110568576,
+      265.068,
+      404.82838894314233,
+      268.75,
+      "2-25"
+    ],
+    [
+      0,
+      414,
+      264.96,
+      432.32652994791664,
+      268.75,
+      "식음 점포 객석"
+    ],
+    [
+      0,
+      492.08240180121527,
+      265.068,
+      497.0,
+      268.75,
+      "40.5"
+    ],
+    [
+      0,
+      509.73332451714407,
+      265.23,
+      512.2666754828559,
+      268.75,
+      "—"
+    ],
+    [
+      0,
+      269.6777777777778,
+      314.7217074202952,
+      275.32222222222225,
+      318.6017074202952,
+      "객석"
+    ],
+    [
+      0,
+      270.4309101019965,
+      319.92970742029524,
+      274.5690898980035,
+      322.89170742029523,
+      "2-25"
+    ],
+    [
+      0,
+      399.1716110568576,
+      273.318,
+      404.82838894314233,
+      277.0,
+      "2-26"
+    ],
+    [
+      0,
+      414,
+      273.21,
+      428.6313205295139,
+      277.0,
+      "남자 화장실"
+    ],
+    [
+      0,
+      492.08240180121527,
+      273.318,
+      497.0,
+      277.0,
+      "13.4"
+    ],
+    [
+      0,
+      509.73332451714407,
+      273.48,
+      512.2666754828559,
+      277.0,
+      "—"
+    ],
+    [
+      0,
+      320.11198789040156,
+      303.778,
+      324.25016768640853,
+      306.74,
+      "2-26"
+    ],
+    [
+      0,
+      75.43826619466147,
+      101.88399999999999,
+      82.55173380533854,
+      105.25999999999999,
+      "코어 A"
+    ],
+    [
+      0,
+      313.0255741373698,
+      101.88399999999999,
+      319.9844258626302,
+      105.25999999999999,
+      "코어 B"
+    ],
+    [
+      0,
+      315.51636881510416,
+      336.884,
+      322.47863118489585,
+      340.26,
+      "코어 C"
+    ],
+    [
+      0,
+      68.89438028971354,
+      335.124,
+      76.10561971028645,
+      338.5,
+      "코어 D"
+    ],
+    [
+      0,
+      74.79906846788194,
+      314.476,
+      77.6,
+      317.6,
+      "UP"
+    ],
+    [
+      0,
+      122.64442875466646,
+      279.6246577233258,
+      125.35020674945812,
+      283.0006577233258,
+      "T1"
+    ],
+    [
+      0,
+      262.64789659045243,
+      279.6275849925792,
+      265.3536745852441,
+      283.0035849925792,
+      "T2"
+    ],
+    [
+      0,
+      122.65150841774467,
+      129.6262024174421,
+      125.35728641253633,
+      133.0022024174421,
+      "T3"
+    ],
+    [
+      0,
+      262.64917144698575,
+      129.63008727880785,
+      265.3549494417774,
+      133.00608727880785,
+      "T4"
+    ],
+    [
+      0,
+      302.63098152325864,
+      149.63095563297802,
+      305.37427660789405,
+      153.00695563297802,
+      "FR"
+    ],
+    [
+      0,
+      131.777057,
+      167.02132450000002,
+      136.222057,
+      170.28932450000002,
+      "하차"
+    ],
+    [
+      0,
+      111.7812125,
+      180.519431,
+      116.22621249999999,
+      183.787431,
+      "승차"
+    ],
+    [
+      0,
+      87.09400017632379,
+      57.372,
+      88.90599982367623,
+      61.0,
+      "A"
+    ],
+    [
+      0,
+      85.4085302734375,
+      61.955999999999996,
+      90.59146972656251,
+      64.9,
+      "A-301"
+    ],
+    [
+      0,
+      87.09400017632379,
+      343.372,
+      88.90599982367623,
+      347.0,
+      "A"
+    ],
+    [
+      0,
+      85.4085302734375,
+      347.95599999999996,
+      90.59146972656251,
+      350.9,
+      "A-301"
+    ],
+    [
+      0,
+      105.50739515516493,
+      264.372,
+      108.49260484483507,
+      268.0,
+      "01"
+    ],
+    [
+      0,
+      104.518291015625,
+      268.95599999999996,
+      109.48170898437499,
+      271.9,
+      "S-401"
+    ],
+    [
+      0,
+      109.50739515516493,
+      322.372,
+      112.49260484483507,
+      326.0,
+      "01"
+    ],
+    [
+      0,
+      108.4085302734375,
+      326.95599999999996,
+      113.59146972656251,
+      329.9,
+      "A-501"
+    ],
+    [
+      0,
+      370.41112249689695,
+      64.44034705241627,
+      373.2257655090497,
+      69.04034705241627,
+      "N"
+    ],
+    [
+      0,
+      355.87783203125,
+      86.732,
+      366.12216796875003,
+      90.0,
+      "북각 63.2°"
+    ],
+    [
+      0,
+      397,
+      302.832,
+      422.00532986111114,
+      307.0,
+      "표기 및 원본 구분"
+    ],
+    [
+      0,
+      397,
+      310.246,
+      449.09325439453124,
+      314.0,
+      "평면형 구획·설비·가구는 PR #30 설계 후보."
+    ],
+    [
+      0,
+      397,
+      316.546,
+      443.6667639160156,
+      320.3,
+      "코어 D·브리지·콤 이음은 R8 연구 형상."
+    ],
+    [
+      0,
+      397,
+      322.846,
+      443.67071716308595,
+      326.6,
+      "—  천장고 미확인. 모형 층고는 A-301."
+    ],
+    [
+      0,
+      397,
+      329.14599999999996,
+      437.0595703125,
+      332.9,
+      "위·아래층 투영 경계는 가는 점선."
+    ],
+    [
+      0,
+      397,
+      335.44599999999997,
+      447.8585235595703,
+      339.2,
+      "치수 mm · 레벨 m · 동선 증거는 R9 N-2F."
+    ],
+    [
+      0,
+      57.0,
+      374.56,
+      58.26297200520833,
+      377.9,
+      "0"
+    ],
+    [
+      0,
+      82.0,
+      374.56,
+      83.26297200520834,
+      377.9,
+      "5"
+    ],
+    [
+      0,
+      107.0,
+      374.56,
+      112.34971652560763,
+      377.9,
+      "10 m"
+    ],
+    [
+      0,
+      328.70739515516493,
+      387.372,
+      331.69260484483505,
+      391.0,
+      "01"
+    ],
+    [
+      0,
+      337,
+      386.112,
+      364.7471435546875,
+      391.0,
+      "2층 건축 평면도"
+    ],
+    [
+      0,
+      513.5921223958334,
+      387.3,
+      520.0,
+      391.0,
+      "1:200"
+    ],
+    [
+      1,
+      536,
+      17.84,
+      548.929443359375,
+      21.0,
+      "PROJECT NO."
+    ],
+    [
+      1,
+      536,
+      48.84,
+      550.15107421875,
+      52.0,
+      "PROJECT TITLE"
+    ],
+    [
+      1,
+      536,
+      82.84,
+      551.5825113932292,
+      86.0,
+      "DRAWING TITLE"
+    ],
+    [
+      1,
+      536,
+      118.84,
+      548.1274251302083,
+      122.0,
+      "REFERENCES"
+    ],
+    [
+      1,
+      536,
+      158.84,
+      546.8654866536458,
+      162.0,
+      "GEOMETRY"
+    ],
+    [
+      1,
+      536,
+      196.84,
+      542.6300862630209,
+      200.0,
+      "NOTES"
+    ],
+    [
+      1,
+      536,
+      244.84,
+      545.276953125,
+      248.0,
+      "REVISION"
+    ],
+    [
+      1,
+      536,
+      278.84,
+      541.4518636067709,
+      282.0,
+      "ISSUE"
+    ],
+    [
+      1,
+      536,
+      311.84,
+      548.5604736328125,
+      315.0,
+      "PRINT SCALE"
+    ],
+    [
+      1,
+      536,
+      348.84,
+      541.1356038411458,
+      352.0,
+      "DATE"
+    ],
+    [
+      1,
+      536,
+      379.84,
+      550.3608805338541,
+      383.0,
+      "DRAWING NO."
+    ],
+    [
+      1,
+      536,
+      30.22,
+      558.5921610514323,
+      35.0,
+      "WP0 · R10-A"
+    ],
+    [
+      1,
+      536,
+      59.04,
+      560.6475911458333,
+      64.0,
+      "다층 상업시설"
+    ],
+    [
+      1,
+      536,
+      67.3,
+      562.60302734375,
+      71.0,
+      "수직동선 및 접합 연구"
+    ],
+    [
+      1,
+      536,
+      92.616,
+      550.4302647569444,
+      97.0,
+      "전체 건축"
+    ],
+    [
+      1,
+      536,
+      98.616,
+      549.2644444444444,
+      103.0,
+      "종단면도"
+    ],
+    [
+      1,
+      536,
+      129.408,
+      561.289619140625,
+      133.0,
+      "A-201  A–A 절단 위치"
+    ],
+    [
+      1,
+      536,
+      134.408,
+      561.004365234375,
+      138.0,
+      "A-501  코어 D 실상세"
+    ],
+    [
+      1,
+      536,
+      139.408,
+      556.647421875,
+      143.0,
+      "S-401  2F E2 접합"
+    ],
+    [
+      1,
+      536,
+      167.48,
+      559.8781290690104,
+      171.0,
+      "회색·흑색 / 기준 형상"
+    ],
+    [
+      1,
+      536,
+      173.48,
+      554.3990492078993,
+      177.0,
+      "청록 / 연구 후보"
+    ],
+    [
+      1,
+      536,
+      179.516,
+      562.2944673665364,
+      183.0,
+      "점선 / 투영 또는 미확인"
+    ],
+    [
+      1,
+      536,
+      205.552,
+      556.19845703125,
+      209.0,
+      "절단 X = -4.200 m"
+    ],
+    [
+      1,
+      536,
+      211.25199999999998,
+      558.9698296440972,
+      214.7,
+      "+X 방향, 우측은 남측"
+    ],
+    [
+      1,
+      536,
+      216.952,
+      560.120078125,
+      220.4,
+      "코어 상자는 표현 외곽"
+    ],
+    [
+      1,
+      536,
+      222.652,
+      554.4789409722222,
+      226.1,
+      "점선은 뒤쪽 투영"
+    ],
+    [
+      1,
+      536,
+      257.228,
+      556.887545030382,
+      261.0,
+      "A  대표 도면 4장"
+    ],
+    [
+      1,
+      536,
+      293.76,
+      552.9912109375,
+      298.0,
+      "독립 검수용"
+    ],
+    [
+      1,
+      536,
+      323.832,
+      544.0097092013889,
+      328.0,
+      "1:250"
+    ],
+    [
+      1,
+      536,
+      332.372,
+      560.0086809624565,
+      336.0,
+      "A2 · 실제 크기 100%"
+    ],
+    [
+      1,
+      536,
+      363.012,
+      552.2415581597222,
+      367.0,
+      "2026. 11. 26"
+    ],
+    [
+      1,
+      536,
+      391.88,
+      553.1278089735243,
+      399.0,
+      "A-301"
+    ],
+    [
+      1,
+      55.756683349609375,
+      377.7024,
+      70.0,
+      381.3484,
+      "B2  -11.000"
+    ],
+    [
+      1,
+      57.8925478108724,
+      355.7024,
+      70.0,
+      359.3484,
+      "B1  -5.500"
+    ],
+    [
+      1,
+      56.75941284179687,
+      333.7024,
+      70.0,
+      337.3484,
+      "1F  +0.000"
+    ],
+    [
+      1,
+      56.75941284179687,
+      309.7024,
+      70.0,
+      313.3484,
+      "2F  +6.000"
+    ],
+    [
+      1,
+      55.931401367187505,
+      289.7024,
+      70.0,
+      293.3484,
+      "3F  +11.000"
+    ],
+    [
+      1,
+      55.931401367187505,
+      269.7024,
+      70.0,
+      273.3484,
+      "4F  +16.000"
+    ],
+    [
+      1,
+      55.931401367187505,
+      249.7024,
+      70.0,
+      253.3484,
+      "5F  +21.000"
+    ],
+    [
+      1,
+      55.931401367187505,
+      229.7024,
+      70.0,
+      233.3484,
+      "6F  +26.000"
+    ],
+    [
+      1,
+      55.25658467610677,
+      209.7,
+      70.0,
+      213.34599999999998,
+      "7F  +31.001"
+    ],
+    [
+      1,
+      55.931401367187505,
+      189.7024,
+      70.0,
+      193.3484,
+      "8F  +36.000"
+    ],
+    [
+      1,
+      55.931401367187505,
+      171.7024,
+      70.0,
+      175.3484,
+      "9F  +40.500"
+    ],
+    [
+      1,
+      54.503271484375006,
+      153.7024,
+      70.0,
+      157.3484,
+      "10F  +45.000"
+    ],
+    [
+      1,
+      54.503271484375006,
+      129.7024,
+      70.0,
+      133.3484,
+      "11F  +51.000"
+    ],
+    [
+      1,
+      54.503271484375006,
+      105.7024,
+      70.0,
+      109.3484,
+      "12F  +57.000"
+    ],
+    [
+      1,
+      54.503271484375006,
+      87.7024,
+      70.0,
+      91.3484,
+      "13F  +61.500"
+    ],
+    [
+      1,
+      54.503271484375006,
+      69.7024,
+      70.0,
+      73.3484,
+      "14F  +66.000"
+    ],
+    [
+      1,
+      53.753756510416665,
+      51.702400000000004,
+      70.0,
+      55.348400000000005,
+      "15F  +70.500"
+    ],
+    [
+      1,
+      85.44650607638889,
+      368.15840000000003,
+      91.0,
+      371.4984,
+      "5,500"
+    ],
+    [
+      1,
+      85.44650607638889,
+      346.15840000000003,
+      91.0,
+      349.4984,
+      "5,500"
+    ],
+    [
+      1,
+      85.44650607638889,
+      323.15840000000003,
+      91.0,
+      326.4984,
+      "6,000"
+    ],
+    [
+      1,
+      85.44650607638889,
+      301.15840000000003,
+      91.0,
+      304.4984,
+      "5,000"
+    ],
+    [
+      1,
+      85.44650607638889,
+      281.15840000000003,
+      91.0,
+      284.4984,
+      "5,000"
+    ],
+    [
+      1,
+      85.44650607638889,
+      261.15840000000003,
+      91.0,
+      264.4984,
+      "5,000"
+    ],
+    [
+      1,
+      85.44650607638889,
+      241.1584,
+      91.0,
+      244.4984,
+      "5,000"
+    ],
+    [
+      1,
+      85.44650607638889,
+      221.1572,
+      91.0,
+      224.4972,
+      "5,001"
+    ],
+    [
+      1,
+      85.44650607638889,
+      201.1572,
+      91.0,
+      204.4972,
+      "4,999"
+    ],
+    [
+      1,
+      85.44650607638889,
+      182.1584,
+      91.0,
+      185.4984,
+      "4,500"
+    ],
+    [
+      1,
+      85.44650607638889,
+      164.1584,
+      91.0,
+      167.4984,
+      "4,500"
+    ],
+    [
+      1,
+      85.44650607638889,
+      143.1584,
+      91.0,
+      146.4984,
+      "6,000"
+    ],
+    [
+      1,
+      85.44650607638889,
+      119.1584,
+      91.0,
+      122.4984,
+      "6,000"
+    ],
+    [
+      1,
+      85.44650607638889,
+      98.1584,
+      91.0,
+      101.4984,
+      "4,500"
+    ],
+    [
+      1,
+      85.44650607638889,
+      80.1584,
+      91.0,
+      83.4984,
+      "4,500"
+    ],
+    [
+      1,
+      85.44650607638889,
+      62.1584,
+      91.0,
+      65.4984,
+      "4,500"
+    ],
+    [
+      1,
+      369.50739515516494,
+      304.6204,
+      372.49260484483506,
+      308.2484,
+      "01"
+    ],
+    [
+      1,
+      368.518291015625,
+      309.20439999999996,
+      373.48170898437496,
+      312.1484,
+      "S-401"
+    ],
+    [
+      1,
+      369.50739515516494,
+      204.618,
+      372.49260484483506,
+      208.24599999999998,
+      "01"
+    ],
+    [
+      1,
+      368.9824487304688,
+      209.202,
+      373.0175512695313,
+      212.146,
+      "7F D"
+    ],
+    [
+      1,
+      199.9050055609809,
+      254.08,
+      234.0949944390191,
+      257.6,
+      "서측 캡슐 / 에스컬레이터 투영"
+    ],
+    [
+      1,
+      208.28878038194446,
+      134.07999999999998,
+      227.31121961805556,
+      137.6,
+      "서측 서비스 튜브"
+    ],
+    [
+      1,
+      303.3688049316406,
+      70.87999999999998,
+      322.6311950683594,
+      74.39999999999998,
+      "코어 D 표현 외곽"
+    ],
+    [
+      1,
+      262.85453830295137,
+      141.28,
+      283.1454616970486,
+      144.8,
+      "T1 램프 튜브 투영"
+    ],
+    [
+      1,
+      147.61981608072918,
+      67.67999999999999,
+      170.38018391927085,
+      71.19999999999999,
+      "T3 승강기 튜브 투영"
+    ],
+    [
+      1,
+      286.72872043185765,
+      276.88,
+      299.27127956814235,
+      280.4,
+      "남측 OPEN"
+    ],
+    [
+      1,
+      409,
+      377.67040000000003,
+      412.13358995225695,
+      381.2984,
+      "B2"
+    ],
+    [
+      1,
+      420,
+      377.6884,
+      425.1152777777778,
+      381.2984,
+      "판매"
+    ],
+    [
+      1,
+      192.86,
+      371.6864,
+      197.94000000000003,
+      375.2784,
+      "판매"
+    ],
+    [
+      1,
+      409,
+      355.67040000000003,
+      412.13358995225695,
+      359.2984,
+      "B1"
+    ],
+    [
+      1,
+      420,
+      355.6884,
+      432.58837890625,
+      359.2984,
+      "식음 · 판매"
+    ],
+    [
+      1,
+      144.86,
+      349.6864,
+      149.94000000000003,
+      353.2784,
+      "식음"
+    ],
+    [
+      1,
+      409,
+      333.67040000000003,
+      411.8431167263455,
+      337.2984,
+      "1F"
+    ],
+    [
+      1,
+      420,
+      333.6884,
+      425.1152777777778,
+      337.2984,
+      "판매"
+    ],
+    [
+      1,
+      144.86,
+      327.6864,
+      149.94000000000003,
+      331.2784,
+      "판매"
+    ],
+    [
+      1,
+      409,
+      309.67040000000003,
+      411.8431167263455,
+      313.2984,
+      "2F"
+    ],
+    [
+      1,
+      420,
+      309.6884,
+      425.1152777777778,
+      313.2984,
+      "식음"
+    ],
+    [
+      1,
+      192.86,
+      303.6864,
+      197.94000000000003,
+      307.2784,
+      "식음"
+    ],
+    [
+      1,
+      409,
+      289.67040000000003,
+      411.8431167263455,
+      293.2984,
+      "3F"
+    ],
+    [
+      1,
+      420,
+      289.6884,
+      425.1152777777778,
+      293.2984,
+      "판매"
+    ],
+    [
+      1,
+      144.86,
+      283.6864,
+      149.94000000000003,
+      287.2784,
+      "판매"
+    ],
+    [
+      1,
+      409,
+      269.67040000000003,
+      411.8431167263455,
+      273.2984,
+      "4F"
+    ],
+    [
+      1,
+      420,
+      269.6884,
+      432.58837890625,
+      273.2984,
+      "식음 · 판매"
+    ],
+    [
+      1,
+      409,
+      249.67040000000003,
+      411.8431167263455,
+      253.29840000000002,
+      "5F"
+    ],
+    [
+      1,
+      420,
+      249.6884,
+      425.1152777777778,
+      253.29840000000002,
+      "판매"
+    ],
+    [
+      1,
+      192.86,
+      243.6864,
+      197.94000000000003,
+      247.2784,
+      "판매"
+    ],
+    [
+      1,
+      409,
+      229.67040000000003,
+      411.8431167263455,
+      233.29840000000002,
+      "6F"
+    ],
+    [
+      1,
+      420,
+      229.6884,
+      440.0614800347222,
+      233.29840000000002,
+      "식음 · 정원 · 판매"
+    ],
+    [
+      1,
+      409,
+      209.668,
+      411.8431167263455,
+      213.296,
+      "7F"
+    ],
+    [
+      1,
+      420,
+      209.68599999999998,
+      432.58837890625,
+      213.296,
+      "식음 · 판매"
+    ],
+    [
+      1,
+      409,
+      189.67040000000003,
+      411.8431167263455,
+      193.29840000000002,
+      "8F"
+    ],
+    [
+      1,
+      420,
+      189.6884,
+      425.1152777777778,
+      193.29840000000002,
+      "판매"
+    ],
+    [
+      1,
+      192.86,
+      183.6864,
+      197.94000000000003,
+      187.2784,
+      "판매"
+    ],
+    [
+      1,
+      409,
+      171.67040000000003,
+      411.8431167263455,
+      175.29840000000002,
+      "9F"
+    ],
+    [
+      1,
+      420,
+      171.6884,
+      425.1152777777778,
+      175.29840000000002,
+      "판매"
+    ],
+    [
+      1,
+      409,
+      153.67040000000003,
+      413.33572157118056,
+      157.29840000000002,
+      "10F"
+    ],
+    [
+      1,
+      420,
+      153.6884,
+      425.1152777777778,
+      157.29840000000002,
+      "식음"
+    ],
+    [
+      1,
+      192.86,
+      147.6864,
+      197.94000000000003,
+      151.2784,
+      "식음"
+    ],
+    [
+      1,
+      409,
+      129.67040000000003,
+      413.33572157118056,
+      133.29840000000002,
+      "11F"
+    ],
+    [
+      1,
+      420,
+      129.6884,
+      430.7900390625,
+      133.29840000000002,
+      "문화·엔터"
+    ],
+    [
+      1,
+      190.0421875,
+      123.6864,
+      200.7578125,
+      127.2784,
+      "문화·엔터"
+    ],
+    [
+      1,
+      409,
+      105.6704,
+      413.33572157118056,
+      109.2984,
+      "12F"
+    ],
+    [
+      1,
+      420,
+      105.6884,
+      430.7900390625,
+      109.2984,
+      "문화·엔터"
+    ],
+    [
+      1,
+      142.0421875,
+      99.6864,
+      152.7578125,
+      103.2784,
+      "문화·엔터"
+    ],
+    [
+      1,
+      409,
+      87.6704,
+      413.33572157118056,
+      91.2984,
+      "13F"
+    ],
+    [
+      1,
+      420,
+      87.6884,
+      430.7900390625,
+      91.2984,
+      "문화·엔터"
+    ],
+    [
+      1,
+      190.0421875,
+      81.6864,
+      200.7578125,
+      85.2784,
+      "문화·엔터"
+    ],
+    [
+      1,
+      409,
+      69.6704,
+      413.33572157118056,
+      73.2984,
+      "14F"
+    ],
+    [
+      1,
+      420,
+      69.6884,
+      430.7900390625,
+      73.2984,
+      "문화·엔터"
+    ],
+    [
+      1,
+      142.0421875,
+      63.68639999999998,
+      152.7578125,
+      67.27839999999998,
+      "문화·엔터"
+    ],
+    [
+      1,
+      409,
+      51.6704,
+      413.33572157118056,
+      55.2984,
+      "15F"
+    ],
+    [
+      1,
+      420,
+      51.6884,
+      432.58837890625,
+      55.2984,
+      "식음 · 정원"
+    ],
+    [
+      1,
+      409,
+      29.083599999999997,
+      441.51699022081164,
+      32.80159999999999,
+      "지붕 절단 최대 +76.500 m"
+    ],
+    [
+      1,
+      409,
+      17.886,
+      439.79092848036026,
+      22.0,
+      "PR #30 층별 프로그램"
+    ],
+    [
+      1,
+      409,
+      24.624,
+      447.01731770833334,
+      28.0,
+      "절단축 교차 기준 · 시공 구획 미확인"
+    ],
+    [
+      1,
+      321.85369757758247,
+      24.07200000000001,
+      323.3463024224175,
+      27.70000000000001,
+      "7"
+    ],
+    [
+      1,
+      288.25369757758244,
+      24.07200000000001,
+      289.7463024224175,
+      27.70000000000001,
+      "6"
+    ],
+    [
+      1,
+      252.25369757758247,
+      24.07200000000001,
+      253.74630242241753,
+      27.70000000000001,
+      "5"
+    ],
+    [
+      1,
+      216.25369757758247,
+      24.07200000000001,
+      217.74630242241753,
+      27.70000000000001,
+      "4"
+    ],
+    [
+      1,
+      180.25369757758247,
+      24.07200000000001,
+      181.74630242241753,
+      27.70000000000001,
+      "3"
+    ],
+    [
+      1,
+      144.25369757758247,
+      24.07200000000001,
+      145.74630242241753,
+      27.70000000000001,
+      "2"
+    ],
+    [
+      1,
+      110.65369757758248,
+      24.07200000000001,
+      112.14630242241755,
+      27.70000000000001,
+      "1"
+    ],
+    [
+      1,
+      125.33781467013888,
+      32.13800000000001,
+      131.0621853298611,
+      35.55000000000001,
+      "8,400"
+    ],
+    [
+      1,
+      160.13781467013888,
+      32.13800000000001,
+      165.8621853298611,
+      35.55000000000001,
+      "9,000"
+    ],
+    [
+      1,
+      196.13781467013888,
+      32.13800000000001,
+      201.8621853298611,
+      35.55000000000001,
+      "9,000"
+    ],
+    [
+      1,
+      232.13781467013888,
+      32.13800000000001,
+      237.8621853298611,
+      35.55000000000001,
+      "9,000"
+    ],
+    [
+      1,
+      268.1378146701389,
+      32.13800000000001,
+      273.8621853298611,
+      35.55000000000001,
+      "9,000"
+    ],
+    [
+      1,
+      302.9378146701389,
+      32.13800000000001,
+      308.66218532986113,
+      35.55000000000001,
+      "8,400"
+    ],
+    [
+      1,
+      268.4540125528618,
+      222.6544,
+      279.81400821258404,
+      226.3184,
+      "정원 계획"
+    ],
+    [
+      1,
+      268.45285884093266,
+      44.654399999999995,
+      279.8128545006549,
+      48.3184,
+      "정원 계획"
+    ],
+    [
+      1,
+      198.18175879254514,
+      44.654399999999995,
+      209.54175445226736,
+      48.3184,
+      "정원 계획"
+    ],
+    [
+      1,
+      409,
+      374.48,
+      435.2161431206597,
+      378.0,
+      "표기 치수 mm · 레벨 m"
+    ],
+    [
+      1,
+      112.0,
+      390.56,
+      113.26297200520834,
+      393.9,
+      "0"
+    ],
+    [
+      1,
+      132.0,
+      390.56,
+      133.26297200520833,
+      393.9,
+      "5"
+    ],
+    [
+      1,
+      152.0,
+      390.56,
+      157.34971652560765,
+      393.9,
+      "10 m"
+    ],
+    [
+      1,
+      354.70739515516493,
+      392.372,
+      357.69260484483505,
+      396.0,
+      "01"
+    ],
+    [
+      1,
+      363,
+      391.112,
+      392.0456689453125,
+      396.0,
+      "A–A 전체 종단면"
+    ],
+    [
+      1,
+      511.5921223958333,
+      392.3,
+      518.0,
+      396.0,
+      "1:250"
+    ],
+    [
+      2,
+      536,
+      17.84,
+      548.929443359375,
+      21.0,
+      "PROJECT NO."
+    ],
+    [
+      2,
+      536,
+      48.84,
+      550.15107421875,
+      52.0,
+      "PROJECT TITLE"
+    ],
+    [
+      2,
+      536,
+      82.84,
+      551.5825113932292,
+      86.0,
+      "DRAWING TITLE"
+    ],
+    [
+      2,
+      536,
+      118.84,
+      548.1274251302083,
+      122.0,
+      "REFERENCES"
+    ],
+    [
+      2,
+      536,
+      158.84,
+      546.8654866536458,
+      162.0,
+      "GEOMETRY"
+    ],
+    [
+      2,
+      536,
+      196.84,
+      542.6300862630209,
+      200.0,
+      "NOTES"
+    ],
+    [
+      2,
+      536,
+      244.84,
+      545.276953125,
+      248.0,
+      "REVISION"
+    ],
+    [
+      2,
+      536,
+      278.84,
+      541.4518636067709,
+      282.0,
+      "ISSUE"
+    ],
+    [
+      2,
+      536,
+      311.84,
+      548.5604736328125,
+      315.0,
+      "PRINT SCALE"
+    ],
+    [
+      2,
+      536,
+      348.84,
+      541.1356038411458,
+      352.0,
+      "DATE"
+    ],
+    [
+      2,
+      536,
+      379.84,
+      550.3608805338541,
+      383.0,
+      "DRAWING NO."
+    ],
+    [
+      2,
+      536,
+      30.22,
+      558.5921610514323,
+      35.0,
+      "WP0 · R10-A"
+    ],
+    [
+      2,
+      536,
+      59.04,
+      560.6475911458333,
+      64.0,
+      "다층 상업시설"
+    ],
+    [
+      2,
+      536,
+      67.3,
+      562.60302734375,
+      71.0,
+      "수직동선 및 접합 연구"
+    ],
+    [
+      2,
+      536,
+      92.616,
+      546.2705531141493,
+      97.0,
+      "코어 D"
+    ],
+    [
+      2,
+      536,
+      98.616,
+      557.9303754340277,
+      103.0,
+      "상세 평·단면도"
+    ],
+    [
+      2,
+      536,
+      129.408,
+      555.7494921875,
+      133.0,
+      "A-201  코어 위치"
+    ],
+    [
+      2,
+      536,
+      134.408,
+      555.316650390625,
+      138.0,
+      "A-301  건물 A–A"
+    ],
+    [
+      2,
+      536,
+      139.408,
+      553.089189453125,
+      143.0,
+      "S-401  E2 접합"
+    ],
+    [
+      2,
+      536,
+      167.48,
+      559.8781290690104,
+      171.0,
+      "회색·흑색 / 기준 형상"
+    ],
+    [
+      2,
+      536,
+      173.48,
+      554.3990492078993,
+      177.0,
+      "청록 / 연구 후보"
+    ],
+    [
+      2,
+      536,
+      179.516,
+      562.2944673665364,
+      183.0,
+      "점선 / 투영 또는 미확인"
+    ],
+    [
+      2,
+      536,
+      205.552,
+      558.3033414713542,
+      209.0,
+      "A0 후보 6×6 m 유지"
+    ],
+    [
+      2,
+      536,
+      211.25199999999998,
+      560.238382703993,
+      214.7,
+      "1F 마스터와 중첩 대조"
+    ],
+    [
+      2,
+      536,
+      216.952,
+      560.6448350694444,
+      220.4,
+      "두 문 제품·정착 미확인"
+    ],
+    [
+      2,
+      536,
+      222.652,
+      559.5449538845486,
+      226.1,
+      "A1/A2 비교는 R9 A-D"
+    ],
+    [
+      2,
+      536,
+      257.228,
+      556.887545030382,
+      261.0,
+      "A  대표 도면 4장"
+    ],
+    [
+      2,
+      536,
+      293.76,
+      552.9912109375,
+      298.0,
+      "독립 검수용"
+    ],
+    [
+      2,
+      536,
+      323.832,
+      542.2104047309027,
+      328.0,
+      "1:50"
+    ],
+    [
+      2,
+      536,
+      332.372,
+      560.0086809624565,
+      336.0,
+      "A2 · 실제 크기 100%"
+    ],
+    [
+      2,
+      536,
+      363.012,
+      552.2415581597222,
+      367.0,
+      "2026. 11. 26"
+    ],
+    [
+      2,
+      536,
+      391.88,
+      553.1278089735243,
+      399.0,
+      "A-501"
+    ],
+    [
+      2,
+      96.20115410698784,
+      68.21799999999999,
+      97.46884589301214,
+      71.44999999999999,
+      "1"
+    ],
+    [
+      2,
+      73.81615410698781,
+      111.85800000000003,
+      75.08384589301211,
+      115.09000000000003,
+      "2"
+    ],
+    [
+      2,
+      99.03115410698784,
+      149.318,
+      100.29884589301214,
+      152.55,
+      "3"
+    ],
+    [
+      2,
+      121.41615410698785,
+      105.678,
+      122.68384589301215,
+      108.91,
+      "4"
+    ],
+    [
+      2,
+      67.92832411024307,
+      86.76800000000003,
+      70.87167588975696,
+      90.00000000000003,
+      "UP"
+    ],
+    [
+      2,
+      151.8841666666667,
+      139.33600000000004,
+      159.71583333333336,
+      143.00000000000003,
+      "부속실"
+    ],
+    [
+      2,
+      152.16482137044272,
+      149.62400000000002,
+      159.4351786295573,
+      153.00000000000003,
+      "+0.000"
+    ],
+    [
+      2,
+      119.564326171875,
+      64.93200000000002,
+      129.235673828125,
+      68.20000000000002,
+      "주 계단참"
+    ],
+    [
+      2,
+      112.1378146701389,
+      39.43800000000002,
+      117.86218532986112,
+      42.850000000000016,
+      "6,000"
+    ],
+    [
+      2,
+      40.446506076388886,
+      109.16,
+      46.0,
+      112.5,
+      "6,000"
+    ],
+    [
+      2,
+      151.88781467013888,
+      174.438,
+      157.6121853298611,
+      177.85,
+      "1,525"
+    ],
+    [
+      2,
+      159.44650607638889,
+      109.16000000000001,
+      165.0,
+      112.50000000000001,
+      "1,200"
+    ],
+    [
+      2,
+      141.44650607638889,
+      66.16,
+      147.0,
+      69.5,
+      "1,200"
+    ],
+    [
+      2,
+      96.20115410698784,
+      246.218,
+      97.46884589301214,
+      249.45,
+      "1"
+    ],
+    [
+      2,
+      73.81615410698781,
+      289.858,
+      75.08384589301211,
+      293.09000000000003,
+      "2"
+    ],
+    [
+      2,
+      99.03115410698784,
+      327.318,
+      100.29884589301214,
+      330.55,
+      "3"
+    ],
+    [
+      2,
+      121.41615410698785,
+      283.67799999999994,
+      122.68384589301215,
+      286.90999999999997,
+      "4"
+    ],
+    [
+      2,
+      67.92832411024307,
+      264.768,
+      70.87167588975696,
+      268.0,
+      "UP"
+    ],
+    [
+      2,
+      105.99689161512586,
+      239.15,
+      109.39999999999999,
+      242.4,
+      "DN"
+    ],
+    [
+      2,
+      151.8841666666667,
+      317.336,
+      159.71583333333336,
+      321.0,
+      "부속실"
+    ],
+    [
+      2,
+      152.16482137044272,
+      327.624,
+      159.4351786295573,
+      331.0,
+      "+6.000"
+    ],
+    [
+      2,
+      119.564326171875,
+      242.93200000000002,
+      129.235673828125,
+      246.20000000000002,
+      "주 계단참"
+    ],
+    [
+      2,
+      112.1378146701389,
+      217.438,
+      117.86218532986112,
+      220.85,
+      "6,000"
+    ],
+    [
+      2,
+      40.446506076388886,
+      287.16,
+      46.0,
+      290.5,
+      "6,000"
+    ],
+    [
+      2,
+      151.88781467013888,
+      352.43800000000005,
+      157.6121853298611,
+      355.85,
+      "1,525"
+    ],
+    [
+      2,
+      159.44650607638889,
+      287.16,
+      165.0,
+      290.5,
+      "1,370"
+    ],
+    [
+      2,
+      141.44650607638889,
+      245.86,
+      147.0,
+      249.20000000000002,
+      "1,370"
+    ],
+    [
+      2,
+      43.70739515516493,
+      192.372,
+      46.69260484483507,
+      196.0,
+      "01"
+    ],
+    [
+      2,
+      52,
+      191.112,
+      91.10086914062501,
+      196.0,
+      "1F→2F 계단 후보 평면"
+    ],
+    [
+      2,
+      305.0493977864583,
+      192.3,
+      310.0,
+      196.0,
+      "1:50"
+    ],
+    [
+      2,
+      43.70739515516493,
+      372.372,
+      46.69260484483507,
+      376.0,
+      "02"
+    ],
+    [
+      2,
+      52,
+      371.112,
+      91.10086914062501,
+      376.0,
+      "2F→3F 계단 후보 평면"
+    ],
+    [
+      2,
+      305.0493977864583,
+      372.3,
+      310.0,
+      376.0,
+      "1:50"
+    ],
+    [
+      2,
+      212,
+      52.832,
+      227.31000434027777,
+      57.0,
+      "층고 6,000"
+    ],
+    [
+      2,
+      212,
+      58.964000000000006,
+      231.10291666666666,
+      62.7,
+      "순유효폭  1,205"
+    ],
+    [
+      2,
+      212,
+      66.354,
+      218.68866149902342,
+      70.0,
+      "1갈래"
+    ],
+    [
+      2,
+      226,
+      66.372,
+      240.2595947265625,
+      70.0,
+      "6R × 176.47"
+    ],
+    [
+      2,
+      287.47842861599395,
+      66.534,
+      298.0,
+      70.0,
+      "+1.059 m"
+    ],
+    [
+      2,
+      226,
+      70.852,
+      245.11028917100694,
+      74.3,
+      "5T × 280 = 1,400"
+    ],
+    [
+      2,
+      212,
+      78.554,
+      218.68866149902342,
+      82.2,
+      "2갈래"
+    ],
+    [
+      2,
+      226,
+      78.572,
+      241.67800944010418,
+      82.2,
+      "11R × 176.47"
+    ],
+    [
+      2,
+      287.47842861599395,
+      78.73400000000001,
+      298.0,
+      82.2,
+      "+3.000 m"
+    ],
+    [
+      2,
+      226,
+      83.052,
+      246.43155219184027,
+      86.5,
+      "10T × 280 = 2,800"
+    ],
+    [
+      2,
+      212,
+      90.754,
+      218.68866149902342,
+      94.4,
+      "3갈래"
+    ],
+    [
+      2,
+      226,
+      90.772,
+      240.2595947265625,
+      94.4,
+      "6R × 176.47"
+    ],
+    [
+      2,
+      287.47842861599395,
+      90.93400000000001,
+      298.0,
+      94.4,
+      "+4.059 m"
+    ],
+    [
+      2,
+      226,
+      95.25200000000001,
+      245.11028917100694,
+      98.7,
+      "5T × 280 = 1,400"
+    ],
+    [
+      2,
+      212,
+      102.954,
+      218.68866149902342,
+      106.6,
+      "4갈래"
+    ],
+    [
+      2,
+      226,
+      102.972,
+      241.67800944010418,
+      106.6,
+      "11R × 176.47"
+    ],
+    [
+      2,
+      287.47842861599395,
+      103.134,
+      298.0,
+      106.6,
+      "+6.000 m"
+    ],
+    [
+      2,
+      226,
+      107.452,
+      246.43155219184027,
+      110.89999999999999,
+      "10T × 280 = 2,800"
+    ],
+    [
+      2,
+      212,
+      119.552,
+      245.64652506510416,
+      123.0,
+      "1F 후보 문의 순개구 검증 보류."
+    ],
+    [
+      2,
+      212,
+      125.642,
+      248.4780576578776,
+      129.0,
+      "R = 챌면  /  T = 디딤판 · 단위 mm"
+    ],
+    [
+      2,
+      212,
+      230.832,
+      227.31000434027777,
+      235.0,
+      "층고 5,000"
+    ],
+    [
+      2,
+      212,
+      236.964,
+      231.10291666666666,
+      240.7,
+      "순유효폭  1,205"
+    ],
+    [
+      2,
+      212,
+      244.354,
+      218.68866149902342,
+      248.0,
+      "1갈래"
+    ],
+    [
+      2,
+      226,
+      244.372,
+      240.2595947265625,
+      248.0,
+      "5R × 178.57"
+    ],
+    [
+      2,
+      287.47842861599395,
+      244.534,
+      298.0,
+      248.0,
+      "+6.893 m"
+    ],
+    [
+      2,
+      226,
+      248.852,
+      245.11028917100694,
+      252.3,
+      "4T × 280 = 1,120"
+    ],
+    [
+      2,
+      212,
+      256.554,
+      218.68866149902342,
+      260.2,
+      "2갈래"
+    ],
+    [
+      2,
+      226,
+      256.572,
+      240.2595947265625,
+      260.2,
+      "9R × 178.57"
+    ],
+    [
+      2,
+      287.47842861599395,
+      256.734,
+      298.0,
+      260.2,
+      "+8.500 m"
+    ],
+    [
+      2,
+      226,
+      261.052,
+      245.11028917100694,
+      264.5,
+      "8T × 280 = 2,240"
+    ],
+    [
+      2,
+      212,
+      268.75399999999996,
+      218.68866149902342,
+      272.4,
+      "3갈래"
+    ],
+    [
+      2,
+      226,
+      268.772,
+      240.2595947265625,
+      272.4,
+      "5R × 178.57"
+    ],
+    [
+      2,
+      287.47842861599395,
+      268.93399999999997,
+      298.0,
+      272.4,
+      "+9.393 m"
+    ],
+    [
+      2,
+      226,
+      273.252,
+      245.11028917100694,
+      276.7,
+      "4T × 280 = 1,120"
+    ],
+    [
+      2,
+      212,
+      280.954,
+      218.68866149902342,
+      284.6,
+      "4갈래"
+    ],
+    [
+      2,
+      226,
+      280.97200000000004,
+      240.2595947265625,
+      284.6,
+      "9R × 178.57"
+    ],
+    [
+      2,
+      286.14745042588976,
+      281.134,
+      298.0,
+      284.6,
+      "+11.000 m"
+    ],
+    [
+      2,
+      226,
+      285.45200000000006,
+      245.11028917100694,
+      288.90000000000003,
+      "8T × 280 = 2,240"
+    ],
+    [
+      2,
+      212,
+      297.552,
+      251.25369357638888,
+      301.0,
+      "문틀 사이 1,300  ·  90° 순개구 1,239"
+    ],
+    [
+      2,
+      212,
+      303.642,
+      248.4780576578776,
+      307.0,
+      "R = 챌면  /  T = 디딤판 · 단위 mm"
+    ],
+    [
+      2,
+      72.17950744628907,
+      42.972000000000016,
+      73.82049255371093,
+      46.600000000000016,
+      "B"
+    ],
+    [
+      2,
+      71.95076171875,
+      47.55600000000001,
+      74.04923828125,
+      50.500000000000014,
+      "03"
+    ],
+    [
+      2,
+      72.17950744628907,
+      220.97200000000004,
+      73.82049255371093,
+      224.60000000000002,
+      "B"
+    ],
+    [
+      2,
+      71.95076171875,
+      225.55600000000004,
+      74.04923828125,
+      228.50000000000003,
+      "03"
+    ],
+    [
+      2,
+      332.82135416666665,
+      281.832,
+      344.0,
+      285.17199999999997,
+      "1F  +0.000"
+    ],
+    [
+      2,
+      332.82135416666665,
+      161.832,
+      344.0,
+      165.172,
+      "2F  +6.000"
+    ],
+    [
+      2,
+      331.5583821614583,
+      61.83199999999998,
+      344.0,
+      65.17199999999998,
+      "3F  +11.000"
+    ],
+    [
+      2,
+      420.1378146701389,
+      268.324,
+      425.8621853298611,
+      271.736,
+      "2,800"
+    ],
+    [
+      2,
+      399.40000000000003,
+      221.56599999999997,
+      420.7048149956598,
+      225.12199999999999,
+      "R 176.47  ·  T 280"
+    ],
+    [
+      2,
+      463.0,
+      221.12199999999996,
+      471.14747856987844,
+      224.64199999999997,
+      "+3.000"
+    ],
+    [
+      2,
+      420.1378146701389,
+      151.60199999999998,
+      425.8621853298611,
+      155.01399999999998,
+      "2,240"
+    ],
+    [
+      2,
+      405.0,
+      111.60799999999999,
+      426.30481499565974,
+      115.16399999999999,
+      "R 178.57  ·  T 280"
+    ],
+    [
+      2,
+      457.4,
+      111.12199999999999,
+      465.5474785698784,
+      114.64199999999998,
+      "+8.500"
+    ],
+    [
+      2,
+      500.022942437066,
+      221.66129005050655,
+      509.0,
+      225.18129005050656,
+      "Δ 176.1"
+    ],
+    [
+      2,
+      500.022942437066,
+      200.48482605384376,
+      509.0,
+      204.00482605384377,
+      "Δ 176.1"
+    ],
+    [
+      2,
+      334.70739515516493,
+      305.372,
+      337.69260484483505,
+      309.0,
+      "03"
+    ],
+    [
+      2,
+      343,
+      304.112,
+      389.289267578125,
+      309.0,
+      "B–B 실제 절단 · X -8.10 m"
+    ],
+    [
+      2,
+      512.0493977864584,
+      305.3,
+      517.0,
+      309.0,
+      "1:50"
+    ],
+    [
+      2,
+      331,
+      322.688,
+      360.7250417751736,
+      327.0,
+      "1F 승인 마스터 대비"
+    ],
+    [
+      2,
+      349,
+      331.336,
+      376.29483696831596,
+      335.0,
+      "1F 승인 계단 절단 외곽"
+    ],
+    [
+      2,
+      349,
+      338.336,
+      370.57277452256943,
+      342.0,
+      "A0 연구 형상 절단"
+    ],
+    [
+      2,
+      331,
+      346.354,
+      362.3897377522786,
+      350.0,
+      "2F 받침 레벨 차이 0.4 mm."
+    ],
+    [
+      2,
+      331,
+      352.25399999999996,
+      365.1181241861979,
+      355.9,
+      "중간 참 최대 편차 176.1 mm."
+    ],
+    [
+      2,
+      331,
+      358.154,
+      383.1621907552083,
+      361.8,
+      "디딤판·참 메시 외곽 · 구조판 및 마감 미확인."
+    ],
+    [
+      2,
+      331,
+      364.054,
+      376.0582574462891,
+      367.7,
+      "승인 1F 계단과 연구 스택의 통합 보류."
+    ],
+    [
+      2,
+      212,
+      147.904,
+      236.1644509548611,
+      152.0,
+      "부속실·문 및 레벨"
+    ],
+    [
+      2,
+      212,
+      155.408,
+      244.0675,
+      159.0,
+      "두 개의 방화문은 후보 사양."
+    ],
+    [
+      2,
+      212,
+      161.408,
+      244.8463671875,
+      165.0,
+      "개방 각도별 동선은 R9 V-01."
+    ],
+    [
+      2,
+      41.0,
+      385.56,
+      42.26297200520833,
+      388.9,
+      "0"
+    ],
+    [
+      2,
+      61.0,
+      385.56,
+      62.26297200520833,
+      388.9,
+      "1"
+    ],
+    [
+      2,
+      81.0,
+      385.56,
+      85.08674452039931,
+      388.9,
+      "2 m"
+    ],
+    [
+      3,
+      536,
+      17.84,
+      548.929443359375,
+      21.0,
+      "PROJECT NO."
+    ],
+    [
+      3,
+      536,
+      48.84,
+      550.15107421875,
+      52.0,
+      "PROJECT TITLE"
+    ],
+    [
+      3,
+      536,
+      82.84,
+      551.5825113932292,
+      86.0,
+      "DRAWING TITLE"
+    ],
+    [
+      3,
+      536,
+      118.84,
+      548.1274251302083,
+      122.0,
+      "REFERENCES"
+    ],
+    [
+      3,
+      536,
+      158.84,
+      546.8654866536458,
+      162.0,
+      "GEOMETRY"
+    ],
+    [
+      3,
+      536,
+      196.84,
+      542.6300862630209,
+      200.0,
+      "NOTES"
+    ],
+    [
+      3,
+      536,
+      244.84,
+      545.276953125,
+      248.0,
+      "REVISION"
+    ],
+    [
+      3,
+      536,
+      278.84,
+      541.4518636067709,
+      282.0,
+      "ISSUE"
+    ],
+    [
+      3,
+      536,
+      311.84,
+      548.5604736328125,
+      315.0,
+      "PRINT SCALE"
+    ],
+    [
+      3,
+      536,
+      348.84,
+      541.1356038411458,
+      352.0,
+      "DATE"
+    ],
+    [
+      3,
+      536,
+      379.84,
+      550.3608805338541,
+      383.0,
+      "DRAWING NO."
+    ],
+    [
+      3,
+      536,
+      30.22,
+      558.5921610514323,
+      35.0,
+      "WP0 · R10-A"
+    ],
+    [
+      3,
+      536,
+      59.04,
+      560.6475911458333,
+      64.0,
+      "다층 상업시설"
+    ],
+    [
+      3,
+      536,
+      67.3,
+      562.60302734375,
+      71.0,
+      "수직동선 및 접합 연구"
+    ],
+    [
+      3,
+      536,
+      92.616,
+      550.8221099175347,
+      97.0,
+      "E2 브리지"
+    ],
+    [
+      3,
+      536,
+      98.616,
+      561.5444184027778,
+      103.0,
+      "구조 상세 연구도"
+    ],
+    [
+      3,
+      536,
+      129.408,
+      559.307724609375,
+      133.0,
+      "A-201  2F 접합 위치"
+    ],
+    [
+      3,
+      536,
+      134.408,
+      555.316650390625,
+      138.0,
+      "A-301  A–A 종단"
+    ],
+    [
+      3,
+      536,
+      139.408,
+      552.491396484375,
+      143.0,
+      "A-501  코어 D"
+    ],
+    [
+      3,
+      536,
+      167.48,
+      559.8781290690104,
+      171.0,
+      "회색·흑색 / 기준 형상"
+    ],
+    [
+      3,
+      536,
+      173.48,
+      554.3990492078993,
+      177.0,
+      "청록 / 연구 후보"
+    ],
+    [
+      3,
+      536,
+      179.516,
+      562.2944673665364,
+      183.0,
+      "점선 / 투영 또는 미확인"
+    ],
+    [
+      3,
+      536,
+      205.552,
+      555.768578016493,
+      209.0,
+      "2F D 대표 E2 접합"
+    ],
+    [
+      3,
+      536,
+      211.25199999999998,
+      558.3865060763889,
+      214.7,
+      "OS-1 양단 지지 가정"
+    ],
+    [
+      3,
+      536,
+      216.952,
+      562.7251215277778,
+      220.4,
+      "실 지점·앵커·배근 미확인"
+    ],
+    [
+      3,
+      536,
+      222.652,
+      557.4025868055555,
+      226.1,
+      "제작·구조 승인 보류"
+    ],
+    [
+      3,
+      536,
+      257.228,
+      556.887545030382,
+      261.0,
+      "A  대표 도면 4장"
+    ],
+    [
+      3,
+      536,
+      293.76,
+      552.9912109375,
+      298.0,
+      "독립 검수용"
+    ],
+    [
+      3,
+      536,
+      323.832,
+      562.4211263020833,
+      328.0,
+      "1:100 · 1:75 · 1:25"
+    ],
+    [
+      3,
+      536,
+      332.372,
+      560.0086809624565,
+      336.0,
+      "A2 · 실제 크기 100%"
+    ],
+    [
+      3,
+      536,
+      363.012,
+      552.2415581597222,
+      367.0,
+      "2026. 11. 26"
+    ],
+    [
+      3,
+      536,
+      391.88,
+      552.3020195855034,
+      399.0,
+      "S-401"
+    ],
+    [
+      3,
+      78.09400017632379,
+      54.372,
+      79.90599982367623,
+      58.0,
+      "A"
+    ],
+    [
+      3,
+      162.17950744628905,
+      54.372,
+      163.82049255371092,
+      58.0,
+      "B"
+    ],
+    [
+      3,
+      51.253697577582464,
+      295.372,
+      52.746302422417536,
+      299.0,
+      "7"
+    ],
+    [
+      3,
+      51.253697577582464,
+      211.372,
+      52.746302422417536,
+      215.0,
+      "6"
+    ],
+    [
+      3,
+      51.253697577582464,
+      121.372,
+      52.746302422417536,
+      125.0,
+      "5"
+    ],
+    [
+      3,
+      118.1378146701389,
+      58.538,
+      123.86218532986112,
+      61.949999999999996,
+      "2,400"
+    ],
+    [
+      3,
+      73.18353407118056,
+      156.16,
+      80.0,
+      159.5,
+      "17,000"
+    ],
+    [
+      3,
+      96.17950744628907,
+      154.372,
+      97.82049255371093,
+      158.0,
+      "B"
+    ],
+    [
+      3,
+      95.95076171875,
+      158.95600000000002,
+      98.04923828125,
+      161.9,
+      "03"
+    ],
+    [
+      3,
+      139.17950744628905,
+      154.372,
+      140.82049255371092,
+      158.0,
+      "B"
+    ],
+    [
+      3,
+      138.95076171875,
+      158.95600000000002,
+      141.04923828124998,
+      161.9,
+      "03"
+    ],
+    [
+      3,
+      116.99993408203125,
+      186.976,
+      125.00006591796874,
+      191.0,
+      "PL-01"
+    ],
+    [
+      3,
+      167.50739515516494,
+      244.372,
+      170.49260484483509,
+      248.0,
+      "04"
+    ],
+    [
+      3,
+      166.518291015625,
+      248.95600000000002,
+      171.48170898437502,
+      251.9,
+      "S-401"
+    ],
+    [
+      3,
+      167.50739515516494,
+      81.372,
+      170.49260484483509,
+      85.0,
+      "05"
+    ],
+    [
+      3,
+      166.518291015625,
+      85.956,
+      171.48170898437502,
+      88.9,
+      "S-401"
+    ],
+    [
+      3,
+      147.0449693467882,
+      190.372,
+      152.95503065321182,
+      194.0,
+      "G-01"
+    ],
+    [
+      3,
+      82.0665966796875,
+      279.908,
+      89.93340332031251,
+      283.5,
+      "코어 D"
+    ],
+    [
+      3,
+      87.68014234754774,
+      63.644000000000005,
+      94.31985765245226,
+      67.2,
+      "SL-01"
+    ],
+    [
+      3,
+      38.70739515516493,
+      321.372,
+      41.69260484483507,
+      325.0,
+      "01"
+    ],
+    [
+      3,
+      47,
+      320.112,
+      84.60142578125,
+      325.0,
+      "구조 연구 평면 · 2F D"
+    ],
+    [
+      3,
+      168.59212239583334,
+      321.3,
+      175.0,
+      325.0,
+      "1:100"
+    ],
+    [
+      3,
+      43.0,
+      334.56,
+      44.26297200520833,
+      337.9,
+      "0"
+    ],
+    [
+      3,
+      68.0,
+      334.56,
+      71.02754991319445,
+      337.9,
+      "2.5"
+    ],
+    [
+      3,
+      93.0,
+      334.56,
+      97.08674452039931,
+      337.9,
+      "5 m"
+    ],
+    [
+      3,
+      190.613040500217,
+      79.83466666666666,
+      194.0,
+      83.17466666666667,
+      "FFL"
+    ],
+    [
+      3,
+      340.1535649956597,
+      91.43266666666665,
+      347.1797683376736,
+      94.84466666666665,
+      "17,000"
+    ],
+    [
+      3,
+      231.66666666666666,
+      61.330666666666666,
+      249.63848958333332,
+      65.06666666666666,
+      "코어 북측 경계"
+    ],
+    [
+      3,
+      460.3333333333333,
+      61.330666666666666,
+      474.6814670138889,
+      65.06666666666666,
+      "슬래브 단부"
+    ],
+    [
+      3,
+      196.70739515516493,
+      117.372,
+      199.69260484483507,
+      121.0,
+      "02"
+    ],
+    [
+      3,
+      205,
+      116.112,
+      261.893271484375,
+      121.0,
+      "A–A 브리지 종단 · X = -4.200 m"
+    ],
+    [
+      3,
+      515.0493977864584,
+      117.3,
+      520.0,
+      121.0,
+      "1:75"
+    ],
+    [
+      3,
+      265.1378146701389,
+      211.42199999999997,
+      270.8621853298611,
+      214.83399999999997,
+      "2,400"
+    ],
+    [
+      3,
+      323.211083984375,
+      200.14399999999998,
+      327.0,
+      203.48399999999998,
+      "250"
+    ],
+    [
+      3,
+      177.83979966905383,
+      193.82399999999998,
+      185.0,
+      197.164,
+      "+6.000"
+    ],
+    [
+      3,
+      193.70739515516493,
+      231.372,
+      196.69260484483507,
+      235.0,
+      "03"
+    ],
+    [
+      3,
+      202,
+      230.112,
+      230.5396533203125,
+      235.0,
+      "B–B 브리지 횡단"
+    ],
+    [
+      3,
+      341.0493977864583,
+      231.3,
+      346.0,
+      235.0,
+      "1:25"
+    ],
+    [
+      3,
+      354,
+      135.544,
+      381.2785416666667,
+      140.0,
+      "부재 및 검토 구간"
+    ],
+    [
+      3,
+      354,
+      148.372,
+      360.95249552408853,
+      152.0,
+      "PL-01"
+    ],
+    [
+      3,
+      379,
+      148.318,
+      415.11200764973955,
+      152.0,
+      "연구 데크 · 실제 메시 250 mm"
+    ],
+    [
+      3,
+      354,
+      158.77200000000002,
+      359.9100613064236,
+      162.4,
+      "G-01"
+    ],
+    [
+      3,
+      379,
+      158.71800000000002,
+      419.28529296875,
+      162.4,
+      "난간 연구 형상 · 단부 고정 미확인"
+    ],
+    [
+      3,
+      354,
+      169.17200000000003,
+      360.19927707248263,
+      172.8,
+      "IF-01"
+    ],
+    [
+      3,
+      379,
+      169.11800000000002,
+      421.91348741319445,
+      172.8,
+      "코어측 후보 구간 · 지지벽 실측 필요"
+    ],
+    [
+      3,
+      354,
+      179.572,
+      360.19927707248263,
+      183.2,
+      "IF-02"
+    ],
+    [
+      3,
+      379,
+      179.518,
+      418.361318359375,
+      183.2,
+      "슬래브측 후보 구간 · 정착 미확인"
+    ],
+    [
+      3,
+      354,
+      189.972,
+      360.8267495388455,
+      193.6,
+      "SL-01"
+    ],
+    [
+      3,
+      379,
+      189.918,
+      415.73312391493056,
+      193.6,
+      "원본 슬래브 · 배근 자료 미확보"
+    ],
+    [
+      3,
+      354,
+      203.94,
+      393.1561801486545,
+      208.0,
+      "OS-1  ·  지지점 및 정착 보류"
+    ],
+    [
+      3,
+      354,
+      211.228,
+      396.00852973090275,
+      215.0,
+      "17,000은 평면 간격. 편심·비틀림과"
+    ],
+    [
+      3,
+      354,
+      216.228,
+      404.3805251736111,
+      220.0,
+      "양단의 하중 전달 및 처짐·진동 검토 필요."
+    ],
+    [
+      3,
+      310.0,
+      303.41799999999995,
+      316.3266594780816,
+      307.09999999999997,
+      "IF-01"
+    ],
+    [
+      3,
+      207.0,
+      264.082,
+      224.85358723958333,
+      267.8,
+      "코어 표현 경계"
+    ],
+    [
+      3,
+      180.613040500217,
+      306.824,
+      184.0,
+      310.164,
+      "FFL"
+    ],
+    [
+      3,
+      446.0,
+      304.21799999999996,
+      452.3266594780816,
+      307.9,
+      "IF-02"
+    ],
+    [
+      3,
+      354.61304050021704,
+      306.824,
+      358.0,
+      310.164,
+      "FFL"
+    ],
+    [
+      3,
+      385.40000000000003,
+      298.17199999999997,
+      392.35249552408857,
+      301.79999999999995,
+      "PL-01"
+    ],
+    [
+      3,
+      477.4,
+      298.17199999999997,
+      484.22674953884547,
+      301.79999999999995,
+      "SL-01"
+    ],
+    [
+      3,
+      418.20000000000005,
+      273.808,
+      437.76593750000006,
+      277.4,
+      "연구용 이음 덮개"
+    ],
+    [
+      3,
+      499.411083984375,
+      318.152,
+      503.2,
+      321.49199999999996,
+      "500"
+    ],
+    [
+      3,
+      427.0472509765625,
+      286.422,
+      430.9527490234375,
+      289.834,
+      "150"
+    ],
+    [
+      3,
+      279.8,
+      298.572,
+      286.75249552408854,
+      302.2,
+      "PL-01"
+    ],
+    [
+      3,
+      193.70739515516493,
+      349.372,
+      196.69260484483507,
+      353.0,
+      "04"
+    ],
+    [
+      3,
+      202,
+      348.112,
+      237.0192578125,
+      353.0,
+      "코어측 · Y -12.05 m"
+    ],
+    [
+      3,
+      340.0493977864583,
+      349.3,
+      345.0,
+      353.0,
+      "1:25"
+    ],
+    [
+      3,
+      367.70739515516493,
+      349.372,
+      370.69260484483505,
+      353.0,
+      "05"
+    ],
+    [
+      3,
+      376,
+      348.112,
+      412.7996142578125,
+      353.0,
+      "슬래브측 · X -4.20 m"
+    ],
+    [
+      3,
+      513.0493977864584,
+      349.3,
+      518.0,
+      353.0,
+      "1:25"
+    ],
+    [
+      3,
+      192,
+      361.354,
+      277.3548158772786,
+      365.0,
+      "갈색 점선은 R8 접합 검토 체적의 단면. 04의 코어 외곽은 원본 표현 박스."
+    ],
+    [
+      3,
+      192,
+      367.354,
+      285.5551680501302,
+      371.0,
+      "검증 필요  /  실 지점 좌표 · 하부 기존 보/벽 단면과 배근 · 정착·받침 · 하중·변위."
+    ],
+    [
+      3,
+      192,
+      373.354,
+      277.1914925130208,
+      377.0,
+      "OS-1 양단 지지방식 검토 · 중간 기둥 없음 · 실제 상세 및 시공 설계 보류."
+    ],
+    [
+      3,
+      428.0,
+      380.56,
+      429.2629720052083,
+      383.9,
+      "0"
+    ],
+    [
+      3,
+      468.0,
+      380.56,
+      469.2629720052083,
+      383.9,
+      "1"
+    ],
+    [
+      3,
+      508.0,
+      380.56,
+      512.0867445203993,
+      383.9,
+      "2 m"
+    ]
+  ],
+  "protected_local_sources": [
+    {
+      "path": "D:\\Users\\admin\\Desktop\\5-2\\설계스튜디오\\중간발표\\07_representation\\render\\out\\GMC-ZZ-ZZ-M3-0701.glb",
+      "sha256": "b1927ffd8335853fcdf55f6ec49cee3233465cfc1362295ffa717f214b45ab88"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\00_엔진\\model\\1F_master.blend",
+      "sha256": "30da41d693a967f9628da843f5ec6b6be40f410eeaa209c643d1cb8fdb3f1f1e"
+    },
+    {
+      "path": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\WP0_R9_A2_기술도면집.pdf",
+      "sha256": "4342a5288e6ca36bb88d5bf8d6c98a6e273f2c354e4683923be216f80cd0f21a"
+    }
+  ],
+  "pdf_sha256": "703aa80a7045bd136876511b85b8d81208effb68b443b1dab5a006b36950809a"
+}

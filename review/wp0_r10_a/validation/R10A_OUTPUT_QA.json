@@ -1,0 +1,1379 @@
+{
+  "page_count": 4,
+  "raster_dpi": 300,
+  "graphical_scales": [
+    {
+      "panel": "A-201",
+      "scale": 200,
+      "metres": 10,
+      "paper_mm": 50.0,
+      "bar": [
+        57,
+        378,
+        1.35
+      ],
+      "vector_measured_mm": 50.00001
+    },
+    {
+      "panel": "A-301",
+      "scale": 250,
+      "metres": 10,
+      "paper_mm": 40.0,
+      "bar": [
+        112,
+        394,
+        1.35
+      ],
+      "vector_measured_mm": 39.99999
+    },
+    {
+      "panel": "A-501/02",
+      "scale": 50,
+      "metres": 2,
+      "paper_mm": 40.0,
+      "bar": [
+        41,
+        389,
+        1.35
+      ],
+      "vector_measured_mm": 40.0
+    },
+    {
+      "panel": "S-401/01",
+      "scale": 100,
+      "metres": 5,
+      "paper_mm": 50.0,
+      "bar": [
+        43,
+        338,
+        1.35
+      ],
+      "vector_measured_mm": 50.0
+    },
+    {
+      "panel": "S-401/03",
+      "scale": 25,
+      "metres": 2,
+      "paper_mm": 80.0,
+      "bar": [
+        428,
+        384,
+        1.35
+      ],
+      "vector_measured_mm": 79.99998
+    }
+  ],
+  "dimension_samples": 19,
+  "reference_compare": [
+    {
+      "sheet": "A-201",
+      "reference_filename": "재열지원_건축 도면집 제출자료.pdf",
+      "reference_page": 6,
+      "reference_sha256": "2dda59ba40a22300cb8240709d2847b84743cb15223e44b011b041c65df5c5a1",
+      "reference_paper_mm": [
+        594.078,
+        420.158
+      ],
+      "viewport_caption": "A축·치수선·벽 및 구획",
+      "common_physical_crop_mm": [
+        128,
+        108
+      ],
+      "common_dpi": 220,
+      "reference_pen_common_mm": [
+        [
+          0.042,
+          8709
+        ],
+        [
+          0.085,
+          525
+        ],
+        [
+          0.254,
+          388
+        ],
+        [
+          0.339,
+          164
+        ],
+        [
+          0.127,
+          84
+        ],
+        [
+          0.169,
+          10
+        ]
+      ],
+      "full_comparison": "architecture_06_same_screen.jpg",
+      "detail_comparison": "architecture_06_100pct.jpg"
+    },
+    {
+      "sheet": "A-201",
+      "reference_filename": "설계 개요.pdf",
+      "reference_page": 6,
+      "reference_sha256": "574607af0b730ce11f649eda54c7d736c50f10c21fd4f3854e652a900e80bb1e",
+      "reference_paper_mm": [
+        594.078,
+        420.158
+      ],
+      "viewport_caption": "실 번호·동선 설비·투영",
+      "common_physical_crop_mm": [
+        128,
+        108
+      ],
+      "common_dpi": 220,
+      "reference_pen_common_mm": [
+        [
+          0.042,
+          11502
+        ],
+        [
+          0.085,
+          696
+        ],
+        [
+          0.254,
+          179
+        ],
+        [
+          0.169,
+          16
+        ],
+        [
+          0.339,
+          1
+        ]
+      ],
+      "full_comparison": "overview_06_same_screen.jpg",
+      "detail_comparison": "overview_06_100pct.jpg"
+    },
+    {
+      "sheet": "A-301",
+      "reference_filename": "재열지원_건축 도면집 제출자료.pdf",
+      "reference_page": 19,
+      "reference_sha256": "2dda59ba40a22300cb8240709d2847b84743cb15223e44b011b041c65df5c5a1",
+      "reference_paper_mm": [
+        420.158,
+        594.078
+      ],
+      "viewport_caption": "절단·기준 레벨 및 층고",
+      "common_physical_crop_mm": [
+        128,
+        108
+      ],
+      "common_dpi": 220,
+      "reference_pen_common_mm": [
+        [
+          0.042,
+          5871
+        ],
+        [
+          0.127,
+          333
+        ],
+        [
+          0.085,
+          266
+        ],
+        [
+          0.254,
+          171
+        ],
+        [
+          0.169,
+          113
+        ],
+        [
+          0.339,
+          67
+        ]
+      ],
+      "full_comparison": "architecture_19_same_screen.jpg",
+      "detail_comparison": "architecture_19_100pct.jpg"
+    },
+    {
+      "sheet": "A-501",
+      "reference_filename": "재열지원_건축 도면집 제출자료.pdf",
+      "reference_page": 21,
+      "reference_sha256": "2dda59ba40a22300cb8240709d2847b84743cb15223e44b011b041c65df5c5a1",
+      "reference_paper_mm": [
+        594.078,
+        420.158
+      ],
+      "viewport_caption": "디딤판·계단참 단면",
+      "common_physical_crop_mm": [
+        128,
+        108
+      ],
+      "common_dpi": 220,
+      "reference_pen_common_mm": [
+        [
+          0.042,
+          5607
+        ],
+        [
+          0.127,
+          1167
+        ],
+        [
+          0.085,
+          916
+        ],
+        [
+          0.339,
+          337
+        ],
+        [
+          0.254,
+          206
+        ],
+        [
+          0.169,
+          31
+        ]
+      ],
+      "full_comparison": "architecture_21_same_screen.jpg",
+      "detail_comparison": "architecture_21_100pct.jpg"
+    },
+    {
+      "sheet": "A-501",
+      "reference_filename": "설계 개요.pdf",
+      "reference_page": 15,
+      "reference_sha256": "574607af0b730ce11f649eda54c7d736c50f10c21fd4f3854e652a900e80bb1e",
+      "reference_paper_mm": [
+        594.078,
+        420.158
+      ],
+      "viewport_caption": "계단실·부속실 치수",
+      "common_physical_crop_mm": [
+        128,
+        108
+      ],
+      "common_dpi": 220,
+      "reference_pen_common_mm": [
+        [
+          0.042,
+          6885
+        ],
+        [
+          0.085,
+          1459
+        ],
+        [
+          0.296,
+          689
+        ],
+        [
+          0.169,
+          24
+        ]
+      ],
+      "full_comparison": "overview_15_same_screen.jpg",
+      "detail_comparison": "overview_15_100pct.jpg"
+    },
+    {
+      "sheet": "S-401",
+      "reference_filename": "재열지원_구조 도면집 제출자료.pdf",
+      "reference_page": 15,
+      "reference_sha256": "edf6b736ca9a60743c025690913f7364cb00a2e5a9eb32f9cefbe641a59deb15",
+      "reference_paper_mm": [
+        420.158,
+        297.039
+      ],
+      "viewport_caption": "부재 태그·접합 상세 키",
+      "common_physical_crop_mm": [
+        128,
+        108
+      ],
+      "common_dpi": 220,
+      "reference_pen_common_mm": [
+        [
+          0.042,
+          2212
+        ],
+        [
+          0.169,
+          1473
+        ],
+        [
+          0.339,
+          613
+        ],
+        [
+          0.127,
+          431
+        ],
+        [
+          0.254,
+          170
+        ],
+        [
+          0.085,
+          82
+        ]
+      ],
+      "full_comparison": "structure_15_same_screen.jpg",
+      "detail_comparison": "structure_15_100pct.jpg"
+    },
+    {
+      "sheet": "S-401",
+      "reference_filename": "재열지원_구조 도면집 제출자료.pdf",
+      "reference_page": 17,
+      "reference_sha256": "edf6b736ca9a60743c025690913f7364cb00a2e5a9eb32f9cefbe641a59deb15",
+      "reference_paper_mm": [
+        297.039,
+        420.158
+      ],
+      "viewport_caption": "단면 부호·레벨과 기준선",
+      "common_physical_crop_mm": [
+        128,
+        108
+      ],
+      "common_dpi": 220,
+      "reference_pen_common_mm": [
+        [
+          0.042,
+          2743
+        ],
+        [
+          0.127,
+          294
+        ],
+        [
+          0.254,
+          157
+        ],
+        [
+          0.339,
+          27
+        ]
+      ],
+      "full_comparison": "structure_17_same_screen.jpg",
+      "detail_comparison": "structure_17_100pct.jpg"
+    }
+  ],
+  "previews_mb_limit": 1000000,
+  "pages": [
+    {
+      "number": 1,
+      "sheet": "A-201",
+      "title": "2층 전체 건축 평면도",
+      "scale": "1:200",
+      "pdf": "pdf/A-201.pdf",
+      "svg": "svg/A-201.svg",
+      "preview": "previews/A-201.jpg",
+      "preview_data": {
+        "width": 1880,
+        "height": 1329,
+        "bytes": 308066,
+        "quality": 92
+      },
+      "high_resolution": "high_resolution/A-201.png",
+      "high_resolution_px": [
+        7016,
+        4961
+      ],
+      "detail": "details/A-201_detail.png",
+      "detail_preview": "details/A-201_detail.jpg",
+      "detail_preview_data": {
+        "width": 1530,
+        "height": 1291,
+        "bytes": 179515,
+        "quality": 92
+      },
+      "detail_window_mm": [
+        63,
+        68,
+        191,
+        176
+      ],
+      "tiles": [
+        {
+          "png": "tiles/A-201/r01-c01.png",
+          "jpeg": "tiles/A-201/r01-c01.jpg",
+          "bounds_px": [
+            0,
+            0,
+            1794,
+            1693
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1699,
+            "bytes": 167466,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-201/r01-c02.png",
+          "jpeg": "tiles/A-201/r01-c02.jpg",
+          "bounds_px": [
+            1714,
+            0,
+            3548,
+            1693
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1662,
+            "bytes": 181141,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-201/r01-c03.png",
+          "jpeg": "tiles/A-201/r01-c03.jpg",
+          "bounds_px": [
+            3468,
+            0,
+            5302,
+            1693
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1662,
+            "bytes": 175538,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-201/r01-c04.png",
+          "jpeg": "tiles/A-201/r01-c04.jpg",
+          "bounds_px": [
+            5222,
+            0,
+            7016,
+            1693
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1699,
+            "bytes": 151970,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-201/r02-c01.png",
+          "jpeg": "tiles/A-201/r02-c01.jpg",
+          "bounds_px": [
+            0,
+            1613,
+            1794,
+            3347
+          ],
+          "jpeg_data": {
+            "width": 1759,
+            "height": 1700,
+            "bytes": 233863,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-201/r02-c02.png",
+          "jpeg": "tiles/A-201/r02-c02.jpg",
+          "bounds_px": [
+            1714,
+            1613,
+            3548,
+            3347
+          ],
+          "jpeg_data": {
+            "width": 1798,
+            "height": 1700,
+            "bytes": 187062,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-201/r02-c03.png",
+          "jpeg": "tiles/A-201/r02-c03.jpg",
+          "bounds_px": [
+            3468,
+            1613,
+            5302,
+            3347
+          ],
+          "jpeg_data": {
+            "width": 1798,
+            "height": 1700,
+            "bytes": 194968,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-201/r02-c04.png",
+          "jpeg": "tiles/A-201/r02-c04.jpg",
+          "bounds_px": [
+            5222,
+            1613,
+            7016,
+            3347
+          ],
+          "jpeg_data": {
+            "width": 1759,
+            "height": 1700,
+            "bytes": 159617,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-201/r03-c01.png",
+          "jpeg": "tiles/A-201/r03-c01.jpg",
+          "bounds_px": [
+            0,
+            3267,
+            1794,
+            4961
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1700,
+            "bytes": 184685,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-201/r03-c02.png",
+          "jpeg": "tiles/A-201/r03-c02.jpg",
+          "bounds_px": [
+            1714,
+            3267,
+            3548,
+            4961
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1663,
+            "bytes": 175109,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-201/r03-c03.png",
+          "jpeg": "tiles/A-201/r03-c03.jpg",
+          "bounds_px": [
+            3468,
+            3267,
+            5302,
+            4961
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1663,
+            "bytes": 161684,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-201/r03-c04.png",
+          "jpeg": "tiles/A-201/r03-c04.jpg",
+          "bounds_px": [
+            5222,
+            3267,
+            7016,
+            4961
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1700,
+            "bytes": 98162,
+            "quality": 92
+          }
+        }
+      ],
+      "pen_distribution_mm": {
+        "0.9": 1,
+        "0.64": 1,
+        "0.18": 10,
+        "0.17": 7,
+        "0.24": 3,
+        "0.11": 149,
+        "0.102": 7,
+        "0.1": 48,
+        "0.15": 358,
+        "0.23": 90,
+        "0.105": 28,
+        "0.13": 58,
+        "0.3": 56,
+        "0.16": 18,
+        "0.4": 3,
+        "0.25": 1,
+        "0.37": 34,
+        "0.14": 24,
+        "0.115": 20,
+        "0.35": 2,
+        "0.22": 2,
+        "0.2": 6,
+        "0.12": 2
+      }
+    },
+    {
+      "number": 2,
+      "sheet": "A-301",
+      "title": "전체 건축 종단면도",
+      "scale": "1:250",
+      "pdf": "pdf/A-301.pdf",
+      "svg": "svg/A-301.svg",
+      "preview": "previews/A-301.jpg",
+      "preview_data": {
+        "width": 1880,
+        "height": 1329,
+        "bytes": 223544,
+        "quality": 92
+      },
+      "high_resolution": "high_resolution/A-301.png",
+      "high_resolution_px": [
+        7016,
+        4961
+      ],
+      "detail": "details/A-301_detail.png",
+      "detail_preview": "details/A-301_detail.jpg",
+      "detail_preview_data": {
+        "width": 1530,
+        "height": 1291,
+        "bytes": 170208,
+        "quality": 92
+      },
+      "detail_window_mm": [
+        179,
+        221,
+        307,
+        329
+      ],
+      "tiles": [
+        {
+          "png": "tiles/A-301/r01-c01.png",
+          "jpeg": "tiles/A-301/r01-c01.jpg",
+          "bounds_px": [
+            0,
+            0,
+            1794,
+            1693
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1699,
+            "bytes": 136276,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-301/r01-c02.png",
+          "jpeg": "tiles/A-301/r01-c02.jpg",
+          "bounds_px": [
+            1714,
+            0,
+            3548,
+            1693
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1662,
+            "bytes": 180275,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-301/r01-c03.png",
+          "jpeg": "tiles/A-301/r01-c03.jpg",
+          "bounds_px": [
+            3468,
+            0,
+            5302,
+            1693
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1662,
+            "bytes": 122170,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-301/r01-c04.png",
+          "jpeg": "tiles/A-301/r01-c04.jpg",
+          "bounds_px": [
+            5222,
+            0,
+            7016,
+            1693
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1699,
+            "bytes": 110242,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-301/r02-c01.png",
+          "jpeg": "tiles/A-301/r02-c01.jpg",
+          "bounds_px": [
+            0,
+            1613,
+            1794,
+            3347
+          ],
+          "jpeg_data": {
+            "width": 1759,
+            "height": 1700,
+            "bytes": 130277,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-301/r02-c02.png",
+          "jpeg": "tiles/A-301/r02-c02.jpg",
+          "bounds_px": [
+            1714,
+            1613,
+            3548,
+            3347
+          ],
+          "jpeg_data": {
+            "width": 1798,
+            "height": 1700,
+            "bytes": 198848,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-301/r02-c03.png",
+          "jpeg": "tiles/A-301/r02-c03.jpg",
+          "bounds_px": [
+            3468,
+            1613,
+            5302,
+            3347
+          ],
+          "jpeg_data": {
+            "width": 1798,
+            "height": 1700,
+            "bytes": 104819,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-301/r02-c04.png",
+          "jpeg": "tiles/A-301/r02-c04.jpg",
+          "bounds_px": [
+            5222,
+            1613,
+            7016,
+            3347
+          ],
+          "jpeg_data": {
+            "width": 1759,
+            "height": 1700,
+            "bytes": 103744,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-301/r03-c01.png",
+          "jpeg": "tiles/A-301/r03-c01.jpg",
+          "bounds_px": [
+            0,
+            3267,
+            1794,
+            4961
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1700,
+            "bytes": 122291,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-301/r03-c02.png",
+          "jpeg": "tiles/A-301/r03-c02.jpg",
+          "bounds_px": [
+            1714,
+            3267,
+            3548,
+            4961
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1663,
+            "bytes": 176764,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-301/r03-c03.png",
+          "jpeg": "tiles/A-301/r03-c03.jpg",
+          "bounds_px": [
+            3468,
+            3267,
+            5302,
+            4961
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1663,
+            "bytes": 109634,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-301/r03-c04.png",
+          "jpeg": "tiles/A-301/r03-c04.jpg",
+          "bounds_px": [
+            5222,
+            3267,
+            7016,
+            4961
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1700,
+            "bytes": 89566,
+            "quality": 92
+          }
+        }
+      ],
+      "pen_distribution_mm": {
+        "0.9": 1,
+        "0.64": 1,
+        "0.18": 12,
+        "0.1": 19,
+        "0.13": 63,
+        "0.11": 42,
+        "0.105": 44,
+        "0.12": 15,
+        "0.19": 3,
+        "0.38": 36,
+        "0.17": 2,
+        "0.37": 2,
+        "0.15": 2,
+        "0.23": 10,
+        "0.095": 7,
+        "0.24": 1
+      }
+    },
+    {
+      "number": 3,
+      "sheet": "A-501",
+      "title": "코어 D 상세 평·단면도",
+      "scale": "1:50",
+      "pdf": "pdf/A-501.pdf",
+      "svg": "svg/A-501.svg",
+      "preview": "previews/A-501.jpg",
+      "preview_data": {
+        "width": 1880,
+        "height": 1329,
+        "bytes": 216653,
+        "quality": 92
+      },
+      "high_resolution": "high_resolution/A-501.png",
+      "high_resolution_px": [
+        7016,
+        4961
+      ],
+      "detail": "details/A-501_detail.png",
+      "detail_preview": "details/A-501_detail.jpg",
+      "detail_preview_data": {
+        "width": 1530,
+        "height": 1290,
+        "bytes": 102400,
+        "quality": 92
+      },
+      "detail_window_mm": [
+        362,
+        132,
+        490,
+        240
+      ],
+      "tiles": [
+        {
+          "png": "tiles/A-501/r01-c01.png",
+          "jpeg": "tiles/A-501/r01-c01.jpg",
+          "bounds_px": [
+            0,
+            0,
+            1794,
+            1693
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1699,
+            "bytes": 145400,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-501/r01-c02.png",
+          "jpeg": "tiles/A-501/r01-c02.jpg",
+          "bounds_px": [
+            1714,
+            0,
+            3548,
+            1693
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1662,
+            "bytes": 136328,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-501/r01-c03.png",
+          "jpeg": "tiles/A-501/r01-c03.jpg",
+          "bounds_px": [
+            3468,
+            0,
+            5302,
+            1693
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1662,
+            "bytes": 81478,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-501/r01-c04.png",
+          "jpeg": "tiles/A-501/r01-c04.jpg",
+          "bounds_px": [
+            5222,
+            0,
+            7016,
+            1693
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1699,
+            "bytes": 121365,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-501/r02-c01.png",
+          "jpeg": "tiles/A-501/r02-c01.jpg",
+          "bounds_px": [
+            0,
+            1613,
+            1794,
+            3347
+          ],
+          "jpeg_data": {
+            "width": 1759,
+            "height": 1700,
+            "bytes": 159561,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-501/r02-c02.png",
+          "jpeg": "tiles/A-501/r02-c02.jpg",
+          "bounds_px": [
+            1714,
+            1613,
+            3548,
+            3347
+          ],
+          "jpeg_data": {
+            "width": 1798,
+            "height": 1700,
+            "bytes": 144912,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-501/r02-c03.png",
+          "jpeg": "tiles/A-501/r02-c03.jpg",
+          "bounds_px": [
+            3468,
+            1613,
+            5302,
+            3347
+          ],
+          "jpeg_data": {
+            "width": 1798,
+            "height": 1700,
+            "bytes": 105902,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-501/r02-c04.png",
+          "jpeg": "tiles/A-501/r02-c04.jpg",
+          "bounds_px": [
+            5222,
+            1613,
+            7016,
+            3347
+          ],
+          "jpeg_data": {
+            "width": 1759,
+            "height": 1700,
+            "bytes": 159459,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-501/r03-c01.png",
+          "jpeg": "tiles/A-501/r03-c01.jpg",
+          "bounds_px": [
+            0,
+            3267,
+            1794,
+            4961
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1700,
+            "bytes": 130238,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-501/r03-c02.png",
+          "jpeg": "tiles/A-501/r03-c02.jpg",
+          "bounds_px": [
+            1714,
+            3267,
+            3548,
+            4961
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1663,
+            "bytes": 94978,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-501/r03-c03.png",
+          "jpeg": "tiles/A-501/r03-c03.jpg",
+          "bounds_px": [
+            3468,
+            3267,
+            5302,
+            4961
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1663,
+            "bytes": 121755,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/A-501/r03-c04.png",
+          "jpeg": "tiles/A-501/r03-c04.jpg",
+          "bounds_px": [
+            5222,
+            3267,
+            7016,
+            4961
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1700,
+            "bytes": 94946,
+            "quality": 92
+          }
+        }
+      ],
+      "pen_distribution_mm": {
+        "0.9": 1,
+        "0.64": 1,
+        "0.18": 14,
+        "0.14": 36,
+        "0.15": 34,
+        "0.115": 62,
+        "0.35": 4,
+        "0.16": 15,
+        "0.105": 24,
+        "0.13": 26,
+        "0.11": 18,
+        "0.23": 6,
+        "0.24": 4,
+        "0.12": 10,
+        "0.2": 5,
+        "0.1": 5,
+        "0.37": 2,
+        "0.36": 26,
+        "0.21": 1
+      }
+    },
+    {
+      "number": 4,
+      "sheet": "S-401",
+      "title": "E2 브리지 구조 상세 연구도",
+      "scale": "1:100 / 1:75 / 1:25",
+      "pdf": "pdf/S-401.pdf",
+      "svg": "svg/S-401.svg",
+      "preview": "previews/S-401.jpg",
+      "preview_data": {
+        "width": 1880,
+        "height": 1329,
+        "bytes": 183000,
+        "quality": 92
+      },
+      "high_resolution": "high_resolution/S-401.png",
+      "high_resolution_px": [
+        7016,
+        4961
+      ],
+      "detail": "details/S-401_detail.png",
+      "detail_preview": "details/S-401_detail.jpg",
+      "detail_preview_data": {
+        "width": 1530,
+        "height": 1292,
+        "bytes": 71862,
+        "quality": 92
+      },
+      "detail_window_mm": [
+        365,
+        246,
+        493,
+        354
+      ],
+      "tiles": [
+        {
+          "png": "tiles/S-401/r01-c01.png",
+          "jpeg": "tiles/S-401/r01-c01.jpg",
+          "bounds_px": [
+            0,
+            0,
+            1794,
+            1693
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1699,
+            "bytes": 99789,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/S-401/r01-c02.png",
+          "jpeg": "tiles/S-401/r01-c02.jpg",
+          "bounds_px": [
+            1714,
+            0,
+            3548,
+            1693
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1662,
+            "bytes": 91776,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/S-401/r01-c03.png",
+          "jpeg": "tiles/S-401/r01-c03.jpg",
+          "bounds_px": [
+            3468,
+            0,
+            5302,
+            1693
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1662,
+            "bytes": 72170,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/S-401/r01-c04.png",
+          "jpeg": "tiles/S-401/r01-c04.jpg",
+          "bounds_px": [
+            5222,
+            0,
+            7016,
+            1693
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1699,
+            "bytes": 122418,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/S-401/r02-c01.png",
+          "jpeg": "tiles/S-401/r02-c01.jpg",
+          "bounds_px": [
+            0,
+            1613,
+            1794,
+            3347
+          ],
+          "jpeg_data": {
+            "width": 1759,
+            "height": 1700,
+            "bytes": 110973,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/S-401/r02-c02.png",
+          "jpeg": "tiles/S-401/r02-c02.jpg",
+          "bounds_px": [
+            1714,
+            1613,
+            3548,
+            3347
+          ],
+          "jpeg_data": {
+            "width": 1798,
+            "height": 1700,
+            "bytes": 100722,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/S-401/r02-c03.png",
+          "jpeg": "tiles/S-401/r02-c03.jpg",
+          "bounds_px": [
+            3468,
+            1613,
+            5302,
+            3347
+          ],
+          "jpeg_data": {
+            "width": 1798,
+            "height": 1700,
+            "bytes": 144270,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/S-401/r02-c04.png",
+          "jpeg": "tiles/S-401/r02-c04.jpg",
+          "bounds_px": [
+            5222,
+            1613,
+            7016,
+            3347
+          ],
+          "jpeg_data": {
+            "width": 1759,
+            "height": 1700,
+            "bytes": 110457,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/S-401/r03-c01.png",
+          "jpeg": "tiles/S-401/r03-c01.jpg",
+          "bounds_px": [
+            0,
+            3267,
+            1794,
+            4961
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1700,
+            "bytes": 90014,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/S-401/r03-c02.png",
+          "jpeg": "tiles/S-401/r03-c02.jpg",
+          "bounds_px": [
+            1714,
+            3267,
+            3548,
+            4961
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1663,
+            "bytes": 130950,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/S-401/r03-c03.png",
+          "jpeg": "tiles/S-401/r03-c03.jpg",
+          "bounds_px": [
+            3468,
+            3267,
+            5302,
+            4961
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1663,
+            "bytes": 104637,
+            "quality": 92
+          }
+        },
+        {
+          "png": "tiles/S-401/r03-c04.png",
+          "jpeg": "tiles/S-401/r03-c04.jpg",
+          "bounds_px": [
+            5222,
+            3267,
+            7016,
+            4961
+          ],
+          "jpeg_data": {
+            "width": 1800,
+            "height": 1700,
+            "bytes": 110545,
+            "quality": 92
+          }
+        }
+      ],
+      "pen_distribution_mm": {
+        "0.9": 1,
+        "0.64": 1,
+        "0.18": 16,
+        "0.24": 6,
+        "0.28": 1,
+        "0.42": 1,
+        "0.14": 6,
+        "0.12": 5,
+        "0.11": 20,
+        "0.23": 17,
+        "0.105": 14,
+        "0.13": 23,
+        "0.15": 6,
+        "0.1": 8,
+        "0.36": 8,
+        "0.17": 5,
+        "0.16": 4,
+        "0.22": 1
+      }
+    }
+  ],
+  "independent_1to75_vector_dimension_check": {
+    "sheet": "S-401",
+    "distance_world_mm": 17000,
+    "scale": 75,
+    "measured_paper_mm": 226.66668
+  },
+  "embedded_label_glyphs_available": true,
+  "reference_compared_locally": [
+    "architecture_06_100pct.jpg",
+    "architecture_06_same_screen.jpg",
+    "architecture_19_100pct.jpg",
+    "architecture_19_same_screen.jpg",
+    "architecture_21_100pct.jpg",
+    "architecture_21_same_screen.jpg",
+    "overview_06_100pct.jpg",
+    "overview_06_same_screen.jpg",
+    "overview_15_100pct.jpg",
+    "overview_15_same_screen.jpg",
+    "structure_15_100pct.jpg",
+    "structure_15_same_screen.jpg",
+    "structure_17_100pct.jpg",
+    "structure_17_same_screen.jpg"
+  ]
+}
