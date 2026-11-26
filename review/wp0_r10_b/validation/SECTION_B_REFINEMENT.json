@@ -1,0 +1,52 @@
+{
+ "glb_sha256": "b1927ffd8335853fcdf55f6ec49cee3233465cfc1362295ffa717f214b45ab88",
+ "refinement": [
+  {
+   "y": 9.5,
+   "score": 91.53,
+   "info": 17,
+   "programs": 22,
+   "void_length_m": 185.3,
+   "m1_tube_chord_m": 3.033,
+   "clearance_to_column_face_m": 0.05
+  },
+  {
+   "y": 10.0,
+   "score": 90.61,
+   "info": 17,
+   "programs": 22,
+   "void_length_m": 176.1,
+   "m1_tube_chord_m": 2.488,
+   "clearance_to_column_face_m": 0.55
+  },
+  {
+   "y": 10.2,
+   "score": 89.96,
+   "info": 17,
+   "programs": 22,
+   "void_length_m": 169.6,
+   "m1_tube_chord_m": 2.102,
+   "clearance_to_column_face_m": 0.75
+  },
+  {
+   "y": 10.5,
+   "score": 88.24,
+   "info": 17,
+   "programs": 22,
+   "void_length_m": 152.4,
+   "m1_tube_chord_m": 1.1,
+   "clearance_to_column_face_m": 1.05
+  },
+  {
+   "y": 11.0,
+   "score": 83.38,
+   "info": 16,
+   "programs": 22,
+   "void_length_m": 133.8,
+   "m1_tube_chord_m": null,
+   "clearance_to_column_face_m": 1.55
+  }
+ ],
+ "chosen_y": 10.0,
+ "reason": "Highest-scoring sweep band (y 3-13.5). y=10.0 cuts the M1 tube through a 2.49 m chord (two distinct walls) rather than the 1.1 m near-tangent sliver at y=10.5, and keeps 0.55 m clear of the y=9 column faces (y=9.5 scores 0.9 higher but leaves 0.05 m)."
+}

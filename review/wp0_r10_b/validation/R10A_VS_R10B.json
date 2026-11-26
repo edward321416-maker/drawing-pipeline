@@ -1,0 +1,22 @@
+[
+  {
+    "sheet": "A-201",
+    "r10b_vector_paths": 1736,
+    "r10b_text_chars": 2066,
+    "r10a_vector_paths": 1055,
+    "r10a_text_chars": 1398
+  },
+  {
+    "sheet": "A-301",
+    "r10b_vector_paths": 423,
+    "r10b_text_chars": 1550,
+    "r10a_vector_paths": 304,
+    "r10a_text_chars": 1115
+  },
+  {
+    "sheet": "A-302",
+    "r10b_vector_paths": 474,
+    "r10b_text_chars": 1420,
+    "note": "R10-A sheet not present (new sheet in R10-B)"
+  }
+]

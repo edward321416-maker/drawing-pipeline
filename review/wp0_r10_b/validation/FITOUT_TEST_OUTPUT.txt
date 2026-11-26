@@ -1,0 +1,85 @@
+PR snapshot BEFORE: {"n_rooms": 26, "room_wkt_sha256": "e67c5eedff7337af9bb85c2b3534d6f7759ed1e40adf2baa69c60ac0bbfa361b", "items_wkt_sha256": "01dae6df80db3294acf73a948df401c1f28b2ba4e293423438286f5be6ee07b0", "layer_counts": {"A-ANNO-DIMS": 48, "A-ANNO-SYMB": 34, "A-ANNO-TAGS": 26, "A-CIRC": 17, "A-CIRC-SVC": 9, "A-COLS": 34, "A-DOOR": 87, "A-FIXT": 22, "A-FLOR-HATCH": 1, "A-FLOR-OPEN": 7, "A-FURN": 16, "A-GLAZ": 2, "A-GRID": 14, "A-RAIL": 1, "A-STAR": 198, "A-STAR-PROJ": 4, "A-TUBE": 47, "A-WALL-CORE": 13, "A-WALL-EXT": 1, "A-WALL-PART": 17, "A-ZONE": 22}}
+PR snapshot AFTER : {"n_rooms": 26, "room_wkt_sha256": "e67c5eedff7337af9bb85c2b3534d6f7759ed1e40adf2baa69c60ac0bbfa361b", "items_wkt_sha256": "01dae6df80db3294acf73a948df401c1f28b2ba4e293423438286f5be6ee07b0", "layer_counts": {"A-ANNO-DIMS": 48, "A-ANNO-SYMB": 34, "A-ANNO-TAGS": 26, "A-CIRC": 17, "A-CIRC-SVC": 9, "A-COLS": 34, "A-DOOR": 87, "A-FIXT": 22, "A-FLOR-HATCH": 1, "A-FLOR-OPEN": 7, "A-FURN": 16, "A-GLAZ": 2, "A-GRID": 14, "A-RAIL": 1, "A-STAR": 198, "A-STAR-PROJ": 4, "A-TUBE": 47, "A-WALL-CORE": 13, "A-WALL-EXT": 1, "A-WALL-PART": 17, "A-ZONE": 22}}
+PR unchanged (rooms WKT sha256, all item WKT sha256, layer counts): True
+  rooms sha256 : e67c5eedff7337af9bb85c2b3534d6f7759ed1e40adf2baa69c60ac0bbfa361b
+  items sha256 : 01dae6df80db3294acf73a948df401c1f28b2ba4e293423438286f5be6ee07b0
+
+fit-out items: 266   seats total: 170   develop+check 63.4 s
+room   n    seats  m2/seat   kinds
+2-01   7    0      None      {"range": 4, "hood": 1, "sink_double": 1, "fridge": 1}
+2-02   11   9      3.31      {"cash_counter": 1, "banquette": 1, "table_4top": 2, "chair": 6, "table_2top": 1}
+2-03   29   23     3.87      {"cash_counter": 1, "banquette": 1, "table_4top": 5, "chair": 20, "table_2top": 2}
+2-04   7    0      None      {"range": 4, "hood": 1, "sink_double": 1, "fridge": 1}
+2-05   5    0      None      {"sink_wash": 2, "dish_table": 1, "shelf": 2}
+2-06   2    0      None      {"rack": 2}
+2-08   13   11     3.73      {"cash_counter": 1, "banquette": 1, "table_4top": 3, "chair": 8}
+2-09   7    0      None      {"range": 3, "hood": 2, "sink_double": 1, "fridge": 1}
+2-10   110  88     15.2      {"service_counter": 2, "stool": 8, "banquette": 1, "table_4top": 7, "chair": 74, "table_2top": 15, "table_comm": 3}
+2-11   7    7      4.11      {"banquette": 1, "table_4top": 2, "chair": 4}
+2-12   3    0      None      {"sink_wash": 2, "shelf": 1}
+2-13   3    0      None      {"sink_wash": 2, "shelf": 1}
+2-14   4    0      None      {"range": 2, "hood": 1, "sink_double": 1}
+2-15   3    0      None      {"range": 2, "hood": 1}
+2-16   15   14     4.11      {"cash_counter": 1, "banquette": 2, "table_4top": 4, "chair": 8}
+2-17   2    0      None      {"rack": 2}
+2-20   4    2      22.5      {"cash_counter": 1, "table_2top": 1, "chair": 2}
+2-21   3    0      None      {"sink_wash": 2, "dish_table": 1}
+2-22   6    0      None      {"range": 3, "hood": 1, "sink_double": 1, "fridge": 1}
+2-23   2    0      None      {"sink_wash": 2}
+2-24   5    0      None      {"range": 2, "hood": 2, "sink_double": 1}
+2-25   18   16     2.53      {"cash_counter": 1, "banquette": 2, "table_4top": 4, "chair": 10, "table_2top": 1}
+
+violation counts: {"a_outside_room": 0, "b_hits_obstacle": 0, "b_clear_hits_obstacle": 0, "b2_hall_clearance": 0, "c_door_swing": 0, "d_overlaps_existing": 0, "e_overlaps_new": 0, "e2_clear_hits_other": 0, "f_corridor_encroach": 0}
+
+hall circulation: min main-corridor clear width with fit-out 0.00 m, PR only 0.00 m; new items push width below 3 m at 0 samples; floor >=1.2 m from furniture: 0.553 (PR only 0.677)
+   line 0  15.9 m  min width PR-only 3.86  with fit-out 3.86  samples<3m 0
+   line 1  23.3 m  min width PR-only 2.39  with fit-out 2.39  samples<3m 3
+   line 2  7.0 m  min width PR-only 1.94  with fit-out 1.94  samples<3m 4
+   line 3  25.1 m  min width PR-only 4.29  with fit-out 4.29  samples<3m 0
+   line 4  13.2 m  min width PR-only 2.16  with fit-out 2.16  samples<3m 6
+   line 5  6.5 m  min width PR-only 1.26  with fit-out 1.26  samples<3m 4
+   line 6  30.1 m  min width PR-only 2.93  with fit-out 2.93  samples<3m 1
+   line 7  7.5 m  min width PR-only 3.02  with fit-out 3.02  samples<3m 0
+   line 8  3.8 m  min width PR-only 4.99  with fit-out 4.99  samples<3m 0
+   line 9  6.5 m  min width PR-only 5.38  with fit-out 5.38  samples<3m 0
+   line 10  2.1 m  min width PR-only 6.0  with fit-out 6.0  samples<3m 0
+   line 11  5.0 m  min width PR-only 0.0  with fit-out 0.0  samples<3m 1
+   line 12  6.8 m  min width PR-only 2.45  with fit-out 2.45  samples<3m 6
+   line 13  15.6 m  min width PR-only 0.0  with fit-out 0.0  samples<3m 3
+   line 14  1.9 m  min width PR-only 5.72  with fit-out 5.72  samples<3m 0
+
+restrooms (existing items only, nothing added: 0 new items):
+  2-07 화장실 공용·장애인 겸용 door 'restroom B door 공용문 swing': clear depth inside 2.99 m (>=1.2: True), first obstacle: restroom B cubicle partition 4
+  2-07 cubicle restroom B 양변기 1: [0.9, 1.3] need (0.9, 1.2) ok
+  2-07 cubicle restroom B 양변기 2(장애인): not enclosed by existing partition items (open stall front or shared cell): size cannot be read need (1.6, 2.0) 
+  2-18 화장실 여자 화장실 door 'restroom C door 여자문 swing': clear depth inside 1.73 m (>=1.2: True), first obstacle: restroom C cubicle partition 7
+  2-18 cubicle restroom C 여 양변기 1: [0.9, 1.3] need (0.9, 1.2) ok
+  2-18 cubicle restroom C 여 양변기 2: [0.9, 1.3] need (0.9, 1.2) ok
+  2-19 cubicle restroom C 장애인 양변기: not enclosed by existing partition items (open stall front or shared cell): size cannot be read need (1.6, 2.0) 
+  2-26 화장실 남자 화장실 door 'restroom C door 남자문 swing': clear depth inside 4.00 m (>=1.2: True), first obstacle: room wall
+  2-26 cubicle restroom C 남 양변기: [0.9, 1.3] need (0.9, 1.2) ok
+
+dropped candidates (17):
+  2-01 dishwasher: no free wall run 0.7 x 0.7 m with 1.0 m working aisle outside door swing/apron/existing furniture
+  2-04 dishwasher: no free wall run 0.7 x 0.7 m with 1.0 m working aisle outside door swing/apron/existing furniture
+  2-09 dishwasher: no free wall run 0.7 x 0.7 m with 1.0 m working aisle outside door swing/apron/existing furniture
+  2-11 cash_counter: no free wall run for 1.2x0.6 + 0.9 m front inside the room outside door swing/apron/lane
+  2-12 dish_table: no free wall run 1.2x0.7 with 0.9 m aisle
+  2-13 dish_table: no free wall run 1.2x0.7 with 0.9 m aisle
+  2-14 range: only 2 of the 3-4 ranges fit (0 existing PR range + 2 new): no free wall run with 1.0 m working aisle outside door swings
+  2-14 fridge: no free wall run 0.7 x 0.8 m with 1.0 m working aisle outside door swing/apron/existing furniture
+  2-14 dishwasher: no free wall run 0.7 x 0.7 m with 1.0 m working aisle outside door swing/apron/existing furniture
+  2-15 range: only 2 of the 3-4 ranges fit (0 existing PR range + 2 new): no free wall run with 1.0 m working aisle outside door swings
+  2-15 sink_double: no free wall run 1.2 x 0.6 m with 1.0 m working aisle outside door swing/apron/existing furniture
+  2-15 fridge: no free wall run 0.7 x 0.8 m with 1.0 m working aisle outside door swing/apron/existing furniture
+  2-15 dishwasher: no free wall run 0.7 x 0.7 m with 1.0 m working aisle outside door swing/apron/existing furniture
+  2-22 dishwasher: no free wall run 0.7 x 0.7 m with 1.0 m working aisle outside door swing/apron/existing furniture
+  2-23 dish_table: no free wall run 1.2x0.7 with 0.9 m aisle
+  2-24 fridge: no free wall run 0.7 x 0.8 m with 1.0 m working aisle outside door swing/apron/existing furniture
+  2-24 dishwasher: no free wall run 0.7 x 0.7 m with 1.0 m working aisle outside door swing/apron/existing furniture
+
+info: {"corridors": {"n_trunk": 8, "n_stubs": 7, "notes": [], "main_zone_m2": 442.2, "service_zone_m2": 176.2}, "island_skipped": {"2-01": "room depth 2.80 m < 4.4 m", "2-04": "room depth 3.21 m < 4.4 m", "2-09": "room depth 3.60 m < 4.4 m", "2-14": "room depth 3.00 m < 4.4 m", "2-15": "room depth 2.58 m < 4.4 m", "2-22": "room depth 2.80 m < 4.4 m", "2-24": "room depth 3.00 m < 4.4 m"}, "cart_skipped": {"2-05": "wash room 11.5 m2 < 9 m2: pallet/cart parking not attempted", "2-06": "storage room 10.5 m2 < 9 m2: pallet/cart parking not attempted", "2-12": "wash room 6.7 m2 < 9 m2: pallet/cart parking not attempted", "2-13": "wash room 7.2 m2 < 9 m2: pallet/cart parking not attempted", "2-17": "storage room 7.1 m2 < 9 m2: pallet/cart parking not attempted", "2-21": "wash room 6.8 m2 < 9 m2: pallet/cart parking not attempted", "2-23": "wash room 9.0 m2 < 9 m2: pallet/cart parking not attempted"}, "hall_region_m2": 358.3, "hall_bays": 32, "hall_pattern_units": {"A": 0, "B": 3, "C": 10}, "hall_wall_units": {"bank": 1, "window": 3}, "hall_pocket_units": 5, "seats": {"2-01": 0, "2-02": 9, "2-03": 23, "2-04": 0, "2-05": 0, "2-06": 0, "2-08": 11, "2-09": 0, "2-10": 88, "2-11": 7, "2-12": 0, "2-13": 0, "2-14": 0, "2-15": 0, "2-16": 14, "2-17": 0, "2-20": 2, "2-21": 0, "2-22": 0, "2-23": 0, "2-24": 0, "2-25": 16}, "seats_total": 170}
+
+wrote D:\Temp\claude\D--Users-admin-Desktop-2-----\331dbb83-783e-4e46-aa6c-a9c67d371b45\scratchpad\fitout\fitout_report.json
+wrote D:\Temp\claude\D--Users-admin-Desktop-2-----\331dbb83-783e-4e46-aa6c-a9c67d371b45\scratchpad\fitout\fitout_preview_2F.png
+RESULT: PASS (0 hard violations, PR not mutated)

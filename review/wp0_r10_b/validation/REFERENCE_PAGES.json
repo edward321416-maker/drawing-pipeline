@@ -1,0 +1,115 @@
+[
+  {
+    "sheet": "A-201",
+    "reference_filename": "재열지원_건축 도면집 제출자료.pdf",
+    "reference_page": 6,
+    "reference_sha256": "2dda59ba40a22300cb8240709d2847b84743cb15223e44b011b041c65df5c5a1",
+    "reference_paper_mm": [
+      594.078,
+      420.158
+    ],
+    "reference_vector_paths": 10497,
+    "r10b_vector_paths": 1736,
+    "reference_pen_mm_top": [
+      [
+        0.042,
+        8709
+      ],
+      [
+        0.085,
+        525
+      ],
+      [
+        0.254,
+        388
+      ],
+      [
+        0.339,
+        164
+      ],
+      [
+        0.127,
+        84
+      ],
+      [
+        0.169,
+        10
+      ]
+    ],
+    "local_comparison_image": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R10_B_대표도면\\비교검수\\arch_06_vs_R10B_A-201.jpg"
+  },
+  {
+    "sheet": "A-301",
+    "reference_filename": "재열지원_건축 도면집 제출자료.pdf",
+    "reference_page": 19,
+    "reference_sha256": "2dda59ba40a22300cb8240709d2847b84743cb15223e44b011b041c65df5c5a1",
+    "reference_paper_mm": [
+      420.158,
+      594.078
+    ],
+    "reference_vector_paths": 8068,
+    "r10b_vector_paths": 423,
+    "reference_pen_mm_top": [
+      [
+        0.042,
+        5871
+      ],
+      [
+        0.127,
+        333
+      ],
+      [
+        0.085,
+        266
+      ],
+      [
+        0.254,
+        171
+      ],
+      [
+        0.169,
+        113
+      ],
+      [
+        0.339,
+        67
+      ]
+    ],
+    "local_comparison_image": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R10_B_대표도면\\비교검수\\arch_19_vs_R10B_A-301.jpg"
+  },
+  {
+    "sheet": "A-201",
+    "reference_filename": "설계 개요.pdf",
+    "reference_page": 6,
+    "reference_sha256": "574607af0b730ce11f649eda54c7d736c50f10c21fd4f3854e652a900e80bb1e",
+    "reference_paper_mm": [
+      594.078,
+      420.158
+    ],
+    "reference_vector_paths": 13126,
+    "r10b_vector_paths": 1736,
+    "reference_pen_mm_top": [
+      [
+        0.042,
+        11502
+      ],
+      [
+        0.085,
+        696
+      ],
+      [
+        0.254,
+        179
+      ],
+      [
+        0.169,
+        16
+      ],
+      [
+        0.339,
+        1
+      ]
+    ],
+    "local_comparison_image": "D:\\Users\\admin\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R10_B_대표도면\\비교검수\\over_06_vs_R10B_A-201.jpg"
+  }
+]

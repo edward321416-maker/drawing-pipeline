@@ -1,0 +1,138 @@
+{
+  "summary": {
+    "PASS": 8,
+    "FAIL": 0
+  },
+  "tests": [
+    {
+      "id": "X01",
+      "title": "A-201 section values equal the values the section sheets were cut at",
+      "status": "PASS",
+      "evidence": {
+        "plan": {
+          "A_A": {
+            "x": -4.2,
+            "direction": "+X",
+            "target": "A-301"
+          },
+          "B_B": {
+            "y": 10.0,
+            "direction": "+Y",
+            "target": "A-302"
+          }
+        },
+        "A_301": -4.2,
+        "A_302": 10.0
+      }
+    },
+    {
+      "id": "X02",
+      "title": "A-A mark: vector line drawn at the plan position of X = -4.200 and spanning the plan",
+      "status": "PASS",
+      "evidence": {
+        "expected_x_mm": 88.0,
+        "segments": 4,
+        "total_length_mm": 282.2
+      }
+    },
+    {
+      "id": "X03",
+      "title": "B-B mark: vector line drawn at the plan position of Y = +10.000 and spanning the plan",
+      "status": "PASS",
+      "evidence": {
+        "expected_y_mm": 202.0,
+        "segments": 11,
+        "total_length_mm": 316.2
+      }
+    },
+    {
+      "id": "X04",
+      "title": "Every sheet reference resolves to an R10-B sheet or an unchanged R10-A sheet (A-501, S-401)",
+      "status": "PASS",
+      "evidence": {
+        "references": {
+          "A-201": [
+            "A-301",
+            "A-302",
+            "A-501",
+            "S-401"
+          ],
+          "A-301": [
+            "A-201",
+            "A-302",
+            "A-501",
+            "S-401"
+          ],
+          "A-302": [
+            "A-201",
+            "A-301",
+            "A-501"
+          ]
+        },
+        "unresolved": [],
+        "r10a_carried": [
+          "A-501",
+          "S-401"
+        ]
+      }
+    },
+    {
+      "id": "X05",
+      "title": "A-201 refers to A-301 and A-302; both sections refer back to A-201",
+      "status": "PASS",
+      "evidence": {}
+    },
+    {
+      "id": "X06",
+      "title": "Every callout of the section sheets is present in the PDF text layer",
+      "status": "PASS",
+      "evidence": {
+        "missing": []
+      }
+    },
+    {
+      "id": "X07",
+      "title": "All 17 level labels of A-301 equal data/t14s/source_slices/floors.json",
+      "status": "PASS",
+      "evidence": {
+        "levels": 17,
+        "missing": []
+      }
+    },
+    {
+      "id": "X08",
+      "title": "All 26 room ids appear on A-201 at least twice (tag + schedule row)",
+      "status": "PASS",
+      "evidence": {
+        "counts": {
+          "2-01": 2,
+          "2-02": 2,
+          "2-03": 2,
+          "2-04": 2,
+          "2-05": 2,
+          "2-06": 2,
+          "2-07": 2,
+          "2-08": 2,
+          "2-09": 2,
+          "2-10": 2,
+          "2-11": 2,
+          "2-12": 2,
+          "2-13": 2,
+          "2-14": 2,
+          "2-15": 2,
+          "2-16": 2,
+          "2-17": 2,
+          "2-18": 2,
+          "2-19": 2,
+          "2-20": 2,
+          "2-21": 2,
+          "2-22": 2,
+          "2-23": 2,
+          "2-24": 2,
+          "2-25": 2,
+          "2-26": 2
+        }
+      }
+    }
+  ]
+}
