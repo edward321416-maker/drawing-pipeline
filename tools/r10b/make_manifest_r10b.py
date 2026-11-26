@@ -15,13 +15,26 @@ def sha(path):
     return h.hexdigest()
 
 
+TEXT = (".json", ".md", ".txt", ".svg", ".py")
+CRLF, LF = bytes([13, 10]), bytes([10])
+# Python on Windows writes text with CRLF, git stores LF: normalise first so the manifest describes the stored bytes.
+fixed = []
+for dp, _, fs in os.walk(OUT):
+    for fn in fs:
+        if fn.lower().endswith(TEXT):
+            full = os.path.join(dp, fn)
+            raw = open(full, "rb").read()
+            if CRLF in raw:
+                open(full, "wb").write(raw.replace(CRLF, LF))
+                fixed.append(os.path.relpath(full, OUT).replace(os.sep, "/"))
+print("normalised CRLF -> LF:", fixed)
 files = []
 for dp, _, fs in os.walk(OUT):
     for fn in fs:
         if fn == "manifest.json":
             continue
         full = os.path.join(dp, fn)
-        files.append(dict(path=os.path.relpath(full, OUT).replace("\\", "/"), bytes=os.path.getsize(full), sha256=sha(full)))
+        files.append(dict(path=os.path.relpath(full, OUT).replace(os.sep, "/"), bytes=os.path.getsize(full), sha256=sha(full)))
 files.sort(key=lambda r: r["path"])
 pdf = "pdf/WP0_R10B_Representative_A2.pdf"
 with open(os.path.join(OUT, "manifest.json"), "w", encoding="utf-8", newline="\n") as f:

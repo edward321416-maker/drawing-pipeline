@@ -579,8 +579,8 @@
     },
     {
       "path": "validation/FITOUT_TEST_OUTPUT.txt",
-      "bytes": 9476,
-      "sha256": "299eba2c4d319594d134993ce1d0a4bed3f5e1f0568d86ba874b30dfdba4ff29"
+      "bytes": 9391,
+      "sha256": "d0bc43618e044001b5947429f40335ecc9e7c14e0e93df8ae8877791894e1ffe"
     },
     {
       "path": "validation/R10A_VS_R10B.json",
@@ -594,8 +594,8 @@
     },
     {
       "path": "validation/R10B_GEOMETRY.json",
-      "bytes": 202275,
-      "sha256": "c242ea0052d1c15b05db710397d1b70a6c3757d212a231c07156628f15177164"
+      "bytes": 193874,
+      "sha256": "d2e53ca6a42235936aca42612a8570572803c825992d484ca364774450866464"
     },
     {
       "path": "validation/R10B_OUTPUT_QA.json",
@@ -604,13 +604,13 @@
     },
     {
       "path": "validation/R10B_PRESERVATION.json",
-      "bytes": 6786,
-      "sha256": "ff4a928e557c9152304f118514092af324c4deb8d7874a5b84f7f5c52c4234cd"
+      "bytes": 6561,
+      "sha256": "e14912f09bfee50b1e42a8e8f8b3e4a2f3cbd9b31e13ca76c1c0617361c8d8b8"
     },
     {
       "path": "validation/R10B_XREF.json",
-      "bytes": 3206,
-      "sha256": "b987160afb952780ec01f1382f43d07f5fb302dd7af8f8089bb8e03c92880441"
+      "bytes": 3069,
+      "sha256": "411cc9b1e9012b4234af61c629888ab4f7e04a28709869edb23d53c57e9f5086"
     },
     {
       "path": "validation/REFERENCE_COMPARISON.md",
@@ -624,13 +624,13 @@
     },
     {
       "path": "validation/SECTION_B_REFINEMENT.json",
-      "bytes": 1287,
-      "sha256": "4eb84e1eadbdda3d534218f0d917deb3095f21ab409008941e98b96c82f246b9"
+      "bytes": 1236,
+      "sha256": "3be26c51781f05c883bde0d482fbe9da5ee6e287818f1a837e05d0256508f82a"
     },
     {
       "path": "validation/SECTION_B_SELECTION.json",
-      "bytes": 14958,
-      "sha256": "655cead1c5b00fe27755bd8b95468ed7e15466293297662b2aeed093b4795574"
+      "bytes": 14282,
+      "sha256": "c7429d4ae47d4336dca0b41871ba94820ddd1a0d806abe1523e2611a0569ce6b"
     },
     {
       "path": "validation/SELF_REVIEW.md",
