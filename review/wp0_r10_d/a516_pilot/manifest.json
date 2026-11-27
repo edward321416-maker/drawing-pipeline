@@ -4,13 +4,13 @@
  "branch": "review/wp0-r10-d-a516-pilot",
  "algorithm": "SHA-256 (+ git blob SHA-1)",
  "file_count": 15,
- "note": "manifest.json itself is not listed. Project-owned files only; no third-party reference PDF or image.",
+ "note": "manifest.json itself is not listed. Project-owned files only; no third-party reference PDF or image. Text files use LF line endings so the git blob hashes equal the hashes of the local files.",
  "files": [
   {
    "path": "review/wp0_r10_d/a516_pilot/A-516.dxf",
-   "bytes": 306994,
-   "sha256": "bd263501c62d20300be3b4f511d23e970d0a679a778bc78366268e48058a0ba2",
-   "git_blob_sha1": "a3ad6ce18b2c5ef4da1f3bff58f3ad6388bed0a9"
+   "bytes": 267336,
+   "sha256": "4a9e2f3c7bd2d714e98accdebbfb9885d2ee4fb62762fdc231338583d6e2af4c",
+   "git_blob_sha1": "eb9743b69d30570f8ea9974f62950bee2f711890"
   },
   {
    "path": "review/wp0_r10_d/a516_pilot/A-516.pdf",
@@ -20,9 +20,9 @@
   },
   {
    "path": "review/wp0_r10_d/a516_pilot/A-516.svg",
-   "bytes": 381597,
-   "sha256": "cc872deb258306443ad8d65a7e6a465d7d3c69cabf45da8031152269e4ae014a",
-   "git_blob_sha1": "3c910acc80915f89b0574df4886b4578e96712e8"
+   "bytes": 380113,
+   "sha256": "d088cc3c7437f6dcf60bf92790300b51a523baff9d310ddb7d7b86074d697115",
+   "git_blob_sha1": "3c7a66e9d9142f3758e3809327a4b7882daad255"
   },
   {
    "path": "review/wp0_r10_d/a516_pilot/A-516_crop_1_elevation_plan_300dpi.jpg",
@@ -62,9 +62,9 @@
   },
   {
    "path": "review/wp0_r10_d/a516_pilot/A-516_measurement_check.json",
-   "bytes": 5956,
-   "sha256": "d903c6dcfbc7f326617dc0761b0ed4e3f98a670f0b9ea8a1bc4351d62716c5fd",
-   "git_blob_sha1": "df0b67ce595a04582e829191e4355b40000b122b"
+   "bytes": 5635,
+   "sha256": "1a3b9b1d3a59c4088c88ca6491a75d11f1e76cb4535a849134f5526b7cda8a85",
+   "git_blob_sha1": "9954e0e4a62752127fa27ec266efd082fe9c57a9"
   },
   {
    "path": "review/wp0_r10_d/a516_pilot/A-516_preview_200dpi.jpg",
@@ -80,15 +80,15 @@
   },
   {
    "path": "review/wp0_r10_d/a516_pilot/A-516_traced_geometry.json",
-   "bytes": 25312,
-   "sha256": "27bf6ec2fe037db3480fb1a5a4e953bca4aba504aa597967c5d7fc684ff4e1b7",
-   "git_blob_sha1": "a07da2189e15e8841af19e2034aed10103008316"
+   "bytes": 23405,
+   "sha256": "d7d23efc71310e926255ea00da8d1a5fc3c956ca7510f260f9b222a17b4ca060",
+   "git_blob_sha1": "48f823770607d42bd52ac60e4f56d9ad5ee0f57e"
   },
   {
    "path": "review/wp0_r10_d/a516_pilot/A-516_view_transforms.json",
-   "bytes": 1756,
-   "sha256": "69b53f0e2e75ccab097ea0d51800087e6bde58d2388a64db183c67c3807a4e47",
-   "git_blob_sha1": "3ad302c1ca4741df129a5087464e8bf1d67d4a2c"
+   "bytes": 1608,
+   "sha256": "08aed7b6ad6298a4ff97b908f1097a84aab3222481beed5206dd841e0516562d",
+   "git_blob_sha1": "61fe3d262c0f148c3d618a7c43f926fc7303a443"
   },
   {
    "path": "review/wp0_r10_d/a516_pilot/README.md",
