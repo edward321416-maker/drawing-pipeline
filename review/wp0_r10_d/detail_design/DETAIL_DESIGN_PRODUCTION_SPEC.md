@@ -1,0 +1,80 @@
+# R10-D — Reference-derived architectural detail design and production specification
+2026-11-27 KST | research and pilot brief | not approved construction design
+Baseline REF1: 88a471889ad310a3fad768af065ba29e24a97539
+Independent review: 7f35c87fafa7d825de7f8422a69ddae16c70f030
+
+## 0. Objective
+The user identified insufficient detail depth. Do not respond by simply enlarging GLB cuts, adding callouts to empty drawings, copying reference dimensions, or multiplying report pages. Develop an academically credible, coordinated detail-design package explaining how the existing architectural concept is assembled, occupied and connected. Preserve approved massing, core positions, tubes, slabs, openings, floor levels and protected 1F geometry. Design development of interfaces is distinct from construction/engineering certification.
+
+## 1. Actual reference research
+Eight relevant original pages from four user-supplied academic drawing books rendered and visually inspected; PDF text and vector stroke statistics extracted. Reference identities are recorded in CHATGPT_REFERENCE_HANDOFF.md. No third-party drawings or raw PDFs are included in this public repository.
+
+| Ref / page | Actual printed view scale | Observed information |
+|---|---|---|
+| A p20 | 1:70 | coordinated facade elevation, plan, multi-level section; horizontal/vertical dimension chains; panel modules, glazing, louvers, slab, wall, floor and roof/terrace layer build-ups; selected building services |
+| C p14 | A2 1:70 | coordinated elevation/plan/section, curved screen boundary, facade module sizes, material-specific thickness and subframe descriptions, floor/slab/insulation/waterproofing layers, parapet/guardrail and interior relationships |
+| A p21 | 1:80 | multiple core plan types keyed by storey height; stair flight and landing dimensions, shaft/toilet/elevator identification, finishes, continuous compressed multi-floor section |
+| C p15 | A2 1:100 | basement, ground and typical core plans; dimensions of walls, shafts, rooms and stairs; multiple-storey continuous section with riser/tread counts, SL levels and finish annotations |
+| B pp15–16 | 1:200 | structural plans with slab level pattern, member tags, member list and keyed partial structure sections at distinct junctions |
+| D pp3–4 | A3 1:200 | column, beam/girder and wall/slab schedules, slab level legend, member marks, openings, sections keyed to plans |
+
+Vector stroke observations: A p20 commonly uses about 0.042/0.085/0.254 mm; A p21 additionally 0.339 mm; C p14 approximately 0.042/0.085/0.254/0.339 mm; C p15 approximately 0.042/0.085/0.296 mm. These are extracted PDF stroke widths, not a universal rule or quality target; some hairlines are too faint in print. Body text modes include roughly 2.05–3.95 mm depending on page. Aim for readable physical paper size rather than count of lines/callouts. Reference title blocks sometimes contain inconsistent generic scale text, so copy neither their errors nor their building-specific specs.
+
+External professional reference sources examined as public web text/technical drawing descriptions (PDF screenshot requests failed; do not claim independent visual inspection of external pages):
+- YKK AP standard sill detail, YCW 750 SSG, https://www.ykkap.com/commercial/productguide/details/ycw750ssg/print/ycw750ssg_7-5_sd1.pdf : actual component-level sill representation distinguishes glass, frame, fastener, anchorage and shims. Use as a checklist, not a selected product or transferable dimensions.
+- KONE planning guide, https://www.kone.co.uk/Images/planning-guide-kone-escalators-and-autowalks_tcm45-19920.pdf : pp.69–77, sections 6.5, 7.4 and figure 7.4; landing clearance, guarding, rise, opening width, pit/pocket depth/length and support interfaces are separate coordination inputs. Product-specific dimensions and loads require a selected model and actual arrangement drawing.
+- Berkeley Lab architectural standard details index, https://pim.lbl.gov/resources/cddr/volume-3-construction-details/part-3-architectural-details/ : A103, A107, A112, A115, A155/A155-1 and A301–306 illustrate organization by actual interface (stair section, guardrail, slab connection, nosing, bridge guardrail, facade/penetration). Index reviewed only; linked individual drawings not verified.
+
+## 2. Required depth tiers (not BIM LOD certification)
+Tier 1 — coordinated architectural detail: 1:50–1:100, plan/elevation/section as applicable, referenced floor/grid/level, dimensions of relevant actual geometry, materials and element roles where established, readable relationship across two or more floors.
+Tier 2 — interface detail: 1:20 or 1:25, selected junction showing each identifiable element and its physical relationship, gap, support location/plane, finish/edge, clearance and continuity requirements. Use only enough drawings to explain distinct interfaces.
+Tier 3 — component detail: 1:5 or 1:10 ONLY when a coherent developed assembly and verified/proposed source exists; do not draw decorative bolts, anchors, rebar, gaskets or layers with arbitrary thicknesses to imitate construction quality.
+
+Evidence classes per element and dimension:
+- G = geometry directly traced/measured from pinned source, with node/entity ID, cut plane/coordinate, source revision, units. Model thickness is not a certified structural section size.
+- P = explicitly preliminary design proposal; document technical precedent, compatible assembly concept, design rationale, alternatives, geometric fit and unresolved checks. Use different line/label style, not fake verified source. Do not apply to protected building without approval.
+- U = unknown/unresolved; show actual interface envelope/required clearance or note outside the critical drawing region, with a specific missing input. U is not zero and is not a license to fill space with invented details.
+Goal: reduce U by retrieving existing evidence or developing coherent proposed design, not by hiding uncertainty. Material systems, structural scheme, support/anchorage, fire/waterproofing and equipment selection affect performance and require user/qualified review before treating as final.
+
+## 3. Pilot — A-516 typical facade and garden-transition detail (first production gate)
+Use original model at pinned source. Identify actual representative 6F facade bay and the transition around 6F garden / 7F OPEN level using the floor and facade geometry; if these are not in the same bay, choose two distinct locations and key them separately. Do not invent a terrace edge or force a chosen cross section to intersect it. Current sheets A-205 (6F), A-206 (7F), A-207 (8F), A-301/A-302, A-401..404 and roof A-215 are coordination references. Reported levels 6F +26.000, 7F +31.001, 8F +36.000 are starting checks only. Confirm actual facade node IDs, glass/solid/fin classification and geometric floor levels from source. Reconcile global and local axes.
+
+A2 landscape, project reference-derived frame. Suggested usable drawing area about 519 x 395 mm; remeasure actual template. Use true 1:50 for a verified 8.4–9 m representative bay and 6F–8F vertical extent where it fits (9 m = 180 mm; 10 m = 200 mm); otherwise choose 1:70, never scale image to fit while retaining 1:50. Aim for approximately 190 mm left column, 115–125 mm center, 170–180 mm right, with 8–10 mm gutters; adjust to actual physical bounds and labels.
+- P1: enlarged facade elevation, two storeys minimum, modular line dimensions, fins/glass/spandrel/opaque and opening transitions; grid and level markers.
+- P2: corresponding enlarged horizontal plan at selected level, actual column/edge/glazing/fin geometry, external/internal orientation, projection and offsets; align with P1 and cut callout.
+- P3: coordinated wall section from actual cut, floor/slab edge and actual facade objects, internal/external spaces, reference plane, material code only when supported, show roof/garden transition if genuinely intersected.
+- D1: 1:20 typical slab-to-facade interface, actual envelope and edge; locate proposed frame attachment zone, thermal/fire/air-water control continuity ONLY if backed by coherent candidate design; otherwise show separate proposal diagram and specific unresolved requirements.
+- D2: 1:20 garden/open-floor edge or alternate distinct facade interface, including actual floor edge, guardrail/parapet geometry if modeled, drainage/waterproofing transition requirements, not invented approved drainage.
+- Key plan at 1:500 or NTS clearly stated; mark actual cut and view direction; element/material index keyed to views; source and P/U legend.
+Do not insert other students' drawings or manufacturer CAD as project drawings. Before producing Tier 3, develop and compare appropriate preliminary facade system candidates (e.g., independent glazed envelope plus external fin support vs integrated framing, only if compatible with existing envelope). Retrieve existing material schedule/model properties before assuming either. Show which inputs are needed for actual anchorage, weathering and thermal/fire continuity. No assertion of performance.
+
+### Pilot acceptance
+A single actual A2 vector PDF and corresponding SVG/DXF or source geometry export, full 180–240 DPI JPEG and 3 enlarged crops. Not merely a report or a template sketch. Every view must identify same physical location/axis and connect to parent sheet. Every geometric dimension traced to source or marked P; each claimed exact scale tested by geometric dimension vs paper length. Render 100% print size and inspect detail crop; no clipped leaders, unintended overlaps, invisible required geometry or stale title block. Compare against reference A p20 and C p14 on information conveyed: modular elevation, plan, multi-level section, relevant layers, interface and dimensions. If material/assembly information still cannot be resolved, present actual G sheet plus separate proposed assembly alternative(s) for user decision; do not mark detail complete. Stop broad production until pilot reviewed. Do not wait for minor formatting decisions.
+
+## 4. Subsequent detailed sheet matrix
+| Drawing | Parent / evidence | Primary views and recommended scales | Required interface or decision |
+|---|---|---|---|
+| A-501 core D | A-103/A-201; R10-A A-501; R9 A-D | distinct floor-height plans 1:50; continuous actual stair/landing section 1:50 or 1:75; 1:20 landing/door/guard interface | flight rise/run/count, clear width and landing depth, headroom envelope, opening and door swing; distinguish solid/cut/projected; explicitly show unresolved delta 176.07 mm (~176.1); no final stair approval |
+| A-502–504 cores A–C | GLB envelopes, approved 1F and available PR30 geometry | per-type 1:50 plan/section when actual interiors exist; otherwise separate core-layout study candidate | do not copy D layout; retrieve real stairs/shafts/doors; if missing, compare proposed layouts for user before integrating |
+| A-511 T1 spiral ramp | A-103/A-201, A-301, GLB T1 | plans of actual entry/exit levels, radial cut and continuous developed circulation section 1:50, landing edge 1:20 | measured centreline, radii, sweep, elevation, slope along route, passage/headroom, slab/guard interface; no accessibility compliance claim |
+| A-512 T2 light tube | A-201/A-202 and related floors, A-301; GLB T2 | horizontal radial cut and multi-floor section 1:50/1:70, slab penetration detail 1:20 | shaft vs habitable space, actual diameter, void edges, glazed/opaque distinction, daylight envelope, floor separation, protective edge; no fictional stair |
+| A-513 T3/T4 viewing lift tubes | plans, actual GLB and elevations | floor connection plans 1:50, longitudinal section 1:100, landing/shaft interface 1:20 | shaft, real cab/landing if modeled, door location/clearances, pit/top/headroom requirements; equipment-specific design unresolved |
+| A-514 capsules | A-201/A-206, A-302 D1, GLB capW/capE | lower/upper connection plan, multi-level section 1:50, capsule-to-slab edge 1:20 | actual platform levels, shell and opening geometry, connection/clearance, circulation path; mark load-bearing attachment unknown |
+| A-515 escalator openings | 8F–9F A-207/A-208, R9 D-2F/D-7F & C-8F | upper/lower plan, continuous longitudinal section 1:50, transverse opening and upper/lower landing 1:20 | measured rise, run/angle, actual void opening, floor level, equipment envelope, headroom, landing circulation, support/pit/guarding requirements; model choice not authorized |
+| A-521/522 & A-531–533 | R9 landing and railing research | recompose useful views at 1:20–1:50, key to actual plan; distinct junction enlarged | compare to current geometry, clear distinction candidate vs approved; merge duplicate views only if justified |
+| E2 bridge / S-401 | A-201/A-301/A-501, R10-A S-401/R9 | plan 1:100, full longitudinal section 1:50 or 1:75 as fit, transverse 1:20, two end interfaces 1:20/1:10 if supported | 17 m length and 2.4 m width reported geometry/candidate; 250 mm example deck is not verified capacity; support/anchorage/load path and member scheme require engineering review; no approved connection |
+| A-517/519 roof setback/sunken stair | A-215/A-100, GLB | actual terrain and roof sections 1:50; layer transition 1:20 if developed | roof waterproofing/drainage, wall retaining and finishes not sourced; prepare design options, do not certify |
+Do not add freight lift, foundation, ceiling/finish schedules unless actual source or separate approved design exists. Prioritize thesis-specific circulation details over generic catalog pages.
+
+## 5. Drawing language
+Suggested print weights, to test on actual A2: cut edges ~0.35 mm; principal visible ~0.18–0.25; secondary projected ~0.09–0.13; dimension/leader ~0.13; hatches/background ~0.08–0.10. Use true physical lineweights, not pixel effects. Consistent annotation 2.5–3.0 mm nominal, drawing labels 3.5–4.0 mm, verify Korean glyphs and reading size. Do not hide crucial ramp/escalator outlines in pale gray. Material hatches used only for identified material or explicitly proposed layer, not arbitrary hatch aesthetics. Dimension chains: overall/grid, actual opening/module, local component/clearance only as relevant. Every reference callout resolves. Provide scale bar per view if mixed scales. Use aligned common datum and explicit FL/SL definitions, CH only verified. No fake dimension or misleading repeated identical elevations.
+
+## 6. Execution sequence
+1. Source inventory for A-516 only: inspect GLB mesh/object metadata, original CAD/SVG/JSON and prior R10-D changes if any; identify verified geometry and missing actual assembly. Use signatures/paths first, no whole source dumps. Preserve baseline.
+2. Produce pilot sheet A-516 and, where needed, a clearly marked assembly-option inset/companion with reasons. Execute actual drawing creation; do not return just plan or another QA page.
+3. Perform exact view/dimension/callout checks, full render and crops. Submit only pilot and short findings; await independent visual review and user choice for consequential material/structural system. Routine drafting changes autonomous.
+4. Once pilot standard accepted, apply across A-501, A-511, A-514/515, then A-512/513 and bridge/roof/other supported details; compare each to relevant benchmark; preserve approved geometry. Reassemble books after revisions.
+5. Publish project-owned files only on separate revision branch with commit, hashes, source register and preview paths. No main merge or raw third-party PDF. Do not confuse approved public upload with approval of structural design.
+6. Final output: actual vector details, coordinated drawing set, measured print scale, source/evidence mapping, outstanding decisions. Report blockers and estimated/measured token use; do not claim construction or submission approval.
+
+Important gate: R10-C original 99 pages remain unchanged. A-516 is chosen as first pilot because the reference books give directly comparable facade plan/elevation/section detail. The production spec is complete; actual pilot geometry extraction/design and PDF creation have not yet been executed in ChatGPT.
