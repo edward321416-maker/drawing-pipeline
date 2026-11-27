@@ -1,0 +1,28 @@
+# A-516 — Reference-led production handoff
+User decision 2026-11-27 KST: ALT A approved as basic detail-design direction: unitized curtain wall + independent external fin support; preserve existing exterior. Localized stick-built transition may be studied where geometry requires it. No approval of particular product, structural anchor sizes, thermal/fire performance or changed visible geometry.
+
+## Read this with the actual visual references
+Read at pinned ac3fa5bb5f805c84d2658888ca6a0f85c45c9fa2:
+- review/wp0_r10_d/detail_design/DETAIL_DESIGN_PRODUCTION_SPEC.md
+- review/wp0_r10_d/detail_design/SUBMISSION_BOOK_EDITORIAL_GATE.md
+- review/wp0_r10_d/detail_design/D01_FACADE_SYSTEM_DECISION.md
+The local executor has both 2023 academic books and both Jangsan books (previous REF1 execution). Do not rely on a prose description alone. Locate and render the actual pages locally, using original PDF bytes. Reference A: 21-page architectural book, p20 exterior-wall plan/elevation/section. Reference C: 15-page Jangsan architectural book, p14 exterior-wall plan/elevation/section. Use original PDF page indices 19 and 13 (0-based). The two C copies differ on p2 only; p14 matches recorded fingerprints. Inspect full page and 3 crops each: facade modules, slab/wall section, component labels and dimension chains. Render at 180 dpi plus readable crops at 300 dpi. Do not upload third-party originals or rendered pages to public GitHub. Use them locally as design benchmarks.
+
+Compare against actual project source at e4e23cad04d6e1f4bd0f75cfa1c440454292da37:
+- docs/t14i_v4/details/D-406.png (existing weak detail; not target)
+- review/wp0_r10_c/previews/ARCH/ARCH_p12_A-205.jpg, ARCH_p13_A-206.jpg, ARCH_p26_A-402.jpg (floor/site/elevation context)
+- data/t14s/source_slices/floor_5F_slice.json through floor_8F_slice.json; inspect actual local GLB and available CAD.
+- 5F/8F have separate glass/mullion/louver mesh classes; 6F/7F slice planes contain main glass/mullion plus valley glazing/mullions, no louver intersects these cuts. Do not add louvers to the garden transition.
+- 6F valley glass centered y~9.0; model outer thickness ~60 mm; valley mullions .004–.013 have roughly 1.8 m pitch and 80x300 mm outer envelopes. These are model envelopes, not real engineered products. 5F full slab projection bounds [-9.0006,-18.0018,45.0007,35.9995]; 6F approximately same; 7F projection bbox [-8.9996,4.9979,45.0006,36.0005]. Do not use bounding boxes as actual cut geometry. Floor levels 5F 21.0004, 6F 26.0004, 7F 31.001, 8F 36.0004 m. Verify actual local source before dimensions.
+
+## Translate the visual references into requirements
+1. A p20 and C p14: reproduce the QUALITY OF INFORMATION, not the buildings: aligned enlarged plan and elevation, continuous wall section, identifiable material layers, actual dimension chains, floor datums, keyed interface notes. Use existing architecture only.
+2. The A-516 pilot must show two distinctly keyed locations: ordinary fin/glazing bay and garden transition, unless local model proves both can be represented by one coherent cut. No fabricated continuous section.
+3. ALT A: unitized insulated glazing frame, independent engineered fin support, metal fin appearance consistent with approved design. Develop a coherent preliminary attachment arrangement using actual available geometry; do not invent approved anchor capacities or structure. Indicate movement, weather/thermal/air continuity and fire-containment concept without claiming rated assemblies; garden waterproofing/drainage as applicable. Clearly distinguish proposed components from model-traced ones. Use compact conventional design-status note, no AI/QA paragraph blocks in submission sheet.
+4. Inspect source-supported assembly options and actual manufacturer technical detail references already listed in D01/spec. Product selection and structural dimensions are not approved. Do not use external CAD as if it were this building.
+5. Draw real vector geometry, not a visual reference collage or placeholder rectangles. A2 landscape, 1:50 or 1:70 coordinated plan/elevation/section, 1:20 local interfaces, actual fit verified. Fine detail at 1:5/10 only when technically supported. Set physical paper-space lineweights and readable Korean labels. No whole-sheet downsizing with stale scale text.
+6. Local compare: show A p20/C p14 and pilot side-by-side, assess information, legibility, coordination and interface specificity, not visual style alone. Inspect full-sheet at 180–240 dpi and detail crops at 300 dpi; measure each scale using actual geometry; ensure all callouts resolve and important proposed information is clearly labeled. Iterate at least once against specific defects if present.
+
+## Output gate
+Produce one actual A-516 pilot PDF + vector source (SVG/DXF or equivalent), full JPEG, enlarged crops, and separate short source/decision register. Publish project-owned pilot files to separate review branch (public authorized), no main merge, no third-party reference images. Report pinned commit and paths. Do not regenerate all books or details yet. Stop for independent visual review and user approval. The final submission will omit internal QA/report pages, but preserve them in separate records.
+This handoff records approval and execution requirements only. ChatGPT has not produced the actual pilot PDF, accessed local GLB bytes, or verified physical assembly fit.
