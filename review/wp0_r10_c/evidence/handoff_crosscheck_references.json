@@ -1,0 +1,568 @@
+{
+ "A": {
+  "local_file": "재열지원_건축 도면집 제출자료.pdf",
+  "local_sha256": "2dda59ba40a22300cb8240709d2847b84743cb15223e44b011b041c65df5c5a1",
+  "handoff_sha256": "2dda59ba40a22300cb8240709d2847b84743cb15223e44b011b041c65df5c5a1",
+  "sha256_matches_handoff": true,
+  "pages_local": 21,
+  "pages_handoff": 21,
+  "measured_at_page": 6,
+  "measured": {
+   "paper": [
+    594.1,
+    420.2
+   ],
+   "outer": [
+    12.83,
+    9.91,
+    581.15,
+    410.46
+   ],
+   "inner": [
+    14.27,
+    11.3,
+    579.71,
+    409.07
+   ],
+   "divider": [
+    533.65,
+    534.37
+   ],
+   "band": 45.34
+  },
+  "handoff": {
+   "outer": [
+    12.8,
+    9.9,
+    581.2,
+    410.5
+   ],
+   "inner": [
+    14.3,
+    11.3,
+    579.7,
+    409.1
+   ],
+   "divider": [
+    533.7,
+    534.4
+   ],
+   "title_band": 45.3
+  },
+  "difference_measured_minus_handoff_mm": {
+   "outer": [
+    0.03,
+    0.01,
+    -0.05,
+    -0.04
+   ],
+   "inner": [
+    -0.03,
+    0.0,
+    0.01,
+    -0.03
+   ],
+   "divider": [
+    -0.05,
+    -0.03
+   ],
+   "band": 0.04
+  },
+  "max_abs_difference_mm": 0.05,
+  "within_0p15_mm": true,
+  "portrait_pages_local": [
+   17,
+   18,
+   19
+  ]
+ },
+ "B": {
+  "local_file": "재열지원_구조 도면집 제출자료.pdf",
+  "local_sha256": "edf6b736ca9a60743c025690913f7364cb00a2e5a9eb32f9cefbe641a59deb15",
+  "handoff_sha256": "edf6b736ca9a60743c025690913f7364cb00a2e5a9eb32f9cefbe641a59deb15",
+  "sha256_matches_handoff": true,
+  "pages_local": 18,
+  "pages_handoff": 18,
+  "measured_at_page": 15,
+  "measured": {
+   "paper": [
+    420.2,
+    297.0
+   ],
+   "outer": [
+    9.06,
+    6.97,
+    410.89,
+    290.18
+   ],
+   "inner": [
+    10.03,
+    7.94,
+    409.91,
+    289.21
+   ],
+   "divider": [
+    377.32,
+    377.82
+   ],
+   "band": 32.09
+  },
+  "handoff": {
+   "outer": [
+    9.1,
+    7.0,
+    410.9,
+    290.2
+   ],
+   "inner": [
+    10.0,
+    7.9,
+    409.9,
+    289.2
+   ],
+   "divider": [
+    377.3,
+    377.8
+   ],
+   "title_band": 32.1
+  },
+  "difference_measured_minus_handoff_mm": {
+   "outer": [
+    -0.04,
+    -0.03,
+    -0.01,
+    -0.02
+   ],
+   "inner": [
+    0.03,
+    0.04,
+    0.01,
+    0.01
+   ],
+   "divider": [
+    0.02,
+    0.02
+   ],
+   "band": -0.01
+  },
+  "max_abs_difference_mm": 0.04,
+  "within_0p15_mm": true,
+  "portrait_pages_local": [
+   17
+  ]
+ },
+ "C": {
+  "local_file": "Jangsan_Architecture_A2.pdf",
+  "local_sha256": "28c4e37b4fc02de12ae9c24646bce88e567b26273722cdd6bd4577e922b57a9f",
+  "handoff_sha256": "574607af0b730ce11f649eda54c7d736c50f10c21fd4f3854e652a900e80bb1e",
+  "sha256_matches_handoff": false,
+  "pages_local": 15,
+  "pages_handoff": 15,
+  "measured_at_page": 6,
+  "measured": {
+   "paper": [
+    594.1,
+    420.2
+   ],
+   "outer": [
+    20.45,
+    13.34,
+    573.79,
+    406.87
+   ],
+   "inner": [
+    22.06,
+    14.94,
+    572.13,
+    405.21
+   ],
+   "divider": [
+    531.88,
+    532.68
+   ],
+   "band": 39.45
+  },
+  "handoff": {
+   "outer": [
+    20.4,
+    13.3,
+    573.8,
+    406.9
+   ],
+   "inner": [
+    22.1,
+    14.9,
+    572.1,
+    405.2
+   ],
+   "divider": [
+    531.9,
+    532.7
+   ],
+   "title_band": 39.4
+  },
+  "difference_measured_minus_handoff_mm": {
+   "outer": [
+    0.05,
+    0.04,
+    -0.01,
+    -0.03
+   ],
+   "inner": [
+    -0.04,
+    0.04,
+    0.03,
+    0.01
+   ],
+   "divider": [
+    -0.02,
+    -0.02
+   ],
+   "band": 0.05
+  },
+  "max_abs_difference_mm": 0.05,
+  "within_0p15_mm": true,
+  "portrait_pages_local": [
+   11,
+   12,
+   13
+  ],
+  "fingerprint_of_local_copy": {
+   "file_bytes": 2858096,
+   "sha256": "28c4e37b4fc02de12ae9c24646bce88e567b26273722cdd6bd4577e922b57a9f",
+   "pages": 15,
+   "metadata_kept": {
+    "format": "PDF 1.7",
+    "creator": "",
+    "producer": "iLovePDF",
+    "creationDate": "",
+    "modDate": "D:20240617062239Z",
+    "encryption": null
+   },
+   "metadata_fields_present_but_masked": [],
+   "xref_objects": 584,
+   "page_fingerprints": [
+    {
+     "page": 1,
+     "size_mm": [
+      594.1,
+      420.2
+     ],
+     "rotation": 0,
+     "text_sha256": "adb300fc8cb2a86aa60118ee",
+     "render36dpi_sha256": "5b80df9994fba7b6b910c958",
+     "drawings": 108,
+     "images": 1,
+     "chars": 360
+    },
+    {
+     "page": 2,
+     "size_mm": [
+      594.1,
+      420.2
+     ],
+     "rotation": 0,
+     "text_sha256": "7d78b391270a89599a98cd61",
+     "render36dpi_sha256": "776837b3aeee4efb65eafb42",
+     "drawings": 243,
+     "images": 1,
+     "chars": 1716
+    },
+    {
+     "page": 3,
+     "size_mm": [
+      594.1,
+      420.2
+     ],
+     "rotation": 0,
+     "text_sha256": "e80fac820c77e29f2ab57e4f",
+     "render36dpi_sha256": "dc65d6ab00bdf3c9f13331b9",
+     "drawings": 19891,
+     "images": 0,
+     "chars": 619
+    },
+    {
+     "page": 4,
+     "size_mm": [
+      594.1,
+      420.2
+     ],
+     "rotation": 0,
+     "text_sha256": "50ee6d1a827968b4370a008d",
+     "render36dpi_sha256": "66834aafd313c76f10666c4a",
+     "drawings": 3343,
+     "images": 0,
+     "chars": 750
+    },
+    {
+     "page": 5,
+     "size_mm": [
+      594.1,
+      420.2
+     ],
+     "rotation": 0,
+     "text_sha256": "28e6d8b35c6d97d4e01cb5fd",
+     "render36dpi_sha256": "4bbd89943b84180cf0227e24",
+     "drawings": 3660,
+     "images": 0,
+     "chars": 951
+    },
+    {
+     "page": 6,
+     "size_mm": [
+      594.1,
+      420.2
+     ],
+     "rotation": 0,
+     "text_sha256": "ce056317f62baa9bddd37491",
+     "render36dpi_sha256": "9e5e77f9d4414344efbb5023",
+     "drawings": 13126,
+     "images": 0,
+     "chars": 1026
+    },
+    {
+     "page": 7,
+     "size_mm": [
+      594.1,
+      420.2
+     ],
+     "rotation": 0,
+     "text_sha256": "2d647ddf9cef6d7ea6880525",
+     "render36dpi_sha256": "320a51915a618c24917e08b6",
+     "drawings": 2959,
+     "images": 0,
+     "chars": 812
+    },
+    {
+     "page": 8,
+     "size_mm": [
+      594.1,
+      420.2
+     ],
+     "rotation": 0,
+     "text_sha256": "bcb850448470d51183632756",
+     "render36dpi_sha256": "26a78980633e7b543c14f6de",
+     "drawings": 3177,
+     "images": 0,
+     "chars": 822
+    },
+    {
+     "page": 9,
+     "size_mm": [
+      594.1,
+      420.2
+     ],
+     "rotation": 0,
+     "text_sha256": "d6b9d8c17e7e0405be02369d",
+     "render36dpi_sha256": "4fcd547fde7f54928bfdecd1",
+     "drawings": 3035,
+     "images": 0,
+     "chars": 923
+    },
+    {
+     "page": 10,
+     "size_mm": [
+      594.1,
+      420.2
+     ],
+     "rotation": 0,
+     "text_sha256": "66b58953e8cf324aa68eefad",
+     "render36dpi_sha256": "6fc3a9ba521a3d02952ac41f",
+     "drawings": 7315,
+     "images": 0,
+     "chars": 660
+    },
+    {
+     "page": 11,
+     "size_mm": [
+      420.2,
+      594.1
+     ],
+     "rotation": 0,
+     "text_sha256": "910a2432b13bd11173502217",
+     "render36dpi_sha256": "e883fee2b1cbee07574719b8",
+     "drawings": 8844,
+     "images": 0,
+     "chars": 1605
+    },
+    {
+     "page": 12,
+     "size_mm": [
+      420.2,
+      594.1
+     ],
+     "rotation": 0,
+     "text_sha256": "e76b51394e52387217986bf0",
+     "render36dpi_sha256": "602de70a56ad8a07e4c48387",
+     "drawings": 8781,
+     "images": 0,
+     "chars": 1321
+    },
+    {
+     "page": 13,
+     "size_mm": [
+      420.2,
+      594.1
+     ],
+     "rotation": 0,
+     "text_sha256": "d58a79cc19e43ba08ce3cf8f",
+     "render36dpi_sha256": "57d38f81f2f533f4ee52814a",
+     "drawings": 17117,
+     "images": 0,
+     "chars": 1828
+    },
+    {
+     "page": 14,
+     "size_mm": [
+      594.1,
+      420.2
+     ],
+     "rotation": 0,
+     "text_sha256": "87c118cb8e544a648cf4c60b",
+     "render36dpi_sha256": "fb6f19a3bf0b9f4a16b90b97",
+     "drawings": 16255,
+     "images": 0,
+     "chars": 1777
+    },
+    {
+     "page": 15,
+     "size_mm": [
+      594.1,
+      420.2
+     ],
+     "rotation": 0,
+     "text_sha256": "d57e3e30d5ca1f8e220ce985",
+     "render36dpi_sha256": "43cfd873558510bdfedbaeeb",
+     "drawings": 9884,
+     "images": 0,
+     "chars": 2911
+    }
+   ]
+  },
+  "note": "Local copy (extracted from the zip) has a different SHA-256 from the copy the independent reviewer opened. Page count (15), page sizes, portrait pages (11-13) and the measured frame all agree with the handoff, so the difference is in file bytes (re-save/metadata) or invisible content. Compute the same per-page text and 36-dpi render hashes on the other copy and compare page_fingerprints to localise any page-content difference."
+ },
+ "D": {
+  "local_file": "Jangsan_Structure_A3.pdf",
+  "local_sha256": "c6d483919bb76a2661cb01a1ef9fb0f693b20d0836e445017ad593dbdabb1e58",
+  "handoff_sha256": "c6d483919bb76a2661cb01a1ef9fb0f693b20d0836e445017ad593dbdabb1e58",
+  "sha256_matches_handoff": true,
+  "pages_local": 6,
+  "pages_handoff": 6,
+  "measured_at_page": 3,
+  "measured": {
+   "paper": [
+    420.2,
+    297.0
+   ],
+   "outer": [
+    14.44,
+    9.34,
+    405.68,
+    287.64
+   ],
+   "inner": [
+    15.58,
+    10.48,
+    404.54,
+    286.5
+   ],
+   "divider": [
+    376.05,
+    376.64
+   ],
+   "band": 27.9
+  },
+  "handoff": {
+   "outer": [
+    14.4,
+    9.3,
+    405.7,
+    287.6
+   ],
+   "inner": [
+    15.6,
+    10.5,
+    404.5,
+    286.5
+   ],
+   "divider": [
+    376.0,
+    376.6
+   ],
+   "title_band": 27.9
+  },
+  "difference_measured_minus_handoff_mm": {
+   "outer": [
+    0.04,
+    0.04,
+    -0.02,
+    0.04
+   ],
+   "inner": [
+    -0.02,
+    -0.02,
+    0.04,
+    0.0
+   ],
+   "divider": [
+    0.05,
+    0.04
+   ],
+   "band": 0.0
+  },
+  "max_abs_difference_mm": 0.05,
+  "within_0p15_mm": true,
+  "portrait_pages_local": [
+   5
+  ]
+ },
+ "r10c_template": {
+  "A2": {
+   "paper": [
+    594.0,
+    420.0
+   ],
+   "outer": [
+    12.83,
+    9.91,
+    581.07,
+    410.3
+   ],
+   "inner": [
+    14.27,
+    11.35,
+    579.63,
+    408.86
+   ],
+   "divider": [
+    533.44,
+    534.41
+   ],
+   "title_band_inner": 45.22
+  },
+  "A3": {
+   "paper": [
+    420.0,
+    297.0
+   ],
+   "outer": [
+    9.06,
+    6.97,
+    410.7,
+    290.18
+   ],
+   "inner": [
+    10.03,
+    7.94,
+    409.73,
+    289.21
+   ],
+   "divider": [
+    377.07,
+    377.76
+   ],
+   "title_band_inner": 31.97
+  }
+ },
+ "block_width_definitions": "REF1 APX-06 / reference_template_spec.json report the title block width from the OUTER frame edge to the divider (A 46.8, B 33.1, C 41.1, D 29.0 mm). The handoff reports it from the INNER frame edge (A 45.3, B 32.1, C 39.4, D 27.9 mm). The two differ by the frame band (about 1.4-1.7 mm); both are measurements of the same geometry."
+}

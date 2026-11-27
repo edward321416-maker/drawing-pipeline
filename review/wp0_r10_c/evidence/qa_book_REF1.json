@@ -1,0 +1,2815 @@
+{
+ "summary": {
+  "pages": 99,
+  "sizes": {
+   "594x420": 48,
+   "420x594": 4,
+   "420x297": 47
+  },
+  "blank": 0,
+  "with_replacement_char": 0,
+  "pages_with_overlaps": 2,
+  "pages_with_unresolved_refs": 0,
+  "pages_with_raster": 5,
+  "plan_scale_measured": 16,
+  "issue_count": 2
+ },
+ "issues": [
+  {
+   "page": 95,
+   "sheet": "N-2F",
+   "issue": "6 word-box overlaps"
+  },
+  {
+   "page": 96,
+   "sheet": "N-7F",
+   "issue": "6 word-box overlaps"
+  }
+ ],
+ "pages": [
+  {
+   "page": 1,
+   "sheet": "FRONT-01",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.5585,
+   "blank": false,
+   "chars": 508,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 1,
+   "vector_paths": 73,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "n/a",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 2,
+   "sheet": "FRONT-02",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0849,
+   "blank": false,
+   "chars": 3365,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 162,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "n/a",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 3,
+   "sheet": "FRONT-IDX-01",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0433,
+   "blank": false,
+   "chars": 1441,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 124,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-100",
+    "A-101",
+    "A-102",
+    "A-103",
+    "A-201",
+    "A-202",
+    "A-203",
+    "A-204",
+    "A-205",
+    "A-206",
+    "A-207",
+    "A-208",
+    "A-209",
+    "A-210",
+    "A-211",
+    "A-212",
+    "A-213",
+    "A-214",
+    "A-215",
+    "A-301",
+    "A-302",
+    "A-401",
+    "A-402",
+    "A-403",
+    "A-404",
+    "A-501",
+    "A-521",
+    "A-522",
+    "A-531",
+    "A-532",
+    "A-533"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "n/a",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 4,
+   "sheet": "A-100",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0372,
+   "blank": false,
+   "chars": 1245,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 2009,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-100"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:400",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 5,
+   "sheet": "A-101",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0535,
+   "blank": false,
+   "chars": 2400,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 1082,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-101",
+    "A-301",
+    "A-302"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 6,
+   "sheet": "A-102",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0555,
+   "blank": false,
+   "chars": 2224,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 1088,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-102",
+    "A-301",
+    "A-302"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 7,
+   "sheet": "A-103",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0516,
+   "blank": false,
+   "chars": 1648,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 654,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-103"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 8,
+   "sheet": "A-201",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0562,
+   "blank": false,
+   "chars": 2101,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 1781,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-201",
+    "A-301",
+    "A-302",
+    "A-501",
+    "S-401"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 9,
+   "sheet": "A-202",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0558,
+   "blank": false,
+   "chars": 1875,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 1215,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-202",
+    "A-301",
+    "A-302"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 10,
+   "sheet": "A-203",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0557,
+   "blank": false,
+   "chars": 1966,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 1207,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-203",
+    "A-301",
+    "A-302"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 11,
+   "sheet": "A-204",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0539,
+   "blank": false,
+   "chars": 1790,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 1194,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-204",
+    "A-301",
+    "A-302"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 12,
+   "sheet": "A-205",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0505,
+   "blank": false,
+   "chars": 1584,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 1049,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-205",
+    "A-301",
+    "A-302"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 13,
+   "sheet": "A-206",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0479,
+   "blank": false,
+   "chars": 1460,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 1004,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-206",
+    "A-301",
+    "A-302"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 14,
+   "sheet": "A-207",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0521,
+   "blank": false,
+   "chars": 1537,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 1090,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-207",
+    "A-301",
+    "A-302"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 15,
+   "sheet": "A-208",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.052,
+   "blank": false,
+   "chars": 1528,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 1095,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-208",
+    "A-301",
+    "A-302"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 16,
+   "sheet": "A-209",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.055,
+   "blank": false,
+   "chars": 2144,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 1227,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-209",
+    "A-301",
+    "A-302"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 17,
+   "sheet": "A-210",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.05,
+   "blank": false,
+   "chars": 1464,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 960,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-210",
+    "A-301",
+    "A-302"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 30
+   },
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 18,
+   "sheet": "A-211",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.049,
+   "blank": false,
+   "chars": 1366,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 933,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-211",
+    "A-301",
+    "A-302"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 30
+   },
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 19,
+   "sheet": "A-212",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0504,
+   "blank": false,
+   "chars": 1468,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 967,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-212",
+    "A-301",
+    "A-302"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 20,
+   "sheet": "A-213",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0482,
+   "blank": false,
+   "chars": 1314,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 942,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-213",
+    "A-301",
+    "A-302"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 21,
+   "sheet": "A-214",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0454,
+   "blank": false,
+   "chars": 1272,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 926,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-214",
+    "A-301",
+    "A-302"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 15
+   },
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 22,
+   "sheet": "A-215",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0447,
+   "blank": false,
+   "chars": 1373,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 448,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-215"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 23,
+   "sheet": "A-301",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0781,
+   "blank": false,
+   "chars": 1468,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 456,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-301",
+    "A-302",
+    "A-501",
+    "S-401"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:250",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 24,
+   "sheet": "A-302",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0907,
+   "blank": false,
+   "chars": 1450,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 540,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-302",
+    "A-501"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:250 / 1:100",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 25,
+   "sheet": "A-401",
+   "size_mm": [
+    420,
+    594
+   ],
+   "orientation": "portrait",
+   "ink_fraction": 0.0701,
+   "blank": false,
+   "chars": 1122,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 2846,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-100",
+    "A-215",
+    "A-301",
+    "A-302",
+    "A-401"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 26,
+   "sheet": "A-402",
+   "size_mm": [
+    420,
+    594
+   ],
+   "orientation": "portrait",
+   "ink_fraction": 0.0661,
+   "blank": false,
+   "chars": 1123,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 2866,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-100",
+    "A-215",
+    "A-301",
+    "A-302",
+    "A-402"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 27,
+   "sheet": "A-403",
+   "size_mm": [
+    420,
+    594
+   ],
+   "orientation": "portrait",
+   "ink_fraction": 0.0656,
+   "blank": false,
+   "chars": 1124,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 2719,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-100",
+    "A-215",
+    "A-301",
+    "A-302",
+    "A-403"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 28,
+   "sheet": "A-404",
+   "size_mm": [
+    420,
+    594
+   ],
+   "orientation": "portrait",
+   "ink_fraction": 0.0688,
+   "blank": false,
+   "chars": 1115,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 2820,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-100",
+    "A-215",
+    "A-301",
+    "A-302",
+    "A-404"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:200",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 29,
+   "sheet": "A-501",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0441,
+   "blank": false,
+   "chars": 1271,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 365,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-501"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:50",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 30,
+   "sheet": "A-521",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0424,
+   "blank": false,
+   "chars": 858,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 138,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "R9 시트별",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 31,
+   "sheet": "A-522",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0455,
+   "blank": false,
+   "chars": 870,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 133,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "R9 시트별",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 32,
+   "sheet": "A-531",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0486,
+   "blank": false,
+   "chars": 965,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 183,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "R9 시트별",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 33,
+   "sheet": "A-532",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0487,
+   "blank": false,
+   "chars": 956,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 183,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "R9 시트별",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 34,
+   "sheet": "A-533",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0485,
+   "blank": false,
+   "chars": 956,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 183,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "R9 시트별",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 35,
+   "sheet": "FRONT-S01",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0376,
+   "blank": false,
+   "chars": 490,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 35,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "n/a",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 36,
+   "sheet": "FRONT-S02",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0838,
+   "blank": false,
+   "chars": 3466,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 129,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "n/a",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 37,
+   "sheet": "FRONT-IDX-01",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0531,
+   "blank": false,
+   "chars": 1730,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 91,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-001",
+    "S-101",
+    "S-102",
+    "S-103",
+    "S-104",
+    "S-105",
+    "S-106",
+    "S-107",
+    "S-108",
+    "S-109",
+    "S-110",
+    "S-111",
+    "S-112",
+    "S-113",
+    "S-114",
+    "S-115",
+    "S-116",
+    "S-117",
+    "S-118",
+    "S-203",
+    "S-204",
+    "S-209",
+    "S-210",
+    "S-211",
+    "S-212",
+    "S-213",
+    "S-214",
+    "S-215",
+    "S-216",
+    "S-217",
+    "S-301"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "n/a",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 38,
+   "sheet": "FRONT-IDX-02",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0414,
+   "blank": false,
+   "chars": 1242,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 60,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-302",
+    "S-303",
+    "S-304",
+    "S-305",
+    "S-401",
+    "S-402",
+    "S-403",
+    "S-404",
+    "S-405",
+    "S-406",
+    "S-407",
+    "S-408"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "n/a",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 39,
+   "sheet": "S-001",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.1116,
+   "blank": false,
+   "chars": 1375,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 411,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-001",
+    "S-113",
+    "S-115"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "NTS (수직 1:500 x cos 28 deg)",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 40,
+   "sheet": "S-101",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0494,
+   "blank": false,
+   "chars": 1949,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 172,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-101"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 41,
+   "sheet": "S-102",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0529,
+   "blank": false,
+   "chars": 1958,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 179,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-102"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 42,
+   "sheet": "S-103",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0555,
+   "blank": false,
+   "chars": 2048,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 181,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-103"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 43,
+   "sheet": "S-104",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0547,
+   "blank": false,
+   "chars": 1962,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 180,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-104"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 44,
+   "sheet": "S-105",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0548,
+   "blank": false,
+   "chars": 1967,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 180,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-105"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 45,
+   "sheet": "S-106",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0548,
+   "blank": false,
+   "chars": 1967,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 180,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-106"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 46,
+   "sheet": "S-107",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0548,
+   "blank": false,
+   "chars": 1967,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 180,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-107"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 47,
+   "sheet": "S-108",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0565,
+   "blank": false,
+   "chars": 1972,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 181,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-108"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 48,
+   "sheet": "S-109",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0542,
+   "blank": false,
+   "chars": 1997,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 180,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-109"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 49,
+   "sheet": "S-110",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0553,
+   "blank": false,
+   "chars": 1969,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 180,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-110"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 50,
+   "sheet": "S-111",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0553,
+   "blank": false,
+   "chars": 1969,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 180,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-111"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 51,
+   "sheet": "S-112",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0554,
+   "blank": false,
+   "chars": 1973,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 180,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-112"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 52,
+   "sheet": "S-113",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0559,
+   "blank": false,
+   "chars": 2134,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 180,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-113"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 53,
+   "sheet": "S-114",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0565,
+   "blank": false,
+   "chars": 2107,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 180,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-114"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 54,
+   "sheet": "S-115",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0557,
+   "blank": false,
+   "chars": 2064,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 180,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-115"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 55,
+   "sheet": "S-116",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0555,
+   "blank": false,
+   "chars": 1973,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 180,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-116"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 56,
+   "sheet": "S-117",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0551,
+   "blank": false,
+   "chars": 2131,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 180,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-117"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 57,
+   "sheet": "S-118",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0501,
+   "blank": false,
+   "chars": 2038,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 176,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-118"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 58,
+   "sheet": "S-203",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.045,
+   "blank": false,
+   "chars": 1487,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 179,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-203"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 59,
+   "sheet": "S-204",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0464,
+   "blank": false,
+   "chars": 1609,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 237,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-204"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 60,
+   "sheet": "S-209",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0447,
+   "blank": false,
+   "chars": 1550,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 266,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-209"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 61,
+   "sheet": "S-210",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0467,
+   "blank": false,
+   "chars": 1576,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 194,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-210"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 62,
+   "sheet": "S-211",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0465,
+   "blank": false,
+   "chars": 1498,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 194,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-211"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 63,
+   "sheet": "S-212",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0467,
+   "blank": false,
+   "chars": 1520,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 194,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-212"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 64,
+   "sheet": "S-213",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0461,
+   "blank": false,
+   "chars": 1502,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 188,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-213"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 65,
+   "sheet": "S-214",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0481,
+   "blank": false,
+   "chars": 1559,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 228,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-214"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 66,
+   "sheet": "S-215",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0465,
+   "blank": false,
+   "chars": 1504,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 194,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-215"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 67,
+   "sheet": "S-216",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0465,
+   "blank": false,
+   "chars": 1504,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 194,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-216"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 68,
+   "sheet": "S-217",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0452,
+   "blank": false,
+   "chars": 1504,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 175,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-217"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 69,
+   "sheet": "S-301",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0989,
+   "blank": false,
+   "chars": 955,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 166,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-301"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:250",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 70,
+   "sheet": "S-302",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0923,
+   "blank": false,
+   "chars": 1019,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 178,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-302"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:250",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 71,
+   "sheet": "S-303",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.1045,
+   "blank": false,
+   "chars": 955,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 157,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-303"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:250",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 72,
+   "sheet": "S-304",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.1011,
+   "blank": false,
+   "chars": 1019,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 169,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-304"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:250",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 73,
+   "sheet": "S-305",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.1419,
+   "blank": false,
+   "chars": 1140,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 343,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "S-301",
+    "S-304",
+    "S-305"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:400",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 74,
+   "sheet": "S-401",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0334,
+   "blank": false,
+   "chars": 1181,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 164,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-201",
+    "A-301",
+    "A-501",
+    "S-401"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "reduced 1:1.414 print of A2 sheet",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 75,
+   "sheet": "S-402",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0353,
+   "blank": false,
+   "chars": 1398,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 240,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "reduced 1:1.414 print of A2 sheet",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 76,
+   "sheet": "S-403",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.033,
+   "blank": false,
+   "chars": 1401,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 230,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "reduced 1:1.414 print of A2 sheet",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 77,
+   "sheet": "S-404",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0366,
+   "blank": false,
+   "chars": 1404,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 258,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "reduced 1:1.414 print of A2 sheet",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 78,
+   "sheet": "S-405",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0379,
+   "blank": false,
+   "chars": 1018,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 99,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "reduced 1:1.414 print of A2 sheet",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 79,
+   "sheet": "S-406",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0608,
+   "blank": false,
+   "chars": 1030,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 137,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "reduced 1:1.414 print of A2 sheet",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 80,
+   "sheet": "S-407",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0608,
+   "blank": false,
+   "chars": 1030,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 137,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "reduced 1:1.414 print of A2 sheet",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 81,
+   "sheet": "S-408",
+   "size_mm": [
+    420,
+    297
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0254,
+   "blank": false,
+   "chars": 1711,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 31,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "reduced 1:1.414 print of A2 sheet",
+   "status": "PARTIAL"
+  },
+  {
+   "page": 82,
+   "sheet": "APX-01",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0493,
+   "blank": false,
+   "chars": 1391,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 3531,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-201",
+    "A-301",
+    "A-302",
+    "A-501",
+    "APX-01",
+    "S-401"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:300",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 83,
+   "sheet": "APX-02",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0585,
+   "blank": false,
+   "chars": 642,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 13989,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "APX-02"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "1:50",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 84,
+   "sheet": "APX-03",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0418,
+   "blank": false,
+   "chars": 949,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 3,
+   "vector_paths": 49,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "APX-03"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "n/a",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 85,
+   "sheet": "APX-04",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0308,
+   "blank": false,
+   "chars": 1941,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 76,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-501",
+    "APX-04"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "n/a",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 86,
+   "sheet": "APX-05a",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0331,
+   "blank": false,
+   "chars": 2125,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 66,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-401",
+    "APX-05a",
+    "S-401"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "n/a",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 87,
+   "sheet": "APX-06",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0786,
+   "blank": false,
+   "chars": 2975,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 47,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-201",
+    "APX-06",
+    "APX-08"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "n/a",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 88,
+   "sheet": "APX-07",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0585,
+   "blank": false,
+   "chars": 1682,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 47,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-100",
+    "APX-07",
+    "S-001"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "n/a",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 89,
+   "sheet": "APX-08",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.068,
+   "blank": false,
+   "chars": 2049,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 65,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [
+    "A-100",
+    "APX-01",
+    "APX-06",
+    "APX-08",
+    "S-413"
+   ],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "n/a",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 90,
+   "sheet": "I-00",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.2089,
+   "blank": false,
+   "chars": 1311,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 1,
+   "vector_paths": 65,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "R9 시트별",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 91,
+   "sheet": "A-C",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.083,
+   "blank": false,
+   "chars": 1061,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 367,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "R9 시트별",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 92,
+   "sheet": "A-D",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.083,
+   "blank": false,
+   "chars": 1061,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 367,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "R9 시트별",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 93,
+   "sheet": "S-413",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0293,
+   "blank": false,
+   "chars": 1587,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 31,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "R9 시트별",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 94,
+   "sheet": "S-413a",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0304,
+   "blank": false,
+   "chars": 1901,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 44,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "R9 시트별",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 95,
+   "sheet": "N-2F",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0463,
+   "blank": false,
+   "chars": 772,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 165,
+   "word_overlaps": 6,
+   "word_overlap_examples": [
+    [
+     "통합",
+     "2F",
+     471.5,
+     370.8
+    ],
+    [
+     "보행",
+     "통합",
+     484.8,
+     370.8
+    ],
+    [
+     "평면도",
+     "보행",
+     498.1,
+     370.8
+    ],
+    [
+     "평면도",
+     "평면",
+     498.1,
+     370.8
+    ]
+   ],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "R9 시트별",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 96,
+   "sheet": "N-7F",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0465,
+   "blank": false,
+   "chars": 791,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 176,
+   "word_overlaps": 6,
+   "word_overlap_examples": [
+    [
+     "통합",
+     "7F",
+     471.5,
+     370.8
+    ],
+    [
+     "보행",
+     "통합",
+     484.8,
+     370.8
+    ],
+    [
+     "평면도",
+     "보행",
+     498.1,
+     370.8
+    ],
+    [
+     "평면도",
+     "평면",
+     498.1,
+     370.8
+    ]
+   ],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "R9 시트별",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 97,
+   "sheet": "P-2F",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.4161,
+   "blank": false,
+   "chars": 752,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 4,
+   "vector_paths": 33,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "R9 시트별",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 98,
+   "sheet": "P-7F",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.4257,
+   "blank": false,
+   "chars": 801,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 5,
+   "vector_paths": 36,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "R9 시트별",
+   "status": "COMPLETE"
+  },
+  {
+   "page": 99,
+   "sheet": "T-2D",
+   "size_mm": [
+    594,
+    420
+   ],
+   "orientation": "landscape",
+   "ink_fraction": 0.0517,
+   "blank": false,
+   "chars": 1023,
+   "hangul": true,
+   "replacement_char": false,
+   "unembedded_fonts": [],
+   "raster_images": 0,
+   "vector_paths": 153,
+   "word_overlaps": 0,
+   "word_overlap_examples": [],
+   "references": [],
+   "unresolved_references": [],
+   "measured_plan_scale": null,
+   "declared_scale": "R9 시트별",
+   "status": "COMPLETE"
+  }
+ ]
+}

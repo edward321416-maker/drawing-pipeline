@@ -1,0 +1,2244 @@
+{
+ "pdf": "<USER_HOME>/Desktop/2학기 논문/도면/WP0_Complete_Drawing_Book_RefIntegrated/WP0_Complete_Drawing_Book.pdf",
+ "summary": {
+  "NOT_APPLICABLE": 19,
+  "VERIFIED": 69,
+  "VERIFIED_LABELS": 1,
+  "NO_BAR_NO_MEASUREMENT": 1,
+  "VERIFIED_REDUCED": 7,
+  "VERIFIED_COLUMNS": 1,
+  "VERIFIED_PANELS": 1
+ },
+ "pages": [
+  {
+   "page": 1,
+   "sheet": "FRONT-01",
+   "declared_scale": "n/a",
+   "reduced_print": false,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 2,
+   "sheet": "FRONT-02",
+   "declared_scale": "n/a",
+   "reduced_print": false,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 3,
+   "sheet": "FRONT-IDX-01",
+   "declared_scale": "n/a",
+   "reduced_print": false,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 4,
+   "sheet": "A-100",
+   "declared_scale": "1:400",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 399.5,
+     "x0_mm": 22.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      20.0,
+      40.0
+     ],
+     "mm_per_m": 2.5,
+     "denominator": 400.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [400.0]"
+  },
+  {
+   "page": 5,
+   "sheet": "A-101",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 378.0,
+     "x0_mm": 57.0,
+     "length_mm": 50.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 6,
+   "sheet": "A-102",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 378.0,
+     "x0_mm": 57.0,
+     "length_mm": 50.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 7,
+   "sheet": "A-103",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED_LABELS",
+   "bars": [],
+   "column_scale": {
+    "denominator": 200.0
+   },
+   "detail": "grid labels 1-7 spaced 45.00 mm per 9.0 m bay -> 1:200.0 (declared [200.0])"
+  },
+  {
+   "page": 8,
+   "sheet": "A-201",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 378.0,
+     "x0_mm": 57.0,
+     "length_mm": 50.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 9,
+   "sheet": "A-202",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 378.0,
+     "x0_mm": 57.0,
+     "length_mm": 50.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 10,
+   "sheet": "A-203",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 378.0,
+     "x0_mm": 57.0,
+     "length_mm": 50.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 11,
+   "sheet": "A-204",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 378.0,
+     "x0_mm": 57.0,
+     "length_mm": 50.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 12,
+   "sheet": "A-205",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 378.0,
+     "x0_mm": 57.0,
+     "length_mm": 50.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 13,
+   "sheet": "A-206",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 378.0,
+     "x0_mm": 57.0,
+     "length_mm": 50.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 14,
+   "sheet": "A-207",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 378.0,
+     "x0_mm": 57.0,
+     "length_mm": 50.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 15,
+   "sheet": "A-208",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 378.0,
+     "x0_mm": 57.0,
+     "length_mm": 50.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 16,
+   "sheet": "A-209",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 378.0,
+     "x0_mm": 57.0,
+     "length_mm": 50.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 17,
+   "sheet": "A-210",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 378.0,
+     "x0_mm": 57.0,
+     "length_mm": 50.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 30
+   },
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 18,
+   "sheet": "A-211",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 378.0,
+     "x0_mm": 57.0,
+     "length_mm": 50.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 30
+   },
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 19,
+   "sheet": "A-212",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 378.0,
+     "x0_mm": 57.0,
+     "length_mm": 50.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 20,
+   "sheet": "A-213",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 378.0,
+     "x0_mm": 57.0,
+     "length_mm": 50.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 34
+   },
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 21,
+   "sheet": "A-214",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 378.0,
+     "x0_mm": 57.0,
+     "length_mm": 50.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": {
+    "denominator": 200.0,
+    "grid_spacing_mm": 45.0,
+    "columns": 15
+   },
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 22,
+   "sheet": "A-215",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 400.2,
+     "x0_mm": 62.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      10.0,
+      20.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 23,
+   "sheet": "A-301",
+   "declared_scale": "1:250",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 401.0,
+     "x0_mm": 62.0,
+     "length_mm": 40.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "mm_per_m": 4.0,
+     "denominator": 250.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [250.0]"
+  },
+  {
+   "page": 24,
+   "sheet": "A-302",
+   "declared_scale": "1:250 / 1:100",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 389.5,
+     "x0_mm": 318.0,
+     "length_mm": 50.0,
+     "labels_m": [
+      0.0,
+      2.5,
+      5.0
+     ],
+     "mm_per_m": 10.0,
+     "denominator": 100.0
+    },
+    {
+     "y_mm": 401.0,
+     "x0_mm": 62.0,
+     "length_mm": 40.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "mm_per_m": 4.0,
+     "denominator": 250.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [250.0, 100.0]"
+  },
+  {
+   "page": 25,
+   "sheet": "A-401",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 517.6,
+     "x0_mm": 17.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      10.0,
+      20.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 26,
+   "sheet": "A-402",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 517.6,
+     "x0_mm": 17.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      10.0,
+      20.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 27,
+   "sheet": "A-403",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 517.6,
+     "x0_mm": 17.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      10.0,
+      20.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 28,
+   "sheet": "A-404",
+   "declared_scale": "1:200",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 517.6,
+     "x0_mm": 17.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      10.0,
+      20.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 29,
+   "sheet": "A-501",
+   "declared_scale": "1:50",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 389.0,
+     "x0_mm": 41.0,
+     "length_mm": 40.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 20.0,
+     "denominator": 50.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [50.0]"
+  },
+  {
+   "page": 30,
+   "sheet": "A-521",
+   "declared_scale": "R9 시트별",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 392.0,
+     "x0_mm": 36.0,
+     "length_mm": 40.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 20.0,
+     "denominator": 50.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [50.0]"
+  },
+  {
+   "page": 31,
+   "sheet": "A-522",
+   "declared_scale": "R9 시트별",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 392.0,
+     "x0_mm": 36.0,
+     "length_mm": 40.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 20.0,
+     "denominator": 50.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [50.0]"
+  },
+  {
+   "page": 32,
+   "sheet": "A-531",
+   "declared_scale": "R9 시트별",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 392.0,
+     "x0_mm": 36.0,
+     "length_mm": 40.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 20.0,
+     "denominator": 50.0
+    },
+    {
+     "y_mm": 392.0,
+     "x0_mm": 121.0,
+     "length_mm": 80.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 40.0,
+     "denominator": 25.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [25.0, 50.0]"
+  },
+  {
+   "page": 33,
+   "sheet": "A-532",
+   "declared_scale": "R9 시트별",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 392.0,
+     "x0_mm": 36.0,
+     "length_mm": 40.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 20.0,
+     "denominator": 50.0
+    },
+    {
+     "y_mm": 392.0,
+     "x0_mm": 121.0,
+     "length_mm": 80.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 40.0,
+     "denominator": 25.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [25.0, 50.0]"
+  },
+  {
+   "page": 34,
+   "sheet": "A-533",
+   "declared_scale": "R9 시트별",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 392.0,
+     "x0_mm": 36.0,
+     "length_mm": 40.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 20.0,
+     "denominator": 50.0
+    },
+    {
+     "y_mm": 392.0,
+     "x0_mm": 121.0,
+     "length_mm": 80.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 40.0,
+     "denominator": 25.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [25.0, 50.0]"
+  },
+  {
+   "page": 35,
+   "sheet": "FRONT-S01",
+   "declared_scale": "n/a",
+   "reduced_print": false,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 36,
+   "sheet": "FRONT-S02",
+   "declared_scale": "n/a",
+   "reduced_print": false,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 37,
+   "sheet": "FRONT-IDX-01",
+   "declared_scale": "n/a",
+   "reduced_print": false,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 38,
+   "sheet": "FRONT-IDX-02",
+   "declared_scale": "n/a",
+   "reduced_print": false,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 39,
+   "sheet": "S-001",
+   "declared_scale": "NTS (수직 1:500 x cos 28 deg)",
+   "reduced_print": false,
+   "verdict": "NO_BAR_NO_MEASUREMENT",
+   "bars": [],
+   "column_scale": null,
+   "detail": "declared [500.0]; no scale bar found and no column/dimension measurement"
+  },
+  {
+   "page": 40,
+   "sheet": "S-101",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 41,
+   "sheet": "S-102",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 42,
+   "sheet": "S-103",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 43,
+   "sheet": "S-104",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 44,
+   "sheet": "S-105",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 45,
+   "sheet": "S-106",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 46,
+   "sheet": "S-107",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 47,
+   "sheet": "S-108",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 48,
+   "sheet": "S-109",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 49,
+   "sheet": "S-110",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 50,
+   "sheet": "S-111",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 51,
+   "sheet": "S-112",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 52,
+   "sheet": "S-113",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 53,
+   "sheet": "S-114",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 54,
+   "sheet": "S-115",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 55,
+   "sheet": "S-116",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 56,
+   "sheet": "S-117",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 57,
+   "sheet": "S-118",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 58,
+   "sheet": "S-203",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 59,
+   "sheet": "S-204",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 60,
+   "sheet": "S-209",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 61,
+   "sheet": "S-210",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 62,
+   "sheet": "S-211",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 63,
+   "sheet": "S-212",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 64,
+   "sheet": "S-213",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 65,
+   "sheet": "S-214",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 66,
+   "sheet": "S-215",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 67,
+   "sheet": "S-216",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 68,
+   "sheet": "S-217",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 253.0,
+     "x0_mm": 128.0,
+     "length_mm": 100.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 3.333,
+     "denominator": 300.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [300.0]"
+  },
+  {
+   "page": 69,
+   "sheet": "S-301",
+   "declared_scale": "1:250",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 240.0,
+     "x0_mm": 76.0,
+     "length_mm": 120.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 4.0,
+     "denominator": 250.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [250.0]"
+  },
+  {
+   "page": 70,
+   "sheet": "S-302",
+   "declared_scale": "1:250",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 252.0,
+     "x0_mm": 76.0,
+     "length_mm": 120.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 4.0,
+     "denominator": 250.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [250.0]"
+  },
+  {
+   "page": 71,
+   "sheet": "S-303",
+   "declared_scale": "1:250",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 240.0,
+     "x0_mm": 76.0,
+     "length_mm": 120.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 4.0,
+     "denominator": 250.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [250.0]"
+  },
+  {
+   "page": 72,
+   "sheet": "S-304",
+   "declared_scale": "1:250",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 252.0,
+     "x0_mm": 76.0,
+     "length_mm": 120.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 4.0,
+     "denominator": 250.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [250.0]"
+  },
+  {
+   "page": 73,
+   "sheet": "S-305",
+   "declared_scale": "1:400",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 270.5,
+     "x0_mm": 225.5,
+     "length_mm": 75.0,
+     "labels_m": [
+      0.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0
+     ],
+     "mm_per_m": 2.5,
+     "denominator": 400.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [400.0]"
+  },
+  {
+   "page": 74,
+   "sheet": "S-401",
+   "declared_scale": "reduced 1:1.414 print of A2 sheet",
+   "reduced_print": true,
+   "verdict": "VERIFIED_REDUCED",
+   "bars": [
+    {
+     "y_mm": 239.0,
+     "x0_mm": 30.4,
+     "length_mm": 35.36,
+     "labels_m": [
+      0.0,
+      2.5,
+      5.0
+     ],
+     "mm_per_m": 7.072,
+     "denominator": 141.4
+    },
+    {
+     "y_mm": 271.5,
+     "x0_mm": 302.6,
+     "length_mm": 56.56,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 28.28,
+     "denominator": 35.4
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [25.0, 75.0, 100.0] x1.414=['35.4', '106.1', '141.4']"
+  },
+  {
+   "page": 75,
+   "sheet": "S-402",
+   "declared_scale": "reduced 1:1.414 print of A2 sheet",
+   "reduced_print": true,
+   "verdict": "VERIFIED_REDUCED",
+   "bars": [
+    {
+     "y_mm": 179.6,
+     "x0_mm": 333.0,
+     "length_mm": 28.28,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 14.14,
+     "denominator": 70.7
+    },
+    {
+     "y_mm": 250.3,
+     "x0_mm": 111.0,
+     "length_mm": 28.28,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 14.14,
+     "denominator": 70.7
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [50.0, 200.0] x1.414=['70.7', '282.8']"
+  },
+  {
+   "page": 76,
+   "sheet": "S-403",
+   "declared_scale": "reduced 1:1.414 print of A2 sheet",
+   "reduced_print": true,
+   "verdict": "VERIFIED_REDUCED",
+   "bars": [
+    {
+     "y_mm": 179.6,
+     "x0_mm": 333.0,
+     "length_mm": 28.28,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 14.14,
+     "denominator": 70.7
+    },
+    {
+     "y_mm": 250.3,
+     "x0_mm": 111.0,
+     "length_mm": 28.28,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 14.14,
+     "denominator": 70.7
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [50.0, 200.0] x1.414=['70.7', '282.8']"
+  },
+  {
+   "page": 77,
+   "sheet": "S-404",
+   "declared_scale": "reduced 1:1.414 print of A2 sheet",
+   "reduced_print": true,
+   "verdict": "VERIFIED_REDUCED",
+   "bars": [
+    {
+     "y_mm": 179.6,
+     "x0_mm": 333.0,
+     "length_mm": 28.28,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 14.14,
+     "denominator": 70.7
+    },
+    {
+     "y_mm": 250.3,
+     "x0_mm": 111.0,
+     "length_mm": 28.28,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 14.14,
+     "denominator": 70.7
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [50.0, 250.0] x1.414=['70.7', '353.6']"
+  },
+  {
+   "page": 78,
+   "sheet": "S-405",
+   "declared_scale": "reduced 1:1.414 print of A2 sheet",
+   "reduced_print": true,
+   "verdict": "VERIFIED_REDUCED",
+   "bars": [
+    {
+     "y_mm": 277.2,
+     "x0_mm": 25.4,
+     "length_mm": 28.29,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 14.145,
+     "denominator": 70.7
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [50.0] x1.414=['70.7']"
+  },
+  {
+   "page": 79,
+   "sheet": "S-406",
+   "declared_scale": "reduced 1:1.414 print of A2 sheet",
+   "reduced_print": true,
+   "verdict": "VERIFIED_REDUCED",
+   "bars": [
+    {
+     "y_mm": 277.2,
+     "x0_mm": 25.4,
+     "length_mm": 28.29,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 14.145,
+     "denominator": 70.7
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [50.0] x1.414=['70.7']"
+  },
+  {
+   "page": 80,
+   "sheet": "S-407",
+   "declared_scale": "reduced 1:1.414 print of A2 sheet",
+   "reduced_print": true,
+   "verdict": "VERIFIED_REDUCED",
+   "bars": [
+    {
+     "y_mm": 277.2,
+     "x0_mm": 25.4,
+     "length_mm": 28.29,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 14.145,
+     "denominator": 70.7
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [50.0] x1.414=['70.7']"
+  },
+  {
+   "page": 81,
+   "sheet": "S-408",
+   "declared_scale": "reduced 1:1.414 print of A2 sheet",
+   "reduced_print": true,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 82,
+   "sheet": "APX-01",
+   "declared_scale": "1:300",
+   "reduced_print": false,
+   "verdict": "VERIFIED_COLUMNS",
+   "bars": [],
+   "column_scale": {
+    "denominator": 300.0
+   },
+   "detail": "column markers: modal bay 30.0 mm x 8 -> 1:300.0 (9.0 m bay assumed) (declared [300.0])"
+  },
+  {
+   "page": 83,
+   "sheet": "APX-02",
+   "declared_scale": "1:50",
+   "reduced_print": false,
+   "verdict": "VERIFIED_PANELS",
+   "bars": [],
+   "column_scale": {
+    "denominator": 50.0
+   },
+   "detail": "16 square panels 120.1 mm = 6.0 m -> 1:50.0 (declared [50.0])"
+  },
+  {
+   "page": 84,
+   "sheet": "APX-03",
+   "declared_scale": "n/a",
+   "reduced_print": false,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 85,
+   "sheet": "APX-04",
+   "declared_scale": "n/a",
+   "reduced_print": false,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 86,
+   "sheet": "APX-05a",
+   "declared_scale": "n/a",
+   "reduced_print": false,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 87,
+   "sheet": "APX-06",
+   "declared_scale": "n/a",
+   "reduced_print": false,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 88,
+   "sheet": "APX-07",
+   "declared_scale": "n/a",
+   "reduced_print": false,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 89,
+   "sheet": "APX-08",
+   "declared_scale": "n/a",
+   "reduced_print": false,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 90,
+   "sheet": "I-00",
+   "declared_scale": "R9 시트별",
+   "reduced_print": false,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 91,
+   "sheet": "A-C",
+   "declared_scale": "R9 시트별",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 392.0,
+     "x0_mm": 36.0,
+     "length_mm": 40.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 20.0,
+     "denominator": 50.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [50.0]"
+  },
+  {
+   "page": 92,
+   "sheet": "A-D",
+   "declared_scale": "R9 시트별",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 392.0,
+     "x0_mm": 36.0,
+     "length_mm": 40.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 20.0,
+     "denominator": 50.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [50.0]"
+  },
+  {
+   "page": 93,
+   "sheet": "S-413",
+   "declared_scale": "R9 시트별",
+   "reduced_print": false,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 94,
+   "sheet": "S-413a",
+   "declared_scale": "R9 시트별",
+   "reduced_print": false,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 95,
+   "sheet": "N-2F",
+   "declared_scale": "R9 시트별",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 377.0,
+     "x0_mm": 40.0,
+     "length_mm": 20.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0,
+      4.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 96,
+   "sheet": "N-7F",
+   "declared_scale": "R9 시트별",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 377.0,
+     "x0_mm": 40.0,
+     "length_mm": 20.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0,
+      4.0
+     ],
+     "mm_per_m": 5.0,
+     "denominator": 200.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [200.0]"
+  },
+  {
+   "page": 97,
+   "sheet": "P-2F",
+   "declared_scale": "R9 시트별",
+   "reduced_print": false,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 98,
+   "sheet": "P-7F",
+   "declared_scale": "R9 시트별",
+   "reduced_print": false,
+   "verdict": "NOT_APPLICABLE",
+   "bars": [],
+   "column_scale": null,
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  {
+   "page": 99,
+   "sheet": "T-2D",
+   "declared_scale": "R9 시트별",
+   "reduced_print": false,
+   "verdict": "VERIFIED",
+   "bars": [
+    {
+     "y_mm": 360.0,
+     "x0_mm": 35.0,
+     "length_mm": 40.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 20.0,
+     "denominator": 50.0
+    },
+    {
+     "y_mm": 360.0,
+     "x0_mm": 93.0,
+     "length_mm": 80.0,
+     "labels_m": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "mm_per_m": 40.0,
+     "denominator": 25.0
+    }
+   ],
+   "column_scale": null,
+   "detail": "declared [25.0, 50.0]"
+  }
+ ]
+}

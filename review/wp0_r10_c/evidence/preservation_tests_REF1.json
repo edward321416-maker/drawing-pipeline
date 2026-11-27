@@ -1,0 +1,237 @@
+{
+  "base_commit": "a571e2b86e0fe3b1e3e622c0815fa476be4ad8f8",
+  "glb_sha256": "b1927ffd8335853fcdf55f6ec49cee3233465cfc1362295ffa717f214b45ab88",
+  "summary": {
+    "PASS": 18,
+    "FAIL": 0,
+    "NOT_TESTED": 0
+  },
+  "tests": [
+    {
+      "id": "T01",
+      "title": "Original GLB unchanged",
+      "status": "PASS",
+      "evidence": {
+        "path": "<USER_HOME>\\Desktop\\5-2\\설계스튜디오\\중간발표\\07_representation\\render\\out\\GMC-ZZ-ZZ-M3-0701.glb",
+        "expected": "b1927ffd8335853fcdf55f6ec49cee3233465cfc1362295ffa717f214b45ab88",
+        "actual": "b1927ffd8335853fcdf55f6ec49cee3233465cfc1362295ffa717f214b45ab88"
+      }
+    },
+    {
+      "id": "T02",
+      "title": "Approved 1F master unchanged",
+      "status": "PASS",
+      "evidence": {
+        "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\00_엔진\\model\\1F_master.blend",
+        "expected": "30da41d693a967f9628da843f5ec6b6be40f410eeaa209c643d1cb8fdb3f1f1e",
+        "actual": "30da41d693a967f9628da843f5ec6b6be40f410eeaa209c643d1cb8fdb3f1f1e"
+      }
+    },
+    {
+      "id": "T03",
+      "title": "R9 drawing book unchanged",
+      "status": "PASS",
+      "evidence": {
+        "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\WP0_R9_A2_기술도면집.pdf",
+        "expected": "4342a5288e6ca36bb88d5bf8d6c98a6e273f2c354e4683923be216f80cd0f21a",
+        "actual": "4342a5288e6ca36bb88d5bf8d6c98a6e273f2c354e4683923be216f80cd0f21a"
+      }
+    },
+    {
+      "id": "T04",
+      "title": "PR30 2F source slice unchanged",
+      "status": "PASS",
+      "evidence": {
+        "path": "<USER_HOME>\\Desktop\\중간마감\\drawing-pipeline-R10C\\data\\t14s\\source_slices\\floor_2F_slice.json",
+        "expected": "a80696fe8ff486103cc1192641dbe68eed2d7b7ddcb4458d53ebc8bbe50c523e",
+        "actual": "a80696fe8ff486103cc1192641dbe68eed2d7b7ddcb4458d53ebc8bbe50c523e"
+      }
+    },
+    {
+      "id": "T05",
+      "title": "No tracked file outside tools/r10b1 and review/wp0_r10_b1 differs from the pinned R10-B commit (review/wp0_r10_a, review/wp0_r10_b and tools/r10b untouched)",
+      "status": "PASS",
+      "evidence": {
+        "base_commit": "a571e2b86e0fe3b1e3e622c0815fa476be4ad8f8",
+        "changed_count": 35,
+        "outside_allowed": []
+      }
+    },
+    {
+      "id": "T06",
+      "title": "26 PR30 rooms: ids, names, areas, provenance equal the R10-A record",
+      "status": "PASS",
+      "evidence": {
+        "rooms": 26,
+        "mismatches": []
+      }
+    },
+    {
+      "id": "T07",
+      "title": "PR30 item counts per layer equal the R10-A record",
+      "status": "PASS",
+      "evidence": {
+        "now": {
+          "A-WALL-EXT": 1,
+          "A-GLAZ": 2,
+          "A-FLOR-OPEN": 7,
+          "A-COLS": 34,
+          "A-WALL-CORE": 13,
+          "A-TUBE": 47,
+          "A-STAR": 198,
+          "A-DOOR": 87,
+          "A-WALL-PART": 17,
+          "A-FIXT": 22,
+          "A-FURN": 16,
+          "A-ZONE": 22,
+          "A-FLOR-HATCH": 1,
+          "A-RAIL": 1,
+          "A-ANNO-SYMB": 34,
+          "A-STAR-PROJ": 4,
+          "A-ANNO-TAGS": 26,
+          "A-GRID": 14,
+          "A-ANNO-DIMS": 48
+        },
+        "r10a": {
+          "A-WALL-EXT": 1,
+          "A-GLAZ": 2,
+          "A-FLOR-OPEN": 7,
+          "A-COLS": 34,
+          "A-WALL-CORE": 13,
+          "A-TUBE": 47,
+          "A-STAR": 198,
+          "A-DOOR": 87,
+          "A-WALL-PART": 17,
+          "A-FIXT": 22,
+          "A-FURN": 16,
+          "A-ZONE": 22,
+          "A-FLOR-HATCH": 1,
+          "A-RAIL": 1,
+          "A-ANNO-SYMB": 34,
+          "A-STAR-PROJ": 4,
+          "A-ANNO-TAGS": 26,
+          "A-GRID": 14,
+          "A-ANNO-DIMS": 48
+        }
+      }
+    },
+    {
+      "id": "T08",
+      "title": "Plan-defining modules in the worktree are byte-identical to the R7 checkout used by R10-A",
+      "status": "PASS",
+      "evidence": {
+        "r7_checkout": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R7_20261125\\checkout",
+        "files_compared": 19,
+        "differing": [],
+        "absent_in_r7": []
+      }
+    },
+    {
+      "id": "T09",
+      "title": "Every 2F column in the plan sits on a GLB column (<= 5 mm) that exists at z = +6.000",
+      "status": "PASS",
+      "evidence": {
+        "plan_columns": 34,
+        "glb_columns": 38,
+        "unmatched": []
+      }
+    },
+    {
+      "id": "T10",
+      "title": "Core A-D plan bounds equal the GLB core boxes (<= 10 mm)",
+      "status": "PASS",
+      "evidence": {
+        "deviations_m": {}
+      }
+    },
+    {
+      "id": "T11",
+      "title": "Tube centres in the plan equal the GLB tube centres (<= 20 mm)",
+      "status": "PASS",
+      "evidence": {
+        "deviations_m": {}
+      }
+    },
+    {
+      "id": "T12",
+      "title": "Floor levels B2..15F equal the GLB slab tops (<= 1 mm)",
+      "status": "PASS",
+      "evidence": {
+        "floors": 17,
+        "mismatches": {}
+      }
+    },
+    {
+      "id": "T13",
+      "title": "Roof maximum equals +76.500 m (R10-A record)",
+      "status": "PASS",
+      "evidence": {
+        "glb_roof_top": 76.4996,
+        "r10a": 76.4996
+      }
+    },
+    {
+      "id": "T14",
+      "title": "A-A cut at X = -4.200 reproduces all 26 R10-A recorded cuts (<= 20 mm)",
+      "status": "PASS",
+      "evidence": {
+        "recorded": 26,
+        "mismatches": []
+      }
+    },
+    {
+      "id": "T15",
+      "title": "R8 research bridge cuts in A-A equal the R10-A record",
+      "status": "PASS",
+      "evidence": {
+        "now": [
+          "2F D E2 deck",
+          "7F D E2 deck"
+        ],
+        "r10a": [
+          "2F D E2 deck",
+          "7F D E2 deck"
+        ]
+      }
+    },
+    {
+      "id": "T16",
+      "title": "Core D landing mismatch (176.07 mm) and E2 bridge evidence carried unchanged; A-501 and S-401 not regenerated",
+      "status": "PASS",
+      "evidence": {
+        "max_landing_mismatch_mm": 176.07099494934087,
+        "r10a_files_changed": [],
+        "status_of_issue": "BLOCKED_USER_DECISION / OPEN (unchanged)"
+      }
+    },
+    {
+      "id": "T17",
+      "title": "Fit-out generation leaves every PR30 item and room polygon byte-identical",
+      "status": "PASS",
+      "evidence": {
+        "before": [
+          "c7d4410bcf4dbf41536eda323dc9c10bf4ca6b5b5ead41aee37a1e0bca0c78a2",
+          620,
+          26
+        ],
+        "after": [
+          "c7d4410bcf4dbf41536eda323dc9c10bf4ca6b5b5ead41aee37a1e0bca0c78a2",
+          620,
+          26
+        ],
+        "fitout_items": 266
+      }
+    },
+    {
+      "id": "T18",
+      "title": "Remediation (existing-furniture revision candidate) leaves every PR30 item and room polygon byte-identical",
+      "status": "PASS",
+      "evidence": {
+        "before": "73058a05cbdf12d781cacca6586aca0d8a33eb44d7b8bd13ac296da0e2bc8f8d",
+        "after": "73058a05cbdf12d781cacca6586aca0d8a33eb44d7b8bd13ac296da0e2bc8f8d",
+        "revised": 24,
+        "hidden": 7
+      }
+    }
+  ]
+}

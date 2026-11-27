@@ -1,0 +1,123 @@
+{
+ "note": "Text evidence was copied with local paths and one third-party name replaced; PDFs/JPEGs/PNGs are byte-identical. sha256_original is the hash of the unredacted local file (kept local).",
+ "rules": [
+  {
+   "pattern": "Windows user-home path prefix (drive letter, Users, account name)",
+   "replacement": "<USER_HOME>"
+  },
+  {
+   "pattern": "Windows temp path prefix",
+   "replacement": "<TEMP>"
+  },
+  {
+   "pattern": "reference file names containing a person's name",
+   "replacement": "Jangsan_Architecture_A2.pdf / Jangsan_Structure_A3.pdf / Jangsan_reference_archive.zip"
+  }
+ ],
+ "files_changed": [
+  {
+   "file": "evidence/assembly_rows_REF1.json",
+   "replacements": 221,
+   "sha256_original": "616226caa0b0664f123ef22ab9164c3200cd0fd6debd3ced02d2cba472dc0219",
+   "sha256_published": "0e5f6b27781849ee2d8a850a60088f8652a51e2b83ed326d529dedfb4f18cf5b"
+  },
+  {
+   "file": "evidence/crop_index.json",
+   "replacements": 54,
+   "sha256_original": "d6063c9c237d89f14d796b522c14063a0aad41cd1badd5e9295fbb69a177706c",
+   "sha256_published": "e479b5350bb1787648075e821949d13e980c4e8d7383dab91fa13abad849cd9a"
+  },
+  {
+   "file": "evidence/dimension_qa_baseline.txt",
+   "replacements": 1,
+   "sha256_original": "b177a4ca6de6c85560dc517a4cc29353484cc7dacf68ab91daba000d62079cb5",
+   "sha256_published": "8e4dde0aae0e7b8002f359d4e35677eddf22a3a139864b6f49ab31a37f7ca1b6"
+  },
+  {
+   "file": "evidence/execution_log_REF1.json",
+   "replacements": 3,
+   "sha256_original": "dd16b2ffb2b3ec4670280a0fe100a41c2cfa12584099a4d810e0e7adb859f063",
+   "sha256_published": "1ead2b2cda61ef407750e39e4d70cd6d297b2b89285f879e93e7b8d5439dc5c2"
+  },
+  {
+   "file": "evidence/page_map.csv",
+   "replacements": 93,
+   "sha256_original": "8bcecf0c7bb606c02fa8494bfb2b0fc7e6137a588795be3f137da65267fcaf01",
+   "sha256_published": "f7d749a94fe6e381ea1ae8ffbf8ff2c73446402135cb58ec4dde19f05a23bbd5"
+  },
+  {
+   "file": "evidence/page_map.json",
+   "replacements": 93,
+   "sha256_original": "026abf36874488258aeb6a33f36c7219e42a215db661552d2e1cb3c7c453eb44",
+   "sha256_published": "295e4428fddf4bde48f0f9889e62148b46df85e382a561830c8dc3f6ead711d1"
+  },
+  {
+   "file": "evidence/preservation_tests_REF1.json",
+   "replacements": 5,
+   "sha256_original": "c89a8cafa104e456c11fe19b5e77892545ba2f4d9619ad2e59e3d490324f5933",
+   "sha256_published": "55d0fd9c3f819ae742ff7f60ab278930cfbf3435e8662a490786fac59f2d9d44"
+  },
+  {
+   "file": "evidence/preservation_tests_REF1.txt",
+   "replacements": 1,
+   "sha256_original": "914cdaeb65435ae260033ecea2be50eb19473bc4370e8fb6e74c970043fdce27",
+   "sha256_published": "9ad3ecb14453b2aa6160c5b14796e0ca498ad5ee33bf528336227e1324b7d15b"
+  },
+  {
+   "file": "evidence/qa_glyphs_REF1.json",
+   "replacements": 1,
+   "sha256_original": "607e871b8f24dc2df50d365a10b9f5fee1f7359e341ca14cd0d0d88544273144",
+   "sha256_published": "d27e53cf8d31687fd3d6e75bc1d55a3c059688ea8ac023f8bea1ab1efba1cde4"
+  },
+  {
+   "file": "evidence/reference_measurements_jaeyeol.json",
+   "replacements": 14,
+   "sha256_original": "642374e58ec061037d5c139ae7a53d1013a7e66063db9833b539e5e562b08a46",
+   "sha256_published": "ff55e4cbc97d37450dfb5c872df0d128f055b0aa774d3607c567a3bd643a87b7"
+  },
+  {
+   "file": "evidence/reference_measurements_jaeyeol.md",
+   "replacements": 7,
+   "sha256_original": "a24c190dc8ff5e5365de98ead048ce27ef8cdf107ce75c50e171726c06d0d133",
+   "sha256_published": "e0f2ee7b258a710b9d35fd4bd6a60bfb81bad8bbd7d5e946a3c41b4c1ac8713d"
+  },
+  {
+   "file": "evidence/reference_measurements_jangsan.json",
+   "replacements": 2,
+   "sha256_original": "dbb818af5bc44373dc91fe4bcc30d5b25cac1fe5ff40ebc3d426c22ee9a640d8",
+   "sha256_published": "fec59b9c5bf35141c322c497ffd1462552eec9ff6a640df76095dd5a28f97d86"
+  },
+  {
+   "file": "evidence/reference_template_spec.json",
+   "replacements": 2,
+   "sha256_original": "16021de048f5febb21e4f2d0c45693529021c48380e45e5334e2c2a19cf93cdd",
+   "sha256_published": "ed90362a721eaaaf1a9f2d39ae248010e36cd40f40e2e2538e3634d99eecdd0f"
+  },
+  {
+   "file": "evidence/scale_verification_REF1.json",
+   "replacements": 1,
+   "sha256_original": "4641f3cd0a0f561a2f40eac3827c9ee792dc96a8cc7d0650e2f35eba6ae51e29",
+   "sha256_published": "60074042146dab38cfcec7442492e1bc506162cd1df967e3f2840de6e68b2780"
+  },
+  {
+   "file": "evidence/WP0_Drawing_Book_QA_Report_REF1.md",
+   "replacements": 2,
+   "sha256_original": "f7f6c3e5fa53c94ab017cae4bec9fb5c80522fffc694d28e2ac7c4fce82cddec",
+   "sha256_published": "de2ded3ea7f5c1426c1214e7735140d87e2b8cac0166f4cbed99a093fa0f6d6c"
+  },
+  {
+   "file": "evidence/WP0_Drawing_Source_Register_REF1.csv",
+   "replacements": 95,
+   "sha256_original": "f4d9c08b6dc9dcbffc8d6b58a7a8d8395a8b771226157989a00ded7ec07671ca",
+   "sha256_published": "a28465a5f82b0a2c9acb16cdb4596ff5c8713c5fe184f4d4096e20a036214e6e"
+  },
+  {
+   "file": "evidence/WP0_Missing_Drawings_Register_REF1.md",
+   "replacements": 6,
+   "sha256_original": "eac1bf99b411e6dfe58f600dffaa5913fc9c6dfca58a0c3b6410109d0315e9d8",
+   "sha256_published": "0e5531d52ff36a603db72cce297f8b2ff9e2b0299eb7cfb9570cffbb2cb4744b"
+  }
+ ],
+ "binary_files_copied_unchanged": 172,
+ "text_files_scanned": 25
+}

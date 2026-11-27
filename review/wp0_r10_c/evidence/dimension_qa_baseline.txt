@@ -1,0 +1,14 @@
+overall: PASS {'registered': 159, 'tested': 159, 'passed': 159, 'failed': 0, 'untested': 0}
+  core_size        PASS       tested=  3 pass=  3 fail=  0 untested=  0
+  door_opening     PASS       tested= 26 pass= 26 fail=  0 untested=  0
+  floor_elevation  PASS       tested= 37 pass= 37 fail=  0 untested=  0
+  floor_to_floor   PASS       tested= 32 pass= 32 fail=  0 untested=  0
+  grid_spacing     PASS       tested= 24 pass= 24 fail=  0 untested=  0
+  overall          PASS       tested=  2 pass=  2 fail=  0 untested=  0
+  room_size        PASS       tested= 25 pass= 25 fail=  0 untested=  0
+  tube_diameter    PASS       tested=  5 pass=  5 fail=  0 untested=  0
+  void_area        PASS       tested=  1 pass=  1 fail=  0 untested=  0
+  void_width       PASS       tested=  4 pass=  4 fail=  0 untested=  0
+transform fits: {'A-201': {'resid_mm': 1.1368683772161603e-13, 'anchors': '34 column fills, 7x7 grid lines'}, 'A-301': {'resid_mm': 0.004000000000019099, 'anchors': '19 dark slab tops, 17/17 floors matched at claimed scale'}, 'A-302': {'resid_mm': 0.004000000000019099, 'anchors': '18 dark slab tops, 17/17 floors matched at claimed scale'}}
+written: <USER_HOME>\Desktop\2학기 논문\도면\WP0_Complete_Drawing_Book\_parts\qa_dimensions.json
+dimension exit=0

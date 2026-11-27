@@ -1,0 +1,50 @@
+{
+ "route": 5,
+ "length_m": 6.45,
+ "sample_at": {
+  "d_m": 5.6,
+  "x": 40.604,
+  "y": 23.15
+ },
+ "width_along_sampling_axis_m": {
+  "value": 1.257,
+  "parts": {
+   "left_wall_m": 0.395,
+   "right_tube_m": 0.862
+  },
+  "method": "distance from the route sample (x=40.604, y=23.150) to the nearest obstacle on each side, measured along the sampling axis (here the y axis): 0.395 + 0.862",
+  "reported_as": "1.26 m (corrected_min_width_m, old_min_width_with_fitout_m, R10-C 'route 5 = 1.26 m throat')"
+ },
+ "throat_gap_m": {
+  "value": 1.026,
+  "recorded": 1.026,
+  "point_a": [
+   40.425,
+   23.55
+  ],
+  "point_b": [
+   40.073,
+   22.586
+  ],
+  "between": [
+   [
+    "wall:part"
+   ],
+   [
+    "tube",
+    "void"
+   ]
+  ],
+  "method": "shortest straight distance between the two bounding obstacles (wall:part and tube/void) near the same sample; the two points differ in x and y, so the gap is diagonal",
+  "reported_as": "1.03 m (rounded 1.026, 'throat' in the overlay legend 'true gap between the two bounding obstacles')"
+ },
+ "same_endpoints": true,
+ "same_sample": true,
+ "need_m": 3.0,
+ "samples_below_need": "4 of 11",
+ "hd10_before_after_corrected_min": [
+  1.26,
+  1.26
+ ],
+ "conclusion": "Both numbers are correct for what they measure and come from the SAME sample and the same two bounding obstacles. 1.26 m is the clearance along the sampling axis; 1.026 m is the shortest gap between the obstacles (diagonal) and is the narrower physical clear opening. The revised-furniture candidate changes neither (before = after). Use 1.03 m as the narrowest clear gap and 1.26 m as the axis width; both are far below the 3.0 m trunk-route need used in the study. No clearance claim is made."
+}

@@ -1,0 +1,4111 @@
+[
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 1,
+  "combined_page": 1,
+  "drawing_id": "FRONT-01",
+  "title": "건축 도면집 표지 (투시도)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\FRONT-01_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p01_FRONT-01.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 1385259,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/known_defects/KD-05_FRONT-01_p01.jpg"
+  ],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "n/a",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": [
+   "Team names not provided: TEAM field shows 미지정",
+   "Render AI-retouched and not human-approved (T14Q status)",
+   "Render shows the T14Q site-context massing; 1F geometry parity with the 1F master not re-verified here",
+   "1 raster image(s) on the page"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 2,
+  "combined_page": 2,
+  "drawing_id": "FRONT-02",
+  "title": "설계개요 및 층별 면적표",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\FRONT-02_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p02_FRONT-02.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 797428,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/known_defects/KD-08_FRONT-02_p02.jpg"
+  ],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "n/a",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": [
+   "No site-location map (not in data); reference page has one",
+   "Usable/legal floor area is UNRESOLVED (no definition in the model)",
+   "1F program area is a solver run, not the approved 1F plan",
+   "Team names not provided"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 3,
+  "combined_page": 3,
+  "drawing_id": "FRONT-IDX-01",
+  "title": "도면 목록",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\FRONT-IDX-01_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p03_FRONT-IDX-01.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 532147,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "n/a",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R10-C REF1 generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": []
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 4,
+  "combined_page": 4,
+  "drawing_id": "A-100",
+  "title": "배치도 (1층 평면 + 대지)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-100_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p04_A-100.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 572769,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/known_defects/KD-07_A-100_p04.jpg"
+  ],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:400",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    400.0
+   ],
+   "detail": "declared [400.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [400.0]"
+  ],
+  "known_limitations": [
+   "SOURCE_CLASS: site boundary, building line, carriageway, entrances, subway exit, fire lane and neighbour names come from the engine's pinned site source (mid-term s7.py / OSM extraction); they cannot be re-derived from the GLB. Ground surfaces, sunken court, steps, kiosks and trees ARE cross-checked against the GLB (IoU 1.0, 12 treads, 39 trees)."
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 5,
+  "combined_page": 5,
+  "drawing_id": "A-101",
+  "title": "지하 2층 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-101_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p05_A-101.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 647267,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "plan scale measured from column spacing: 1:200.0 (declared 1:200)",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "CH (ceiling height) unknown for every room: printed 'CH 미확인'",
+   "room names printed on the plan only for rooms >= 30 m2 where a clear box exists; all rooms are tagged and listed in the schedule",
+   "no fit-out development furniture and no R8 research geometry on this sheet (those exist only on A-201 / 2F)"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 6,
+  "combined_page": 6,
+  "drawing_id": "A-102",
+  "title": "지하 1층 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-102_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p06_A-102.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 690527,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "plan scale measured from column spacing: 1:200.0 (declared 1:200)",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "1 room tag(s) sit over furniture (white-backed frame, inside own room; no wall/column/door/stair/text conflict)",
+   "4 door opening dimension(s) not drawn on the plan (no clear text/furniture-free spot); listed on the sheet legend",
+   "CH (ceiling height) unknown for every room: printed 'CH 미확인'"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 7,
+  "combined_page": 7,
+  "drawing_id": "A-103",
+  "title": "1층 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-103_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p07_A-103.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 577840,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/room_tags/RT-04_A-103_p07.jpg",
+   "review/wp0_r10_c/crops/known_defects/KD-04_A-103_p07.jpg"
+  ],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED_LABELS",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "grid labels 1-7 spaced 45.00 mm per 9.0 m bay -> 1:200.0 (declared [200.0])"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: grid labels 1-7 spaced 45.00 mm per 9.0 m bay -> 1:200.0 (declared [200.0])"
+  ],
+  "known_limitations": [
+   "room sizes, tube diameters and door openings are not dimensioned on A-103 (the engine annotates grid bays and overall only): NOT_TESTED",
+   "no A-A / B-B section marks on A-103: the engine annotation occupies the margins (planes are the same as on the other floors: slice x=-4.2, y=10.0 = master x=4.8, y=28.0)"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 8,
+  "combined_page": 8,
+  "drawing_id": "A-201",
+  "title": "2층 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-201_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p08_A-201.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 765847,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/title_blocks/TB-01_A-201_p08.jpg",
+   "review/wp0_r10_c/crops/room_tags/RT-01_A-201_p08.jpg",
+   "review/wp0_r10_c/crops/room_tags/RT-02_A-201_p08.jpg",
+   "review/wp0_r10_c/crops/room_tags/RT-03_A-201_p08.jpg",
+   "review/wp0_r10_c/crops/dimension_chains/DC-01_A-201_p08.jpg",
+   "review/wp0_r10_c/crops/dimension_chains/DC-02_A-201_p08.jpg",
+   "review/wp0_r10_c/crops/dimension_chains/DC-03_A-201_p08.jpg",
+   "review/wp0_r10_c/crops/known_defects/KD-10_A-201_p08.jpg"
+  ],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "plan scale measured from column spacing: 1:200.0 (declared 1:200)",
+   "independent dimension QA 159/159 pass (baseline run on this byte-identical sheet; evidence/dimension_qa_baseline.json)",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "see R10-B1 docs/KNOWN_ISSUES.md and the R10-B1 collision / circulation audits (not re-verified by R10-C)"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 9,
+  "combined_page": 9,
+  "drawing_id": "A-202",
+  "title": "3층 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-202_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p09_A-202.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 687647,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "plan scale measured from column spacing: 1:200.0 (declared 1:200)",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "CH (ceiling height) unknown for every room: printed 'CH 미확인'",
+   "room names printed on the plan only for rooms >= 30 m2 where a clear box exists; all rooms are tagged and listed in the schedule",
+   "no fit-out development furniture and no R8 research geometry on this sheet (those exist only on A-201 / 2F)"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 10,
+  "combined_page": 10,
+  "drawing_id": "A-203",
+  "title": "4층 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-203_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p10_A-203.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 699884,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "plan scale measured from column spacing: 1:200.0 (declared 1:200)",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "1 door opening dimension(s) not drawn on the plan (no clear text/furniture-free spot); listed on the sheet legend",
+   "CH (ceiling height) unknown for every room: printed 'CH 미확인'",
+   "room names printed on the plan only for rooms >= 30 m2 where a clear box exists; all rooms are tagged and listed in the schedule"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 11,
+  "combined_page": 11,
+  "drawing_id": "A-204",
+  "title": "5층 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-204_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p11_A-204.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 675015,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "plan scale measured from column spacing: 1:200.0 (declared 1:200)",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "CH (ceiling height) unknown for every room: printed 'CH 미확인'",
+   "room names printed on the plan only for rooms >= 30 m2 where a clear box exists; all rooms are tagged and listed in the schedule",
+   "no fit-out development furniture and no R8 research geometry on this sheet (those exist only on A-201 / 2F)"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 12,
+  "combined_page": 12,
+  "drawing_id": "A-205",
+  "title": "6층 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-205_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p12_A-205.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 648078,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "plan scale measured from column spacing: 1:200.0 (declared 1:200)",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "CH (ceiling height) unknown for every room: printed 'CH 미확인'",
+   "room names printed on the plan only for rooms >= 30 m2 where a clear box exists; all rooms are tagged and listed in the schedule",
+   "no fit-out development furniture and no R8 research geometry on this sheet (those exist only on A-201 / 2F)"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 13,
+  "combined_page": 13,
+  "drawing_id": "A-206",
+  "title": "7층 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-206_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p13_A-206.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 682808,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "plan scale measured from column spacing: 1:200.0 (declared 1:200)",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "CH (ceiling height) unknown for every room: printed 'CH 미확인'",
+   "room names printed on the plan only for rooms >= 30 m2 where a clear box exists; all rooms are tagged and listed in the schedule",
+   "no fit-out development furniture and no R8 research geometry on this sheet (those exist only on A-201 / 2F)"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 14,
+  "combined_page": 14,
+  "drawing_id": "A-207",
+  "title": "8층 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-207_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p14_A-207.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 655256,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "plan scale measured from column spacing: 1:200.0 (declared 1:200)",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "CH (ceiling height) unknown for every room: printed 'CH 미확인'",
+   "room names printed on the plan only for rooms >= 30 m2 where a clear box exists; all rooms are tagged and listed in the schedule",
+   "no fit-out development furniture and no R8 research geometry on this sheet (those exist only on A-201 / 2F)"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 15,
+  "combined_page": 15,
+  "drawing_id": "A-208",
+  "title": "9층 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-208_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p15_A-208.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 656170,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "plan scale measured from column spacing: 1:200.0 (declared 1:200)",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "CH (ceiling height) unknown for every room: printed 'CH 미확인'",
+   "room names printed on the plan only for rooms >= 30 m2 where a clear box exists; all rooms are tagged and listed in the schedule",
+   "no fit-out development furniture and no R8 research geometry on this sheet (those exist only on A-201 / 2F)"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 16,
+  "combined_page": 16,
+  "drawing_id": "A-209",
+  "title": "10층 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-209_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p16_A-209.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 728619,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "plan scale measured from column spacing: 1:200.0 (declared 1:200)",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "2 room tag(s) sit over furniture (white-backed frame, inside own room; no wall/column/door/stair/text conflict)",
+   "1 room tag(s) placed outside the room with a leader (no clear space inside)",
+   "4 door opening dimension(s) not drawn on the plan (no clear text/furniture-free spot); listed on the sheet legend",
+   "CH (ceiling height) unknown for every room: printed 'CH 미확인'"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 17,
+  "combined_page": 17,
+  "drawing_id": "A-210",
+  "title": "11층 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-210_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p17_A-210.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 634682,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "plan scale measured from column spacing: 1:200.0 (declared 1:200)",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "CH (ceiling height) unknown for every room: printed 'CH 미확인'",
+   "room names printed on the plan only for rooms >= 30 m2 where a clear box exists; all rooms are tagged and listed in the schedule",
+   "no fit-out development furniture and no R8 research geometry on this sheet (those exist only on A-201 / 2F)"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 18,
+  "combined_page": 18,
+  "drawing_id": "A-211",
+  "title": "12층 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-211_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p18_A-211.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 669382,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "plan scale measured from column spacing: 1:200.0 (declared 1:200)",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "CH (ceiling height) unknown for every room: printed 'CH 미확인'",
+   "room names printed on the plan only for rooms >= 30 m2 where a clear box exists; all rooms are tagged and listed in the schedule",
+   "no fit-out development furniture and no R8 research geometry on this sheet (those exist only on A-201 / 2F)"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 19,
+  "combined_page": 19,
+  "drawing_id": "A-212",
+  "title": "13층 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-212_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p19_A-212.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 632721,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "plan scale measured from column spacing: 1:200.0 (declared 1:200)",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "CH (ceiling height) unknown for every room: printed 'CH 미확인'",
+   "room names printed on the plan only for rooms >= 30 m2 where a clear box exists; all rooms are tagged and listed in the schedule",
+   "no fit-out development furniture and no R8 research geometry on this sheet (those exist only on A-201 / 2F)"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 20,
+  "combined_page": 20,
+  "drawing_id": "A-213",
+  "title": "14층 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-213_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p20_A-213.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 611696,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "plan scale measured from column spacing: 1:200.0 (declared 1:200)",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "CH (ceiling height) unknown for every room: printed 'CH 미확인'",
+   "room names printed on the plan only for rooms >= 30 m2 where a clear box exists; all rooms are tagged and listed in the schedule",
+   "no fit-out development furniture and no R8 research geometry on this sheet (those exist only on A-201 / 2F)"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 21,
+  "combined_page": 21,
+  "drawing_id": "A-214",
+  "title": "15층 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-214_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p21_A-214.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 617810,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/room_tags/RT-05_A-214_p21.jpg"
+  ],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "plan scale measured from column spacing: 1:200.0 (declared 1:200)",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "CH (ceiling height) unknown for every room: printed 'CH 미확인'",
+   "room names printed on the plan only for rooms >= 30 m2 where a clear box exists; all rooms are tagged and listed in the schedule",
+   "no fit-out development furniture and no R8 research geometry on this sheet (those exist only on A-201 / 2F)"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 22,
+  "combined_page": 22,
+  "drawing_id": "A-215",
+  "title": "옥상 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-215_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p22_A-215.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 557073,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": []
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 23,
+  "combined_page": 23,
+  "drawing_id": "A-301",
+  "title": "전체 건축 종단면도 A-A",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-301_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p23_A-301.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 573783,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/dimension_chains/DC-04_A-301_p23.jpg",
+   "review/wp0_r10_c/crops/dimension_chains/DC-05_A-301_p23.jpg",
+   "review/wp0_r10_c/crops/section_details/SD-02_A-301_p23.jpg",
+   "review/wp0_r10_c/crops/section_details/SD-03_A-301_p23.jpg",
+   "review/wp0_r10_c/crops/bridge_connections/BR-07_A-301_p23.jpg"
+  ],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:250",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    250.0
+   ],
+   "detail": "declared [250.0]"
+  },
+  "source_revision": "R10-B1 a571e2b (commit a571e2b86e0f...)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "independent dimension QA 159/159 pass (baseline run on this byte-identical sheet; evidence/dimension_qa_baseline.json)",
+   "actual printed scale measured on the PDF: declared [250.0]"
+  ],
+  "known_limitations": []
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 24,
+  "combined_page": 24,
+  "drawing_id": "A-302",
+  "title": "전체 건축 횡단면도 B-B",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-302_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p24_A-302.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 567925,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/section_details/SD-01_A-302_p24.jpg"
+  ],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:250 / 1:100",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    100.0,
+    250.0
+   ],
+   "detail": "declared [250.0, 100.0]"
+  },
+  "source_revision": "R10-B1 a571e2b (commit a571e2b86e0f...)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "independent dimension QA 159/159 pass (baseline run on this byte-identical sheet; evidence/dimension_qa_baseline.json)",
+   "actual printed scale measured on the PDF: declared [250.0, 100.0]"
+  ],
+  "known_limitations": []
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 25,
+  "combined_page": 25,
+  "drawing_id": "A-401",
+  "title": "북측 입면도 (N)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\envelope\\A-401.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p25_A-401.jpg",
+  "preview_px": [
+   2977,
+   4210
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 530978,
+  "detail_crops": [],
+  "paper_size": "A2 portrait 420x594 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "NAMING: faces are named by nearest cardinal (N/E/S/W) but every face is 26.8 deg off the cardinal; earlier R10-B sections call the drawing -y side 'south'. That side (sunken court) is bearing 116.80 deg = nearest E = A-402. Coordinator to confirm the naming."
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 26,
+  "combined_page": 26,
+  "drawing_id": "A-402",
+  "title": "동측 입면도 (E)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\envelope\\A-402.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p26_A-402.jpg",
+  "preview_px": [
+   2977,
+   4210
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 532664,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/title_blocks/TB-02_A-402_p26.jpg",
+   "review/wp0_r10_c/crops/known_defects/KD-06_A-402_p26.jpg"
+  ],
+  "paper_size": "A2 portrait 420x594 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "NAMING: faces are named by nearest cardinal (N/E/S/W) but every face is 26.8 deg off the cardinal; earlier R10-B sections call the drawing -y side 'south'. That side (sunken court) is bearing 116.80 deg = nearest E = A-402. Coordinator to confirm the naming."
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 27,
+  "combined_page": 27,
+  "drawing_id": "A-403",
+  "title": "남측 입면도 (S)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\envelope\\A-403.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p27_A-403.jpg",
+  "preview_px": [
+   2977,
+   4210
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 521383,
+  "detail_crops": [],
+  "paper_size": "A2 portrait 420x594 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "NAMING: faces are named by nearest cardinal (N/E/S/W) but every face is 26.8 deg off the cardinal; earlier R10-B sections call the drawing -y side 'south'. That side (sunken court) is bearing 116.80 deg = nearest E = A-402. Coordinator to confirm the naming."
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 28,
+  "combined_page": 28,
+  "drawing_id": "A-404",
+  "title": "서측 입면도 (W)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\envelope\\A-404.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p28_A-404.jpg",
+  "preview_px": [
+   2977,
+   4210
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 512167,
+  "detail_crops": [],
+  "paper_size": "A2 portrait 420x594 mm",
+  "drawing_scale": "1:200",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "NAMING: faces are named by nearest cardinal (N/E/S/W) but every face is 26.8 deg off the cardinal; earlier R10-B sections call the drawing -y side 'south'. That side (sunken court) is bearing 116.80 deg = nearest E = A-402. Coordinator to confirm the naming."
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 29,
+  "combined_page": 29,
+  "drawing_id": "A-501",
+  "title": "코어 D 상세 평·단면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\A-501_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p29_A-501.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 439464,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/core_details/CD-01_A-501_p29.jpg",
+   "review/wp0_r10_c/crops/core_details/CD-02_A-501_p29.jpg",
+   "review/wp0_r10_c/crops/known_defects/KD-01_A-501_p29.jpg"
+  ],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:50",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    50.0
+   ],
+   "detail": "declared [50.0]"
+  },
+  "source_revision": "R10-A cdbb632 (unchanged)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [50.0]"
+  ],
+  "known_limitations": [
+   "176.07 mm 중간 랜딩 높이 불일치 미해결 (HD-01)"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 30,
+  "combined_page": 30,
+  "drawing_id": "A-521",
+  "title": "R9 D-2F  2층 에스컬레이터 랜딩",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\WP0_R9_A2_기술도면집.pdf",
+  "pdf_source_page": 16,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p30_A-521.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 350592,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/core_details/CD-03_A-521_p30.jpg",
+   "review/wp0_r10_c/crops/core_details/CD-04_A-521_p30.jpg",
+   "review/wp0_r10_c/crops/known_defects/KD-12_A-521_p30.jpg"
+  ],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "R9 시트별",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    50.0
+   ],
+   "detail": "declared [50.0]"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [50.0]"
+  ],
+  "known_limitations": [
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 31,
+  "combined_page": 31,
+  "drawing_id": "A-522",
+  "title": "R9 D-7F  7층 에스컬레이터 랜딩",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\WP0_R9_A2_기술도면집.pdf",
+  "pdf_source_page": 17,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p31_A-522.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 358868,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/core_details/CD-05_A-522_p31.jpg",
+   "review/wp0_r10_c/crops/core_details/CD-06_A-522_p31.jpg"
+  ],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "R9 시트별",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    50.0
+   ],
+   "detail": "declared [50.0]"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [50.0]"
+  ],
+  "known_limitations": [
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 32,
+  "combined_page": 32,
+  "drawing_id": "A-531",
+  "title": "R9 B-2F-D  2층 D 난간과 두 방화문",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\WP0_R9_A2_기술도면집.pdf",
+  "pdf_source_page": 8,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p32_A-531.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 361551,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/bridge_connections/BR-04_A-531_p32.jpg",
+   "review/wp0_r10_c/crops/bridge_connections/BR-05_A-531_p32.jpg"
+  ],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "R9 시트별",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    50.0,
+    25.0
+   ],
+   "detail": "declared [25.0, 50.0]"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [25.0, 50.0]"
+  ],
+  "known_limitations": [
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 33,
+  "combined_page": 33,
+  "drawing_id": "A-532",
+  "title": "R9 B-7F-C  7층 C 난간과 두 방화문",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\WP0_R9_A2_기술도면집.pdf",
+  "pdf_source_page": 9,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p33_A-532.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 360608,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "R9 시트별",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    50.0,
+    25.0
+   ],
+   "detail": "declared [25.0, 50.0]"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [25.0, 50.0]"
+  ],
+  "known_limitations": [
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "ARCH",
+  "book_file": "WP0_Architectural_Drawing_Book_A2.pdf",
+  "page_in_book": 34,
+  "combined_page": 34,
+  "drawing_id": "A-533",
+  "title": "R9 B-7F-D  7층 D 난간과 두 방화문",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Architectural_Drawing_Book_A2.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\WP0_R9_A2_기술도면집.pdf",
+  "pdf_source_page": 10,
+  "preview_image": "review/wp0_r10_c/previews/ARCH/ARCH_p34_A-533.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 359215,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "R9 시트별",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    50.0,
+    25.0
+   ],
+   "detail": "declared [25.0, 50.0]"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [25.0, 50.0]"
+  ],
+  "known_limitations": [
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 1,
+  "combined_page": 35,
+  "drawing_id": "FRONT-S01",
+  "title": "구조 도면집 표지",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\template\\cover_struct_A3.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p01_FRONT-S01.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 153340,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "n/a",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": [
+   "MISSING_SOURCE: structural model render/perspective",
+   "Team names not provided",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 2,
+  "combined_page": 36,
+  "drawing_id": "FRONT-S02",
+  "title": "설계개요 및 층별 면적표",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "",
+  "pdf_source_page": null,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p02_FRONT-S02.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 507140,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/title_blocks/TB-04_FRONT-S02_p36.jpg"
+  ],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "n/a",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R10-C REF1 generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": []
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 3,
+  "combined_page": 37,
+  "drawing_id": "FRONT-IDX-01",
+  "title": "구조 도면 목록",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "",
+  "pdf_source_page": null,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p03_FRONT-IDX-01.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 401404,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "n/a",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R10-C REF1 generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": []
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 4,
+  "combined_page": 38,
+  "drawing_id": "FRONT-IDX-02",
+  "title": "구조 도면 목록",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "",
+  "pdf_source_page": null,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p04_FRONT-IDX-02.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 263234,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "n/a",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R10-C REF1 generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": []
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 5,
+  "combined_page": 39,
+  "drawing_id": "S-001",
+  "title": "구조 시스템 / 모델 뷰 (축측투영)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-001.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p05_S-001.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 432574,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "NTS (수직 1:500 x cos 28 deg)",
+  "scale_verification": {
+   "verdict": "NO_BAR_NO_MEASUREMENT",
+   "measured_denominators": [],
+   "detail": "declared [500.0]; no scale bar found and no column/dimension measurement"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": [
+   "not to scale in plan directions (axonometric foreshortening); vertical axis verified with the vertical bar",
+   "slab outlines drawn before solids: not an exact hidden-line removal",
+   "actual printed scale NOT verified (no scale bar / no measurable scale feature)",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 6,
+  "combined_page": 40,
+  "drawing_id": "S-101",
+  "title": "B2 구조 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-101.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p06_S-101.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 346060,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "member schedule MISSING_SOURCE (structural design / calculation needed)",
+   "grid X/Y labels and 10 mm-rounded grid spacings are derived from column centres, not from a structural drawing",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 7,
+  "combined_page": 41,
+  "drawing_id": "S-102",
+  "title": "B1 구조 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-102.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p07_S-102.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 367521,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "member schedule MISSING_SOURCE (structural design / calculation needed)",
+   "grid X/Y labels and 10 mm-rounded grid spacings are derived from column centres, not from a structural drawing",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 8,
+  "combined_page": 42,
+  "drawing_id": "S-103",
+  "title": "1F 구조 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-103.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p08_S-103.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 380936,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/title_blocks/TB-03_S-103_p42.jpg",
+   "review/wp0_r10_c/crops/dimension_chains/DC-06_S-103_p42.jpg",
+   "review/wp0_r10_c/crops/structural_member_schedules/MS-01_S-103_p42.jpg",
+   "review/wp0_r10_c/crops/structural_member_schedules/MS-02_S-103_p42.jpg"
+  ],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "member schedule MISSING_SOURCE (structural design / calculation needed)",
+   "grid X/Y labels and 10 mm-rounded grid spacings are derived from column centres, not from a structural drawing",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 9,
+  "combined_page": 43,
+  "drawing_id": "S-104",
+  "title": "2F 구조 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-104.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p09_S-104.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 375468,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "member schedule MISSING_SOURCE (structural design / calculation needed)",
+   "grid X/Y labels and 10 mm-rounded grid spacings are derived from column centres, not from a structural drawing",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 10,
+  "combined_page": 44,
+  "drawing_id": "S-105",
+  "title": "3F 구조 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-105.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p10_S-105.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 374998,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "member schedule MISSING_SOURCE (structural design / calculation needed)",
+   "grid X/Y labels and 10 mm-rounded grid spacings are derived from column centres, not from a structural drawing",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 11,
+  "combined_page": 45,
+  "drawing_id": "S-106",
+  "title": "4F 구조 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-106.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p11_S-106.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 375234,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "member schedule MISSING_SOURCE (structural design / calculation needed)",
+   "grid X/Y labels and 10 mm-rounded grid spacings are derived from column centres, not from a structural drawing",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 12,
+  "combined_page": 46,
+  "drawing_id": "S-107",
+  "title": "5F 구조 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-107.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p12_S-107.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 375015,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "member schedule MISSING_SOURCE (structural design / calculation needed)",
+   "grid X/Y labels and 10 mm-rounded grid spacings are derived from column centres, not from a structural drawing",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 13,
+  "combined_page": 47,
+  "drawing_id": "S-108",
+  "title": "6F 구조 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-108.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p13_S-108.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 381150,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "member schedule MISSING_SOURCE (structural design / calculation needed)",
+   "grid X/Y labels and 10 mm-rounded grid spacings are derived from column centres, not from a structural drawing",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 14,
+  "combined_page": 48,
+  "drawing_id": "S-109",
+  "title": "7F 구조 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-109.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p14_S-109.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 376227,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "member schedule MISSING_SOURCE (structural design / calculation needed)",
+   "grid X/Y labels and 10 mm-rounded grid spacings are derived from column centres, not from a structural drawing",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 15,
+  "combined_page": 49,
+  "drawing_id": "S-110",
+  "title": "8F 구조 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-110.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p15_S-110.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 376378,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "member schedule MISSING_SOURCE (structural design / calculation needed)",
+   "grid X/Y labels and 10 mm-rounded grid spacings are derived from column centres, not from a structural drawing",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 16,
+  "combined_page": 50,
+  "drawing_id": "S-111",
+  "title": "9F 구조 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-111.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p16_S-111.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 376377,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "member schedule MISSING_SOURCE (structural design / calculation needed)",
+   "grid X/Y labels and 10 mm-rounded grid spacings are derived from column centres, not from a structural drawing",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 17,
+  "combined_page": 51,
+  "drawing_id": "S-112",
+  "title": "10F 구조 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-112.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p17_S-112.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 376799,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "member schedule MISSING_SOURCE (structural design / calculation needed)",
+   "grid X/Y labels and 10 mm-rounded grid spacings are derived from column centres, not from a structural drawing",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 18,
+  "combined_page": 52,
+  "drawing_id": "S-113",
+  "title": "11F 구조 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-113.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p18_S-113.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 387840,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "member schedule MISSING_SOURCE (structural design / calculation needed)",
+   "grid X/Y labels and 10 mm-rounded grid spacings are derived from column centres, not from a structural drawing",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 19,
+  "combined_page": 53,
+  "drawing_id": "S-114",
+  "title": "12F 구조 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-114.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p19_S-114.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 387615,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "member schedule MISSING_SOURCE (structural design / calculation needed)",
+   "grid X/Y labels and 10 mm-rounded grid spacings are derived from column centres, not from a structural drawing",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 20,
+  "combined_page": 54,
+  "drawing_id": "S-115",
+  "title": "13F 구조 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-115.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p20_S-115.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 382933,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "member schedule MISSING_SOURCE (structural design / calculation needed)",
+   "grid X/Y labels and 10 mm-rounded grid spacings are derived from column centres, not from a structural drawing",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 21,
+  "combined_page": 55,
+  "drawing_id": "S-116",
+  "title": "14F 구조 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-116.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p21_S-116.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 376846,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "member schedule MISSING_SOURCE (structural design / calculation needed)",
+   "grid X/Y labels and 10 mm-rounded grid spacings are derived from column centres, not from a structural drawing",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 22,
+  "combined_page": 56,
+  "drawing_id": "S-117",
+  "title": "15F 구조 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-117.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p22_S-117.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 387853,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "member schedule MISSING_SOURCE (structural design / calculation needed)",
+   "grid X/Y labels and 10 mm-rounded grid spacings are derived from column centres, not from a structural drawing",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 23,
+  "combined_page": 57,
+  "drawing_id": "S-118",
+  "title": "지붕층 구조 평면도",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-118.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p23_S-118.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 367165,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "member schedule MISSING_SOURCE (structural design / calculation needed)",
+   "grid X/Y labels and 10 mm-rounded grid spacings are derived from column centres, not from a structural drawing",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 24,
+  "combined_page": 58,
+  "drawing_id": "S-203",
+  "title": "1F 슬래브 개구 평면",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-203.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p24_S-203.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 305039,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "opening reinforcement / edge beams not modelled (UNVERIFIED)",
+   "R9 research openings are not drawn here (reference list only)",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 25,
+  "combined_page": 59,
+  "drawing_id": "S-204",
+  "title": "2F 슬래브 개구 평면",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-204.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p25_S-204.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 361650,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "opening reinforcement / edge beams not modelled (UNVERIFIED)",
+   "R9 research openings are not drawn here (reference list only)",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 26,
+  "combined_page": 60,
+  "drawing_id": "S-209",
+  "title": "7F 슬래브 개구 평면",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-209.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p26_S-209.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 398341,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "opening reinforcement / edge beams not modelled (UNVERIFIED)",
+   "R9 research openings are not drawn here (reference list only)",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 27,
+  "combined_page": 61,
+  "drawing_id": "S-210",
+  "title": "8F 슬래브 개구 평면",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-210.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p27_S-210.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 323142,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "opening reinforcement / edge beams not modelled (UNVERIFIED)",
+   "R9 research openings are not drawn here (reference list only)",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 28,
+  "combined_page": 62,
+  "drawing_id": "S-211",
+  "title": "9F 슬래브 개구 평면",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-211.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p28_S-211.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 318238,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "opening reinforcement / edge beams not modelled (UNVERIFIED)",
+   "R9 research openings are not drawn here (reference list only)",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 29,
+  "combined_page": 63,
+  "drawing_id": "S-212",
+  "title": "10F 슬래브 개구 평면",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-212.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p29_S-212.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 319916,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "opening reinforcement / edge beams not modelled (UNVERIFIED)",
+   "R9 research openings are not drawn here (reference list only)",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 30,
+  "combined_page": 64,
+  "drawing_id": "S-213",
+  "title": "11F 슬래브 개구 평면",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-213.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p30_S-213.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 315642,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "opening reinforcement / edge beams not modelled (UNVERIFIED)",
+   "R9 research openings are not drawn here (reference list only)",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 31,
+  "combined_page": 65,
+  "drawing_id": "S-214",
+  "title": "12F 슬래브 개구 평면",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-214.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p31_S-214.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 364341,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "opening reinforcement / edge beams not modelled (UNVERIFIED)",
+   "R9 research openings are not drawn here (reference list only)",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 32,
+  "combined_page": 66,
+  "drawing_id": "S-215",
+  "title": "13F 슬래브 개구 평면",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-215.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p32_S-215.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 317786,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "opening reinforcement / edge beams not modelled (UNVERIFIED)",
+   "R9 research openings are not drawn here (reference list only)",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 33,
+  "combined_page": 67,
+  "drawing_id": "S-216",
+  "title": "14F 슬래브 개구 평면",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-216.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p33_S-216.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 317824,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "opening reinforcement / edge beams not modelled (UNVERIFIED)",
+   "R9 research openings are not drawn here (reference list only)",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 34,
+  "combined_page": 68,
+  "drawing_id": "S-217",
+  "title": "15F 슬래브 개구 평면",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-217.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p34_S-217.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 315584,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "declared [300.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [300.0]"
+  ],
+  "known_limitations": [
+   "opening reinforcement / edge beams not modelled (UNVERIFIED)",
+   "R9 research openings are not drawn here (reference list only)",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 35,
+  "combined_page": 69,
+  "drawing_id": "S-301",
+  "title": "Y4열 골조 입면도 (하부 B2~7F)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-301.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p35_S-301.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 279953,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/structural_member_schedules/MS-03_S-301_p69.jpg"
+  ],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:250",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    250.0
+   ],
+   "detail": "declared [250.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [250.0]"
+  ],
+  "known_limitations": [
+   "beams not modelled",
+   "transfer structure for the +50.500..+61.500 column gap not in GLB",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 36,
+  "combined_page": 70,
+  "drawing_id": "S-302",
+  "title": "Y4열 골조 입면도 (상부 7F~지붕)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-302.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p36_S-302.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 286936,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:250",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    250.0
+   ],
+   "detail": "declared [250.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [250.0]"
+  ],
+  "known_limitations": [
+   "beams not modelled",
+   "transfer structure for the +50.500..+61.500 column gap not in GLB",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 37,
+  "combined_page": 71,
+  "drawing_id": "S-303",
+  "title": "X3열 골조 입면도 (하부 B2~7F)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-303.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p37_S-303.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 278984,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:250",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    250.0
+   ],
+   "detail": "declared [250.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [250.0]"
+  ],
+  "known_limitations": [
+   "beams not modelled",
+   "transfer structure for the +50.500..+61.500 column gap not in GLB",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 38,
+  "combined_page": 72,
+  "drawing_id": "S-304",
+  "title": "X3열 골조 입면도 (상부 7F~지붕)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-304.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p38_S-304.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 288722,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:250",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    250.0
+   ],
+   "detail": "declared [250.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [250.0]"
+  ],
+  "known_limitations": [
+   "beams not modelled",
+   "transfer structure for the +50.500..+61.500 column gap not in GLB",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 39,
+  "combined_page": 73,
+  "drawing_id": "S-305",
+  "title": "골조 입면 개관 (Y4열·X3열)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-305.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p39_S-305.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 420242,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "1:400",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    400.0
+   ],
+   "detail": "declared [400.0]"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [400.0]"
+  ],
+  "known_limitations": [
+   "1:250 full-height elevation not possible on one A3 sheet; drawn at 1:400 here and at 1:250 on S-301..S-304",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 40,
+  "combined_page": 74,
+  "drawing_id": "S-401",
+  "title": "E2 브리지 구조 연구 (R10-A S-401)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-401.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p40_S-401.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 239803,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/bridge_connections/BR-01_S-401_p74.jpg",
+   "review/wp0_r10_c/crops/bridge_connections/BR-02_S-401_p74.jpg"
+  ],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "reduced 1:1.414 print of A2 sheet",
+  "scale_verification": {
+   "verdict": "VERIFIED_REDUCED",
+   "measured_denominators": [
+    141.4,
+    35.4
+   ],
+   "detail": "declared [25.0, 75.0, 100.0] x1.414=['35.4', '106.1', '141.4']"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [25.0, 75.0, 100.0] x1.414=['35.4', '106.1', '141.4']"
+  ],
+  "known_limitations": [
+   "A2 research page reduced to A3 (factor 0.70707): printed scale = stated scale x 1.414",
+   "status PARTIAL by design: see sheet defects"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 41,
+  "combined_page": 75,
+  "drawing_id": "S-402",
+  "title": "2층 코어 D 보행 종단과 교량 횡단 (R9 L-2D)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-402.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p41_S-402.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 239022,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/bridge_connections/BR-03_S-402_p75.jpg"
+  ],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "reduced 1:1.414 print of A2 sheet",
+  "scale_verification": {
+   "verdict": "VERIFIED_REDUCED",
+   "measured_denominators": [
+    70.7,
+    70.7
+   ],
+   "detail": "declared [50.0, 200.0] x1.414=['70.7', '282.8']"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [50.0, 200.0] x1.414=['70.7', '282.8']"
+  ],
+  "known_limitations": [
+   "A2 research page reduced to A3 (factor 0.70707): printed scale = stated scale x 1.414",
+   "status PARTIAL by design: see sheet defects",
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 42,
+  "combined_page": 76,
+  "drawing_id": "S-403",
+  "title": "7층 코어 C 보행 종단과 교량 횡단 (R9 L-7C)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-403.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p42_S-403.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 236264,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "reduced 1:1.414 print of A2 sheet",
+  "scale_verification": {
+   "verdict": "VERIFIED_REDUCED",
+   "measured_denominators": [
+    70.7,
+    70.7
+   ],
+   "detail": "declared [50.0, 200.0] x1.414=['70.7', '282.8']"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [50.0, 200.0] x1.414=['70.7', '282.8']"
+  ],
+  "known_limitations": [
+   "A2 research page reduced to A3 (factor 0.70707): printed scale = stated scale x 1.414",
+   "status PARTIAL by design: see sheet defects",
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 43,
+  "combined_page": 77,
+  "drawing_id": "S-404",
+  "title": "7층 코어 D 보행 종단과 교량 횡단 (R9 L-7D)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-404.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p43_S-404.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 242553,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "reduced 1:1.414 print of A2 sheet",
+  "scale_verification": {
+   "verdict": "VERIFIED_REDUCED",
+   "measured_denominators": [
+    70.7,
+    70.7
+   ],
+   "detail": "declared [50.0, 250.0] x1.414=['70.7', '353.6']"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [50.0, 250.0] x1.414=['70.7', '353.6']"
+  ],
+  "known_limitations": [
+   "A2 research page reduced to A3 (factor 0.70707): printed scale = stated scale x 1.414",
+   "status PARTIAL by design: see sheet defects",
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 44,
+  "combined_page": 78,
+  "drawing_id": "S-405",
+  "title": "2층 슬래브 개구 상세 (R9 C-2F)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-405.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p44_S-405.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 199579,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "reduced 1:1.414 print of A2 sheet",
+  "scale_verification": {
+   "verdict": "VERIFIED_REDUCED",
+   "measured_denominators": [
+    70.7
+   ],
+   "detail": "declared [50.0] x1.414=['70.7']"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [50.0] x1.414=['70.7']"
+  ],
+  "known_limitations": [
+   "A2 research page reduced to A3 (factor 0.70707): printed scale = stated scale x 1.414",
+   "status PARTIAL by design: see sheet defects",
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 45,
+  "combined_page": 79,
+  "drawing_id": "S-406",
+  "title": "3층 슬래브 개구 상세 (R9 C-3F)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-406.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p45_S-406.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 222156,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "reduced 1:1.414 print of A2 sheet",
+  "scale_verification": {
+   "verdict": "VERIFIED_REDUCED",
+   "measured_denominators": [
+    70.7
+   ],
+   "detail": "declared [50.0] x1.414=['70.7']"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [50.0] x1.414=['70.7']"
+  ],
+  "known_limitations": [
+   "A2 research page reduced to A3 (factor 0.70707): printed scale = stated scale x 1.414",
+   "status PARTIAL by design: see sheet defects",
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 46,
+  "combined_page": 80,
+  "drawing_id": "S-407",
+  "title": "8층 슬래브 개구 상세 (R9 C-8F)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-407.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p46_S-407.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 222191,
+  "detail_crops": [],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "reduced 1:1.414 print of A2 sheet",
+  "scale_verification": {
+   "verdict": "VERIFIED_REDUCED",
+   "measured_denominators": [
+    70.7
+   ],
+   "detail": "declared [50.0] x1.414=['70.7']"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [50.0] x1.414=['70.7']"
+  ],
+  "known_limitations": [
+   "A2 research page reduced to A3 (factor 0.70707): printed scale = stated scale x 1.414",
+   "status PARTIAL by design: see sheet defects",
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "STRUCT",
+  "book_file": "WP0_Structural_Drawing_Book_A3.pdf",
+  "page_in_book": 47,
+  "combined_page": 81,
+  "drawing_id": "S-408",
+  "title": "검증 및 구조 검토 장부 (R9 V-02)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Structural_Drawing_Book_A3.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\structural\\S-408.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/STRUCT/STRUCT_p47_S-408.jpg",
+  "preview_px": [
+   2977,
+   2105
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 242241,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/known_defects/KD-09_S-408_p81.jpg"
+  ],
+  "paper_size": "A3 landscape 420x297 mm",
+  "drawing_scale": "reduced 1:1.414 print of A2 sheet",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "PARTIAL",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": [
+   "A2 research page reduced to A3 (factor 0.70707): printed scale = stated scale x 1.414",
+   "status PARTIAL by design: see sheet defects",
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "APPX",
+  "book_file": "WP0_Technical_Verification_Appendix.pdf",
+  "page_in_book": 1,
+  "combined_page": 82,
+  "drawing_id": "APX-01",
+  "title": "2층 가구 배치 전후 비교",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Technical_Verification_Appendix.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\APX-01_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/APPX/APPX_p01_APX-01.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 656268,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:300",
+  "scale_verification": {
+   "verdict": "VERIFIED_COLUMNS",
+   "measured_denominators": [
+    300.0
+   ],
+   "detail": "column markers: modal bay 30.0 mm x 8 -> 1:300.0 (9.0 m bay assumed) (declared [300.0])"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: column markers: modal bay 30.0 mm x 8 -> 1:300.0 (9.0 m bay assumed) (declared [300.0])"
+  ],
+  "known_limitations": []
+ },
+ {
+  "book": "APPX",
+  "book_file": "WP0_Technical_Verification_Appendix.pdf",
+  "page_in_book": 2,
+  "combined_page": 83,
+  "drawing_id": "APX-02",
+  "title": "충돌 확대 전후",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Technical_Verification_Appendix.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\APX-02_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/APPX/APPX_p02_APX-02.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 438653,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/circulation_bottlenecks/CB-05_APX-02_p83.jpg",
+   "review/wp0_r10_c/crops/circulation_bottlenecks/CB-06_APX-02_p83.jpg",
+   "review/wp0_r10_c/crops/circulation_bottlenecks/CB-07_APX-02_p83.jpg",
+   "review/wp0_r10_c/crops/circulation_bottlenecks/CB-08_APX-02_p83.jpg"
+  ],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "1:50",
+  "scale_verification": {
+   "verdict": "VERIFIED_PANELS",
+   "measured_denominators": [
+    50.0
+   ],
+   "detail": "16 square panels 120.1 mm = 6.0 m -> 1:50.0 (declared [50.0])"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: 16 square panels 120.1 mm = 6.0 m -> 1:50.0 (declared [50.0])"
+  ],
+  "known_limitations": []
+ },
+ {
+  "book": "APPX",
+  "book_file": "WP0_Technical_Verification_Appendix.pdf",
+  "page_in_book": 3,
+  "combined_page": 84,
+  "drawing_id": "APX-03",
+  "title": "동선 개정 후 재측정",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Technical_Verification_Appendix.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\APX-03_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/APPX/APPX_p03_APX-03.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 517995,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/circulation_bottlenecks/CB-01_APX-03_p84.jpg",
+   "review/wp0_r10_c/crops/circulation_bottlenecks/CB-02_APX-03_p84.jpg",
+   "review/wp0_r10_c/crops/circulation_bottlenecks/CB-03_APX-03_p84.jpg",
+   "review/wp0_r10_c/crops/circulation_bottlenecks/CB-04_APX-03_p84.jpg"
+  ],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "n/a",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": [
+   "3 raster image(s) on the page"
+  ]
+ },
+ {
+  "book": "APPX",
+  "book_file": "WP0_Technical_Verification_Appendix.pdf",
+  "page_in_book": 4,
+  "combined_page": 85,
+  "drawing_id": "APX-04",
+  "title": "치수 검증과 형상 보존 시험",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Technical_Verification_Appendix.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\APX-04_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/APPX/APPX_p04_APX-04.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 372294,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "n/a",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": []
+ },
+ {
+  "book": "APPX",
+  "book_file": "WP0_Technical_Verification_Appendix.pdf",
+  "page_in_book": 5,
+  "combined_page": 86,
+  "drawing_id": "APX-05a",
+  "title": "미결 사항 등록부",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Technical_Verification_Appendix.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book\\_parts\\reframed\\APX-05a_reframed.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/APPX/APPX_p05_APX-05a.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 454157,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "n/a",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R10-C generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": []
+ },
+ {
+  "book": "APPX",
+  "book_file": "WP0_Technical_Verification_Appendix.pdf",
+  "page_in_book": 6,
+  "combined_page": 87,
+  "drawing_id": "APX-06",
+  "title": "참고 도면집 4권 비교 (건축·공통)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Technical_Verification_Appendix.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "",
+  "pdf_source_page": null,
+  "preview_image": "review/wp0_r10_c/previews/APPX/APPX_p06_APX-06.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 858165,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/known_defects/KD-11_APX-06_p87.jpg"
+  ],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "n/a",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R10-C REF1 generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": []
+ },
+ {
+  "book": "APPX",
+  "book_file": "WP0_Technical_Verification_Appendix.pdf",
+  "page_in_book": 7,
+  "combined_page": 88,
+  "drawing_id": "APX-07",
+  "title": "참고 도면집 4권 비교 (구조·표지·축척)",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Technical_Verification_Appendix.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "",
+  "pdf_source_page": null,
+  "preview_image": "review/wp0_r10_c/previews/APPX/APPX_p07_APX-07.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 579714,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "n/a",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R10-C REF1 generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": []
+ },
+ {
+  "book": "APPX",
+  "book_file": "WP0_Technical_Verification_Appendix.pdf",
+  "page_in_book": 8,
+  "combined_page": 89,
+  "drawing_id": "APX-08",
+  "title": "REF1 반영 내역과 사용자 결정",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Technical_Verification_Appendix.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "",
+  "pdf_source_page": null,
+  "preview_image": "review/wp0_r10_c/previews/APPX/APPX_p08_APX-08.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 697625,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "n/a",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R10-C REF1 generated (worktree r10c-local-assembly @ a571e2b86e0f... + uncommitted tools/r10c)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": []
+ },
+ {
+  "book": "APPX",
+  "book_file": "WP0_Technical_Verification_Appendix.pdf",
+  "page_in_book": 9,
+  "combined_page": 90,
+  "drawing_id": "I-00",
+  "title": "R9 I-00  E2 브리지 · 수직동선 기술 도면집",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Technical_Verification_Appendix.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\WP0_R9_A2_기술도면집.pdf",
+  "pdf_source_page": 1,
+  "preview_image": "review/wp0_r10_c/previews/APPX/APPX_p09_I-00.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 395114,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "R9 시트별",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": [
+   "1 raster image(s) on the page",
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "APPX",
+  "book_file": "WP0_Technical_Verification_Appendix.pdf",
+  "page_in_book": 10,
+  "combined_page": 91,
+  "drawing_id": "A-C",
+  "title": "R9 A-C  코어 C 계단 대안 비교",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Technical_Verification_Appendix.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\WP0_R9_A2_기술도면집.pdf",
+  "pdf_source_page": 11,
+  "preview_image": "review/wp0_r10_c/previews/APPX/APPX_p10_A-C.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 462485,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "R9 시트별",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    50.0
+   ],
+   "detail": "declared [50.0]"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [50.0]"
+  ],
+  "known_limitations": [
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "APPX",
+  "book_file": "WP0_Technical_Verification_Appendix.pdf",
+  "page_in_book": 11,
+  "combined_page": 92,
+  "drawing_id": "A-D",
+  "title": "R9 A-D  코어 D 계단 대안 비교",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Technical_Verification_Appendix.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\WP0_R9_A2_기술도면집.pdf",
+  "pdf_source_page": 12,
+  "preview_image": "review/wp0_r10_c/previews/APPX/APPX_p11_A-D.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 465793,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "R9 시트별",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    50.0
+   ],
+   "detail": "declared [50.0]"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [50.0]"
+  ],
+  "known_limitations": [
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "APPX",
+  "book_file": "WP0_Technical_Verification_Appendix.pdf",
+  "page_in_book": 12,
+  "combined_page": 93,
+  "drawing_id": "S-413",
+  "title": "R9 V-02  검증 및 구조 검토 장부",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Technical_Verification_Appendix.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\WP0_R9_A2_기술도면집.pdf",
+  "pdf_source_page": 21,
+  "preview_image": "review/wp0_r10_c/previews/APPX/APPX_p12_S-413.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 383162,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "R9 시트별",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": [
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "APPX",
+  "book_file": "WP0_Technical_Verification_Appendix.pdf",
+  "page_in_book": 13,
+  "combined_page": 94,
+  "drawing_id": "S-413a",
+  "title": "R9 V-01  문 개방 조건과 통행 직경",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Technical_Verification_Appendix.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\WP0_R9_A2_기술도면집.pdf",
+  "pdf_source_page": 20,
+  "preview_image": "review/wp0_r10_c/previews/APPX/APPX_p13_S-413a.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 416486,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "R9 시트별",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": [
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "APPX",
+  "book_file": "WP0_Technical_Verification_Appendix.pdf",
+  "page_in_book": 14,
+  "combined_page": 95,
+  "drawing_id": "N-2F",
+  "title": "R9 N-2F  2F 통합 보행 평면",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Technical_Verification_Appendix.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\WP0_R9_A2_기술도면집.pdf",
+  "pdf_source_page": 2,
+  "preview_image": "review/wp0_r10_c/previews/APPX/APPX_p14_N-2F.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 349660,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/known_defects/KD-02_N-2F_p95.jpg"
+  ],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "R9 시트별",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "6 word-box overlaps measured on the PDF (R9 source page, unchanged)",
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "APPX",
+  "book_file": "WP0_Technical_Verification_Appendix.pdf",
+  "page_in_book": 15,
+  "combined_page": 96,
+  "drawing_id": "N-7F",
+  "title": "R9 N-7F  7F 통합 보행 평면",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Technical_Verification_Appendix.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\WP0_R9_A2_기술도면집.pdf",
+  "pdf_source_page": 3,
+  "preview_image": "review/wp0_r10_c/previews/APPX/APPX_p15_N-7F.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 377752,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/known_defects/KD-03_N-7F_p96.jpg"
+  ],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "R9 시트별",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    200.0
+   ],
+   "detail": "declared [200.0]"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [200.0]"
+  ],
+  "known_limitations": [
+   "6 word-box overlaps measured on the PDF (R9 source page, unchanged)",
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "APPX",
+  "book_file": "WP0_Technical_Verification_Appendix.pdf",
+  "page_in_book": 16,
+  "combined_page": 97,
+  "drawing_id": "P-2F",
+  "title": "R9 P-2F  2층  접합 위치 대응 투시",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Technical_Verification_Appendix.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\WP0_R9_A2_기술도면집.pdf",
+  "pdf_source_page": 18,
+  "preview_image": "review/wp0_r10_c/previews/APPX/APPX_p16_P-2F.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 366313,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "R9 시트별",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": [
+   "4 raster image(s) on the page",
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "APPX",
+  "book_file": "WP0_Technical_Verification_Appendix.pdf",
+  "page_in_book": 17,
+  "combined_page": 98,
+  "drawing_id": "P-7F",
+  "title": "R9 P-7F  7층  접합 위치 대응 투시",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Technical_Verification_Appendix.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\WP0_R9_A2_기술도면집.pdf",
+  "pdf_source_page": 19,
+  "preview_image": "review/wp0_r10_c/previews/APPX/APPX_p17_P-7F.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 391246,
+  "detail_crops": [],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "R9 시트별",
+  "scale_verification": {
+   "verdict": "NOT_APPLICABLE",
+   "measured_denominators": [],
+   "detail": "no numeric scale declared (cover / index / overview / table sheet)"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs"
+  ],
+  "known_limitations": [
+   "5 raster image(s) on the page",
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ },
+ {
+  "book": "APPX",
+  "book_file": "WP0_Technical_Verification_Appendix.pdf",
+  "page_in_book": 18,
+  "combined_page": 99,
+  "drawing_id": "T-2D",
+  "title": "R9 T-2D  2층 D  접합부 확대 및 보행 기준점",
+  "pdf_in_package": "review/wp0_r10_c/pdf/WP0_Technical_Verification_Appendix.pdf",
+  "combined_pdf_in_package": "review/wp0_r10_c/pdf/WP0_Complete_Drawing_Book.pdf",
+  "pdf_source": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\01_과정\\01_기획_구획_베이스\\WP0_R9_기술도면집\\WP0_R9_A2_기술도면집.pdf",
+  "pdf_source_page": 4,
+  "preview_image": "review/wp0_r10_c/previews/APPX/APPX_p18_T-2D.jpg",
+  "preview_px": [
+   4210,
+   2977
+  ],
+  "preview_dpi": 180,
+  "preview_bytes": 368563,
+  "detail_crops": [
+   "review/wp0_r10_c/crops/bridge_connections/BR-06_T-2D_p99.jpg"
+  ],
+  "paper_size": "A2 landscape 594x420 mm",
+  "drawing_scale": "R9 시트별",
+  "scale_verification": {
+   "verdict": "VERIFIED",
+   "measured_denominators": [
+    50.0,
+    25.0
+   ],
+   "detail": "declared [25.0, 50.0]"
+  },
+  "source_revision": "R9 a7805f3 (unchanged source book, hash 4342a528...)",
+  "status": "COMPLETE",
+  "verification_status": "NOT_INDEPENDENTLY_VERIFIED",
+  "checks_passed": [
+   "page render QA: not blank, no U+FFFD, fonts embedded, sheet references resolve",
+   "glyph coverage QA (Malgun Gothic): 0 missing glyphs",
+   "actual printed scale measured on the PDF: declared [25.0, 50.0]"
+  ],
+  "known_limitations": [
+   "keeps the R9 frame and title block (printed DRAWING NO is the R9 number, e.g. D-2F); NOT in the reference-derived R10-C template"
+  ]
+ }
+]

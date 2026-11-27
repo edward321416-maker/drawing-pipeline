@@ -1,0 +1,19 @@
+{
+ "root": "<STAGE>/review/wp0_r10_c",
+ "files_scanned": {
+  ".md": 6,
+  ".jpg": 162,
+  ".csv": 3,
+  ".json": 18,
+  ".txt": 2,
+  ".png": 6,
+  ".pdf": 4
+ },
+ "findings_by_pattern": {},
+ "files_with_findings": 0,
+ "top_files": [],
+ "examples": {},
+ "result": "PASS: no findings (credentials, e-mail, phone/ID numbers, EXIF, embedded files, local absolute paths, third-party person name)",
+ "scanner": "tools/r10c/audit_publish.py --strict",
+ "initial_package_audit": "before redaction the 200-file package had findings only for local absolute paths (453), the Windows account name (195) and a third-party person's name (28); no credentials, e-mail, phone/ID numbers, EXIF or embedded files. A tool-state folder (.omc) found while building the stage was excluded."
+}

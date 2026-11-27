@@ -1,0 +1,317 @@
+{
+ "note": "Measured from the vector data of four reference drawing books (read-only). No third-party pixels or text are stored. R10-C template = tools/r10c/booktemplate.py (derived from the two 재열지원 books).",
+ "reference_books": {
+  "jaeyeol_arch_A2": {
+   "key": "jaeyeol_arch_A2",
+   "file": "재열지원_건축 도면집 제출자료.pdf",
+   "sha256": "2dda59ba40a22300cb8240709d2847b84743cb15223e44b011b041c65df5c5a1",
+   "pages": 21,
+   "size_mix_mm": {
+    "594x420": 18,
+    "420x594": 3
+   },
+   "plan_sheet_page": 6,
+   "plan_frame": {
+    "page_mm": [
+     594.1,
+     420.2
+    ],
+    "outer_frame_mm": [
+     12.83,
+     9.91,
+     581.15,
+     410.46
+    ],
+    "margins_mm": {
+     "left": 12.83,
+     "top": 9.91,
+     "right": 12.93,
+     "bottom": 9.69
+    },
+    "title_block_divider_right_edge_x_mm": 534.37,
+    "block_width_outer_mm": 46.78
+   },
+   "overview_sheet_page": 2,
+   "overview_has_location_map_1_1000_or_2000": true,
+   "scale_strings_found": [
+    "1 / 140",
+    "1 / 170",
+    "1 / 200",
+    "1 / 300",
+    "1 / 70",
+    "1 / 80",
+    "1/1000",
+    "1/200"
+   ],
+   "level_and_member_tags": {
+    "GL": 72
+   },
+   "images_per_page": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "jaeyeol_struct_A3": {
+   "key": "jaeyeol_struct_A3",
+   "file": "재열지원_구조 도면집 제출자료.pdf",
+   "sha256": "edf6b736ca9a60743c025690913f7364cb00a2e5a9eb32f9cefbe641a59deb15",
+   "pages": 18,
+   "size_mix_mm": {
+    "420x297": 16,
+    "297x420": 1,
+    "677x381": 1
+   },
+   "plan_sheet_page": 3,
+   "plan_frame": {
+    "page_mm": [
+     420.2,
+     297.0
+    ],
+    "outer_frame_mm": [
+     9.06,
+     6.97,
+     410.89,
+     290.18
+    ],
+    "margins_mm": {
+     "left": 9.06,
+     "top": 6.97,
+     "right": 9.27,
+     "bottom": 6.86
+    },
+    "title_block_divider_right_edge_x_mm": 377.82,
+    "block_width_outer_mm": 33.07
+   },
+   "overview_sheet_page": 1,
+   "overview_has_location_map_1_1000_or_2000": true,
+   "scale_strings_found": [
+    "1 / 200",
+    "1 / 240",
+    "1 / 300",
+    "1/1000"
+   ],
+   "level_and_member_tags": {
+    "member_marks": 678,
+    "FL": 2,
+    "GL": 24
+   },
+   "images_per_page": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ]
+  },
+  "jangsan_arch_A2": {
+   "key": "jangsan_arch_A2",
+   "file": "Jangsan_Architecture_A2.pdf",
+   "sha256": "28c4e37b4fc02de12ae9c24646bce88e567b26273722cdd6bd4577e922b57a9f",
+   "pages": 15,
+   "size_mix_mm": {
+    "594x420": 12,
+    "420x594": 3
+   },
+   "plan_sheet_page": 5,
+   "plan_frame": {
+    "page_mm": [
+     594.1,
+     420.2
+    ],
+    "outer_frame_mm": [
+     20.45,
+     13.34,
+     573.79,
+     406.87
+    ],
+    "margins_mm": {
+     "left": 20.45,
+     "top": 13.34,
+     "right": 20.29,
+     "bottom": 13.29
+    },
+    "title_block_divider_right_edge_x_mm": 532.68,
+    "block_width_outer_mm": 41.11
+   },
+   "overview_sheet_page": 2,
+   "overview_has_location_map_1_1000_or_2000": true,
+   "scale_strings_found": [
+    "1 /200",
+    "1/200",
+    "1/2000",
+    "A2 = 1/100",
+    "A2 = 1/140",
+    "A2 = 1/212",
+    "A2 = 1/70",
+    "A3 = 1/200",
+    "A3 = 1/300"
+   ],
+   "level_and_member_tags": {
+    "FL": 26,
+    "SL": 26,
+    "GL": 58
+   },
+   "images_per_page": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "jangsan_struct_A3": {
+   "key": "jangsan_struct_A3",
+   "file": "Jangsan_Structure_A3.pdf",
+   "sha256": "c6d483919bb76a2661cb01a1ef9fb0f693b20d0836e445017ad593dbdabb1e58",
+   "pages": 6,
+   "size_mix_mm": {
+    "420x297": 5,
+    "297x420": 1
+   },
+   "plan_sheet_page": 3,
+   "plan_frame": {
+    "page_mm": [
+     420.2,
+     297.0
+    ],
+    "outer_frame_mm": [
+     14.44,
+     9.34,
+     405.68,
+     287.64
+    ],
+    "margins_mm": {
+     "left": 14.44,
+     "top": 9.34,
+     "right": 14.48,
+     "bottom": 9.4
+    },
+    "title_block_divider_right_edge_x_mm": 376.64,
+    "block_width_outer_mm": 29.04
+   },
+   "overview_sheet_page": 2,
+   "overview_has_location_map_1_1000_or_2000": true,
+   "scale_strings_found": [
+    "1 /200",
+    "1/2000",
+    "A3 = 1/200",
+    "A3 = 1/300"
+   ],
+   "level_and_member_tags": {
+    "member_marks": 307,
+    "SL": 4,
+    "GL": 20
+   },
+   "images_per_page": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    2
+   ]
+  }
+ },
+ "r10c_template": {
+  "A2": {
+   "page_mm": [
+    594.0,
+    420.0
+   ],
+   "outer_frame_mm": [
+    12.83,
+    9.91,
+    581.07,
+    410.3
+   ],
+   "inner_frame_mm": [
+    14.27,
+    11.35,
+    579.63,
+    408.86
+   ],
+   "band_mm": 1.44,
+   "block_x_mm": [
+    534.415,
+    579.63
+   ],
+   "content_rect_mm": [
+    20.27,
+    17.35,
+    527.445,
+    402.86
+   ]
+  },
+  "A3": {
+   "page_mm": [
+    420.0,
+    297.0
+   ],
+   "outer_frame_mm": [
+    9.06,
+    6.97,
+    410.7,
+    290.18
+   ],
+   "inner_frame_mm": [
+    10.03,
+    7.94,
+    409.73,
+    289.21
+   ],
+   "band_mm": 0.97,
+   "block_x_mm": [
+    377.758,
+    409.73
+   ],
+   "content_rect_mm": [
+    14.272,
+    12.182,
+    372.83,
+    284.968
+   ]
+  }
+ }
+}

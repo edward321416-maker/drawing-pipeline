@@ -1,0 +1,13 @@
+{
+ "overview_scale_factor": {
+  "factor": 0.70707
+ },
+ "struct_index_pages": 2,
+ "appendix_new_pages": 3,
+ "generated": "2026-11-27T15:52:22",
+ "baseline_hashes": {
+  "ARCH": "f090cad4fef0320c492e71c0f67869e8d40aafbd7d39b5c74d045faeda90f978",
+  "STRUCT": "a137fd0599b4e0446dfec30d5d400de609481fd0eff4ad8ec90bd7b55e1af8b8",
+  "APPX": "79b19ef1493af731718afa7b48e6444de021efd400f3d97fedadd142a7a7e7b6"
+ }
+}

@@ -1,0 +1,19 @@
+T01 PASS       Original GLB unchanged
+T02 PASS       Approved 1F master unchanged
+T03 PASS       R9 drawing book unchanged
+T04 PASS       PR30 2F source slice unchanged
+T05 PASS       No tracked file outside tools/r10b1 and review/wp0_r10_b1 differs from the pinned R10-B commit (review/wp0_r10_a, review/wp0_r10_b and tools/r10b untouched)
+T06 PASS       26 PR30 rooms: ids, names, areas, provenance equal the R10-A record
+T07 PASS       PR30 item counts per layer equal the R10-A record
+T08 PASS       Plan-defining modules in the worktree are byte-identical to the R7 checkout used by R10-A
+T09 PASS       Every 2F column in the plan sits on a GLB column (<= 5 mm) that exists at z = +6.000
+T10 PASS       Core A-D plan bounds equal the GLB core boxes (<= 10 mm)
+T11 PASS       Tube centres in the plan equal the GLB tube centres (<= 20 mm)
+T12 PASS       Floor levels B2..15F equal the GLB slab tops (<= 1 mm)
+T13 PASS       Roof maximum equals +76.500 m (R10-A record)
+T14 PASS       A-A cut at X = -4.200 reproduces all 26 R10-A recorded cuts (<= 20 mm)
+T15 PASS       R8 research bridge cuts in A-A equal the R10-A record
+T16 PASS       Core D landing mismatch (176.07 mm) and E2 bridge evidence carried unchanged; A-501 and S-401 not regenerated
+T17 PASS       Fit-out generation leaves every PR30 item and room polygon byte-identical
+T18 PASS       Remediation (existing-furniture revision candidate) leaves every PR30 item and room polygon byte-identical
+SUMMARY {'PASS': 18, 'FAIL': 0, 'NOT_TESTED': 0} -> <USER_HOME>\Desktop\2학기 논문\도면\WP0_Complete_Drawing_Book_RefIntegrated\_parts\qa_preservation_REF1.json

@@ -1,0 +1,72 @@
+[
+ {
+  "step": "security gate",
+  "how": "gh api repos/... (authenticated metadata)",
+  "result": "private=False visibility=public -> FAIL, remote writes blocked"
+ },
+ {
+  "step": "reference discovery",
+  "how": "drive-wide PDF search + Kakao folder + zip listing",
+  "result": "no loose '-복사' PDF; two PDFs inside Jangsan_reference_archive.zip (zip CRC verified, testzip None)"
+ },
+ {
+  "step": "reference ingest",
+  "how": "byte-exact extraction into a new empty directory (cp437->cp949 name decoding)",
+  "result": "Jangsan_Architecture_A2.pdf 15p sha256 28c4e37b4fc02de1; Jangsan_Structure_A3.pdf 6p sha256 c6d483919bb76a26"
+ },
+ {
+  "step": "reference study",
+  "how": "rendered 21 pages at 75 dpi, viewed key pages; vector measurement via measure_refs_jangsan.py and ref_spec.py",
+  "result": "reference_template_spec.json, reference_measurements_jangsan.json"
+ },
+ {
+  "step": "revision build",
+  "how": "tools/r10c/revision_ref1.py",
+  "result": "ARCH unchanged (byte-identical); STRUCT 47p (+FRONT-S02, index regenerated); APPX 18p (+APX-06/07/08, reordered); COMBINED 99p"
+ },
+ {
+  "step": "full-book QA",
+  "how": "qa_book.py on the combined PDF",
+  "result": "{\"pages\": 99, \"sizes\": {\"594x420\": 48, \"420x594\": 4, \"420x297\": 47}, \"blank\": 0, \"with_replacement_char\": 0, \"pages_with_overlaps\": 2, \"pages_with_unresolved_refs\": 0, \"pages_with_raster\": 5, \"plan_scale_measured\": 16, \"issue_count\": 2}"
+ },
+ {
+  "step": "glyph QA",
+  "how": "qa_glyphs.py (new): Malgun cmap check",
+  "result": "15342 spans, pages with missing glyphs: 0 (a U+2212 minus sign that rendered as a box was found in the new pages and replaced before this run)"
+ },
+ {
+  "step": "preservation tests",
+  "how": "validate_preservation_r10c.py",
+  "result": "{\"PASS\": 18, \"FAIL\": 0, \"NOT_TESTED\": 0}"
+ },
+ {
+  "step": "review package",
+  "how": "tools/r10c/package_ref1.py",
+  "result": "99 previews @180 dpi, 54 crops, 9 contact sheets, page_map.csv/json"
+ },
+ {
+  "step": "publication authorisation",
+  "how": "user message (pasted brief): repository intentionally PUBLIC, upload of the prepared package authorised",
+  "result": "private-only gate removed for this repository; visibility not changed"
+ },
+ {
+  "step": "repository identity",
+  "how": "gh api repos/edward321416-maker/drawing-pipeline",
+  "result": "id 1444171753, owner edward321416-maker, push permission, matches origin fetch URL; push URL restored"
+ },
+ {
+  "step": "publication audit",
+  "how": "tools/r10c/audit_publish.py on the 200-file package, then on the redacted stage",
+  "result": "no credentials / e-mail / phone / ID numbers / EXIF / embedded files; local paths and one third-party name found in evidence text -> redacted"
+ },
+ {
+  "step": "handoff QA",
+  "how": "tools/r10c/handoff_qa_ref1.py, qa_scale_bars.py",
+  "result": "reference frames agree with the handoff within 0.05 mm (A,B,D hashes equal, C differs); 79 pages scale-verified, 0 mismatches; route 5 widths reconciled"
+ },
+ {
+  "step": "withheld",
+  "how": "reference PDFs",
+  "result": "Jangsan A2/A3 PDFs and extraction report not published (redistribution rights not verified)"
+ }
+]

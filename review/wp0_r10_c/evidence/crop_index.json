@@ -1,0 +1,1085 @@
+{
+ "crops": [
+  {
+   "id": "TB-01",
+   "category": "title_blocks",
+   "sheet": "A-201",
+   "combined_page": 8,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\title_blocks\\TB-01_A-201_p08.jpg",
+   "px": [
+    373,
+    2993
+   ],
+   "dpi": 189,
+   "region_mm": [
+    533,
+    9,
+    583,
+    411
+   ],
+   "caption": "A2 landscape title block (R10-C template, reference-derived)",
+   "bytes": 85603
+  },
+  {
+   "id": "TB-02",
+   "category": "title_blocks",
+   "sheet": "A-402",
+   "combined_page": 26,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\title_blocks\\TB-02_A-402_p26.jpg",
+   "px": [
+    2991,
+    356
+   ],
+   "dpi": 188,
+   "region_mm": [
+    8,
+    538,
+    412,
+    586
+   ],
+   "caption": "A2 portrait title block (block on the bottom edge)",
+   "bytes": 59443
+  },
+  {
+   "id": "TB-03",
+   "category": "title_blocks",
+   "sheet": "S-103",
+   "combined_page": 42,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\title_blocks\\TB-03_S-103_p42.jpg",
+   "px": [
+    427,
+    2995
+   ],
+   "dpi": 264,
+   "region_mm": [
+    372,
+    5,
+    413,
+    293
+   ],
+   "caption": "A3 landscape title block (A2 layout x 0.7071)",
+   "bytes": 117858
+  },
+  {
+   "id": "TB-04",
+   "category": "title_blocks",
+   "sheet": "FRONT-S02",
+   "combined_page": 36,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\title_blocks\\TB-04_FRONT-S02_p36.jpg",
+   "px": [
+    427,
+    2995
+   ],
+   "dpi": 264,
+   "region_mm": [
+    372,
+    5,
+    413,
+    293
+   ],
+   "caption": "A3 title block on the new structural overview (SIZE field A3 1:1)",
+   "bytes": 106739
+  },
+  {
+   "id": "RT-01",
+   "category": "room_tags",
+   "sheet": "A-201",
+   "combined_page": 8,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\room_tags\\RT-01_A-201_p08.jpg",
+   "px": [
+    1087,
+    615
+   ],
+   "dpi": 300,
+   "region_mm": [
+    42.9,
+    146.1,
+    134.9,
+    198.1
+   ],
+   "caption": "In-plan room tags 2-08/2-09 with door widths (west rooms)",
+   "bytes": 49320
+  },
+  {
+   "id": "RT-02",
+   "category": "room_tags",
+   "sheet": "A-201",
+   "combined_page": 8,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\room_tags\\RT-02_A-201_p08.jpg",
+   "px": [
+    1961,
+    686
+   ],
+   "dpi": 300,
+   "region_mm": [
+    389.6,
+    36.8,
+    555.6,
+    94.8
+   ],
+   "caption": "2F room schedule header: number, name, size, area, CH (CH 미확인)",
+   "bytes": 83982
+  },
+  {
+   "id": "RT-03",
+   "category": "room_tags",
+   "sheet": "A-201",
+   "combined_page": 8,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\room_tags\\RT-03_A-201_p08.jpg",
+   "px": [
+    1773,
+    1182
+   ],
+   "dpi": 300,
+   "region_mm": [
+    180,
+    150,
+    330,
+    250
+   ],
+   "caption": "Dining hall centre: furniture candidate and room tag 2-10",
+   "bytes": 129495
+  },
+  {
+   "id": "RT-04",
+   "category": "room_tags",
+   "sheet": "A-103",
+   "combined_page": 7,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\room_tags\\RT-04_A-103_p07.jpg",
+   "px": [
+    2998,
+    1555
+   ],
+   "dpi": 282,
+   "region_mm": [
+    60,
+    60,
+    330,
+    200
+   ],
+   "caption": "1F plan (approved-master-derived) upper half",
+   "bytes": 221282
+  },
+  {
+   "id": "RT-05",
+   "category": "room_tags",
+   "sheet": "A-214",
+   "combined_page": 21,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\room_tags\\RT-05_A-214_p21.jpg",
+   "px": [
+    2998,
+    1555
+   ],
+   "dpi": 282,
+   "region_mm": [
+    60,
+    60,
+    330,
+    200
+   ],
+   "caption": "15F plan upper half",
+   "bytes": 316845
+  },
+  {
+   "id": "DC-01",
+   "category": "dimension_chains",
+   "sheet": "A-201",
+   "combined_page": 8,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\dimension_chains\\DC-01_A-201_p08.jpg",
+   "px": [
+    2997,
+    463
+   ],
+   "dpi": 267,
+   "region_mm": [
+    60,
+    38,
+    345,
+    82
+   ],
+   "caption": "A-201 top grid chain and overall dimension (52,800)",
+   "bytes": 78120
+  },
+  {
+   "id": "DC-02",
+   "category": "dimension_chains",
+   "sheet": "A-201",
+   "combined_page": 8,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\dimension_chains\\DC-02_A-201_p08.jpg",
+   "px": [
+    629,
+    3000
+   ],
+   "dpi": 275,
+   "region_mm": [
+    14,
+    68,
+    72,
+    345
+   ],
+   "caption": "A-201 left grid chain and overall dimension",
+   "bytes": 94163
+  },
+  {
+   "id": "DC-03",
+   "category": "dimension_chains",
+   "sheet": "A-201",
+   "combined_page": 8,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\dimension_chains\\DC-03_A-201_p08.jpg",
+   "px": [
+    1112,
+    592
+   ],
+   "dpi": 300,
+   "region_mm": [
+    81.6,
+    74.4,
+    175.6,
+    124.4
+   ],
+   "caption": "A-201 door-opening dimensions",
+   "bytes": 48438
+  },
+  {
+   "id": "DC-04",
+   "category": "dimension_chains",
+   "sheet": "A-301",
+   "combined_page": 23,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\dimension_chains\\DC-04_A-301_p23.jpg",
+   "px": [
+    2998,
+    423
+   ],
+   "dpi": 282,
+   "region_mm": [
+    60,
+    14,
+    330,
+    52
+   ],
+   "caption": "A-301 grid chain over the section",
+   "bytes": 47544
+  },
+  {
+   "id": "DC-05",
+   "category": "dimension_chains",
+   "sheet": "A-301",
+   "combined_page": 23,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\dimension_chains\\DC-05_A-301_p23.jpg",
+   "px": [
+    898,
+    2989
+   ],
+   "dpi": 215,
+   "region_mm": [
+    14,
+    52,
+    120,
+    405
+   ],
+   "caption": "A-301 level tags and storey heights",
+   "bytes": 143719
+  },
+  {
+   "id": "DC-06",
+   "category": "dimension_chains",
+   "sheet": "S-103",
+   "combined_page": 42,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\dimension_chains\\DC-06_S-103_p42.jpg",
+   "px": [
+    2304,
+    356
+   ],
+   "dpi": 300,
+   "region_mm": [
+    120,
+    22,
+    315,
+    52
+   ],
+   "caption": "S-103 structural grid chain",
+   "bytes": 32925
+  },
+  {
+   "id": "CD-01",
+   "category": "core_details",
+   "sheet": "A-501",
+   "combined_page": 29,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\core_details\\CD-01_A-501_p29.jpg",
+   "px": [
+    3001,
+    1873
+   ],
+   "dpi": 249,
+   "region_mm": [
+    14,
+    14,
+    320,
+    205
+   ],
+   "caption": "A-501 core D plan (1:50, research form)",
+   "bytes": 188411
+  },
+  {
+   "id": "CD-02",
+   "category": "core_details",
+   "sheet": "A-501",
+   "combined_page": 29,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\core_details\\CD-02_A-501_p29.jpg",
+   "px": [
+    1796,
+    2988
+   ],
+   "dpi": 194,
+   "region_mm": [
+    300,
+    14,
+    535,
+    405
+   ],
+   "caption": "A-501 core D section and notes",
+   "bytes": 152946
+  },
+  {
+   "id": "CD-03",
+   "category": "core_details",
+   "sheet": "A-521",
+   "combined_page": 30,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\core_details\\CD-03_A-521_p30.jpg",
+   "px": [
+    2459,
+    2998
+   ],
+   "dpi": 258,
+   "region_mm": [
+    30,
+    50,
+    272,
+    345
+   ],
+   "caption": "A-521 2F escalator landing, alighting side: plan 01 and capsule/deck section S1 (R9, 1:50)",
+   "bytes": 151524
+  },
+  {
+   "id": "CD-04",
+   "category": "core_details",
+   "sheet": "A-521",
+   "combined_page": 30,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\core_details\\CD-04_A-521_p30.jpg",
+   "px": [
+    2489,
+    2998
+   ],
+   "dpi": 258,
+   "region_mm": [
+    275,
+    50,
+    520,
+    345
+   ],
+   "caption": "A-521 2F escalator landing, boarding side: plan 02 and section S2 (R9, 1:50)",
+   "bytes": 154134
+  },
+  {
+   "id": "CD-05",
+   "category": "core_details",
+   "sheet": "A-522",
+   "combined_page": 31,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\core_details\\CD-05_A-522_p31.jpg",
+   "px": [
+    2459,
+    2998
+   ],
+   "dpi": 258,
+   "region_mm": [
+    30,
+    50,
+    272,
+    345
+   ],
+   "caption": "A-522 7F escalator landing, alighting side (R9, 1:50)",
+   "bytes": 161409
+  },
+  {
+   "id": "CD-06",
+   "category": "core_details",
+   "sheet": "A-522",
+   "combined_page": 31,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\core_details\\CD-06_A-522_p31.jpg",
+   "px": [
+    2489,
+    2998
+   ],
+   "dpi": 258,
+   "region_mm": [
+    275,
+    50,
+    520,
+    345
+   ],
+   "caption": "A-522 7F escalator landing, boarding side (R9, 1:50)",
+   "bytes": 158917
+  },
+  {
+   "id": "SD-01",
+   "category": "section_details",
+   "sheet": "A-302",
+   "combined_page": 24,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\section_details\\SD-01_A-302_p24.jpg",
+   "px": [
+    1607,
+    1607
+   ],
+   "dpi": 300,
+   "region_mm": [
+    300,
+    262,
+    436,
+    398
+   ],
+   "caption": "A-302 detail D1: west capsule / escalator connection 4F-2F (B-B enlarged 1:100)",
+   "bytes": 86212
+  },
+  {
+   "id": "SD-02",
+   "category": "section_details",
+   "sheet": "A-301",
+   "combined_page": 23,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\section_details\\SD-02_A-301_p23.jpg",
+   "px": [
+    1655,
+    828
+   ],
+   "dpi": 300,
+   "region_mm": [
+    260,
+    315,
+    400,
+    385
+   ],
+   "caption": "A-301 sunken court section",
+   "bytes": 39821
+  },
+  {
+   "id": "SD-03",
+   "category": "section_details",
+   "sheet": "A-301",
+   "combined_page": 23,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\section_details\\SD-03_A-301_p23.jpg",
+   "px": [
+    2718,
+    532
+   ],
+   "dpi": 300,
+   "region_mm": [
+    170,
+    195,
+    400,
+    240
+   ],
+   "caption": "A-301 7F bridge cut and callout",
+   "bytes": 61102
+  },
+  {
+   "id": "CB-01",
+   "category": "circulation_bottlenecks",
+   "sheet": "APX-03",
+   "combined_page": 84,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\circulation_bottlenecks\\CB-01_APX-03_p84.jpg",
+   "px": [
+    2992,
+    360
+   ],
+   "dpi": 217,
+   "region_mm": [
+    20,
+    20,
+    370,
+    62
+   ],
+   "caption": "Re-measurement table: routes 5 / 11 / 13, before and after",
+   "bytes": 108156
+  },
+  {
+   "id": "CB-02",
+   "category": "circulation_bottlenecks",
+   "sheet": "APX-03",
+   "combined_page": 84,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\circulation_bottlenecks\\CB-02_APX-03_p84.jpg",
+   "px": [
+    1915,
+    1938
+   ],
+   "dpi": 300,
+   "region_mm": [
+    22,
+    66,
+    184,
+    230
+   ],
+   "caption": "Route 5 after revision: 1.26 m physical throat (unresolved)",
+   "bytes": 198248
+  },
+  {
+   "id": "CB-03",
+   "category": "circulation_bottlenecks",
+   "sheet": "APX-03",
+   "combined_page": 84,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\circulation_bottlenecks\\CB-03_APX-03_p84.jpg",
+   "px": [
+    1879,
+    1938
+   ],
+   "dpi": 300,
+   "region_mm": [
+    195,
+    66,
+    354,
+    230
+   ],
+   "caption": "Route 11 after revision: samples still inside existing furniture",
+   "bytes": 173353
+  },
+  {
+   "id": "CB-04",
+   "category": "circulation_bottlenecks",
+   "sheet": "APX-03",
+   "combined_page": 84,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\circulation_bottlenecks\\CB-04_APX-03_p84.jpg",
+   "px": [
+    1878,
+    1938
+   ],
+   "dpi": 300,
+   "region_mm": [
+    365,
+    66,
+    524,
+    230
+   ],
+   "caption": "Route 13 after revision: samples still inside existing furniture",
+   "bytes": 221360
+  },
+  {
+   "id": "CB-05",
+   "category": "circulation_bottlenecks",
+   "sheet": "APX-02",
+   "combined_page": 83,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\circulation_bottlenecks\\CB-05_APX-02_p83.jpg",
+   "px": [
+    1441,
+    2997
+   ],
+   "dpi": 295,
+   "region_mm": [
+    18,
+    30,
+    142,
+    288
+   ],
+   "caption": "Collision finding F-011 long counter and column: before (top) / after (bottom), 1:50",
+   "bytes": 127365
+  },
+  {
+   "id": "CB-06",
+   "category": "circulation_bottlenecks",
+   "sheet": "APX-02",
+   "combined_page": 83,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\circulation_bottlenecks\\CB-06_APX-02_p83.jpg",
+   "px": [
+    1441,
+    2997
+   ],
+   "dpi": 295,
+   "region_mm": [
+    145,
+    30,
+    269,
+    288
+   ],
+   "caption": "Collision finding F-002 4-seat table and long table: before (top) / after (bottom), 1:50",
+   "bytes": 103306
+  },
+  {
+   "id": "CB-07",
+   "category": "circulation_bottlenecks",
+   "sheet": "APX-02",
+   "combined_page": 83,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\circulation_bottlenecks\\CB-07_APX-02_p83.jpg",
+   "px": [
+    1441,
+    2997
+   ],
+   "dpi": 295,
+   "region_mm": [
+    272,
+    30,
+    396,
+    288
+   ],
+   "caption": "Collision finding F-006 rain-zone and prep strip: before (top) / after (bottom), 1:50",
+   "bytes": 253059
+  },
+  {
+   "id": "CB-08",
+   "category": "circulation_bottlenecks",
+   "sheet": "APX-02",
+   "combined_page": 83,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\circulation_bottlenecks\\CB-08_APX-02_p83.jpg",
+   "px": [
+    1441,
+    2997
+   ],
+   "dpi": 295,
+   "region_mm": [
+    399,
+    30,
+    523,
+    288
+   ],
+   "caption": "Collision finding F-015 furniture in a 3 m walkway: before (top) / after (bottom), 1:50",
+   "bytes": 85709
+  },
+  {
+   "id": "BR-01",
+   "category": "bridge_connections",
+   "sheet": "S-401",
+   "combined_page": 74,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\bridge_connections\\BR-01_S-401_p74.jpg",
+   "px": [
+    2035,
+    2999
+   ],
+   "dpi": 272,
+   "region_mm": [
+    10,
+    10,
+    200,
+    290
+   ],
+   "caption": "S-401 E2 bridge study (A2 reduced to A3), left half",
+   "bytes": 194518
+  },
+  {
+   "id": "BR-02",
+   "category": "bridge_connections",
+   "sheet": "S-401",
+   "combined_page": 74,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\bridge_connections\\BR-02_S-401_p74.jpg",
+   "px": [
+    1950,
+    2999
+   ],
+   "dpi": 272,
+   "region_mm": [
+    190,
+    10,
+    372,
+    290
+   ],
+   "caption": "S-401 E2 bridge study, right half",
+   "bytes": 160419
+  },
+  {
+   "id": "BR-03",
+   "category": "bridge_connections",
+   "sheet": "S-402",
+   "combined_page": 75,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\bridge_connections\\BR-03_S-402_p75.jpg",
+   "px": [
+    2994,
+    2316
+   ],
+   "dpi": 210,
+   "region_mm": [
+    10,
+    10,
+    372,
+    290
+   ],
+   "caption": "S-402 2F core D walking section and bridge cross-section (reduced)",
+   "bytes": 236288
+  },
+  {
+   "id": "BR-04",
+   "category": "bridge_connections",
+   "sheet": "A-531",
+   "combined_page": 32,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\bridge_connections\\BR-04_A-531_p32.jpg",
+   "px": [
+    2467,
+    2995
+   ],
+   "dpi": 227,
+   "region_mm": [
+    14,
+    40,
+    290,
+    375
+   ],
+   "caption": "A-531 2F D railing and two fire doors (left)",
+   "bytes": 190655
+  },
+  {
+   "id": "BR-05",
+   "category": "bridge_connections",
+   "sheet": "A-531",
+   "combined_page": 32,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\bridge_connections\\BR-05_A-531_p32.jpg",
+   "px": [
+    2370,
+    2995
+   ],
+   "dpi": 227,
+   "region_mm": [
+    270,
+    40,
+    535,
+    375
+   ],
+   "caption": "A-531 2F D railing and two fire doors (right)",
+   "bytes": 157412
+  },
+  {
+   "id": "BR-06",
+   "category": "bridge_connections",
+   "sheet": "T-2D",
+   "combined_page": 99,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\bridge_connections\\BR-06_T-2D_p99.jpg",
+   "px": [
+    2109,
+    2988
+   ],
+   "dpi": 194,
+   "region_mm": [
+    14,
+    14,
+    290,
+    405
+   ],
+   "caption": "T-2D 2F core D joint enlargement (left)",
+   "bytes": 197569
+  },
+  {
+   "id": "BR-07",
+   "category": "bridge_connections",
+   "sheet": "A-301",
+   "combined_page": 23,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\bridge_connections\\BR-07_A-301_p23.jpg",
+   "px": [
+    2718,
+    414
+   ],
+   "dpi": 300,
+   "region_mm": [
+    170,
+    305,
+    400,
+    340
+   ],
+   "caption": "A-301 2F bridge cut and callout",
+   "bytes": 56114
+  },
+  {
+   "id": "MS-01",
+   "category": "structural_member_schedules",
+   "sheet": "S-103",
+   "combined_page": 42,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\structural_member_schedules\\MS-01_S-103_p42.jpg",
+   "px": [
+    1229,
+    1654
+   ],
+   "dpi": 300,
+   "region_mm": [
+    14,
+    10,
+    118,
+    150
+   ],
+   "caption": "S-103 member list panel (MISSING_SOURCE), legend and basis",
+   "bytes": 167633
+  },
+  {
+   "id": "MS-02",
+   "category": "structural_member_schedules",
+   "sheet": "S-103",
+   "combined_page": 42,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\structural_member_schedules\\MS-02_S-103_p42.jpg",
+   "px": [
+    851,
+    1182
+   ],
+   "dpi": 300,
+   "region_mm": [
+    300,
+    40,
+    372,
+    140
+   ],
+   "caption": "S-103 floor-data box (GLB-computed)",
+   "bytes": 80025
+  },
+  {
+   "id": "MS-03",
+   "category": "structural_member_schedules",
+   "sheet": "S-301",
+   "combined_page": 69,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\structural_member_schedules\\MS-03_S-301_p69.jpg",
+   "px": [
+    2994,
+    2316
+   ],
+   "dpi": 210,
+   "region_mm": [
+    10,
+    10,
+    372,
+    290
+   ],
+   "caption": "S-301 Y4 frame elevation with level tags (no member marks)",
+   "bytes": 260032
+  },
+  {
+   "id": "KD-01",
+   "category": "known_defects",
+   "sheet": "A-501",
+   "combined_page": 29,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\known_defects\\KD-01_A-501_p29.jpg",
+   "px": [
+    1938,
+    686
+   ],
+   "dpi": 300,
+   "region_mm": [
+    160.6,
+    40.2,
+    324.6,
+    98.2
+   ],
+   "caption": "A-501 core D stair-run table (6 risers x 176.47 mm). The HD-01 landing mismatch (176.07 mm) is NOT printed on this sheet (searched 176.07, HD-01, unresolved, mismatch); it is carried in the registers only",
+   "bytes": 46448
+  },
+  {
+   "id": "KD-02",
+   "category": "known_defects",
+   "sheet": "N-2F",
+   "combined_page": 95,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\known_defects\\KD-02_N-2F_p95.jpg",
+   "px": [
+    828,
+    331
+   ],
+   "dpi": 300,
+   "region_mm": [
+    452,
+    364,
+    522,
+    392
+   ],
+   "caption": "R9 N-2F: the text layer holds a second, masked title (2층 통합 보행 평면도 / A2 SCALE 1:200) under the visible one; the page renders clean, the 6 measured overlaps are visible-vs-masked text (R9 source page, unchanged)",
+   "bytes": 12671
+  },
+  {
+   "id": "KD-03",
+   "category": "known_defects",
+   "sheet": "N-7F",
+   "combined_page": 96,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\known_defects\\KD-03_N-7F_p96.jpg",
+   "px": [
+    828,
+    331
+   ],
+   "dpi": 300,
+   "region_mm": [
+    452,
+    364,
+    522,
+    392
+   ],
+   "caption": "R9 N-7F: same masked duplicate title in the text layer; renders clean (R9 source page, unchanged)",
+   "bytes": 12378
+  },
+  {
+   "id": "KD-04",
+   "category": "known_defects",
+   "sheet": "A-103",
+   "combined_page": 7,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\known_defects\\KD-04_A-103_p07.jpg",
+   "px": [
+    2997,
+    442
+   ],
+   "dpi": 267,
+   "region_mm": [
+    60,
+    24,
+    345,
+    66
+   ],
+   "caption": "A-103 grid labels (master has 1-7 along x; other sheets A-G): axis-label swap, user decision",
+   "bytes": 43730
+  },
+  {
+   "id": "KD-05",
+   "category": "known_defects",
+   "sheet": "FRONT-01",
+   "combined_page": 1,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\known_defects\\KD-05_FRONT-01_p01.jpg",
+   "px": [
+    2670,
+    237
+   ],
+   "dpi": 300,
+   "region_mm": [
+    14,
+    298,
+    240,
+    318
+   ],
+   "caption": "Cover render caption: AI-retouched, human approval pending",
+   "bytes": 42256
+  },
+  {
+   "id": "KD-06",
+   "category": "known_defects",
+   "sheet": "A-402",
+   "combined_page": 26,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\known_defects\\KD-06_A-402_p26.jpg",
+   "px": [
+    2198,
+    308
+   ],
+   "dpi": 300,
+   "region_mm": [
+    14.0,
+    497.9,
+    200.0,
+    523.9
+   ],
+   "caption": "A-402 east elevation title (face is 116.8 deg from north, E/S naming decision)",
+   "bytes": 35309
+  },
+  {
+   "id": "KD-07",
+   "category": "known_defects",
+   "sheet": "A-100",
+   "combined_page": 4,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\known_defects\\KD-07_A-100_p04.jpg",
+   "px": [
+    1768,
+    2999
+   ],
+   "dpi": 272,
+   "region_mm": [
+    370,
+    20,
+    535,
+    300
+   ],
+   "caption": "A-100 legend: new hatches (grove / passage / sunken court / fire lane) await review",
+   "bytes": 243212
+  },
+  {
+   "id": "KD-08",
+   "category": "known_defects",
+   "sheet": "FRONT-02",
+   "combined_page": 2,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\known_defects\\KD-08_FRONT-02_p02.jpg",
+   "px": [
+    1655,
+    521
+   ],
+   "dpi": 300,
+   "region_mm": [
+    8.0,
+    135.9,
+    148.0,
+    179.9
+   ],
+   "caption": "FRONT-02: 1F slice 2,560.2 m2 vs approved master 1,894.1 m2 (flagged difference)",
+   "bytes": 67086
+  },
+  {
+   "id": "KD-09",
+   "category": "known_defects",
+   "sheet": "S-408",
+   "combined_page": 81,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\known_defects\\KD-09_S-408_p81.jpg",
+   "px": [
+    2992,
+    125
+   ],
+   "dpi": 262,
+   "region_mm": [
+    10,
+    285,
+    300,
+    297
+   ],
+   "caption": "Reduced A2 research page stamp (printed scale = stated x 1.414)",
+   "bytes": 23360
+  },
+  {
+   "id": "KD-10",
+   "category": "known_defects",
+   "sheet": "A-201",
+   "combined_page": 8,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\known_defects\\KD-10_A-201_p08.jpg",
+   "px": [
+    1914,
+    639
+   ],
+   "dpi": 300,
+   "region_mm": [
+    392.0,
+    36.5,
+    554.0,
+    90.5
+   ],
+   "caption": "Ceiling height (CH) column: every room 미확인 (no verified source)",
+   "bytes": 74283
+  },
+  {
+   "id": "KD-12",
+   "category": "known_defects",
+   "sheet": "A-521",
+   "combined_page": 30,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\known_defects\\KD-12_A-521_p30.jpg",
+   "px": [
+    483,
+    3001
+   ],
+   "dpi": 245,
+   "region_mm": [
+    533,
+    100,
+    583,
+    411
+   ],
+   "caption": "A-521 keeps the R9 title block: printed DRAWING NO is D-2F (R9), not A-521; 22 of 99 pages are R9-framed, not the reference-derived template",
+   "bytes": 101112
+  },
+  {
+   "id": "KD-11",
+   "category": "known_defects",
+   "sheet": "APX-06",
+   "combined_page": 87,
+   "path": "<USER_HOME>\\Desktop\\2학기 논문\\도면\\WP0_Complete_Drawing_Book_RefIntegrated\\review_package\\review\\wp0_r10_c\\crops\\known_defects\\KD-11_APX-06_p87.jpg",
+   "px": [
+    3078,
+    627
+   ],
+   "dpi": 150,
+   "region_mm": [
+    14,
+    14,
+    535,
+    120
+   ],
+   "caption": "REF1 comparison table header and first rows (pending decisions D-REF-1..5 on APX-08)",
+   "bytes": 338925
+  }
+ ],
+ "not_produced": []
+}

@@ -1,0 +1,2261 @@
+{
+ "arch": {
+  "file": "Jangsan_Architecture_A2.pdf",
+  "sha256": "28c4e37b4fc02de12ae9c24646bce88e567b26273722cdd6bd4577e922b57a9f",
+  "pages": 15,
+  "page_records": [
+   {
+    "page": 1,
+    "display_mm": [
+     594.1,
+     420.2
+    ],
+    "orientation": "landscape",
+    "rotate": 0,
+    "images": [
+     {
+      "bbox_layout_mm": [
+       24.17,
+       17.02,
+       529.76,
+       403.1
+      ],
+      "px": [
+       2742,
+       2094
+      ],
+      "dpi_effective": 138.0
+     }
+    ],
+    "frame_rects": [],
+    "view_titles": [],
+    "scale_strings": [
+     "1 /200"
+    ],
+    "n_drawings": 108,
+    "n_spans": 45,
+    "fonts": {
+     "YDIYGO310|8.05": 9,
+     "YDIYGO310|7.92": 8,
+     "YDIYGO310|7.01": 6,
+     "YDIYGO310|6.4": 5,
+     "YDIYGO320|9.17": 5,
+     "YDIYGO310|6.09": 4,
+     "YDIYGO310|7.0": 2,
+     "YDIYGO320|9.15": 2,
+     "YDIYGO320|12.22": 2,
+     "YDIYGO320|15.28": 1,
+     "YDIYGO310|9.13": 1
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 97,
+      "length_mm": 5354.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 5,
+      "length_mm": 2448.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 1,
+      "length_mm": 1020.0
+     }
+    ],
+    "fill_classes": {
+     "black": 5
+    },
+    "grid_bubble_diameters_mm": [],
+    "dim_ticks_45deg": 8,
+    "level_tags": {
+     "FL": 0,
+     "SL": 0,
+     "GL": 0
+    },
+    "n_numeric_dimension_texts": 1,
+    "member_marks": [],
+    "room_number_tags": [],
+    "block": null
+   },
+   {
+    "page": 2,
+    "display_mm": [
+     594.1,
+     420.2
+    ],
+    "orientation": "landscape",
+    "rotate": 0,
+    "images": [
+     {
+      "bbox_layout_mm": [
+       302.34,
+       215.9,
+       492.84,
+       356.4
+      ],
+      "px": [
+       1864,
+       1375
+      ],
+      "dpi_effective": 249.0
+     }
+    ],
+    "frame_rects": [],
+    "view_titles": [],
+    "scale_strings": [
+     "1 /200",
+     "1/2000"
+    ],
+    "n_drawings": 243,
+    "n_spans": 198,
+    "fonts": {
+     "YDIYGO320|12.22": 105,
+     "YDIYGO320|9.17": 46,
+     "YDIYGO310|8.05": 9,
+     "YDIYGO310|7.92": 8,
+     "YDIYGO310|7.01": 6,
+     "YDIYGO310|6.4": 5,
+     "YDIYGO310|6.09": 4,
+     "MalgunGothic|11.21": 3,
+     "YDIYGO320|15.28": 3,
+     "MalgunGothic|15.38": 2,
+     "YDIYGO320|12.28": 2,
+     "YDIYGO310|7.0": 2,
+     "YDIYGO320|9.15": 2,
+     "YDIYGO310|9.13": 1
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 135,
+      "length_mm": 13050.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 69,
+      "length_mm": 7104.0
+     },
+     {
+      "width_mm": 0.296,
+      "colour": "black",
+      "n": 20,
+      "length_mm": 3611.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 1,
+      "length_mm": 1020.0
+     },
+     {
+      "width_mm": 0.339,
+      "colour": "black",
+      "n": 1,
+      "length_mm": 194.0
+     },
+     {
+      "width_mm": 0.55,
+      "colour": "black",
+      "n": 1,
+      "length_mm": 80.0
+     }
+    ],
+    "fill_classes": {
+     "gray": 9,
+     "black": 7
+    },
+    "grid_bubble_diameters_mm": [
+     [
+      6.16,
+      8
+     ]
+    ],
+    "dim_ticks_45deg": 12,
+    "level_tags": {
+     "FL": 0,
+     "SL": 0,
+     "GL": 0
+    },
+    "n_numeric_dimension_texts": 5,
+    "member_marks": [],
+    "room_number_tags": [
+     "144",
+     "447",
+     "784",
+     "942"
+    ],
+    "block": null
+   },
+   {
+    "page": 3,
+    "display_mm": [
+     594.1,
+     420.2
+    ],
+    "orientation": "landscape",
+    "rotate": 0,
+    "images": [],
+    "frame_rects": [],
+    "view_titles": [],
+    "scale_strings": [
+     "1 /200",
+     "A2 = 1/212",
+     "A3 = 1/300"
+    ],
+    "n_drawings": 19891,
+    "n_spans": 91,
+    "fonts": {
+     "YDIYGO310|9.14": 17,
+     "YDIYGO320|9.17": 13,
+     "YDIYGO310|10.15": 9,
+     "YDIYGO310|8.05": 9,
+     "YDIYGO310|7.92": 8,
+     "YDIYGO310|7.01": 6,
+     "YDIYGO310|6.4": 5,
+     "YDIYGO310|15.23": 4,
+     "YDIYGO310|6.09": 4,
+     "YDIYGO310|4.31": 2,
+     "YDIYGO310|7.0": 2,
+     "YDIYGO320|9.15": 2,
+     "YDIYGO320|12.22": 2,
+     "YDIYGO320|24.44": 2
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 17625,
+      "length_mm": 41215.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 108,
+      "length_mm": 6110.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "gray",
+      "n": 1283,
+      "length_mm": 3822.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 54,
+      "length_mm": 3821.0
+     },
+     {
+      "width_mm": 0.296,
+      "colour": "black",
+      "n": 83,
+      "length_mm": 1127.0
+     },
+     {
+      "width_mm": 0.169,
+      "colour": "black",
+      "n": 18,
+      "length_mm": 199.0
+     }
+    ],
+    "fill_classes": {
+     "colour": 462,
+     "black": 43
+    },
+    "grid_bubble_diameters_mm": [
+     [
+      8.87,
+      4
+     ],
+     [
+      9.33,
+      4
+     ],
+     [
+      8.57,
+      4
+     ]
+    ],
+    "dim_ticks_45deg": 27,
+    "level_tags": {
+     "FL": 0,
+     "SL": 0,
+     "GL": 0
+    },
+    "n_numeric_dimension_texts": 9,
+    "member_marks": [],
+    "room_number_tags": [],
+    "block": null
+   },
+   {
+    "page": 4,
+    "display_mm": [
+     594.1,
+     420.2
+    ],
+    "orientation": "landscape",
+    "rotate": 0,
+    "images": [],
+    "frame_rects": [],
+    "view_titles": [
+     "지하 2층 평면도"
+    ],
+    "scale_strings": [
+     "1 /200",
+     "A2 = 1/140",
+     "A3 = 1/200"
+    ],
+    "n_drawings": 3343,
+    "n_spans": 122,
+    "fonts": {
+     "YDIYGO310|7.61": 29,
+     "YDIYGO320|9.17": 23,
+     "YDIYGO310|10.15": 11,
+     "YDIYGO310|8.05": 9,
+     "YDIYGO320|6.11": 9,
+     "YDIYGO310|7.92": 8,
+     "YDIYGO310|7.01": 6,
+     "YDIYGO310|6.4": 5,
+     "YDIYGO310|6.09": 4,
+     "YDIYGO310|7.0": 2,
+     "YDIYGO320|9.15": 2,
+     "YDIYGO320|12.22": 2,
+     "YDIYGO320|24.44": 2,
+     "YDIYGO320|14.67": 2
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 1517,
+      "length_mm": 10808.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 127,
+      "length_mm": 6258.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 279,
+      "length_mm": 3894.0
+     },
+     {
+      "width_mm": 0.254,
+      "colour": "black",
+      "n": 222,
+      "length_mm": 3272.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "gray",
+      "n": 770,
+      "length_mm": 1460.0
+     },
+     {
+      "width_mm": 0.339,
+      "colour": "gray",
+      "n": 68,
+      "length_mm": 275.0
+     }
+    ],
+    "fill_classes": {
+     "colour": 151,
+     "black": 73,
+     "gray": 13
+    },
+    "grid_bubble_diameters_mm": [
+     [
+      8.49,
+      4
+     ],
+     [
+      8.57,
+      4
+     ],
+     [
+      6.37,
+      3
+     ]
+    ],
+    "dim_ticks_45deg": 542,
+    "level_tags": {
+     "FL": 0,
+     "SL": 0,
+     "GL": 0
+    },
+    "n_numeric_dimension_texts": 41,
+    "member_marks": [],
+    "room_number_tags": [
+     "500",
+     "900",
+     "B201"
+    ],
+    "block": null
+   },
+   {
+    "page": 5,
+    "display_mm": [
+     594.1,
+     420.2
+    ],
+    "orientation": "landscape",
+    "rotate": 0,
+    "images": [],
+    "frame_rects": [],
+    "view_titles": [
+     "지하 1층 평면도"
+    ],
+    "scale_strings": [
+     "1 /200",
+     "A2 = 1/140",
+     "A3 = 1/200"
+    ],
+    "n_drawings": 3660,
+    "n_spans": 161,
+    "fonts": {
+     "YDIYGO310|7.61": 38,
+     "YDIYGO320|9.17": 34,
+     "YDIYGO320|6.11": 18,
+     "YDIYGO320|4.58": 12,
+     "YDIYGO310|10.15": 11,
+     "YDIYGO310|8.05": 9,
+     "YDIYGO310|7.92": 8,
+     "YDIYGO310|7.01": 6,
+     "YDIYGO310|6.4": 5,
+     "YDIYGO310|6.09": 4,
+     "YDIYGO310|7.0": 2,
+     "YDIYGO320|9.15": 2,
+     "YDIYGO320|12.22": 2,
+     "YDIYGO320|24.44": 2
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 183,
+      "length_mm": 6577.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 928,
+      "length_mm": 6252.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 356,
+      "length_mm": 4997.0
+     },
+     {
+      "width_mm": 0.254,
+      "colour": "black",
+      "n": 248,
+      "length_mm": 3730.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "gray",
+      "n": 1270,
+      "length_mm": 2459.0
+     },
+     {
+      "width_mm": 0.339,
+      "colour": "gray",
+      "n": 68,
+      "length_mm": 275.0
+     }
+    ],
+    "fill_classes": {
+     "colour": 311,
+     "black": 173
+    },
+    "grid_bubble_diameters_mm": [
+     [
+      8.49,
+      12
+     ],
+     [
+      6.37,
+      4
+     ],
+     [
+      8.57,
+      4
+     ]
+    ],
+    "dim_ticks_45deg": 718,
+    "level_tags": {
+     "FL": 6,
+     "SL": 6,
+     "GL": 0
+    },
+    "n_numeric_dimension_texts": 55,
+    "member_marks": [],
+    "room_number_tags": [
+     "500",
+     "700",
+     "900",
+     "B101",
+     "B102",
+     "B103",
+     "B104",
+     "B105",
+     "B106"
+    ],
+    "block": null
+   },
+   {
+    "page": 6,
+    "display_mm": [
+     594.1,
+     420.2
+    ],
+    "orientation": "landscape",
+    "rotate": 0,
+    "images": [],
+    "frame_rects": [],
+    "view_titles": [],
+    "scale_strings": [
+     "1 /200",
+     "A2 = 1/140",
+     "A3 = 1/200"
+    ],
+    "n_drawings": 13126,
+    "n_spans": 172,
+    "fonts": {
+     "YDIYGO310|7.61": 46,
+     "YDIYGO320|9.17": 39,
+     "YDIYGO320|6.11": 20,
+     "YDIYGO320|4.58": 10,
+     "YDIYGO310|8.05": 9,
+     "YDIYGO310|7.92": 8,
+     "YDIYGO310|10.15": 8,
+     "YDIYGO310|7.01": 6,
+     "YDIYGO310|6.4": 5,
+     "YDIYGO310|6.09": 4,
+     "YDIYGO320|12.22": 3,
+     "YDIYGO310|7.0": 2,
+     "YDIYGO320|9.15": 2,
+     "YDIYGO320|24.44": 2
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 10567,
+      "length_mm": 41740.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 935,
+      "length_mm": 8026.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 207,
+      "length_mm": 6601.0
+     },
+     {
+      "width_mm": 0.254,
+      "colour": "black",
+      "n": 179,
+      "length_mm": 1769.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "gray",
+      "n": 489,
+      "length_mm": 925.0
+     },
+     {
+      "width_mm": 0.169,
+      "colour": "black",
+      "n": 16,
+      "length_mm": 177.0
+     }
+    ],
+    "fill_classes": {
+     "colour": 387,
+     "black": 157
+    },
+    "grid_bubble_diameters_mm": [
+     [
+      6.37,
+      6
+     ],
+     [
+      8.49,
+      5
+     ],
+     [
+      5.99,
+      4
+     ]
+    ],
+    "dim_ticks_45deg": 263,
+    "level_tags": {
+     "FL": 5,
+     "SL": 5,
+     "GL": 0
+    },
+    "n_numeric_dimension_texts": 69,
+    "member_marks": [],
+    "room_number_tags": [
+     "101",
+     "102",
+     "103",
+     "104",
+     "105",
+     "106",
+     "107",
+     "108",
+     "500",
+     "600",
+     "700",
+     "800",
+     "900",
+     "950"
+    ],
+    "block": null
+   },
+   {
+    "page": 7,
+    "display_mm": [
+     594.1,
+     420.2
+    ],
+    "orientation": "landscape",
+    "rotate": 0,
+    "images": [],
+    "frame_rects": [],
+    "view_titles": [],
+    "scale_strings": [
+     "1 /200",
+     "A2 = 1/140",
+     "A3 = 1/200"
+    ],
+    "n_drawings": 2959,
+    "n_spans": 133,
+    "fonts": {
+     "YDIYGO320|9.17": 29,
+     "YDIYGO310|7.61": 26,
+     "YDIYGO320|6.11": 14,
+     "YDIYGO310|8.05": 9,
+     "YDIYGO310|7.92": 8,
+     "YDIYGO310|10.15": 8,
+     "YDIYGO320|4.58": 8,
+     "YDIYGO310|7.01": 6,
+     "YDIYGO310|6.4": 5,
+     "YDIYGO310|6.09": 4,
+     "YDIYGO310|7.0": 2,
+     "YDIYGO320|9.15": 2,
+     "YDIYGO320|12.22": 2,
+     "YDIYGO320|24.44": 2
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 1498,
+      "length_mm": 10470.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 153,
+      "length_mm": 6230.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 313,
+      "length_mm": 4982.0
+     },
+     {
+      "width_mm": 0.254,
+      "colour": "black",
+      "n": 154,
+      "length_mm": 1743.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "gray",
+      "n": 404,
+      "length_mm": 728.0
+     },
+     {
+      "width_mm": 0.339,
+      "colour": "gray",
+      "n": 84,
+      "length_mm": 344.0
+     }
+    ],
+    "fill_classes": {
+     "colour": 80,
+     "black": 156
+    },
+    "grid_bubble_diameters_mm": [
+     [
+      8.49,
+      4
+     ],
+     [
+      8.57,
+      4
+     ],
+     [
+      6.37,
+      3
+     ]
+    ],
+    "dim_ticks_45deg": 178,
+    "level_tags": {
+     "FL": 4,
+     "SL": 4,
+     "GL": 0
+    },
+    "n_numeric_dimension_texts": 44,
+    "member_marks": [],
+    "room_number_tags": [
+     "500",
+     "601",
+     "602",
+     "603",
+     "604",
+     "605",
+     "700",
+     "900",
+     "950"
+    ],
+    "block": null
+   },
+   {
+    "page": 8,
+    "display_mm": [
+     594.1,
+     420.2
+    ],
+    "orientation": "landscape",
+    "rotate": 0,
+    "images": [],
+    "frame_rects": [],
+    "view_titles": [],
+    "scale_strings": [
+     "1 /200",
+     "A2 = 1/140",
+     "A3 = 1/200"
+    ],
+    "n_drawings": 3177,
+    "n_spans": 134,
+    "fonts": {
+     "YDIYGO320|9.17": 29,
+     "YDIYGO310|7.61": 26,
+     "YDIYGO320|6.11": 13,
+     "YDIYGO320|4.58": 10,
+     "YDIYGO310|8.05": 9,
+     "YDIYGO310|7.92": 8,
+     "YDIYGO310|10.15": 8,
+     "YDIYGO310|7.01": 6,
+     "YDIYGO310|6.4": 5,
+     "YDIYGO310|6.09": 4,
+     "YDIYGO310|7.0": 2,
+     "YDIYGO320|9.15": 2,
+     "YDIYGO320|12.22": 2,
+     "YDIYGO320|24.44": 2
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 1755,
+      "length_mm": 10697.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 159,
+      "length_mm": 6482.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 266,
+      "length_mm": 4123.0
+     },
+     {
+      "width_mm": 0.254,
+      "colour": "black",
+      "n": 154,
+      "length_mm": 1743.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "gray",
+      "n": 404,
+      "length_mm": 730.0
+     },
+     {
+      "width_mm": 0.339,
+      "colour": "gray",
+      "n": 84,
+      "length_mm": 344.0
+     }
+    ],
+    "fill_classes": {
+     "colour": 80,
+     "black": 157
+    },
+    "grid_bubble_diameters_mm": [
+     [
+      8.49,
+      4
+     ],
+     [
+      8.57,
+      4
+     ],
+     [
+      6.37,
+      3
+     ]
+    ],
+    "dim_ticks_45deg": 200,
+    "level_tags": {
+     "FL": 5,
+     "SL": 5,
+     "GL": 0
+    },
+    "n_numeric_dimension_texts": 44,
+    "member_marks": [],
+    "room_number_tags": [
+     "500",
+     "700",
+     "701",
+     "702",
+     "703",
+     "704",
+     "705",
+     "900",
+     "950"
+    ],
+    "block": null
+   },
+   {
+    "page": 9,
+    "display_mm": [
+     594.1,
+     420.2
+    ],
+    "orientation": "landscape",
+    "rotate": 0,
+    "images": [],
+    "frame_rects": [],
+    "view_titles": [],
+    "scale_strings": [
+     "1 /200",
+     "A2 = 1/140",
+     "A3 = 1/200"
+    ],
+    "n_drawings": 3035,
+    "n_spans": 151,
+    "fonts": {
+     "YDIYGO320|9.17": 38,
+     "YDIYGO310|7.61": 32,
+     "YDIYGO320|6.11": 13,
+     "YDIYGO320|4.58": 12,
+     "YDIYGO310|8.05": 9,
+     "YDIYGO310|7.92": 8,
+     "YDIYGO310|10.15": 8,
+     "YDIYGO310|7.01": 6,
+     "YDIYGO310|6.4": 5,
+     "YDIYGO310|6.09": 4,
+     "YDIYGO310|7.0": 2,
+     "YDIYGO320|9.15": 2,
+     "YDIYGO320|12.22": 2,
+     "YDIYGO320|24.44": 2
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 1493,
+      "length_mm": 10933.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 159,
+      "length_mm": 6259.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 370,
+      "length_mm": 5308.0
+     },
+     {
+      "width_mm": 0.254,
+      "colour": "black",
+      "n": 154,
+      "length_mm": 1743.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "gray",
+      "n": 406,
+      "length_mm": 732.0
+     },
+     {
+      "width_mm": 0.339,
+      "colour": "gray",
+      "n": 84,
+      "length_mm": 344.0
+     }
+    ],
+    "fill_classes": {
+     "colour": 80,
+     "black": 172
+    },
+    "grid_bubble_diameters_mm": [
+     [
+      8.49,
+      4
+     ],
+     [
+      8.57,
+      4
+     ],
+     [
+      6.37,
+      3
+     ]
+    ],
+    "dim_ticks_45deg": 181,
+    "level_tags": {
+     "FL": 6,
+     "SL": 6,
+     "GL": 0
+    },
+    "n_numeric_dimension_texts": 55,
+    "member_marks": [],
+    "room_number_tags": [
+     "500",
+     "700",
+     "900",
+     "950"
+    ],
+    "block": null
+   },
+   {
+    "page": 10,
+    "display_mm": [
+     594.1,
+     420.2
+    ],
+    "orientation": "landscape",
+    "rotate": 0,
+    "images": [],
+    "frame_rects": [],
+    "view_titles": [
+     "지붕평면도"
+    ],
+    "scale_strings": [
+     "1 /200",
+     "A2 = 1/140",
+     "A3 = 1/200"
+    ],
+    "n_drawings": 7315,
+    "n_spans": 108,
+    "fonts": {
+     "YDIYGO310|7.61": 21,
+     "YDIYGO320|9.17": 19,
+     "YDIYGO320|6.11": 11,
+     "YDIYGO310|8.05": 9,
+     "YDIYGO310|7.92": 8,
+     "YDIYGO310|10.15": 8,
+     "YDIYGO310|7.01": 6,
+     "YDIYGO310|6.4": 5,
+     "YDIYGO310|6.09": 4,
+     "YDIYGO310|7.0": 2,
+     "YDIYGO320|9.15": 2,
+     "YDIYGO320|12.22": 2,
+     "YDIYGO320|24.44": 2,
+     "YDIYGO320|14.67": 2
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 4950,
+      "length_mm": 17139.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 129,
+      "length_mm": 6761.0
+     },
+     {
+      "width_mm": 0.254,
+      "colour": "gray",
+      "n": 1279,
+      "length_mm": 5735.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 200,
+      "length_mm": 3166.0
+     },
+     {
+      "width_mm": 0.254,
+      "colour": "black",
+      "n": 55,
+      "length_mm": 1612.0
+     },
+     {
+      "width_mm": 0.339,
+      "colour": "gray",
+      "n": 84,
+      "length_mm": 344.0
+     }
+    ],
+    "fill_classes": {
+     "colour": 366,
+     "black": 73,
+     "gray": 4
+    },
+    "grid_bubble_diameters_mm": [
+     [
+      6.37,
+      7
+     ],
+     [
+      8.49,
+      4
+     ],
+     [
+      8.57,
+      4
+     ]
+    ],
+    "dim_ticks_45deg": 96,
+    "level_tags": {
+     "FL": 0,
+     "SL": 0,
+     "GL": 0
+    },
+    "n_numeric_dimension_texts": 31,
+    "member_marks": [],
+    "room_number_tags": [
+     "500",
+     "700",
+     "900",
+     "950"
+    ],
+    "block": null
+   },
+   {
+    "page": 11,
+    "display_mm": [
+     420.2,
+     594.1
+    ],
+    "orientation": "portrait",
+    "rotate": 0,
+    "images": [],
+    "frame_rects": [],
+    "view_titles": [
+     "남측면 입면도",
+     "동측면 입면도"
+    ],
+    "scale_strings": [
+     "1 /200",
+     "1/200"
+    ],
+    "n_drawings": 8844,
+    "n_spans": 170,
+    "fonts": {
+     "ArialUnicodeMS|7.47": 37,
+     "YDIYGO320|8.15": 34,
+     "YDIYGO320|9.17": 25,
+     "YDIYGO310|6.5": 14,
+     "YDIYGO310|8.05": 9,
+     "YDIYGO310|7.92": 8,
+     "YDIYGO310|10.15": 8,
+     "YDIYGO310|7.01": 6,
+     "YDIYGO310|6.4": 5,
+     "YDIYGO310|6.09": 4,
+     "YDIYGO310|9.14": 4,
+     "YDIYGO320|9.78": 4,
+     "YDIYGO310|9.13": 3,
+     "YDIYGO310|7.0": 2
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 4383,
+      "length_mm": 129383.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 284,
+      "length_mm": 7366.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 236,
+      "length_mm": 4163.0
+     },
+     {
+      "width_mm": 0.254,
+      "colour": "black",
+      "n": 24,
+      "length_mm": 2657.0
+     },
+     {
+      "width_mm": 0.339,
+      "colour": "black",
+      "n": 3602,
+      "length_mm": 1583.0
+     },
+     {
+      "width_mm": 0.169,
+      "colour": "black",
+      "n": 16,
+      "length_mm": 177.0
+     }
+    ],
+    "fill_classes": {
+     "gray": 1,
+     "colour": 2,
+     "black": 294
+    },
+    "grid_bubble_diameters_mm": [
+     [
+      5.65,
+      8
+     ]
+    ],
+    "dim_ticks_45deg": 22,
+    "level_tags": {
+     "FL": 0,
+     "SL": 0,
+     "GL": 17
+    },
+    "n_numeric_dimension_texts": 26,
+    "member_marks": [],
+    "room_number_tags": [],
+    "block": null
+   },
+   {
+    "page": 12,
+    "display_mm": [
+     420.2,
+     594.1
+    ],
+    "orientation": "portrait",
+    "rotate": 0,
+    "images": [],
+    "frame_rects": [],
+    "view_titles": [
+     "북측면 입면도",
+     "서측면 입면도"
+    ],
+    "scale_strings": [
+     "1 /200",
+     "1/200"
+    ],
+    "n_drawings": 8781,
+    "n_spans": 155,
+    "fonts": {
+     "YDIYGO320|8.15": 34,
+     "ArialUnicodeMS|7.47": 30,
+     "YDIYGO320|9.17": 25,
+     "YDIYGO310|8.05": 9,
+     "YDIYGO310|7.92": 8,
+     "YDIYGO310|10.15": 8,
+     "YDIYGO310|7.01": 6,
+     "YDIYGO310|6.5": 6,
+     "YDIYGO310|6.4": 5,
+     "YDIYGO310|6.09": 4,
+     "YDIYGO310|9.14": 4,
+     "YDIYGO320|9.78": 4,
+     "YDIYGO310|9.13": 3,
+     "YDIYGO310|7.0": 2
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 3851,
+      "length_mm": 68937.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 382,
+      "length_mm": 8113.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 596,
+      "length_mm": 3352.0
+     },
+     {
+      "width_mm": 0.254,
+      "colour": "black",
+      "n": 34,
+      "length_mm": 2802.0
+     },
+     {
+      "width_mm": 0.339,
+      "colour": "black",
+      "n": 3602,
+      "length_mm": 1583.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "gray",
+      "n": 1,
+      "length_mm": 386.0
+     }
+    ],
+    "fill_classes": {
+     "gray": 1,
+     "black": 294,
+     "colour": 2
+    },
+    "grid_bubble_diameters_mm": [
+     [
+      5.65,
+      8
+     ]
+    ],
+    "dim_ticks_45deg": 24,
+    "level_tags": {
+     "FL": 0,
+     "SL": 0,
+     "GL": 17
+    },
+    "n_numeric_dimension_texts": 26,
+    "member_marks": [],
+    "room_number_tags": [],
+    "block": null
+   },
+   {
+    "page": 13,
+    "display_mm": [
+     420.2,
+     594.1
+    ],
+    "orientation": "portrait",
+    "rotate": 0,
+    "images": [],
+    "frame_rects": [],
+    "view_titles": [],
+    "scale_strings": [
+     "1 /200"
+    ],
+    "n_drawings": 17117,
+    "n_spans": 268,
+    "fonts": {
+     "MalgunGothic|6.97": 93,
+     "ArialUnicodeMS|5.6": 36,
+     "YDIYGO320|8.15": 34,
+     "YDIYGO320|9.17": 25,
+     "ArialUnicodeMS|7.47": 16,
+     "YDIYGO310|8.05": 9,
+     "YDIYGO310|10.15": 8,
+     "YDIYGO310|7.92": 8,
+     "YDIYGO320|6.11": 8,
+     "YDIYGO310|7.01": 6,
+     "YDIYGO310|6.4": 5,
+     "YDIYGO310|6.09": 4,
+     "YDIYGO310|9.14": 4,
+     "YDIYGO310|6.5": 4
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 10114,
+      "length_mm": 32533.0
+     },
+     {
+      "width_mm": 0.254,
+      "colour": "black",
+      "n": 1019,
+      "length_mm": 11430.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 379,
+      "length_mm": 10261.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 978,
+      "length_mm": 7996.0
+     },
+     {
+      "width_mm": 0.339,
+      "colour": "black",
+      "n": 3602,
+      "length_mm": 1583.0
+     },
+     {
+      "width_mm": 0.169,
+      "colour": "black",
+      "n": 16,
+      "length_mm": 179.0
+     }
+    ],
+    "fill_classes": {
+     "colour": 205,
+     "gray": 438,
+     "black": 295
+    },
+    "grid_bubble_diameters_mm": [],
+    "dim_ticks_45deg": 9,
+    "level_tags": {
+     "FL": 0,
+     "SL": 0,
+     "GL": 17
+    },
+    "n_numeric_dimension_texts": 127,
+    "member_marks": [],
+    "room_number_tags": [
+     "200",
+     "800",
+     "950"
+    ],
+    "block": null
+   },
+   {
+    "page": 14,
+    "display_mm": [
+     594.1,
+     420.2
+    ],
+    "orientation": "landscape",
+    "rotate": 0,
+    "images": [],
+    "frame_rects": [],
+    "view_titles": [
+     "외벽 평, 입, 단면도"
+    ],
+    "scale_strings": [
+     "1 /200",
+     "A2 = 1/70"
+    ],
+    "n_drawings": 16255,
+    "n_spans": 213,
+    "fonts": {
+     "YDIYGO320|9.17": 75,
+     "YDIYGO320|6.87": 53,
+     "ArialUnicodeMS|8.4": 23,
+     "YDIYGO310|8.05": 9,
+     "YDIYGO320|7.33": 9,
+     "YDIYGO310|7.92": 8,
+     "YDIYGO310|7.01": 6,
+     "YDIYGO310|6.4": 5,
+     "YDIYGO310|15.23": 5,
+     "YDIYGO310|6.09": 4,
+     "YDIYGO310|9.14": 4,
+     "YDIYGO310|9.13": 3,
+     "YDIYGO310|7.0": 2,
+     "YDIYGO310|12.18": 2
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 13593,
+      "length_mm": 45005.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 315,
+      "length_mm": 9649.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 541,
+      "length_mm": 6178.0
+     },
+     {
+      "width_mm": 0.254,
+      "colour": "black",
+      "n": 126,
+      "length_mm": 2056.0
+     },
+     {
+      "width_mm": 0.339,
+      "colour": "black",
+      "n": 1200,
+      "length_mm": 1593.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "gray",
+      "n": 65,
+      "length_mm": 798.0
+     }
+    ],
+    "fill_classes": {
+     "black": 257,
+     "colour": 148
+    },
+    "grid_bubble_diameters_mm": [
+     [
+      8.49,
+      4
+     ]
+    ],
+    "dim_ticks_45deg": 176,
+    "level_tags": {
+     "FL": 0,
+     "SL": 0,
+     "GL": 0
+    },
+    "n_numeric_dimension_texts": 124,
+    "member_marks": [],
+    "room_number_tags": [
+     "100",
+     "150",
+     "165",
+     "200",
+     "260",
+     "300",
+     "450",
+     "460",
+     "500",
+     "600",
+     "650",
+     "800",
+     "850",
+     "880"
+    ],
+    "block": null
+   },
+   {
+    "page": 15,
+    "display_mm": [
+     594.1,
+     420.2
+    ],
+    "orientation": "landscape",
+    "rotate": 0,
+    "images": [],
+    "frame_rects": [],
+    "view_titles": [
+     "지상1층 코어평면상세도(층고 6000)",
+     "지상2~16층 코어평면상세도(층고 4000)",
+     "지하층 코어평면상세도(층고 6000)",
+     "코어 상세 단면도"
+    ],
+    "scale_strings": [
+     "1 /200",
+     "A2 = 1/100"
+    ],
+    "n_drawings": 9884,
+    "n_spans": 512,
+    "fonts": {
+     "YDIYGO310|8.08": 244,
+     "YDIYGO320|8.64": 79,
+     "YDIYGO320|6.05": 64,
+     "YDIYGO320|9.72": 46,
+     "YDIYGO310|9.33": 12,
+     "YDIYGO310|8.05": 9,
+     "YDIYGO310|7.92": 8,
+     "YDIYGO310|7.01": 6,
+     "YDIYGO320|4.32": 6,
+     "YDIYGO320|10.16": 6,
+     "YDIYGO310|6.4": 5,
+     "YDIYGO320|9.17": 5,
+     "YDIYGO320|21.6": 4,
+     "YDIYGO310|6.09": 4
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 4545,
+      "length_mm": 31600.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 2340,
+      "length_mm": 16893.0
+     },
+     {
+      "width_mm": 0.296,
+      "colour": "black",
+      "n": 689,
+      "length_mm": 10123.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 352,
+      "length_mm": 9463.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "gray",
+      "n": 1107,
+      "length_mm": 2813.0
+     },
+     {
+      "width_mm": 0.169,
+      "colour": "black",
+      "n": 24,
+      "length_mm": 243.0
+     }
+    ],
+    "fill_classes": {
+     "colour": 598,
+     "black": 226
+    },
+    "grid_bubble_diameters_mm": [
+     [
+      5.86,
+      12
+     ],
+     [
+      9.0,
+      10
+     ],
+     [
+      8.4,
+      4
+     ]
+    ],
+    "dim_ticks_45deg": 901,
+    "level_tags": {
+     "FL": 0,
+     "SL": 0,
+     "GL": 7
+    },
+    "n_numeric_dimension_texts": 291,
+    "member_marks": [],
+    "room_number_tags": [
+     "100",
+     "101",
+     "102",
+     "103",
+     "150",
+     "200",
+     "201",
+     "203",
+     "250",
+     "300",
+     "400",
+     "405",
+     "500",
+     "600",
+     "630",
+     "650",
+     "800",
+     "805",
+     "815",
+     "820",
+     "840",
+     "900",
+     "B101"
+    ],
+    "block": null
+   }
+  ]
+ },
+ "struct": {
+  "file": "Jangsan_Structure_A3.pdf",
+  "sha256": "c6d483919bb76a2661cb01a1ef9fb0f693b20d0836e445017ad593dbdabb1e58",
+  "pages": 6,
+  "page_records": [
+   {
+    "page": 1,
+    "display_mm": [
+     420.2,
+     297.0
+    ],
+    "orientation": "landscape",
+    "rotate": 0,
+    "images": [
+     {
+      "bbox_layout_mm": [
+       17.06,
+       11.97,
+       374.61,
+       284.97
+      ],
+      "px": [
+       2743,
+       2094
+      ],
+      "dpi_effective": 195.0
+     }
+    ],
+    "frame_rects": [],
+    "view_titles": [],
+    "scale_strings": [
+     "1 /200"
+    ],
+    "n_drawings": 108,
+    "n_spans": 45,
+    "fonts": {
+     "YDIYGO310|5.69": 9,
+     "YDIYGO310|4.95": 8,
+     "YDIYGO310|5.6": 8,
+     "YDIYGO310|4.52": 5,
+     "YDIYGO320|6.48": 5,
+     "YDIYGO310|4.31": 4,
+     "YDIYGO320|6.47": 2,
+     "YDIYGO320|8.64": 2,
+     "YDIYGO320|10.8": 1,
+     "YDIYGO310|6.45": 1
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 97,
+      "length_mm": 3785.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 5,
+      "length_mm": 1731.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 1,
+      "length_mm": 721.0
+     }
+    ],
+    "fill_classes": {
+     "black": 5
+    },
+    "grid_bubble_diameters_mm": [],
+    "dim_ticks_45deg": 0,
+    "level_tags": {
+     "FL": 0,
+     "SL": 0,
+     "GL": 0
+    },
+    "n_numeric_dimension_texts": 1,
+    "member_marks": [],
+    "room_number_tags": [],
+    "block": null
+   },
+   {
+    "page": 2,
+    "display_mm": [
+     420.2,
+     297.0
+    ],
+    "orientation": "landscape",
+    "rotate": 0,
+    "images": [
+     {
+      "bbox_layout_mm": [
+       213.74,
+       152.6,
+       348.49,
+       251.95
+      ],
+      "px": [
+       1865,
+       1375
+      ],
+      "dpi_effective": 352.0
+     }
+    ],
+    "frame_rects": [],
+    "view_titles": [],
+    "scale_strings": [
+     "1 /200",
+     "1/2000"
+    ],
+    "n_drawings": 243,
+    "n_spans": 198,
+    "fonts": {
+     "YDIYGO320|8.64": 105,
+     "YDIYGO320|6.48": 46,
+     "YDIYGO310|5.69": 9,
+     "YDIYGO310|4.95": 8,
+     "YDIYGO310|5.6": 8,
+     "YDIYGO310|4.52": 5,
+     "YDIYGO310|4.31": 4,
+     "MalgunGothic|7.92": 3,
+     "YDIYGO320|10.8": 3,
+     "MalgunGothic|10.88": 2,
+     "YDIYGO320|8.68": 2,
+     "YDIYGO320|6.47": 2,
+     "YDIYGO310|6.45": 1
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 135,
+      "length_mm": 9228.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 69,
+      "length_mm": 5023.0
+     },
+     {
+      "width_mm": 0.254,
+      "colour": "black",
+      "n": 20,
+      "length_mm": 2553.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 1,
+      "length_mm": 721.0
+     },
+     {
+      "width_mm": 0.339,
+      "colour": "black",
+      "n": 1,
+      "length_mm": 137.0
+     },
+     {
+      "width_mm": 0.55,
+      "colour": "black",
+      "n": 1,
+      "length_mm": 56.0
+     }
+    ],
+    "fill_classes": {
+     "gray": 9,
+     "black": 7
+    },
+    "grid_bubble_diameters_mm": [],
+    "dim_ticks_45deg": 4,
+    "level_tags": {
+     "FL": 0,
+     "SL": 0,
+     "GL": 0
+    },
+    "n_numeric_dimension_texts": 5,
+    "member_marks": [],
+    "room_number_tags": [
+     "144",
+     "447",
+     "784",
+     "942"
+    ],
+    "block": null
+   },
+   {
+    "page": 3,
+    "display_mm": [
+     420.2,
+     297.0
+    ],
+    "orientation": "landscape",
+    "rotate": 0,
+    "images": [],
+    "frame_rects": [],
+    "view_titles": [
+     "1층 구조평면도"
+    ],
+    "scale_strings": [
+     "A3 = 1/200"
+    ],
+    "n_drawings": 5567,
+    "n_spans": 238,
+    "fonts": {
+     "YDIYGO310|7.2": 109,
+     "YDIYGO310|8.4": 32,
+     "MalgunGothic|9.18": 17,
+     "YDIYGO310|3.6": 14,
+     "Dotum|7.88": 11,
+     "MalgunGothic|6.93": 8,
+     "MalgunGothic|6.03": 8,
+     "MalgunGothic|6.82": 8,
+     "YDIYGO310|9.61": 5,
+     "MalgunGothic|5.51": 5,
+     "YDIYGO310|12.01": 4,
+     "MalgunGothic|5.24": 4,
+     "MalgunGothic|12.59": 3,
+     "ArialUnicodeMS|3.98": 2
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 167,
+      "length_mm": 8174.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "gray",
+      "n": 3030,
+      "length_mm": 8167.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 719,
+      "length_mm": 3121.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 216,
+      "length_mm": 2996.0
+     },
+     {
+      "width_mm": 0.254,
+      "colour": "black",
+      "n": 320,
+      "length_mm": 1028.0
+     },
+     {
+      "width_mm": 0.339,
+      "colour": "black",
+      "n": 10,
+      "length_mm": 567.0
+     }
+    ],
+    "fill_classes": {
+     "gray": 44,
+     "black": 1039
+    },
+    "grid_bubble_diameters_mm": [
+     [
+      5.99,
+      4
+     ],
+     [
+      6.07,
+      4
+     ]
+    ],
+    "dim_ticks_45deg": 99,
+    "level_tags": {
+     "FL": 0,
+     "SL": 2,
+     "GL": 0
+    },
+    "n_numeric_dimension_texts": 23,
+    "member_marks": [
+     "B1",
+     "B2",
+     "B3",
+     "B4",
+     "B5",
+     "B6",
+     "C1",
+     "CW1",
+     "CW2",
+     "CW3",
+     "CW4",
+     "CW5",
+     "CW6",
+     "CW7",
+     "CW8",
+     "G1",
+     "G2",
+     "G3",
+     "G4",
+     "G5",
+     "G6",
+     "G7",
+     "LB1",
+     "LB2",
+     "RW1",
+     "S1",
+     "S2",
+     "S3",
+     "S4",
+     "S5",
+     "S6",
+     "S7",
+     "S8",
+     "W1",
+     "WG1",
+     "WG2",
+     "WG3",
+     "WG4",
+     "WG5"
+    ],
+    "room_number_tags": [
+     "150",
+     "200",
+     "300",
+     "500"
+    ],
+    "block": null
+   },
+   {
+    "page": 4,
+    "display_mm": [
+     420.2,
+     297.0
+    ],
+    "orientation": "landscape",
+    "rotate": 0,
+    "images": [],
+    "frame_rects": [],
+    "view_titles": [
+     "7층 구조평면도"
+    ],
+    "scale_strings": [
+     "A3 = 1/200"
+    ],
+    "n_drawings": 2225,
+    "n_spans": 193,
+    "fonts": {
+     "YDIYGO310|7.2": 89,
+     "YDIYGO310|8.4": 24,
+     "MalgunGothic|9.18": 17,
+     "Dotum|7.88": 8,
+     "MalgunGothic|6.93": 8,
+     "MalgunGothic|6.03": 8,
+     "MalgunGothic|6.82": 8,
+     "YDIYGO310|9.61": 5,
+     "MalgunGothic|5.51": 5,
+     "MalgunGothic|5.24": 4,
+     "YDIYGO310|12.01": 4,
+     "MalgunGothic|12.59": 3,
+     "ArialUnicodeMS|3.98": 2,
+     "MalgunGothic|7.86": 2
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 145,
+      "length_mm": 7849.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 305,
+      "length_mm": 2850.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 355,
+      "length_mm": 2158.0
+     },
+     {
+      "width_mm": 0.085,
+      "colour": "gray",
+      "n": 163,
+      "length_mm": 1538.0
+     },
+     {
+      "width_mm": 0.254,
+      "colour": "black",
+      "n": 188,
+      "length_mm": 1248.0
+     },
+     {
+      "width_mm": 0.339,
+      "colour": "black",
+      "n": 10,
+      "length_mm": 567.0
+     }
+    ],
+    "fill_classes": {
+     "black": 981,
+     "gray": 62
+    },
+    "grid_bubble_diameters_mm": [
+     [
+      6.07,
+      4
+     ],
+     [
+      5.99,
+      4
+     ]
+    ],
+    "dim_ticks_45deg": 14,
+    "level_tags": {
+     "FL": 0,
+     "SL": 2,
+     "GL": 0
+    },
+    "n_numeric_dimension_texts": 21,
+    "member_marks": [
+     "C1",
+     "CW1",
+     "CW2",
+     "CW3",
+     "CW4",
+     "CW5",
+     "CW6",
+     "CW7",
+     "CW8",
+     "LB1",
+     "LB2",
+     "S3",
+     "SB1",
+     "SB2",
+     "SB3",
+     "SB4",
+     "SB5",
+     "SB6",
+     "SB7",
+     "SB8",
+     "SG1",
+     "SG2",
+     "SG3",
+     "SG4",
+     "SG5",
+     "SG6",
+     "SG7"
+    ],
+    "room_number_tags": [
+     "150",
+     "200",
+     "300",
+     "600"
+    ],
+    "block": null
+   },
+   {
+    "page": 5,
+    "display_mm": [
+     297.0,
+     420.2
+    ],
+    "orientation": "portrait",
+    "rotate": 270,
+    "images": [],
+    "frame_rects": [],
+    "view_titles": [
+     "구조열입면도"
+    ],
+    "scale_strings": [
+     "A3 = 1/300"
+    ],
+    "n_drawings": 4945,
+    "n_spans": 410,
+    "fonts": {
+     "YDIYGO310|6.4": 295,
+     "MalgunGothic|6.56": 36,
+     "YDIYGO310|7.2": 29,
+     "MalgunGothic|6.93": 8,
+     "MalgunGothic|6.03": 8,
+     "MalgunGothic|6.82": 8,
+     "YDIYGO310|9.61": 5,
+     "MalgunGothic|5.51": 5,
+     "MalgunGothic|5.24": 4,
+     "Dotum|6.56": 3,
+     "YDIYGO310|8.0": 3,
+     "MalgunGothic|7.86": 2,
+     "MalgunGothic|16.61": 2,
+     "MalgunGothic|27.69": 1
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 384,
+      "length_mm": 11808.0
+     },
+     {
+      "width_mm": 0.254,
+      "colour": "black",
+      "n": 638,
+      "length_mm": 3816.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 1298,
+      "length_mm": 3459.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 342,
+      "length_mm": 3071.0
+     },
+     {
+      "width_mm": 0.339,
+      "colour": "black",
+      "n": 10,
+      "length_mm": 464.0
+     },
+     {
+      "width_mm": 0.169,
+      "colour": "black",
+      "n": 6,
+      "length_mm": 47.0
+     }
+    ],
+    "fill_classes": {
+     "gray": 48,
+     "black": 2217,
+     "colour": 2
+    },
+    "grid_bubble_diameters_mm": [
+     [
+      7.94,
+      4
+     ]
+    ],
+    "dim_ticks_45deg": 2,
+    "level_tags": {
+     "FL": 0,
+     "SL": 0,
+     "GL": 20
+    },
+    "n_numeric_dimension_texts": 73,
+    "member_marks": [
+     "B6",
+     "C1",
+     "CW1",
+     "CW2",
+     "CW4",
+     "CW8",
+     "LB1",
+     "RW1",
+     "S2",
+     "S6",
+     "SB1",
+     "SB7",
+     "SG5",
+     "W1",
+     "WG3",
+     "WG5"
+    ],
+    "room_number_tags": [
+     "150",
+     "200",
+     "300",
+     "500",
+     "600"
+    ],
+    "block": null
+   },
+   {
+    "page": 6,
+    "display_mm": [
+     420.2,
+     297.0
+    ],
+    "orientation": "landscape",
+    "rotate": 0,
+    "images": [
+     {
+      "bbox_layout_mm": [
+       22.61,
+       31.61,
+       365.29,
+       260.08
+      ],
+      "px": [
+       3003,
+       2002
+      ],
+      "dpi_effective": 223.0
+     }
+    ],
+    "frame_rects": [],
+    "view_titles": [
+     "4~6층 구조모델링"
+    ],
+    "scale_strings": [],
+    "n_drawings": 384,
+    "n_spans": 44,
+    "fonts": {
+     "MalgunGothic|6.93": 8,
+     "MalgunGothic|6.03": 8,
+     "MalgunGothic|6.82": 8,
+     "YDIYGO310|9.61": 5,
+     "MalgunGothic|5.51": 5,
+     "MalgunGothic|5.24": 4,
+     "MalgunGothic|7.86": 2,
+     "MalgunGothic|12.59": 2,
+     "YDIYGO310|7.2": 1,
+     "MalgunGothic|20.98": 1
+    },
+    "stroke_classes": [
+     {
+      "width_mm": 0.085,
+      "colour": "black",
+      "n": 95,
+      "length_mm": 6910.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "gray",
+      "n": 6,
+      "length_mm": 891.0
+     },
+     {
+      "width_mm": 0.042,
+      "colour": "black",
+      "n": 1,
+      "length_mm": 721.0
+     },
+     {
+      "width_mm": 0.339,
+      "colour": "black",
+      "n": 4,
+      "length_mm": 115.0
+     }
+    ],
+    "fill_classes": {
+     "black": 237,
+     "gray": 41
+    },
+    "grid_bubble_diameters_mm": [
+     [
+      5.99,
+      4
+     ]
+    ],
+    "dim_ticks_45deg": 0,
+    "level_tags": {
+     "FL": 0,
+     "SL": 0,
+     "GL": 0
+    },
+    "n_numeric_dimension_texts": 1,
+    "member_marks": [],
+    "room_number_tags": [],
+    "block": null
+   }
+  ]
+ }
+}
