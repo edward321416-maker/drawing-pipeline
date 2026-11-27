@@ -1,0 +1,322 @@
+{
+ "scale": {
+  "E": {
+   "declared": 70,
+   "tests": [
+    {
+     "test": "louver fin width 1.2 m",
+     "model_m": 1.2,
+     "expected_mm": 17.143,
+     "measured_mm": 17.143,
+     "measured_denominator": 70.0,
+     "ok": true,
+     "shapes_found": 12
+    },
+    {
+     "test": "louver fin height 4.1 m",
+     "model_m": 4.1,
+     "expected_mm": 58.571,
+     "measured_mm": 58.571,
+     "measured_denominator": 70.0,
+     "ok": true,
+     "shapes_found": 12
+    },
+    {
+     "test": "spandrel panel height 0.9 m",
+     "model_m": 0.9,
+     "expected_mm": 12.857,
+     "measured_mm": 12.857,
+     "measured_denominator": 70.0,
+     "ok": true,
+     "shapes_found": 3
+    }
+   ],
+   "all_ok": true,
+   "measured_denominator_range": [
+    70.0,
+    70.0
+   ],
+   "grid_C_to_D_mm": {
+    "measured": 128.57,
+    "expected": 128.571,
+    "ok": true
+   }
+  },
+  "P": {
+   "declared": 70,
+   "tests": [
+    {
+     "test": "louver fin width 1.2 m (plan)",
+     "model_m": 1.2,
+     "expected_mm": 17.143,
+     "measured_mm": 17.143,
+     "measured_denominator": 70.0,
+     "ok": true,
+     "shapes_found": 6
+    },
+    {
+     "test": "louver fin depth 0.18 m (plan)",
+     "model_m": 0.18,
+     "expected_mm": 2.571,
+     "measured_mm": 2.571,
+     "measured_denominator": 70.01,
+     "ok": true,
+     "shapes_found": 6
+    }
+   ],
+   "all_ok": true,
+   "measured_denominator_range": [
+    70.0,
+    70.01
+   ]
+  },
+  "S1": {
+   "declared": 70,
+   "tests": [
+    {
+     "test": "slab thickness 0.5 m",
+     "model_m": 0.5,
+     "expected_mm": 7.143,
+     "measured_mm": 7.143,
+     "measured_denominator": 70.0,
+     "ok": true,
+     "shapes_found": 3
+    },
+    {
+     "test": "louver fin height 4.1 m",
+     "model_m": 4.1,
+     "expected_mm": 58.571,
+     "measured_mm": 58.571,
+     "measured_denominator": 70.0,
+     "ok": true,
+     "shapes_found": 2
+    },
+    {
+     "test": "panel height 0.9 m",
+     "model_m": 0.9,
+     "expected_mm": 12.857,
+     "measured_mm": 12.857,
+     "measured_denominator": 70.0,
+     "ok": true,
+     "shapes_found": 3
+    }
+   ],
+   "all_ok": true,
+   "measured_denominator_range": [
+    70.0,
+    70.0
+   ]
+  },
+  "S2": {
+   "declared": 70,
+   "tests": [
+    {
+     "test": "slab thickness 0.5 m",
+     "model_m": 0.5,
+     "expected_mm": 7.143,
+     "measured_mm": 7.143,
+     "measured_denominator": 70.0,
+     "ok": true,
+     "shapes_found": 3
+    },
+    {
+     "test": "valley glass height 4.0 m",
+     "model_m": 4.0,
+     "expected_mm": 57.143,
+     "measured_mm": 57.143,
+     "measured_denominator": 70.0,
+     "ok": true,
+     "shapes_found": 3
+    }
+   ],
+   "all_ok": true,
+   "measured_denominator_range": [
+    70.0,
+    70.0
+   ]
+  },
+  "D1": {
+   "declared": 20,
+   "tests": [
+    {
+     "test": "slab thickness 0.5 m",
+     "model_m": 0.5,
+     "expected_mm": 25.0,
+     "measured_mm": 25.0,
+     "measured_denominator": 20.0,
+     "ok": true,
+     "shapes_found": 1
+    },
+    {
+     "test": "spandrel panel height 0.9 m",
+     "model_m": 0.9,
+     "expected_mm": 45.0,
+     "measured_mm": 45.0,
+     "measured_denominator": 20.0,
+     "ok": true,
+     "shapes_found": 1
+    },
+    {
+     "test": "louver fin thickness 0.18 m",
+     "model_m": 0.18,
+     "expected_mm": 9.0,
+     "measured_mm": 9.0,
+     "measured_denominator": 20.0,
+     "ok": true,
+     "shapes_found": 2
+    }
+   ],
+   "all_ok": true,
+   "measured_denominator_range": [
+    20.0,
+    20.0
+   ]
+  },
+  "D2": {
+   "declared": 20,
+   "tests": [
+    {
+     "test": "slab thickness inside the window 0.4 m (window starts at +25.6)",
+     "model_m": 0.4,
+     "expected_mm": 20.0,
+     "measured_mm": 20.0,
+     "measured_denominator": 20.0,
+     "ok": true,
+     "shapes_found": 1
+    }
+   ],
+   "all_ok": true,
+   "measured_denominator_range": [
+    20.0,
+    20.0
+   ]
+  },
+  "D3": {
+   "declared": 20,
+   "tests": [
+    {
+     "test": "slab thickness 0.5 m",
+     "model_m": 0.501,
+     "expected_mm": 25.05,
+     "measured_mm": 25.05,
+     "measured_denominator": 20.0,
+     "ok": true,
+     "shapes_found": 1
+    },
+    {
+     "test": "rail height 1.1 m",
+     "model_m": 1.1,
+     "expected_mm": 55.0,
+     "measured_mm": 54.95,
+     "measured_denominator": 20.02,
+     "ok": true,
+     "shapes_found": 1
+    }
+   ],
+   "all_ok": true,
+   "measured_denominator_range": [
+    20.0,
+    20.02
+   ]
+  }
+ },
+ "text_overlaps": {
+  "count": 0,
+  "examples": []
+ },
+ "text_outside_content_area": [],
+ "missing_glyphs": [],
+ "text_height_mm_histogram": {
+  "2.47": 19,
+  "2.54": 97,
+  "2.61": 79,
+  "2.65": 2,
+  "2.68": 11,
+  "2.75": 6,
+  "2.96": 1,
+  "3.0": 10,
+  "3.17": 1,
+  "3.35": 7,
+  "3.7": 7
+ },
+ "min_text_height_mm_outside_title_block": 2.47,
+ "callouts": {
+  "leader_labels": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20"
+  ],
+  "note_labels": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20"
+  ],
+  "leaders_without_note": [],
+  "notes_without_leader": []
+ },
+ "content": {
+  "raster_images": 0,
+  "vector_paths": 988,
+  "page_mm": [
+   594.0,
+   420.0
+  ],
+  "forbidden_terms_found": [],
+  "fonts": [
+   "HRCJDU+Malgun Gothic Bold",
+   "QPAPIT+Malgun Gothic Regular"
+  ]
+ },
+ "dimension_traceability": {
+  "dimensions_printed": 41,
+  "distinct_values": [
+   "1,100",
+   "1,200",
+   "1,800",
+   "250",
+   "300",
+   "4,000",
+   "4,100",
+   "4,500",
+   "5,000",
+   "500",
+   "600",
+   "700",
+   "9,000",
+   "900"
+  ],
+  "unmatched": [],
+  "value_vs_drawn_length_mismatch": []
+ },
+ "ok": true
+}

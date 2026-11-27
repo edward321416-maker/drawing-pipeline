@@ -1,0 +1,100 @@
+{
+ "generated": "2026-11-27T17:28:49",
+ "pinned_base_commit": "165ce5435a548f7c6660d6465a32a7d44a74a4be",
+ "branch": "review/wp0-r10-d-a516-pilot",
+ "algorithm": "SHA-256 (+ git blob SHA-1)",
+ "file_count": 15,
+ "note": "manifest.json itself is not listed. Project-owned files only; no third-party reference PDF or image.",
+ "files": [
+  {
+   "path": "review/wp0_r10_d/a516_pilot/A-516.dxf",
+   "bytes": 306994,
+   "sha256": "bd263501c62d20300be3b4f511d23e970d0a679a778bc78366268e48058a0ba2",
+   "git_blob_sha1": "a3ad6ce18b2c5ef4da1f3bff58f3ad6388bed0a9"
+  },
+  {
+   "path": "review/wp0_r10_d/a516_pilot/A-516.pdf",
+   "bytes": 203778,
+   "sha256": "770d41987f7921588521f0f26bb652a404368d13ded21b088f78486d8e31ffbb",
+   "git_blob_sha1": "39eaec1e0a0fb06ed90f62e589912a1a48e49085"
+  },
+  {
+   "path": "review/wp0_r10_d/a516_pilot/A-516.svg",
+   "bytes": 381597,
+   "sha256": "cc872deb258306443ad8d65a7e6a465d7d3c69cabf45da8031152269e4ae014a",
+   "git_blob_sha1": "3c910acc80915f89b0574df4886b4578e96712e8"
+  },
+  {
+   "path": "review/wp0_r10_d/a516_pilot/A-516_crop_1_elevation_plan_300dpi.jpg",
+   "bytes": 382973,
+   "sha256": "035eeadd9ff14255f78339fa6dc8f5391768581ac187c675b2d61c52ac4d7bef",
+   "git_blob_sha1": "e59b5a9c76ea413ed050b85c5deb711bc01631e9"
+  },
+  {
+   "path": "review/wp0_r10_d/a516_pilot/A-516_crop_2_sections_300dpi.jpg",
+   "bytes": 601597,
+   "sha256": "93f0ea514a77ca969014055bc857d72be7f79a4c184a027858d6d74f263f16a6",
+   "git_blob_sha1": "93e3cdea34f9bfdeeebd4baec8b67b94d4d40f1d"
+  },
+  {
+   "path": "review/wp0_r10_d/a516_pilot/A-516_crop_3_detail1_slab_edge_fin_support_300dpi.jpg",
+   "bytes": 265170,
+   "sha256": "bd7a01f0677b2b2489e1930429ed1f4a86d8338bb7348aecc4ddb1b4f4a82570",
+   "git_blob_sha1": "4e9f1266d9760093b617600c8adec57cd73793ea"
+  },
+  {
+   "path": "review/wp0_r10_d/a516_pilot/A-516_crop_4_detail2_garden_valley_base_300dpi.jpg",
+   "bytes": 223220,
+   "sha256": "92e37f30ac4f5824c8594b20c000e081c34ebe91a2f2f2249f72d23ae501b8a9",
+   "git_blob_sha1": "6842860ce767d3d292f8dc2ec5db2edff01b6059"
+  },
+  {
+   "path": "review/wp0_r10_d/a516_pilot/A-516_crop_5_detail3_7F_open_edge_300dpi.jpg",
+   "bytes": 123506,
+   "sha256": "bf6d94c48493b8ad8b43b931bff2438723565cddc2bf00b2b1a7800265e9c7a4",
+   "git_blob_sha1": "91a77cc9304b2f5708cf3116343f4f2d3f448a2b"
+  },
+  {
+   "path": "review/wp0_r10_d/a516_pilot/A-516_crop_6_keyplan_legend_300dpi.jpg",
+   "bytes": 221854,
+   "sha256": "d8e196271da2cf7b03b2d2e6dd7e143afdeb7c304428ee7d203a7065c4231ba1",
+   "git_blob_sha1": "f7f60b155d1999867730682ed20fccb9597b9c6b"
+  },
+  {
+   "path": "review/wp0_r10_d/a516_pilot/A-516_measurement_check.json",
+   "bytes": 5956,
+   "sha256": "d903c6dcfbc7f326617dc0761b0ed4e3f98a670f0b9ea8a1bc4351d62716c5fd",
+   "git_blob_sha1": "df0b67ce595a04582e829191e4355b40000b122b"
+  },
+  {
+   "path": "review/wp0_r10_d/a516_pilot/A-516_preview_200dpi.jpg",
+   "bytes": 1155409,
+   "sha256": "f8fe568ef162e684e976b718900c930faf90cbdb05baa1d37cf431fb1db9e9ab",
+   "git_blob_sha1": "98d1d203472dc4d8de7af5b946cba8faadf98300"
+  },
+  {
+   "path": "review/wp0_r10_d/a516_pilot/A-516_source_and_decisions.md",
+   "bytes": 4427,
+   "sha256": "54fab98d8d954dfa9b568c521e7281e77997968e8fdb27096613edf39f4a202c",
+   "git_blob_sha1": "4c90aeebbf91972314031f0b44c70f08d6450ee0"
+  },
+  {
+   "path": "review/wp0_r10_d/a516_pilot/A-516_traced_geometry.json",
+   "bytes": 25312,
+   "sha256": "27bf6ec2fe037db3480fb1a5a4e953bca4aba504aa597967c5d7fc684ff4e1b7",
+   "git_blob_sha1": "a07da2189e15e8841af19e2034aed10103008316"
+  },
+  {
+   "path": "review/wp0_r10_d/a516_pilot/A-516_view_transforms.json",
+   "bytes": 1756,
+   "sha256": "69b53f0e2e75ccab097ea0d51800087e6bde58d2388a64db183c67c3807a4e47",
+   "git_blob_sha1": "3ad302c1ca4741df129a5087464e8bf1d67d4a2c"
+  },
+  {
+   "path": "review/wp0_r10_d/a516_pilot/README.md",
+   "bytes": 1354,
+   "sha256": "ecf33d9e7c46cce91977cd7b2d599f7abccd24a02bab3eefa6049622ea7389e9",
+   "git_blob_sha1": "72ff5e93cea951f002951438d820ad7d06d3f0bc"
+  }
+ ]
+}
